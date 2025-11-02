@@ -1,0 +1,82 @@
+0;;;;0;0;0;0;0;0
+1;Tin Sword;A perfect training weapon.;+2⚔;0;0;0;2;0;0;FXSword
+2;Cotton Cloak;Fit for aspiring heroes.;+1#;5;0;0;0;1;0;FXCloth
+3;Musbow;Carved from an oak twig.;+3⚔;1;0;0;3;0;0;FXSword
+4;Tunic;Versatile and fashionable.;+1#;5;0;0;0;1;0;FXCloth
+5;Titan Reaper;For slaying monsters of all sizes.;+5⚔;0;0;0;5;0;0;FXSword
+6;Night Cloak;Fit for ne'er-do-wells.;+3#;5;0;0;0;3;0;FXCloth
+7;Fire Wand;Modified for explosive potential.;+4⚔;2;0;0;4;0;0;FXSword
+8;Noble Hennin;The height of mole fashion;+2#;5;0;0;0;2;0;FXCloth
+9;Peanut;Crunchy and nutritious.;Heals 5♥.;6;0;0;0;0;1;FXCrunch
+10;Pencil Flute;How whimsical!;+3⚔;3;0;0;3;0;0;BNote7
+11;Harlequin Mask;How mysterious!;+4#,+1◆;5;0;1;0;4;0;;FXCloth
+12;Duw Glaive;Terrifyingly sharp.;+6⚔;4;0;0;6;0;0;;FXSword
+13;Carmine Cowl;Shade for sensitive skin.;+4#;5;0;0;0;4;0;FXCloth
+14;Bandages;Soft and absorbent.;Heals 8♥. Stops bleeding.;6;0;0;0;0;1;FXCloth
+15;Mole Boots;Tin-toed for safety.;+4#;5;0;0;0;4;0;FXCloth
+16;Explorer's Hat;Unfashionable, but practical.;+5#;5;0;0;0;5;0
+17;Pistachio;Incredibly more-ish.;Heals 8♥.;6;0;0;0;0;1
+18;Coriander;Smells soapy.;Recovers all status ailments.;6;0;0;0;0;1
+19;Button Shield;Upcycled from Gutter End.;+1#;6;0;0;0;1;0
+20;Special Grog;Fortified beyond all reason.;Heals 10♥. May have side effects.;6;0;0;0;0;1
+21;Odd Mushroom;Should you really eat this?;Heals 10♥. May have side effects.;6;0;0;0;0;1
+22;Ghoriba;Pairs well with black tea.;Heals 20♥.;6;0;0;0;0;1
+23;Coffee;Light roast, with citrus notes.;Recovers 3◆;6;0;0;0;0;1
+24;Suave Hat;It makes you feel bold.;+6#,+1◆;5;0;1;0;6;0
+25;Chic Jacket;It makes you feel cool.;+6#,+5♥;5;5;0;0;6;0
+26;Stylish Sneakers;They make you feel daring.;+6#,+2⚔,;5;0;0;2;6;0
+27;Traveller's Cloak;Someone strayed from the path.;+7#;5;0;0;0;7;0
+28;Frog Gem;Smells of pond water.;Heals 1♥ at the start of each turn.;6;0;0;0;0;0
+29;Iron Knuckles;Favoured by hard lads.;+3⚔;6;0;0;3;0;0
+30;Oaken Ocarina;Nostalgic to the ear.;+5⚔;3;0;0;5;0;0
+31;Zap Wand;Sparks with life.;+6⚔;2;0;0;6;0;0
+32;Brick;Literally a brick.;+2⚔;0;0;0;2;0;0
+33;Pen Lance;Mightier than a sword, apparently.;+8⚔;4;0;0;8;0;0
+34;God Slayer;Forged for one purpose.;+10⚔;0;0;0;10;0;0
+35;Skye Piccolo;Has a rich and mellow timbre.;+10⚔;3;0;0;10;0;0;BNote7
+36;Mystery Wand;For the most powerful of spells.;+10⚔;2;0;0;10;0;0;FXSword
+37;Spring onion;A bit strong to eat raw.;Recovers 2◆.;6;0;0;0;0;1
+38;Baozi;A flawless dumpling.;Heals 20♥, recovers 2◆.;6;0;0;0;0;1
+39;Holy Chocolate;Sickly sweet.;Heals 15♥.;6;0;0;0;0;1
+40;Tiger Bell;Jingle jingle.;Grants a bonus turn.;6;0;0;0;0;1
+41;The King's Paw;The food of dreams.;Heals 50♥, recovers 3◆;6;0;0;0;0;1
+42;Centurion Armour;Very commanding.;+9#;5;0;0;0;9;0
+43;Squeaky;"Keep him close. We've got some ways to go.";0;7;0;0;0;0;0
+44;Sava's Treasure Map;"My treasure is yours for the taking! But you'll have to find it first...";0;7;0;0;0;0;0
+45;Bug Part;Why did you pick this up? Gross.;0;7;0;0;0;0;0
+46;Bug Part;Probably worthless.;0;7;0;0;0;0;0
+47;Bug Part;A bit morbid, really.;0;7;0;0;0;0;0
+48;Godly Junk;No idea what it does. Probably worthless.;0;7;0;0;0;0;0
+49;Pyromancer's Hat;Start fires with style.;+7#;5;0;0;0;7;0;FXCloth
+50;Strange Package;You take a peek. There's a fat, wriggling, white worm inside.;0;7;0;0;0;0;0
+51;Silk Square;Wonderfully soft to the touch.;0;7;0;0;0;0;0
+52;Dyed Silk Square;Wonderfully soft to the touch. Dyed red and certified A+;0;7;0;0;0;0;0
+53;Euryn;Glows with an eery light.;+10⚔;4;0;0;10;0;0;FXSword
+54;Godly Key;Unlocks Gwen's ball-and-chain.;0;7;0;0;0;0;0
+55;Jailer's Keyring;Cold and heavy.;0;7;0;0;0;0;0
+56;Great Kilt;The woven tartan of Clan Red.;+6#,+1◆;5;0;1;0;6;0;FXCloth
+57;Spiked bracelet;A classic punk item.;+1⚔, +1#;6;0;0;1;1;0
+58;Red Ribbon;A timeless accessory.;+1♥, +1◆, +1⚔, +1#;6;1;1;1;1;0
+59;Lemon Cake;With a lavender drizzle.;Heals 30♥;6;0;0;0;0;1
+60;Magnificent Cape;Dazzling. Opulent. Luxurious.;+1♥, +1◆, +1⚔, +10#;5;1;1;1;10;0
+61;Ancient Tricorne;Smells of salt and smoke.;+1⚔, +7#;5;0;0;1;7;0
+62;Ancient Thimble;A sturdy guard's helm.;+1⚔, +5#;5;0;0;1;5;0
+63;Plate Armour;Hefty, but unbreakable.;+9#;5;0;0;0;9;0
+64;Grrr! Potion;Spicy and tangy.;Heals 10♥. Grants 3 Berserk.;6;0;0;0;0;1
+65;Zip-Zap! Potion;Minty and refreshing.;Heals 10♥. Grants a bonus turn.;6;0;0;0;0;1
+66;The Pebble of Scuin;A heavy weight for such a small object.;0;7;0;0;0;0;0
+67;House Key;One careful previous owner.;0;7;0;0;0;0;0
+68;Cellar Key;Ice-cold to the touch.;0;7;0;0;0;0;0
+69;Hoo Helm;A whisper beckons.;-5#, +10⚔;5;0;0;10;-5;0;FXCloth
+70;Rusty Sword;Chipped and tarnished from its time in the King's River.;0;7;0;0;0;0;0
+71;Felidae Collar;There's a little bell attached. Jingle jingle.;0;7;0;0;0;0;0
+72;Venom Vial;Cursed.;0;7;0;0;0;0;0
+73;Bardic Coat;Designed for merriment.;+8#,+1◆,+1⚔,;5;0;1;1;8;0
+74;Okay Wine;In vino... vae.;Heals 20♥. May have side effects.;6;0;0;0;0;1
+75;Scutum;Surprisingly light for its size.;+3#;6;0;0;0;3;0
+76;Vulpes Claw;Sharp.;+4⚔;6;0;0;4;0;0
+77;Vulpes Cloak;Unclean.;+8#,+3⚔,;5;0;0;3;8;0
+78;Digitised Pet;Is... is this the soul of a living creature trapped by the gods?;0;7;0;0;0;0;0
+79;Godly Paint;The pigment is a vibrant shade of blue. Almost ultramarine.;0;7;0;0;0;0;0
+80;Soothing Painting;Magnificent. But where could you hang it?;0;7;0;0;0;0;0
+81;Mystery Key;There's a question mark engraved on the base.;0;7;0;0;0;0;0

@@ -1,0 +1,46 @@
+/BattleVeryStart
+~ScissorBattle3Loop
+!HoldOn(1)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!SetGlobal(4,0)
+
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+
+/MaisieRage
+!CheckGlobal(4,1,MR1)
+!CheckGlobal(4,2,MR2)
+!CheckGlobal(4,3,MR3)
+-Maisie: I'm tired of being a screw-up!|I'm gonna make Rosy proud!
+!SetGlobal(4,1)
+!SetAnim(Maisie,Default)
+!NewTurn()
+
+/MR1
+-Maisie: You're both under arrest!|Y'hear me?!
+-Bruce: Aye, we hear ye.|We just dinnae care.
+!SetAnim(Maisie,Default)
+-Maisie: AAAHHHHH, now you're pissing me off!
+!SetGlobal(4,2)
+!NewTurn()
+
+/MR2
+-Maisie: I'm dragging you back to Murida!
+!SetGlobal(4,3)
+!SetAnim(Maisie,Default)
+!NewTurn()
+
+/MR3
+-Maisie: Enough of this!
+!SetAnim(Maisie,Default)
+!NewTurn()
+
+/EnemyDead
+~Stop
+!SetGlobal(4,0)
+!Victory()
+!EndBattle()
+End scene

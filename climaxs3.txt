@@ -1,0 +1,140 @@
+
+/MS3A
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!AutoPinFollowers()
+!Walk(Verm,UR,1)
+!SetAnim(Little Dan,UL)
+!SetGlobal(50,8)
+!HoldOn(1.5)
+!OverworldCameraPan(444,400,1,1)
+!HoldOn(1.5)
+-Little Dan: Ma'am? Sir?
+-Little Dan: Whatever you are,|you can't be here.|Get back inside.
+-Z: You serious? I'm not doing anything.
+-Little Dan: It doesn't matter what you're doing. I said to get back inside.
+-Z: Why? We doing curfews now or something?
+-Claire: Yeah, you gonna tuck us in?|Give us a bedtime story?
+!HoldOn(0.1)
+!SetAnim(Little Dan,UR)
+!ShoutMode()
+!HoldOn(0.2)
+-Little Dan: Shut it, up there!
+!HoldOn(0.1)
+!SetAnim(Little Dan,UL)
+!HoldOn(0.2)
+-Little Dan: You're both starting|to piss me off...
+!OverworldCameraPan(520,760,1,1)
+!Walk(Verm,U,0.3)
+!HoldOn(0.3)
+!Walk(Verm,UR,0.5)
+!HoldOn(0.5)
+!Walk(Verm,R,0.2)
+!HoldOn(0.2)
+!Walk(Verm,DR,1)
+!HoldOn(0.2)
+!Walk(Bob,DR,0.8)
+!HoldOn(0.8)
+!Walk(Bob,DL,0.2)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!SetAnim(Gwen,R)
+!SetAnim(Bruce,R)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,UR)
+!SetAnim(Gwen,UR)
+!SetAnim(Bruce,UR)
+-Bob: Woah, woah, woah!|Sorry, but you lot need to go home.
+-Verm: We're just passing through.
+-Bob: That's not possible.|Please disband immediately.
+!NormalJump(Little Dan,2,30,423,628,DLJump,DLDraw)
+!HoldOn(0.5)
+!NormalJump(Little Dan,2,30,520,720,DRJump,DRDraw)
+!HoldOn(0.6)
+-Little Dan: You're being too polite, Bob.
+!SetAnim(Little Dan,DRLook)
+-Little Dan: I'll show you how to handle these lowlife reprobates!
+!CheckGlobal(30,25,GwenTime)
+!GoToBattle(Thimble1)
+
+/GwenTime
+!TeleportCharacter(George,908,120)
+!SetGlobal(50,9)
+!PlaySound(Impact1)
+!HoldOn(0.5)
+!NormalJump(George,1,300,572,742,JumpDL,Default)
+!OverworldCameraPan(520,680,1,1)
+!HoldOn(0.8)
+!NormalJump(Little Dan,2,30,350,670,HurtL,DownL)
+!NormalJump(Bob,2,30,850,850,HurtR,DownR)
+!HoldOn(0.2)
+!ScreenShake(9,1)
+!MoveNPCToLayer(George,ZSorted)
+!HoldOn(1.6)
+!Exit(Little Dan)
+!Exit(Bob)
+
+-George: This is Murida's finest? Hmph.
+-George: They're nothing but|ungodly cachgwn.
+!HoldOn(0.6)
+-Gwen: Sir George.
+-Gwen: Fancy seeing you outside of White Hall.
+!SetAnim(George,LookLeft)
+!HoldOn(0.5)
+-George: Gwen.
+-George: Fancy seeing you instigating|yet more chaos.
+-George: You're the same as ever.|Stubborn and petulant.
+!HoldOn(0.7)
+!SetAnim(George,LookRight)
+-George: But you did open my eyes to the horrors of the gods.
+-George: If the Yellow God is as accursed as the White, then that is not a deity worthy of worship.
+-George: I'm here to fight by your side.
+!SetAnim(George,Default)
+-Gwen: Well. Your help is appreciated.|Thanks for coming.
+-Gwen: Verm. Let's mosey.
+!AutoPinFollowers()
+!CameraFollow(1)
+
+/George
+-George: Murida's finest? Hmph.|They lack discipline.
+
+/MS3B
+
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!SetGlobal(50,9)
+!AutoPinFollowers()
+!HoldOn(1)
+-Gwen: They're down and out. Let's go.
+
+/Matty
+!CheckGlobal(30,25,Matty2)
+-Matty: Woah! You knocked 'em flying!
+
+/Matty2
+-Matty: Woah! That big ol' rabbit|knocked 'em flying!
+
+/Z
+-Z: You've got guts.|There's hope for Murida yet.
+
+/Jump1
+-Verm: Nothing for me up there.
+
+/Poster3
+-Bruce: Is now the best time|tae be reading posters?
+
+/JustPin
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!AutoPinFollowers()
+
+/FoundSeeds2
+-Info: You found 2 seeds.|A little late!

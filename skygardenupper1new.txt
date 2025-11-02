@@ -1,0 +1,160 @@
+/Intro
+~SkyGarden3Loop
+!AutoPinFollowers()
+
+/Check
+!OverworldCameraPan(320,330,0.5,1)
+!HoldOn(0.5)
+!Walk(Siobhan,L,0.3)
+!HoldOn(0.3)
+!Walk(Siobhan,UL,0.2)
+!HoldOn(0.2)
+!Walk(Siobhan,U,0.3)
+!HoldOn(1)
+-Bruce: Ta-da! Check it out.
+-Siobhan: A god sword!
+!Walk(Siobhan,U,0.5)
+!HoldOn(1)
+-Siobhan: ...A god sword that's|seen better days.
+!HoldOn(0.6)
+!SetAnim(Siobhan,UR)
+-Gwen: When we heard news of the duel on the Bloody Bridge, we decided to check the King's River. 
+-Gwen: Dredge the waters.|Search the banks.|Just in case.
+-Gwen: We didn't find any sign of life or a body.
+-Gwen: But we did find this on the southern bank, someways downstream.
+!HoldOn(0.3)
+!SetAnim(Siobhan,U)
+!HoldOn(0.4)
+-Siobhan: Is it... his?
+-Gwen: Difficult to say,|what with all the rust.
+-Bruce: If it is, then it's possible the wee lad washed up on the shore too.
+-Bruce: In which case, he might be alive, aye?
+!HoldOn(1)
+-Gwen: What do you think, Siobhan?
+!SetAnim(Siobhan,UR)
+-Gwen: You witnessed the duel.|Could Verm have survived?
+-Siobhan: I... I really don't know.
+-Siobhan: But I understand why you've been searching.
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: If there's a flea's hair of a chance, then it's worth pursuing, no?
+-Bruce: Exactly. We owe it to Verm.
+-Gwen: Nothing but bad leads and|dead-ends so far, though.|We're chasing a ghost.
+!HoldOn(0.5)
+!SetAnim(Siobhan,U)
+!HoldOn(0.5)
+!Walk(Siobhan,U,0.4)
+!HoldOn(1)
+-Siobhan: You know... I could fix this.
+-Siobhan: If I heat the blade to remove the rust and add some new paint, it'll be as good as new.
+-Gwen: Well. That sounds like a nice gesture.
+-Siobhan: But it takes a lot of heat|to temper godly steel.
+!HoldOn(1)
+-Siobhan: I'd need a godly forge.
+!HoldOn(1)
+-Bruce: That's tricky. Nothing like that around these woods.
+!HoldOn(1)
+-Gwen: I know a place with|an impressive forge.|White Hall.
+!SetAnim(Bruce,R)
+-Bruce: Yer home town?|Gwen, I cannae ask-
+!SetAnim(Gwen,L)
+-Gwen: Relax. It's fine.|I can handle it.
+!HoldOn(1)
+-Bruce: Alright. I trust ye.
+!HoldOn(0.3)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.3)
+-Gwen: Want to come with me to White Hall, Siobhan?
+!SetAnim(Siobhan,UR)
+-Siobhan: R-right now?
+-Siobhan: Um... sure! Why not.
+-Bruce: Gwen, ye said the latest|lead was Vinium?
+-Bruce: I'll go follow that thread myself.
+!HoldOn(0.5)
+!PlaySound(NewLocation)
+-Info: Two new locations have been added to your map!
+!HoldOn(0.5)
+!TeleportCharacter(Anton,348,590)
+!ShoutMode()
+-Anton: Hey!
+
+!OverworldCameraPan(320,390,0.7,1)
+!Walk(Anton,U,0.9)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(1.5)
+-Anton: Are you leaving on another adventure, lapa? I'll come too!
+-Bruce: No, babe. I want you to stay here to help run the roundtable.
+!HoldOn(0.2)
+!SetAnim(Anton,LookLeft)
+!HoldOn(0.3)
+!SetAnim(Anton,L)
+!HoldOn(0.3)
+!SlowWalk(Anton,L,0.9)
+!HoldOn(0.5)
+!SetAnim(Siobhan,DL)
+!SetAnim(Bruce,D)
+!HoldOn(0.9)
+-Anton: I don't like how you leave me behind, lapa.
+-Bruce: I'm sorry. I just dinnae|want to put ye in danger.
+-Bruce: It was my fault ye got locked up before. I would never forgive myself if it happened again.
+!HoldOn(0.3)
+!SetAnim(Anton,U)
+!HoldOn(0.5)
+-Anton: Alright.
+-Anton: But come back alive,|or I'll kill you!
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: If safety's an issue, why not|take your mask, Bruce?
+!SetAnim(Bruce,DR)
+!ResetWalkSpeed(Anton)
+-Bruce: That lousy thing? I burned it. I dinnae hide any more.
+-Bruce: Just worry about yerselves, alright?
+!HoldOn(0.5)
+!Walk(Gwen,L,0.3)
+!HoldOn(0.6)
+!PlaySound(ItemFound)
+!TeleportCharacter(Knife,3048,520)
+-Info: Gwen picked up a rusty god sword.|You add it to your trinkets.
+-Gwen: No point dawdling. Let's all head to the taxi station together.
+-Anton: Good luck!
+!Walk(Bruce,R,0.4)
+!HoldOn(0.6)
+!SetGlobal(32,11)
+!AddToParty(Bruce)
+!AddToParty(Gwen)
+!HoldOn(0.1)
+!LevelUp(Bruce)
+!HoldOn(0.2)
+!LevelUp(Gwen)
+!AutoPinFollowers(1)
+!CameraFollow(1)
+!HoldOn(0.5)
+
+/ChatAnton
+-Anton: Good luck!
+
+/Weapon3
+-InfoBig: There's an empty spot here.
+
+/Weapon2
+-InfoBig: A battle-worn claymore. "TEMPERANCE" is inscribed on base of the blade.
+
+/Weapon4
+-InfoBig: An elegant halberd.|The steelwork is flawless.
+
+/Weapon1
+-InfoBig: A coal-headed hammer.|Looks heavy.
+

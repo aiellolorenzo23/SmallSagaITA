@@ -1,0 +1,575 @@
+
+/Intro1
+~CrowdLoop
+!HoldOn(3)
+!OverworldCameraPan(1080,270,1,1)
+!HoldOn(2)
+!SetGlobal(35,10)
+-Magnus: Tonight's entertainment...|has been disappointing.
+!HoldOn(1)
+-Magnus: Two thumbs down, Quintus.
+!HoldOn(0.2)
+!SetAnim(Quintus,DR)
+!HoldOn(0.2)
+-Quintus: Baron, please have patience.
+-Quintus: I have a special treat in store for the finale!
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft1)
+!Nani(Magnus,?)
+!HoldOn(0.2)
+!SetAnim(Magnus,LookLeft2)
+!HoldOn(0.4)
+-Magnus:  Oh? 
+!HoldOn(0.4)
+-Quintus: A squirrel!
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft1)
+!HoldOn(0.1)
+!SetAnim(Magnus,DL)
+!HoldOn(0.1)
+-Magnus:  Oh. 
+!HoldOn(0.4)
+-Quintus: With red fur!
+!HoldOn(0.1)
+!Nani(Magnus,!)
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft1)
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft2)
+-Magnus:  Oh! 
+-Magnus: But Is this another ruse, Quintus?
+-Magnus: Like that time you dipped a grey squirrel in red paint...
+-Quintus: Not this time, Baron.
+-Quintus: This is the genuine article. The "real MacKay", as it were.
+-Quintus: An actual Sciurus vulgaris.
+-Magnus: Interesting.
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft1)
+!HoldOn(0.1)
+!SetAnim(Magnus,DL)
+-Magnus: I was under the impression that the squirrels of Clan Red all perished aeons ago.
+-Magnus: But then a Red became the|ambassador of Sky Garden...
+-Magnus: And now you tell me you have a Red gladiator...
+-Quintus: It's quite a coincidence.
+!SetAnim(Magnus,LookLeft1)
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft2)
+!HoldOn(0.1)
+-Magnus: Tell me this: where did you find this gladiator?
+-Quintus: Well, you know what they say, Magnus.
+!HoldOn(0.1)
+!SetAnim(Quintus,DL)
+!HoldOn(0.1)
+-Quintus: Ducunt volentem fata,|nolentem trahunt.
+-Magnus: Really? Who says that?
+-Quintus: Let's move on.
+!HoldOn(0.1)
+!NormalJump(Quintus,3,20,1050,282,DL,DL)
+!HoldOn(0.2)
+!MoveNPCToLayer(Quintus,Effects)
+!HoldOn(0.2)
+!SetAnim(Quintus,Hat1L)
+!HoldOn(0.4)
+!ShoutMode()
+!HoldOn(0.3)
+-Quintus: Release the Red Barbarian!
+
+!OverworldCameraPan(477,435,1,1)
+!HoldOn(2)
+
+!TeleportCharacter(Bruce,435,430)
+!Enter(Bruce)
+!NormalJump(Bruce,2,30,585,510,Thrown,MaskOn)
+
+!HoldOn(2)
+!SetAnim(Magnus,DL)
+
+-Bruce: Alright, Bruce.|Ye can do this.
+-Bruce: Ye survived dozens o' fights.
+-Bruce: Ye fought bugs and jerboas.|Krakens and nightwings.
+-Bruce: There's nothing they can throw at ye that ye cannae handle.
+
+!HoldOn(0.1)
+!OverworldCameraPan(1080,270,3,1)
+!ShoutMode()
+!HoldOn(0.5)
+-Quintus: Release the Imperator!
+!TeleportCharacter(Bruce,600,540)
+!SetAnim(Bruce,DL)
+
+!OverworldCameraPan(477,495,3,1)
+
+!HoldOn(0.5)
+!TeleportCharacter(Scorpion1,430,437)
+!Enter(Scorpion1)
+!Walk(Scorpion1,DR,1.2)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(2)
+-Bruce: Ah. Smashing.
+
+!HoldOn(0.4)
+!MysteryText(1)
+-Ghost: Excuse me.
+!HoldOn(0.4)
+-Ghost: Coming through.
+!HoldOn(0.6)
+-Ghost: I said, get out my way!
+!MysteryText(0)
+!SetShadowless(Ghost,1)
+!TeleportCharacter(Ghost,266,198)
+!CameraFollow(1)
+!Walk(Ghost,DR,0.5)
+!Enter(Ghost)
+!HoldOn(1.5)
+!Walk(Ghost,DR,1)
+!HoldOn(1)
+-Jeb: Oh, hey! It's Ghost! Ya made it!
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Ghost,DL)
+!HoldOn(0.1)
+-Alfie: We saved you a spot. Come join.
+-Ghost: I'm not here to spectate.
+!OverworldCameraPan(430,340,1,1)
+!SetGlobal(4,0)
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!Walk(Ghost,D,0.2)
+!HoldOn(0.2)
+!Walk(Ghost,DR,0.3)
+!HoldOn(0.7)
+!SetAnim(Ghost,Pull1)
+!HoldOn(0.5)
+!PullReady(Ghost)
+
+/PC1
+!SetGlobal(4,1)
+!SetAnim(Ghost,Pull2)
+!PlaySound(FishingPull2)
+!HoldOn(0.4)
+!SetAnim(Ghost,Pull1)
+!OverCamZoom(1.5)
+!HoldOn(0.5)
+!PullReady(Ghost)
+/PC2
+!SetGlobal(4,2)
+!SetAnim(Ghost,Pull2)
+!PlaySound(FishingPull2)
+!HoldOn(0.6)
+!SetAnim(Ghost,Pull1)
+!OverCamZoom(2)
+!HoldOn(0.5)
+!PullReady(Ghost)
+/PullContinue
+!CheckGlobal(4,0,PC1)
+!CheckGlobal(4,1,PC2)
+!PlaySound(FishingPull)
+!SetAnim(Ghost,Pull2)
+!SetGlobal(4,0)
+!HoldOn(1.2)
+!ScreenShake(5,1)
+!PlaySound(FingerSnap)
+!PlaySound(FishingHooked)
+!SetAnim(Ghost,PullBrick)
+!SetVisible(VB,0)
+!HoldOn(1)
+!OverCamZoom(1)
+!HoldOn(1)
+!PlaySound(ItemFound)
+-InfoBig: You found a brick.
+!HoldOn(0.4)
+!PlaySound(VermDraw)
+!SetAnim(Ghost,R)
+!HoldOn(0.05)
+!SetAnim(Ghost,UR)
+!HoldOn(0.05)
+!SetAnim(Ghost,U)
+!HoldOn(0.05)
+!SetAnim(Ghost,UL)
+!HoldOn(0.05)
+!SetAnim(Ghost,L)
+!HoldOn(0.05)
+!SetAnim(Ghost,DL)
+!HoldOn(0.05)
+!SetAnim(Ghost,D)
+!HoldOn(0.05)
+!SetAnim(Ghost,DR)
+!HoldOn(0.4)
+!OverworldCameraPan(580,460,1,1)
+!NormalJump(Ghost,1,150,685,512,JDR,DR)
+!HoldOn(1.2)
+!SetShadowless(Ghost,0)
+!SetAnim(Bruce,U)
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!SetAnim(Ghost,DL)
+-Bruce: Aww yeah, here comes Verm!|I knew I wouldn't die today!
+-Ghost: No guarantees yet. Let's fight through this together.
+-Bruce: Aye!
+!NormalBattle(Scorpion,66)
+
+/Intro2
+~CrowdLoop
+!SetGlobal(35,11)
+!HoldOn(1)
+-Jeb: Woah! I had no idea Ghost was a gladiator.
+-Alfie: Right? What a twist!
+-Alfie: It's always the quiet ones...
+!OverworldCameraPan(1080,270,3,1)
+!HoldOn(0.4)
+-Quintus: What's Ghost doing in the ring? His job is to farm, not to fight...
+-Magnus: Interesting choice of gladiators, Quintus.
+-Magnus: But two versus one?|Hardly a fair fight.
+!HoldOn(0.2)
+!SetAnim(Quintus,DR)
+!HoldOn(0.2)
+-Quintus: An excellent point, Baron. We should even the odds.
+!SetAnim(Bruce,UR)
+!SetAnim(Ghost,DL)
+!OverworldCameraPan(660,510,3,1)
+!HoldOn(0.4)
+-Ghost: How did you end up in this mess?
+-Bruce: Yer pal, the slaver, liked the look of my face.
+-Bruce: Thought I'd make for good death-match entertainment.
+-Ghost: Then maybe you should have|worn your mask.
+-Bruce: With supportive friends like you, why would I need tae hide?
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Ghost,DR)
+!HoldOn(0.2)
+!SetAnim(Ghost,OwDR)
+!HoldOn(0.2)
+-Ghost: Ugh... You're infuriating.
+!HoldOn(0.4)
+!SetAnim(Ghost,DR)
+!HoldOn(0.2)
+-Ghost: Wait a minute.
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Ghost,DL)
+!HoldOn(0.1)
+-Ghost: Did you deliberately get captured to goad me into action?
+-Bruce: Bold of ye tae assume|I plan ahead.
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Ghost,DR)
+!HoldOn(0.1)
+!SetAnim(Ghost,OwDR)
+!TeleportCharacter(Scorpion1,430,437)
+!Enter(Scorpion1)
+!Walk(Scorpion1,DR,1.2)
+-Ghost: Gods of gods,|give me strength...
+-Bruce: Eyes up, lad. It's round two!
+
+!NormalBattle(Scorpion2,66)
+
+/Intro3
+~CrowdLoop
+!SetGlobal(35,12)
+-Jeb: Alright... Go Ghost!
+-Alfie: Yeah! Go Ghost! Go!
+!OverworldCameraPan(1080,270,3,1)
+!HoldOn(0.4)
+-Quintus: This is a disaster! Ghost is killing my prized imperators...
+-Magnus: That mouse fights like no gladiator I have ever seen.
+-Magnus: But you evaded my last question, Quintus.
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft1)
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft2)
+!HoldOn(0.1)
+-Magnus: I asked where you found the squirrel.
+!HoldOn(0.2)
+!SetAnim(Quintus,DR)
+!HoldOn(0.2)
+-Quintus: Well, you know what they say, Magnus.
+-Quintus: Nemo tenetur se|ipsum accusare.
+-Magnus: Who is this "they"?|Who is saying these things?
+!OverworldCameraPan(660,510,3,1)
+!SetAnim(Bruce,UR)
+!SetAnim(Ghost,DL)
+!HoldOn(0.4)
+-Bruce: Hey, Verm. I owe ye an apology.
+-Ghost: For what? Getting me caught up in a death arena?
+-Bruce:  No. 
+-Bruce: Well, yes.
+-Bruce: But also for everything that happened at Sky Garden.
+-Bruce: Ye were clearly hurting,|but I just went and dragged|ye into my mess.
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.3)
+-Bruce: It was selfish of me.
+-Ghost: It's fine. I chose to get involved.
+-Ghost: Besides, you were hurting too.
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+-Bruce: Aye, I was. But still...
+!Walk(Ghost,DL,0.3)
+!HoldOn(0.3)
+-Ghost: Look, I enjoyed the distraction.
+-Ghost: As long as I was swinging my sword at a foe, I didn't have to think.
+-Ghost: But that's not a good thing.
+-Ghost: It's just like Leo said, I have no weight. No values.
+-Bruce: Would a warrior with no values throw themselves into a den of imperators?
+-Ghost: Maybe a warrior who wants to die.
+!HoldOn(0.5)
+-Bruce: For someone who wants tae die, ye sure have a knack for surviving.
+!HoldOn(0.3)
+!TeleportCharacter(Scorpion1,430,437)
+!Enter(Scorpion1)
+!Walk(Scorpion1,DR,1.2)
+!HoldOn(0.4)
+!SetAnim(Ghost,L)
+!HoldOn(0.1)
+!SetAnim(Ghost,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.4)
+!NormalBattle(Scorpion3,66)
+
+/Intro4
+~CrowdLoop
+!SetGlobal(35,13)
+!HoldOn(1)
+-Quintus: There goes my last imperator...
+-Magnus: That mouse is truly something else. Such wild abandon!
+-Magnus: He's... what do the youths say?
+-Magnus: Oh yes. A G.O.T.Y contender.|Gladiator of the Year.
+-Magnus: But the squirrel|still concerns me.
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft1)
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft2)
+!HoldOn(0.1)
+-Magnus: Quintus, speak plainly.|Who is he?
+!HoldOn(0.2)
+!SetAnim(Quintus,DR)
+!HoldOn(0.2)
+-Quintus: Baron, Baron,|you worry too much!
+-Quintus: Perhaps bringing out the champion would sweeten your sour mood?
+!OverworldCameraPan(500,610,3,1)
+!SetAnim(Bruce,UR)
+!SetAnim(Ghost,DL)
+!HoldOn(0.4)
+!SetAnim(Magnus,DL)
+-Ghost: Hey.
+-Ghost: How's Siobhan? And Gwen?
+-Bruce: They're doing fine.|And they've missed ye.
+-Bruce: Why not come see them for yerself?
+-Ghost: I could. I want to. But...
+!TeleportCharacter(Car,717,378)
+!OverworldCameraPan(500,510,0.5,1)
+!Walk(Car,DL,2.5)
+!HoldOn(1.7)
+!SetAnim(Quintus,DL)
+!SetAnim(Ghost,L)
+!HoldOn(0.1)
+!SetAnim(Ghost,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.8)
+-Ghost: Oh, right.|Chariot Chuesday.
+-Bruce: Eh?
+-Ghost: Looks like we'll be racing the champion.
+!Walk(Ghost,UL,0.8)
+!HoldOn(1)
+-Ghost: We better figure out how to drive this thing, fast.
+-Bruce: The champion... are they strong?
+!SetAnim(Ghost,L)
+!HoldOn(0.1)
+!SetAnim(Ghost,DL)
+!HoldOn(0.1)
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Ghost,DR)
+-Ghost: No question. From the stands, I've seen her tear apart an imperator barehanded.
+!HoldOn(0.4)
+-Ghost: Then she ate it.
+!HoldOn(0.1)
+!ShoutMode()
+-Bruce: She ate an imperator?!
+!HoldOn(0.1)
+-Bruce: Just what kind of titan is she?
+!HoldOn(0.1)
+-Ghost: There's no time to explain.|Get in the chariot.
+!HoldOn(0.1)
+!OverworldCameraPan(1040,240,3,1)
+!HoldOn(0.4)
+!NormalJump(Quintus,3,20,1050,282,DL,DL)
+!HoldOn(0.2)
+!MoveNPCToLayer(Quintus,Effects)
+!HoldOn(0.2)
+!SetAnim(Quintus,Hat1L)
+!HoldOn(0.3)
+-Quintus: Friends, rodents, countrymice!
+-Quintus: It's the moment you've|been waiting for!
+-Quintus: Let us unleash the undefeated|Champion of Circus Minimus!
+-Quintus: The Blademaster of Vinium!|The Bringer of the Night!
+!ForceUpBub()
+!HoldOn(0.1)
+~Stop
+!ShoutMode()
+-Quintus: ISENGRIM!
+!HoldOn(0.1)
+!ShoutMode()
+!OverCamZoom(1.5)
+!HoldOn(0.5)
+-Quintus:  THE! 
+!HoldOn(0.1)
+!ShoutMode()
+!OverCamZoom(2)
+!HoldOn(0.5)
+-Quintus: MUSWOLF!
+!ForceUpBub()
+!TeleportCharacter(Isengrim,801,128)
+!OverworldCameraPan(800,100,3,1)
+!HoldOn(1.4)
+!NormalJump(Isengrim,3,50,801,128,Jump,Howl)
+!HoldOn(0.4)
+!PlaySound(Muswolfhowl2)
+!ShoutMode()
+-Isengrim: AWOOOOOOO!
+!HoldOn(0.2)
+!OverCamZoom(1)
+!SetVisibleNPC(Ghost,0)
+!SetVisibleNPC(Bruce,0)
+!SetAnim(Isengrim,DL)
+!SetAnim(Car,Driving)
+!HoldOn(0.7)
+!PlaySound(GwenWhoosh2)
+
+!SetAnim(Bruce,L)
+!NormalJump(Isengrim,1,600,743,399,Jump,DL)
+!HoldOn(0.3)
+!OverworldCameraPan(340,523,3,1)
+!ForceUpBub()
+!HoldOn(0.8)
+!TeleportCharacter(Bruce,360,589)
+-Bruce: Bit of a tight squeeze.|Maybe we should swap?
+!TeleportCharacter(Ghost,390,514)
+-Ghost: Shut up and floor it!
+!ForceUpBub()
+!GoToBattle(Chariot)
+
+/Intro5
+~CrowdLoop
+!SetAnim(Car,Driving)
+!TeleportCharacter(Car,717,378)
+!SlowWalk(Car,DL,6.5)
+!HoldOn(9)
+!OverworldCameraPan(1080,270,3,1)
+!HoldOn(0.5)
+-Quintus: Th-they took out Isengrim?!
+!HoldOn(0.5)
+-Magnus: You two!
+!OverworldCameraPan(952,340,1,1)
+
+!TeleportCharacter(Bruce,710,505)
+!TeleportCharacter(Ghost,778,553)
+!Walk(Ghost,UR,1.4)
+!Walk(Bruce,UR,1.4)
+!HoldOn(2.2)
+-Magnus: You put on quite a show.
+-Magnus: Please grant us the honour of hearing your names.
+
+!SetGlobal(35,14)
+!SetGlobal(32,13)
+
+-Ghost: I'm not a ghost.
+-Ghost: I'm no gladiator.
+-Ghost: And I'm no mushroom farmer either.
+!HoldOn(0.3)
+!SetAnim(Bruce,R)
+!NameChange()
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.2)
+-Verm: My name is Verm, and I am the mouse who will slay the Yellow God.
+!HoldOn(0.7)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+-Bruce: And I'm Bruce.
+-Bruce: Ambassador of Sky Garden.
+!HoldOn(0.2)
+!Nani(Quintus,!)
+!HoldOn(0.1)
+!Nani(Magnus,!)
+!HoldOn(0.4)
+-Quintus: A-ambassador...
+-Bruce: By the by, that's the wee turd that put me in chains and dragged me in here.
+-Bruce: Do us a favour and apprehend him.
+
+!SetAnim(Magnus,LookLeft1)
+!HoldOn(0.1)
+!SetAnim(Magnus,LookLeft2)
+!ShoutMode()
+!HoldOn(0.1)
+!SetAnim(Quintus,DR)
+-Magnus: Quintus!
+!HoldOn(0.1)
+-Magnus: You captured the Ambassador of Sky Garden and forced him to participate in circus games?
+-Magnus: Are you a slug-brain? A total dingbat?
+-Magnus: Do you have any idea how bad this is for our political relations?!
+-Quintus: B-Baron, this is all a big misunderstanding!
+-Quintus: You know what they say-
+-Magnus: Enough of your grammar school quotes!
+!SetAnim(Magnus,LookLeft1)
+!HoldOn(0.1)
+!SetAnim(Magnus,DL)
+!HoldOn(0.1)
+!SetAnim(Magnus,LookRight1)
+!HoldOn(0.1)
+!SetAnim(Magnus,LookRight2)
+-Magnus: Soldier, arrest this man. We'll figure out the sentencing later.
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: What happens now?
+-Bruce: Well, I think I'm owed compensation for my hardships.
+-Verm: I mean, after that.
+-Bruce: I'm going tae go meet up with Siobhan and Gwen.
+-Bruce: Ye should come join us.
+-Bruce: I don't know what we can do about the Yellow God, but... we can work something out.
+!HoldOn(0.4)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.3)
+-Bruce: Something wrong?
+!HoldOn(0.5)
+-Verm: I'll need a new sword.
+-Verm: I can't be fighting off whatever horrors lie ahead of us with a brick.
+-Bruce: Ha, oh yeah.
+-Bruce: Let's get out this death arena and we can work it all out.
+!HoldOn(0.5)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.6)
+-Verm: Bruce. Thanks for coming.
+-Bruce: What are friends for?
+!HoldOn(0.4)
+~Stop
+!NextRoom(ToBlack)
+!HoldOn(0.6)
+!NextRoom(VinHouse2,3)

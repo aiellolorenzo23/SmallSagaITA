@@ -1,0 +1,20 @@
+/BattleVeryStart
+~RandomBattleLoop
+Blank
+/BattleStart
+!CameraPan(0,1,1,1)
+!DrawWeapon(Verm)
+!HoldOn(1)
+-Bree: I-is that Chief's Titan Reaper?
+-Stilton: Now hold on just one second...
+!LetsFight()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+
+/VermRage
+-Verm: Round two, bozos!|Let's rock!
+!SetAnim(Verm,Idle)
+!NewTurn()
+End scene

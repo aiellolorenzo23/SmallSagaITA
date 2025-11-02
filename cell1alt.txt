@@ -1,0 +1,435 @@
+/Nothing
+!EnableGwenSolid()
+
+/Intro
+~DryCaveLoop
+!HoldOn(3)
+!EnableGwenSolid()
+!SetProtaMode(0)
+!SetGlobal(4,1)
+!OpenDoor(2,Default)
+!PlaySound(PrisonDoorOpen)
+!HoldOn(1.5)
+!TeleportCharacter(Bruce,380,200)
+!NormalJump(Bruce,2,40,314,263,Thrown,MaskOn)
+!HoldOn(1.3)
+!TeleportCharacter(Mask,386,190)
+!NormalJump(Mask,2,40,329,287,Default,Default)
+!HoldOn(2)
+!OpenDoor(2,Close)
+!PlaySound(PrisonDoorClose)
+!HoldOn(7)
+!SetAnim(Bruce,DL)
+!HoldOn(1)
+~GwenLoop
+-Gwen: Well, well, well.
+-Gwen: A fool enters|the dragon's lair.
+-Bruce: Hey, I'm no fool.
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.4)
+-Bruce: And yer no dragon, are ye?|I see no wings or scales.
+!HoldOn(0.2)
+-Gwen: No wings, no.
+!HoldOn(0.2)
+!SetAnim(Gwen,ChainUp)
+!HoldOn(1)
+-Gwen: But even a grounded dragon has teeth and claws.
+!HoldOn(0.5)
+!SetAnim(Gwen,ChainDown)
+!HoldOn(2)
+-Bruce: I think we got off on the wrong paw. So let's start over.
+-Bruce: What are ye in for?
+
+!HoldOn(1.6)
+
+-Gwen: Same thing as you, like.
+-Gwen: There's no place for queer folk in the free land of Sky Garden.
+-Bruce: Aye, but specifically...
+!HoldOn(0.2)
+!SetAnim(Gwen,ChainUp)
+!HoldOn(1)
+-Gwen: I hit on Blademaster Lamia.
+!HoldOn(0.1)
+!Nani(Bruce,?)
+!HoldOn(0.5)
+-Bruce: Eh?! Ye talking about|the full metal stoat?
+-Gwen: What can I say?|She has a great smile.
+-Bruce: She'd eat you, given the chance!
+-Gwen: Gods, I wish.
+!HoldOn(0.4)
+!SetAnim(Gwen,ChainDown)
+!HoldOn(0.6)
+-Gwen: In any case, I thought she was one of us, but clearly I misread the situation.
+-Gwen: 'Cos the next thing I knew, I was taking a steel gauntlet to the face.
+-Gwen: Hardest punch I've ever felt.|Must be why they call her|"Lamia the Peerless".
+-Bruce: Aye, she did look pretty fierce.
+!HoldOn(0.7)
+-Bruce: The name's Bruce, by the way.
+-Gwen: Gwenllian of|Neuadd-y-duwiau-gwynion,|the Hall of the White Gods.
+!HoldOn(0.3)
+!SetAnim(Gwen,ChainUp)
+!HoldOn(0.5)
+-Gwen: But "Gwen" is fine.
+!HoldOn(1)
+-Bruce: Guess I should get comfy. Enjoy my last meal or something.
+!SetAnim(Gwen,ChainDown)
+-Gwen: Yeah.
+!HoldOn(1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!Walk(Bruce,UR,0.3)
+!HoldOn(1)
+!SetAnim(Gwen,ChainUp)
+!HoldOn(0.4)
+-Gwen: Wanna escape?
+!Nani(Bruce,!)
+!HoldOn(0.3)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+-Bruce: Already?!
+-Gwen: Hey, I've been sitting in here like a caged pet for a month, like.
+-Gwen: Your arrival is an opportunity, and I'm not wasting it.|I'm breaking out today.
+-Bruce: I mean, yeah, escaping sounds great.
+-Bruce: But yer not going anywhere chained up like that.
+-Gwen: Right you are.
+!SetAnim(Gwen,ChainDown)
+-Gwen: So getting out of these shackles is step one of my three step master plan.
+-Gwen: The cachgwn keep the key for this ball and chain nearby.
+!SetAnim(Gwen,ChainUp)
+-Gwen: If you fetch it, I promise to get you safely to the surface.|Tip for tap.
+-Bruce: Stealing a key from the guards, huh? Aye, I might be able to do that.
+
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.4)
+-Bruce: Ah, but this door's a problem.
+-Gwen: You think so?|Give it a proper shove.
+
+/Door
+!OpenDoor(2,Default)
+!SetGlobal(4,0)
+!PlaySound(PrisonDoorOpen)
+!HoldOn(1)
+!Nani(Bruce,!)
+!HoldOn(0.5)
+-Bruce: Woah, it actually opened!
+-Gwen: Yep.
+-Gwen: The door lock's rusted through. The cachgwn in uniform just haven't noticed.
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+-Gwen: On that note, those idiots will be doing regular patrols.
+-Gwen: You're unarmed, so stay out of their line of sight.
+-Bruce: Got it. I'll be as quiet as a louse.
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+
+-Bruce: I'll just nab that key, then I'll be back here before ye can say "hard time".
+!SetGlobal(18,8)
+!HoldOn(0.2)
+!Exit(Bruce)
+~Stop
+!HoldOn(1)
+!SetAnim(Gwen,ChainDown)
+-Gwen: The fool has spirit.|But does he have skill?
+!HoldOn(1)
+!NextRoom(Prison1,2)
+
+/Spotted
+!HoldOn(1)
+!EnableGwenSolid()
+!SetGlobal(4,0)
+!CheckGlobal(24,1,Fail1Keyless)
+!CheckGlobal(24,2,Fail2Keyless)
+!CheckGlobal(24,3,Fail3Keyless)
+>AutoFail
+
+/Fail1Keyless
+-Gwen: Got spotted?
+-Bruce: Aye. I'll try again, though.
+
+/Fail2Keyless
+-Gwen: Got spotted again?
+-Bruce: Nae bother. I'll give it another go.
+
+/Fail3Keyless
+-Gwen: No key?
+-Bruce: Not yet, no.
+
+/SpottedWithKey
+!HoldOn(1)
+!EnableGwenSolid()
+!SetGlobal(4,0)
+!CheckGlobal(24,1,Fail1Key)
+!CheckGlobal(24,2,Fail2Key)
+!CheckGlobal(24,3,Fail3Key)
+>AutoFail
+
+/Fail1Key
+-Gwen: Got spotted?
+-Bruce: Aye. They took back the key too.
+-Gwen: Give it another go.
+
+/Fail2Key
+-Gwen: Spotted again?
+-Bruce: Aye. Lost the key too. I'll try again.
+
+/Fail3Key
+-Gwen: No key?
+-Bruce: I had it, I swear! I was this close!
+
+/ChatGwen
+!CheckGlobal(4,1,ChatEarly)
+-Gwen: The key should be nearby.
+-Gwen: It's big. There's no way you can miss it.
+
+/ChatEarly
+-Gwen: We can chat later.|Try that door first.
+
+/KeyTime
+~DryCaveLoop
+!Walk(Bruce,DL,0.3)
+!HoldOn(0.3)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+-Bruce: Hey Gwen, look! I brought the-
+!HoldOn(0.8)
+!ShoutMode()
+-Bruce: Yer already free?!
+-Gwen: You were taking too long.|Time is fleeting.
+-Bruce: Why did ye send me out searching for a key if ye could just free yerself?!
+-Gwen: It was a test.|Of your abilities,|and of your character.
+-Gwen: You passed both with flying colours.
+>ButHow
+
+/ButHow
+-Bruce: Okay, sure, but uh... how?
+-Gwen: Leg comes off.
+!HoldOn(0.8)
+-Bruce: What?
+!HoldOn(0.5)
+!SetAnim(Gwen,LegOff)
+!HoldOn(1.2)
+-Gwen: Leg comes off.
+!HoldOn(1)
+!ShoutMode()
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.5)
+-Bruce: WHAT?!
+!HoldOn(0.1)
+!SetAnim(Gwen,LegOn)
+!HoldOn(0.3)
+-Gwen: Okay, this conversation|is getting tiresome.
+-Gwen: Let's move on. Step two: taking back our weapons.
+-Gwen: My glaive is being kept in a storage room on this floor.
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+-Gwen: That's where your weapon is too, I bet.
+!HoldOn(0.6)
+-Bruce: Right. My weapon.
+!HoldOn(1.5)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.4)
+-Gwen: ...You did bring a weapon, like?
+!HoldOn(0.4)
+-Bruce: Oh, aye. I'm not much of a warrior, but I brought the tools of my trade.
+-Gwen: Cracking.
+-Gwen: We've still got to stay out of sight until we get our weapons.
+-Gwen: But from here on out, the red dragon will lead the way.
+-Bruce: Got it. I'll stay|close to yer tail.
+!Walk(Bruce,UL,0.3)
+!AddToParty(Gwen)
+!SetLeader(Gwen)
+!HoldOn(0.5)
+!AutoPinFollowers(1)
+!HoldOn(0.1)
+!AddToParty(Gwen)
+!SetLeader(Gwen)
+!PlaySound(NewPartyMember)
+-Info: Gwen has joined the party.
+!HoldOn(0.5)
+
+/NormalIntro
+!EnableGwenSolid()
+!AutoPinFollowers(1)
+
+/NormalIntro2
+!AutoPinFollowers()
+
+
+/FailedIntro
+!AutoPinFollowers()
+!HoldOn(1)
+!SetGlobal(4,0)
+!CheckGlobal(24,1,Fail1)
+!CheckGlobal(24,2,Fail2)
+!CheckGlobal(24,3,Fail3)
+>AutoFail
+
+/AutoFail
+!CheckGlobal(24,4,Fail4)
+!CheckGlobal(24,5,Fail5)
+!CheckGlobal(24,6,Fail6)
+!CheckGlobal(24,7,Fail7)
+!CheckGlobal(24,8,Fail8)
+!CheckGlobal(24,9,Fail9)
+!CheckGlobal(24,10,Fail10)
+!CheckGlobal(24,11,Fail11)
+!CheckGlobal(24,12,Fail12)
+!CheckGlobal(24,13,Fail11)
+!CheckGlobal(24,14,Fail11)
+!CheckGlobal(24,16,Fail11)
+!CheckGlobal(24,17,Fail11)
+!CheckGlobal(24,19,Fail11)
+!CheckGlobal(24,20,Fail11)
+>Fail13
+
+/Fail1
+-Gwen: We got spotted. That's okay, let's try again.
+
+/Fail2
+-Gwen: Damn. Spotted again.
+-Bruce: My bad.
+-Gwen: It's fine. We can do this.
+
+/Fail3
+-Gwen: Ugh. Not again.
+-Bruce: You'd think the guards would get curious about how we keep escaping.
+-Gwen: They're not the brightest bunch, that's for sure.
+-Gwen: Okay. Here we go.
+
+/Fail4
+-Bruce: Ye know what they say.|Fifth time's the charm.
+-Gwen: Nobody says that.
+
+/Fail5
+-Bruce: Ye know what they say.|Sixth time's the charm.
+-Gwen: Again, that's not an expression.
+
+/Fail6
+-Bruce: Ye know what they say-
+-Gwen: Bruce, I swear...
+
+/Fail7
+-Gwen: Bruce, I've got a pro-tip.
+-Gwen: Stay out of the guards' line of sight.
+-Bruce: Aye, thanks, quality tip there.
+
+/Fail8
+-Bruce: If I hid in a box, this sneaking business would be much easier.
+-Gwen: A box? Please try to be serious.
+
+/Fail9
+-Bruce: What number's this?
+-Gwen: I lost count.
+
+/Fail10
+-Gwen: Hey, Bruce. Are you familiar with the concept of "learned helplessness"?
+-Bruce: No. What's that?
+-Gwen: Forget it.
+
+/Fail11
+-Gwen:  . . . 
+
+/FailFail
+!SetGlobal(24,10)
+!SetGlobal(4,0)
+~DryCaveLoop
+!Walk(Bruce,DL,0.3)
+!HoldOn(0.3)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+-Bruce: Sorry Gwen, I got caught again. But next time I-
+!HoldOn(0.8)
+!ShoutMode()
+-Bruce: Yer already free?!
+-Gwen: You were taking too long.|Time is fleeting.
+-Bruce: Why did ye send me out searching for a key if ye could just free yerself?!
+-Gwen: It was a test.|Of your abilities, and of your character.
+-Gwen: You failed both, of course.|You're an utter clown.
+-Gwen: But I'm not exactly in a position to be choosy with my escape accomplice.
+>ButHow
+
+/Fail12
+-Gwen: Okay, Bruce. This plan doesn't seem to be working.
+-Gwen: But I have a secret back-up plan. One that'll allow us to skip this forced stealth nonsense.
+>Fail13
+
+/Fail13
+-Gwen: Shall we go with the back-up plan and head straight to the storage room?
+*YesSkip: Yes please.
+*NoSkip: No thanks.
+
+/YesSkip
+-Bruce: That sounds great!|Let's just do that!
+-Gwen: Great. Follow me.
+!NextRoom(ToBlack)
+!HoldOn(0.6)
+!NextRoom(PrisonStorage,3)
+
+/NoSkip
+-Bruce: No. I like the current plan.
+-Gwen: Alright. I'll ask again later.
+
+/Bucket
+-Info: An en-suite bathroom.|Very fancy.
+
+/Lock
+-Info: A god-made shackle.|It looks nigh-unbreakable.
+
+/Statue
+!CheckGlobal(45,1,SaveTime)
+-InfoBig: It's a tiny wooden statue of a hare with butterfly wings, a "pwca".
+-InfoBig: Did Gwen carve this from a wooden stool?
+!SetGlobal(45,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: The pwca flies freely.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Sky Garden,Gwen's Prison cell)
+-Info: Your game has been saved.
+/SaveNo
+
+/Plate
+-Info: Remnants of mouldy breadcrumbs.|This is not Vy's gourmet cuisine.

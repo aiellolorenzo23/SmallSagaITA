@@ -1,0 +1,170 @@
+/Intro
+~DryCaveLoop
+!CheckGlobal(5,0,FirstIntro)
+
+/LiftTouch
+-Info: Descend to Cranbaile?
+*LiftUp: Let's go.
+*NoLiftUp: Not yet...
+/LiftUp
+!LiftGoUp()
+/NoLiftUp
+
+/FirstIntro
+!HoldOn(0.4)
+!PlaySound(SeedPush1)
+!SpecialWalk(Siobhan,UR,0.2,DLWalk,0.4)
+!HoldOn(0.4)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.3)
+!PlaySound(SeedPush2)
+!SpecialWalk(Siobhan,UR,0.2,DLWalk,0.4)
+!HoldOn(0.4)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.3)
+!PlaySound(SeedPush3)
+!SpecialWalk(Siobhan,UR,0.2,DLWalk,0.4)
+!HoldOn(0.4)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.3)
+!PlaySound(SeedPush1)
+!SpecialWalk(Siobhan,UR,0.2,DLWalk,0.4)
+!HoldOn(0.4)
+!SetAnim(Siobhan,DL)
+!HoldOn(1)
+-Siobhan: This sword is heavy as anything...
+!HoldOn(0.3)
+!PlaySound(SeedPush2)
+!SpecialWalk(Siobhan,UR,0.2,DLWalk,0.4)
+!HoldOn(0.4)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.3)
+!PlaySound(SeedPush3)
+!SpecialWalk(Siobhan,UR,0.2,DLWalk,0.4)
+!HoldOn(0.4)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.3)
+-Siobhan: How did the mouse knight even swing it?
+!HoldOn(0.7)
+
+!PlaySound(SeedPush2)
+!SpecialWalk(Siobhan,UR,0.2,DLWalk,0.4)
+!HoldOn(0.4)
+!SetAnim(Siobhan,DL)
+!SetAnim(Verm,Ow)
+!HoldOn(0.7)
+-Verm: Ow...
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+-Siobhan: Oh, grand! You're not dead!
+-Siobhan: Steady on your feet, now.
+!HoldOn(1)
+!SetAnimEnd(Verm,StandSwordless)
+!HoldOn(0.6)
+-Siobhan: Are you hurt?
+!HoldOn(0.2)
+!Nani(Verm,!)
+!HoldOn(0.5)
+-Verm: Don't touch that!
+!HoldOn(0.3)
+!SetAnimEnd(Verm,Reach)
+!HoldOn(0.8)
+!PlaySound(VermDraw)
+!DestroySword()
+!SetAnim(Verm,DR)
+!HoldOn(0.05)
+!SetAnim(Verm,D)
+!HoldOn(0.05)
+!SetAnim(Verm,DL)
+!HoldOn(0.05)
+!SetAnim(Verm,L)
+!HoldOn(0.05)
+!SetAnim(Verm,UL)
+!HoldOn(0.05)
+!SetAnim(Verm,U)
+!HoldOn(0.05)
+!SetAnim(Verm,UR)
+!HoldOn(0.05)
+!SetAnim(Verm,R)
+!HoldOn(0.05)
+!SetAnim(Verm,DR)
+!HoldOn(0.05)
+!SetAnim(Verm,DR)
+!HoldOn(0.9)
+-Verm: I'm fine.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+-Siobhan: Woah, he's the real deal...
+-Verm: Pardon?
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: I saw you going paw-to-claw against Tiger! Blow for blow!
+-Siobhan: It was the coolest thing I've ever seen! It was amazing!
+-Siobhan: Well, until he sent you flying, that is.
+-Siobhan: I had to drag you here before he gobbled you up. It was a close call.
+-Verm: You dragged me here?
+!HoldOn(0.5)
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,L)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(1.2)
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UR)
+!HoldOn(0.1)
+!Walk(Verm,UR,0.6)
+!HoldOn(0.7)
+!SetAnim(Siobhan,U)
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+!Walk(Verm,UL,0.2)
+!HoldOn(1)
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UR)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,R)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DR)
+!HoldOn(1)
+-Verm: Where is "here", exactly?
+!ResetWalkSpeed(Siobhan)
+-Siobhan: Oh right! Hold on.
+!Walk(Siobhan,U,0.3)
+!HoldOn(0.4)
+!Walk(Siobhan,UR,0.3)
+!HoldOn(0.4)
+!SetAnimEnd(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!LiftGoUp()
+
+/WrongSide
+-Verm: I should probably stand on the lift before I use it.
+
+/LiftDone
+~DryCaveLoop
+!CheckGlobal(5,5,LiftDoneWPin)
+/LiftDoneWPin
+!AutoPinFollowers(1)
+
+End scene

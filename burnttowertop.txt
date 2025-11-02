@@ -1,0 +1,671 @@
+/Intro
+
+/Scuin
+!OverworldCameraPan(320,200,1,1)
+!HoldOn(3)
+!CameraFollow(1)
+!HoldOn(1)
+
+/FirstIntro
+!Walk(Verm,U,1)
+!Walk(Bruce,UL,1)
+!Walk(Siobhan,UR,0.5)
+!Walk(Gwen,UL,0.5)
+!HoldOn(0.5)
+!Walk(Siobhan,U,0.5)
+!Walk(Gwen,U,0.5)
+!HoldOn(0.51)
+!SetAnim(Bruce,U)
+!CheckGlobal(18,25,TheSummoning)
+!HoldOn(1)
+!SetGlobal(18,25)
+-Verm: This room's the darkest yet.
+!HoldOn(0.4)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+-Siobhan: What's that smell?
+-Gwen: It's death.
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+-Gwen: And not just Red squirrels.
+-Gwen: Shrews, mice, moles...
+-Gwen: Old deaths. New deaths.|Many freshly slain.
+-Gwen: This is the den of a titan, and a particularly vicious one at that.
+!HoldOn(0.2)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!SetAnim(Siobhan,U)
+!HoldOn(0.3)
+>TheSummoning
+
+/TheSummoning
+-Info: |  . . . | 
+*StepF: Step forward.
+*StepB: Step backward.
+
+/StepB
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!Walk(Verm,D,1)
+!HoldOn(0.5)
+!NextRoom(BurntTower,1)
+
+/StepF
+!OverworldCameraPan(320,500,0.4,1)
+!SlowWalk(Verm,U,2.5)
+!HoldOn(3)
+-Verm: I should say something...
+*Hello: Hello?
+*Oi: Oi!
+*Duke: The Duke...
+
+/Duke
+-Verm: Hey. Anyone here? I've got a message from Duke Josh.
+!HoldOn(1)
+!PlaySound(OwlOpen)
+!SetAnim(Bane-Ghial,Open)
+!HoldOn(1)
+-Bane-Ghial: To speak that vile name here,|so boldly and so proudly...
+-Bane-Ghial: Are you looking to provoke me, mouse?
+-Verm: Oh. Uh... no, that wasn't my intention.
+-Verm: I'm just looking for the Cailleach.
+>Was
+
+/Oi
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Verm: Oi! Cailleach!
+!HoldOn(0.1)
+-Verm: Get out here, I've got a question for you.
+!HoldOn(0.3)
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!SetAnim(Siobhan,L)
+-Gwen: Is Verm always this foolhardy?
+-Siobhan: Very much so.
+-Gwen: I see.
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!SetAnim(Siobhan,U)
+!HoldOn(1)
+!PlaySound(OwlOpen)
+!SetAnim(Bane-Ghial,Open)
+>Was
+
+/Hello
+-Verm: Hello? I'm looking for the Cailleach.
+!HoldOn(1)
+!PlaySound(OwlOpen)
+!SetAnim(Bane-Ghial,Open)
+>Was
+
+/Was
+!HoldOn(1)
+!SetGlobal(18,26)
+-Bane-Ghial: The Cailleach was here.
+-Bane-Ghial: But no longer.
+-Bane-Ghial: Only ashes remain.
+!HoldOn(0.2)
+-Verm: Oh.
+-Verm: Well, can you help?
+!HoldOn(0.4)
+-Bane-Ghial: Perhaps.
+-Bane-Ghial: Although my mother is gone,|I retain shadows of her wisdom.
+!HoldOn(0.2)
+-Siobhan: H-hey, Sir Verm?
+-Siobhan: Not to alarm you, b-but I'm pretty sure that's a nightwing, that is.
+!HoldOn(0.3)
+!SetAnim(Bruce,UR)
+-Bruce: [Should we leg it?]
+-Gwen: [Stay calm. Nightwings are fierce, but if things go south, the numbers are on our side.] 
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(0.3)
+-Bane-Ghial: You may ask but one question.
+-Verm: Just one?
+-Verm: Then, I need to know...
+*YG: The Yellow God...
+*Lance: Lance...
+
+/YG
+-Verm: The Yellow God of Death.|How can I find Him?
+-Bane-Ghial: Death... I am intimately familiar with Death.
+-Bane-Ghial: She is a cruel creature.
+-Bane-Ghial: Predator of predators! She arrives unannounced and takes what she pleases.
+-Bane-Ghial: There is no need to seek her, for she will find you on her own whims.
+-Verm: That doesn't help.|When will that be? Where?
+>Answered
+
+/Lance
+-Verm: My brother, Lance...
+-Verm: I abandoned him when he needed me. Does he forgive me?
+-Bane-Ghial: Forgiveness is a concept for the living.
+-Bane-Ghial: Those who have passed can neither resent nor forgive.
+-Bane-Ghial: We who still breathe must bear the weight of our failures.
+!HoldOn(0.6)
+-Verm: It hurts.
+-Bane-Ghial: I know.
+>Answered
+
+/Answered
+!HoldOn(0.4)
+-Bane-Ghial: I have answered your question, mouse.
+-Bane-Ghial: Now you must answer mine.
+!OverworldCameraPan(320,450,0.3,1)
+~Stop
+!HoldOn(0.2)
+!TitanModeToggle()
+!HoldOn(0.2)
+-Bane-Ghial: WILL YOU PAY TRIBUTE?
+!HoldOn(0.3)
+!PlaySound(OwlOpen)
+!SetAnim(Sheer-Ghlass,Open)
+!HoldOn(0.3)
+-Sheer-Ghlass: OOH-HOO! TRIBUTE?
+!TitanModeToggle()
+!HoldOn(0.1)
+-Bruce: There's two of 'em?!
+!PlaySound(OwlOpen)
+!SetAnim(Doo-Dorraghey,Open)
+!TitanModeToggle()
+!HoldOn(0.3)
+-Doo-Dorraghey: T-T-TRIBUTE!
+!TitanModeToggle()
+!HoldOn(0.1)
+-Siobhan: Oh no.
+!PlaySound(OwlOpen)
+!SetAnim(Jiarg-Lossanagh,Open)
+!TitanModeToggle()
+!HoldOn(0.3)
+-Jiarg-Lossanagh: TRIBUUUUUUTE!
+!HoldOn(0.1)
+!TitanModeToggle()
+!HoldOn(0.1)
+-Gwen: Shit.
+!GoToBattle(Owls)
+
+
+/BattleOver
+!PlaySound(OwlEscape)
+!SetGlobal(18,27)
+!HoldOn(3)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(0.2)
+!LevelUp(Bruce)
+!HoldOn(0.2)
+!LevelUp(Gwen)
+!HoldOn(1.5)
+-Siobhan: They flew away...
+!HoldOn(0.6)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+-Verm: Think they'll come back?
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+-Gwen: Most likely. Nightwings always return to their roost.
+-Gwen: We should clear out before dawn.
+!HoldOn(0.6)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.2)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.3)
+-Siobhan: Bruce? Are you okay?
+!HoldOn(1)
+-Bruce: I'm fine. It's just...
+!SetAnim(Bruce,UR)
+!HoldOn(0.3)
+!Walk(Bruce,UR,0.3)
+!HoldOn(0.3)
+!SetAnim(Gwen,U)
+!Walk(Bruce,R,0.72)
+!HoldOn(0.6)
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,UL)
+!HoldOn(0.9)
+-Bruce: This room...
+!HoldOn(0.3)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(0.3)
+!Walk(Bruce,U,0.6)
+!HoldOn(1)
+-Bruce: This spot...
+!HoldOn(0.5)
+!PlaySound(Ghost1)
+!TeleportCharacter(Scuin,322,433)
+!HoldOn(0.5)
+!SpecialWalk(Bruce,D,1,UWalk,0.5)
+!HoldOn(1)
+!SetAnim(Bruce,U)
+!HoldOn(1.3)
+-Bruce: This is where the|Pebble of Scuin belongs.
+!HoldOn(0.5)
+!PlaySound(Ghost3)
+!LoseItem(66)
+!LightMode(1)
+!HoldOn(0.7)
+~Pact1Loop
+!HoldOn(0.3)
+!OverworldCameraPan(320,200,0.25,1)
+!HoldOn(8.3)
+!OverworldCameraPan(320,480,0.3,1)
+!HoldOn(3)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!Walk(Bruce,D,0.3)
+!SetAnim(Gwen,UR)
+!HoldOn(0.5)
+-Bruce: I'm going back tae the Duke's fortress.
+-Gwen: You want to rescue Anton.
+!SetAnim(Bruce,DL)
+-Bruce: Aye. But not just Anton.
+-Bruce: I want tae reclaim the Oaken Throne.
+-Bruce: Nay, I need to.
+!HoldOn(0.2)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.2)
+-Bruce: Every minute that smarmy Duke sits in his high chair is an insult tae my clan and my heritage.
+!HoldOn(0.3)
+-Siobhan: Bruce...
+!HoldOn(0.3)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!Walk(Bruce,U,0.2)
+!HoldOn(0.7)
+-Bruce: I'm gonna break into Sky Garden.
+-Bruce: I'm gonna rescue Anton.
+-Bruce: And I'm gonna punch the Duke|in his smug face.
+!HoldOn(0.6)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+-Bruce: Do you three stand with me?|Will you help me reclaim|Sky Garden for Clan Red?
+!HoldOn(0.5)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.7)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.4)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+-Gwen: What you're proposing is a military coup. A violent, bloody revolt.
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.2)
+-Bruce:  Aye. 
+-Gwen: Fab. I'm in.
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!Walk(Gwen,UL,0.2)
+!HoldOn(0.2)
+!Walk(Gwen,U,0.6)
+!HoldOn(0.6)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+-Gwen: Maybe I can settle my score with that stoaty Blademaster.
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!SetAnim(Bruce,D)
+!HoldOn(0.6)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!Walk(Siobhan,L,0.4)
+!HoldOn(0.5)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.6)
+-Siobhan: Waging war on Sky Garden|sounds terrifying.
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+-Siobhan: But you're right, Bruce.|We can't just stand by.
+-Siobhan: I'm done letting our lives be ruled by bullies and throne-sitters.
+-Siobhan: So... count me in. I want to help however I can.
+!HoldOn(0.3)
+!Walk(Siobhan,UL,0.2)
+!HoldOn(0.2)
+!SetAnim(Bruce,DL)
+!Walk(Siobhan,U,0.3)
+!HoldOn(0.4)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.2)
+-Bruce: I cannae thank ye both enough. Truly.
+!HoldOn(0.2)
+!SetAnim(Siobhan,R)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.6)
+!TurnOffBlocks(0)
+-Bruce: What about ye, Verm?
+-Bruce: I know we're not bestest pals.|And ye dinnae owe me any favours.
+-Bruce: But if ye lend yer sword, I will dedicate every resource of the city tae helping you find and slay the Yellow God.
+-Bruce: Will you help me take Sky Garden?
+*IWill: I will.
+*Nah: Nah.
+
+/IWill
+-Verm: I will.
+-Verm: But you need to think|things through first.
+>Alert
+
+/Nah
+-Verm: Nah. You're an idiot.
+-Siobhan: Sir Verm, be nice!
+-Verm: Be nice? Bruce isn't|thinking with his head.
+>Alert
+
+/Alert
+!Walk(Verm,U,0.2)
+!HoldOn(0.2)
+!SetAnim(Siobhan,R)
+!SetAnim(Bruce,R)
+!SetAnim(Gwen,R)
+!Walk(Verm,UR,0.9)
+!HoldOn(1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,CrossedL)
+!HoldOn(0.3)
+-Verm: The Sky Garden soldiers are on high alert thanks to your antics.
+-Verm: The portcullis is down.|The windows are definitely|being watched, night and day.
+-Verm: Pigeons won't fly close out of fear of being shot down.
+-Verm: So what's your battle strategy?|How do we get in?
+!HoldOn(0.5)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.7)
+-Bruce: Well, I haven't thought|that far ahead.
+!HoldOn(1)
+-Gwen: That's alright.|We can make a plan.
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!SetAnim(Bruce,DL)
+-Gwen: For a successful siege, we'll need a hundred soldiers of our own.
+-Gwen: Forty days of rations.|Weapons, armour...
+
+-Siobhan: Oh! I could build a siege weapon, if you give me a week.
+!HoldOn(0.4)
+
+!SetAnim(Bruce,Sad)
+!SetAnim(Siobhan,U)
+!ShoutMode()
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Gwen,R)
+~Stop
+!HoldOn(0.1)
+-Bruce: Ahh, there's no time|for any of this!
+-Bruce: Anton's getting executed at dawn!
+!HoldOn(1)
+!SetAnim(Gwen,DR)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(1.2)
+-Siobhan: That... that only gives|us a few hours.
+-Gwen: And we don't have|much to work with...
+!HoldOn(1.5)
+!SetAnim(Verm,DL)
+!HoldOn(0.5)
+-Verm: This is pointless. I'm out.
+!Walk(Verm,D,0.5)
+!HoldOn(0.5)
+!Walk(Verm,DL,0.5)
+!Fuzz(1)
+!SetAnim(Bruce,D)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.6)
+!PlaySound(Godstep)
+!SetAnim(Verm,OwDL)
+!Nani(Verm,!)
+!ShoutMode()
+!HoldOn(0.6)
+-Verm:  Ah! 
+!HoldOn(0.6)
+!TurnOnBlocks(0)
+!Walk(Siobhan,R,0.6)
+!HoldOn(0.8)
+-Verm: I'm not running away...
+-Siobhan: Sir Verm! Are you okay?
+!Fuzz(0)
+!HoldOn(0.7)
+!SetAnim(Verm,DL)
+!HoldOn(0.5)
+-Verm: I'm... I'm fine.
+!HoldOn(0.6)
+-Gwen: Are you sure?
+-Bruce: Yer looking more than|a bit peely-wally.
+
+-Verm: Never mind me.
+!HoldOn(0.6)
+~Pact2Loop
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.2)
+-Verm: Listen. There might be a way to attack Sky Garden.
+-Verm: It's a little crazy, though.
+-Verm: It's the kind of plan that can go south in ten thousand|different ways.
+-Bruce: Yer not exactly selling us on it...
+!HoldOn(1)
+-Siobhan: I think we should go|with Sir Verm's plan.
+-Gwen: You haven't even heard|what it is yet.
+-Siobhan: I know, but...
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: There's this idea where I'm from. Meitheal. It's like...
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+-Siobhan: When I couldn't face the felidae threatening my village, Sir Verm drew his blade in support.
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!Walk(Siobhan,L,0.4)
+!HoldOn(0.5)
+!SetAnim(Bruce,D)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+-Siobhan: When we entered the labyrinth outside Murida, Bruce guided the way.
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!Walk(Siobhan,L,0.5)
+!HoldOn(0.3)
+!SetAnim(Gwen,D)
+!SetAnim(Bruce,DL)
+!HoldOn(0.3)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+-Siobhan: And when Bruce was thrown in prison, Gwen selflessly jumped in to break him out.
+!HoldOn(0.5)
+-Verm: That's a really positive spin on those events.
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+-Bruce: Oh, wheesht! Let her finish,|ye daft mouse.
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.2)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+-Siobhan: Oh. Ah, I lost where I was.
+!HoldOn(0.6)
+-Gwen: I get it, Siobhan.
+-Gwen: You're saying, if we work together, we can do things that would be impossible for us as individuals.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+-Gwen: The odds are levelled. A foolish plan becomes a rock-solid strategy.
+-Siobhan: Yeah, that's it exactly!
+!HoldOn(0.5)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+-Bruce: Guts and teamwork...
+-Bruce: Is that really all it takes to bring down someone as terrible as the Duke?
+!HoldOn(0.7)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.3)
+!SetAnim(Siobhan,R)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!SetAnim(Gwen,DR)
+!HoldOn(0.4)
+-Verm: Can guts and teamwork kill a god?
+!HoldOn(1.6)
+-Siobhan: Well. One problem at a time.
+!HoldOn(1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!Walk(Gwen,U,0.4)
+!SetAnim(Verm,UL)
+!HoldOn(0.6)
+-Gwen: Dawn is about to break.|The nightwings will soon return.
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+-Gwen: Verm, tell us the details.
+-Verm: I will. Let me just pay|my respects to a statue first.
+-Bruce: Alright. Come speak to me here when yer ready.
+!CameraFollow(1)
+
+/GwenChat
+-Gwen: I'm ready for the battle ahead. I'm going to pay the cachgwn back ten-fold.
+
+/SiobhanChat
+-Siobhan: I'm scared. But I know we can do this, Sir Verm!
+
+/BattleTime
+-Bruce: Are ye ready to|let us in on Plan V?
+*Yup: I am
+*Not: Not yet
+
+/Not
+-Verm: Not yet. Give me a moment.
+
+/Yup
+-Verm: I am.
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+-Verm: Everyone listen up.|We only get one shot at this...
+!SetGlobal(18,29)
+!NextRoom(ToBlack)
+!HoldOn(2)
+!NextRoom(SkyGardenTop)

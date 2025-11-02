@@ -1,0 +1,378 @@
+/Intro
+!CheckGlobal(18,40,Intro2)
+~SkyGarden1Loop
+!AutoPinFollowers()
+!CheckGlobal(18,2,TuckTime)
+
+/Intro2
+~SkyGarden3Loop
+!AutoPinFollowers()
+
+/TuckTime
+!SetProtaMode(Tucked)
+
+/Junius
+!SetNPCFlag(Junius,Junius2)
+-Junius: Thanks for helping to free me! I was arrested for eating mushrooms.
+-Verm: As in, magic mushrooms?
+-Junius: What? They've got|MAGIC mushrooms now?
+-Junius: Holy moley, I've been missing out.
+-Junius: I've just been microdosing portobellos like a total lemon.
+
+/Junius2
+-Junius: Magic or not, Vinium mushrooms are world-class, you know.
+
+/Andrew
+-Andrew: I can't even remember why I was imprisoned. It was so long ago...
+
+/Hazel
+!CheckGlobal(18,40,HazelEnd)
+-Hazel: Welcome to Sky Garden.|Get out while you still can.
+
+/HazelBreak
+-Hazel: Prison break is it?|Don't worry, I won't squeal.
+
+/HazelEnd
+-Hazel: Lots of cleaning to do.
+
+/Felix
+!CheckGlobal(18,40,FelixEnd)
+-Felix: The troopers with colourful swords are the Duke's Dozen.
+-Felix: Keep your head down.|Don't make eye contact with them.|That's my advice.
+
+/FelixBreak
+-Felix: Dunno what you did, mouse, but the Peerless is coming. Go. Run.
+
+/FelixEnd
+-Felix: We shoved all the guards into the dungeon and locked the doors.
+-Felix: Not sure what the next step is. Are we supposed to hold a big trial?
+
+/Statue
+!CheckGlobal(48,1,SaveTime)
+-InfoBig: It's a solid gold statue of Duke Josh.
+-InfoBig: It exudes an unprecedented level of arrogance.
+!SetGlobal(48,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Duke Josh glimmers.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Sky Garden,Ground floor)
+-Info: Your game has been saved.
+/SaveNo
+
+/Polo
+!CheckGlobal(18,15,Polo2)
+-Polo: This door goes to the dungeon.
+-Polo: But it ain't visiting time, bud.
+
+/Polo2
+!AddToParty(Bruce)
+!AddToParty(Gwen)
+-Verm: Hey. We're visiting an inmate.
+-Polo: Visiting hours are over, bud.
+-Polo: That is, unless you're willing to pay a small tribute.
+*PoloAlright: Alright.
+*PoloNo: No.
+
+/PoloAlright
+-Verm: Alright. I'll pay tribute.
+-Verm: I'll a-tribute a sword to your face.
+!CheckGlobal(4,1,JokeMade)
+>WaitWhat
+
+/JokeMade
+-Siobhan: Sir Verm, you already made that joke.
+-Verm: Yeah, well, I'm not a comedian.|Do you have anything better?
+-Siobhan: Hmm... what about:|"I'll give you a tip - the tip of my blade, that is!"
+-Verm: Woah, that's pretty good.
+-Verm: Maybe you should give a line too, like, "I'll show you what happens when you play with fire!"
+-Siobhan: That's so cringey!|I don't think I could ever say that.
+-Verm: That line is cringey? Really?|It sounds cool to me.
+!HoldOn(0.5)
+-Polo: It's a bit cringe.
+-Verm: You're cringe.
+!SetGlobal(4,0)
+!GoToBattle(SingleGuard)
+
+/PoloNo
+-Verm: I don't really get this tribute business.
+-Verm: So I think I'll just beat you up and walk in.
+>WaitWhat
+
+/WaitWhat
+!SetGlobal(4,0)
+-Polo: W-wait, what?
+!GoToBattle(SingleGuard)
+
+/HearThat
+~Stop
+!TeleportCharacter(Siobhan,205,525)
+!SetGlobal(18,15)
+!Walk(Verm,R,0.5)
+!PlayMuffled(BruceSong1)
+!HoldOn(0.2)
+!Walk(Siobhan,R,0.2)
+!HoldOn(0.5)
+!Nani(Verm,?)
+!HoldOn(0.7)
+-Verm: Do you hear that?
+!HoldOn(0.8)
+!Walk(Verm,R,0.8)
+!Walk(Siobhan,R,0.7)
+!HoldOn(1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!Walk(Verm,U,0.2)
+!HoldOn(0.9)
+!PlayMuffled(BruceSong2)
+!HoldOn(0.7)
+-Siobhan: Music?
+-Verm: It sounds familiar. You don't think...
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+-Siobhan: Bruce?
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+-Verm: Bruce.
+!OverworldCameraPan(320,270,2,1)
+!HoldOn(0.6)
+-Verm: And it's coming from the dungeons.
+!CameraFollow(1)
+!HoldOn(0.6)
+-Siobhan: Oh no. What happened to him?
+-Hazel: Word is the harlequin and his pals tried to pull a fast one on the Duke.
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+-Hazel: Thieves get the death penalty.|No chance for clemency.
+-Verm: So he's performing his last concert.
+-Siobhan: That's awful!
+-Verm: Yeah, it is.
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+-Verm: But it's not our problem.
+-Siobhan: Not our problem?
+
+!Walk(Siobhan,R,0.2)
+!HoldOn(0.2)
+-Siobhan: Bruce helped us get through the labyrinth!
+-Verm: Only after lying to us about its dangers. He's a slimy wyrm.
+-Siobhan: But he's a friend!
+-Verm: Barely know him.|Not my fleas, not my circus.
+-Verm: I'm leaving.
+!Walk(Verm,L,0.2)
+!HoldOn(0.2)
+!Walk(Verm,DL,0.4)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!Fuzz(1)
+!HoldOn(0.8)
+!PlaySound(Godstep)
+!SetAnim(Verm,OwDL)
+!Nani(Verm,!)
+!ShoutMode()
+!HoldOn(0.6)
+-Verm:  Ah! 
+!HoldOn(0.7)
+-Verm: I'm not running away...
+!HoldOn(0.7)
+-Siobhan: Sir Verm?
+-Siobhan: Are you sure you're okay?
+!Fuzz(0)
+!HoldOn(1)
+-Verm: Am I...
+!HoldOn(0.4)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+-Verm: Yeah. Of course.
+-Siobhan: Are you sure? You're shaking. You don't look okay.
+-Verm: I'm fine.
+-Verm: I just realised that you've got a point. That's all.
+-Verm: We should break annoying clown out of prison because we might need his help to climb the Ashen Tower.
+!HoldOn(1)
+-Siobhan: You're a hard one|to read, Sir Verm.
+!AutoPinFollowers()
+
+/TenseUp
+-Siobhan: Verm, wrong way! We have to go!
+!Walk(Verm,R,0.3)
+!HoldOn(0.5)
+
+/TenseExit
+
+!OverworldCameraPan(320,424,1,1)
+~stop
+!UnpinFollowers()
+!Walk(Verm,D,0.5)
+!Walk(Siobhan,D,0.5)
+!Walk(Gwen,D,0.5)
+!Walk(Bruce,D,0.5)
+!Exit(Verm)
+!HoldOn(0.2)
+!Exit(Siobhan)
+!HoldOn(0.2)
+!Exit(Gwen)
+!HoldOn(0.2)
+!Exit(Bruce)
+!TurnOffBlocks(0)
+!StairShift()
+!HoldOn(2.3)
+~NewLamia1Loop
+!OverworldCameraPan(540,430,1,1)
+!NormalJump(Lamia,2,30,114,488,JumpDR,RightLook)
+!HoldOn(1.3)
+!NormalJump(Lamia,2,30,319,538,JumpDR,RightLook)
+!HoldOn(0.7)
+!SetAnim(Lamia,RightLookRight)
+!NormalJump(SQ4,2,30,114,488,JumpDR,DR)
+!HoldOn(0.6)
+!NormalJump(SQ3,2,30,196,528,JumpDR,DR)
+!NormalJump(SQ4,2,30,244,541,JumpDR,DR)
+!HoldOn(0.6)
+!SetAnim(Lamia,RightLoop)
+!NormalJump(SQ3,2,30,223,449,JumpUL,UL)
+!NormalJump(Francisco,2,30,114,488,JumpDR,DR)
+!NormalJump(SQ4,2,30,400,457,JumpUR,UR)
+!HoldOn(0.3)
+!NormalJump(Larry,2,30,244,541,JumpDR,DR)
+!HoldOn(0.3)
+!NormalJump(SQ4,2,30,496,350,JumpUR,UR)
+!NormalJump(Francisco,2,30,244,541,JumpDR,DR)
+!NormalJump(SQ3,2,30,250,352,JumpUR,UR)
+!HoldOn(0.3)
+!NormalJump(Larry,2,30,223,449,JumpUL,UL)
+!HoldOn(0.3)
+!NormalJump(Francisco,2,30,400,457,JumpUR,UR)
+!HoldOn(0.3)
+!SetAnim(SQ3,DL)
+!HoldOn(0.1)
+!SetAnim(SQ3,DR)
+!HoldOn(0.2)
+!SetAnim(SQ4,DR)
+!HoldOn(0.1)
+!SetAnim(SQ4,DL)
+!HoldOn(0.3)
+!SetAnim(Larry,UR)
+!HoldOn(0.1)
+!SetAnim(Larry,DR)
+!HoldOn(0.5)
+-Francisco: All clear! No sign of the escapees, Blademaster.
+!SetAnim(Francisco,DR)
+!HoldOn(0.1)
+!SetAnim(Francisco,DL)
+-Larry: Maybe they're still in the dungeon.
+-Lamia: Or maybe they've already fled...
+!HoldOn(0.2)
+!SetAnim(Lamia,RightLookLeft)
+!HoldOn(0.5)
+-Lamia: Excuse me, sweeping one.
+!HoldOn(0.6)
+!SetAnim(Hazel,LookUp)
+!HoldOn(0.9)
+-Lamia: Has anyone passed|through here?
+!HoldOn(0.5)
+-Hazel: Hmm.
+!HoldOn(0.7)
+-Hazel: Ain't seen nobody but Maya.
+!HoldOn(0.2)
+!Nani(Lamia,?)
+!HoldOn(0.7)
+-Lamia: Maya?
+!HoldOn(0.5)
+-Hazel:  Yup. 
+!HoldOn(0.4)
+!SetAnim(Hazel,LookDown)
+!HoldOn(0.8)
+~Stop
+!PlaySound(badumpsh)
+-Hazel: Maya broom-a.
+!HoldOn(2)
+~NewLamia2Loop
+!HoldOn(0.5)
+!OverworldCameraPan(540,460,2,1)
+!OverCamZoom(2)
+!SetAnim(Hazel,LoopUp)
+!NormalJump(Lamia,4,10,454,521,JumpDR,Grab)
+!PlaySound(LamiaGrab)
+!HoldOn(0.25)
+!SetAnim(Hazel,Grab)
+!SetAnim(Broom,Default)
+!TeleportCharacter(Broom,480,550)
+!SetAnim(Francisco,DR)
+!HoldOn(0.01)
+!TeleportCharacter(Lamia,454,521)
+!HoldOn(2)
+-Lamia: You shouldn't lie, rat.
+-Lamia: Insincerity taints the flesh.|It ruins the flavour.
+-Lamia: See, I have a hunger.|A deep hunger.
+-Lamia: A howling void in the pits|of my stomach.
+-Lamia: It's not a hunger that can be|satiated by a foul and petty liar.
+!HoldOn(0.3)
+!SetAnim(Lamia,GrabSmile)
+!HoldOn(0.6)
+-Lamia: But then again.|Food is food.
+
+!HoldOn(0.3)
+!SetAnim(Lamia,GrabEat)
+!HoldOn(0.8)
+~Stop
+!OverworldCameraPan(540,430,2,1)
+!OverCamZoom(1)
+!HoldOn(0.6)
+-Francisco: Uh... Blademaster?
+!HoldOn(0.6)
+-Larry: Blademaster?|The prisoners?
+!HoldOn(0.7)
+!SetAnim(Lamia,Grab)
+!HoldOn(0.5)
+!PlaySound(RatFall)
+!SetAnim(Hazel,Drop)
+!SetAnim(Lamia,RightLookRight)
+!HoldOn(1)
+~NewLamia1Loop
+-Lamia: Lower the portcullis.
+-Lamia: Double the watch on the battlement.
+-Lamia: Sky Garden is in full lockdown. Code rose.
+-Lamia: Nobody leaves or enters the tree until this mess is resolved.
+-Larry: W-what if the prisoners|have already escaped?
+-Lamia: Then Captain Aiden will be tried for his failure.
+!HoldOn(0.5)
+!PlaySound(LamiaTurn)
+!SetAnim(Lamia,Turn)
+!HoldOn(0.8)
+-Lamia: As will you, Larry.
+-Larry: O-oh no...
+~Stop
+!NextRoom(SkyGardenOuter,2)
+
+End scene

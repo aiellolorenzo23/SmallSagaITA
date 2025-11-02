@@ -1,0 +1,44 @@
+/Intro
+~SnakeTensionLoop
+!AutoPinFollowers()
+
+/SilentIntro
+~Stop
+!AutoPinFollowers()
+
+/Ghost1
+!HoldOn(1)
+-Info: Have you heard|the song of the Needle Knight?
+-Info: When Solhill cried out,|the Knight emerged,|Shining bright and bold.
+
+/Ghost2
+!HoldOn(1)
+-Info: With precision and grace, he slayed|the vulpes that besieged our home.
+-Info: And then the Knight left|A bloodied corpse at our door.
+
+/Ghost3
+!HoldOn(1)
+-Info: Curses beget curses.|Blood stains the soil.
+-Info: A dead beast summons|Beasts darker still.
+
+/Ghost4
+!HoldOn(1)
+-Info: Where now is that Needle Knight|Who shone bright and bold?
+-Info: A hero's song plays|To a rotten land.
+
+/Entrance
+-Info: A cold wind blows from within.
+*Enter: Enter.
+*Leave: Leave.
+
+/Enter
+!Walk(Verm,U,1)
+!NextRoom(SolhillBlack,3)
+
+/EntranceLate
+-Info: A cold wind blows from within.|There is nothing for you here.
+>Leave
+
+/Leave
+!Walk(Verm,D,0.6)
+!HoldOn(0.6)

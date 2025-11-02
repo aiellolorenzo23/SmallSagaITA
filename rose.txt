@@ -1,0 +1,20 @@
+/BattleVeryStart
+~ScissorBattle2Loop
+!HoldOn(1)
+!DrawWeapon(Gwen)
+!DrawWeapon(Verm)
+
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+
+/VermRage
+-Verm: Nice sword. But fancy steel won't save you!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

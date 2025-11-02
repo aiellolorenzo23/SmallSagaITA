@@ -1,0 +1,184 @@
+/Intro
+!CheckGlobal(13,0,FirstIntro)
+
+/FirstIntro
+!SetGlobal(13,1)
+!HoldOn(0.5)
+!Nani(Verm,!)
+!HoldOn(0.5)
+-Info: A spider squatter!
+!HoldOn(0.3)
+!SetAnim(Lester,Up)
+!HoldOn(0.2)
+!SetAnim(Lester,Wave)
+!HoldOn(1.3)
+-Info: Oh! They're friendly.
+!HoldOn(0.2)
+!SetAnim(Lester,Up)
+!HoldOn(0.2)
+!SetAnim(Lester,Loop)
+
+/Lester
+!CheckGlobal(13,1,Offer1)
+!CheckGlobal(13,2,Offer2)
+!CheckGlobal(13,3,Offer3)
+!CheckGlobal(13,4,Offer4)
+>SpiderFinal
+
+/Offer1
+!SetGlobal(13,2)
+!SetAnim(Lester,Up)
+!HoldOn(0.2)
+!SetAnim(Lester,Wave)
+!HoldOn(1)
+!SetAnim(Lester,Up)
+!HoldOn(0.2)
+!SetAnim(Lester,Loop)
+-Info: The spider seems to be|trying to communicate.
+!HoldOn(0.3)
+!SetAnim(Lester,Vibe1)
+!HoldOn(1)
+-Info: Do they want something?
+!HoldOn(0.3)
+!SetAnim(Lester,Vibe2)
+!HoldOn(1)
+-Info: Does... does the spider want some food?
+!HoldOn(0.3)
+!SetAnim(Lester,Vibe3)
+!HoldOn(1)
+>Offer2
+
+/Offer2
+-Info: Offer the spider an insect part?
+*Yes: Alright.
+*Nope: Nope.
+
+/Offer3
+-Info: Offer the spider another insect part?
+*Yes4: Alright.
+*Nope: Nope.
+
+/Offer4
+-Info: Offer the spider another insect part?
+*Yes8: Alright.
+*Nope: Nope.
+
+/Nope
+!HoldOn(0.3)
+!SetAnimEnd(Lester,Loop)
+!HoldOn(0.3)
+-Info: The spider sighs dejectedly.
+!SetAnim(Lester,Loop)
+
+/None
+-Info: You have no insect parts to offer.
+>Nope
+
+/Yes
+!CheckItem(45,Yes1)
+!CheckItem(46,Yes2)
+!CheckItem(47,Yes3)
+>None
+
+/Yes1
+!SetGlobal(13,3)
+!LoseItem(45)
+>JackpotTime
+
+/Yes2
+!SetGlobal(13,3)
+!LoseItem(46)
+>JackpotTime
+
+/Yes3
+!SetGlobal(13,3)
+!LoseItem(47)
+>JackpotTime
+
+/Yes4
+!CheckItem(45,Yes5)
+!CheckItem(46,Yes6)
+!CheckItem(47,Yes7)
+>None
+
+/Yes5
+!SetGlobal(13,4)
+!LoseItem(45)
+>JackpotTime
+
+/Yes6
+!SetGlobal(13,4)
+!LoseItem(46)
+>JackpotTime
+
+/Yes7
+!SetGlobal(13,4)
+!LoseItem(47)
+>JackpotTime
+
+/Yes8
+!CheckItem(45,Yes9)
+!CheckItem(46,Yes10)
+!CheckItem(47,Yes11)
+>None
+
+/Yes9
+!SetGlobal(13,5)
+!LoseItem(45)
+>JackpotTime
+
+/Yes10
+!SetGlobal(13,5)
+!LoseItem(46)
+>JackpotTime
+
+/Yes11
+!SetGlobal(13,5)
+!LoseItem(47)
+>JackpotTime
+
+
+/JackpotTime
+-Info: You offer the insect part.
+!SetAnimEnd(Lester,Loop)
+!PlaySound(Jackpot)
+!HoldOn(0.3)
+!SetAnim(Lester,Up)
+!HoldOn(0.2)
+!SetAnim(Lester,Wave)
+!HoldOn(0.2)
+!SpiderSeedThrow(1)
+!HoldOn(0.1)
+!SpiderSeedThrow(2)
+!HoldOn(0.1)
+!SpiderSeedThrow(3)
+!HoldOn(0.1)
+!SpiderSeedThrow(4)
+!HoldOn(0.1)
+!SpiderSeedThrow(5)
+!HoldOn(0.1)
+!SpiderSeedThrow(6)
+!HoldOn(0.1)
+!SpiderSeedThrow(7)
+!HoldOn(0.1)
+!SpiderSeedThrow(8)
+!HoldOn(0.1)
+!SpiderSeedThrow(9)
+!HoldOn(0.1)
+!SpiderSeedThrow(10)
+!HoldOn(0.8)
+!MoneyLoss(-10)
+-Info: The spider throws ten seeds at you.
+
+!HoldOn(0.2)
+!SetAnim(Lester,Up)
+!HoldOn(0.2)
+!SetAnim(Lester,Loop)
+
+!CheckGlobal(13,5,SpiderFinal)
+
+
+/SpiderFinal
+-Info: Is the spider... smiling?
+-Info: It's difficult to tell, but they seem thankful for all the food.
+-Info: You wish the spider the best of luck in all their spiderly endeavours.

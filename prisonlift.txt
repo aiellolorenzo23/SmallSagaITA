@@ -1,0 +1,79 @@
+/Intro
+!SetAnim(Gwen,Sharpen)
+!HoldOn(2.5)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(1)
+-Bruce: Hey, Gwen.
+!HoldOn(1)
+-Gwen: Yeah?
+!HoldOn(0.6)
+-Bruce: Not to pry, but what were ye doing in Sky Garden in the first place?
+!HoldOn(1.3)
+!SetGlobal(18,10)
+-Gwen: I left my birthtown a while back. It wasn't my scene, like.
+-Gwen: Since then, I've been searching for a place to call home.
+-Gwen: I heard Sky Garden was the "City of Opportunity", and I wanted to see that for myself.
+-Bruce: But ye only found a|city o' scumbags, aye?
+-Gwen: That's putting it lightly.
+-Gwen: But hey, if the cachgwn here think I'm some sick and twisted dragon, I'll show them a dragon.
+!HoldOn(1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!SetAnimEnd(Gwen,Sharpen)
+!HoldOn(1)
+!PlaySound(VermDraw)
+!SetAnim(Gwen,D)
+!HoldOn(0.05)
+!SetAnim(Gwen,DL)
+!HoldOn(0.05)
+!SetAnim(Gwen,L)
+!HoldOn(0.05)
+!SetAnim(Gwen,UL)
+!HoldOn(0.05)
+!SetAnim(Gwen,U)
+!HoldOn(0.05)
+!SetAnim(Gwen,UR)
+!HoldOn(0.6)
+-Gwen: My turn to pry.
+-Gwen: You wear a mask to hide who you are, right?
+-Bruce: Aye. I'm a squirrel o' Clan Red.
+-Gwen: But you've already been outed. So why bother with the mask?
+-Gwen: It's like you're ashamed of who you are.
+!HoldOn(0.2)
+-Bruce: Ashamed?
+!HoldOn(0.4)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.4)
+-Bruce: Of course I'm ashamed.
+-Bruce: How am I supposed tae stand proud when the mere sight o' my face gets me locked up?
+-Gwen: They're going to lock|you up either way.
+-Gwen: Isn't it better to go down with your tail out and your teeth bared?
+!HoldOn(1.2)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.6)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(1)
+-Bruce: Long lift.
+!HoldOn(1)
+!NextRoom(Prison2,99)
+
+/IntroHardTime
+!HoldOn(6)
+!NextRoom(Cell1,1)

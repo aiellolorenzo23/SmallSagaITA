@@ -1,0 +1,276 @@
+/Intro
+~GardenLoop
+!CheckGlobal(5,0,FirstIntro)
+!CheckGlobal(5,8,ExileIntro)
+!AutoPinFollowers()
+
+/ExileIntro
+!SetAnim(Verm,DL)
+!HoldOn(0.9)
+-Verm: Oh, there you are.
+-Siobhan: What... what am I supposed to do now?
+-Verm: Anything you want.
+!HoldOn(0.4)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.4)
+-Siobhan: Can I come with you?
+-Verm: Anything but that.|I've got a job to do.
+-Siobhan: They say that two people|shorten the road.
+!SetGlobal(5,9)
+!Walk(Verm,DL,0.3)
+!HoldOn(0.3)
+!Walk(Verm,D,0.7)
+!HoldOn(0.4)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!Walk(Verm,DR,0.4)
+!HoldOn(0.2)
+!Walk(Siobhan,DR,0.4)
+!HoldOn(0.5)
+-Verm: Don't follow me.
+!Walk(Verm,DR,0.8)
+!HoldOn(0.2)
+!Walk(Siobhan,DR,0.8)
+!HoldOn(0.6)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: I said, don't follow me.|You're a liability.
+-Siobhan: Was I a liability against Tiger?
+*LiaYes: Yeah.
+*LiaNa: You were ok.
+
+/LiaNa
+-Verm: You were okay. Just okay.
+>LiaContinue
+
+/LiaYes
+-Verm: Yeah.
+-Siobhan: Oh.
+>LiaContinue
+
+/LiaContinue
+-Siobhan: But... you're going to Murida, right? I can help you get there.
+-Verm: I don't need a chaperone.
+!Walk(Siobhan,D,0.5)
+!HoldOn(0.3)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!Walk(Siobhan,DR,0.1)
+!HoldOn(0.2)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.5)
+!SpecialWalk(Siobhan,DL,2.5,DLWalk,0.2)
+!SlowWalk(ClayPot,DL,2.5)
+!PlaySound(CeramicDrag)
+!HoldOn(2.8)
+!ResetWalkSpeed(Siobhan)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!Walk(Siobhan,U,0.8)
+!HoldOn(0.9)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+-Siobhan: Sir Verm.
+-Siobhan: I know I'm not the greatest fighter.
+-Siobhan: And I don't know what this Yellow God is you're after.
+-Siobhan: But I want to learn.|And I want to help.
+-Siobhan: What do you say?
+*CaYes: Fine.
+*CaNa: Whatever.
+
+/CaNa
+-Verm: ...Whatever. I feel like you would probably follow me even if I said no.
+>CaContinue
+
+/CaYes
+-Verm: ...Fine.
+>CaContinue
+
+/CaContinue
+!Walk(Verm,L,0.4)
+!HoldOn(0.5)
+-Verm: We'll go to Murida together.
+-Verm: After that... who knows.
+-Siobhan: Thank you, Sir Verm. I won't let you down.
+!AutoPinFollowers(1)
+
+/FirstIntro
+!HoldOn(1.9)
+!Walk(Siobhan,DL,0.9)
+!HoldOn(1.5)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!Walk(Siobhan,UL,3)
+!HoldOn(3.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.5)
+!PlayMuffled(VermDraw)
+!HoldOn(1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.5)
+!PlayMuffled(Slash)
+!Nani(Siobhan,?)
+!HoldOn(0.9)
+!Walk(Siobhan,L,0.8)
+!HoldOn(0.9)
+
+!PlayMuffled(Slash)
+!Walk(Siobhan,UL,1.2)
+!HoldOn(1)
+!PlayMuffled(GoBerserk)
+!HoldOn(0.8)
+!CameraUnfollow()
+!NormalJump(Siobhan,2,30,377,454,JUL,UL)
+!HoldOn(0.6)
+-Siobhan: Woah! Is that... a mouse?
+!NormalJump(Siobhan,2,30,377,454,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Siobhan,2,30,377,454,JUL,UL)
+!HoldOn(0.6)
+-Siobhan: A mouse knight... fighting Tiger?
+!HoldOn(0.6)
+!NormalJump(Siobhan,2,30,377,454,JUL,UL)
+!HoldOn(0.6)
+!Nani(Siobhan,!)
+!HoldOn(0.6)
+!PlaySound(VermStamp)
+!HoldOn(0.4)
+!VermFlying()
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!FastWalk(Siobhan,DR,1.8)
+!OverworldCameraPan(840,600,1,1)
+!HoldOn(2.7)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!FastWalk(Siobhan,UR,0.2)
+!HoldOn(0.21)
+!FastWalk(Siobhan,R,0.2)
+!HoldOn(0.21)
+!FastWalk(Siobhan,DR,0.3)
+!HoldOn(0.4)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(2)
+!NextRoom(MoleElevator,2)
+
+/Gnome
+!CheckGlobal(7,1,SaveTime)
+-Verm: What... what is this... thing? It's creepy looking, even by statue standards.
+!SetGlobal(7,1)
+!SetAnim(Siobhan,UR)
+-Siobhan: It's Cormac, the village's watchful protector.
+-Verm: Oh. Not doing a very good job, is he?
+-Siobhan: No. I guess he's not.
+>SaveTime
+
+/SaveTime
+-InfoBig: Cormac the Watchful stares blankly.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Cranbaile,The garden)
+-Info: Your game has been saved.
+/SaveNo
+
+/Bah
+
+/LateEvent
+!SetGlobal(76,3)
+~GardenLoop
+!OverworldCameraPan(1010,760,0.5,1)
+!AutoPinFollowers()
+!Walk(Verm,UL,1.5)
+!HoldOn(1.5)
+!UnpinFollowers()
+!SetAnim(Siobhan,UL)
+!SetAnim(Bruce,UL)
+!SetAnim(Gwen,UL)
+!Walk(Verm,UL,1)
+!HoldOn(1.3)
+!Nani(Verm,?)
+!HoldOn(0.5)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.7)
+!Walk(Verm,DR,0.5)
+!HoldOn(1)
+-Verm: What's wrong?
+!HoldOn(0.7)
+-Siobhan: I'm having second thoughts.
+!HoldOn(0.6)
+-Siobhan: What if Mammy sees me?
+-Verm: If she gives you any lip, I'll dish out twice as much back.
+-Siobhan: No, it's not like that. It's...
+!HoldOn(0.5)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.5)
+-Siobhan: She's family.
+-Siobhan: I know I should make up with her.
+-Siobhan: That's what I'm supposed to do, right?
+-Siobhan: But I don't know if I'm ready.|To have that conversation.|To... well...
+!HoldOn(0.4)
+-Gwen: Siobhan.
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.3)
+-Gwen: I don't know the details of your childhood, but I know this.
+-Gwen: You don't owe your mother forgiveness.
+-Gwen: You don't even owe her a conversation.
+-Gwen: If you don't want to see your mother, then don't give her a second of your time.
+-Siobhan: Really? That seems so cruel...
+-Gwen: Not at all.
+-Gwen: If she can't respect you for who you are, then she doesn't deserve you.
+!HoldOn(0.5)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.5)
+-Siobhan: I don't know if I can see it that way, but... I'll do my best.
+!HoldOn(0.6)
+-Bruce: Gwen and me will keep watch outside.
+-Bruce: Mole settlements are a wee bit small for us, anyhow.
+!Walk(Verm,DR,0.5)
+!HoldOn(0.7)
+-Verm: Great. We're all set then.
+!CameraFollow(1)
+!AutoPinFollowers(1)
+
+End scene

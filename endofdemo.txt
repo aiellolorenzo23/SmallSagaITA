@@ -1,0 +1,27 @@
+/Intro
+!HoldOn(1)
+!SetGlobal(26,0)
+-InfoBig: Previously...
+-InfoBig: While searching for leads on the Yellow God, Verm met the mole wizard Siobhan.||The pair journeyed to Murida, only to find the city gates closed!
+-InfoBig: However, thanks to the heroic flute playing of Bruce the squirrel, the three managed to safely navigate the secret Muridan Labyrinth.
+-InfoBig: Now, our heroes have finally arrived in the famous capital city...
+!HoldOn(1)
+!NextRoom(OnStatue,14)
+
+/DemoIntro
+!HoldOn(1)
+-InfoBig: You've reached the end of the demo.|Would you like to save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(End of Demo,)
+-Info: Your game has been saved.
+>Continue
+/SaveNo
+>Continue
+
+/Continue
+-Info: Thanks for playing.|Your save will carry over to the full game!
+!HoldOn(1)
+!NextRoom(TitleScreen,2)

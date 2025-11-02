@@ -1,0 +1,28 @@
+/BattleVeryStart
+!HoldOn(0.3)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+/BattleStart
+!SetGlobal(4,0)
+!CameraPan(0,1,1,1)
+!HoldOn(1)
+!FadeEntrance(Left Hand of God,1,-20)
+!HoldOn(3)
+!FadeEntrance(Right Hand of God,1,-20)
+!HoldOn(2.5)
+!LetsFight()
+
+/VermRage
+-Verm: This one's for my brother!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/EnemyDead
+!HoldOn(1)
+!EndBattle()
+/End

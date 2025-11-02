@@ -1,0 +1,185 @@
+/Intro
+~MuridaLoop
+!AutoPinFollowers(1)
+
+/IntroNoPin
+~MuridaLoop
+
+/DynamicEntrance
+~MuridaLoop
+!OverworldCameraSnap(783,422)
+!HoldOn(2)
+!NormalJump(Verm,0.8,100,491,775,JDL,Land)
+!HoldOn(0.5)
+!OverworldCameraPan(491,700,1,1)
+!HoldOn(0.5)
+!TeleportCharacter(Bruce,831,420)
+!NormalJump(Bruce,0.8,100,470,730,DL,LandL)
+!HoldOn(2)
+!TeleportCharacter(Siobhan,831,420)
+!NormalJump(Siobhan,0.8,100,550,760,JDL,Dead)
+!HoldOn(1)
+!SetAnim(Verm,DL)
+!HoldOn(0.3)
+!SetAnim(Bruce,DL)
+!HoldOn(0.3)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetGlobal(26,1)
+-Verm: This is... Murida?
+!HoldOn(1)
+!DemoCheck()
+-Bruce: Aye. This is it.
+
+!SetGlobal(14,18)
+!NormalJump(Siobhan,2,30,530,770,JDL,DL)
+!HoldOn(1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.5)
+-Siobhan: It doesn't look as glamorous as I imagined...
+-Bruce: Oh, this is just the shipping district.
+-Bruce: Hold on, I'll walk ye tae the city centre, over that way.
+!AutoPinFollowers(1)
+!CameraFollow(1)
+
+/DemoEnd
+~Stop
+!NextRoom(EndOfDemo,2)
+
+/Chest
+-Info: You found the Mystery Wand!|You know better than to play around with this thing.
+
+/FoundSeeds
+-Info: You found 3 seeds.
+/FoundSeeds2
+-Info: You found 2 seeds.
+
+/Adrian
+!CheckGlobal(99,2,Adrian3)
+!CheckGlobal(36,1,Adrian2)
+!CheckGlobal(10,2,Adrian3)
+-Adrian: Clear outta here, punks!|We got merch to move.
+
+/Adrian2
+-Verm: Are you the guy?
+!HoldOn(0.2)
+!Nani(Adrian,?)
+!HoldOn(0.5)
+-Adrian: What guy?
+-Verm: The guy with the box, or something.|I wasn't really paying attention.
+-Adrian: Ooooh, I get it.|Yeah, sure, I'm "the guy".
+!SetGlobal(36,2)
+-Adrian: Mister Abbozzato roped you into being his errand boy, didn't he? That happens sometimes.
+-Adrian: Well, here you go. It's just what that weirdo ordered.
+!ShowItem(Adrian,50)
+!PlaySound(ItemFound)
+!ReceiveItem(50)
+-InfoBig: You received a Strange Package!|You add it to your trinkets.
+-Adrian: It was a pain sneaking that... thing... through customs. So don't go dropping it now, y'hear?
+
+/Jade
+!CheckGlobal(10,2,Jade2)
+-Jade: You came here through the service tunnel? You absolute plonkers.
+-Jade: But hey, I guess you survived. Welcome to Murida.
+
+/Jade2
+-Jade: Some ratty artist-wannabe|comes by the wharf now and then.
+-Jade: He always has a dodgy look.|What's he up to?
+
+/Farqad
+-Farqad: I came here seeking adventurers. But alas! My ship is being serviced.
+-Farqad: It may need months of work. Alas!
+
+/FL
+!CheckGlobal(50,1,Farqad2)
+-Farqad: I'm seeking adventurers for an expedition.
+-Farqad: But I'm still servicing the ship. Come back in a little while.
+
+/Farqad2
+-Farqad: I'm seeking adventurers for an expedition. A voyage of glory and wonder!
+-Farqad: What say you?
+*FarqadMore: I'm intrigued.
+*FarqadNo: I'm out.
+
+/FarqadNo
+-Verm: No thanks.
+-Farqad: Ah. Well, if you change your mind...
+
+/FarqadMore
+-Verm: I'd be lying if I said I wasn't curious.
+-Bruce: Aye, it's hard to deny the allure of swashbuckling, isn't it?
+-Gwen: Sounds good to me. We could capture a royal naval vessel and hold it for ransom.
+-Siobhan: I'll ready the cannons!
+-Farqad: Woah, woah! You've all got the wrong idea!
+-Farqad: I'm not a pirate! I'm just an explorer!
+-Verm:  Oh. 
+-Siobhan: Um. I have a question.
+-Siobhan: The land around Rodentia is all thoroughly explored, no?
+-Siobhan: So 
+-Farqad: So one 
+-Farqad: There's an island at the mouth of the King's River.
+-Farqad: It comes and goes. Drifts with the tides and winds.
+-Farqad: Its surface dances in the setting sun, earning it the name of "The Glistening Isle".
+-Gwen: A moving, dancing island...
+-Siobhan: Oh, I know this one!|It's an old fairy tale.
+-Siobhan: It turns out the island is just the back of a whale, right?
+-Bruce: It was the back of a turtle in the version I heard.
+-Farqad: The Glistening Isle is no mariner's fable.
+-Farqad: I caught a glimpse of it with my own eyes as I was making the voyage to Murida.
+-Verm: What's the pay?
+-Farqad: Ten seeds upfront.
+-Verm: That's pittance for such a risky venture.
+-Farqad: Ah, wait, wait.
+-Farqad: I'll also let you keep all the spoils you can carry. No strings attached.
+-Bruce: Well that sounds like a fair deal, right Verm?
+-Verm: Only an idiot takes work on the promise of future royalties.
+-Verm: But still...
+-Bruce: Ooh, yeah. Verm's in.
+-Farqad: Come back and speak to me when you're ready.
+
+
+/Date
+
+!AutoPinFollowers()
+!Walk(Verm,DR,1.3)
+!HoldOn(1.5)
+-Verm: This is the shipping district.
+!OverworldCameraPan(773,513,1,1)
+!HoldOn(1.3)
+!UnpinFollowers()
+-Verm: See that pipe?
+!SetAnim(Verm,UL)
+!SetAnim(Gwen,DR)
+!CameraFollow(1)
+!HoldOn(1)
+-Verm: There's a labyrinth behind there.
+-Verm: That's where me, Bruce, and Siobhan fought a kraken.
+-Gwen: That can't be right.|Krakens aren't real.
+-Verm: It spoke in rhyme.|Like a wiggly bard.
+!HoldOn(1)
+-Gwen: Ah. I see.|This is a prank.
+-Gwen: Don't pull my leg, dwt,|it'll come right off.
+-Verm: You can accept robot canidae and armoured stoats, but you draw the line at kraken poets?
+-Gwen: Look, I was born in a cage,|not under a rock.
+-Gwen: I know the difference between|muswolves and reality.
+!HoldOn(1)
+-Gwen: What?
+-Verm: No, no, it's nothing.
+-Verm: Where should we go next?
+!CheckGlobal(71,0,DateNext)
+!CheckGlobal(72,0,DateNext)
+!CheckGlobal(34,0,DateNext)
+-Gwen: Let's go back to Ratlas.|I want to see something.
+!AutoPinFollowers(1)
+/DateNext
+-Gwen: How about somewhere where we can't smell the Underriver waters?
+-Verm: Alright.
+!AutoPinFollowers(1)
+
+/Adrian3
+-Adrian: That fancy-dressed polecat fella? That's Farqad of the Aliye Empire.
+-Adrian: Mustelids get a bad rep, but Farqad's a good'un. He won't bite.

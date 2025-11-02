@@ -1,0 +1,25 @@
+/BattleVeryStart
+~Stop
+!SetAnim(Aquila,IntroStand)
+!HoldOn(0.4)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+/BattleStart
+!HoldOn(1)
+~AquilaBattle
+!HoldOn(0.4)
+!SetAnim(Aquila,Intro)
+!HoldOn(5)
+!LetsFight()
+/VermRage
+-Verm: I'm not even|supposed to be here!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

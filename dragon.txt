@@ -1,0 +1,24 @@
+/BattleVeryStart
+~RulesNatureLoop
+!HoldOn(0.4)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+/VermRage
+-Verm: Let's find out if robots bleed!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+/End

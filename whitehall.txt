@@ -1,0 +1,809 @@
+/Intro
+!AutoPinFollowers()
+~WhiteHallLoop
+
+/FirstIntro
+!AutoPinFollowers()
+!SetGlobal(30,10)
+!Walk(Gwen,D,0.5)
+!HoldOn(0.5)
+!Walk(Gwen,DR,1)
+!HoldOn(1)
+!UnpinFollowers()
+!SetAnim(Siobhan,DR)
+!Walk(Gwen,DR,0.5)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.4)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.9)
+-Gwen: It's quiet.
+-Siobhan: Yes. I don't think there are any gods nearby.
+!HoldOn(0.6)
+-Gwen: But I don't hear any rats either.
+-Gwen: This hall should be buzzing with hundreds of voices...
+!HoldOn(0.6)
+!SetAnim(Gwen,U)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.3)
+-Gwen: Let's have a look around.
+-Siobhan: Right.
+!Walk(Siobhan,DR,0.5)
+!HoldOn(0.5)
+~WhiteHallLoop
+!AutoPinFollowers()
+
+/JumpUp
+!SetVisible(Box1,0)
+!SetVisible(Box2,0)
+!CheckGlobal(99,0,AllJumpUp)
+!UnpinFollowers()
+!OverworldCameraPan(1757,735,0.3,1)
+!TurnOffBlocks(1)
+!SetShadowless(Gwen,1)
+!NormalJump(Gwen,2.2,50,1561,1080,JUR,UR)
+!HoldOn(0.6)
+!SetShadowless(Siobhan,1)
+!NormalJump(Siobhan,2.2,50,1561,1080,JUR,UR)
+!NormalJump(Gwen,2.2,50,1654,938,JUR,UR)
+!HoldOn(0.6)
+!NormalJump(Gwen,2.2,50,1757,815,JUL,UL)
+!NormalJump(Siobhan,2.2,50,1654,938,JUR,UR)
+!SetShadowless(Gwen,0)
+!HoldOn(0.6)
+!NormalJump(Siobhan,2.2,50,1757,815,JUL,UL)
+!HoldOn(0.6)
+!SetShadowless(Siobhan,0)
+!TurnOnBlocks(1)
+!AutoPinFollowers()
+!HoldOn(0.35)
+!CameraInstFollow(1)
+!CheckGlobal(30,10,Event1)
+
+/AllJumpUp
+!UnpinFollowers()
+!OverworldCameraPan(1757,735,0.3,1)
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,1561,1080,JUR,UR)
+!HoldOn(0.6)
+!SetShadowless(Siobhan,1)
+!NormalJump(Siobhan,2.2,50,1561,1080,JUR,UR)
+!NormalJump(Verm,2.2,50,1654,938,JUR,UR)
+!HoldOn(0.6)
+!SetShadowless(Gwen,1)
+!NormalJump(Gwen,2.2,50,1561,1080,JUR,UR)
+!NormalJump(Verm,2.2,50,1757,815,JUL,UL)
+!NormalJump(Siobhan,2.2,50,1654,938,JUR,UR)
+!SetShadowless(Verm,0)
+!HoldOn(0.6)
+!SetShadowless(Bruce,1)
+!NormalJump(Bruce,2.2,50,1561,1080,JUR,UR)
+!NormalJump(Gwen,2.2,50,1654,938,JUR,UR)
+!NormalJump(Siobhan,2.2,50,1757,815,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Bruce,2.2,50,1654,938,JUR,UR)
+!NormalJump(Gwen,2.2,50,1757,815,JUL,UL)
+!SetShadowless(Siobhan,0)
+!HoldOn(0.6)
+!NormalJump(Bruce,2.2,50,1757,815,JUL,UL)
+!SetShadowless(Gwen,0)
+!HoldOn(0.6)
+!SetShadowless(Bruce,0)
+!TurnOnBlocks(1)
+!AutoPinFollowers()
+!HoldOn(0.35)
+!CameraInstFollow(1)
+/AllJumpDown
+!UnpinFollowers()
+!OverworldCameraPan(1501,1166,0.3,1)
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,1654,938,JDL,DL)
+!HoldOn(0.6)
+!SetShadowless(Siobhan,1)
+!NormalJump(Siobhan,2.2,50,1654,938,JDL,DL)
+!NormalJump(Verm,2.2,50,1561,1080,JDL,DL)
+!HoldOn(0.6)
+!SetShadowless(Gwen,1)
+!NormalJump(Gwen,2.2,50,1654,938,JDL,DL)
+!NormalJump(Verm,2.2,50,1501,1246,JDL,DL)
+!NormalJump(Siobhan,2.2,50,1561,1080,JDL,DL)
+!HoldOn(0.6)
+!NormalJump(Bruce,2.2,50,1654,938,JDL,DL)
+!NormalJump(Gwen,2.2,50,1561,1080,JDL,DL)
+!NormalJump(Siobhan,2.2,50,1501,1246,JDL,DL)
+!SetShadowless(Verm,0)
+!HoldOn(0.6)
+!NormalJump(Bruce,2.2,50,1561,1080,JDL,DL)
+!NormalJump(Gwen,2.2,50,1501,1246,JDL,DL)
+!SetShadowless(Siobhan,0)
+!HoldOn(0.6)
+!NormalJump(Bruce,2.2,50,1501,1246,JDL,DL)
+!SetShadowless(Gwen,0)
+!HoldOn(0.6)
+!SetShadowless(Bruce,0)
+!TurnOnBlocks(1)
+!AutoPinFollowers()
+!HoldOn(0.35)
+!SetVisible(Box1,1)
+!SetVisible(Box2,1)
+!CameraInstFollow(1)
+/JumpDown
+!SetVisible(Box1,0)
+!SetVisible(Box2,0)
+!CheckGlobal(99,0,AllJumpDown)
+!UnpinFollowers()
+!OverworldCameraPan(1501,1166,0.3,1)
+!TurnOffBlocks(1)
+!SetShadowless(Gwen,1)
+!NormalJump(Gwen,2.2,50,1654,938,JDL,DL)
+!HoldOn(0.6)
+!SetShadowless(Siobhan,1)
+!NormalJump(Siobhan,2.2,50,1654,938,JDL,DL)
+!NormalJump(Gwen,2.2,50,1561,1080,JDL,DL)
+!HoldOn(0.6)
+!NormalJump(Gwen,2.2,50,1501,1246,JDL,DL)
+!NormalJump(Siobhan,2.2,50,1561,1080,JDL,DL)
+!HoldOn(0.6)
+!NormalJump(Siobhan,2.2,50,1501,1246,JDL,DL)
+!SetShadowless(Gwen,0)
+!HoldOn(0.6)
+!SetShadowless(Siobhan,0)
+!TurnOnBlocks(1)
+!AutoPinFollowers()
+!HoldOn(0.35)
+!SetVisible(Box1,1)
+!SetVisible(Box2,1)
+!CameraInstFollow(1)
+
+/Event1
+!SetGlobal(30,12)
+!Walk(Gwen,UR,0.7)
+!HoldOn(1.3)
+-Gwen: This... is Owen's house.
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.1)
+!Walk(Gwen,UL,2)
+!HoldOn(2)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+-Gwen: And that one's Ava's.
+!SetAnim(Gwen,U)
+-Gwen: Reese. Ceredigion. Jac. Efa...
+!HoldOn(0.6)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+-Gwen: Where is everyone?
+
+/Event2
+~Stop
+!Walk(Gwen,UL,0.5)
+!HoldOn(0.7)
+!UnpinFollowers()
+!SetGlobal(30,14)
+-Gwen: Wait.
+!HoldOn(0.2)
+!Nani(Siobhan,?)
+!HoldOn(0.5)
+-Gwen: Siobhan. Get back.
+!PlaySound(GeorgeIntro)
+!SetGlobal(59,0)
+!FastWalk(Siobhan,DR,0.7)
+!OverworldCameraPan(700,480,0.5,1)
+!HoldOn(0.7)
+!NormalJump(Gwen,2,30,850,615,JUL,UL)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.2)
+!PlaySound(Impact1)
+!HoldOn(0.5)
+!NormalJump(George,1,300,669,541,JumpDL,Default)
+!HoldOn(1)
+!ScreenShake(9,1)
+!HoldOn(4)
+~GeorgeLoop
+-George: The dragon returns.
+-Gwen: Oh, cer i grafu, you pious cachiad.
+!HoldOn(0.5)
+-George: Hmph. Foul mouthed as ever.
+!HoldOn(0.5)
+-George: If you came for your belongings, I flushed those a long time ago.
+-Gwen: I don't care about that!|Why are all the homes empty?
+!HoldOn(0.2)
+!SetAnim(George,LookLeft)
+!HoldOn(0.3)
+-Gwen: Where's Owen?|Where's Reese?
+-Gwen: Did you push them all away with your stupid rules?
+!HoldOn(0.2)
+!SetAnim(George,LookRight)
+!HoldOn(0.4)
+-George: If you didn't come to make amends like an adult, then take your mole friend, turn around, and leave.
+!HoldOn(1)
+!SlowWalk(Gwen,UL,0.8)
+!SetAnim(George,Default)
+!HoldOn(1)
+-Gwen: Tell me where they are, Sir George.
+-George: You're so bloody-minded.|Always rebelling.|Never thankful.
+-George: Must I drag you to the|water bowl by the tail?
+-Gwen: Come and try it.|I'll run you through.
+!HoldOn(0.4)
+-Siobhan: U-um-
+~Stop
+-Gwen: Stay back, Siobhan.|This one's my fight.
+!GoToBattle(Lenny)
+
+/PostBattle
+!SetGlobal(30,20)
+!HoldOn(1.5)
+!LevelUp(Gwen)
+!HoldOn(1)
+-Gwen: Tell me where everyone went.
+!HoldOn(0.3)
+~GeorgeLoop
+!HoldOn(0.5)
+-George: They did not walk out|like you did.
+!HoldOn(0.5)
+-Gwen: Then...
+!HoldOn(1)
+-George: The hand of the White God|does not discriminate.
+-George: Sometimes, he takes parts.|Sometimes, he takes whole lives.
+!HoldOn(0.2)
+!SetAnim(George,LookLeft)
+!HoldOn(0.3)
+-George: But I do not presume to know his motives. I trust in his plan.
+!HoldOn(1)
+-Gwen: Why do you always roll over and|accept the lot of the gods?
+-Gwen: Stand up and do|something about it.
+!SetAnim(George,LookRight)
+-George: Yes, yes, I know well of|your propensity to rebel.
+-George: And just look at the twisted dragon you've become as a result.
+-George: Piercings. Tattoos. Fur dye.
+-George: Altering your body to your whims. Throwing aside everything the gods graciously bestowed upon you.
+-Gwen: "Graciously bestowed"?|The gods are bastards.|I owe them nothing.
+-George: There it is again!|The dragon's bloody-mindedness.
+-George: You're a spiteful little individual.
+-George: No love for the gods.|No love for others.|No love for yourself.
+-Gwen: Whatever.
+!HoldOn(0.3)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.3)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.9)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!Walk(Siobhan,UL,0.6)
+!SetAnim(George,LookLeft)
+!HoldOn(0.7)
+!SetAnim(Siobhan,U)
+!HoldOn(0.3)
+-Siobhan: You're wrong, Sir.
+-Siobhan: Gwen stands tall because she loves herself.
+-Siobhan: She's not afraid to follow her own path, even if that means not being comfortable.
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+-Siobhan: I wish I were half the rodent that she is!
+!HoldOn(1)
+!SetAnim(George,LookRight)
+-George: Hmph.
+!HoldOn(1)
+!SetAnim(Gwen,UL)
+-George: So why did you return, Gwen?|To mock me?
+-Gwen: Get over yourself.|We need to use the god forge.
+-George: Fine. I'll fetch it.
+!PlaySound(GwenWhoosh2)
+!NormalJump(George,1,400,769,141,JumpDL,Default)
+!HoldOn(2)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!SetAnim(Siobhan,R)
+!HoldOn(0.5)
+-Siobhan: Sorry. I hope I wasn't out of line.
+-Gwen: You were fab.
+!HoldOn(1)
+-George: Here.
+!SetAnim(Gwen,UL)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!SetAnim(Gwen,U)
+!HoldOn(0.4)
+!OverworldCameraPan(896,647,0.8,1)
+!NormalJump(Burner,1,400,931,660,JumpDL,Default)
+!HoldOn(0.5)
+!SetAnim(Siobhan,UR)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!SetAnim(Gwen,DR)
+!HoldOn(0.2)
+!PlaySound(MetalImpact)
+!HoldOn(1.3)
+!OverworldCameraPan(746,547,1,1)
+!NormalJump(George,1,200,669,541,JumpDL,Default)
+!HoldOn(2)
+-George: Do what you must,|then be on your way.
+!HoldOn(0.5)
+-Gwen: Do you know how to work it, Siobhan?
+!HoldOn(0.3)
+!Walk(Siobhan,DR,1.3)
+!HoldOn(1.4)
+!SetAnim(Siobhan,R)
+!HoldOn(0.4)
+-Siobhan: I've never seen a forge|like this before.
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: But I think I can figure it out.
+-Gwen: Cracking.
+!HoldOn(0.4)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.2)
+!Walk(Gwen,DR,0.6)
+!HoldOn(1)
+-Gwen: Actually, while we're here... maybe there's something else we can make.
+!HoldOn(0.1)
+!Nani(Siobhan,?)
+!HoldOn(0.3)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.3)
+-Siobhan: Oh?
+
+!SetAnim(Gwen,D)
+-Gwen: Yeah. See, I had this idea...
+!HoldOn(0.5)
+!NextRoom(ToBlack)
+!RemoveFromParty(Gwen)
+!RemoveFromParty(Siobhan)
+!AddToParty(Bruce)
+!SetLeader(Bruce)
+!HoldOn(1)
+!NextRoom(ViniumOuter,99)
+
+/ReturnIntro
+!SetGlobal(30,21)
+!AutoPinFollowers()
+!Walk(Verm,D,0.5)
+!HoldOn(0.5)
+!Walk(Verm,DR,1)
+!HoldOn(1)
+-Gwen: Verm.
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+-Gwen: This place carries painful memories.
+-Gwen: Memories of what the gods did to me. Memories of my lost family.
+-Gwen: So you better have a good reason for taking me back here.
+-Verm: I do. Closure.
+-Gwen: Closure?
+-Gwen: I already settled things with Sir George.
+-Verm: I'm not talking about that guy.
+-Verm: Isn't there someone else who wronged you?
+!HoldOn(0.5)
+-Siobhan: Sir Verm, I hope you know what you're doing.
+
+/ReturnEvent
+~Stop
+!OverworldCameraPan(770,523,0.5,1)
+!SetGlobal(30,22)
+!PlaySound(Impact1)
+!HoldOn(0.5)
+!NormalJump(George,1,300,739,541,JumpDL,Default)
+!HoldOn(1)
+!ScreenShake(9,1)
+!HoldOn(1)
+~GeorgeLoop
+-Gwen: George.
+-George: Gwen.
+!HoldOn(0.5)
+-George: Since your last visit,|I investigated the other rooms.
+-George: For whatever reason, the gods have decided that White Hall as an institution is over.
+!SetAnim(George,LookLeft)
+!HoldOn(0.3)
+-George: Our rapture draws near.|The whole colony shall be eradicated.
+-George: I trust in the gods' judgment, but... it's a bitter truth to acknowledge.
+!HoldOn(0.5)
+-Gwen: The White Gods are going to kill every last resident?
+-George: Not every resident.
+!SetAnim(George,LookRight)
+!HoldOn(0.3)
+-George: One member of White Hall will live on, at least. A rebellious dragon.
+-George: I take some solace in that.
+!HoldOn(1)
+-Verm: Why don't you and whoever's left just pack up and get out?
+-George: Ancient sycamores cannot|sprout young roots.
+-Verm: What is that? Some corny|Old Way proverb?
+-George: The Old Way is law.
+-George: Those who rebel against it are doomed to a wretched fate.
+-George: Do not linger.|The White God is close.
+~Stop
+-Gwen: There's no convincing George.|Let's go, Verm.
+~WhiteHallLoop
+!CameraFollow(1)
+
+/George
+!CheckGlobal(30,25,George2)
+-George: Do not linger.|The White God is close.
+
+/George2
+-George: What must I do now?|I shall mull it over.
+
+/Button
+!CheckGlobal(30,23,Button2)
+!CheckGlobal(30,25,Button3)
+!SetGlobal(30,23)
+!SetAnim(George,LookLeft)
+-Verm: What does this do?
+-George: Do not press it.
+-Verm: Why not?
+-George: Because it is forbidden.
+-Verm: Well that just makes me|want to press it more.
+-Gwen: One time, I saw a god accidentally brush against it.
+-Gwen: It made a right racket. Screeching noises and flashing lights.
+-Gwen: We were freaking out like the sky was falling. The gods got all riled up too.
+!HoldOn(0.4)
+-Gwen: But then it stopped,|and that was that.
+-Gwen: No consequences.|No aftermath.
+!HoldOn(0.6)
+-Gwen: Kind of anticlimactic, to be honest.
+!HoldOn(0.6)
+-Siobhan: I see. So it's a siren the gods reserve for emergencies.
+!SetAnim(George,LookRight)
+-Siobhan: We should avoid it. The noise would draw unwanted attention.
+
+/Button2
+-Info: Push the button?
+*PushButton: Push it.
+*NoButton: Don't push it.
+/NoButton
+
+/PushButton
+-Info: A shiver runs through you.|Your fur stands on end.
+-Info: Are you really sure you want to push the button?
+*PushButton2: Push it.
+*NoButton: Don't push it.
+
+/PushButton2
+!SetGlobal(30,24)
+!SetAnim(George,LookLeft)
+-Gwen: Verm. Stop.
+!HoldOn(1)
+-Gwen: Let me do it.
+!NextRoom(ToBlack)
+!HoldOn(1)
+!UnpinFollowers()
+!OverworldCameraPan(630,450,1,1)
+!HoldOn(1)
+~Stop
+!TeleportCharacter(Bruce,821,596)
+!TeleportCharacter(Verm,701,610)
+!TeleportCharacter(Gwen,602,546)
+!TeleportCharacter(Siobhan,742,592)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UL)
+!SetAnim(Bruce,UL)
+!SetAnim(Gwen,UL)
+!NextRoom(FromBlack)
+!HoldOn(1)
+-Gwen: Okay. Here I go.
+!HoldOn(0.25)
+!Walk(Gwen,UL,0.2)
+!HoldOn(0.3)
+!AlarmStart()
+!HoldOn(0.5)
+!SpecialWalk(Gwen,DR,0.3,ULWalk,0.5)
+!HoldOn(0.6)
+!SetAnim(Gwen,UL)
+!HoldOn(1.3)
+!ResetWalkSpeed(Gwen)
+!PlaySound(BarLightswitch)
+!HoldOn(0.4)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!Nani(Gwen,?)
+!HoldOn(2.2)
+~SirenLoop
+!ShoutMode()
+!HoldOn(0.8)
+!Nani(Gwen,!)
+!HoldOn(0.1)
+!Nani(Verm,!)
+!HoldOn(0.1)
+!Nani(Bruce,!)
+!HoldOn(0.1)
+!Nani(Siobhan,!)
+!HoldOn(0.6)
+-George: Idiocy!
+-George: Now look what you've done.
+!HoldOn(0.3)
+-George: Leave now. Quick, before the White God comes and smites you all.
+!HoldOn(0.6)
+-Gwen: No. Not yet.
+!HoldOn(0.3)
+-Gwen: I see what Verm was doing|by dragging me back here.
+-Gwen: For all my talk of rebellion, I've avoided confronting the one who wronged me most.
+-George: You want to confront|the White God?!
+-George: Idiocy of idiocies! Don't throw your life away to spite a deity!
+-Gwen: This isn't spite.
+!HoldOn(0.1)
+!Walk(Gwen,DR,0.4)
+!HoldOn(0.5)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.4)
+-Gwen: It's justice.
+!SetAnim(George,LookRight)
+!HoldOn(0.5)
+-George: Call it what you will.|I cannot partake in such blasphemy.
+!PlaySound(GwenWhoosh2)
+!NormalJump(George,1,500,789,41,JumpDL,Default)
+!HoldOn(0.7)
+!PlaySound(BigDoorOpen)
+!HoldOn(0.5)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!SetAnim(Bruce,DL)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!SetAnim(Bruce,D)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.8)
+!OverworldCameraPan(1104,651,0.3,1)
+!HoldOn(0.8)
+!Walk(Gwen,DR,2)
+!HoldOn(0.2)
+!Walk(Verm,DR,2)
+!HoldOn(0.1)
+!Walk(Siobhan,DR,2)
+!HoldOn(0.1)
+!Walk(Bruce,DR,1.4)
+!HoldOn(1.4)
+!Walk(Bruce,R,0.5)
+!HoldOn(0.2)
+!Walk(Gwen,R,0.7)
+!HoldOn(0.5)
+!SetAnim(Bruce,DR)
+!HoldOn(0.2)
+!Walk(Gwen,DR,0.1)
+!HoldOn(1)
+-Gwen: That's Him.
+!HoldOn(0.3)
+!PlaySound(Godstep)
+!ScreenShake(2,1)
+!HoldOn(1)
+-Siobhan: A-a-are we really doing this?
+!HoldOn(0.3)
+!PlaySound(Godstep)
+!ScreenShake(4,1)
+!HoldOn(1)
+-Bruce: I think we are.
+!HoldOn(0.3)
+!PlaySound(Godstep)
+!ScreenShake(6,1)
+!HoldOn(1)
+-Verm: Brace yourselves.
+!HoldOn(0.3)
+!PlaySound(Godstep)
+!ScreenShake(9,1)
+!HoldOn(1)
+~Stop
+!GoToBattle(WhiteGod)
+
+/Button3
+-Info: There's no need to press it again.
+
+/PostWhiteHall
+!SetGlobal(30,25)
+!HoldOn(1)
+!PlaySound(Godstep)
+!ScreenShake(6,1)
+!HoldOn(1)
+!PlayAdjSound(Godstep-6)
+!ScreenShake(3,1)
+!HoldOn(1)
+!PlaySound(Godstep-12)
+!ScreenShake(1,1)
+!HoldOn(1)
+!PlaySound(Godstep-18)
+!HoldOn(1)
+!PlaySound(Godstep-24)
+!HoldOn(2)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(0.2)
+!LevelUp(Bruce)
+!HoldOn(0.2)
+!LevelUp(Gwen)
+!HoldOn(1)
+-Siobhan: We... we did it.
+!HoldOn(1.3)
+-Bruce: We fought off a god?|That was...|I have no words.
+!HoldOn(0.7)
+!SetAnim(Verm,OwDR)
+!HoldOn(0.3)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.6)
+-Gwen: Verm. Hey.|Are you okay?
+!HoldOn(0.7)
+-Verm: I'm... I'm fine.|It's just...
+!HoldOn(0.7)
+!SetAnim(Verm,DR)
+!HoldOn(0.7)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: We barely made a scratch.
+-Verm: It'll take more than our tiny weapons to slay a god.
+!NormalJump(George,2,50,892,664,JumpDL,Default)
+!HoldOn(1.4)
+!ShoutMode()
+-George: MADNESS!
+!OverworldCameraPan(920,581,1,1)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Gwen,UL)
+!SetAnim(Siobhan,L)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!SetAnim(Bruce,UL)
+!HoldOn(0.8)
+-George: You are all mad!|Utterly, utterly mad!
+-George: I dare say that your idiotic actions have only hastened White Hall's destruction!
+-Verm: Yeah, probably.|That god looked pissed.
+-Verm: You better clear out of here|before he comes back.
+-George: You blaspheming little...
+!Walk(Gwen,UL,0.5)
+!HoldOn(0.8)
+-Gwen: George. Verm's right.
+-Gwen: You said yourself that White Hall is over. But your life isn't.
+-Gwen: Find anyone who's left alive in the other rooms and go somewhere else.
+-George: Somewhere else?
+-Gwen: Sky Garden... Murida...
+-Gwen: You could even found a new city, if you wanted. A new Neuadd-y-duwiau-gwyn.
+-Gwen: No... A Neuadd-heb-dduwiau.|A hall without gods.
+!HoldOn(0.5)
+!SetAnim(George,LookLeft)
+!HoldOn(0.5)
+-George: Hmph.|Same old Gwen.
+-George: Always disrespectful.|Always rebelling.
+!HoldOn(0.5)
+!SetAnim(George,LookRight)
+!HoldOn(0.5)
+~GeorgeLoop
+-George: A rodent who rejects dogma dies in lonely, sinful misery. That's what I always thought.
+-George: And yet here you stand,|proud and joyous.
+-George: You don't need the Old Way.|You pave your own path.
+!SetAnim(George,LookLeft)
+-George: It is difficult for an ancient sycamore like me, but maybe I can find the strength to do the same.
+-Gwen: Sheesh, really? Where was this open-mindedness back when we were dating?
+!HoldOn(0.8)
+!SetAnim(George,LookRight)
+!HoldOn(0.3)
+-George: Let me make amends.|A penance, of sorts.
+-George: I can teach you the lancing technique passed down from my ancestors, the Knights of Pwyll.
+-George: It is a powerful strike that cuts through any sword and shield!
+!NextRoom(ToBlack)
+!HoldOn(1)
+!PlaySound(Impact1)
+!HoldOn(2)
+!NextRoom(FromBlack)
+!HoldOn(1)
+!PlaySound(NewMove)
+!LearnMove(4,4)
+-InfoBig: Gwen learned Sky Vault.
+!HoldOn(0.5)
+-Gwen: Cool.
+!HoldOn(0.5)
+~Stop
+-George: You should leave while|the peace remains.
+-George: Take care, Gwen.
+-Gwen: And you.
+!AutoPinFollowers()
+~WhiteHallLoop
+!CameraFollow(1)
+
+/Statue
+!CheckGlobal(79,1,SaveTime)
+-Info: It's a pewter statue of a proud rat holding a smithing hammer.
+-Info: The plaque reads:||Gofannon, the architect, the mender, the builder.
+!SetGlobal(79,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Gofannon repairs.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(White Hall,A bright room)
+-Info: Your game has been saved.
+/SaveNo
+
+/FoundSeeds
+-Info: You found 3 seeds.

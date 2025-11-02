@@ -1,0 +1,68 @@
+/Intro
+~Stop
+!AutoPinFollowers()
+
+/TigerFall
+~TigerFallLoop
+!TigerFall()
+!UnpinFollowers()
+!Walk(Siobhan,DL,0.5)
+!Walk(Verm,DL,0.5)
+!HoldOn(0.5)
+!Walk(Verm,D,0.3)
+!Walk(Siobhan,L,0.6)
+!HoldOn(0.3)
+!SetAnimEnd(Verm,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,R)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UR)
+!HoldOn(0.1)
+!SetAnimEnd(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnimEnd(Siobhan,U)
+!HoldOn(0.1)
+!SetAnimEnd(Siobhan,UR)
+!HoldOn(0.1)
+!OverworldCameraPan(804,447,1,1)
+!HoldOn(0.8)
+!TitanModeToggle()
+-Tiger: THE WARRIOR MOUSE RETURNS.
+-Tiger: AND WITH A MOLE:THIS TIME?
+!TitanModeToggle()
+!SetGlobal(5,6)
+!SetLevelUpWhen(Kitchen)
+!SetLevelUpWho(Verm)
+!SetLevelUpWho(Siobhan)
+-Verm: Don't tell me the little kitty is scared of being outnumbered.
+!TitanModeToggle()
+-Tiger: SCARED?
+-Tiger: ALL I SEE BEFORE ME ARE|AN ENTREE AND A MAIN COURSE.
+-Tiger: GO AHEAD, MOUSE AND MOLE.|USE YOUR GOD WEAPONS.
+-Tiger: THEY WON'T SAVE YOU.
+!TitanModeToggle()
+~Stop
+!GoToBattle(Tiger2)
+
+/BattleDone
+!HoldOn(0.5)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(2)
+!PlaySound(NewMove)
+-InfoBig: Verm learned Cleave.
+!HoldOn(1)
+-Siobhan: We did it. We actually did it.
+!HoldOn(0.3)
+!SetGlobal(5,7)
+-Verm: But we didn't land a killing blow.
+-Siobhan: It doesn't matter.
+-Siobhan: That kitten won't be bothering the village any time soon.
+-Siobhan: Come on, let's give Mammy the good news.
+!AutoPinFollowers(1)
+
+/JustPin
+!AutoPinFollowers()
+
+End scene

@@ -1,0 +1,157 @@
+/Intro
+!PinFollowerToVerm(Siobhan)
+~SkyGarden3Loop
+
+/FirstIntro
+!SetGlobal(18,40)
+!RemoveFromParty(Bruce)
+!RemoveFromParty(Gwen)
+!HoldOn(1)
+~SkyGarden3Loop
+!HoldOn(1.7)
+-Siobhan: So... what happens now?
+!HoldOn(0.4)
+-Bruce: I'm not entirely sure.
+!HoldOn(1)
+-Anton: You could take the throne, lapa!
+-Anton: It belongs to your clan,|after all.
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+-Bruce: Absolutely not!
+-Bruce: It would nae feel right tae replace one squirrel duke with another.
+!HoldOn(0.3)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.4)
+-Gwen: It's for the people of Sky Garden to decide.
+-Siobhan: That's only right and fair.
+-Bruce: Maybe we can gather everyone for a roundtable discussion or something.
+-Gwen: Before all that...
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!SetAnim(Gwen,R)
+!SetAnim(Pocket,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!SetAnim(Bruce,DL)
+!SetAnim(Pocker,DR)
+!HoldOn(0.3)
+-Gwen: The city needs cleaning up.
+-Gwen: There are injured to attend to and dead to bury.
+-Gwen: And we need to figure out what to do with all the captured soldiers, like.
+-Bruce: Why not just throw 'em in the dungeon and be done with it?
+-Anton: It's what they deserve!
+-Gwen: It's a fraction of what they deserve. But...
+-Gwen: The idea of keeping any rodent in a cage makes me feel sick.|Even the bastard cachgwn.
+!HoldOn(0.3)
+!SetAnim(Bruce,L)
+!HoldOn(0.4)
+-Bruce: That's how ye feel, even after they locked ye behind bars?
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+-Gwen: It's the other way around.
+-Gwen: After rotting in that dungeon|for a month, I'm more convinced|than ever.
+!HoldOn(0.7)
+-Anton: Well... then what do we do?
+!HoldOn(1.4)
+-Verm: Sounds like a tough problem.
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.2)
+-Verm: And the clean-up job will|be hard work too.
+-Verm: Sorry I can't stick|around and help.
+-Bruce: Ye leaving already, Verm?
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: You heard the Duke's message.|That weird riddle.
+-Verm: I don't know any place called "Regal City", so I better get searching.
+-Verm: It might be in a far-off country.
+!HoldOn(0.3)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.4)
+-Siobhan: Sir Verm. I believe "regal city" is a reference to Murida.
+-Bruce: Aye, I figured as much too.
+-Gwen: It has a King, after all.
+!HoldOn(0.5)
+-Verm:  Oh. 
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+-Verm: Well, what about that|"thirteenth chime" stuff?
+-Siobhan: Hmm. That line perplexes me.
+-Siobhan: The bells above Murida only strike up to twelve times.
+!HoldOn(0.6)
+-Siobhan: But let me come with you, Sir Verm.
+-Siobhan: We can go to the library and figure out the prophesy together!
+-Verm: As if I could stop you.
+!HoldOn(0.7)
+-Bruce: Hey. Verm.
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Bruce: I remember my promise.
+-Bruce: When Sky Garden's all cleaned up, I'll do everything in my power tae help ye.
+-Gwen: You have my support as well.
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Gwen: I wouldn't be free without you.|I want to repay the favour.
+-Verm: Well, thanks.|Both of you.
+-Verm: And good luck with the clean up.
+-Bruce: Aye. Safe travels.
+!CameraFollow(1)
+!AutoPinFollowers(1)
+
+/Pocket
+-Pocket: You're probably wondering how I broke into Sky Garden during its lockdown.
+-Pocket: Well... that's a Jabari trade secret!
+
+/ChatAnton
+-Anton: Have we met before?
+-Verm: I'm not sure. Things have been kind of hectic recently.
+-Anton: No matter! Any friend of Bruce is friend of Anton!
+!SetNPCFlag(Anton,ChatAnton2)
+
+/ChatAnton2
+-Anton: That was not my first prison riot.|But hopefully my last.
+
+/ChatBruce
+-Bruce: It feels strange being here.
+-Bruce: Is this my home? Is the burnt-out tree my home? I've got some thinking tae do.
+
+/ChatGwen
+!CheckGlobal(91,1,ChatGwen2)
+!SetGlobal(91,1)
+-Gwen: That Plan V of yours managed to do the impossible. Nice work, dwt.
+-Verm: I've been meaning to ask. What's this "doot" business?
+-Gwen: Ah. It's a White Hall thing. A bit hard to translate. But it's a compliment, don't worry.
+-Siobhan: Am... am I a dwt?
+-Gwen: Yeah, you're a right dwt, Siobhan.
+-Bruce: Am I a dwt?
+-Gwen:  No. 
+!HoldOn(0.4)
+-Bruce: Ah. Fair enough.
+
+/ChatGwen2
+-Gwen: You're off to Murida, right?|I'll have to visit one day.

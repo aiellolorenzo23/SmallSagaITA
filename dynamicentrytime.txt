@@ -1,0 +1,53 @@
+/Intro
+~NightWoods2Loop
+!HoldOn(2)
+!SetGlobal(18,30)
+-Bernardo: @ I've roamed this world over @|   @ A rat-tailed rover... @
+!HoldOn(1)
+!Nani(Marcellus,?)
+!HoldOn(1)
+-Marcellus: Hey. Berny.
+!HoldOn(1)
+-Bernardo: Yeah?
+!HoldOn(1)
+-Marcellus: The birds are being weird.
+!HoldOn(0.8)
+!SetAnim(Bernardo,UR)
+!HoldOn(0.1)
+!SetAnim(Bernardo,DR)
+!HoldOn(0.6)
+-Bernardo: Weird how?
+-Marcellus: Just... get over and take a look.
+!HoldOn(0.5)
+!NormalJump(Bernardo,2,30,370,314,JumpDR,DR)
+!HoldOn(0.6)
+!SetAnim(Bernardo,UR)
+!HoldOn(0.5)
+!Widescreen(1)
+!HoldOn(0.7)
+-Bernardo: Oh yeah. They are being weird.
+-Bernardo: Are those... nightwings?
+~DynamicEntryLoop
+!HoldOn(0.5)
+!HardCut(DynamicEntry)
+
+/Intro2
+!HoldOn(1)
+!NormalJump(Bernardo,3,30,370,314,JumpUR,UR)
+!HoldOn(0.5)
+-Bernardo: Oh, wow. They're|headed right this way!
+!HoldOn(0.1)
+!SetAnim(Marcellus,UL)
+!HoldOn(0.1)
+!SetAnim(Bernardo,DR)
+!HoldOn(0.1)
+-Marcellus: You know our orders.|Ready the magic missiles.
+!OverworldCameraPan(320,360,1,1)
+!HoldOn(0.5)
+!SetAnim(Marcellus,DL)
+!HoldOn(0.1)
+!SetAnim(Marcellus,DR)
+!HoldOn(0.5)
+-Marcellus: Let's blast the|scum out the sky!
+!HoldOn(0.4)
+!HardCut(DynamicEntry)

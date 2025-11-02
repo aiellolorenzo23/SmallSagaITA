@@ -1,0 +1,178 @@
+/Intro
+~AshenLoop
+!AutoPinFollowers()
+
+/FirstIntro
+!Walk(Bruce,UL,0.5)
+!Walk(Verm,UR,0.5)
+!Walk(Gwen,U,0.3)
+!Walk(Siobhan,U,0.3)
+!HoldOn(0.3)
+!Walk(Siobhan,UR,0.2)
+!Walk(Gwen,UL,0.2)
+!HoldOn(0.3)
+!SetAnim(Bruce,U)
+!SetAnim(Gwen,U)
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,U)
+!SetGlobal(18,23)
+!HoldOn(1.2)
+-Bruce: This isnae just a tree...
+!HoldOn(0.5)
+-Siobhan: I think it's a city.|Or at least, it once was.
+!HoldOn(0.2)
+!SetAnim(Bruce,UR)
+!HoldOn(0.2)
+-Bruce: Aye, but there's something familiar about it, right?
+-Bruce: I feel like I've been here before.
+!HoldOn(0.7)
+-Verm: Well, it's nothing but ash now.
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+-Verm: Let's move. The Cailleach is waiting.
+!Walk(Bruce,R,1)
+!Walk(Gwen,R,0.8)
+!Walk(Siobhan,R,0.4)
+!HoldOn(1)
+!AutoPinFollowers(1)
+
+/Statue1
+!CheckGlobal(93,1,SaveTime)
+-InfoBig: Two vast and trunkless paws of stone stand before you.
+-InfoBig: There is no plaque. The broken colossus bears no name.
+!SetGlobal(93,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Ash gathers at your feet.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Ashen Tower,Ground floor)
+-Info: Your game has been saved.
+/SaveNo
+
+/Statue2
+!CheckGlobal(94,1,SaveTime2)
+-InfoBig: You see the severed and cracked head of a noble squirrel.
+-InfoBig: Who were they? The proud face betrays no secrets.
+!SetGlobal(94,1)
+>SaveTime2
+
+/SaveTime2
+-InfoBig: Ash gathers at your feet.|Save your game?
+*SaveYes2: Save.
+*SaveNo: Not now.
+
+/SaveYes2
+!SaveGame(Ashen Tower,Top floor)
+-Info: Your game has been saved.
+/SaveNo
+
+/TriggerTwo
+!Walk(Verm,UR,1)
+!HoldOn(1)
+!Walk(Verm,R,1)
+!HoldOn(1.2)
+!UnpinFollowers()
+-Verm: I think we're at the top.|But I can't see a thing.
+-Siobhan: Ah, hold on!
+!HoldOn(0.5)
+!SetAnim(Verm,U)
+!SetAnim(Bruce,U)
+!SetAnim(Gwen,U)
+!NormalJump(Siobhan,2,30,345,486,JUL,Blast1)
+!HoldOn(2)
+!Blast(1)
+!HoldOn(0.05)
+!SetAnim(Siobhan,Blast2)
+!TurnOnLights()
+!HoldOn(0.5)
+!SetAnim(Siobhan,Blast1)
+!HoldOn(1)
+!SetAnim(Siobhan,UL)
+!HoldOn(1)
+!PlaySound(NewMove)
+-InfoBig: Siobhan learned Spreadfire.
+!HoldOn(1)
+!SetAnim(Siobhan,U)
+!OverworldCameraPan(320,170,0.5,1)
+!HoldOn(3)
+-Siobhan: "Dum Spiro Spero"...
+!HoldOn(0.4)
+!CameraFollow(1)
+!HoldOn(1)
+-Verm: What's that?
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+-Siobhan: It's Soricidin, the language|of the shrew empire.
+-Siobhan: I'm a little rusty, but I think it translates as-
+-Bruce: "While I breathe, I hope."
+
+!SetAnim(Verm,UL)
+!SetAnim(Gwen,UL)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!SetAnim(Verm,L)
+!HoldOn(0.3)
+-Bruce: My da' taught it to me. It's the motto o' Clan Red.
+!HoldOn(0.8)
+-Bruce: I had my suspicions before, but now I have no doubt.
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!Walk(Bruce,L,0.3)
+!HoldOn(0.4)
+!SetAnim(Bruce,DL)
+!HoldOn(0.4)
+-Bruce: This burnt husk around us is all that remains of Sky Garden.
+!HoldOn(0.6)
+-Verm: What do you mean?|We just came from Sky Garden.
+-Bruce: Nae. We're standing on|the Sky Garden of old.
+-Bruce: The original city.|The real city.
+-Bruce: The home of Clan Red.
+!HoldOn(0.8)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.4)
+-Bruce: When Clan Grey landed in Rodentia some four hundred seasons ago, it wasnae enough for them tae kill my ancestors.
+-Bruce: They had tae burn our cities.|Salt the earth.
+-Bruce: Destroy all evidence that us Reds even existed.
+!HoldOn(0.5)
+-Siobhan: Bruce, I'm so sorry.
+!HoldOn(0.8)
+-Gwen: So Duke Josh isn't just a lone tyrant.
+-Gwen: He's part of something bigger.
+-Gwen: Something foul that's gone on for generations.
+!HoldOn(1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.6)
+-Verm: If there's a Cailleach here, she's on the other side of this doorway.
+!HoldOn(0.4)
+-Gwen: Are you okay to carry on, Bruce?
+!Walk(Bruce,R,0.3)
+!HoldOn(0.4)
+-Bruce: Aye. I want tae see what's on the other side as much as ye do.
+-Verm: Then let's prepare ourselves.
+!Walk(Siobhan,D,0.3)
+!Walk(Verm,L,0.2)
+!HoldOn(0.4)
+!AutoPinFollowers(1)
+
+

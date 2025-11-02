@@ -1,0 +1,359 @@
+/Intro
+~Labyrinth2Loop
+!CheckGlobal(58,4,PostMimic)
+!AutoPinFollowers()
+
+/JustPin
+!AutoPinFollowers(1)
+
+/Event1
+~Labyrinth2Loop
+!AutoPinFollowers()
+!SetGlobal(30,3)
+!Walk(Gwen,UL,1.3)
+!HoldOn(1.3)
+!UnpinFollowers()
+!SetAnim(Siobhan,UL)
+!Walk(Gwen,UL,0.3)
+!HoldOn(0.3)
+-Siobhan: That's odd. This place doesn't smell like the usual Underriver.
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+-Gwen: That's the stench of White Hall. Blood and bleach.
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.5)
+-Gwen: Hmm...
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.6)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.6)
+-Gwen: Ah. There it is.
+!HoldOn(0.2)
+!OverworldCameraPan(800,350,1,1)
+!HoldOn(1.8)
+!SetAnim(Siobhan,UR)
+-Gwen: See that pipe?
+!HoldOn(0.4)
+!CameraFollow(1)
+!HoldOn(1)
+!SetAnim(Gwen,R)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Gwen: That'll take us right into the heart of White Hall.
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.3)
+-Gwen: But these walls are too slick to climb...
+-Gwen: And it's too high to jump...
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.5)
+-Gwen: We'll have to go the long way round.
+-Siobhan: Got it. I'm on your tail.
+
+!Walk(Siobhan,UL,0.3)
+!HoldOn(0.3)
+!AutoPinFollowers(1)
+
+
+/Event2
+!AutoPinFollowers()
+!Walk(Gwen,UR,2)
+!HoldOn(2)
+!UnpinFollowers()
+!SetAnim(Siobhan,UR)
+!Walk(Gwen,UR,0.7)
+!HoldOn(1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.6)
+!Walk(Gwen,DL,0.3)
+!HoldOn(0.6)
+!SetGlobal(30,4)
+-Gwen: You alright?
+-Siobhan: Sorry. The smell is|making my head spin.
+-Gwen: Yeah. The chemicals will do that. Take a breather.
+!HoldOn(1)
+-Siobhan: Blood and bleach... Just what kind of place is White Hall?
+-Gwen: It's difficult to describe.
+-Gwen: In some ways, it's a paradise.
+-Gwen: The White God who runs the Hall provides for the residents.
+-Gwen: He gives us endless food and clean housing.
+-Siobhan: Oh, I get it! Like a pet dwelling.
+-Gwen: No, that's not quite right.
+-Gwen: Gods give freely to those called "pets", right? But this relationship felt more transactional.
+!HoldOn(0.2)
+!Nani(Siobhan,?)
+!HoldOn(0.6)
+-Gwen: From the moment of birth, we owed what Sir George called a divine debt.
+-Gwen: So we'd have to obey the gods. Follow their commands. Perform their tasks.
+-Gwen: If we didn't, well, Sir George would get mad.
+-Siobhan: Sir George is... the town's vassal? The leader?
+-Gwen: Ha! He likes to think so.
+-Gwen: But nah. Just my ex.
+!HoldOn(0.2)
+!Walk(Gwen,DL,0.4)
+!HoldOn(0.6)
+-Gwen: Bugs are prowling.|Let's mosey.
+
+!AutoPinFollowers(1)
+
+/Event3
+!AutoPinFollowers()
+!Walk(Gwen,UL,0.8)
+!HoldOn(0.8)
+!UnpinFollowers()
+!SetAnim(Siobhan,UL)
+!Walk(Gwen,UL,0.5)
+!HoldOn(0.8)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.6)
+!SetGlobal(30,5)
+-Siobhan: More pipes and chemicals.|My head is still spinning.
+-Gwen: We're nearly there.|Are you going to be okay?
+-Siobhan: Yeah. I just need a minute.
+
+!HoldOn(2)
+-Siobhan: So... it sounds like you and Sir George had some friction?
+-Gwen: Ha ha. Yeah.
+!HoldOn(0.6)
+-Gwen: "Your body is not your body." That's what Sir George would say.
+-Gwen: See, if the gods wanted to take something from us, it was not our place to complain.
+-Siobhan: Take something?
+-Gwen: Oh, you know. Fur. Blood. Organs.
+!HoldOn(0.6)
+-Gwen: One day I woke up to find they had taken my legs.
+-Gwen: I crawled around on my belly, like a wyrm.
+-Gwen: But then the gods gave me a set of metal legs instead.
+-Gwen: Sir George said I should give praise for such a generous gift.
+-Gwen: But I felt differently.
+-Gwen: So the next time I saw the White God...
+!HoldOn(0.2)
+!Walk(Gwen,DR,0.3)
+!HoldOn(0.4)
+-Gwen: I bit a chunk out of His hand.
+-Siobhan: Woah.
+-Gwen: I figured, if that godly bastard wants to take my body, I'll damn well take His.
+!HoldOn(0.6)
+-Siobhan: I bet Sir George wasn't happy.
+!HoldOn(0.6)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.4)
+-Gwen: He called me a twisted dragon.|A sacrilegious freak.
+-Gwen: He told me to give up my legs and beg the gods for forgiveness.
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+-Gwen: "Eff that," I thought. I used my shiny legs to walk right out the door.
+!HoldOn(1.3)
+-Siobhan: That's really rough. I'm sorry, Gwen.
+-Gwen: I never missed George.|He was a dick.
+-Gwen: But it was hard leaving|my friends and family.
+-Gwen: Still, I have no regrets. Leaving was the best choice I ever made.
+-Gwen: It's how I met you and Bruce, right?
+-Siobhan: Yeah.
+!HoldOn(1.3)
+-Siobhan: I'm feeling good.|Let's finish this.
+-Gwen: Alright.
+
+!AutoPinFollowers(1)
+
+/Event4
+
+!SetGlobal(30,6)
+!Walk(Gwen,UR,0.6)
+!HoldOn(0.6)
+-Jonny: Ey up!
+-Jonny: Jonny Comlatti's the name,|and ladders are my claim to fame!
+-Jonny: Just finished this here beaut of a ladder for convenient and safe tunnel access in accordance with Underriver standards.
+-Jonny: See for yourself!
+!Walk(Gwen,R,0.3)
+!HoldOn(0.3)
+!Walk(Gwen,DR,0.7)
+!HoldOn(0.8)
+!OverworldCameraPan(574,556,1,1)
+!SetAnim(Gwen,D)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!SetAnim(Siobhan,DL)
+!HoldOn(2)
+!CameraFollow(1)
+!HoldOn(1)
+-Jonny: What do you think?
+*BitLate: Bit late.
+*Excellent: It's perfect.
+
+/BitLate
+-Gwen: I'm not one to complain...
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+-Gwen: But we could have saved a bit of time if you had installed this twenty minutes ago.
+-Jonny: On my lunch break?!|I can't be doing that!
+-Jonny: The utter cheek of some people...
+>Here
+/Excellent
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+-Gwen: Jonny, this ladder is sublime.
+-Jonny: Ain't it just!
+-Jonny: You know what I say, a job worth doing is worth doing slowly and carefully.
+>Here
+/Here
+!Walk(Jonny,DL,3)
+!HoldOn(0.8)
+!SetAnim(Gwen,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(2)
+!Exit(Jonny)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+-Gwen: By the by, Siobhan. Can you swim?
+-Siobhan: I don't know. I've never tried.
+-Gwen: Let's go find out.
+
+
+/FoundSeeds2
+-Info: You found 3 seeds.||Oh, there's also a scrap of parchment.
+-Info: "Pwyll the wise lived here.||He is gone now."
+
+/FoundSpear
+-Info: You found an ancient spear, still sharp to the touch.
+-Info: Gwen names the weapon "Euryn"|for its supernatural sheen.
+
+/Chest
+-Info: You found a Bardic Coat.|Poetic.
+/FoundSeeds
+-Info: You found 4 seeds.
+
+/GoingUp
+-Info: Climb up the ladder?
+*ClimbYes: Yes.
+*ClimbNo: Not yet.
+/GoingDown
+-Info: Climb down the ladder?
+*ClimbYes2: Yes.
+*ClimbNo: Not yet
+/ClimbNo
+/ClimbYes
+!NextRoom(ToBlack)
+!HoldOn(0.6)
+!TeleportCharacter(Gwen,598,360)
+!TeleportCharacter(Verm,598,360)
+!TeleportCharacter(Bruce,598,360)
+!TeleportCharacter(Siobhan,598,360)
+!NextRoom(FromBlack)
+!HoldOn(0.6)
+/ClimbYes2
+!NextRoom(ToBlack)
+!HoldOn(0.6)
+!TeleportCharacter(Gwen,507,685)
+!TeleportCharacter(Verm,507,685)
+!TeleportCharacter(Siobhan,507,685)
+!TeleportCharacter(Bruce,507,685)
+!NextRoom(FromBlack)
+!HoldOn(0.6)
+
+/FoundMimic
+!HoldOn(1)
+!SetGlobal(58,4)
+-Info: You found an avarice spider.
+!GoToBattle(TrapSpider)
+
+/PostMimic
+!AutoPinFollowers()
+~Labyrinth2Loop
+!HoldOn(1)
+!SetGlobal(58,5)
+!PlaySound(ItemFound)
+-Info: You picked up an insect part.
+-Info: Gross. Why did you do that?
+-Info: You add it to your trinkets nonetheless.
+
+/Buggy
+~Stop
+!Nani(Buggy,!)
+!PlaySound(EnemyInbound)
+!HoldOn(1)
+!NormalBattle(WHBug,85)
+
+/Buggy2
+~Stop
+!Nani(Buggy2,!)
+!PlaySound(EnemyInbound)
+!HoldOn(1)
+!NormalBattle(WHBug2,86)
+
+/Buggy3
+~Stop
+!PlaySound(EnemyInbound)
+!Nani(Buggy3,!)
+!HoldOn(1)
+!NormalBattle(WHBug3,87)
+
+/SkipSection
+-Info: Would you like to skip this section?
+*YesSkip: Yes please.
+*NoSkip: No thanks.
+
+/YesSkip
+!NextRoom(ToBlack)
+!HoldOn(1)
+!TeleportCharacter(Verm,735,697)
+!TeleportCharacter(Gwen,735,697)
+!TeleportCharacter(Siobhan,735,697)
+!TeleportCharacter(Bruce,735,697)
+!AutoPinFollowers(1)
+!NextRoom(FromBlack)
+!HoldOn(1)
+
+/NoSkip

@@ -1,0 +1,443 @@
+/Intro
+
+/AutoPin
+!AutoPinFollowers()
+
+/FirstIntro
+
+!OverworldCameraPan(360,850,0.18,1)
+!SetGlobal(18,40)
+!SetGlobal(32,1)
+!HoldOn(6.2)
+!SetAnim(Aquila,Look1)
+!HoldOn(1.4)
+~JustClockLoop
+-Aquila:  Tsk. 
+!HoldOn(0.4)
+!SetAnim(Aquila,DR)
+!HoldOn(0.8)
+!Walk(Aquila,DR,0.4)
+!HoldOn(1)
+-Aquila: Where is that assistant?
+!HoldOn(0.4)
+!SetAnim(Aquila,DL)
+!HoldOn(0.5)
+!Walk(Aquila,DL,0.9)
+!HoldOn(1.5)
+!SetAnim(Aquila,DR)
+!HoldOn(0.4)
+-Aquila: Thirty seconds late.|Most unsatisfactory.
+!HoldOn(1)
+!OverworldCameraPan(360,970,1,1)
+!HoldOn(0.5)
+!PlaySound(PalaceBigDoorOpen)
+!HoldOn(0.4)
+!Enter(Siobhan)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.4)
+!SetAnim(Aquila,DL)
+!HoldOn(0.6)
+!Walk(Siobhan,UR,0.8)
+!HoldOn(1)
+!LevelUp(Siobhan)
+!HoldOn(0.8)
+-Aquila: You're late.
+-Siobhan: Sorry, Plaguemaster.|I had an errand to run.
+-Aquila: An errand of getting a new hat. Vital activities.
+-Siobhan: Oh, you noticed?
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.8)
+-Siobhan: I had it adjusted to the style of the pyromancers from the days of Artura.
+-Siobhan: I know the pyromancers were an all-male organisation, but I thought, well...
+-Aquila: Spare me that essentialist apologia.|You know my views.
+-Aquila: Gender is arbitrary. Meaningless. Just a distraction from that which truly matters.
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.4)
+-Siobhan: ...Science?
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.2)
+-Aquila: EXACTLY!
+!HoldOn(0.2)
+!SetAnim(Aquila,DR)
+!HoldOn(0.3)
+!SetAnim(Siobhan,R)
+!Walk(Aquila,DR,0.4)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.3)
+-Aquila: We must pursue knowledge, no matter how repulsive or blasphemous the truth we uncover may be.
+-Aquila: Thus, we shall continue the work on our dark and hubristic project. BEHOLD!
+!NextRoom(InstantBlack)
+!HoldOn(1)
+!SetAnim(Table,Inactive)
+!PlaySound(Cloth)
+!TeleportCharacter(Aquila,264,1002)
+!HoldOn(0.4)
+!NextRoom(FromBlack)
+!HoldOn(1)
+~AquilaLoop
+-Siobhan: Right. The musdroid.
+-Siobhan: It's looking good!
+!HoldOn(0.8)
+-Aquila: Siobhan, please pass me the screwdriver on the far left.
+!CameraFollow(1)
+!SetNPCFlag(Aquila,AqDriver1)
+!SetNPCFlag(Driver2,WrongDriver2)
+!SetNPCFlag(Driver3,WrongDriver3)
+
+/EarlyExit1
+-Aquila: Where are you going?|We have work to do.
+!Walk(Siobhan,UR,0.6)
+!HoldOn(0.6)
+
+/WrongDriver2
+-Aquila: Next to that one!
+
+/WrongDriver3
+-Aquila: Not that one!
+
+/Pen
+!CheckGlobal(32,1,WrongPen)
+
+/WrongPen
+-Aquila: No. That's... that's a pen.
+
+/AqDriver1
+-Aquila: Pass me the screwdriver on the far left.
+
+/Driver4
+-Aquila: No, not that one.
+
+/Driver5
+-Aquila: No, the other left!
+
+/Driver1
+!PlaySound(ItemFound)
+!TeleportCharacter(Driver1,2000,520)
+-Info: You picked up the screwdriver.
+!SetNPCFlag(Aquila,AqContinue1)
+!SetNPCFlag(Driver5,)
+!SetNPCFlag(Driver3,)
+!SetNPCFlag(Driver4,)
+!SetNPCFlag(Driver2,)
+
+/AqContinue1
+-Aquila: Thank you.
+!HoldOn(0.4)
+!SetAnim(Aquila,Driver1)
+!HoldOn(1.4)
+-Siobhan: It's strange.
+-Siobhan: Half the city thinks your experiments are something sinister.
+-Siobhan: That you're mutilating bodies, trying to create some unholy abomination.
+-Aquila: Of course they do.
+-Aquila: It's easier to blame the bogeymouse of academia than to acknowledge the true causes of society's ills.
+!HoldOn(0.3)
+!SetAnim(Aquila,DR)
+!HoldOn(0.3)
+-Aquila: The screwdriver on the far right, if you please.
+!SetNPCFlag(Aquila,AqDriver2)
+!SetNPCFlag(Driver2,Driver2)
+!SetNPCFlag(Driver5,Driver52)
+!SetNPCFlag(Driver3,WrongDriver3)
+!SetNPCFlag(Driver4,Driver4)
+
+/Driver52
+-Aquila: No, the one on the actual right!
+
+/AqDriver2
+-Aquila: The screwdriver on the far right. Hurry now.
+
+/Driver2
+!PlaySound(ItemFound)
+!TeleportCharacter(Driver2,2000,920)
+-Info: You picked up the screwdriver.
+!SetNPCFlag(Aquila,AqContinue2)
+!SetNPCFlag(Driver5,)
+!SetNPCFlag(Driver3,)
+!SetNPCFlag(Driver4,)
+
+/AqContinue2
+-Aquila: Thank you.
+!HoldOn(0.4)
+!SetAnim(Aquila,Driver2)
+!HoldOn(1)
+-Aquila: I have principles.|I have ethics.
+-Aquila: You want to see a scientist who doesn't know where to draw the line? Go to White Hall. Go witness what the gods get up to there.
+!HoldOn(0.2)
+!Nani(Siobhan,?)
+!HoldOn(0.4)
+!SetAnim(Aquila,DR)
+!HoldOn(0.3)
+-Aquila: The smallest screwdriver, please.
+!SetNPCFlag(Aquila,AqDriver3)
+!SetNPCFlag(Driver3,Driver3)
+!SetNPCFlag(Driver5,Driver53)
+!SetNPCFlag(Driver4,Driver4)
+
+/AqDriver3
+-Aquila: The smallest one!|Come on, Siobhan.
+
+/Driver53
+-Aquila: Next to it! It's right there!
+
+/Driver3
+!PlaySound(ItemFound)
+!TeleportCharacter(Driver3,2000,20)
+-Info: You picked up the screwdriver.
+!SetNPCFlag(Aquila,AqContinue3)
+!SetNPCFlag(Driver5,)
+!SetNPCFlag(Driver4,)
+
+/AqContinue3
+-Aquila: Very good.
+!HoldOn(0.4)
+!SetAnim(Aquila,Driver3)
+!HoldOn(1)
+-Siobhan: White Hall...|That name is familiar...
+-Aquila: Don't distract me.|This part is delicate.
+~Stop
+-Aquila: See, if I cross these two wires, then...
+
+!HoldOn(0.4)
+!PlaySound(squirrelbeep)
+!HoldOn(0.2)
+!SetAnim(Table,Active)
+!Nani(Aquila,!)
+!HoldOn(0.4)
+!SetAnim(Aquila,DR)
+!Nani(Siobhan,!)
+!HoldOn(0.2)
+-Aquila: Ah, it's active!
+!HoldOn(0.4)
+-Musdroid: Loa- Loading.
+!HoldOn(0.4)
+-Musdroid: Hello world.
+!HoldOn(0.8)
+-Siobhan: Oh! Hello, Musdroid.
+!HoldOn(0.4)
+-Siobhan: This is amazing, Plaguemaster!
+-Siobhan: You've created life!
+!HoldOn(1)
+-Aquila: This is... life?
+!HoldOn(0.8)
+-Musdroid: Hello world.
+!HoldOn(1.2)
+-Aquila: No. I am not so naive as to be fooled by such superficiality. And nor are you.
+-Aquila: It's clear what we've created here.
+-Aquila: A puppet. A toy.
+-Aquila: Barely a simulacrum of|a simulacrum of life.
+!HoldOn(0.8)
+-Musdroid: Hello world.
+!HoldOn(0.5)
+-Aquila: Just looking at this pitiful thing fills my stomach with disgust.
+!HoldOn(0.3)
+!SetAnim(Aquila,DL)
+!HoldOn(0.5)
+-Aquila: Siobhan. Destroy it.
+-Siobhan: D-destroy it? But we|just spent a month building it.
+-Aquila: I don't care.|Get it out of my sight.
+!HoldOn(0.4)
+!SetGlobal(32,2)
+!GoToBattle(Musdroid)
+
+/PostBattle
+!HoldOn(1)
+!SetGlobal(48,0)
+-Aquila: Worthless.
+!HoldOn(0.5)
+-Aquila: Totally, utterly worthless.
+!HoldOn(0.5)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.5)
+-Siobhan: You're being too harsh|on yourself, Plaguemaster.
+-Siobhan: Look at how much|progress we've made.
+-Siobhan: We can revise the|design and try again.
+!HoldOn(0.5)
+!SetAnim(Aquila,Look1)
+!HoldOn(1)
+!SetAnim(Aquila,Look2)
+!HoldOn(1)
+-Aquila: A rodent's life is short and pathetic.
+-Aquila: The gods have lifespans one hundred times our own.
+-Aquila: They have time to make mistakes, to broaden their knowledge and grow.
+-Aquila: But we don't get second chances. We scramble in the dirt for every pitiful second we can get.
+!HoldOn(2)
+-Siobhan: Plaguemaster, I want to ask-
+!SetAnim(Aquila,DR)
+!HoldOn(0.1)
+!SetAnim(Aquila,DL)
+!HoldOn(0.1)
+-Aquila: About the Yellow God? I keep|telling you, Murida is prepared.
+-Siobhan: I mean no disrespect, but...|how, exactly?
+-Siobhan: If Duke Josh's prophecy is true, then a deathly God is coming to Murida.
+-Siobhan: Every rodent in the city will be in danger.
+-Siobhan: But we have no plan!|We don't even know the date!
+!HoldOn(0.5)
+-Aquila: Prophecies are for fools. And Duke Josh had nuts for brains.
+-Aquila: But even a cracked bell|can ring true.
+!HoldOn(0.3)
+-Aquila: Once per year, the gods turn their clocks back one hour.
+-Aquila: Heavens knows why. The gods love their peculiar rituals.
+-Aquila: But in any case, the result is a night with a witching hour.
+-Aquila: A night when the clock strikes thirteen, as it were.
+-Siobhan: Thirteen chimes...
+-Aquila: From what I've translated of godly papers and pamphlets, something foul may indeed be approaching on that date.
+-Aquila: And when that happens...
+-Aquila: Excalibur will protect the palace.
+!HoldOn(0.1)
+!Nani(Siobhan,?)
+!HoldOn(0.5)
+-Siobhan: Excalibur? The mythical sword?
+!HoldOn(0.5)
+-Aquila: Would you like to see it?
+*Yes: Yes!
+*No: Nah.
+*What: What is it?
+
+/Yes
+-Siobhan: I would!
+>Info
+
+/No
+-Siobhan: Nah, I'm good.
+-Aquila: You're a terrible liar.
+>Info
+
+/What
+-Siobhan: That depends. What exactly is it?
+-Aquila: It's only natural that you are curious.
+>Info
+
+/Info
+-Aquila: I can show you.|But there is a condition.
+-Siobhan: What sort of condition?
+!HoldOn(0.4)
+-Aquila: A rodent's life is short and pathetic.
+-Aquila: And I am very old for a rat.
+-Aquila: My bones creak.|My senses dull.|Tumours infest me.
+-Aquila: I won't live to see the end of Winter.
+!HoldOn(0.3)
+-Siobhan: I'm... I'm so sorry.
+-Aquila: Don't be. Death is inevitable.
+-Aquila: But the knowledge of science need not perish with our bodies.
+!HoldOn(0.4)
+-Aquila: When I pass, I want you to|continue my work.
+-Aquila: I want you to pick up the|mantle of Plaguemaster.
+-Siobhan:  Me? 
+-Aquila: You're astute. Capable.|Scientifically minded.
+-Aquila: I can't think of anyone better suited to the job.
+-Aquila: Accept, and I will reveal to you the secrets of Excalibur.
+*Hasty: I accept!
+*Hasty: I decline.
+
+/Hasty
+-Siobhan: Well... I-
+-Aquila: Don't be hasty. Dwell on it.
+-Aquila: Actually, go ahead and take the rest of the day off to give it proper consideration.
+-Aquila: You can give me your answer tomorrow.
+-Siobhan: Okay. Thank you, Plaguemaster.
+!HoldOn(1.5)
+-Siobhan: Um... am I free to leave the city?
+-Aquila: Oh? People to see?
+-Aquila: That's fine. Consider it an act of trust.
+!HoldOn(0.4)
+-Siobhan: Thank you, Plaguemaster.|I'll be back soon.
+!SetGlobal(32,3)
+!CameraFollow(1)
+
+/Aquila
+-Aquila: You're done for today. Don't dawdle.
+
+/SecondIntro
+~Stop
+!Walk(Siobhan,UR,0.3)
+!SetGlobal(32,31)
+!HoldOn(0.3)
+!Walk(Siobhan,U,0.3)
+!HoldOn(0.3)
+!Walk(Siobhan,UR,0.3)
+!SetAnim(Aquila,Look1)
+!HoldOn(0.6)
+~AquilaLoop
+-Aquila: You've returned.
+!SetAnim(Aquila,DR)
+!HoldOn(0.1)
+!SetAnim(Aquila,DL)
+!HoldOn(0.3)
+-Aquila: Did you have a good break?
+-Siobhan: Yeah. I was just...
+*Friends: Seeing friends.
+*Molestuff: Doing mole stuff.
+/Friends
+-Siobhan: Just seeing my pals.|Y'know. My mates.
+-Aquila: You mean the treasonous rebels over in Sky Garden?
+-Siobhan: U-uhhhhhhhh...
+>Dontcare
+
+/Molestuff
+-Siobhan: Just doing mole stuff.
+-Aquila: Siobhan, I'm no slug-brain.
+-Aquila: I know you were confabbing with your treasonous friends in Sky Garden.
+-Siobhan: Ah! W-w-w-well...
+>Dontcare
+
+/Dontcare
+-Aquila: Relax. I don't care about that. There's a much more pressing matter.
+-Siobhan: Oh?
+-Aquila: Inheriting the title of Plaguemaster!
+-Aquila: Have you given it any thought?
+-Aquila: Will you take on|the mantle after I die?
+!HoldOn(0.6)
+-Siobhan: I will.
+!HoldOn(1)
+-Aquila: Very good.
+!HoldOn(1)
+-Aquila: I'll take you to Excalibur.
+-Siobhan: Now?
+-Aquila: There's no better time.
+!Walk(Aquila,DL,0.37)
+!HoldOn(0.5)
+!Walk(Aquila,UL,0.2)
+!SetAnim(Siobhan,U)
+!HoldOn(0.5)
+!SetScriptAnim(LabDoorOpen,Default)
+!PlaySound(ChestOpen)
+!HoldOn(1)
+!TurnOffBlocks(1)
+!SetVisible(LabZ,1)
+
+~Stop
+-Aquila: Follow me.
+!Walk(Aquila,UL,1)
+!HoldOn(0.5)
+!Exit(Aquila)
+
+/Book
+!CheckGlobal(50,32,BookOpen)
+-Siobhan: I haven't learned how to read godly writing yet. Maybe Aquila can teach me some day.
+
+/BookOpen
+!SetNPCFlag(Book,)
+!SetScriptAnim(LabDoorOpen,Default)
+!PlaySound(ChestOpen)
+!HoldOn(1)
+!TurnOffBlocks(1)
+!SetVisible(LabZ,1)
+
+/FoundSeeds
+-Info: You found 4 seeds.
+
+/EarlyExit2
+-Siobhan: I have to see this through.
+!Walk(Siobhan,UR,0.6)
+!HoldOn(0.6)
+
+

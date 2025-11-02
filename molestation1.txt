@@ -1,0 +1,71 @@
+/Intro
+~GardenLoop
+!AutoPinFollowers()
+
+/PigeonEntrance
+~RainLoop
+!PigeonArrival()
+!CheckGlobal(90,1,PigeonEntranceFirst)
+
+/PigeonEntranceFirst
+!HoldOn(2)
+!SetGlobal(90,2)
+-Dizi: This is...
+!HoldOn(0.5)
+-Dizi: Yeah, nah, I ain't got a clue.|Where are we?
+!HoldOn(0.5)
+-Verm: I don't think this place has a name. I'm just following directions on an old map.
+-Dizi: Ooh, a treasure hunt.|Yarr, ha ha! I like it.
+!AutoPinFollowers(1)
+
+/Dizi
+-Dizi: No gods about. And these carriages don't look like they've moved in a long time.
+
+/Basket
+-Dizi: All aboard!
+!CameraUnfollow()
+!UnpinFollowers()
+!PigeonFlight(OverMap)
+
+/Jump1
+!HoldOn(0.1)
+!UnpinFollowers()
+!NormalJump(Verm,2,30,844,721,JUR,UR)
+!HoldOn(0.5)
+!MoveNPCToLayer(Verm,Background)
+!TeleportCharacter(Jump1,2000,757)
+!TeleportCharacter(Jump2,828,757)
+
+/Jump2
+!HoldOn(0.1)
+!CheckGlobal(90,3,Curse)
+!MoveNPCToLayer(Verm,ZSorted)
+!NormalJump(Verm,2,30,790,802,JDL,DL)
+!HoldOn(0.5)
+!TeleportCharacter(Jump2,2000,757)
+!TeleportCharacter(Jump1,828,757)
+!AutoPinFollowers()
+
+/Curse
+!SetGlobal(90,4)
+!SetAnim(Siobhan,UR)
+-Siobhan: What did you find?
+-Verm: A cool hat.
+-Siobhan: Oh! Careful, Sir Verm. An old relic like that might carry all kinds of curses.
+-Verm: Oh, please. I'm cursed out.|One more couldn't hurt.
+!MoveNPCToLayer(Verm,ZSorted)
+!NormalJump(Verm,2,30,790,802,JDL,DL)
+!HoldOn(0.8)
+!TeleportCharacter(Jump2,2000,757)
+!TeleportCharacter(Jump1,828,757)
+!AutoPinFollowers(1)
+-Siobhan: If you say so...
+
+/FoundSeeds
+!SetGlobal(90,3)
+-Info: You found a note.
+-Info: "So you're a dirty thief who's taking my treasure. HA!||Well go on, take it!||From one plunderer to another!
+!HoldOn(0.3)
+!PlaySound(ItemFound)
+-Info: You also found a Hoo Helm.
+End scene

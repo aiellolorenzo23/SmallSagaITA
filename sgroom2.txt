@@ -1,0 +1,191 @@
+/Intro
+
+/Theo
+!CheckGlobal(18,40,PostDuke)
+!CheckGlobal(83,1,TheoLate1)
+!CheckGlobal(83,2,TheoLate2)
+!CheckGlobal(83,3,TheoDone1)
+!SetGlobal(83,1)
+-Theo: Man...
+-Theo: Making armour is my passion.
+-Theo: But all day, every day, all I do is make and fix weaponry for the Duke's army. 
+-Theo: It feels a bit, I dunno, wrong, y'know?
+*Eat: It's a living.
+*NoEat: You should quit.
+
+/TheoLate1
+-Theo: Here to buy something?
+*BuyYes: Maybe.
+*BuyNo: Not now.
+
+/TheoLate2
+-Theo: Here to buy something? This fine plate armour is only 20 seeds.
+*BuyBuyYes: I'll take it.
+*BuyNo: Not now.
+
+/Eat
+!CheckGlobal(99,3,TheoBruce)
+-Verm: It sucks, but you've got to put food on the table, right?
+-Theo: Yeah, I suppose...
+>TheoContinue
+
+/NoEat
+!CheckGlobal(99,3,TheoBruce2)
+-Verm: You should just quit.
+-Theo: Ah, I wish it were that simple. I got bills to pay and mouths to feed.
+>TheoContinue
+
+/TheoBruce
+-Bruce: Sometimes we have to bury our pride tae put food on the table, aye?
+-Theo: Yeah, I suppose...
+>TheoContinue
+
+/TheoBruce2
+-Bruce: If it bothers ye, just quit.
+-Theo: Ah, I wish it were that simple. I got bills to pay and mouths to feed.
+>TheoContinue
+
+/TheoContinue
+-Theo: Oh yeah, did you want to buy something?
+*BuyYes: Maybe.
+*BuyNo: Not now.
+
+/BuyYes
+!CheckGlobal(99,3,TheoBruce3)
+!SetGlobal(83,2)
+>BuyYesVerm
+
+/BuyYesVerm
+-Verm: Maybe. Got any good armour?
+-Theo: Only the best.
+-Theo: I have some freshly-forged plate armour in your size.
+-Verm: Oh yeah? Vambraces and sabatons too, or just the basic cuirass?
+-Theo: Cuirass, but it comes with steel pauldrons and a fauld for ample protection.
+-Verm: Besagews?
+-Theo: Spaulders. Attached to the rerebrace.
+!HoldOn(0.6)
+-Theo: Oh man. I rarely get to geek out about this stuff. You know your armour.
+-Verm: I also know high quality work doesn't come cheap. What's the damage?
+!ShowMoney(1)
+-Theo: Twenty seeds. What do you think?
+*BuyBuyYes: I'll take it.
+*BuyNo: Not now.
+
+/TheoBruce3
+!SetGlobal(83,2)
+-Bruce: Maybe. What ye got?
+-Theo: I have some freshly-forged plate armour in your size.
+-Bruce: Oh?
+-Theo: Just the basic cuirass with steel pauldrons and fauld, you understand.
+-Theo: Spaulders are built-in. Sabatons and vambraces not included.
+!HoldOn(1.3)
+-Bruce: Oh, aye. Those are words.
+-Theo: Ah, sorry. I got carried away.
+!ShowMoney(1)
+-Theo: I'll make it simple: twenty seeds for this high quality armour.
+*BuyBuyYes: I'll take it.
+*BuyNo: Not now.
+
+/BuyBuyYes
+!ShowMoney(0)
+!MoneyCheck(20,NotEnough)
+!MoneyLoss(20)
+!ReceiveItem(63)
+!SetGlobal(83,3)
+!CheckGlobal(99,3,TheoBruceBuyDone)
+-Verm: I'll take it.
+>BuyConverge
+
+/TheoBruceBuyDone
+-Bruce: Alright, go on then.
+>BuyConverge
+
+/BuyConverge
+!PlaySound(ItemFound)
+-InfoBig: You received a set of Plate Armour.
+-Theo: Put that on, and you'll be ready to take on the world.
+!CheckGlobal(99,3,TheoBruceBought)
+-Verm: I intend to.
+
+/TheoDone1
+-Theo: Have you seen the armour|on Blademaster Lamia?
+-Theo: That's my finest piece.|It's unbreakable. No weaknesses.
+
+/TheoBruceBought
+-Bruce: Come tae think of it, why did I buy this?
+-Bruce: I've already got an outfit for the performance.
+-Theo: No refunds.|All sales are final.
+
+/NotEnough
+!CheckGlobal(99,3,TheoBruceNE)
+-Verm: That's out of my budget.
+-Theo: Understandable. Come back when you have more seeds.
+
+/TheoBruceNE
+-Bruce: I cannae afford that.
+-Theo: Then I cannae- I mean, then I can't give it to you. Sorry.
+
+/BuyNo
+!ShowMoney(0)
+!CheckGlobal(99,3,TheoBruce4)
+-Verm: Maybe later.
+-Theo: Alrighty. Come back soon.
+
+/TheoBruce4
+-Bruce: Not today, thanks.
+-Theo: Alrighty. Come back soon.
+
+/PostDuke
+!CheckGlobal(99,2,Sio)
+!CheckGlobal(83,3,PostDukeCelebrate)
+!CheckGlobal(83,4,PostDukeCelebrate2)
+!CheckGlobal(83,5,TheoLate1)
+!CheckGlobal(83,6,TheoLate2)
+-Verm: I helped overthrow the Duke.
+-Theo: I heard! It's great news.
+-Theo: I'm so relieved I don't have to keep churning out weapons for that war-mongerer.
+-Verm: Yeah. So can I get a discount?
+!HoldOn(1)
+-Theo: No.
+!HoldOn(1)
+!CheckGlobal(83,2,WeirdSit)
+!SetGlobal(83,5)
+-Theo: I can still show you some stock, if you like.
+*BuyYesLate: Maybe.
+*BuyNo: Not now.
+
+/BuyYesLate
+!SetGlobal(83,6)
+>BuyYesVerm
+
+/Sio
+-Theo: Anything in particular you're after?
+-Siobhan: Um. No, I'm just browsing, thank you.
+
+/WeirdSit
+!SetGlobal(83,6)
+!ShowMoney(1)
+-Theo: So... The plate armour is still twenty seeds.|What do you think?
+*BuyBuyYes: I'll take it.
+*BuyNo: Not now.
+
+
+/PostDukeCelebrate
+!SetGlobal(83,4)
+-Verm: I helped overthrow the Duke.
+-Theo: I heard! It's great news.
+-Theo: I'm so relieved I don't have to keep churning out weapons for that warmonger.
+-Verm: Yeah. So can I get a freebie as thanks?
+!HoldOn(1)
+-Theo:  No. 
+!HoldOn(1)
+-Verm: Worth a shot.
+
+/PostDukeCelebrate2
+-Theo: I might pivot away from weapons sales. The statue trade is booming. Maybe I should get in on that.
+
+/Armour
+-InfoBig: It's an enormous set of plate armour. If you wore this, you wouldn't even be able to walk.
+
+/Shields
+-InfoBig: These shields have been painted with coats of arms, emblems of noble families.

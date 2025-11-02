@@ -1,0 +1,19 @@
+/Intro
+
+/Rylee
+!CheckGlobal(10,2,Thumping2)
+!CheckGlobal(5,7,Thumping)
+!CheckGlobal(5,8,Thumping)
+!CheckGlobal(5,9,Thumping)
+-Rylee: I can't play. My mam says it's not safe out.
+
+/Thumping
+-Rylee: Is it true you and Siobhan gave Tiger a thumping?
+-Rylee: That's wild. Maybe it's safe to go play now.
+
+/Thumping2
+-Rylee: Tiger's eased off, but|mam still won't let me play.
+-Rylee: "The gods will smite you,"|she says.
+
+/FoundSeeds
+-Info: You found a roll of bandages.

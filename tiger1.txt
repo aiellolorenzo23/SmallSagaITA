@@ -1,0 +1,38 @@
+/BattleVeryStart
+Blank
+/BattleStart
+-Verm: Who said anything about running?
+!DrawWeapon(Verm)
+~HuntersLoop
+!HoldOn(1)
+!TitanModeToggle()
+!ForceDownBub()
+-Tiger: WHAT'S THIS?
+-Tiger: A MOUSE WIELDING|A GOD WEAPON?
+-Tiger: NOW I'VE SEEN IT ALL.
+-Tiger: VERY WELL. SHOW ME|YOUR STRENGTH. AMUSE ME.
+!ForceDownBub()
+!TitanModeToggle()
+!LetsFight()
+/DamageTrigger
+!TitanModeToggle()
+!ForceDownBub()
+-Tiger: IMPRESSIVE. BUT IT TAKES MORE|THAN THAT TO HURT A TIGER!
+!ForceDownBub()
+!TitanModeToggle()
+!HoldOn(0.5)
+!SetAnim(Tiger,Prep)
+!HoldOn(0.5)
+~Stop
+!EndBattle()
+/VermRage
+-Verm: You're no predator! You're nothing but an overfed fuzz-ball!
+!SetAnim(Verm,Idle)
+!TitanModeToggle()
+!ForceDownBub()
+-Tiger: BOLD WORDS FOR|A MORNING SNACK.
+!ForceDownBub()
+!TitanModeToggle()
+!NewTurn()
+/End
+

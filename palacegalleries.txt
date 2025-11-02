@@ -1,0 +1,41 @@
+/Intro
+
+/Treasure1
+-Info: You found an Ancient Thimble.
+-Val: NoOoOo, don't steal that!|It's a pRiCeLeSs ArTiFaCt!
+-Val: Ha ha, just kidding.|I don't give a shit.
+-Val: S'all yours, little guy.
+
+/Painting1
+-InfoBig: - Brian Brianson -|Seasoned traveller and trinket connoisseur.
+
+/Painting2
+-InfoBig: - Sir Theo of Ringsalot -|Knight of the Order of the Silver Tomb.
+
+/Painting3
+-InfoBig: - Sir Oscar the Mighty -|Small in stature, unyielding in spirit.
+
+/Painting4
+-InfoBig: - Cornflower the Childish -|Les couinements heureux de l'escarpolette
+
+
+/Val
+!CheckGlobal(99,2,Val2)
+-Val: I'm supposed to be enlisting people for the Guard, but nuts to that.
+-Val: Job's cursed. Come sign up if you want to give and/or receive some fresh trauma.
+
+/Val2
+-Val: I saw a noble ferret messing with a painting earlier.
+!CheckItem(81,V3)
+-Val: They don't pay me enough to stop that kind of thing.
+-Val: You wanna stroke an impressionist masterpiece? Be my guest.
+
+/V3
+-Siobhan: Ah, did they leave something behind the frame? A key, perhaps?
+-Val: Oh, nice. Must be part of one of 'em alternate reality games.|Have fun.
+
+
+/OldVal
+-Val: Everyone's like, "oOh, AqUiLa'S uP tO sOmEtHiNg".
+-Val: Yeah, no shit.|The guy's got more red flags|than a royal parade.
+-Val: Me? I'm keeping an eye on the Loremaster. It's always the quiet ones you gotta watch out for.

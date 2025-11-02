@@ -1,0 +1,108 @@
+/Intro
+!AutoPinFollowers()
+!Walk(Verm,UR,1.3)
+!HoldOn(2)
+~Stop
+!OverworldCameraPan(1098,439,1,1)
+!HoldOn(2)
+!SetGlobal(50,24)
+!ShoutMode()
+-Alex: SQUAD!
+!HoldOn(0.3)
+!ShoutMode()
+-Alex: ATTEN... SHUN!
+!Attention()
+!UnpinFollowers()
+!HoldOn(2)
+!TeleportCharacter(Verm,836,803)
+!TeleportCharacter(Siobhan,795,785)
+!TeleportCharacter(Gwen,766,770)
+!TeleportCharacter(Bruce,730,752)
+!TeleportCharacter(Stilton,690,742)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,UR)
+!SetAnim(Gwen,UR)
+!SetAnim(Bruce,UR)
+!SetAnim(Bree,UR)
+!SetAnim(Stilton,UR)
+-Alex: The portcullis is down|and triple locked.
+-Alex: Nobody is breaking into the palace tonight.
+!HoldOn(0.3)
+-Alex: We're going to win this battle!
+-Brandon: Aye!
+-Alex: We're going to beat these upstarting little miscreants bloody!
+-Victoria: A-aye?
+-Alex: And I'm gonna snatch my|Blademaster title back from|that stupid blonde twink!
+!HoldOn(1)
+-Jen: Um.
+!HoldOn(1)
+!OverworldCameraPan(648,739,1,1)
+!HoldOn(1.5)
+-Bruce: Eesh, that's a lot of guards.
+-Bruce: Think we can take 'em all?
+-Gwen: We've fought worse odds.
+-Gwen: But with only an hour until the thirteenth hour...
+-Siobhan: That's not enough time.|We need a new strategy.
+!HoldOn(0.6)
+!Nani(Bree,!)
+!HoldOn(0.3)
+!SetAnim(Bree,DR)
+!HoldOn(0.3)
+-Bree: Stilton.
+!HoldOn(0.1)
+!SetAnim(Stilton,UL)
+!HoldOn(0.1)
+-Bree: I'll keep the bastards distracted.
+-Bree: You show the wild ones that secret you found.
+-Stilton: You got it.
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+-Verm: Secret?
+-Stilton: Don't get killed|while I'm gone, Bree.
+-Bree: Don't be daft!
+-Bree: I'm a soft cheese by name, but I'm hard by nature.
+-Bree: It'll take the whole Guard and then some to bring me down!
+-Stilton: Right you are.
+!HoldOn(0.1)
+!SetAnim(Stilton,UR)
+!HoldOn(0.1)
+!SetAnim(Stilton,DR)
+!HoldOn(0.3)
+-Stilton: You four. Follow me.
+!HoldOn(0.1)
+!SetAnim(Stilton,DL)
+!HoldOn(0.3)
+!Walk(Stilton,DL,2)
+!HoldOn(1.2)
+!Exit(Stilton)
+!HoldOn(0.3)
+!AutoPinFollowers(1)
+!CameraFollow(1)
+/JustPin
+!AutoPinFollowers()
+/Bree
+-Bree: Don't worry about me.|Go follow Stilton.
+
+/BreeTriggerR
+>BreeTriggerL
+
+/BreeTriggerL
+-Siobhan: Sir Verm, no!|Let's follow Stilton.
+!Walk(Verm,DL,0.4)
+!HoldOn(0.5)
+
+/Rosaline
+-Rosaline: Alex has completely lost it.
+-Rosaline: I'll handle him.
+
+/Nemain
+-Nemain: We're capable fighters.|We're not dying tonight.
+
+/ChatAnton
+-Anton: Go, lapa, go!
+-Anton: We'll meet again soon.|I promise.
+
+/George
+-George: Even when one hundred cachgwn band together, they're still godless cachgwn.

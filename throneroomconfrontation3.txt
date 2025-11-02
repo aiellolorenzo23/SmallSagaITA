@@ -1,0 +1,162 @@
+/Intro
+
+/Threshold
+~LeoConfrontLoop
+!HoldOn(1)
+!OverworldCameraPan(1231,343,0.5,1)
+!SetGlobal(50,40)
+!HoldOn(3.6)
+-Leo: Vagabond. So it is you.
+!TeleportCharacter(Verm,868,580)
+!HoldOn(1)
+!SetAnim(Verm,UR)
+!NormalJump(Leo,1.5,50,991,530,DLJump,DL)
+!OverworldCameraPan(941,491,0.5,1)
+!HoldOn(2)
+-Verm: Blademaster Leo...
+-Verm: I'm here to talk with the King.
+-Leo: You missed your chance for that, I'm afraid.
+-Leo: Not that His Majesty was open to conversation.
+!HoldOn(0.7)
+!SetAnim(Verm,U)
+!HoldOn(0.6)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+-Verm: I don't know what happened here...
+
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: But I don't particularly care.
+-Verm: There's a route to the surface from this room, right?
+-Verm: The Yellow God of Death is coming. Let me use the passage,|and I'll stop Him.
+-Leo: A mouse like you cannot kill a god. You lack the weight.
+-Verm: But it's worth a shot, right?
+-Verm: I might actually|be able to do it.
+!HoldOn(0.8)
+-Leo: Honestly?
+!HoldOn(0.5)
+-Leo: Yes, you might.
+-Leo: And that possibility|terrifies me.
+-Leo: What will happen when you|do the impossible and|slay an immortal god?
+-Leo: Will the citizens deify you?|Will they crown you "Verm, the mouse who stands above gods"?
+-Leo: I dread to think what you would do with such power.
+*GodYes: You're right.
+*GodNo: You're wrong.
+
+/GodNo
+-Verm: Hold on. I don't have any intention of ruling anyone.
+!HoldOn(0.9)
+-Leo: So you would leave this country godless and kingless?
+-Verm: Would that be wrong?
+!HoldOn(1.2)
+-Leo: What is a Kingdom without a King?
+-Leo: I honestly don't know.|I can't even conceive|of such a place.
+!HoldOn(0.4)
+-Leo: This palace of blood and bone is grotesque.
+-Leo: But beyond it lies the unknown.
+-Leo: And that is where the|true horrors lie.
+>NoFurther
+/GodYes
+-Verm: You have a point.|I wouldn't mind having some power.
+!HoldOn(0.4)
+-Verm: But honestly, I have no idea what I'd do with it. I haven't thought that far ahead.
+-Leo: Tsk. Of course.|I suspected as much.
+-Leo: A mouse like you only focuses on the moment.
+-Leo: So let me speculate what will happen if you were crowned.
+-Leo: You will continue your|petty vengeance quest.
+-Leo: You will declare war|against all gods.
+-Leo: When the gods retaliate - and they will retaliate - it won't just be Murida that falls.
+-Leo: It will be the total|eradication of Rodentia.
+>NoFurther
+/NoFurther
+!HoldOn(1.2)
+-Leo: But you don't care, do you?
+-Leo: You are the kind of mouse who would see the Kingdom in ruins to serve your quest.
+~Stop
+!HoldOn(1)
+-Leo: That is why you|will go no further.
+!GoToBattle(Leo2)
+
+
+/PostLeo2
+!SetGlobal(50,45)
+!HoldOn(3)
+-Verm: You're bleeding heavily, Blademaster.
+!HoldOn(0.7)
+-Leo: Death doesn't frighten me.
+-Leo: But the fate of the kingdom does.
+!HoldOn(0.3)
+-Leo: The door to your left leads|to the godly halls above.
+!SetAnimEnd(Leo,Alive)
+-Leo: But promise me, vagabond...
+!HoldOn(0.2)
+!SetAnimEnd(Leo,Dead1)
+!HoldOn(0.2)
+!SetAnimEnd(Leo,Dead2)
+!HoldOn(0.2)
+-Leo: Promise... me...
+!HoldOn(0.5)
+
+
+/PostLeo1
+!HoldOn(3)
+!SetGlobal(50,45)
+-Verm: You're out of swords, Blademaster.
+!HoldOn(1)
+-Leo: Vagabond...
+-Leo: You had a dozen opportunities|to slay me in that duel.
+-Leo: But you held back.
+-Leo: Why? Was your intent|to humiliate me?
+-Leo: Or is this your twisted|notion of chivalry?
+!HoldOn(1)
+-Verm: Maybe I should|finish you off.|It's what you deserve.
+!HoldOn(0.5)
+-Verm: This Kingdom is rotten.
+-Verm: The royals and barons and dukes and nobles are all scum.
+-Verm: The Knights are all scum. You included.
+-Verm: The Yellow God is knocking, and you're all busy protecting your empty palace.
+-Verm: But... the rot runs deeper than you, or the King, or any titan or God.
+-Verm: I know that killing you won't remove the rot.
+-Verm: So I thought I'd break|your tools instead.
+-Verm: What's a Blademaster|without a blade?
+-Verm: Just another mouse.
+!HoldOn(0.8)
+!SetAnimEnd(Leo,Dead1)
+!HoldOn(0.1)
+!SetAnimEnd(Leo,Dead2)
+!HoldOn(1)
+-Leo: Gods.
+!HoldOn(0.7)
+-Leo: You are hopelessly naive.
+!HoldOn(0.4)
+-Leo: You actually believe that you can cut the golden hero from the corrupted knights, the individual from the institution?
+-Leo: Impossible. Once the fabric is woven, no amount of needlework can return you the original thread.
+!HoldOn(1)
+-Leo: Having said that...
+!HoldOn(0.4)
+!SetAnimEnd(Leo,Dead1)
+!HoldOn(0.1)
+!SetAnimEnd(Leo,Alive)
+!HoldOn(0.7)
+-Leo: You are astute and sincere.|I feel the weight of your words.
+-Leo: Perhaps there is some slither of hope for this godless, kingless country.
+!SetAnim(Leo,Alive)
+-Leo: Perhaps a devil can succeed|where a golden lion cannot.
+!HoldOn(2)
+-Leo: The door to your left leads to the godly halls above.
+!HoldOn(1)
+-Leo: Godspeed, vagabond.
+
+/Leo
+-Leo: I'll live.|Go, vagabond.
+
+/GoBack
+-Verm: There's no going back now.
+!Walk(Verm,UR,0.5)
+!HoldOn(0.5)

@@ -1,0 +1,353 @@
+/Intro
+~TuningLoop
+
+/Hassan
+!CheckGlobal(99,2,HassanSio)
+!CheckGlobal(43,1,HassanDone)
+-Hassan: What'll it be, friend?
+-Verm: What do you recommend?
+-Hassan: How about the house special?
+!ShowMoney(1)
+-Hassan: 8 seeds for a pint. It'll put hair on your tail.
+*DrinkYes: Aww yis
+*DrinkNo: No thanks
+/DrinkYes
+!ShowMoney(0)
+!MoneyCheck(8,NotEnough)
+!SetGlobal(43,1)
+!MoneyLoss(8)
+-Verm: Sounds good. I'll take one.
+!ReceiveItem(20)
+!PlaySound(ItemFound)
+-Info: You received a pint of Special Grog.
+-Hassan: Enjoy.
+-Hassan: But don't go trying to ride a god carriage while inebriated now, you hear me?
+
+/HassanSio
+-Hassan: What'll it be, friend?
+-Siobhan: Oh, uh. It's a little early in the day for me.
+-Hassan: Hm.
+
+/DrinkNo
+!ShowMoney(0)
+-Verm: Not right now, thanks.
+
+/HassanDone
+-Hassan: Make no trouble. The Twisted Tails is an establishment for everyone.
+
+/NotEnough
+-Verm: I can't afford that.
+-Hassan: Shame. I don't serve halves.
+
+/Zipi
+!CheckGlobal(99,2,ZipiSio)
+!CheckGlobal(10,2,Zipi2)
+-Zipi: What's the rush?|Stay around a while.
+
+/Zipi2
+-Zipi: Rush, rush, rush. Everyone's always rushing towards their destinations.
+-Zipi: You gotta slow down and savour the journey, right?
+
+/ZipiSio
+-Zipi: Nice hat.
+-Siobhan: Thanks! Nice hair.
+-Zipi: Oh, this? I grew it myself.
+
+/Emma
+-Emma: I'm hustling this sucker.
+/Niall
+-Niall: I think I'm being hustled.
+
+/Kofi
+!CheckGlobal(99,2,KofiSio)
+-Kofi: I take requests. What are you in the mood for?
+*Blessing: A blessing.
+*Fox: A heroic tale.
+*Ditty: Something catchy.
+
+/KofiSio
+-Kofi: I've been wearing my voice out, so no singing today. Doctor's orders.
+-Kofi: Come back tomorrow!
+
+/ChatAnton
+-Anton: I'm waiting for my lapa.|He should be here any moment.
+-Verm: Lapa?
+-Anton: Where I'm from, it means "paw".|But it also means... how to say it... "darling"?
+-Verm: Ah, got it.
+
+/Ditty
+~Stop
+-Kofi: Something catchy? Alright.
+!OverworldCameraPan(320,250,1,1)
+!Walk(Verm,DR,1)
+!HoldOn(1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+-Kofi: Hope you're ready, because this little ditty is a real ear wyrm.
+!KofiTime(Song3)
+!CameraFollow(1)
+!HoldOn(1)
+
+/Blessing
+~Stop
+-Kofi: A blessing? Alright.
+!OverworldCameraPan(320,250,1,1)
+!Walk(Verm,DR,1)
+!HoldOn(1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+-Kofi: It's a dangerous world out there. Stay safe, traveller.
+!KofiTime(Song2)
+!CameraFollow(1)
+!HoldOn(1)
+
+/Fox
+~Stop
+-Kofi: A heroic tale? Alright.
+!OverworldCameraPan(320,250,1,1)
+!Walk(Verm,DR,1)
+!HoldOn(1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+-Kofi: This is a tale of valour.
+-Kofi: It's of courage...|It's of chivalry...
+!KofiTime(Song1)
+!CameraFollow(1)
+!HoldOn(1)
+
+/KofiPlaying
+-InfoBig: The bard is lost in song.
+
+/Knife
+-InfoBig: You recognise this as knife-darts, the most dangerous game.
+
+/EndGame
+~TuningLoop
+!HoldOn(2)
+-Bruce: ...But ye two had fun, right?
+-Verm: It was fine.
+-Gwen: Sure, Verm's a gentlemouse.
+-Gwen: But I'm just saying, you're the world's worst matchmaker, Bruce.
+-Bruce: Sheesh, cannae blame a guy for trying...
+!OverworldCameraPan(570,333,1,1)
+!PlaySound(MuriDoor)
+!HoldOn(0.4)
+!TeleportCharacter(Siobhan,310,500)
+!Enter(Siobhan)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.2)
+!Walk(Siobhan,UR,1.3)
+!SetGlobal(50,1)
+!SetGlobal(32,50)
+!HoldOn(1)
+!SetAnim(Verm,DL)
+!SetAnim(Gwen,L)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!SetAnim(Bruce,DL)
+!HoldOn(0.5)
+-Bruce: Oh hey, it's Siobhan!
+-Gwen: How'd it go?|You look a little shaken.
+-Siobhan: Um, well...
+!HoldOn(0.2)
+!NextRoom(ToBlack)
+!HoldOn(2)
+!TeleportCharacter(Siobhan,520,380)
+!SetAnim(Verm,D)
+!SetAnim(Gwen,UL)
+!SetAnim(Bruce,DR)
+!OverworldCameraSnap(580,270)
+!NextRoom(FromBlack)
+!HoldOn(1)
+-Siobhan: ...So, that's the whole story.
+-Siobhan: I think Aquila's planning on launching Excalibur no matter what.
+-Siobhan: And when that happens, thousands of rodents will die.
+!HoldOn(1)
+-Verm: Excalibur...
+-Bruce: I'd heard the whispers, but I didnae think such a terrible weapon actually existed.
+-Bruce: And right above our noses, no less.
+!HoldOn(0.6)
+-Verm: Could it really kill a god?
+!HoldOn(0.3)
+-Bruce: Does it matter?|If it's like Siobhan says, it'll take out the city with it.
+-Gwen: Right. This just complicates things.
+-Gwen: Now we have to worry about both the Yellow God and an absurd weapon of mass destruction.
+-Gwen: Shit. What a doomerist prick|this Aquila is.
+!HoldOn(0.5)
+-Bruce: Something doesn't add up.
+-Bruce: If the King knows that the Yellow God is coming, and he has a banger of a solution ready tae go...
+-Bruce: Why doesn't he just evacuate the city? Tell everyone tae run and hide?
+-Bruce: That would cause the smallest|loss of life, no?
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Bree:  HA! 
+!OverworldCameraPan(665,270,3,1)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!SetAnim(Gwen,U)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!SetAnim(Verm,R)
+!HoldOn(0.3)
+-Bree: You're having a laugh.
+-Bree: The King don't give a flying fox about us common folk.
+-Bree: If we all died to the Yellow God, you know what he'd say? "Good riddance!"
+-Verm: Mate, do you mind?|This is a private conversation.
+!HoldOn(0.1)
+!SetAnim(Stilton,DL)
+!HoldOn(0.1)
+-Stilton: Sorry.
+-Bree: Oi, oi. Listen.
+-Bree: We're on the same side here.
+-Bree: We may not know much about|this Excalibur malarkey.
+-Bree: But we do know that something must be done about the Yellow God.
+-Stilton: We've been doing our homework! We know the damage coming our way!
+-Bree: Yeah! So we're planning a protest.
+-Stilton: We got hundreds of|allies in Gutter End!
+-Bree: Hundreds! And we're gonna march on the palace gates, and have a word with His Majesty himself!
+-Stilton: We've got a list of demands.|A proper manifesto!
+-Verm: What good is this to us?
+-Siobhan: Wait, Verm. This could work.
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!SetAnim(Bruce,DR)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+-Siobhan: To reach Excalibur, we need to go through the palace.
+-Siobhan: We can't just waltz in.|We'd be arrested for sure.
+-Siobhan: But if there's a protest, that would distract the guards.
+-Siobhan: It might give us a window|of opportunity to reach the weapon|and destroy it.
+-Bruce: Aye, but how do we reach|the Yellow God from there?
+!HoldOn(0.4)
+-Stilton: Y'know... rumour is there are hidden tunnels all over the palace.
+-Stilton: I bet one of 'em takes you to where you need to be.
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+-Verm: Hidden tunnels?|Ghosts and muswolves...
+-Siobhan: It's possible, Sir Verm!
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+-Siobhan: I've overheard whispers of passages the royals can use for emergency escapes.
+-Siobhan: Perhaps one goes straight|to the godly hall above our heads.
+!HoldOn(1)
+-Gwen: Okay. So.
+-Gwen: Assuming we gain access|to the palace.
+-Gwen: And assuming we destroy Excalibur.
+-Gwen: And assuming we find a secret tunnel.
+-Gwen: Then it's just the simple matter of killing a God of Death.
+-Gwen: Easy-peasy. Right, Verm?
+!HoldOn(1)
+-Verm: Diversions and secret passages, kings and gods...
+-Verm: This plan is even worse than the one for Sky Garden.
+!HoldOn(1)
+-Verm: Let's do it.
+-Bruce: Of course the mad lad's on-board!
+!HoldOn(1)
+-Siobhan: There's still time until the night of thirteen chimes.
+-Siobhan: We should make sure we have all our affairs in order before the big battle.
+-Gwen: An inventory check would|be a sensible idea.
+-Bruce: Aye, and I should probably drop by Sky Garden. See how Anton's doing.
+!HoldOn(0.3)
+-Bree: Well. We can wait.
+-Bree: Go do what you need to do, then come back and speak to me whenever you're ready.
+!CameraFollow(1)
+
+/ChatSio
+!CheckGlobal(76,9,ChatSioDone)
+-Siobhan: Recently, I've been thinking|about my home.
+-Siobhan: Should I visit?
+
+/ChatSioDone
+-Siobhan: The King...|Excalibur...|The Yellow God...
+-Siobhan: We have a challenging road ahead.|But I know we can do this.|We have to.
+
+/ChatGwen
+!CheckGlobal(30,25,ChatGwenDone)
+-Gwen: I've got this feeling,|this itch, like.
+-Gwen: It's as if I have unfinished|business somewhere.
+
+/ChatGwenDone
+-Gwen: Once you're sorted,|go talk to Bree.
+-Gwen: But no rush, like. There's a lot riding on this plan.
+
+/ChatBruce
+!CheckGlobal(74,35,ChatBruceDone)
+-Bruce: I better go back to Sky Garden soon. Or Anton will have words.
+
+/ChatBruceDone
+-Bruce: My flute is tuned, and my kilt is clean.
+-Bruce: I'm ready. But I'm not sure what I'm ready for, exactly.
+
+/Bree
+!CheckGlobal(10,1,BreeEarly)
+-Bree: Are you ready?
+*ReadyOne: I'm ready.
+*NotYetReady: Not yet.
+
+/NotYetReady
+-Verm: Not yet.
+-Bree: Alright. Come back|when you're done.
+
+/ReadyOne
+-Verm: I'm ready.
+-Bree: Are you sure? You've said your prayers at a statue and everything?
+-Bree: Because this is it.|Our point of no return.
+-Bree: Once we do this,|there's no going back.
+*ReadyTwo: I'm really ready.
+*NotYetReady2: Not yet.
+
+/ReadyTwo
+!SetGlobal(50,2)
+-Verm: I'm sure.
+-Bree: Alright. We only get one shot at this, so let's run over the plan one more time...
+!NextRoom(PalaceThroneroom,3)
+
+/NotYetReady2
+-Verm: Actually, I've got a few more things to do first.
+-Bree: I had a feeling.|Go on then.
+
+/Stilton
+!CheckGlobal(10,1,StiltonEarly)
+-Stilton: I'm kind of nervous.|But we've got this, right?
+
+/StiltonEarly
+-Stilton: Good luck finding that Cailleach.
+
+/BreeEarly
+-Bree: Sorry for calling your brother a fleabag.|No hard feelings, yeah?
+
+/PutBack
+
+/Manifesto
+-InfoBig: You see a pamphlet titled, "What We Want".
+*ReadIt1: Read it.
+*PutBack: Put it back.
+
+/ReadIt1
+-Book1: - We want measures to protect us from the Yellow God.
+-Book2: - We demand social programs 
+

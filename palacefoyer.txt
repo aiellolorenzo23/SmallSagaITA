@@ -1,0 +1,203 @@
+/Intro
+
+/Painting
+-InfoBig: "King James's Lament"
+-InfoBig: "In the wake of the Great Fire, the first King of Murida surveys his ashen kingdom."
+
+/Door
+!CheckGlobal(50,32,WrongWay)
+!CheckGlobal(10,3,ReallyGo)
+!CheckGlobal(50,35,HereWeGo)
+!HoldOn(0.2)
+!SetAnim(Diego,Turn)
+!HoldOn(0.3)
+!SetAnim(Diego,Hammer)
+!PlaySound(Eyecatch)
+!HoldOn(1.2)
+!ScreenShake(5,1)
+!PlaySound(HeavyFall)
+!HoldOn(0.2)
+!CheckGlobal(99,2,DoorSiobhan)
+!Nani(Verm,!)
+!NormalJump(Verm,2,20,485,345,Jump,Land)
+!HoldOn(1)
+!SetAnim(Verm,DL)
+!HoldOn(0.3)
+!TitanModeToggle()
+-Diego: TOUCH NOT THE DOOR.
+-Diego: THOU HAST NO BUSINESS|WITH THE ROYAL COURT.
+!TitanModeToggle()
+!SetAnim(Diego,TurnLeft)
+!CheckGlobal(26,3,SetVar)
+
+/WrongWay
+-Siobhan: This is the throneroom...|We should leave that to Verm.
+
+/SetVar
+!SetGlobal(26,9)
+
+/Door2
+!SetAnim(Diego,Turn)
+!HoldOn(0.3)
+!TitanModeToggle()
+-Diego: THOU THINKEST ME|DISTRACTED?
+-Diego: FOOLISH MOUSE.|BEGONE!
+!TitanModeToggle()
+!SetAnim(Diego,TurnLeft)
+
+/HereWeGo
+!NextRoom(PalaceThroneroom,1)
+
+/Diego
+!SetAnim(Diego,Turn)
+!HoldOn(0.3)
+!CheckGlobal(99,2,DiegoSiobhan)
+!TitanModeToggle()
+-Diego: THE HAMMER OF JUSTICE|FALLS HEAVY.
+-Diego: TAKE THY LEAVE, LEST THOU|WISHEST TO BEAR ITS WEIGHT.
+!TitanModeToggle()
+!SetAnim(Diego,TurnLeft)
+!CheckGlobal(26,3,SetVar)
+
+/Steve
+!CheckGlobal(99,2,SteveSiobhan)
+!CheckGlobal(41,1,Booked)
+!CheckGlobal(41,2,RequestAudience)
+-Steve: Sir Diego sure is something.
+-Steve: When I stand guard with him, I feel downright unqualified.
+-Steve: Oh, did you want something?
+*SeeKing: The King...
+*Nevermind: Never mind.
+
+/Nevermind
+-Verm: Never mind.
+
+/SeeKing
+-Verm: Can I see the King?
+-Steve: Yeah, nah. Sorry.
+-Steve: You gotta request a formal audience for that privilege.
+*RequestAudience: Can I do that?
+*ForgetIt: Forget it.
+
+/RequestAudience
+!SetGlobal(41,2)
+-Verm: Okay. Can I request an audience with the King?
+-Steve: Sure thing.
+-Steve: But just so you know, the waiting list is three months long.
+*Alright: Put me down.
+*ForgetIt: Forget it.
+
+/ForgetIt
+-Verm: Oh. Forget that then.
+
+/Alright
+-Verm: Sounds good. Put me down.
+-Steve: Alrighty. Name?
+-Verm: Verm.
+-Steve: Surname?
+-Verm: Uh...
+-Steve: No worries, I know how it is.
+-Steve: I'll just write down "Verm of the Underriver".
+-Steve: Matter of business?
+*GodKilling: God slaying.
+*Religion: Religion.
+
+/GodKilling
+-Verm: God slaying.
+-Steve: Ha ha. Is that the name of your play or comedy set or something?
+-Steve: No, don't tell me. I wanna be surprised.
+>Booked
+
+/Religion
+-Verm: I want to discuss a religious matter.
+-Steve: Okie-dokie. But no proselytising!
+-Steve: Any attempts to convert the King will net you a five hundred seed fine on the spot.
+>Booked
+
+/Booked
+!SetGlobal(41,1)
+-Steve: You're all booked in. Come back in three months.
+-Verm: Fine, I will.
+!CheckGlobal(26,3,SetVar)
+
+/BonusAquila
+-Aquila: Let me through, you thunderous oaf!
+-Aquila: I have urgent matters to discuss with the King!
+
+/BonusDiego
+!TitanModeToggle()
+-Diego: THOU ART DISGRACED,|PLAGUEMASTER.
+-Diego: THOU HAST NO PLACE|UPON THE ROYAL COURT.
+!TitanModeToggle()
+
+/BonusSteve
+-Steve: The Plaguemaster used to be on the King's council.
+-Steve: I don't know exactly why they were booted off, but boy is it fun to speculate.
+
+/ReallyGo
+-InfoBig: Are you sure you want to enter the throneroom?
+*Really: I'm ready.
+*ReallyN: Not yet.
+
+/ReallyY
+!NextRoom(PalaceThroneroom,1)
+
+/ReallyN
+
+/DiegoSiobhan
+!TitanModeToggle()
+-Diego: THOU BEARS THE STENCH|OF THE PLAGUEMASTER'S LAB.
+-Diego: DOST THOU BEAR|THEIR DEPRAVITY TOO?
+!TitanModeToggle()
+!SetAnim(Diego,TurnLeft)
+
+/SteveSiobhan
+!CheckGlobal(33,1,SteveSioDone)
+!SetGlobal(33,1)
+-Steve: You're Siobhan, right?
+-Steve: You used to run with that vagabond fellow?
+-Siobhan: That's me.
+!HoldOn(0.4)
+-Steve: I heard all about the duel.
+-Steve: You're so lucky. Not many people get to see Leo's needlework up close like that.
+!HoldOn(0.4)
+-Steve: But also, uh... I'm sorry.
+!CheckGlobal(41,1,MetVerm)
+-Steve: It must have been rough to lose someone close to you.
+!HoldOn(0.6)
+-Siobhan: Yeah. It's been a lot.
+>MetVerm2
+
+/MetVerm
+-Steve: I briefly met your friend.|He seemed like a good guy.
+!HoldOn(0.6)
+-Siobhan: Yeah. He was.
+>MetVerm2
+
+/MetVerm2
+!HoldOn(0.9)
+-Steve: Sorry.
+-Siobhan: It's alright.
+
+/SteveSioDone
+-Steve: Stay safe out there.
+
+/DoorSiobhan
+!Nani(Siobhan,!)
+!NormalJump(Siobhan,2,25,485,345,JDL,Dead)
+!HoldOn(1.2)
+!NormalJump(Siobhan,2,20,485,345,JDL,DL)
+!HoldOn(0.3)
+!TitanModeToggle()
+-Diego: DO NOT TEST ME,|LITTLE MOLE.
+-Diego: THOU OUGHT TO KNOW|BETTER BY NOW.
+!TitanModeToggle()
+!HoldOn(0.2)
+!SetAnim(Diego,TurnLeft)
+
+/SteveLate
+-Steve: Sorry. I'm a little shaken. But...
+-Steve: I think he's waiting for you.
+
+
+EndScene

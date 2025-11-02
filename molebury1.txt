@@ -1,0 +1,415 @@
+/Idle
+~CranbaileLoop
+
+/Crying
+!Walk(Siobhan,DL,0.4)
+!HoldOn(0.6)
+!SetAnim(Siobhan,Crying)
+!HoldOn(0.3)
+!SetGlobal(5,3)
+-Verm: Let me guess. Your mum told you off for hanging around with strangers.
+!HoldOn(0.4)
+!SetAnim(Verm,DR)
+!HoldOn(0.4)
+!Walk(Verm,DR,0.3)
+!HoldOn(0.4)
+-Verm: Wait, are you crying?
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.3)
+-Siobhan:  No! 
+!HoldOn(0.7)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.4)
+-Verm: I'm not good with|this kind of thing...
+!HoldOn(0.7)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.8)
+-Siobhan: Mammy's so damn stuck-up.
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+-Siobhan: Ever since da died, she's been obsessed with following the Old Way to the letter.
+-Siobhan: No god tools, no|god interference at all.
+-Siobhan: But what good's that doing us?
+-Siobhan: How does cowering in a burrow help anyone when Tiger's on the prowl?
+*IGetIt: I get it.
+*Whatevs: Whatever.
+
+/IGetIt
+-Verm: I get it.
+-Verm: Most rodents would rather hide away than face real issues head-on.
+-Verm: But you seem like a smart kid. I'm sure you'll make it through this.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.2)
+-Siobhan: Wait.
+-Siobhan: Before you go, can I show you|something? It'll only take a minute.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+-Verm: ...One minute?
+-Siobhan: Yes. Just something in the library.
+-Verm: Alright. Lead the way.
+>SioWalk
+
+/Whatevs
+-Verm: Whatever. Mole problems are mole problems. I'm out of here.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.2)
+-Siobhan: Wait.
+-Siobhan: Before you go, can I show you|something? It'll only take a minute.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+-Verm: ...One minute?
+-Siobhan: Yes. Just something in the library.
+-Verm: Fine, you have exactly one minute. Lead the way.
+>SioWalk
+
+/SioWalk
+!Walk(Siobhan,DL,0.8)
+!HoldOn(0.8)
+!Walk(Siobhan,L,0.4)
+!HoldOn(0.4)
+!Walk(Siobhan,UL,2.6)
+!HoldOn(2.7)
+!Exit(Siobhan)
+
+/LiftDone
+~CranbaileLoop
+!CheckGlobal(76,3,SioLate1)
+!CheckGlobal(5,5,IntroDone)
+!CheckGlobal(5,7,IntroDoneWPin)
+!CheckGlobal(5,8,IntroDone)
+!CheckGlobal(5,9,IntroDone)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(1)
+!BigTitle(Cranbaile,Their burrows are deep. Their convictions@ deeper.)
+!HoldOn(1.8)
+-Verm: This is Cranbaile?|The "Sanctuary of Knowledge"?
+!SetGlobal(5,1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+-Siobhan: It is! Welcome, welcome.
+-Siobhan: I'm Siobhan, daughter of Lady Gilda. She's the head of the village.
+-Siobhan: Oh, you should come meet her!
+-Siobhan: Mammy doesn't normally like visitors, but you're something special!
+-Verm: Fine, fine. I have a question for her anyway. Lead the way.
+!SetNPCFlag(Siobhan,ReadyToGo)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!Walk(Siobhan,UR,1.4)
+!HoldOn(1.4)
+!Walk(Siobhan,R,0.4)
+!HoldOn(0.4)
+!Walk(Siobhan,DR,2.3)
+!HoldOn(2.4)
+
+!TeleportCharacter(Siobhan,1009,549)
+!SetAnim(Siobhan,DL)
+
+/ReadyToGo
+-Siobhan: This is the Council Room.|Ready to go in?
+
+/IntroDone
+/IntroDoneWPin
+!AutoPinFollowers(1)
+/LiftTouch
+!CheckGlobal(5,5,LiftTouch2)
+!CheckGlobal(5,8,LiftTouch2)
+!CheckGlobal(5,9,LiftTouch2)
+!CheckGlobal(5,7,LiftTouch2)
+-Verm: I should probably see what that mole wanted first.
+
+/LiftTouch2
+-Info: Return to the surface?
+*LiftUp: Let's go.
+*NoLiftUp: Not yet...
+/LiftUp
+!LiftGoUp()
+/NoLiftUp
+
+/Tobin
+!CheckGlobal(44,1,SaveTime)
+-InfoBig: It's a tin statue of a mole dressed in humble robes.
+-InfoBig: The plaque reads:||"A rodent's life is short. A written story is eternal."||- Loremaster Tobin, founder of Cranbaile library.
+!SetGlobal(44,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Loremaster Tobin studies quietly.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Cranbaile,Village centre)
+-Info: Your game has been saved.
+/SaveNo
+
+/FoundSeeds
+-Info: You found 2 seeds behind the rock.
+
+/DoThis
+-Siobhan: I'm... I'm ready. Let's do this.
+
+/Charlie
+!CheckGlobal(10,2,Charlie2)
+!CheckGlobal(5,7,Bleh2)
+!CheckGlobal(5,8,Bleh2)
+!CheckGlobal(5,9,Bleh2)
+-Charlie: The crown is happy to take our seed for taxes. But where's their support when we need it, eh?
+
+/Bleh2
+-Charlie: Heading to Murida, are ya? If y'see the young King, give him a middle finger from me.
+
+/Charlie2
+-Charlie: You've been to Murida, have ya? I hope ya spat in the King's face.
+
+/Correen
+!CheckGlobal(10,2,Correen3)
+!CheckGlobal(5,7,Correen2)
+!CheckGlobal(5,8,Correen2)
+!CheckGlobal(5,9,Correen2)
+-Correen: That old Tiger's a right piece o' work.
+-Correen: Can't be doing anything when he's on the prowl.
+
+/Correen2
+-Correen: You gave Tiger a thrashing?
+-Correen: The old Lady won't be happy, but good on ya, lad.
+
+/Correen3
+-Correen: Tiger's eased off since you gave him a thrashing.
+-Correen: It's gotten real|peaceful around here.
+
+/SioLate1
+!SetGlobal(76,4)
+!HoldOn(0.5)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.5)
+-Siobhan: Cranbaile...
+!HoldOn(0.3)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.3)
+-Verm: The thingy we want is in your little treasure trove, right?
+-Siobhan: Right! I'll lead the way.
+!Walk(Siobhan,UR,4)
+!HoldOn(3)
+!Exit(Siobhan)
+!HoldOn(0.5)
+
+/SiobhanEncounter
+!SetGlobal(76,7)
+!TeleportCharacter(Nemain,145,289)
+!OverworldCameraPan(320,330,1,1)
+!OpenDoor(64,Close)
+!PlaySound(CranDoor)
+!Walk(Verm,D,0.1)
+!HoldOn(0.1)
+!Walk(Verm,DL,2.6)
+!HoldOn(0.3)
+!Walk(Nemain,DR,0.3)
+!HoldOn(0.5)
+!Nani(Nemain,?)
+!HoldOn(0.6)
+-Nemain: Lady Siobhan?
+!HoldOn(0.6)
+!Walk(Nemain,DR,1.3)
+!HoldOn(1)
+!UnpinFollowers()
+!Walk(Siobhan,U,0.3)
+!Walk(Verm,R,0.3)
+!HoldOn(0.4)
+!SetAnim(Siobhan,UR)
+!Walk(Verm,UR,0.2)
+!SetAnim(Nemain,Loop)
+!HoldOn(0.3)
+!SetAnim(Verm,UR)
+!HoldOn(0.3)
+-Siobhan: Blademaster Nemain...
+-Verm: I remember you.|The Hedgeknight.
+-Verm: You don't need to say anything.
+-Verm: We're banished. I know.|We were just leaving.
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: Let's go, Siobhan.
+-Nemain: Wait.
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Nemain: Siobhan. Lady Gilda misses you dearly. She wants to see you.
+-Siobhan: She does?
+!HoldOn(0.6)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.6)
+-Siobhan: I... don't want to see her.
+-Siobhan: Maybe I will some day.|But not today.
+!HoldOn(0.4)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.6)
+-Siobhan: You can tell her that.
+!HoldOn(0.4)
+-Nemain: You've grown a lot since|the last time I saw you.
+-Nemain: But you're still Lady Gilda's daughter.
+-Nemain: You have obligations.|Familial duties.
+-Nemain: You don't get to just throw all that away because it makes you uncomfortable.
+-Siobhan: I said no!
+!HoldOn(0.4)
+-Verm: You heard them. We're going.
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+-Nemain: This is ridiculous.
+-Nemain: What kind of girl refuses to see her own mother?
+-Nemain: Must I really drag you to|the throneroom by the tail?
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+-Siobhan: I'm not a girl, Nemain. No longer.
+!Walk(Siobhan,UR,0.3)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Siobhan: And I'm not a plaything to be dragged.
+!HoldOn(0.2)
+!SetAnim(Nemain,Look)
+!HoldOn(0.3)
+-Nemain: You can reject the labels,|but at the end of the day,|we are both bound to our roles.
+-Nemain: You are the Lady's daughter.|And I am the Lady's ward.
+!HoldOn(0.1)
+!SetAnim(Nemain,Loop)
+!HoldOn(0.2)
+-Nemain: That is the way of society.|Grow up and accept it.
+!HoldOn(0.5)
+~Stop
+!HoldOn(0.3)
+-Verm: Need a paw?
+-Siobhan: No. This is my fight.
+!GoToBattle(Hedge)
+
+/SioLoss
+!HoldOn(1)
+-Nemain: Hmph. You still have much to learn.
+!HoldOn(0.4)
+-Nemain: But to fight me head-on...|to stand up for yourself so ferociously...
+-Nemain: You've really grown up.
+!HoldOn(0.3)
+!NormalJump(Siobhan,2,30,248,468,JUR,UR)
+!HoldOn(0.5)
+>SioLate3Cont
+
+/SioLate3
+!HoldOn(1.5)
+-Nemain: Ow...
+!HoldOn(0.4)
+-Nemain: Siobhan...
+-Nemain: I can hardly believe|how much you've changed.
+!HoldOn(0.3)
+!SetAnim(Nemain,Loop)
+!HoldOn(0.3)
+-Nemain: You've really grown up.
+>SioLate3Cont
+
+/SioLate3Cont
+!HoldOn(0.6)
+!SetGlobal(76,8)
+-Nemain: I'll take my leave.|And you two can take yours.
+-Siobhan: Are you going to tell|mammy I was here?
+-Nemain: I'll tell her you're thriving. Nothing more.
+-Nemain: That's the truth, after all.|And I'm glad for it.
+-Nemain: Lady or warrior. Girl, boy, or neither. Your father would have been proud of you, Siobhan.
+!Walk(Nemain,DR,4)
+!HoldOn(2)
+!LevelUp(Siobhan)
+!HoldOn(1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!Walk(Siobhan,D,0.2)
+!Exit(Nemain)
+!HoldOn(0.2)
+!Walk(Siobhan,DL,0.2)
+!HoldOn(0.2)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Verm: Nice fighting.|You alright?
+-Siobhan: Never been better.
+!HoldOn(0.5)
+-Siobhan: I'll see you outside, Sir Verm. We've got to go meet Frack.
+-Verm: Right.
+!NextRoom(ToBlack)
+!HoldOn(1)
+!CameraFollow(1)
+!SetAnim(Verm,DR)
+!TeleportCharacter(Siobhan,-348,520)
+!NextRoom(FromBlack)
+!HoldOn(0.5)
+~CranbaileLoop
+
+/DoorLate
+-Verm: I'm not going in. That|would be bad for everyone.
+
+End scene

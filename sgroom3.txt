@@ -1,0 +1,69 @@
+/Intro
+
+/S
+!CheckGlobal(10,2,SLate)
+!CheckGlobal(18,40,PostDukeS)
+-Mr S.: I'm following a buncha trails that go all the way to the top.
+-Mr S.: Check the wall for deets. But keep it all on the down-low.
+
+/PostDukeS
+-Mr S.: You brought down the top dog, the big cheese of the big conspiracy.
+-Mr S.: I'm impressed.
+
+/SLate
+-Mr S.: You ever heard of Excalibur, Murida's top-secret weapon? Only the top brass know the deets.
+-Mr S.: My theory? It's a giant felidae they keep chained up.
+
+/Wall2
+-InfoBig: You see a collage of rodents' faces.
+!CheckGlobal(18,40,PostDuke)
+!CheckGlobal(10,2,PostDuke)
+-Mr S.: These are all the people who have "gone missing" in the last couple of months.
+-Mr S.: Once the Duke throws someone in the dungeons, there ain't no coming back.
+
+/PostDuke
+-Mr S.: These are all the people who "went missing" under Duke Josh.
+-Mr S.: I don't think any more faces will be added under the new management. But I'm keeping the board up all the same.
+
+/Wall1
+-InfoBig: You see crude drawings of|a snake-like creature.
+-InfoBig: There's also a strange note.
+-InfoBig: Roy →→£||Roy →↓?£||Roy →↓←↑?£
+!CheckGlobal(29,3,SLizard)
+!CheckGlobal(29,4,SLizardDone)
+-Mr S.: I'm hunting a cryptid. A supposed "wizard lizard" of the Gloaming Woods. 
+-Mr S.: Let me know if you find 'em.|Careful, though. They might be dangerous.
+
+/SLizard
+-Verm: Oh yeah, I met this guy.
+-Verm: Seth the Wizard Lizard.
+!HoldOn(0.4)
+!Nani(S,!)
+!HoldOn(0.4)
+-Mr S.: You MET that cryptid?!
+-Verm: Yeah. A bit of an oddball,|but completely harmless.
+-Verm: I think he just wanted to spread some knowledge and learn new things. 
+-Mr S.: Wow! Fascinating. I'll have to update the wall.
+!SetGlobal(29,4)
+
+/SLizardDone
+-InfoBig: Just good ol' Seth.
+
+/Wall3
+-InfoBig: You see a drawing of|a donut-shaped Earth.
+-Mr S.: Ah, yeah, that one's more of a work-in-progress.
+
+/Book
+-InfoBig: You see a book titled, "Christoph the Wayward" by Loremaster Tobin.
+*ReadIt: Read it.
+*PutBack: Put it back.
+
+/PutBack
+
+/ReadIt
+-Book1: It was during the reign of King John XVI when Christoph of Clan Grey set sail from the Westlands. He and his squirrel fleet pursued the so-called "wayward star", crossing the treacherous open waters all the way to Rodentian shores.
+-Book2: The Lord of Sky Garden, Raibeart the Red, greeted the new squirrels with customary grace.||However, tensions between the two clans quickly flared...
+!HoldOn(0.4)
+-Mr S.: That book is sus.
+-Mr S.: A squirrel fleet making the great Westlands crossing on dinky rodent ships? Not a chance.
+-Mr S.: If you want my theory, I reckon us Greys came here with divine help.

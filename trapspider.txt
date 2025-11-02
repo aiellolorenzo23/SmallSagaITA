@@ -1,0 +1,21 @@
+/BattleVeryStart
+~RandomBattleLoop
+!HoldOn(1)
+!DrawWeapon(Lance)
+!DrawWeapon(YoungVerm)
+!DrawWeapon(Verm)
+!DrawWeapon(Siobhan)
+!DrawWeapon(Bruce)
+!DrawWeapon(Gwen)
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+/VermRage
+-Verm: Get out the box, you little twerp!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

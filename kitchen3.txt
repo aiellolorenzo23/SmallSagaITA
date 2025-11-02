@@ -1,0 +1,153 @@
+/JustPin
+~Stop
+!AutoPinFollowers()
+
+/TigerFall
+!Walk(Verm,DL,3)
+!HoldOn(2)
+!UnpinFollowers()
+!Walk(Siobhan,DL,0.5)
+!Walk(Gwen,DL,0.5)
+!Walk(Bruce,DL,0.5)
+!HoldOn(1)
+!UnpinFollowers()
+-Siobhan: This hall brings back strange memories.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+-Verm: Nostalgic, right?
+-Siobhan: Hmm. I don't know if I would say "nostalgic"...
+!Walk(Gwen,L,0.3)
+!HoldOn(0.3)
+!Walk(Gwen,DL,0.3)
+!HoldOn(0.3)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+-Gwen: I'm smelling something.|Titan fur and indignation.
+-Gwen: We're not alone.
+-Verm: Yeah, that'll be Tiger, the felidae. He's probably watching us right now.
+!HoldOn(0.1)
+!Nani(Bruce,!)
+!HoldOn(0.4)
+-Bruce: There's a felidae?|In this room?!
+-Verm: Relax. He wouldn't dare try anything.
+-Verm: Come out, come out, Tiger!
+
+~TigerFallLoop
+!TigerFall()
+!HoldOn(0.5)
+!OverworldCameraPan(804,447,1,1)
+!HoldOn(0.3)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!SetAnimEnd(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(1)
+
+!TitanModeToggle()
+-Tiger: I WOULD LIKE TO|TALK TO THE MOUSE.
+!HoldOn(0.6)
+-Tiger: ALONE.
+!TitanModeToggle()
+!OverworldCameraPan(621,600,2,1)
+!HoldOn(0.6)
+-Gwen: Not a chance. Take another step, and the four of us will skin you alive.
+-Verm: Nah, it's fine. Go.
+
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!SetAnim(Siobhan,R)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+-Bruce: Really? Ye sure?
+-Verm: Kitty-cat here won't try anything.
+-Bruce: If ye say so.
+-Siobhan: Shout if you need anything.
+!Walk(Gwen,DL,3)
+!Walk(Siobhan,D,0.5)
+!HoldOn(0.5)
+!Walk(Bruce,DL,3)
+!Walk(Siobhan,DL,3)
+!OverworldCameraPan(804,447,1,1)
+!HoldOn(1)
+!TeleportCharacter(Verm,588,651)
+!Walk(Verm,UR,1)
+!HoldOn(2)
+-Verm: So. What's up?
+!HoldOn(0.5)
+!TitanModeToggle()
+-Tiger: I CAUGHT WIND OF|YOUR QUEST, MOUSE.
+!TitanModeToggle()
+-Verm: Oh yeah? I didn't know felidae cared about rodent matters.
+!TitanModeToggle()
+-Tiger: THIS IS BIGGER|THAN RODENTIA.
+-Tiger: A MOUSE ATTACKING A|FELIDAE IS AN ABSURDITY.
+-Tiger: BUT A MOUSE SEEKING|TO KILL A GOD?
+-Tiger: THAT VIOLATES THE LAWS|OF THE OLD WAY ITSELF.
+!TitanModeToggle()
+-Verm: I didn't know felidae cared about the Old Way either.
+!TitanModeToggle()
+-Tiger: EVERY ANIMAL FOLLOWS|THE OLD WAY.
+-Tiger: THE LAWS ARE WRIT|IN BLOOD AND BONE.
+-Tiger: YOU THINK THEY CAN BE|DISCARDED SO EASILY?
+-Tiger: TOSSED ASIDE BECAUSE|YOUR WHIMS DEMAND IT?
+-Tiger: ABSURDITY OF|ABSURDITIES.
+-Tiger: THERE IS BUT ONE TRUTH,|AND IT IS THIS:
+-Tiger: WE ARE ALL BOUND|BY OUR NATURE.
+!SetGlobal(51,1)
+!TitanModeToggle()
+~Stop
+!GoToBattle(Tiger3)
+
+/PostBattle
+!SetGlobal(51,2)
+!HoldOn(1)
+!LevelUp(Verm)
+!HoldOn(2)
+-Siobhan: Sir Verm!
+!Walk(Siobhan,UR,1.3)
+!Walk(Gwen,UR,1.3)
+!Walk(Bruce,UR,1.3)
+!OverworldCameraPan(600,550,1,1)
+!HoldOn(0.4)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(1)
+-Siobhan: Are you okay?
+-Verm: Yeah, of course.
+-Bruce: What was all that about?
+-Verm: Nothing important.|Let's get out of here.
+!AutoPinFollowers(1)
+!CameraFollow(1)

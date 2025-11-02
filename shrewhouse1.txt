@@ -1,0 +1,48 @@
+/Intro
+
+/Gaius
+-Gaius: This land used to all be under the thumb of the eternal|Golden Laurel empire.
+-Gaius: But that legacy burned with|the Great Fire Trial,|seven half-centuries ago.
+-Gaius: So it goes. Mayhaps one day the Blue Rat monarchy will succumb to the same fate.
+!CheckGlobal(99,3,PersonBruce)
+
+/PersonBruce
+-Bruce: Ha ha, yeah, politics.
+-Bruce: Change of subject: do ye know a mouse called Verm?
+-Gaius: I don't. Maybe ask Quintus.|He's a good people-finder.
+
+/Book
+-InfoBig: You see a book titled, "Nora's Fall" by Loremaster Horace.
+*ReadIt1: Read it.
+*PutBack: Put it back.
+
+/ReadIt1
+-Book1: Shrew Empress Nora was born in the twilight years of the Golden Laurel Empire, a shining era corrupted by the scheming and plotting of selfish actors.
+-Book2: The citizens of Muridium demanded respite from their squalor, but Nora had none to offer.||"The mice are so hungry that they have to eat their thatched roofs," the Empress lamented. "Is there nothing we can do?"
+-Book1: A noble rat named James saw opportunity in the despair. He whipped up the commonfolk with dreams of revolt, and planted seeds of doubt in the senate by questioning Nora's sanity.
+-Book2: On a late Summer's day, tensions came to a boil. Citizens pounded on the Curia doors and demanded justice.||The senators, led by Senator Decimus, reluctantly obliged.
+-Book1: Speaking to the crowd, James denounced Nora as the sole source of the citizens' ills. He proposed that, to assess Nora's guilt, she be put through a Trial by Fire, an arcane test even for its time.
+-Book2: A great pyre was constructed, and Nora was tied to its central mast.||The crowd wept as the flames erupted high and far, for they knew that the Empress's death marked the end of democracy, of liberty, of decency.
+-Book1: The gods-of-gods agreed. They showed their disgust with the trial by feeding the flames beyond all expectations, waving them higher and further until the whole city burned to ash.
+-Book2: Thousands of rodents died, and millions were displaced. The godly city above too suffered greatly.||Out of the chaos, James emerged as king.
+-Book1: Some say that Nora survived the blaze, protected by divine hands.||Fanciful thinking, perhaps.
+-Book2: But what we do know for certain is that James's lineage is one of unearned legitimacy, of unrighteous blood.||Cursed be his name.
+
+/PutBack
+
+/Fausta
+!CheckGlobal(99,3,FaustaBruce)
+-Fausta: Has there ever been a hero worthy of worship? Doubt it.
+-Fausta: If there ever is one, they won't be brandishing a sword. I know that much.
+
+/FaustaBruce
+-Fausta: I'm sick of this town. Nothing but violent games and hero worship.
+-Bruce: Ha ha, yeah, I bet. Speaking of heroes, ye seen a wee mouse in a black cape running around?
+-Fausta: No, sorry.
+
+/Jump
+!PlaySound(PrisonDoorOpen)
+!NextRoom(VinAttic2,4)
+
+/FoundSeeds
+-Info: You found 3 seeds.

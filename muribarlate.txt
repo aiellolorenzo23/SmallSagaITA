@@ -1,0 +1,21 @@
+/Intro
+
+/Hassan
+-Hassan: If you survive the night, I'll give you a top-shelf liqueur.
+-Hassan: On the mouse.
+
+/Zipi
+-Zipi: You're fighting the Guard?|Rad, very rad.
+-Zipi: Wish I could join, but I've got a shift to finish.
+
+/Emma
+-Emma: Looks like trouble.|I'll wait it out.
+/Niall
+-Niall: Don't drag your battle into here, alright?
+
+/Kofi
+-Kofi: From the noises I'm hearing, it sounds like you're writing a song of your own.
+
+/Knife
+-InfoBig: This is no time for knife-darts.
+

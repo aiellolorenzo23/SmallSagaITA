@@ -1,0 +1,279 @@
+/Intro
+!CheckGlobal(36,0,Intro2)
+!CheckGlobal(36,2,Abbo2)
+!CheckGlobal(36,4,Abbo4)
+!CheckGlobal(36,6,Abbo6)
+
+/Intro2
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+!Nani(Abbozzato,!)
+!HoldOn(0.7)
+!OverCamZoom(2)
+!HoldOn(0.7)
+!SetGlobal(36,1)
+!SetAnim(Abbozzato,Point)
+!HoldOn(0.5)
+-Abbozzato: Ah hah! You!
+*Who: Who?
+*Me: Me?
+/Who
+-Verm: Who?
+>Late
+
+/Me
+-Verm: Me?
+>Late
+
+/Late
+-Abbozzato: You! You're late.
+
+*Iam: I am?
+*What: For what?
+/Iam
+-Verm: I am?
+>Called
+
+/What
+-Verm: For what?
+>Called
+
+/Called
+!HoldOn(0.5)
+!OverCamZoom(1)
+!HoldOn(0.5)
+!SetAnim(Abbozzato,Loop)
+!HoldOn(0.5)
+-Abbozzato: Are you not the apprentice I requested?
+*YesIam: I am!
+*No: No?
+
+/YesIam
+-Verm: I am!
+
+!Nani(Abbozzato,!)
+!HoldOn(0.5)
+!SetAnim(Abbozzato,Point)
+!HoldOn(0.2)
+-Abbozzato: Oh ho! I knew it.
+-Abbozzato: Abbozzato the merchant extraordinaire has a great eye for these things.
+>Well
+
+/No
+-Verm: No?
+!Nani(Abbozzato,!)
+!HoldOn(0.5)
+!SetAnim(Abbozzato,Point)
+!HoldOn(0.2)
+-Abbozzato: Oh ho!
+-Abbozzato: You've been on the clock for 5 seconds, and already you're trying to shirk your duties.
+-Abbozzato: Admirable! But Abbozzato the merchant extraordinaire is not so easily fooled.
+>Well
+
+/Well
+!SetAnim(Abbozzato,Loop)
+!HoldOn(0.2)
+-Abbozzato: Listen well, my apprentice.
+-Abbozzato: There's a dock worker at Canard's Wharf who has a package for me.
+-Abbozzato: Retrieve it, and I'll reward you with a seed or two.
+-Verm: Fine. Whatever. A seed's a seed.
+-Abbozzato: Ah, ah, but no peeking!
+-Abbozzato: If you peek at the package, then you shan't be paid even a thruppence!
+-Verm: Alright. The wharf, you said? That's not far at all.
+
+
+/Abbozzato
+!CheckGlobal(36,1,Abbo1)
+!CheckGlobal(36,2,Abbo2)
+!CheckGlobal(36,3,Abbo3)
+!CheckGlobal(36,4,Abbo4)
+!CheckGlobal(36,5,Abbo5)
+!CheckGlobal(36,7,Abbo7)
+!CheckGlobal(36,8,Abbo8)
+
+/Abbo1
+-Abbozzato: There's a dock worker at Canard's Wharf who has a package for me.
+-Abbozzato: Go retrieve it, my apprentice!
+
+/Abbo2
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+!Nani(Abbozzato,!)
+!HoldOn(1)
+!SetGlobal(36,3)
+!SetAnim(Abbozzato,Point)
+!HoldOn(0.3)
+-Abbozzato: Oh ho! You brought it!
+!HoldOn(0.2)
+!SetAnim(Abbozzato,Loop)
+!HoldOn(0.2)
+-Abbozzato: But tell me...
+!HoldOn(0.2)
+!SetAnim(Abbozzato,Point)
+!HoldOn(0.2)
+-Abbozzato: Did you peek?
+*Peekyes: Yep
+*PeekNo: Nope
+/Peekyes
+-Verm: Yep.
+!HoldOn(1)
+!OverCamZoom(2)
+!HoldOn(1)
+-Abbozzato: That.
+!HoldOn(0.2)
+-Abbozzato: Is.
+!OverCamZoom(1)
+!HoldOn(0.2)
+!SetAnim(Abbozzato,Loop)
+!HoldOn(0.2)
+-Abbozzato: Honest! Very honest! An admirable trait in an apprentice.
+>PeekContinue
+/PeekNo
+-Verm: Nope.
+!HoldOn(0.2)
+!SetAnim(Abbozzato,Loop)
+!HoldOn(0.2)
+-Abbozzato: Ah, so dependable! An admirable trait in an apprentice.
+>PeekContinue
+
+/PeekContinue
+-Abbozzato: You have successfully completed the first task.
+-Abbozzato: Here is your paycheck, as promised.
+!MoneyLoss(-5)
+!PlaySound(ItemFound)
+-Info: You received 5 seeds.
+-Verm: Wait, first task? How many are there? I've got more important things to do, you know.
+-Abbozzato: Trivial worries!|Onto the second task.
+-Abbozzato: There is a weaver in Gutter End who ordered this same package. A blonde mouse named Connor.
+-Abbozzato: Deliver it to him and procure his payment.
+-Verm: A weaver in Gutter End? That's easy enough.
+
+/Abbo3
+-Abbozzato: There is a weaver in Gutter End who ordered the package.
+-Abbozzato: Hurry and deliver it, my apprentice!
+
+/Abbo4
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+!Nani(Abbozzato,!)
+!HoldOn(1)
+!SetGlobal(36,5)
+!SetAnim(Abbozzato,Loop)
+!HoldOn(0.3)
+-Abbozzato: Oh ho! you did it!
+-Verm: I did. And I got a reward.
+!ShowItem(Prota,51)
+!HoldOn(0.8)
+!Nani(Abbozzato,?)
+!HoldOn(0.7)
+-Abbozzato: A sheet of fine silk?
+!OverCamZoom(2)
+!HoldOn(0.2)
+!SetAnim(Abbozzato,Point)
+!HoldOn(0.7)
+-Abbozzato: That was not the agreed upon payment.
+!HoldOn(0.2)
+!OverCamZoom(1)
+!SetAnim(Abbozzato,Loop)
+!HoldOn(0.5)
+-Abbozzato: But whomst am I to deny such a fine luxury?
+-Abbozzato: Here is your paycheck, as promised.
+!MoneyLoss(-5)
+!PlaySound(ItemFound)
+-Info: You received 5 seeds.
+-Abbozzato: Ready for task three?
+-Verm: As if I have a choice.
+-Abbozzato: There is a lady by the name of Matilda who lives in the duchy of Sky Garden.
+-Abbozzato: She has an eye for fine fabric.
+-Abbozzato: Politely ask her to dye this silk a nice shade. Crimson, perhaps?
+-Verm: Okay. What kind of creature is she?
+!HoldOn(0.2)
+!SetAnim(Abbozzato,Point)
+-Abbozzato: Why, she's a-
+!HoldOn(1)
+!SetAnim(Abbozzato,Loop)
+!HoldOn(0.5)
+-Abbozzato: You know, I have absolutely no idea.
+!HoldOn(0.3)
+-Verm: Fine. Matilda of Sky Garden, right? That's quite some way away, so give me some time.
+-Abbozzato: I'll be waiting!
+
+/Abbo5
+-Abbozzato: Matilda of Sky Garden! Go, go!
+
+/Abbo6
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+!Nani(Abbozzato,!)
+!HoldOn(1)
+!SetGlobal(36,7)
+!SetAnim(Abbozzato,Point)
+!HoldOn(0.3)
+-Abbozzato: You! My apprentice!|Where have you been?!
+-Verm: I was busy. And Sky Garden's not exactly around the corner.
+!HoldOn(0.3)
+!SetAnim(Abbozzato,Loop)
+!HoldOn(0.3)
+-Abbozzato: True enough. Pardon my impatience.
+-Abbozzato: Time has become my enemy. The Guard grow suspicious of my dealings.
+-Abbozzato: Did you meet Matilda?
+-Verm: Yeah.
+-Abbozzato: Wonderful! I can see from here that the fabric's now a beautiful, vibrant red.
+-Abbozzato: How did she rate it?
+*FabricGood: A+
+*FabricMeh: A-
+*FabricBad: F
+
+/FabricGood
+-Verm: "A plus". She really laid on the praise.
+-Abbozzato: Excellent! That Connor truly is a master weaver.
+>FinalTask
+
+/FabricMeh
+-Verm: "A minus", I think? I wasn't really listening.
+-Abbozzato: Really? I thought better of Connor. Oh well, it'll have to do.
+>FinalTask
+
+/FabricBad
+-Verm: "F". She hated it. Called it unworthy of even being toilet paper.
+!HoldOn(0.3)
+-Abbozzato: Really?
+!HoldOn(0.3)
+!Nani(Abbozzato,!)
+!SetAnim(Abbozzato,Point)
+!HoldOn(0.5)
+-Abbozzato: Oooooh! Oh ho! A joke! It was a joke!
+-Abbozzato: Your wit is masterful, my apprentice. Wonderfully droll.
+!SetAnim(Abbozzato,Loop)
+>FinalTask
+
+/FinalTask
+-Abbozzato: Here is your paycheck, as promised.
+!MoneyLoss(-5)
+!PlaySound(ItemFound)
+-Info: You received 5 seeds.
+-Abbozzato: Your final task, my apprentice, is to take this fabric to Vinium.
+-Abbozzato: A fine seamstress there by the name of "Penelope" owes me a favour.
+-Abbozzato: Ask her to fashion the fabric into whatever garment she sees fit.
+-Verm: A seamstress in Vinium, huh.|Okay. I'll be back soon.
+
+/Abbo7
+-Abbozzato: The seamstress in Vinium.|Please hurry, my apprentice.
+
+/Abbo8
+-Abbozzato: The seamstress in Vinium.|Please hurry, my apprentice.
+-Verm: I met her already. She's making something out of the fabric.
+!HoldOn(0.1)
+!Nani(Abbozzato,!)
+!HoldOn(0.3)
+!SetAnim(Abbozzato,Point)
+!HoldOn(0.5)
+-Abbozzato: Then go collect it!
+-Verm: She said it would take thirty minutes.
+!HoldOn(0.5)
+-Abbozzato: Then... go wait faster!
+!HoldOn(0.5)
+!SetAnim(Abbozzato,Loop)
+
+/FinalNote
+-InfoBig: My dearest Apprentice,|Pardon my absence. The Guard are on my tail, so I had to make a hasty escape across the open seas.||As an apprentice, you surpassed all my expectations. Please, keep the garment -  consider it my thanks for a job magnificently done. Fare thee well.|- Abbozzato the merchant extraordinaire

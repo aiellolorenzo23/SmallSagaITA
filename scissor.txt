@@ -1,0 +1,46 @@
+/BattleVeryStart
+~ScissorBattleLoop
+!HoldOn(1)
+!DrawWeapon(Bruce)
+!DrawWeapon(Siobhan)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+!SetGlobal(4,0)
+
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+
+/MaisieRage
+-Maisie: I'll cut you both into pieces!
+!SetAnim(Maisie,Default)
+!NewTurn()
+
+/RoseDown
+~Stop
+-Rosaline: Maisie? Oh no...
+-Rosaline: So be it. I'll show you the full strength of the twin-blade Iron Maiden style!
+~ScissorBattle2Loop
+!NewTurn()
+
+/MaisieDown
+~Stop
+-Maisie: Rose? Rose?!
+!HoldOn(0.1)
+!ShoutMode()
+-Maisie: AAAAAAAAH!|You bastards!
+~ScissorBattle3Loop
+!NewTurn()
+
+/VermRage
+-Verm: Nice sword. But fancy steel won't save you!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/EnemyDead
+~Stop
+!SetGlobal(4,0)
+!Victory()
+!EndBattle()
+End scene

@@ -1,0 +1,29 @@
+/BattleVeryStart
+~FinalBossLoop
+!HoldOn(0.4)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.5)
+!DrawWeapon(Verm)
+/BattleStart
+!HoldOn(13)
+!LetsFight()
+
+/VermRage
+-Verm: This one's for my tail!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/EnemyDead
+>DamageTrigger
+
+/DamageTrigger
+!SetBattleID(YGod2)
+!HoldOn(1)
+-Verm: This isn't working.|We need to get higher!
+!HoldOn(0.5)
+!EndBattle()
+/End

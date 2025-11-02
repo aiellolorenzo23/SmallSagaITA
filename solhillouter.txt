@@ -1,0 +1,60 @@
+/Intro
+~GardenLoop
+!AutoPinFollowers()
+
+/PigeonEntrance
+~GardenLoop
+!PigeonArrival()
+!CheckGlobal(75,2,PigeonEntranceFirst)
+-Dizi: Solhill. Stay safe, all.
+!AutoPinFollowers(1)
+
+/PigeonEntranceFirst
+!SetGlobal(75,3)
+-Dizi: Mind the gap! This is-
+!Nani(Dizi,!)
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Dizi: OOOH!
+!HoldOn(0.5)
+!SetAnim(Siobhan,L)
+!SetAnim(Verm,L)
+!SetAnim(Gwen,L)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!SetAnim(Verm,UL)
+!SetAnim(Gwen,UL)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,UR)
+!SetAnim(Gwen,UR)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,UR)
+!SetAnim(Gwen,UR)
+!SetAnim(Bruce,UR)
+!HoldOn(0.4)
+-Dizi: You all feel that?|Just got a mad chill in my feathers.
+-Verm: This is Solhill, right?|The shrew village where Blademaster Leo first made his mark?
+-Dizi: Yeah, yeah, yeah,|this is the place alright.
+-Dizi: Bad vibes, though.|You aren't picking up on that?
+-Verm: It's fine. We can handle|whatever's inside.
+-Dizi: If you say so, mousegang.|Stay safe.
+!SetGlobal(75,4)
+!AutoPinFollowers(1)
+
+/Dizi
+-Dizi: It's not my first time here. But I'm hoping it's my last, if you get me.
+
+
+/Basket
+-Dizi: All aboard!
+!CameraUnfollow()
+!UnpinFollowers()
+!PigeonFlight(OverMap)
+
+End scene

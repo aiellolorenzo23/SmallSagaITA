@@ -1,0 +1,285 @@
+/Intro
+!SetAnim(Steve,UR)
+!TeleportCharacter(Leo,1201,479)
+!SetAnim(Leo,DL)
+!SetShadowless(Leo,0)
+!OverworldCameraSnap(400,830)
+!PlaySound(PalaceBigDoorOpen)
+!HoldOn(1)
+!FastWalk(Steve,UR,4.1)
+!HoldOn(1)
+!OverworldCameraPan(1150,365,0.5,1)
+!HoldOn(3.1)
+
+-Leo: Steve. What news|from Sergeant Alex?
+!HoldOn(0.3)
+-Steve: Uh... it's not great.
+-Steve: Word is things quickly got violent.|The city's barricades were overrun.
+-Steve: So Alex rallied every Guard to defend the palace portcullis.
+-Leo: Every Guard?|In one spot?
+-Leo: Even the ones on|palace patrol duty?
+!HoldOn(0.9)
+-Steve: Is... is that bad?
+!HoldOn(1.3)
+-Leo: Return to your post, Steve.
+-Steve: Yes, Blademaster.
+!HoldOn(0.1)
+!SetAnim(Steve,DR)
+!HoldOn(0.1)
+!SetAnim(Steve,DL)
+!HoldOn(0.3)
+!FastWalk(Steve,DL,2)
+!HoldOn(0.7)
+-Ophiuchus: Death gods above,|rioters at the gates...
+!SetAnim(Ophiuchus,LookRight)
+-Ophiuchus: Dear oh dear. This is a|most precarious situation!
+-Leo: His Majesty's safety is paramount.
+-Leo: We must leave the palace immediately.
+-Ophiuchus: Yes, yes! We can use the|emergency tunnels.
+-Ophiuchus: One tunnel leads to the Wharf, which will give us access to the Underriver.
+-Ophiuchus: A swift egress!
+!SetAnim(Ophiuchus,LookLeft)
+-Leo: No time to lose.|Shall we go, Your Majesty?
+!HoldOn(1)
+!SetAnim(Leo,UL)
+!Exit(Steve)
+!SetAnim(Ophiuchus,LookRight)
+!HoldOn(0.7)
+-James: This is... fortuitous.
+-Ophiuchus: Your Majesty?
+-James: The timing. It is fortuitous that the peasants chose to attack on tonight of all nights.
+-James: We can solve two problems at once.
+!HoldOn(0.5)
+-Leo: I don't understand.
+!HoldOn(0.2)
+-James: Loremaster, send an urgent memo to Plaguemaster Aquila.
+-James: Grant him the authority to use Excalibur, effective immediately.
+-Leo: Ophiuchus, hold that order.
+!Walk(Leo,UL,1)
+!HoldOn(1.1)
+!SetAnim(Leo,UR)
+!HoldOn(0.2)
+-Leo: Your Majesty, unleashing Excalibur may deter the Yellow God.
+-Leo: But if my understanding of the weapon is correct, it would kill countless rodents, members of your own Kingdom whom you are sworn to serve.
+-James: They're riotous louts who wish to put my head on a pike.
+-James: Their lives are forfeit.
+!HoldOn(0.5)
+-James: Loremaster, stop dithering and write the memo.
+-Ophiuchus: Um. Your Majesty. This decision... it is not to be made lightly. Please deliberate-
+-James: By the gods,|you are both pathetic!
+-James: I'll issue the order myself.
+!HoldOn(0.3)
+!SetAnim(James,Getup)
+!PlaySound(Woodcreak)
+!HoldOn(0.2)
+!PlaySound(Cloth)
+!HoldOn(0.1)
+!DestroyKingTail()
+!SetShadowless(James,0)
+!TeleportCharacter(James,1215,377)
+!SetAnim(James,DL)
+!HoldOn(0.7)
+!Walk(James,DL,1.6)
+!HoldOn(2)
+-Leo: Your Majesty.
+-Leo: What would your mother do?
+-James: My mother? She desired|strength and stability.
+-James: Virtues that you know nothing of.
+-James: Move.
+!OverworldCameraPan(1050,415,1,1)
+!HoldOn(0.1)
+!SpecialWalk(Leo,DR,0.3,ULWalk,1)
+!Walk(James,DL,4.3)
+!HoldOn(0.3)
+!SetAnim(Leo,UL)
+!HoldOn(0.7)
+!SetAnim(Ophiuchus,LookLeft)
+!SetAnim(Leo,DL)
+!HoldOn(1.9)
+-Leo: And dead civilians... is that the price of a strong and stable kingdom?
+!HoldOn(1.8)
+!SetAnim(James,StandLook)
+!HoldOn(0.5)
+-James: Unbelievable.
+-James: How can a royal Blademaster|be so naive?
+-James: You should know better than all that this palace is built from blood and bone.
+-James: Every right, every privilege...|No, our whole Rodentian way of life is maintained at the end of a sword.
+-James: So don't stand there in the garb of a knight and act like you're better than our violent institution.
+-James: You are the bloody institution.
+!SetAnim(James,StandLookLeft)
+!OverworldCameraPan(1150,365,0.5,1)
+!HoldOn(0.3)
+!Walk(James,DL,5)
+!HoldOn(0.3)
+!DeathLightSwitch()
+!HoldOn(1.4)
+-Leo: Gods...
+!HoldOn(0.3)
+!SetAnim(Ophiuchus,LookRight)
+!HoldOn(0.3)
+-Leo: He's right.
+-Leo: I am such an idiot.
+!HoldOn(0.3)
+!SetAnim(Leo,Up1)
+!HoldOn(0.15)
+!SetAnim(Leo,Up2)
+!HoldOn(0.6)
+-Leo: It's always been this way, hasn't it? This palace of blood and bone...
+!HoldOn(0.5)
+-Ophiuchus: For as long as we've had Kings who rule and peasants who serve.
+-Ophiuchus: Perhaps longer.
+!HoldOn(0.6)
+!SetAnim(Leo,Up1)
+!HoldOn(0.15)
+!SetAnim(Leo,DL)
+!HoldOn(0.7)
+-Leo: Ophiuchus. Go to the armoury|and fetch my needles.
+!HoldOn(0.3)
+!Nani(Ophiuchus,?)
+!HoldOn(0.7)
+-Ophiuchus: Your swords?
+!HoldOn(0.3)
+-Leo: All of them.|Hurry now.
+!HoldOn(0.3)
+!SetAnim(Ophiuchus,LookLeft)
+!HoldOn(0.6)
+-Ophiuchus: God speed, needle knight.
+!HoldOn(0.6)
+!TeleportCharacter(James,809,612)
+!NormalJump(Leo,2.3,20,1056,483,DLJump,DL)
+!HoldOn(1.5)
+!SetAnim(Leo,Draw)
+!HoldOn(0.2)
+!PlaySound(YVermDraw)
+!HoldOn(0.8)
+!SetAnim(Leo,Stance1)
+!HoldOn(0.15)
+!SetAnim(Leo,Stance2)
+!HoldOn(1)
+!OverworldCameraPan(820,603,1,1)
+~MurderLoop
+!HoldOn(0.3)
+!SpecialWalk(Leo,DL,0.65,Charge,5.62)
+!OverCamZoom(1.5)
+!HoldOn(0.55)
+!SetAnim(James,Stab)
+!HoldOn(0.1)
+!SetAnim(Leo,Stance2)
+!HoldOn(1)
+!NormalJump(Leo,2.5,20,861,582,Stance1,Stance1)
+
+!HoldOn(0.4)
+!SetAnimEnd(Leo,Draw)
+!SetAnim(Volans,DRJump)
+!SetAnim(Sagitta,ULJump)
+
+!HoldOn(2.5)
+-James: You...
+!HoldOn(1)
+-James: You're the worst...
+
+!HoldOn(0.6)
+!SetAnim(James,Dead)
+
+!HoldOn(0.6)
+!OverCamZoom(1)
+!HoldOn(0.5)
+!NormalJump(Carina,2,30,844,494,DLJump,DLJump)
+!HoldOn(0.1)
+!NormalJump(Musca,2,30,1011,599,DLJump,DLJump)
+!HoldOn(0.2)
+!NormalJump(Vela,2,30,756,773,DLJump,URDraw)
+!HoldOn(0.1)
+!NormalJump(Auriga,2,30,525,631,DLJump,URDraw)
+!ShoutMode()
+!HoldOn(0.4)
+-Volans: Traitor!
+!HoldOn(0.1)
+!ShoutMode()
+-Carina: What did you just do,|you treasonous bastard?!
+-Leo: I didn't wish to spill|the blood of my King.
+-Leo: And I don't wish to kill|my own brethren.
+-Volans: It's too late for regrets!
+-Carina: You've made your|choice, king killer!
+!HoldOn(0.4)
+!SetAnim(Leo,Stance1)
+!HoldOn(0.15)
+!SetAnim(Leo,Stance2)
+!HoldOn(0.3)
+-Leo: Then come. Attack me.
+-Leo: But you've all heard the songs.|You've witnessed my needlework.
+-Leo: You know that, when we cross blades, I will be the only one left standing.
+!HoldOn(0.9)
+!SetAnim(Volans,DRLook)
+!HoldOn(0.5)
+!SetAnim(Carina,DLLook)
+!HoldOn(0.2)
+!SetAnim(Volans,DRDraw)
+!HoldOn(0.3)
+!SetAnim(Carina,DRDraw)
+!HoldOn(0.9)
+-Volans: H-he's right.
+!HoldOn(0.5)
+-Sagitta: Yeah. I'm not throwing my life away against the Vulpes Slayer...
+!HoldOn(0.1)
+!PlaySound(PalaceBigDoorOpen)
+!TeleportCharacter(Diego,254,886)
+!SetAnim(Diego,UR)
+!HoldOn(0.9)
+!OverworldCameraPan(400,830,2,1)
+!HoldOn(1.5)
+!TitanModeToggle()
+-Diego: HAS THE THIMBLE GUARD|BECOME A COVEN OF|TRAITORS AND COWARDS?
+!TitanModeToggle()
+!SetAnimEnd(Leo,Draw)
+!HoldOn(0.3)
+!Walk(Diego,UR,2.5)
+!HoldOn(1.5)
+!OverworldCameraPan(890,570,2,1)
+!HoldOn(1.5)
+-Leo: Diego. Please turn away.
+!OverworldCameraPan(490,700,2,1)
+!HoldOn(0.5)
+!TitanModeToggle()
+-Diego: THOU BROKE THY OATH,|BLADEMASTER.
+!TitanModeToggle()
+!Walk(Diego,UR,3.2)
+!OverworldCameraPan(740,590,2,1)
+!HoldOn(0.9)
+-Leo: I did. To protect the Kingdom.
+!HoldOn(2.3)
+!TitanModeToggle()
+-Diego: WHAT IS A KINGDOM|WITHOUT A KING?
+!TitanModeToggle()
+-Leo: A King who murders his own people is not a King worth serving.
+!TitanModeToggle()
+-Diego: THAT IS NOT OUR|JUDGMENT TO MAKE.
+-Diego: DUTY IS NOT|BEHOLDEN TO WHIM.
+!TitanModeToggle()
+!HoldOn(0.5)
+-Leo: And what does your duty say?|Does it compel you to fight me?
+!HoldOn(0.7)
+!TitanModeToggle()
+-Diego: IT COMPELS ME|TO EXECUTE YOU.
+!TitanModeToggle()
+!HoldOn(1.5)
+-Leo: I don't want to do this, Diego.
+-Leo: You are my dearest.
+!HoldOn(0.4)
+-Diego: And you are mine.
+!HoldOn(0.5)
+!PlaySound(LamiaTurn)
+~Stop
+!SetAnim(Diego,HammerReady)
+!HoldOn(0.5)
+!TitanModeToggle()
+-Diego: THAT MAKES THE HAMMER|OF JUSTICE ALL THE HEAVIER.
+!TitanModeToggle()
+!HoldOn(1)
+!SetAnim(Leo,Stance1)
+!HoldOn(0.15)
+!SetAnim(Leo,Stance2)
+!HoldOn(0.5)
+!NextRoom(ToBlack)
+!HoldOn(1)
+!NextRoom(PalaceGallery2,1)

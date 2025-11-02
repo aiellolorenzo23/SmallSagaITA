@@ -1,0 +1,27 @@
+/Intro
+
+!PlaySound(PalaceBigDoorClose)
+!OpenDoor(1,Close)
+!HoldOn(0.5)
+!Walk(Leo,DL,2)
+!HoldOn(2)
+!TitanModeToggle()
+-Diego: BLADEMASTER.
+!HoldOn(2)
+!Walk(Leo,DL,5)
+!TitanModeToggle()
+!HoldOn(3)
+!PlaySound(PalaceBigDoorOpen)
+!Exit(Leo)
+-Steve: Man, he looked pissed.
+!SetAnim(Diego,Turn)
+!HoldOn(0.2)
+!TitanModeToggle()
+-Diego: HOLD THY TONGUE, SIR STEVE.
+!TitanModeToggle()
+!HoldOn(0.1)
+-Steve: S-sorry, Sir Diego.
+!HoldOn(0.2)
+~Stop
+!HoldOn(0.2)
+!NextRoom(MuriStation,99)

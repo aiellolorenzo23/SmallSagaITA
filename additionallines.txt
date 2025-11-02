@@ -1,0 +1,140 @@
+Energy+
+Increase max ◆ by 1.
+Health+
+Increase ♥ by 2.
+Strength+
+Increase ⚔ by 1.
+Class: Berserker
+Verm channels his anger into fast and brutal slashes.
+Too Angry to Die
+While in a Berserk state, Verm heals 2♥ at the start of each turn.
+Tenacious Fury
+Rage grants an additional turn of Berserk.
+Finishing Blow
+The final strike of a multi-part attack hits twice as hard.
+Serrated Edge
+Each of Verm's strikes inflict 1 bleed.
+Channelled Fury
+Verm's strikes deal an extra 1 damage for each stack of Berserk.
+Divine Buster
+Verm's attacks deal 50% extra damage against Gods.
+Class: Pyromancer
+Siobhan charges up her fire wand for explosive results.
+Focused Fire
+Fire attacks deal 25% extra damage if Siobhan is at max ♥.
+Mechanical Exploit
+Siobhan's attacks deal 50% extra damage against machines.
+Prep Time
+Siobhan starts the battle with 1 Overclock charge.
+Analytics
+Allies can see enemy HP and status effects.
+Fatal Fury
+Siobhan goes Berserk if an ally falls in battle.
+Proper Application
+Healing items used by Siobhan are 30% more effective.
+Class: Performer
+Bruce plays a variety of supportive and healing melodies.
+Con Amore
+Sweet Melody cures status ailments.
+Bruce Be Nimble
+Bruce gains a 10% chance to dodge any incoming attack.
+Speedy Recovery
+Defending recovers 1◆.
+Con Moto
+Encore bestows 1◆.
+Lowered Inhibitions
+Bruce's attacks deal 500% extra damage if he is Tipsy.
+Con Bravura
+Healing melodies recover 30% more ♥.
+Class: Iconoclast
+Gwen uses her piercing glaive to smash defences and wreak havoc.
+Dragon Heart
+Rally recovers 3♥ for each party member.
+Surgical Precision
+Shield Break and Sword Break's effects last one extra turn.
+Seeing Red
+Gwen's attacks deal 20% extra damage to bleeding enemies.
+Transfusion
+Gwen recovers 3♥ when attacking bleeding enemies.
+Thorny Point
+Gwen's attacks inflict 3 bleed.
+All Guards Are Busted
+Gwen's attacks deal 50% extra damage against military personnel.
+Class: Archer
+Lance takes down foes with a quiver of trick-arrows. 
+Aim for the Paw
+Piercing Shot inflicts Power Break.
+Mouse Be Nimble
+Lance gains a small chance to dodge any incoming attack.
+Aim for the Heart
+Piercing Shot inflicts 3 bleed.
+XL Quiver
+Arrow Shower hits an additional 3 times.
+Fast Reload
+Defending recovers an extra  1◆.
+Outlaw Spirit
+Lance gains 5 seeds when he wins a battle.
+Class: Novice Hero
+Verm's still growing, but he aspires to be a great swordsman one day.
+Siobhan charges up their fire wand for explosive results.
+Attack
+Defend
+Items
+Not enough energy!
+No items on hand!
+Verm has no appetite.
+Verm is defenceless.
+
+Swipe
+Deal slashing damage
+Rage
+Go berserk, doubling up attacks for 2 turns
+Cleave
+Deal 2 slashes in a row
+Nimblefoot
+Evade upcoming attacks
+Blade Storm
+Deal 5 slashes in a row
+Quick Shot
+Deal piercing damage
+Mega shot
+Deal heavy piercing damage
+Whack
+Deal bashing damage
+Wyrmfire
+Deal heavy special damage
+Overclock
+Boost Siobhan's next fire attack
+Spreadfire
+Deal heavy special damage to all enemies
+Hellfire
+Deal extreme special damage
+Sweet Tune
+Heal an ally
+Encore
+Give a bonus turn to an ally
+Whack
+Deal bashing damage
+Sweet Aria
+Heal all allies
+Cadenza
+Improvise to create a custom effect
+Stab
+Deal piercing damage
+Shield Break
+Deal piercing damage and lower defence
+Sword Break
+Deal piercing damage and lower attack
+Rally
+Recover 1 energy for each ally
+Sky Vault
+Deal damage and lower both defence and attack
+
+Fantasia of Fury!
+Sonata of Soaring!
+Etude of Explosions!
+Medley of Muddlement?
+Ditty of Disarmament!
+Rondo of Restlessness!
+Ballad of Bolstering!
+

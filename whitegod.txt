@@ -1,0 +1,34 @@
+/BattleVeryStart
+!HoldOn(0.4)
+~WGBossLoop
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+/BattleStart
+!SetGlobal(4,0)
+!CameraPan(0,1,1,1)
+!HoldOn(8)
+!SetAnim(Left Hand of God,Intro)
+!HoldOn(1.1666)
+!SetAnim(Left Hand of God,Default)
+!HoldOn(2.5)
+!SetAnim(Right Hand of God,Intro)
+!HoldOn(1.1666)
+!SetAnim(Right Hand of God,Default)
+!HoldOn(2.5)
+!LetsFight()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+/VermRage
+-Verm: Let's test the limits of|this god's immortality!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/GwenDown
+!NewTurn()
+/End

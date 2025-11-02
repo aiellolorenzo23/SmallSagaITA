@@ -1,0 +1,561 @@
+/Intro
+~ViniumLoop
+!CheckGlobal(39,1,HighUp)
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!AutoPinFollowers()
+
+/FirstIntro
+~ViniumLoop
+!SetGlobal(35,1)
+!HoldOn(1.5)
+!BigTitle(Vinium,Labora dure@ lude durius.)
+!OverworldCameraPan(663,1607,0.3,1)
+!HoldOn(3)
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!CameraFollow(1)
+
+/HighUp
+!TurnOffBlocks(1)
+!SetVisible(Bridge,0)
+!SetVisible(MuriZ,0)
+!SetVisible(Door,1)
+!TurnOnBlocks(2)
+!TeleportCharacter(Siobhan,402,1003)
+!TeleportCharacter(Bruce,420,1060)
+!TeleportCharacter(Gwen,476,1019)
+!SetAnim(Bruce,UR)
+!SetAnim(Siobhan,DL)
+!SetAnim(Gwen,Sharpen)
+
+/Jump1
+!HoldOn(0.1)
+!OverworldCameraPan(995,1010,1.5,1)
+!TurnOffBlocks(2)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2,50,995,1090,JUL,UL)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(2)
+!HoldOn(0.2)
+!CameraInstFollow(1)
+
+/Jump2
+!HoldOn(0.1)
+!OverworldCameraPan(1114,1086,1.5,1)
+!TurnOffBlocks(2)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2,50,1114,1166,JDR,DR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(2)
+!HoldOn(0.2)
+!CameraInstFollow(1)
+
+/Jump3
+!HoldOn(0.1)
+!OverworldCameraPan(470,759,1.5,1)
+!TurnOffBlocks(2)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2,50,470,839,JUL,UL)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(2)
+!HoldOn(0.2)
+!CameraInstFollow(1)
+
+/Jump4
+!HoldOn(0.1)
+!OverworldCameraPan(572,804,1.5,1)
+!TurnOffBlocks(2)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2,50,572,884,JDR,DR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(2)
+!HoldOn(0.2)
+!CameraInstFollow(1)
+
+/Window2
+!PlaySound(Window)
+!NextRoom(VinAttic1,5)
+
+/Titus
+!CheckGlobal(99,3,TitusBruce)
+-Titus: Welcome to Vinium. Again.
+
+/TitusLeaving
+-Titus: You're leaving? Alright, ciao.
+
+/TitusBruce
+-Titus: Ave! Welcome to Vinium.
+-Titus: If you came for the games, the Circus Minimus opens in a couple of hours.
+-Bruce: Actually, I came here to find a mouse.
+-Titus: Oh? Well, none have come through recently. Maybe go ask around.
+
+/Decimus
+!CheckGlobal(99,3,DecimusBruce)
+-Decimus: We used to grow grapes here,|centuries ago.
+-Decimus: But the god buildings spread higher and further, and now this land is good for nothing but mushrooms.
+-Decimus: Still, even a rose can grow through concrete, so a wise bard once said.
+
+/DecimusBruce
+-Bruce: Ye seen a mouse around here?|He's kinda small, wears a cape.
+-Decimus: My eyes don't work so well. Can you describe his voice?
+-Bruce: Ah, my bad. He sounds like, uh...
+-Bruce: Hold on, let me get in character.
+!HoldOn(1)
+-Bruce: "Ooh, I'm Verm. Ooh, I'm so angry! I'm hopping mad, I am!"
+-Bruce: "Ooh, I'm gonna find the Yellow God and stab him with my sword that's too big 'cause I'm compensating fer my wee height."
+!HoldOn(1)
+-Decimus: Wow.
+-Decimus: That was good.
+-Decimus: I really got an impression of the guy.
+-Decimus: But no, I don't know him.
+
+/Depressus
+-Depressus: We put plastic roofs on|plastic houses. Plastic trees|upon a plastic floor.
+-Depressus: Our lives become plastic. Fetishised simulacra of a forgotten reality.
+-Depressus: Small wonder we lust for the grounded, violent delights of the Circus.
+!CheckGlobal(99,3,DepressusBruce)
+/DepressusBruce
+!HoldOn(0.6)
+-Bruce: Ha ha, yeah.
+-Bruce: Say, ye know a wee angry mouse?
+-Depressus: No more than I know myself.
+
+/Garry
+!ShoutMode()
+-Garry: MUSHROOOOOOMS!|Mushrooms for sale!
+!CheckGlobal(99,3,GarryBruce)
+/GarryBruce
+-Bruce: Do ye know anything about a mouse called Verm?
+-Garry: Nope. I know my mushrooms, though, I do.
+-Garry: Did you know that fungi are more closely related to us rodents than they are to plants?
+-Bruce: No, I did not know that.
+
+/Appia
+-Appia: Adagnitio is one of the gods-of-gods who live beyond our world.
+-Appia: It makes sense when you think about it. Who do the gods pray to? The gods-of-gods, of course.
+!CheckGlobal(99,3,AppiaBruce)
+/AppiaBruce
+-Bruce: Who do the gods-of-gods pray to?
+-Appia: Ah, the gods-of-gods-of-gods. It just keeps going, the whole way up the chain.
+-Bruce: Aye, makes sense.
+
+/Ceres
+-Ceres: Everyone loves Tenebra the nightbringer. That's who the Blademaster channels in battle.
+-Ceres: And of course, we can't forget Viridia, our city's patron.
+-Ceres: But me, I think Adagnitio is the coolest. With a wave of her wand, she can transform!
+!CheckGlobal(99,3,CeresBruce)
+/CeresBruce
+-Bruce: These are deities, aye?
+-Bruce: I dinnae suppose any of them are mice?
+-Ceres: Hmm. No, but the Blademaster is. Does that count?
+-Bruce: It might do.
+
+/Poster3
+-InfoBig: Re-elect Magnus for Baron!||Slow and steady progress wins the race!
+!CheckGlobal(99,3,Poster3Bruce)
+
+/Poster3Bruce
+-Bruce: Huh. Barons are elected here?|Must be a shrew thing.
+
+/Poster2
+!CheckGlobal(99,3,PosterBruce)
+-Verm: That's Isengrim. She seemed cool.
+
+/PosterBruce
+-Bruce: Is that Verm? Hard tae say...
+
+/Poster1
+-InfoBig: Need your pleats platted? Your hem's hawed? Your selvedges salvaged?||Come to Penelope's, the finest in bespoke clothing creation and tailoring.
+
+/Statue
+!CheckGlobal(8,1,SaveTime)
+-InfoBig: The statue depicts a member of the shrew pantheon.
+-InfoBig: This must be Adagnitio, the deity of wisdom and transformation.
+!SetGlobal(8,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Adagnitio knows.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Vinium,Town Forum)
+-Info: Your game has been saved.
+/SaveNo
+
+/Sergia
+!CheckGlobal(99,3,SergiaBruce)
+-Sergia: Maybe the gods will return one day. Until then, carpe diem.|Or is it carpe vinum?
+
+/SergiaBruce
+-Sergia: This city looks like it's on sacred ground, right? Don't you fret. the gods haven't stepped foot here for years.
+-Bruce: That's a relief.
+
+/Hemerodromos
+!CheckGlobal(99,3,HemeroBruce)
+-Hemerodromos: Quintus is jailed? Happy days.
+-Hemerodromos: Kinda sus that Magnus only stepped this late, though. What's up with that?
+
+/HemeroBruce
+-Hemerodromos: So, like, I'm not one for conspiracy theories. BUT...
+-Hemerodromos: The way Quintus keeps sweet-talking the Baron? It's super sketch.
+-Bruce: Who's Quintus?
+-Hemerodromos: He's the big-shot entrepreneur who handles the farm, the imports, the guards... basically everything.
+-Bruce: I see. That's not Verm.
+
+/Parvus
+!CheckGlobal(99,3,ParvusBruce)
+-Parvus: Woah, you're Ghost! Your moves were bare sick.
+
+/ParvusBruce
+-Parvus: Mad hyped for the circus tonight. It's Chariot Chuesday! Gonna be bare sick!
+-Bruce: Bear sick?
+-Bruce: Hey, do ye know a mouse called- oh, he's gone.
+
+/Galba
+!CheckGlobal(99,3,GalbaBruce)
+-Galba: I hear you're free from your work duties.
+-Galba: Lucky for some of us,|am I right? Hur hur hur...
+/GalbaBruce
+-Bruce: So. Yer working for an|actual slave driver.
+-Galba: Who isn't, these days?|Hur hur hur...
+
+/Wall
+-InfoBig: There's a poem scrawled on the wall.
+-InfoBig: I make a seed.|The boss makes nine.|That's why I pee into his wine.
+
+/Locked
+-InfoBig: The door is locked.
+-Bruce: I dinnae see anyone inside anyway.
+
+/Otho
+!CheckGlobal(99,3,OthoBruce)
+-Otho: Can't believe Quintus is finally in chains.
+-Otho: I don't even know why I'm still standing guard. Who do we answer to now?
+/OthoBruce
+-Bruce: Hey, do ye trust that slaver fellow?
+-Otho: Quintus? No way. I follow his orders, but the guy's a slimeball.
+!HoldOn(0.6)
+-Otho: ...Please don't tell him|I said that.
+
+/Vitellius
+!CheckGlobal(99,3,VitelliusBruce)
+-Vitellius: Quite a show you put on.|We'll be mopping up imperator|blood for days.
+/VitelliusBruce
+-Vitellius: We're still prepping the arena.
+-Vitellius: Come back tonight, though.|It's Chariot Chuesday!
+
+/FoundWine
+-Info: You found a bottle of Okay Wine.|It's fine. Remarkably unremarkable.
+
+/Domitian
+!CheckItem(75,DomitianDone)
+!ShowMoney(1)
+-Domitian: I'll sell ya a scutum for 15 seeds.
+*ScutumWhat: A what?
+*ScutumYes: Alright.
+*ScutumNo: No thanks.
+/ScutumWhat
+-Domitian: Ehhhhhhhhh?!|You don't know what a scutum is?
+-Domitian: It's one of our|famous oversized shields!
+-Domitian: Tourists love 'em.|And I don't blame 'em!
+-Domitian: Look at the fine shrew craftsmanship on this beauty.
+-Domitian: It's got the golden laurel insignia...|a metal boss for extra protection...
+-Domitian: You could buy 100 and form a centuria! Ha ha, just kidding.|Or am I?|[I am. Don't do that.]
+!HoldOn(0.5)
+-Domitian: So. What do ya say. 15 seeds.
+*ScutumYes: Alright.
+*ScutumNo: No thanks.
+/ScutumYes
+!MoneyCheck(15,NotEnoughScutum)
+!MoneyLoss(15)
+!ShowMoney(0)
+-Domitian: Pleasure doing business!
+!ReceiveItem(75)
+!PlaySound(ItemFound)
+-Info: You received a Scutum.|What a lovely shield.
+/NotEnoughScutum
+!ShowMoney(0)
+-Domitian: Your purse looks a little light. Maybe come back when you've made a seed or two.
+/ScutumNo
+!CheckGlobal(99,3,DomitianBruceNo)
+!ShowMoney(0)
+-Verm: Not today.
+/DomitianBruceNo
+!ShowMoney(0)
+-Bruce: I'm good, thanks.
+/DomitianDone
+!CheckGlobal(99,3,DomitianBruce)
+-Domitian: Wait, you're Ghost, right?|Can you sign my scutum?
+/DomitianBruce
+-Domitian: Coming to the games? If you're lucky, you'll get to see the champion in action.
+
+
+/Vespasian
+!CheckGlobal(99,3,VespasianBruce)
+-Vespasian: I ate a bad mushroom earlier and had the craziest vision.
+-Vespasian: I dreamt I was a falcon, practising law in a far-off land. Crazy stuff.
+/VespasianBruce
+-Vespasian: I think something was off with my morning mushroom, 'cos buddy, I am now seeing THINGS. 
+
+/Halfsight
+!CheckGlobal(99,3,CatEarly)
+!CheckGlobal(37,0,Catfirst)
+-Halfsight: What do you want, mouse?
+>Catquestions
+
+/CatEarly
+-Bruce: ...Probably best to leave 'em be.
+
+/Catfirst
+!SetGlobal(37,1)
+-Bruce: Careful, Verm. That felidae looks pretty nasty.
+-Verm: This one? She's harmless.
+-Verm: Just an old fuzzball the shrews just keep around. Her ugly mug scares off outsiders.
+-Verm: Wakey wakey, Halfsight.
+!HoldOn(0.2)
+!SetAnim(Halfsight,Wake)
+!HoldOn(1)
+!TitanModeToggle()
+!SetAnim(Halfsight,Loop)
+-Halfsight: WHO DARES WAKE-
+!TitanModeToggle()
+!HoldOn(0.5)
+-Halfsight: Oh, it's you.|Quintus's boy.
+-Verm: Not any more. I'm free.
+-Halfsight: Good for you. Go enjoy the sun on your snout. Try not to get eaten by a bird.
+-Halfsight: But why, pray tell, did you wake me?
+>Catquestions
+
+/Catquestions
+-Verm: I'm just wondering...
+*Diet: Your diet...
+*Collar: Your collar...
+*Scars: Your scars...
+*Nothing: Nothing.
+
+/Diet
+-Verm: What do you eat?
+-Halfsight: The shrews are nice enough to gift me with the bodies of the fallen gladiators.
+-Halfsight: In return, my presence acts as a deterrent to any other titans who would dare invade Vinium.
+-Halfsight: It's...|What's the phrase...|A symbiotic relationship.
+-Bruce: Just like Duke Josh and Lamia, am I right, Verm?
+-Verm: Hmm.
+-Halfsight: Was there something else?
+>Catquestions
+
+/Collar
+!CheckGlobal(37,1,Collar1)
+!CheckItem(71,Collar3)
+!CheckGlobal(37,2,Collar2)
+!CheckGlobal(37,4,Collar4)
+
+/Collar1
+!SetGlobal(37,2)
+-Verm: I'm curious about why some felidae have collars and some don't. Did you lose yours?
+-Halfsight: I did.
+!HoldOn(0.5)
+-Halfsight: It's a strange thing, for a felidae to lose a collar.
+-Bruce: I would've thought that collars would be a symbol of oppression, no?
+-Halfsight: Depends on the felidae.
+-Halfsight: For some, collars are shackles. For others, they are fine jewellery.
+-Halfsight: For me, my collar was... a memory of a former life.
+!CheckItem(71,CollarDone)
+-Verm: I'll keep an eye out for it.
+-Halfsight: There's no need. But I appreciate the thought.
+>Catquestions
+
+/Collar2
+-Verm: I'm keeping an eye out for your collar.
+-Halfsight: As I said, there's no need. But I appreciate the thought.
+>Catquestions
+
+/Scars
+-Verm: Your scars...
+-Halfsight: Are not your business, mouse.
+-Verm: Fair enough.
+>Catquestions
+
+/Nothing
+-Verm: No more questions.
+-Ver: Safe travels, mouse.
+
+/CollarDone
+-Verm: I've got good news.
+>Collar3
+
+/Collar3
+!SetGlobal(37,4)
+-Verm: I found your collar.
+-Halfsight: I don't recall asking for it.
+-Verm: Oh. Well, here you go.
+!HoldOn(1)
+-Halfsight: This...
+-Halfsight: Is clearly not my collar. 
+-Halfsight: It reeks of an unearned sense of pride. And the size is far too big for me.
+-Siobhan: I don't know what you were thinking, Verm. That's obviously Tiger's collar.
+!HoldOn(0.1)
+!Nani(Halfsight,!)
+!HoldOn(0.6)
+-Halfsight: TIGER?! That moron of a tabby from the north?
+-Halfsight: Ha ha...
+-Halfsight: The image of that buffoon moping over his lost collar...
+!HoldOn(0.4)
+-Halfsight: Well, mouse, if you were trying to inspire nostalgia in me, then you failed.
+-Halfsight: But you succeeded in entertaining me.
+-Halfsight: I ought to give you something for your troubles.
+-Halfsight: Here. Take the bell from the collar.|Perhaps you have a use for it.
+!PlaySound(ItemFound)
+!LoseItem(17)
+!ReceiveItem(40)
+-Info: You received a Tiger Bell.
+!HoldOn(0.6)
+-Halfsight: Stay safe, travellers.
+
+/Collar4
+-Verm: How's the collar?
+-Halfsight: Wonderful. How's freedom?
+-Verm: Yeah, it's alright.
+>Catquestions
+
+/QuintusTime
+!TeleportCharacter(Quintus,1986,629)
+!Walk(Quintus,DL,1.3)
+!HoldOn(1.5)
+!SetGlobal(35,2)
+!Nani(Quintus,!)
+!SetAnim(Bruce,UR)
+!HoldOn(1)
+-Quintus: Ave, traveller!
+!HoldOn(0.2)
+!Nani(Bruce,?)
+!HoldOn(0.8)
+-Bruce: Ah-vey?
+!HoldOn(0.4)
+-Quintus: You're not from around here, are you?
+-Bruce: Well...
+-Quintus: Ah, but you're no ordinary tourist. You came here for something in particular.
+-Quintus: I see it on your face.
+-Quintus: No need to be shy.|What are you after?
+-Bruce: It's a long-shot, but I'm looking for a mouse with no tail.
+-Bruce: Kinda scrawny. A little edgy and violent.
+-Quintus: I see, I see.
+-Quintus: I've got a farmer who fits half your description.
+-Quintus: A tailless mouse.|He's not violent though.
+-Quintus: Quiet and diligent.|Keeps to himself, mostly.
+-Quintus: Are you looking to buy him?
+*QYeah: Yeah, alright.
+*QNo: No!
+
+/QYeah
+-Bruce: Yeah, alright. What's the price?
+-Quintus: Hmm. Let's see.
+-Quintus: He's strong. A lot of scars, but no major health conditions. 
+-Quintus: He's three seasons old, but with proper care you might get another season or two out of him.
+-Quintus: Good temperament. Quiet. Obedient.
+-Quintus: So...
+!HoldOn(0.4)
+-Quintus: Forty seeds.
+-Bruce: A cheap price for a mouse.
+-Quintus: "Sic vita est", so they say.
+-Bruce: Can I see the goods first?
+-Quintus: Oh, of course, sir. Follow me.
+>ByeQ
+
+/QNo
+-Bruce: I'm not in the damned slave trade!
+-Quintus: Good grief! Me neither!
+-Quintus: Owning slaves is a heinous and very illegal activity.
+-Quintus: You and I are merely capitalists who are discussing the exchange of consensual worker contracts.
+!HoldOn(0.6)
+-Bruce: Right. Sure.
+!HoldOn(0.4)
+-Bruce: Can I see him? This... worker?
+-Quintus: Of course. "Caveat emptor", so they say.
+-Quintus: Follow me.
+>ByeQ
+
+/ByeQ
+!HoldOn(0.1)
+!SetAnim(Quintus,DR)
+!HoldOn(0.1)
+!SetAnim(Quintus,UR)
+!HoldOn(0.3)
+!Walk(Quintus,UR,1)
+!HoldOn(0.7)
+!Exit(Quintus)
+!HoldOn(0.3)
+
+/GetHim
+!SetAnim(Quintus,DR)
+!HoldOn(0.3)
+!Walk(Bruce,DL,1.2)
+!HoldOn(0.9)
+!SetAnim(Quintus,Hat1R)
+!ShoutMode()
+!SetGlobal(35,7)
+!HoldOn(0.3)
+-Quintus: That's the one. Seize him!
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+-Bruce: Seize him?
+!HoldOn(0.1)
+!Walk(Galba,DL,0.7)
+!Walk(Otho,DL,0.7)
+!Walk(Vitellius,DR,0.8)
+!Walk(Domitian,DR,0.8)
+!HoldOn(0.9)
+!SetAnim(Otho,DLSpear)
+!SetAnim(Galba,DLSpear)
+!SetAnim(Domitian,DRSpear)
+!SetAnim(Vitellius,DRSpear)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.3)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+-Bruce: The hell is this?!
+!HoldOn(0.1)
+!ShoutMode()
+-Quintus: Sciurus vulgaris!
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!SetAnim(Quintus,Hat2R)
+!HoldOn(0.6)
+-Quintus: That's what you are. I knew it the moment I saw your blazing fur.
+-Quintus: Your kind are very much|a rarity in these parts.
+-Quintus: Crowds will pay top seed|to see you fight or die|in the Circus Minimus.
+-Bruce: Are ye serious?|Do ye know who I am?
+-Quintus: I know exactly who you are.|You're top billing!|The star of the show!
+-Quintus: Guards, escort this gladiator to the arena.
+-Bruce: Yer gonna regret this, ye damn slaver bampot!
+-Quintus: Doubt it. Ave atque vale, traveller.
+!HoldOn(0.5)
+!RemoveFromParty(Bruce)
+!AddToParty(Verm)
+!SetLeader(Verm)
+
+!NextRoom(ToBlack)
+!HoldOn(1)
+!NextRoom(ViniumFarm,3)

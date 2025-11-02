@@ -1,0 +1,74 @@
+/Intro
+
+/StiltonTime
+~Stop
+!SetAnim(Stilton,DR)
+!HoldOn(1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!Nani(Verm,?)
+!HoldOn(0.5)
+-Verm: This is just a shipyard|storage room.
+-Stilton: Shhh, wait, wait.
+!SetGlobal(50,30)
+!HoldOn(1)
+!SlowWalk(Stilton,UR,2.5)
+!SlowWalk(Barrel,UR,2.5)
+!HoldOn(2.8)
+!Nani(Verm,!)
+!HoldOn(0.3)
+!SetAnim(Stilton,DR)
+!ResetWalkSpeed(Stilton)
+-Stilton: Ta-da!
+!Walk(Stilton,DL,0.5)
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+!SetAnim(Stilton,DR)
+-Siobhan: Woah! A secret tunnel!
+-Gwen: But where does it lead?
+-Stilton: Believe it or not, right into the palace.
+-Siobhan: You dug this yourself?
+-Stilton: Nah, not me. I was the one|to stumble upon it though.
+-Stilton: It's one of 'em fancy emergency escape passages. A royal must've had it dug aeons ago.
+!HoldOn(0.5)
+-Verm: Well. No time to waste.
+-Stilton: Good luck, all.
+-Stilton: Give that Yellow God hell!
+-Bruce: Yer not coming with us?
+-Stilton: I've got my own fight to join.
+-Stilton: Gotta keep those guards occupied while you do your thing.
+-Verm: Alright. Here goes.
+
+/EarlyExit
+-Verm: No turning back now.
+!Walk(Verm,UR,0.5)
+!HoldOn(0.5)
+
+/Siobhan
+-Siobhan: After you, Sir Verm!
+/Gwen
+-Gwen: I shouldn't be surprised. Every good palace has secret passages.
+/Bruce
+-Bruce: Let's not dilly-dally!
+/Stilton
+-Stilton: No need to thank me. Just go!
+
+
+/FoundSeeds
+-Info: You found 2 seeds.
+
+/FoundSeeds2
+-Info: You found a spring onion.
+
+/Hidden
+-InfoBig: Travel to the palace?
+*YesTravel: Yes.
+*NoTravel: Not yet.
+
+/YesTravel
+!NextRoom(ToBlack)
+!HoldOn(2)
+!NextRoom(PalaceThroneroom,2)
+
+/NoTravel

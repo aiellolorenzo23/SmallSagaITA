@@ -1,0 +1,144 @@
+/Intro
+~SkyGarden2Loop
+
+/Violet
+!CheckGlobal(10,2,NewViolet)
+!CheckGlobal(18,40,PostDuke)
+-Violet: The Duke banned me from playing anything but the Grey anthem.
+-Violet: One last gig, then I'm flying from this rotten tree.
+
+/PostDuke
+-Violet: I can't believe you actually threw out the fash.
+-Violet: Kudos! This song's for you.
+
+/Chest
+-InfoBig: You found an Oaken Ocarina!
+!CheckGlobal(18,40,ChestLate)
+-Violet: Something tells me that you're scheming against the Duke.
+-Violet: So go ahead and keep that.|Maybe it'll come in handy.
+
+/ChestLate
+-Violet: It's all yours!|Call it a "thank you" for kicking the Duke's ass.
+
+/Wall1
+-InfoBig: Violet the Screeching Creature|Now on her World Tour!
+
+/NewViolet
+!CheckGlobal(74,15,GuitarPractise)
+!CheckGlobal(74,16,GuitarPractise2)
+-Violet: Drop by anytime for a free concert.
+
+/GuitarPractise2
+-Violet: Hey. Could you go fetch Bruce?
+!NextRoom(ToBlack)
+!HoldOn(2)
+~stop
+!TeleportCharacter(Verm,2008,520)
+!TeleportCharacter(Bruce,340,212)
+!SetAnim(Bruce,DR)
+!SetAnim(Violet,Pause)
+!NextRoom(FromBlack)
+!HoldOn(1)
+-Violet: There you are. Ready for a quick jam session?
+*LetsPlay: Let's play.
+*NotNow: Not now.
+
+
+/GuitarPractise
+!SetGlobal(74,16)
+-Violet: Hey, is Bruce around? Send him in, I wanna have a word.
+!NextRoom(ToBlack)
+!HoldOn(2)
+~stop
+!SetAnim(Violet,Pause)
+!TeleportCharacter(Verm,2008,520)
+!TeleportCharacter(Bruce,340,212)
+!SetAnim(Bruce,DR)
+!NextRoom(FromBlack)
+!HoldOn(1)
+-Violet: I heard you and Mr Tuba tooting away upstairs.
+-Bruce: Aye, yeah, Tim. He was helping me practise.
+-Violet: I see.
+-Bruce: I know he worked for the Duke an' all, but I think he's a good guy.
+-Violet: Mm.
+-Bruce: He said music transcends language. I think he's got a point there!
+-Violet: Mm.
+!HoldOn(0.7)
+-Bruce: Something up?
+!HoldOn(0.9)
+-Violet: Tim and the others are trying. I can see that.
+-Violet: But it's like, they want to play music and dance and pretend that everything's hunky dory?
+-Violet: It's never that simple.|Clan Grey's got work to do.
+!SetAnim(Violet,Loop)
+-Violet: Still, he's right that there's something primal about music.
+!SetAnim(Violet,Pause)
+-Violet: Raw emotion in sound form!|That's powerful stuff.
+-Violet: So on that note [heh],|you wanna jam?
+-Bruce: Aye, that'd be great. I need to shake this rust off.
+-Violet: No shame in a bit of rust.
+-Violet: Sometimes you just gotta step away from your instrument for a bit. Clear your head.
+!SetAnim(Violet,Loop)
+-Violet: But sometimes you gotta face the music and smash through whatever barrier's holding you back.
+!SetAnim(Violet,Pause)
+-Bruce: Makes sense tae me.
+-Violet: Cool. So, you're ready?
+*LetsPlay: Let's play.
+*NotNow: Not now.
+
+/NotNow
+-Bruce: Not right now.
+-Violet: Suit yourself. I'll be waiting.
+>FadeBack
+
+/LetsPlay
+!OverworldCameraPan(370,150,10,1)
+!SetAnim(Bruce,PlayPrepare)
+-Bruce: Aye, let's go!
+-Violet: Follow my lead.
+!SetAnim(Violet,Loop)
+!DanceTime()
+!SetAnim(Violet,Pause)
+
+!CheckGlobal(20,4,Perfect)
+!CheckGlobal(20,3,Good)
+!CheckGlobal(20,2,Meh)
+
+-Violet: Oof. What happened there? You drop your flute or something?
+>MaybeEncore
+
+/Meh
+-Violet: Hmm. You stumbled a bit there, didn't you?
+-Violet: S'alright. Mistakes happen.
+>MaybeEncore
+
+/Good
+-Violet: Pretty damn metal.|You gave it your all, didn't you?
+-Bruce: Hah, yeah, I did! Shall we play one more?
+>PostPerformance
+
+/Perfect
+-Violet: That was metal as hell!|You didn't make a single mistake.
+-Violet: It's like you made a deal with a demonic flute spirit or something.
+-Bruce: Hah, well, I don't know about that! Shall we play one more?
+>PostPerformance
+
+/MaybeEncore
+-Info: Try again?
+*LetsPlay: Let's go!
+*NotNow: That's enough.
+
+/PostPerformance
+!SetGlobal(74,20)
+-Violet: Nah, no need. You sound like an absolute pro.
+-Violet: Actually, you know what? You should go back upstairs and show Anton what you learned.
+-Bruce: A performance for Anton... why does that sound so scary?
+-Violet: Ha, don't sweat it. He'll be impressed with your improvement. I got no doubt.
+>FadeBack
+
+/FadeBack
+!NextRoom(ToBlack)
+!HoldOn(1.5)
+!TeleportCharacter(Bruce,2008,520)
+!TeleportCharacter(Verm,348,218)
+!NextRoom(FromBlack)
+!HoldOn(1)

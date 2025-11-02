@@ -1,0 +1,171 @@
+/Intro
+!CheckGlobal(50,0,IntroCont)
+!CheckGlobal(50,1,IntroCont)
+
+/IntroCont
+~Murida2Loop
+
+/Cauldron
+-InfoBig: You smell onions and garlic|sizzling in golden olive oil.
+
+/Vy
+!CheckGlobal(50,0,VyCont)
+!CheckGlobal(50,1,VyCont)
+-Vy: Smells like you're cooking up trouble. No business of mine!
+
+/VyCont
+!CheckGlobal(53,1,Vy1)
+!CheckGlobal(53,2,Vy3)
+!CheckGlobal(53,3,Vy7)
+!CheckGlobal(53,4,VyFinal)
+-Vy: Welcome, mouse! Welcome to my humble little restaurant.
+-Vy: Tell me. Do you appreciate the fine pleasure of gourmet cuisine?
+*Yep: I do!
+*Nope: Eh.
+
+/Yep
+-Verm: Sure, food's great.
+-Vy: Ah! A connoisseur!
+>Continue
+
+/Nope
+-Verm: Eh. Food's alright, I guess.
+-Vy: Ah! You're a mouse who only eats food for nutrition.
+-Vy: Understandable. But you are missing out on so much!
+>Continue
+
+/Continue
+-Vy: If you bring me rare ingredients, I can craft dishes that transcend the usual Muridan swill.
+-Vy: I can make...
+!OverworldCameraSnap(370,150)
+!SetGlobal(53,1)
+!HoldOn(0.1)
+!OverCamZoom(2)
+!ShoutMode()
+!HoldOn(0.8)
+-Vy: THE FOOD OF THE GODS.
+!HoldOn(1)
+!OverCamZoom(1)
+!HoldOn(1)
+-Verm: Okay.
+!HoldOn(0.4)
+-Vy: But what dish to start with? Hmm...
+-Vy: Perhaps a delicate nut flour cookie with just a hint of rose water...
+-Vy: Bring me a pistachio, and I shall make for you... ghoriba!
+
+/Vy1
+!CheckItem(17,Vy2)
+-Vy: Bring me a pistachio, and I shall make for you... ghoriba!
+
+/Vy2
+-Verm: Here's your pistachio.
+-Vy: Excellent! It smells divine. You must have travelled far to procure it.
+-Verm: A guy was selling them up the road.
+-Vy: Such humility. Ten seconds, if you please.
+!NextRoom(ToBlack)
+!HoldOn(0.3)
+!PlaySound(Cooking)
+!HoldOn(2)
+-Info: Vy works some almond flour into a paste, then adds crumbs of pistachio and a single drop of rose water.
+-Info: He bakes the dough in a blazing wood oven. An aroma of sweet and floral biscuits fills the air.
+!HoldOn(2)
+!NextRoom(FromBlack)
+-Vy: Voila! Ghoriba!
+!LoseItem(17)
+!ReceiveItem(22)
+!PlaySound(ItemFound)
+!SetGlobal(53,2)
+-Info: You received a ghoriba cookie.|It smells divine.
+-Vy: What next? Hmm...
+-Vy: Perhaps a hearty, steamed, vegetable dumpling, with a sesame dip...
+-Vy: Bring me a peanut and a spring onion, and I will make for you... baozi!
+
+/Vy3
+!CheckItem(37,Vy4)
+-Vy: Bring me a peanut and a spring onion, and I will make for you... baozi!
+
+/Vy4
+!CheckItem(9,Vy5)
+-Verm: I have a spring onion, but I don't have a peanut.
+-Vy: You can't procure one?
+-Verm: I think I missed my opportunity.
+-Vy: What does that mean?!
+-Vy: Actually, it's no matter. I'll make your bao bun nut-free!
+>Vy6
+
+/Vy5
+-Verm: Here's your spring onion and peanut.
+-Vy: Magnificent!
+-Vy: A moment, if you please.
+>Vy6
+
+/Vy6
+!NextRoom(ToBlack)
+!HoldOn(0.3)
+!PlaySound(Cooking)
+!HoldOn(2)
+-Info: Vy fries the spring onion in a drop of sesame oil, along with a pawful of vegetables and some soy sauce.
+-Info: He pours the mixture onto a sheet of dough, carefully folds it into a ball, and then...
+-Info: Woah! That's a lot of steam.
+!HoldOn(2)
+!NextRoom(FromBlack)
+-Vy: Voila! Baozi!
+!LoseItem(37)
+!LoseItem(9)
+!ReceiveItem(38)
+!PlaySound(ItemFound)
+!SetGlobal(53,3)
+
+-Info: You received a baozi.|It smells divine.
+-Vy: Next... I want to try to make my magnum opus. My ultimate dish!
+-Vy: See, I had a dream once.
+-Vy: A dream of a forbidden food. A food not even the gods would dare to make.
+-Vy: A cookie base encompassing a salad, all in the shape of a paw.
+-Vy: Picture it! Dessert and greens, all in one meal!
+-Verm: That sounds... odd.
+-Vy: Dream big, my friend.
+-Vy: But I'll need something special for this to work.
+-Vy: Bring me high-quality chocolate, and I will make for you... the King's Paw!
+
+/Vy7
+!CheckItem(39,Vy8)
+-Vy: Bring me chocolate, and I will make for you... the King's Paw!
+
+/Vy8
+-Verm: Here's your chocolate.
+-Vy: Wonderful!
+-Vy: A moment, if you please.
+!NextRoom(ToBlack)
+!HoldOn(0.3)
+!PlaySound(Cooking)
+!HoldOn(1)
+-Info: Vy is making a mound of cookie dough into the shape of a paw.
+-Info: While it bakes, he begins preparing a salad. Chopped cucumber, tomatoes, onions, fresh olive oil...
+-Info: Now, he's... combining the two?! He's stuffing the salad into the cookie paw!
+-Info: This is madness.|It's illegal.|The highest of blasphemies!
+-Info: You try to intervene, but Vy pushes you away. His vision cannot be stopped.
+!HoldOn(2)
+!NextRoom(FromBlack)
+-Vy: Voila! The King's Paw.
+!LoseItem(39)
+!ReceiveItem(41)
+!PlaySound(ItemFound)
+!SetGlobal(53,4)
+
+-Info: You received the King's Paw.
+-Info: Conceptually, the food is incredibly off-putting.
+-Info: But when you take a nibble, you are hit with an enticing blend of flavours.
+-Info: Warming dough.|Smooth, bitter-sweet chocolate.|Delicately crunchy salad leaves.
+-Info: This is potentially the greatest dish ever created.
+-Info: Yes. You know it in your heart of hearts.
+-Info: This is the pinnacle of gourmet cuisine.|No meal will ever surpass this.|Food is over. It's done.
+!HoldOn(0.6)
+-Vy: And with that, our food journey is complete.
+-Vy: I hope you gained a greater appreciation for gourmet cuisine, my friend.
+-Verm: You know what? I think I did. Thanks, chef.
+
+/VyFinal
+-Vy: Bon appetit, my gourmet friend.
+
+/FoundSeeds
+-Info: You found a sprig of coriander. How fragrant!

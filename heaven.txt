@@ -1,0 +1,627 @@
+/Intro
+!OverworldCameraSnap(3633,180)
+~HeavenPrelude
+!HoldOn(3)
+!OverworldCameraPan(320,180,0.2,1)
+!HoldOn(6)
+!BigTitle(Heaven,Tread softly.)
+!StartHeavenScene()
+!SetAnim(Verm,HoleExit)
+!SetAnim(Lance,HoleExit)
+!HoldOn(1.9)
+!PlaySound(GrateMove)
+!HoldOn(6.2)
+!Walk(Verm,DL,1)
+!HoldOn(1.1)
+!SetAnimEnd(Verm,L)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,U)
+!HoldOn(2.3)
+!Walk(Lance,DR,1)
+!HoldOn(1.1)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,U)
+!HoldOn(0.6)
+~HeavenLoop
+-Verm: Woah...
+
+!HoldOn(0.5)
+!TurnOnBlock()
+-Lance: Beautiful, isn't it?
+-Lance: Fruit. Grain. Meat. Items I can't even describe.
+-Lance: All neatly wrapped and ours for the taking.
+
+!HoldOn(0.1)
+!SetAnimEnd(Lance,UL)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,L)
+!HoldOn(0.1)
+-Lance: But we mustn't dawdle.
+-Lance: Dad's letter says that the hoard is overrun with hungry gods at dawn.
+-Verm: Oh boy, oh boy! What do we start with?
+!SetAnimEnd(Verm,UR)
+!HoldOn(0.1)
+!Walk(Verm,R,0.3)
+!HoldOn(0.3)
+-Verm: Corn! Let's find some corn!
+!Walk(Verm,R,0.3)
+!HoldOn(0.3)
+-Verm: And bananas! And bread!
+!Walk(Verm,R,0.3)
+!HoldOn(0.3)
+-Verm: And is that chocolate that I smell?
+-Lance: Calm down, Verm. It's seeds we want.
+!CameraFollow(1)
+-Verm: Seeds? How boring.
+-Lance: Boring, yes, but they're valuable and imperishable.
+!Walk(Lance,L,0.3)
+!HoldOn(0.3)
+-Lance: Lead the way. I think they're stored at the end of this corridor.
+!PinFollowers()
+
+/STUFF
+!CameraFollow(1)
+!QuickSetup()
+afafa
+
+/ChatLance
+-Lance: You're doing great. Let's keep moving.
+
+/Distracted
+-Verm: Potatoes...
+-Lance: Don't get distracted, Verm. Focus on the mission.
+!Walk(Verm,D,0.2)
+!HoldOn(0.3)
+
+/Distracted2
+-Verm: What's down there? It smells weird.
+-Lance: No seeds, that's for sure. Come on, Verm. We're close.
+!Walk(Verm,D,0.2)
+!HoldOn(0.3)
+
+/Distracted3
+-Verm: Where did it go...
+!Walk(Verm,D,0.2)
+!HoldOn(0.3)
+
+/TrapLook
+-Verm:  . . .
+
+/Cans1
+-Verm: What's in these? I'm not getting a scent.
+-Lance: You have to go by the picture.
+-Verm: Ah, of course. So this one is... peaz.
+-Lance: Peas.
+
+/Cans2
+-Verm: What's in this one?
+-Lance: No idea. They all look the same to me.
+
+/Cans3
+-Verm: From the picture, I'm guessing this one has... cherries?
+-Lance: Or tomatoes.
+
+/Cans4
+-Verm: I know this one! It's corm.
+-Lance: Corn, Verm.
+-Verm: Heh. I know.
+
+/Cans5
+-Verm: Nuts?
+-Lance: Yes. Nuts.
+
+/Cans6
+-Verm: Seeds!
+-Lance: We've already got our bag. Stop being silly.
+
+/TrapSpotted
+!Nani(Lance,!)
+!HoldOn(0.3)
+-Lance: VERM! Wait!
+-Verm: W-what-
+!OverworldCameraPan(2000,2660,1,1)
+!HoldOn(1)
+!Walk(Verm,R,0.2)
+!HoldOn(1)
+!SetAnimEnd(Lance,R)
+!SetAnimEnd(Verm,L)
+!CameraFollow(1)
+!HoldOn(1)
+-Lance: I've seen those before. They're sinister contraptions.
+-Lance: One wrong step, and BAM! The bar comes down and snaps your neck in two.
+-Lance: Dad called them thundersnares.
+-Verm: Are you serious?
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,R)
+!HoldOn(0.5)
+-Verm: They look so harmless...
+-Lance: Don't even touch them. Let's tread lightly.
+
+/TrapBypassed
+!Walk(Verm,R,0.2)
+!HoldOn(0.3)
+-Verm: Lance, who made the thundersnare things? Gods?
+-Lance: Indeed. And they were probably left out as a warning.
+!SetAnimEnd(Verm,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,L)
+!HoldOn(0.1)
+-Verm: A warning? For us?
+-Lance: We are trespassing on holy ground, after all.
+-Lance: Are you scared?
+*MaybeScared: A little...
+*NotScared: Nuh-uh!
+
+/MaybeScared
+-Verm: A little...
+-Lance: Me too.
+>ListenVerm
+
+/NotScared
+-Verm: Nuh-uh! I'm not scared of some stupid god.
+-Lance: You don't have to put on a brave front. I'm scared too.
+>ListenVerm
+
+/ListenVerm
+-Lance: But we have each other's backs.
+-Lance: That's what family's for, right?
+-Verm: Yep. We stick together.
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,R)
+!HoldOn(0.3)
+-Verm: I think I can almost smell the seeds...
+-Lance: Then lead the way.
+
+/SeedsFound
+!Walk(Verm,R,0.2)
+!HoldOn(0.2)
+!UnpinFollowers()
+!Walk(Verm,R,0.2)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UR)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+-Lance: This is what we want.
+-Lance: There are enough seeds in one packet to feed the village for a month.
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+-Lance: Help me drag it down.
+!NextRoom(ToBlack)
+!HoldOn(0.4)
+!PlaySound(Bagfall)
+-Info: The bag comes down|with a gentle tug.
+!TeleportCharacter(Lance,3544,305)
+!TeleportCharacter(Verm,3580,340)
+!OverworldCameraSnap(3760,305)
+!SetAnimEnd(Verm,UR)
+!SetAnimEnd(Lance,R)
+!HoldOn(1)
+!SetNPCFlag(Lance,YouPush)
+!SeedbagFall()
+!HoldOn(0.3)
+!NextRoom(FromBlack)
+-Verm: It's huge! How are we going to get it back past the thundersnares?
+-Lance: We'll solve that problem when we get there.
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,Pull1)
+!HoldOn(0.3)
+-Lance: For now, just help me drag it towards the Underriver.
+-Lance: I'll pull. You go around the other side and push.
+-Verm: Got it.
+
+/YouPush
+-Verm: What am I doing again?
+-Lance: You're going to the back of the seed packet to help me push.
+-Verm: Oh, that's right.
+
+/GetBackHere
+-Lance: Verm, please focus! Help me out with these seeds.
+!Walk(Verm,R,0.3)
+!HoldOn(0.3)
+
+/SeedPackFront
+-Lance: Are you ready?
+*ReadyYes: Let's do this.
+*ReadyNo: Not yet.
+
+/ReadyNo
+-Verm: Give me a second to warm up.
+!Walk(Verm,R,0.2)
+!HoldOn(0.2)
+
+/ReadyYes
+-Verm: Let's do this!
+!Walk(Verm,L,0.1)
+!HoldOn(0.1)
+!TeleportCharacter(Verm,3764,305)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,Push1)
+!HoldOn(0.3)
+-Lance: That's the spirit!
+-Lance: Alright, when I give the signal, give the packet a big shove to the left.
+!CameraFollow(1)
+!HoldOn(0.3)
+!FirstPull()
+
+/SeedEvent1
+!HoldOn(0.3)
+!SetAnimEnd(Verm,DL)
+-Verm: Do you smell something?
+-Lance: You and your nose.|Try to focus, Verm.
+!HoldOn(0.2)
+!SetAnimEnd(Verm,Push1)
+!HoldOn(0.2)
+-Lance: On my mark...
+!HoldOn(0.3)
+!PullReady()
+
+
+/SeedEvent2
+!HoldOn(0.3)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,L)
+-Verm: It smells... sweet.|Not good-sweet, though.
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+-Lance: I'm getting a whiff too. It's sickly.
+-Verm: What do we do?
+!SetAnimEnd(Lance,Pull1)
+-Lance: We stick to the mission. On my mark.
+!SetAnimEnd(Verm,Push1)
+!HoldOn(0.3)
+!PullReady()
+
+/Pull
+!SpecialWalk(Verm,L,0.4,Push2,0.4)
+!SpecialWalk(Lance,L,0.4,Pull2,0.4)
+!HoldOn(0.4)
+!SetAnimEnd(Lance,Pull1)
+!SetAnimEnd(Verm,Push1)
+!HoldOn(0.01)
+!SetAnimEnd(Lance,Pull1)
+!SetAnimEnd(Verm,Push1)
+!HoldOn(0.2)
+!PullReady()
+
+/GodSpotted
+!HoldOn(0.3)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,L)
+-Verm: Lance, I feel dizzy.
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+-Lance: Oh dear. Can you keep going?
+-Verm: I think so. But the smell is really strong. I think it's coming from...
+!TheMoment()
+!HoldOn(0.5)
+!SetAnimEnd(Lance,UL)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,U)
+~Stop
+!HoldOn(5)
+!ResetWalkSpeed(Verm)
+!ResetWalkSpeed(Lance)
+-Verm: Is... is that-
+-Lance:	Behind the bag. Now.
+!Walk(Verm,DR,0.2)
+!Walk(Lance,DL,0.2)
+!HoldOn(0.2)
+!Walk(Verm,D,0.1)
+!Walk(Lance,D,0.1)
+!HoldOn(0.1)
+!Walk(Verm,DL,0.2)
+!Walk(Lance,DR,0.2)
+!HoldOn(0.2)
+!Walk(Verm,L,0.2)
+!Walk(Lance,R,0.2)
+!HoldOn(0.2)
+!SetAnimEnd(Verm,UL)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,U)
+!SetAnimEnd(Verm,U)
+!HoldOn(2)
+~YGod1Loop
+!TheMomentTwo()
+!HoldOn(8)
+!HeavenShake(4)
+!HoldOn(2)
+!HeavenShake(3)
+!HoldOn(2)
+!HeavenShake(2)
+!HoldOn(2)
+!HeavenShake(2)
+!HoldOn(3)
+-Verm: Did it see us?
+!HoldOn(0.1)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+-Lance: We need to get out of here. Now.
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,D)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DL)
+!HoldOn(0.1)
+!FastWalk(Lance,L,0.8)
+!HoldOn(0.3)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,L)
+!HoldOn(0.3)
+-Verm: What about the seeds?
+-Lance: Forget the seeds! Run!
+!HoldOn(0.1)
+!TeleportCharacter(Lance,1400,270)
+!ResetWalkSpeed(Lance)
+
+/CinematicBulls
+!WhiteFlash()
+!HoldOn(0.5)
+!ShowCinematic(FaceOfGod)
+!HoldOn(1)
+!WhiteFlash()
+!HoldOn(0.5)
+!DeleteCinematic()
+
+/TailTrap
+~Stop
+!HeavenShake(2)
+!Walk(Verm,L,0.4)
+!HoldOn(0.8)
+!GodAppear()
+!Nani(Verm,?)
+!HoldOn(0.7)
+!GodShadowStep()
+!HoldOn(1)
+!HeavenShake(3)
+!HoldOn(0.7)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.5)
+!SetAnimEnd(Verm,D)
+!HoldOn(0.5)
+!GodShadowStep()
+!SetAnimEnd(Verm,DR)
+!HoldOn(0.5)
+!SetAnimEnd(Verm,R)
+!HoldOn(0.5)
+!HeavenShake(4)
+!HoldOn(0.2)
+!Nani(Verm,!)
+!HoldOn(0.8)
+!SpecialWalk(Verm,L,0.2,RWalk,0.5)
+!HoldOn(0.2)
+!GodShadowStep()
+!HoldOn(0.3)
+!SetAnimEnd(Verm,R)
+!HoldOn(0.7)
+!HeavenShake(5)
+!HoldOn(0.6)
+!SpecialWalk(Verm,L,0.2,RWalk,0.5)
+!HoldOn(0.5)
+!SetAnimEnd(Verm,R)
+!GodShadowStep()
+!HoldOn(0.5)
+!SetAnimEnd(Verm,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+!Walk(Verm,L,0.1)
+!HoldOn(0.1)
+!FastWalk(Verm,L,0.2)
+!HoldOn(0.1)
+!HeavenShake(6)
+!HoldOn(0.05)
+!Nani(Verm,!)
+!VermTailTrap()
+
+/TailTrap2
+!HoldOn(2)
+!SetAnim(Verm,LandOpen)
+!HoldOn(1)
+!SetAnim(Verm,LandPush)
+!HoldOn(1)
+!SetAnim(Verm,LandCollapse)
+!HoldOn(0.5)
+!SetAnim(Verm,LandOpen)
+!HoldOn(0.3)
+!ShoutMode()
+-Verm:  Ahh!
+~YGod2Loop
+!FastWalk(Lance,R,0.6)
+!HoldOn(0.6)
+-Lance: Verm! Oh no.
+-Verm: Lance... It hurts.
+-Lance: Hold on. Don't move.
+!FastWalk(Lance,R,0.7)
+!HoldOn(0.7)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,D)
+-Lance: Alright.
+-Lance: Stay calm.
+!HeavenShake(2)
+!HoldOn(1)
+-Lance: It's just your tail, thank the fates.
+-Lance: We can get you out of this.
+-Verm: R-right.
+!ResetWalkSpeed(Lance)
+
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!Walk(Lance,R,0.4)
+!HoldOn(0.4)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,D)
+
+-Lance: Here's what we're going to do.
+-Lance: I'm going to lift the bar. And you're going to squeeze out.
+!HeavenShake(2)
+!HoldOn(1)
+-Verm: Squeeze out?
+-Lance: I know you can do it.
+-Lance: When I give the signal, just push as hard as you can.
+!HoldOn(0.2)
+!SetAnimEnd(Lance,Lift1)
+-Lance: On my mark.
+!HoldOn(0.2)
+!PullReadyTrap()
+
+/TrapEvent1
+!HoldOn(0.2)
+!SetAnimEnd(Lance,D)
+!HoldOn(0.2)
+!SetAnim(Verm,LandOpen)
+-Lance: Are you pulling?
+!ShoutMode()
+-Verm:  Yes!
+-Lance: Let's try again.|All your might, now.
+!HoldOn(0.2)
+!SetAnimEnd(Lance,Lift1)
+!HoldOn(0.2)
+!PullReadyTrap()
+
+/PullTrap
+!SetAnim(Verm,LandPush)
+!SetAnimEnd(Lance,Lift2)
+!HoldOn(0.8)
+!SetAnim(Verm,LandStrain)
+!HoldOn(0.3)
+!GodShadowStep()
+!HoldOn(0.5)
+!SetAnimEnd(Lance,Lift1)
+!SetAnim(Verm,LandCollapse)
+!HoldOn(0.5)
+!HeavenShake(99)
+!HoldOn(1.5)
+!PullReadyTrap()
+
+/TrapEvent2
+!HoldOn(0.2)
+!SetAnimEnd(Lance,D)
+!HoldOn(0.3)
+!SetAnim(Verm,LandOpen)
+-Lance: This isn't working...
+!HoldOn(0.2)
+!GodShadowStep()
+!SetAnimEnd(Lance,DL)
+!HoldOn(0.5)
+!SetAnimEnd(Lance,D)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.3)
+
+!HeavenShake(99)
+!HoldOn(1.5)
+
+-Lance: And we're running out of time...
+!Walk(Lance,R,0.5)
+!HoldOn(0.5)
+-Lance: I'll stall the god. You find a way to get yourself free.
+!HoldOn(0.3)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.1)
+!ShoutMode()
+-Verm: Lance, no!
+!HoldOn(0.2)
+!LanceJumpUp()
+!HoldOn(1.2)
+-Verm: Lance...
+!HoldOn(0.3)
+!LanceJumpUp()
+!HoldOn(1.2)
+-Verm: Don't go... I'm scared.
+!HoldOn(1.4)
+!LanceAscend()
+!TeleportCharacter(Lance,2035,-560)
+!OverworldCameraPan(1800,-590,0.5,1)
+!HoldOn(1)
+!OverworldMidCameraPan(2435,-590,0.5,1)
+!SetAnimEnd(Lance,DR)
+!Walk(Lance,R,2.5)
+!HoldOn(1)
+!HoldOn(2.5)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.5)
+-Lance: Over here you monster!
+~FaceOfGodLoop
+!GoToBattle(Eclipse1)
+
+/PostEclipse
+!SetAnim(Verm,LandSword)
+!HoldOn(3.7)
+!SetAnim(Verm,LandSwordUp)
+!HoldOn(3.6)
+~YGodAftermath
+!RemoveFromParty(Lance)
+!SetAnim(Verm,SwordTurn1)
+!HoldOn(5)
+!YGodCinematic()
+!HoldOn(1)
+!SpecialWalk(Verm,L,0.4,SwordBackup1,0.4)
+!HoldOn(0.5)
+!SetAnimEnd(Verm,SwordBackup1)
+!HoldOn(1)
+!YGodCinematic2()
+!HoldOn(1)
+!SpecialWalk(Verm,L,0.4,SwordBackup2,0.4)
+!HoldOn(0.5)
+!SetAnimEnd(Verm,SwordBackup2)
+!HoldOn(1.5)
+!SetAnim(Verm,SwordTurn2)
+!HoldOn(0.5)
+!SpecialWalk(Verm,L,8,SwordRun,1)
+!HoldOn(1)
+!OverworldCameraPan(320,180,0.25,1)
+!HoldOn(6.5)
+!NextRoom(ToBlack)
+!HoldOn(2)
+!NextRoom(VoidSpace,2)
+
+

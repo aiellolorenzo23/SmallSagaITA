@@ -1,0 +1,136 @@
+/Intro
+!CheckGlobal(50,0,IntroCont)
+!CheckGlobal(50,1,IntroCont)
+
+/IntroCont
+~Murida2Loop
+
+/Beth
+!CheckGlobal(99,2,BethSio)
+!CheckGlobal(50,0,BethCont)
+!CheckGlobal(50,1,BethCont)
+-Beth: What's all the ruckus?
+
+/BethSio
+-Beth: Howdy.
+-Siobhan: Uh. Hello. Don't mind me. Just looking around.
+-Beth: Alrighty.
+
+/BethCont
+!CheckGlobal(42,1,ItemCheck)
+!CheckGlobal(42,6,ItemFound)
+!CheckGlobal(42,7,ItemDone)
+-Beth: I'm so proud of my Mollie's creativity.
+-Beth: But she gets through paints faster than I can make them.
+-Beth: Say... perhaps you can help.
+-Mollie: Don't bother strangers for your errands, mother!
+-Beth: Oh, he doesn't mind.|Do you, young man?
+*Sure: No problem!
+*Nope: Not now.
+
+/BethSecond
+-Beth: Oh! Did you change your mind?
+*Sure: I can help!
+*Nope: Not now.
+
+/Sure
+!SetGlobal(42,1)
+-Verm: It's just paint, right? Is there a craft supplies shop in Murida or something?
+-Beth: If only!
+-Beth: We have to make our own pigments from natural materials.
+-Beth: To craft a perfect indigo, we first must pluck forty petals from a hydrangea in full bloom...
+-Verm: I don't have time for that.
+-Verm: How about I just go nab some godly paint instead? That would be easy.
+!HoldOn(0.1)
+!Nani(Beth,?)
+!HoldOn(0.5)
+-Beth: Godly paint? Well now, that really would be something.
+-Beth: I wouldn't ask you to risk life and limb over paint, though.
+-Verm: It's nothing.|I have a nose for these things.
+-Verm: Sit tight.|I'll be back later.
+!HoldOn(0.5)
+!PlaySound(NewLocation)
+-Info: A new location has been added to your map!
+/Nope
+-Verm: Sorry. I'm a little busy.
+-Mollie: You see, mother?
+!SetNPCFlag(Beth,BethSecond)
+
+/ItemCheck
+-Beth: I wish you the best of luck with your search for godly paint!
+
+/ItemFound
+!SetGlobal(42,7)
+!ShowItem(Prota,79)
+!HoldOn(0.6)
+-Verm: Ta-da. Paint.
+-Beth: Wow, this colour is amazing!|Like a Spring sky after a storm.
+-Beth: Did you have any trouble?
+*TroubleYes: Some trouble.
+*TroubleNo: No trouble.
+
+/TroubleYes
+-Verm: Actually, yeah, it was a complete hassle.
+-Beth: Oh, I'm sorry to hear that. Maybe gathering petals would have been easier!
+>TroubleTogether
+/TroubleNo
+-Verm: It was nothing.
+-Beth: Oh, I'm glad.
+-Mollie: He's being modest, mother!
+>TroubleTogether
+
+/TroubleTogether
+!HoldOn(0.3)
+-Beth: I know it's not much, but I want you to have this as payment.
+-Beth: Don't try to refuse, now!
+!PlaySound(ItemFound)
+!MoneyLoss(-2)
+-InfoBig: You received 2 seeds.
+!HoldOn(0.4)
+-Mollie: Take one of my paintings too.
+-Verm: A painting? Are you sure?
+!HoldOn(0.4)
+-Mollie: You went out of your way to do a good deed.
+-Mollie: I don't really get why. Maybe you enjoy playing the hero. Maybe you were hoping for some reward. But...
+!ShowItem(Mollie,80)
+!HoldOn(0.6)
+-Mollie: Look, just take the painting.
+!PlaySound(ItemFound)
+!LoseItem(79)
+!ReceiveItem(80)
+-InfoBig: You received a Soothing Painting. You add it to your trinkets.
+
+/ItemDone
+-Beth: My Mollie's creativity is blossoming like a hydrangea at Summer's end.
+-Beth: Take care, now!
+
+/Mollie
+!CheckGlobal(99,2,MollieSio)
+!CheckGlobal(50,0,MollieCont)
+!CheckGlobal(50,1,MollieCont)
+-Mollie: I want to join your protest. But I can't paint from a prison cell.
+
+/MollieSio
+-Siobhan: Ooh! That's looking grand.
+-Mollie: Why thank you.
+
+/MollieCont
+!CheckGlobal(42,7,MollieDone)
+-Mollie: Portraits are popular, but I'm trying to paint something new. Something different.
+
+/MollieDone
+-Mollie: Have you seen the old masters' paintings in the palace galleries?
+-Mollie: Their work is on another level. Maybe one day my paintings can join them.
+
+/Canvas
+!CheckGlobal(42,7,CanvasDone)
+-InfoBig: It's an unfinished painting.|You cannot tell what it depicts.
+
+/CanvasDone
+-InfoBig: It's an abstract painting.
+-InfoBig: Strong black lines intersect red, blue, and yellow geometric shapes.
+-InfoBig: It doesn't represent anything you recognise. But still, there's something pleasing about the arrangement. You feel a moment of tranquillity.
+
+/FoundSeeds
+-Info: You found a single seed.
+-Info: You guiltily add it to your wallet.

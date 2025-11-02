@@ -1,0 +1,177 @@
+/Intro
+!CheckGlobal(5,1,IntroContinue)
+!TeleportCharacter(Siobhan,3060,400)
+
+/Nemain
+-Nemain: Make no trouble, vagabond.
+
+/Gilda
+-Gilda: Finish your business and move on, vagabond. Siobhan doesn't need distractions.
+
+/Morvyn
+-Morvyn: Can I help you with something?
+
+/IntroContinue
+!UnpinFollowers()
+!HoldOn(0.3)
+!TeleportCharacter(Verm,217,444)
+!TeleportCharacter(Siobhan,168,417)
+!Walk(Verm,UR,0.9)
+!Walk(Siobhan,UR,0.9)
+!HoldOn(1)
+!SetGlobal(5,2)
+-Gilda: Siobhan, shouldn't you be studying? Who is this outsider?
+-Siobhan: Oh, yes, introductions.
+
+!HoldOn(0.2)
+!SetAnim(Siobhan,U)
+!HoldOn(0.2)
+-Siobhan: That's Loremaster Morvyn on the left...
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.2)
+-Siobhan: ...Blademaster Nemain, the Hedge Knight, on the right... 
+
+!HoldOn(0.2)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.2)
+-Siobhan: And Mammy - I mean, Lady Gilda of Cranbaile - in the middle.
+-Siobhan: Mammy, this is...
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+-Siobhan: Ah, I didn't get your name.
+-Verm: Verm.
+-Siobhan: Right, Sir Verm!
+-Verm: Sir?
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+-Verm: I'm not a knight.
+-Siobhan: Really? Huh.
+!SetAnim(Siobhan,R)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,UR)
+-Siobhan: Anyway, Mammy, I saw this guy fighting Tiger.
+-Siobhan: He was swinging around a god weapon like nobody's business. 
+-Siobhan: That stupid cat had no idea what he was dealing with! I think this guy might actually be able to-
+-Gilda: Calm yourself, young lady.
+-Siobhan: S-sorry, Mammy.
+-Gilda: Mouse, you fought the felidae... with a god weapon?
+*Sarcasm: What can I say?
+*Sincere: I apologise.
+
+/Sincere
+-Verm: I apologise if I've broken your customs. No offence was intended.
+-Morvyn: Your intentions are moot.
+>Onwards
+/Sarcasm
+-Verm: What can I say? Rodent weapons are so brittle.
+-Morvyn: Such arrogance!
+>Onwards
+
+/Onwards
+-Morvyn: To fight a god's pet with a god's weapon...
+!SetAnim(Morvyn,Look)
+-Morvyn: This is sacrilege. Sacrilege of the worst kind.
+!SetAnim(Gilda,LookLeft)
+-Morvyn: In accordance with the laws of the Old Way, a punishment is in order, my lady.
+!HoldOn(0.1)
+!SetAnim(Nemain,Look)
+!HoldOn(0.1)
+!SetAnim(Gilda,LookRight)
+-Nemain: Want me to put him in the stockade?
+!SetAnim(Nemain,Loop)
+!SetAnim(Morvyn,LookBack)
+!SetAnim(Gilda,Loop)
+-Verm: Try it, pinecone. See what happens.
+-Gilda: Everyone, quiet!
+-Gilda: This mouse is a visitor. He is not bound by our local customs.
+-Gilda: We won't punish you, mouse, but we won't help you, either.
+!SetAnimEnd(Morvyn,Loop)
+-Gilda: Do whatever it is you came to do and then take your leave.
+-Verm: Fine. I didn't plan on sticking around anyway.
+-Verm: But before I go, I need some|information.
+-Verm: I'm looking for the one known as the Yellow God.
+-Gilda: The Yellow God?
+-Gilda: I'm afraid we don't know any gods on a first-name basis around here. Except for Cormac, I suppose.
+-Gilda: Have you heard of this "Yellow God", Loremaster Morvyn?
+!SetAnim(Morvyn,Look)
+-Morvyn: I'm afraid not, my Lady. Perhaps this mouse should head to Murida.
+-Morvyn: One million mice and rats live there. Nobles, merchants, academics...
+!SetAnim(Morvyn,LookBack)
+-Morvyn: I'm sure one of them can be of assistance.
+-Verm: That was going to be my next|destination anyway.
+-Gilda: Very well. Take your leave, mouse.
+
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!Walk(Verm,DL,1.1)
+!HoldOn(0.3)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.5)
+!Exit(Verm)
+
+-Siobhan: Ah, Sir Verm! Wait up!
+-Gilda: Siobhan. May I have a word?
+!OverworldCameraPan(320,300,1,1)
+!HoldOn(1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+-Gilda: Mingling with blaspheming vagabonds is most unbecoming of a young lady.
+-Siobhan: Stop calling me "young lady"! You know I hate it.
+!HoldOn(0.3)
+-Gilda: Young lady.|You are nobility.
+-Gilda: Know your place and return to your studies.
+-Siobhan: Studies?
+-Siobhan: Mammy, that felidae is killing us off one by one, and you aren't doing anything to stop it!
+-Gilda: Not another word. What would your father have said if he saw you mingling with a vagabond?
+-Siobhan: Well, da's not here, is he?
+
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+-Gilda: Siobhan!
+!HoldOn(0.3)
+!Walk(Siobhan,DL,1.1)
+!HoldOn(1.1)
+!Exit(Siobhan)
+-Gilda: That rock-headed child...
+-Nemain: She thinks herself a warrior. Her father's daughter alright.
+!SetAnim(Gilda,LookRight)
+-Gilda: Hold your tongue, Blademaster.
+!HoldOn(0.1)
+!SetAnim(Nemain,Look)
+!HoldOn(0.4)
+!SetAnim(Nemain,Loop)
+!HoldOn(0.1)
+-Nemain: Yes, my Lady.|Sorry, my Lady.
+!SetAnim(Gilda,Loop)
+!HoldOn(0.1)
+!NextRoom(Molebury,4)
+
+End scene

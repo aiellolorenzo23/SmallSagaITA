@@ -1,0 +1,79 @@
+/Intro
+!OverworldCameraSnap(1150,365)
+!SetAnim(Leo,Sitting)
+!SetAnim(Ophiuchus,Loop)
+!HoldOn(0.3)
+-James: Strength and stability.
+!HoldOn(0.3)
+-James: That is what my mother promised this Kingdom.
+!SetAnim(Ophiuchus,LetterOpen)
+-James: And that is what I'm delivering.
+!HoldOn(0.3)
+-Ophiuchus: Of course, Your Majesty.
+-Ophiuchus: But discontent grows in Gutter End.
+-Ophiuchus: A crowd gathers at Speaker's Corner.|They have grievances about the Kingdom's inequality.
+!HoldOn(0.3)
+-James: What a pain.
+!SetAnim(Ophiuchus,LetterClose)
+!HoldOn(0.2)
+!SetAnim(James,LookRight)
+!HoldOn(0.2)
+-James: Leo, can the Thimble Guard handle them?
+-Leo: The Guard is capable.
+-Leo: But forcefully dispersing a peaceful crowd would only entrench their anger.
+-Leo: Is violent suppression really the most dignified solution?
+-James: So what do you suggest? A parley? With some tea and crumpets?
+-Leo: Well, I don't know about that. But the needs of the people-
+-James: Stop.
+!PlaySound(PalaceBigDoorOpen)
+-James: You're Murida's blademaster. Leader of the Thimble Guard. The fearsome Vulpes Slayer of Solhill.
+-James: Why are you so afraid of conflict?
+-Aquila: His majesty is right, Needle Knight.
+!HoldOn(0.2)
+!CameraFollow(1)
+!HoldOn(1)
+!SetAnim(Ophiuchus,Loop)
+!TeleportCharacter(Leo,1201,479)
+!SetAnim(Leo,Loop)
+!Walk(Aquila,UR,5.8)
+!HoldOn(6)
+!OverworldCameraPan(1150,365,1,1)
+!HoldOn(1)
+-Aquila: You've gotten soft since your titan slaying days.
+-Leo: Plaguemaster. Now is not the time.
+-James: Nonsense. Now is the perfect time.
+-James: How is the apprentice, Aquila?
+-Aquila: Sharp and capable.
+-James: I'm glad to hear it. And Excalibur...
+-Leo: We have no need for such a foul weapon.
+-Leo: The Thimble Guard are capable of facing any threat this city may face. 
+-Aquila: Oh? Are they capable of facing the Yellow God of Death?
+-Leo: Spare me this ghostly nonsense.
+-James: Leo, if you are going to be petulant, then you should go take a stroll.
+-Leo: Your Majesty-
+-James: Shut up and get out.
+!HoldOn(0.6)
+!Walk(Leo,DL,6)
+!HoldOn(1)
+-James: Now, Aquila. About this Yellow God.
+-James: You told me before that he wields the power to annihilate entire kingdoms.
+-Aquila: And with nothing but poisonous smoke.
+-James: Such a terrifying deity.|What else can you tell me?
+-Aquila: He is coming.
+-Aquila: The Yellow God will arrive at Murida on the night of thirteen chimes.
+-James: You are certain?
+-Aquila: I've deciphered the appropriate god scripts and triple-checked my translations.
+-Aquila: There is no doubt.
+!HoldOn(0.6)
+-Orphiuchus: Nothing to fear, Your Majesty. 
+-Orphiuchus: We have a plan in place for a cataclysmic event.
+-Orphiuchus: Let's see, uh, "Proposition 99: a Contingency Plan for a City-Wide Evacuation".
+!HoldOn(0.5)
+-James: And how much would that cost?
+-Orphiuchus: Well... I would have to run the numbers.
+-Orphiuchus: It would be expensive, yes, but such is the price of prosperity.
+!HoldOn(0.6)
+-James: What say you, Plaguemaster?
+-Aquila: I'd say to trust in technology, Your Majesty.
+!NextRoom(PalaceFoyer,1)
+End scene

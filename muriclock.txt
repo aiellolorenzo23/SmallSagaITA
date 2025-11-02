@@ -1,0 +1,313 @@
+/Intro
+~ClockTowerLoop
+
+/Remote
+!CheckGlobal(32,40,Remote2)
+-Siobhan: How tempting! But I ought to talk to the Plaguemaster first.
+
+/Aquila
+!SetNPCFlag(Aquila,Aquila2)
+-Aquila: I said, press the red button.
+
+/Aquila2
+!SetNPCFlag(Aquila,Aquila3)
+-Aquila: The red button.
+
+/Aquila3
+!SetNPCFlag(Aquila,Aquila4)
+-Aquila: It's... it's over there.
+
+/Aquila4
+!SetNPCFlag(Aquila,Aquila5)
+!ShoutMode()
+-Aquila: THE RED BUTTON, SIOBHAN!|OVER THERE!|YOU CAN'T MISS IT!
+
+/Aquila5
+-Aquila:  . . . 
+
+/Showdown
+!Walk(Siobhan,U,1)
+!OverworldCameraPan(320,320,0.5,1)
+!SetGlobal(32,40)
+!HoldOn(1.6)
+!TeleportCharacter(Siobhan,400,650)
+!Walk(Siobhan,U,1.8)
+!HoldOn(1.9)
+!SetAnim(Aquila,Look1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.6)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.7)
+-Siobhan: This building is|certainly something.
+!HoldOn(0.4)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.3)
+-Siobhan: Where is Excalibur?
+-Aquila: Hidden, of course.
+-Aquila: If a god were to discover it, all our work would be for naught.
+-Aquila: Honestly, hiding something this big from the gods has been nothing but hassle, especially with their renovations.
+!HoldOn(0.1)
+!SetAnim(Aquila,DR)
+!HoldOn(0.1)
+-Aquila: But I digress. Press that red button, Siobhan.
+!CameraFollow(1)
+
+/Remote2
+!PlaySound(squirrelbeep)
+!LiftGo(2)
+!HoldOn(0.6)
+!OverworldCameraPan(320,860,0.5,1)
+!HoldOn(2.2)
+!LiftGo(1)
+!TeleportCharacter(Siobhan,430,482)
+!SetAnim(Siobhan,DL)
+!HoldOn(15)
+!OverworldCameraPan(320,790,0.25,1)
+!HoldOn(8)
+!OverworldCameraPan(320,360,0.5,1)
+!HoldOn(2)
+-Siobhan: Woah...
+!HoldOn(1)
+-Aquila: This is it.|Excalibur.|The fire egg.
+-Aquila: An authentic relic of|the Thunder Age.
+-Aquila: The Thimble Guard found it buried in the bowels of the Underriver, some fifty years ago. 
+-Aquila: Plaguemasters have been studying ever since.
+!HoldOn(0.4)
+-Siobhan: Fifty years of research?|On one weapon?
+-Aquila: A rodent's life is short and pathetic.
+-Aquila: So intergenerational knowledge is crucial if we wish to push the boundary of understanding.
+-Aquila: It took decades to find and decipher the relevant god texts, to reverse engineer the wiring and machinery.
+-Aquila: Through careful analysis, my predecessors learned every intricacy of the weapon.
+-Aquila: What it's made of.|The damage it can do.|How to hatch it.
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: You can hatch the egg?
+-Aquila: The trigger is a hard impact.|A fall from a great height.
+-Aquila: The only reason it didn't hatch on its initial fall is due to a technical error. Fascinating stuff.
+!OverworldCameraPan(320,690,1,1)
+!HoldOn(0.2)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.7)
+-Siobhan: So this cradle mechanism is a catapult. No, a ballista...
+!OverworldCameraPan(320,180,1,1)
+!HoldOn(0.5)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.4)
+-Siobhan: And the egg is primed to launch through that window.
+-Aquila: Clock-face, to be pedantic.
+!OverworldCameraPan(320,360,1,1)
+!HoldOn(0.5)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.5)
+-Siobhan: But what's down below?
+-Aquila: The godly halls of parliament.
+-Aquila: And below parliament's floorboards,|the streets of Murida.
+-Aquila: When the Yellow God arrives, intent on destroying the city, we will greet Him with fire and thunder.
+!HoldOn(0.5)
+-Aquila: After all...|Only a god weapon|can kill a god.
+!HoldOn(0.5)
+!Walk(Siobhan,UL,0.4)
+!HoldOn(0.8)
+-Siobhan: Plaguemaster, if the stories about fire eggs are true...
+-Siobhan: This won't just hurt the god.|It'll devastate Murida.
+-Siobhan: Thousands of rodents will die.
+-Aquila: Tens of thousands, by my estimation.
+-Siobhan: That's horrible!
+!HoldOn(0.6)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.8)
+-Siobhan: But... I think I see your reasoning.
+-Siobhan: You see this cruel weapon as the only way, right?
+-Siobhan: An ugly necessity to save a few rodents from complete extermination.
+-Aquila: Siobhan, please. I'm not some|knuckle-dragging utilitarian.
+-Siobhan: O-oh.
+!HoldOn(0.2)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.4)
+-Siobhan: Then... why?
+!HoldOn(1)
+!SetAnim(Aquila,Look2)
+!OverCamZoom(1.1)
+-Aquila: I was born beneath the floorboards of a godly library, so I learned how to read godly writing from a young age.
+-Aquila: The first book I ever read was a heavy tome entitled "The Anthropocene".
+-Aquila: At first, I thought I was reading a speculative text.
+-Aquila: A science fiction parable, a warning about what could become.
+-Aquila: But the more I read, the more I came to realise that it documented the horrors of what the gods did and what they continue to do.
+!HoldOn(0.5)
+!SetAnim(Aquila,Look1)
+!HoldOn(0.2)
+!SetAnim(Aquila,DR)
+!HoldOn(0.3)
+-Aquila: I despise the gods.
+-Aquila: Each and every one of them.
+-Aquila: They spread.|They consume.|They destroy.
+-Aquila: If they can commodify a part of nature, they will.
+-Aquila: If they cannot, they kill it.
+-Aquila: There is not a single place on our planet that the gods haven't colonised and corrupted.
+-Aquila: So now carcinogens fill our lungs. Poisons infest our food. Plastics course through our blood.
+-Aquila: By their hand, soon the oceans themselves will boil.
+-Aquila: The Yellow God is not the worst god. No, not by a long shot.
+-Aquila: But He epitomises their callous disregard for life, their need to dominate nature without second thought.
+-Aquila: What is the death of one million mice to the Yellow God? An ordinary day of work. A job well done.
+!HoldOn(0.9)
+-Siobhan: So you want to kill Him.|I can understand that.
+-Siobhan: But what about the rodents who live in Murida?
+!HoldOn(0.1)
+!SetAnim(Aquila,Hand1)
+!HoldOn(0.15)
+!SetAnimEnd(Aquila,Hand2)
+!HoldOn(0.1)
+-Aquila: What ABOUT them?
+!HoldOn(0.1)
+!SetAnim(Aquila,Hand1)
+!HoldOn(0.2)
+!SetAnim(Aquila,DL)
+!HoldOn(0.1)
+-Aquila: Murida is the rotten capital of a rotten country.
+-Aquila: We are ruled by a filthy-rich idiot of a King, descended from a long line of filthy-rich idiots.
+-Aquila: Upheld by a noble class who peddle tabloid lies to protect their palace of blood and bone.
+-Aquila: All defended by a guard|of bullies and sociopaths.
+!HoldOn(0.1)
+!SetAnim(Aquila,DR)
+!HoldOn(0.3)
+-Aquila: Who else is there?
+!HoldOn(0.4)
+!SetAnim(Aquila,DL)
+!HoldOn(0.1)
+-Aquila: Oh yes!
+!SetAnim(Aquila,Hand1)
+!HoldOn(0.1)
+!SetAnimEnd(Aquila,Hand2)
+!HoldOn(0.1)
+-Aquila: Tax-dodging merchants.|Pawball hooligans.|Plague-deniers.
+-Aquila: Back-alley louts who'd murder|a child for half a seed.
+!SetAnim(Aquila,Hand2)
+-Aquila: Bigots who spit upon those|they deem queer or degenerate.
+-Aquila: But worst of all, a common class who look at this green and pleasant country's descent, then shrug and say, "could be worse".
+!HoldOn(0.5)
+!SetAnim(Aquila,Hand1)
+!HoldOn(0.1)
+!SetAnim(Aquila,DL)
+!HoldOn(0.5)
+!SetAnim(Aquila,UL)
+!HoldOn(0.1)
+!SetAnim(Aquila,UR)
+!HoldOn(0.4)
+-Aquila: I do not relish this|city's destruction.
+-Aquila: But I cannot see anything|worth defending.
+!HoldOn(0.5)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.5)
+-Siobhan: It's true. This country has a lot of problems.
+-Siobhan: I've had moments where I've just wanted to take my wand and burn everything to the ground.
+!HoldOn(0.2)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.3)
+-Siobhan: But I don't because there|are good rodents too.
+-Siobhan: Rodents who stand up to injustice and fight to make things better, like...
+-Siobhan: Like Sir Verm!
+!HoldOn(0.2)
+!Nani(Aquila,?)
+!HoldOn(0.3)
+!SetAnim(Aquila,Look1)
+!HoldOn(0.5)
+-Aquila: The dead vagabond?
+-Aquila: I thought he was hell-bent on|killing the Yellow God?
+-Siobhan: Yes, but he wouldn't have trampled on innocent people to do so.
+-Aquila: You cannot be that naive. From what you've told me, I can only conclude that your friend was a single-minded brute.
+-Aquila: Every action he made was in service to his egotistic vengeance quest.
+-Aquila: He would have seen Rodentia in flames if it gave him a chance to upend nature and satiate his bloodlust.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.5)
+-Siobhan: I... I don't think that's true.
+-Siobhan: H-he wanted to kill the Yellow God, that is true, but he wouldn't do... I mean, he wouldn't have w-wanted...
+!HoldOn(1)
+!SetAnim(Aquila,Look2)
+!OverCamZoom(1)
+!HoldOn(1.4)
+-Aquila: It doesn't matter.
+-Aquila: This ideological talk has gotten tiresome, so let us return to the material facts.
+-Aquila: The Yellow God is coming.
+-Aquila: And only a god weapon can kill a god.
+-Aquila: So it's just like you say.|This cruel thing is an ugly necessity.
+!HoldOn(1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!SetAnim(Aquila,Look1)
+!HoldOn(0.4)
+!Walk(Siobhan,DR,0.6)
+!HoldOn(0.3)
+-Aquila: Where are you going?
+-Siobhan: Out. I quit.|Find another successor.
+!HoldOn(0.1)
+!SetAnim(Aquila,DR)
+!HoldOn(0.4)
+-Aquila: I won't force you to remain in my service if that is your decision, but think for a moment.
+-Aquila: Be a scientist.|Think rationally.
+!HoldOn(0.2)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!ShoutMode()
+-Siobhan: What do you know about rationality?!
+!HoldOn(0.1)
+-Siobhan: You're so wrapped up in your warped, pathetic view of the world that you can't even hypothesize a better future.
+-Siobhan: That's not science.|That's a cult of hopelessness!
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!Walk(Siobhan,DR,1)
+!HoldOn(0.5)
+!Walk(Aquila,DR,1)
+!HoldOn(0.5)
+!Walk(Siobhan,D,3)
+!HoldOn(0.5)
+-Aquila: Siobhan. Siobhan!
+!HoldOn(2)
+-Aquila: Pity.
+!HoldOn(0.6)
+!SetAnim(Aquila,UR)
+!HoldOn(0.2)
+!SetAnim(Aquila,UL)
+!HoldOn(0.7)
+-Aquila: But no matter.
+!AddToParty(Gwen)
+!AddToParty(Bruce)
+!AddToParty(Verm)
+!SetLeader(Verm)
+!SetGlobal(92,0)
+!HoldOn(1)
+!NextRoom(MuriBar,3)

@@ -1,0 +1,35 @@
+/BattleVeryStart
+~Stop
+Blank
+/BattleStart
+!DrawWeapon(Verm)
+!DrawWeapon(Siobhan)
+!HoldOn(0.2)
+-Verm: Bruce, we could really use your help with this.
+!CameraPan(-0.4,1,1,1)
+!HoldOn(0.4)
+~KrakenLoop
+-Bruce: Aye, right you are.
+!HoldOn(0.2)
+!DrawWeapon(Bruce)
+!HoldOn(0.9)
+-Bruce: I'll play a tune to raise yer spirits.
+!CameraPan(0,1,1,1)
+!HoldOn(0.4)
+!ShoutMode()
+-Verm: That's not helpful!
+!HoldOn(0.2)
+!LetsFight()
+/VermRage
+-Verm: I'll dice you into calamari!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/EnemyDead
+-Kraken: What strength...|such tiny creatures bear,
+-Kraken: You force my flight...|to an empty lair.
+!FadeEnemy()
+!HoldOn(1)
+~Stop
+!Victory()
+!EndBattle()
+/End

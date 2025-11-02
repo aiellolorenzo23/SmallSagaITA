@@ -1,0 +1,294 @@
+
+/Intro
+~Stop
+!SetAnim(Bruce,UR)
+!HoldOn(1)
+-Bruce: Anton!
+-Anton: Bruce!
+~BarSolo1
+!SetAnim(Kofi,Loop1)
+!Walk(Bruce,UR,0.63)
+!Walk(Anton,DL,0.63)
+!HoldOn(0.63)
+!SetAnim(Bruce,Hug)
+!SetAnim(Anton,Blank)
+!HoldOn(1.6)
+!MoveTrigger(NotYet,344,513)
+-Anton: It has been too long.|I missed you, lapa.
+-Bruce: I missed you an' all, babe.
+!HoldOn(0.9)
+!SpecialWalk(Bruce,DL,0.2,URWalk,0.5)
+!SpecialWalk(Anton,UR,0.2,DLWalk,0.5)
+!HoldOn(0.2)
+!SetAnim(Bruce,UR)
+!SetAnim(Anton,DL)
+!HoldOn(0.2)
+!ResetWalkSpeed(Bruce)
+-Bruce: How are ye keeping?
+-Anton: You know me!|I am always fabulous.
+-Anton: But what about you, lapa?|Why are you wearing mask?
+*Disguise: It's a disguise.
+*Fashion: It's fashion.
+/Disguise
+-Bruce: It's nae my first choice.|But I needed a disguise.
+-Anton: Ah, I see, I see.|That means you're all set...
+>ThePlan
+/Fashion
+-Bruce: It's called FASHION, Anton.|Look it up.
+-Anton: Hey, no need to be sassy!
+-Anton: I just thought you|were getting ready...
+>ThePlan
+/ThePlan
+-Anton: You know...|For PLAN S.
+-Bruce: Aye, the plan.
+-Bruce: We'll travel tae Sky Garden and steal the Pebble of Scuin right from under Duke Josh's nose!
+-Anton: You make it sound easy, lapa.
+-Anton: But still... you know... we lack thieving experience.
+-Anton: So I was thinking... maybe we could get third party member. Someone who is expert.
+-Bruce: Oh! An accomplice.
+-Bruce: That's a fab idea.
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+-Bruce: This pub houses all sorts o' neds and rogues. 
+-Bruce: I bet there's a natural thief among us right now.
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+-Bruce: Give me a minute, babe, I'll ask around.
+-Anton: Good luck!
+
+/NotYet
+!CheckGlobal(60,0,LeaveYet)
+!CheckGlobal(61,0,LeaveYet)
+!CheckGlobal(62,0,LeaveYet)
+!CheckGlobal(63,0,LeaveYet)
+!CheckGlobal(64,0,LeaveYet)
+!CheckGlobal(65,0,LeaveYet)
+-Anton: Giving up, lapa?
+!Walk(Bruce,UR,0.4)
+!HoldOn(0.4)
+-Bruce: I've got no choice. I asked everyone in the pub.
+>Naww
+
+/LeaveYet
+-Anton: Don't leave yet, lapa!
+!Walk(Bruce,UR,0.4)
+!HoldOn(0.4)
+-Anton: Go ask around!
+
+
+/Knife
+-Info: Now's not the time to be playing knife-darts.
+
+
+/Everyone
+-Anton: Go find our thief, lapa!
+
+/ChatAnton
+!CheckGlobal(60,0,Everyone)
+!CheckGlobal(61,0,Everyone)
+!CheckGlobal(62,0,Everyone)
+!CheckGlobal(63,0,Everyone)
+!CheckGlobal(64,0,Everyone)
+!CheckGlobal(65,0,Everyone)
+
+-Anton: No luck?
+-Bruce: Naw. I asked everyone here too.
+>Naww
+/Naww
+-Bruce: Maybe this wasn't such a good plan...
+!TeleportCharacter(Pocket,492,340)
+
+!SetGlobal(60,0)
+!SetGlobal(61,0)
+!SetGlobal(62,0)
+!SetGlobal(63,0)
+!SetGlobal(64,0)
+!SetGlobal(65,0)
+~Stop
+-Pocket: Hehe! I'll take the job.|Might be good for a laugh.
+!Nani(Bruce,!)
+!HoldOn(0.2)
+!Nani(Anton,!)
+!NormalJump(Bruce,2,30,375,411,Jump,UR)
+!HoldOn(0.2)
+!SetAnim(Anton,U)
+!HoldOn(0.5)
+!SetAnim(Bruce,UR)
+-Bruce: Who said that?|Show yerself!
+
+!SetVisible(JabariSmoke,1)
+!SetScriptAnim(JabariSmoke,Default)
+!PlaySound(JabariBoom)
+!HoldOn(0.1)
+!Enter(Pocket)
+!SetAnim(Pocket,DarkDR)
+!HoldOn(1)
+~BarSolo2
+!SetAnim(Kofi,Loop1)
+!HoldOn(0.4)
+-Pocket: The name's Jabari.
+-Pocket: But those who see my handiwork...
+!HoldOn(0.1)
+!SetAnim(Pocket,UR)
+!HoldOn(0.05)
+!SetAnim(Pocket,UL)
+!HoldOn(0.05)
+!SetAnim(Pocket,DL)
+!HoldOn(0.05)
+!SetAnim(Pocket,DR)
+!HoldOn(0.05)
+!SetAnim(Pocket,UR)
+!HoldOn(0.05)
+!SetAnim(Pocket,UL)
+!HoldOn(0.05)
+!SetAnim(Pocket,DL)
+!HoldOn(0.05)
+!NormalJump(Pocket,2,40,492,340,DLJump,DLLand)
+!HoldOn(0.7)
+!SetAnim(Pocket,DL)
+!HoldOn(0.2)
+-Pocket: ...Call me Pocket!
+-Bruce: Oh, I get it. "Pocket" because...
+*Thief: You steal.
+*Small: You're small.
+/Thief
+-Bruce: Because you pocket their stuff, aye?
+>StealingThat
+/Small
+-Bruce: Because you're pocket-sized, aye?
+>StealingThat
+/StealingThat
+-Pocket: Hehe! No, but that's pretty good. I'm stealing that.
+-Pocket: So. You want to break into the indomitable fortress of Sky Garden... to nab a pebble?
+-Bruce: Aye. The Pebble of Scuin.|It's a family heirloom.
+-Pocket: Sounds shiny.
+-Pocket: Tell ya what. I wouldn't normally just help anyone out for free.
+-Pocket: But I think it would be hilarious for that hoity-toity Duke to be taken down a peg.
+-Pocket: So just this once, I'll offer you my trickster skills totally pro bono!
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!SetAnim(Anton,DL)
+!HoldOn(0.1)
+-Bruce: What do you think, babe? This guy sounds pretty great to me.
+-Anton: I don't know, lapa...
+-Anton: How do we even know Jabari person is real thief?
+!HoldOn(0.2)
+!NormalJump(Pocket,4,20,467,400,DLJump,DLLand)
+!HoldOn(0.3)
+!NormalJump(Pocket,4,20,492,340,DLJump,DLLand)
+!HoldOn(0.25)
+-Bruce: Aye, that's a good point. Maybe we should set up some sort of test...
+-Pocket: Ahem.
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!SetAnim(Anton,U)
+!HoldOn(0.4)
+!SetAnim(Pocket,Purse)
+!HoldOn(0.4)
+-Pocket: Is this your seed purse, hamster?
+!Nani(Anton,!)
+!HoldOn(0.4)
+-Anton: Nichego sebe! It is!
+-Bruce: Alright. You're pretty good, Pocket. You're in.
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!SetAnim(Pocket,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!SetAnim(Anton,DL)
+!HoldOn(0.1)
+-Bruce: Looks like we're really doing this.
+-Anton: We're off to Sky Garden.
+-Bruce: Yeah. My home.
+!AddToParty(Siobhan)
+!RemoveFromParty(Bruce)
+!SetLeader(Siobhan)
+~Stop
+!HoldOn(0.4)
+!NextRoom(MuriLibrary,15)
+
+/Hassan
+!SetGlobal(65,1)
+!SetNPCFlag(Hassan,)
+-Hassan: Rumour in the tunnels is Sky Garden has a stoat for a Blademaster.
+-Hassan: You couldn't pay me enough to tussle with one of those!
+
+/Emma
+!SetGlobal(60,1)
+!SetNPCFlag(Emma,)
+-Emma: You're robbing Sky Garden?
+-Emma: I've heard horror stories about their prison system.
+-Emma: Ruthless guards. Torture. And whispers of a chained-up dragon too?
+-Emma: So, uh... no. Count me out.
+
+/Zipi
+!SetGlobal(61,1)
+!SetNPCFlag(Zipi,)
+-Zipi: Ooh, I love a good heist, me.|Count me in!
+-Zipi: Aaah, but I'm working a double shift. Guess I'll have to pass.
+
+/Niall
+!SetGlobal(62,1)
+!SetNPCFlag(Niall,)
+-Niall: You want my help robbing Duke Josh?
+-Niall: Not a chance! The Duke's ruthless even by Clan Grey standards.
+-Niall: I'm not getting guillotined so you can make off with a pawful of seeds!
+
+/Kofi
+!SetGlobal(63,1)
+!SetNPCFlag(Kofi,)
+-Kofi: A robbery, eh?
+-Kofi: It wouldn't be my first, but those days are long behind me.
+-Kofi: I'll dedicate my next song to your good fortune.
+
+/Stilton
+-Bree: ...So, since the palace gates are open, we should demand to talk to the King himself.
+-Stilton: You really think he'll listen?
+-Bree: He has to, right? It's his job to serve the people!
+!SetAnim(Stilton,DL)
+-Bruce: Sorry tae interrupt, lads.|Ye want in on a heist?
+!HoldOn(0.3)
+!SetAnim(Stilton,HeadDown)
+!SetAnim(Bree,HeadLeft)
+!HoldOn(0.5)
+!SetAnim(Stilton,DL)
+!SetAnim(Bree,DL)
+>BreeStilt
+
+/Bree
+!SetAnim(Bree,HeadLeft)
+-Bree: ...So, since the palace gates are open, we should demand to talk to the King himself.
+-Stilton: You really think he'll listen?
+-Bree: He has to, right? It's his job to serve the people!
+!SetAnim(Bree,DL)
+!HoldOn(0.1)
+!SetAnim(Bree,HeadDown)
+-Bruce: Sorry tae interrupt, lads.|Ye want in on a heist?
+!HoldOn(0.2)
+!SetAnim(Bree,DL)
+!HoldOn(0.1)
+!SetAnim(Bree,HeadLeft)
+!HoldOn(0.5)
+!SetAnim(Bree,DL)
+!HoldOn(0.1)
+!SetAnim(Bree,HeadDown)
+>BreeStilt
+
+/BreeStilt
+!HoldOn(0.3)
+!SetGlobal(64,1)
+!SetNPCFlag(Bree,)
+!SetNPCFlag(Stilton,)
+-Stilton: We're alright, thanks.
+-Bree: Yeah. No more petty crimes for us.
+-Bree: We're going straight and trying our hand at a much cleaner career.
+-Stilton: Politics.
+!SetAnim(Bree,DL)

@@ -1,0 +1,57 @@
+/BattleVeryStart
+!HoldOn(0.5)
+!DrawWeapon(Siobhan)
+/BattleStart
+~SioBattleLoop
+!SetGlobal(4,0)
+!LetsFight()
+
+/Goad
+!CheckGlobal(4,1,Goad2)
+!CheckGlobal(4,2,Goad3)
+!CheckGlobal(4,3,Goad4)
+!SetGlobal(4,1)
+-Nemain: You think yourself a warrior?
+-Siobhan: I know myself a warrior.
+!HoldOn(0.2)
+!SetAnim(Nemain,Goad)
+!HoldOn(0.5)
+-Nemain: Hmph! I'll be the judge of that.
+!HoldOn(0.1)
+!NewTurn()
+/Goad2
+!SetGlobal(4,2)
+!SetAnim(Nemain,Goad)
+!HoldOn(0.5)
+-Nemain: If you don't know your place,|then I must teach you!
+!HoldOn(0.1)
+!NewTurn()
+/Goad3
+!SetGlobal(4,3)
+-Siobhan: I choose my place! It's not for you, or mammy, or the gods to decide.
+!HoldOn(0.2)
+!SetAnim(Nemain,Goad)
+!HoldOn(0.5)
+-Nemain: Saying it does|not make it so!
+!HoldOn(0.1)
+!NewTurn()
+/Goad4
+!SetAnim(Nemain,Goad)
+!HoldOn(0.5)
+-Nemain: Come on, then!
+!HoldOn(0.1)
+!NewTurn()
+/NoFun
+!SetAnim(Nemain,Default)
+-Nemain: Not attacking? Then|I'll just come to you!
+!HoldOn(0.1)
+!NewTurn()
+/Fool
+-Nemain: You're wide open!
+!HoldOn(0.1)
+!SpecialMove(Nemain)
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

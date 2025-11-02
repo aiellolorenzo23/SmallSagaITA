@@ -1,0 +1,204 @@
+/JustPin
+~BattleMuridaLoop
+!AutoPinFollowers()
+
+/MCA
+!SetGlobal(50,10)
+!AutoPinFollowers()
+!HoldOn(1.4)
+-Victoria: Man, I'm sleepy.
+-Victoria: What's Alex thinking getting everyone up at this hour?
+-Brandon: Hey, get it together, Vicky.|We've got a king to protect!
+!Walk(Verm,DR,1.3)
+!OverworldCameraPan(477,364,0.5,1)
+!HoldOn(1.4)
+!Nani(Victoria,!)
+!Walk(Verm,D,1.3)
+!HoldOn(0.5)
+!NormalJump(Victoria,2,30,510,493,DLJump,UL)
+!HoldOn(0.3)
+!Walk(Brandon,DL,0.7)
+!HoldOn(0.5)
+!Walk(Verm,DR,0.5)
+!HoldOn(0.3)
+!SetAnim(Brandon,UL)
+!HoldOn(0.2)
+-Victoria: H-hey! Where did you lot come from?
+-Brandon: Don't move! You're all under arrest.
+-Gwen: What a pain. There's no end to these tin-heads.
+!CheckGlobal(76,9,NemainTime)
+-Verm: We don't have time for this.
+!GoToBattle(Thimble1)
+
+/NemainTime
+
+!TeleportCharacter(Nemain,500,180)
+!SetGlobal(50,9)
+!PlaySound(Impact1)
+!HoldOn(0.5)
+!NormalJump(Nemain,1,300,487,482,Down,Down)
+!HoldOn(0.8)
+!NormalJump(Victoria,2,30,298,539,HurtL,DownL)
+!NormalJump(Brandon,2,30,850,540,HurtR,DownR)
+!HoldOn(0.2)
+!ScreenShake(9,1)
+!HoldOn(1.6)
+!Exit(Victoria)
+!Exit(Brandon)
+!SetGlobal(50,11)
+!MoveNPCToLayer(Nemain,ZSorted)
+-Nemain: Keep your paws off the heir of Cranbaile!
+!HoldOn(0.6)
+!SetAnim(Nemain,DL)
+!HoldOn(0.6)
+-Siobhan: Blademaster Nemain...
+!HoldOn(0.2)
+!SetAnim(Nemain,Look)
+!HoldOn(0.2)
+-Siobhan: What are you doing here?|Did Mammy send you?
+-Nemain: She did.
+-Nemain: But she didn't ask me|to drag you home.
+-Nemain: She told me to support|you however I can.
+-Nemain: If this fight is important to you...|And if this is who you are...
+-Nemain: Then I will stand by your side.
+-Siobhan: Thank you, Nemain.
+-Verm: Let's go. We're almost at the barricade.
+!CameraFollow(1)
+
+/Nemain
+-Nemain: These two didn't put up|much of a fight, eh?
+
+/MCB
+!SetGlobal(50,11)
+!HoldOn(1)
+-Bruce: To the barricade!
+!AutoPinFollowers()
+
+/LastOne
+!SetGlobal(50,15)
+!OverworldCameraPan(786,486,2,1)
+!TeleportCharacter(Frederick,864,498)
+!TeleportCharacter(G1,814,516)
+!TeleportCharacter(G2,914,517)
+!TeleportCharacter(G3,864,540)
+!HoldOn(0.1)
+!Walk(Frederick,UL,1)
+!Walk(G1,UL,1)
+!Walk(G2,UL,1)
+!Walk(G3,UL,1)
+!HoldOn(1.1)
+-Frederick: Alright, that's the wharf secured. What next...
+!HoldOn(0.2)
+!SetAnim(Frederick,UR)
+!HoldOn(0.3)
+!Nani(Frederick,!)
+!ShoutMode()
+!HoldOn(0.1)
+!SetAnim(G1,UR)
+!HoldOn(0.1)
+!SetAnim(G2,UR)
+!HoldOn(0.2)
+!SetAnim(G3,UR)
+!HoldOn(0.1)
+-Frederick: HEY!
+!CameraFollow(1)
+!SetAnim(Bruce,D)
+!SetAnim(Gwen,D)
+!SetAnim(Verm,D)
+!SetAnim(Siobhan,D)
+!HoldOn(0.5)
+-Bruce: Damn it, we're so close!
+!CheckGlobal(74,35,AntonTime)
+!GoToBattle(Thimble1)
+
+/MCC2
+!HoldOn(1)
+!SetGlobal(50,16)
+-Verm: Is that the last of them?
+-Bruce: It better be.
+-Siobhan: It has to be!|The palace awaits.
+!AutoPinFollowers(1)
+
+/EarlyExit
+-Siobhan: Sir Verm, we'll head to the palace after we've removed the barricade!
+!Walk(Verm,DL,0.5)
+!HoldOn(0.5)
+
+/AntonTime
+!TeleportCharacter(Anton,947,887)
+!OverworldCameraPan(786,486,2,1)
+!HoldOn(0.5)
+!SetGlobal(50,16)
+!ShoutMode()
+!MysteryText(1)
+-Anton: LET'S GOOOOOO!
+!MysteryText(0)
+!HoldOn(0.4)
+!TeleportCharacter(Anton,967,577)
+!SpecialWalk(Anton,UL,1,LWalk,2)
+!Enter(Anton)
+!HoldOn(0.6)
+!PlaySound(Smack)
+!NormalJump(G2,2,30,818,370,HurtR,DownR)
+!NormalJump(G3,2,30,340,510,HurtL,DownL)
+!HoldOn(0.1)
+!NormalJump(Frederick,2,30,740,345,HurtR,DownR)
+!NormalJump(G1,2,30,450,440,HurtL,DownL)
+!HoldOn(0.4)
+!SetAnim(Anton,DL)
+!HoldOn(1)
+!Exit(Frederick)
+!Exit(G1)
+!Exit(G2)
+!Exit(G3)
+!HoldOn(0.4)
+!OverworldCameraPan(786,306,2,1)
+!HoldOn(1)
+-Bruce: Anton?! Why are ye here?
+!HoldOn(0.2)
+!SetAnim(Anton,U)
+!HoldOn(0.2)
+-Anton: I want to fight too, lapa.
+!ResetWalkSpeed(Anton)
+-Bruce: Babe, I love ye, but yer not exactly a brawler.
+-Anton: Stop babying me!
+!Walk(Anton,U,0.5)
+!HoldOn(0.6)
+-Anton: I'm not some softboi to be left behind while you go adventuring.
+-Anton: I can handle myself! I can fight!
+-Bruce: Yer right. I should stop babying ye.
+-Bruce: Let's give 'em hell!
+-Anton: Yeah! I'll race you to the palace!
+!CameraFollow(1)
+
+/ChatAnton
+-Anton: To the palace!
+/Ratlas
+!CheckGlobal(47,1,SaveTime)
+-InfoBig: It's a marble statue of Ratlas.
+-InfoBig: The giant rat angered the gods when he stole the secret of electricity. As punishment, he must hold an enormous weight until the end of time.
+-InfoBig: So the shrew legend goes, at least.
+!SetGlobal(47,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Ratlas bears his burden.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Murida,City centre)
+-Info: Your game has been saved.
+/SaveNo
+
+
+/StiltonCenter
+!AutoPinFollowers()
+!SetGlobal(50,26)
+!HoldOn(1)
+-Stilton: This way!
+!Walk(Stilton,DR,3)
+!HoldOn(1)
+!Exit(Stilton)
+!CameraFollow(1)
+!HoldOn(1)

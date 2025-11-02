@@ -1,0 +1,140 @@
+/Intro
+!SetAnim(Leo,DL)
+!PlaySound(PalaceBigDoorClose)
+!OpenDoor(1,Close)
+!Walk(Aquila,DL,2.3)
+!HoldOn(2.5)
+!Exit(Aquila)
+!PlaySound(PalaceBigDoorOpen)
+!HoldOn(2)
+!PlaySound(PalaceBigDoorClose)
+!Walk(Leo,DL,1.4)
+!OverworldCameraPan(380,270,0.5,1)
+!HoldOn(1)
+
+!PlaySound(PalaceBigDoorClose)
+!HoldOn(1)
+~LionWaltzLoop
+-Leo: Sir Diego.
+!SetAnim(Diego,Turn)
+!TitanModeToggle()
+!HoldOn(0.5)
+-Diego: BLADEMASTER.
+!TitanModeToggle()
+!HoldOn(0.2)
+!Walk(Leo,DL,0.7)
+!HoldOn(0.7)
+!Walk(Leo,UL,0.8)
+!SetAnim(Diego,TurnLeft)
+!HoldOn(1.7)
+-Leo: What do you make of|Plaguemaster Aquila?
+!HoldOn(0.4)
+!TitanModeToggle()
+-Diego: MY THOUGHTS MATTER NOT.
+-Diego: FOR AS THIMBLE GUARD,|I AM BOUND BY DUTY.
+!TitanModeToggle()
+!HoldOn(0.4)
+-Leo: I'm not asking Sir Diego,|the Iron Justice.
+!HoldOn(0.1)
+!SetAnim(Leo,UR)
+!HoldOn(0.5)
+!Walk(Leo,UR,1)
+!HoldOn(1)
+-Leo: I'm asking Diego,|my dearest friend.
+!HoldOn(0.8)
+-Diego: Aquila claims to value the pursuit of knowledge above all else.
+!HoldOn(0.5)
+-Diego: And yet they work|behind locked doors.
+!Walk(Leo,DR,0.8)
+!SetAnim(Diego,Turn)
+-Diego: Their secrecy betrays an|abhorrent motivation.
+!HoldOn(0.8)
+-Leo: Like an innocent lily with twisted, poisoned roots.
+-Diego: Pray that the rat's words do not infect the young King's mind.
+-Leo: Gods willing.
+-Diego: Gods willing.
+!OverworldCameraPan(380,310,0.5,1)
+!PlaySound(PalaceBigDoorOpen)
+!HoldOn(0.2)
+!SetAnim(Leo,DL)
+!HoldOn(0.2)
+!SetAnim(Diego,TurnLeft)
+!CheckGlobal(73,6,Rose1)
+!CheckGlobal(73,7,Rose1)
+>Rose2
+
+/Rose1
+!Enter(Rosaline)
+!Enter(Maisie)
+!Walk(Rosaline,UR,1.5)
+!Walk(Maisie,UR,1.5)
+!HoldOn(2.4)
+-Rosaline: Blademaster. I hope we're not interrupting.
+-Maisie: Yeah! I heard you have a special minnish for us.
+!HoldOn(0.2)
+-Maisie: A special simmion.
+!HoldOn(0.2)
+-Maisie: A mesh-
+!HoldOn(0.4)
+!SetAnim(Maisie,DR)
+!HoldOn(0.1)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,Stupid)
+!ShoutMode()
+-Maisie: AAAAAAAH, I'm|messing up already!
+>Skip
+
+/Rose2
+!Enter(Rosaline)
+!Walk(Rosaline,UR,1.5)
+!HoldOn(2.1)
+-Rosaline: Blademaster. I hope I'm not interrupting.
+-Rosaline: You requested my presence for a special mission.
+-Leo: I did.
+!HoldOn(0.5)
+-Leo: Where's your sister?
+-Rosaline: She's... Um...
+!HoldOn(0.5)
+!ShoutMode()
+-Maisie: AAAAH, I lost track of time!
+!Enter(Maisie)
+!Walk(Maisie,UR,1.5)
+!HoldOn(2.1)
+!SetAnim(Maisie,DR)
+!HoldOn(0.1)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,Stupid)
+!ShoutMode()
+-Maisie: I can't believe I'm messing up|on my first day!
+!ShoutMode()
+-Maisie: I'm so stupid!
+>Skip
+
+/Skip
+!HoldOn(0.2)
+!SetAnim(Rosaline,DR)
+!HoldOn(0.2)
+-Rosaline: Maisie, take it easy.|Slow breaths.
+!HoldOn(0.9)
+-Leo: She alright, Rosaline?
+!HoldOn(0.2)
+-Maisie: I... I'm fine.
+!HoldOn(0.4)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,DR)
+!HoldOn(0.1)
+!SetAnim(Maisie,UR)
+!HoldOn(0.3)
+-Maisie: Sorry. Please continue, Blademaster.
+!HoldOn(0.3)
+!SetAnim(Rosaline,UR)
+!HoldOn(0.4)
+-Leo: I'll keep this brief.|Listen closely.
+-Leo: There's a noble mole who has been kidnapped by a vagabond mouse...
+!HoldOn(1)
+~Stop
+
+!NextRoom(MuriCenter,7)

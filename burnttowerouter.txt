@@ -1,0 +1,64 @@
+/Intro
+~AshenLoop
+!PerspectivePinFollowers()
+
+/FirstVisit
+!OverworldCameraPan(320,220,0.1,1)
+!HoldOn(3)
+!BigTitle(Ashen Tower,Nothing beside remains)
+!HoldOn(3)
+!NextRoom(BurntTower,4)
+
+/NormalVisit
+!CheckGlobal(18,21,FirstVisit)
+!OverworldCameraPan(320,180,0.2,1)
+!HoldOn(2)
+!NextRoom(BurntTower,4)
+
+/Boulder
+!CheckGlobal(18,20,BoulderNormal)
+!CheckGlobal(28,2,BoulderEarly)
+-InfoBig: It will take more than the two of you to budge the boulder.
+
+/BoulderNormal
+-Verm: This must be the Ashen Tower.
+-Verm: But we're not going any further with this boulder in the way.
+-Bruce: Nae bother. We can shift it.
+-Gwen: We'll have to really put our backs into it.
+-Siobhan: Teamwork, right?
+-Verm: Okay. On my mark.
+!HoldOn(0.6)
+!PullReady(Verm)
+
+/PullContinue
+!NextRoom(ToBlack)
+!HoldOn(1.6)
+!PlaySound(CeramicDrag)
+!SetGlobal(18,21)
+!HoldOn(3)
+!TeleportCharacter(Boulder,-1000,0)
+!TurnOffBlocks(2)
+!NextRoom(FromBlack)
+!HoldOn(1)
+-Verm: Great. Let's head in.
+
+/BoulderEarly
+!SetGlobal(28,1)
+-Verm: I reckon this is the Ashen Tower.
+-Siobhan: It sure looks like it.
+-Verm: But what's with this boulder?|It's blocking the entrance.
+-Verm: Siobhan, help me shift it.
+-Siobhan: It looks pretty heavy, Sir Verm.
+-Siobhan: There's no way we could budge it alone.
+-Siobhan: Let's go back to Sky Garden and get some help.
+-Verm: All the way back? Ugh...
+-Verm: So this whole trip through that damned maze was a waste of time.
+-Siobhan: Not a total waste. Look!
+!ReceiveItem(27)
+!PlaySound(ItemFound)
+-Info: You found a Traveller's Cloak, buried in dust beneath a charred tree root.
+!HoldOn(0.5)
+-Verm: Well... That's something, I guess.
+
+
+End scene

@@ -1,0 +1,96 @@
+/Intro
+~NightWoods2Loop
+!HoldOn(2)
+!Enter(Lamia)
+!NormalJump(Lamia,2,30,290,554,JumpDL,Look)
+!HoldOn(0.5)
+!PlaySound(LamiaWalk)
+!HoldOn(1)
+!Nani(Lamia,?)
+!HoldOn(1)
+!OverworldCameraPan(320,180,0.2,1)
+!PlaySound(LamiaTurn)
+!SetAnim(Lamia,Turn)
+!HoldOn(0.3)
+!PlaySound(LamiaWalk)
+!HoldOn(1.3)
+!Walk(Lamia,U,2.3)
+!HoldOn(4)
+-Lamia: Duke?
+!HoldOn(1.4)
+-Lamia: It's late. And the tree is in lockdown. What are you doing up here?
+!HoldOn(1.5)
+-Josh: I'm looking for the Wayward Star.
+!HoldOn(2.4)
+-Josh: But I can't see it.
+!HoldOn(1.4)
+-Lamia: There are no stars above Rodentia. Not any more.
+-Lamia: The gods plucked the starlight from the sky to power their own technology.
+!HoldOn(1.4)
+-Josh: To think that the gods dominate even the distant stars...
+-Josh: Their power is beyond imagining.
+!HoldOn(0.8)
+!OverworldCameraPan(320,260,1,1)
+!HoldOn(1.1)
+!SetAnim(Josh,Turn)
+!HoldOn(0.7)
+!SetAnim(Josh,Loop)
+-Josh: Hey. You remember when you, me, and Evan visited the Ashen Tower, a couple years back?
+-Lamia: To meet the Cailleach.
+-Josh: Yeah. The old hag.
+!HoldOn(0.5)
+-Josh: I thought she'd tell me about how to make Sky Garden great again.
+-Josh: But instead, she only told me that stupid prophecy.
+!OverworldCameraPan(320,280,1,1)
+!SpecialWalk(Josh,D,2,WalkD,0.5)
+!HoldOn(0.7)
+!SetAnim(Lamia,RightLookRight)
+!HoldOn(0.3)
+!HoldOn(1)
+!SetAnim(Josh,Loop)
+!HoldOn(0.3)
+!SetAnim(Lamia,RightLoop)
+-Josh: "Four riders armed with blades divine..."
+-Josh: "Raibeart Red upon his throne..."|Yada yada...
+!HoldOn(0.6)
+-Lamia: A toothless horoscope.
+!HoldOn(1)
+-Josh: Yeah, yeah. It's all ghosts and muswolves.
+!HoldOn(0.4)
+-Josh: But I didn't want to take any chances.
+-Lamia: So you had me slay the Cailleach.
+-Lamia: And slay her I did. I brought you her head on a plate.
+-Josh: Right. I figured, if the prophecy was real, that would put a stop to it.
+!HoldOn(1.3)
+-Josh: But now with that red squirrel returning...
+-Josh: And those other weirdos...
+!HoldOn(1.3)
+!SetAnim(Josh,Turn)
+!HoldOn(0.06)
+!SetAnim(Josh,U)
+!HoldOn(1)
+-Josh: I refuse.
+-Josh: I refuse to give up what is mine.
+-Josh: Sky Garden is the greatest city in Rodentia. No, it's the greatest city in the whole world!
+-Josh: It cannot be overrun|by freaks and degenerates.
+!HoldOn(1.3)
+-Lamia: You know the deal, Duke.
+-Lamia: Keep me fed, and Sky Garden is secure against any threat, be it squirrel, titan, or god.
+-Josh: Glad to hear it.
+!HoldOn(0.3)
+!SetAnim(Josh,Turn)
+!HoldOn(0.4)
+-Josh: I'm off to bed.
+-Josh: Help yourself to that chubby hamster in the dungeons if you get a hankering.
+!HoldOn(0.2)
+!SpecialWalk(Josh,D,4,WalkD,0.5)
+!OverworldCameraPan(320,260,1,1)
+!HoldOn(0.9)
+!PlaySound(LamiaTurn)
+!SetAnim(Lamia,Turn)
+!HoldOn(1.9)
+-Lamia: Don't underestimate my appetite, Duke.
+!HoldOn(1)
+~Stop
+!NextRoom(BurntTowerTop,2)
+

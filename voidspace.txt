@@ -1,0 +1,20 @@
+/Intro
+!CheckGlobal(56,1,Continue)
+!SetGlobal(56,1)
+!HoldOn(1)
+-InfoBig: Would you like to save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(End of Spring,)
+-Info: Your game has been saved.
+>Continue
+/SaveNo
+>Continue
+
+/Continue
+!HoldOn(1)
+!SetGlobal(56,2)
+!SetGlobal(10,1)
+!NextRoom(Seasons,2)

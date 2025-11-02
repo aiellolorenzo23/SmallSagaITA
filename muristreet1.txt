@@ -1,0 +1,125 @@
+/Intro
+!AutoPinFollowers()
+~MuridaLoop
+
+/May
+!CheckGlobal(10,2,May2)
+-May: The gods above us never stop hooting and jeering. Makes it hard to get some shut-eye.
+
+/May2
+-May: Yelling gods above. Squeaky rats below. So much damn noise...
+
+/Bubbles
+!CheckGlobal(10,2,Bubbles2)
+-Bubbles: Outa my way, nerd!|Shoooom!
+
+/Bubbles2
+-Bubbles: Move it, nerd!|I got places to be!
+
+/Tom
+!CheckGlobal(10,2,Tom2)
+-Tom: "Young King Tightens Border: A Win For the People".
+-Tom: Hmm. One can't help but wonder...
+
+/Tom2
+-Tom: "Clan Grey Cancelled!|Sky Garden Goes Woke!"
+-Tom: Hmm. The Daily Tail|certainly has an angle...
+
+/LateEntrance
+!AutoPinFollowers()
+!SetGlobal(32,16)
+!SetGlobal(70,0)
+!SetGlobal(71,0)
+!SetGlobal(72,0)
+!Walk(Verm,UR,1.3)
+!HoldOn(1.8)
+-Verm: Hey.
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!RemoveFromParty(Siobhan)
+!RemoveFromParty(Bruce)
+!UnpinFollowers()
+-Verm: Is it really okay for us to be wandering around like this?
+-Bruce: Psh. It's fine.
+-Bruce: Everyone thinks yer dead, for one thing.
+-Bruce: Ghost by name,|ghost by reputation.
+-Verm: I guess that's true.
+-Verm: I doubt even the palace guards would recognise me.
+!HoldOn(0.4)
+-Siobhan: Right, the palace!|I better get moving.
+-Siobhan: Plaguemaster Aquila will|be waiting for me.
+-Gwen: Good luck, Siobhan.
+-Bruce: Aye. Come meet us in the Twisted Tails when yer done!
+-Siobhan: Okay!
+!Walk(Verm,UL,0.4)
+!HoldOn(0.1)
+!Walk(Siobhan,UR,6.3)
+!HoldOn(0.4)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(1.3)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!Walk(Gwen,UL,0.4)
+!HoldOn(0.7)
+-Gwen: You know, I've never been|to Murida before.
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!SetAnim(Gwen,UR)
+-Gwen: Is this all there is to it? Dinky houses and sad-looking people?
+-Verm: Pretty much.
+-Bruce: Hey, Verm. Don't be rude. Show Gwen around.
+!SetAnim(Verm,DL)
+-Verm: I'm not a tour guide.|Besides, I don't even live here.
+-Bruce: Ahhhh, Verm. So humble.|Yer practically a local.
+-Bruce: Just take her tae the city centre and go from there.
+-Verm: Do it yourself, nerd.
+-Bruce: Psh, I've got errands to run.
+-Bruce: I'll meet ye in the Twisted Tails in a couple of hours.
+-Bruce: Go have fun!
+!Walk(Bruce,UR,8)
+!HoldOn(0.5)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(3)
+!Exit(Bruce)
+!Exit(Siobhan)
+-Verm: What was all that about?
+-Gwen: You don't see what|he's trying to do?
+!HoldOn(0.2)
+!Nani(Verm,?)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.4)
+-Gwen: Oh sheesh, you're both|as thick as mud.
+!HoldOn(0.2)
+!Nani(Verm,?)
+!HoldOn(0.6)
+-Gwen: Forget it. Come on, let's go see the city centre.
+!Walk(Gwen,UR,0.2)
+!HoldOn(0.2)
+!AutoPinFollowers()
+

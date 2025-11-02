@@ -1,0 +1,21 @@
+/BattleVeryStart
+!HoldOn(0.4)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+~SmokeMachineLoop
+/BattleStart
+!LetsFight()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+/VermRage
+-Verm: Let's tear it to pieces!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/End

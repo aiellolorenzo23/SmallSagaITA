@@ -1,0 +1,792 @@
+/Intro
+~ForestLoop
+!AutoPinFollowers()
+!CheckGlobal(58,7,PostMimic)
+
+/Liminal
+!AutoPinFollowers()
+~Stop
+
+/FirstIntro
+
+/TooEarly
+!AutoPinFollowers()
+!Walk(Verm,R,0.4)
+!HoldOn(0.5)
+!SetGlobal(28,2)
+-Verm: What's up with this place? Every road looks the same.
+-Siobhan: Maybe we should go back and ask for directions.
+-Verm: Nah. Not my style.
+
+/Event2
+!SetGlobal(31,3)
+!Walk(Verm,L,2.4)
+!Walk(Gwen,L,1.9)
+!HoldOn(2.3)
+-Gwen: Wait. We lost someone. Or two.
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.5)
+-Verm: Bruce and Siobhan?
+!HoldOn(0.3)
+-Gwen: I didn't even see them wander off.
+!Walk(Verm,DR,0.45)
+!HoldOn(0.5)
+!Walk(Verm,R,0.65)
+!HoldOn(0.2)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(1.2)
+-Verm: How is that possible?|They were right on my tail.
+!HoldOn(0.6)
+-Gwen: Speaking of tails...|I don't want to pry, but I notice that yours is missing an' all.
+
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: So what?
+-Gwen: I'm not judging.|I'm missing parts too.
+!HoldOn(0.5)
+-Gwen: It must be tough to walk without a tail. Let alone swing a sword.
+-Verm: I cope just fine.
+-Gwen: So I see.
+!HoldOn(0.3)
+~Sisters2Loop
+!Walk(Rosaline,L,0.6)
+!HoldOn(1)
+-Rosaline: Tsk. Where did Maisie go?
+!HoldOn(0.2)
+!Nani(Rosaline,?)
+!HoldOn(0.5)
+-Rosaline: A vagabond mouse... but no mole.
+-Rosaline: I wonder...
+!Walk(Rosaline,L,0.7)
+!HoldOn(0.9)
+-Rosaline: You two. 
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+-Verm: Thimble Guard?|You're far from home.
+-Rosaline: I'm looking for two rodents.|If you could answer some questions...
+-Gwen: We don't have to answer to the likes of a crown-worshipping tin-head.
+-Rosaline: Listen. I've had a long day. I'm not in the mood to field more petty insults.
+-Rosaline: So if you don't wish to talk civilly, I'll have no choice but to draw my sword.
+-Gwen: Bring it on.|What do you say, Verm?
+!CheckGlobal(73,7,Rose2)
+!CheckGlobal(73,6,Rose2)
+!SetGlobal(79,1)
+-Verm: Let's send this tin-head back to Murida.
+~Stop
+!GoToBattle(Rose)
+
+/Rose2
+-Verm: I say she looks familiar.|Haven't we met before?
+!HoldOn(0.2)
+!Nani(Rosaline,?)
+!HoldOn(0.7)
+!Walk(Rosaline,L,0.15)
+!HoldOn(4)
+!Nani(Rosaline,!)
+!HoldOn(0.4)
+-Rosaline: So we have.
+-Rosaline: You are the mouse who helped Maisie earlier today, back in the palace.
+-Rosaline: Tsk. Way to go and put me between a pebble and a hard place...
+!HoldOn(1)
+!SetAnim(Rosaline,DR)
+!HoldOn(0.1)
+!SetAnim(Rosaline,UR)
+!HoldOn(0.4)
+-Rosaline: Go. Leave my sight.
+-Rosaline: I'll tell the crown that the rogue vagabond is nowhere to be found.
+!HoldOn(0.3)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!Walk(Verm,L,4)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!Walk(Gwen,L,4)
+!HoldOn(2)
+!NextRoom(TreePath5,80)
+
+/RosePost
+~ForestLoop
+!HoldOn(1.3)
+-Rosaline: Ugh... two on one. Hardly fair.
+-Gwen: What does a Guard know of fairness?
+-Gwen: Come on, Verm. Let's go.
+!HoldOn(0.3)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!Walk(Verm,L,4)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!Walk(Gwen,L,4)
+!HoldOn(2)
+!NextRoom(TreePath5,80)
+
+/Event1
+!SetGlobal(31,2)
+!Walk(Siobhan,L,2)
+!Walk(Bruce,L,2)
+!HoldOn(2)
+!Nani(Siobhan,?)
+!HoldOn(0.8)
+-Siobhan: W-wait.
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.5)
+-Siobhan: Where did Sir Verm and Lady Gwen just go?
+!Nani(Bruce,?)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.3)
+!SetAnim(Siobhan,L)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.2)
+-Bruce: I heard a song about the Gloaming Woods once.
+-Bruce: They're said to be cursed.|Spin ye round and round.
+-Bruce: Let's just wait a moment.|Maybe they'll backtrack.
+-Siobhan: Makes sense.
+!HoldOn(0.9)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.5)
+!Walk(Bruce,UR,0.4)
+!HoldOn(0.7)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!Walk(Siobhan,D,0.3)
+!HoldOn(0.3)
+!SetAnim(Bruce,U)
+!HoldOn(1.5)
+-Siobhan: Hey, Bruce. I'm worried|about Sir Verm.
+!HoldOn(0.1)
+!Nani(Bruce,?)
+!HoldOn(0.4)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+-Bruce: Worried? The lad looks|healthy to me.
+-Siobhan: He is, but...|there's something wrong.
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+-Siobhan: It's like, he throws himself into things.
+-Siobhan: Too much of himself.
+-Siobhan: He wants to find and slay the Yellow God. But I think he'd be fine dying in the process.
+!HoldOn(0.5)
+-Bruce: Ah, I get what ye mean.
+-Bruce: The lad does have a raw|recklessness about him.
+-Bruce: When people get hurt, they lash out. Sometimes at others.|Sometimes at themselves.
+-Bruce: It's not an easy wound to treat...
+~Sisters3Loop
+!Nani(Bruce,!)
+!HoldOn(0.1)
+!Nani(Siobhan,!)
+!ShoutMode()
+-Maisie: AAAAAAH, DAMN IT!
+-Maisie: Where did Rosy go?!
+
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!Walk(Maisie,L,0.9)
+!HoldOn(1)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,Stupid)
+!HoldOn(0.1)
+-Maisie: I hate this stupid,|confusing forest!
+!HoldOn(0.1)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!Walk(Maisie,L,0.6)
+!HoldOn(0.6)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,Stupid)
+!ShoutMode()
+-Maisie: DAMN IT!
+-Maisie: How did I get lost?!|I'm so stupid!
+!HoldOn(0.8)
+-Bruce: Ye alright, lass?
+!HoldOn(0.5)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,L)
+!HoldOn(0.5)
+-Maisie: Oh. Didn't see you there.
+-Maisie: I'm looking for my sister.
+-Maisie: She's a hair taller than me, got a scissor blade like mine... You seen her?
+*MYes1: We've seen her.
+*MNo1: Nope.
+
+/MYes1
+-Siobhan: Yes, we've seen her.
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+-Bruce: Really, Siobhan? I don't remember anyone like that.
+-Maisie: Well, which is it? Have you seen Rosy or not?
+!HoldOn(0.2)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.3)
+-Siobhan: Um... well, come to think of it... I'm not so sure...
+
+!HoldOn(0.4)
+!ShoutMode()
+-Maisie: AAHHH, you're pissing me off!
+-Maisie: If you aren't gonna give it to me straight, I'll beat some answers out of you!
+~Stop
+!GoToBattle(Maisie)
+
+/MNo1
+-Siobhan: Um... I can't say that we have, no.
+-Maisie: Alright. No worries.
+
+!Walk(Maisie,L,0.6)
+!HoldOn(0.3)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.2)
+!Nani(Maisie,!)
+!HoldOn(0.6)
+-Maisie: Ah, wait! You're a mole!|And you're nobility!
+!HoldOn(0.2)
+!SetAnim(Maisie,DR)
+!HoldOn(0.1)
+!SetAnim(Maisie,UR)
+!HoldOn(0.5)
+-Maisie: Hmm. But this one isn't a mouse...
+!HoldOn(0.3)
+!SetAnim(Maisie,DR)
+!HoldOn(0.1)
+!SetAnim(Maisie,DL)
+-Maisie: You two wouldn't know anything about a vagabond mouse, would you?
+*MYes2: We do.
+*MNo2: Nope.
+
+/MYes2
+-Siobhan: Oh, you must mean Sir Verm! Yes, he's a good friend of ours. He should be close by!
+-Bruce: Sheesh, Siobhan. Ye don't have to blab everything.
+-Siobhan: O-oh. Right.
+-Maisie: Ah ha! So you're rodents of interest!
+-Maisie: I'm taking you both in. Don't resist!
+~Stop
+!GoToBattle(Maisie)
+
+/MNo2
+-Siobhan: No, that doesn't ring any bells. Sorry.
+-Maisie: Ah. No worries then.
+!Walk(Maisie,L,5)
+!HoldOn(0.3)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!SetAnim(Bruce,L)
+!HoldOn(2)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.4)
+-Bruce: Heh, pretty smooth talking, Siobhan.
+-Bruce: But I wonder what a Thimble Guard was doing all the way out here.
+-Bruce: Ye and Verm must be building quite the reputation as wanted outlaws.
+-Siobhan: O-oh no. Should I be worried?
+~Stop
+!HoldOn(0.2)
+!NextRoom(TreePath4,80)
+
+/MaisiePost
+~ForestLoop
+!HoldOn(1.4)
+!SetGlobal(80,1)
+!ShoutMode()
+-Maisie: DAMN IT! DAMN IT! DAMN IT!
+-Maisie: I'm so useless!
+!FastWalk(Maisie,L,5)
+!HoldOn(0.3)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!SetAnim(Bruce,L)
+!HoldOn(2)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.7)
+-Bruce: Any idea what that was about?
+-Siobhan: Not a clue.
+!HoldOn(0.2)
+!NextRoom(TreePath4,80)
+
+/Reunite
+~ForestLoop
+!HoldOn(1.3)
+!SetGlobal(31,4)
+!Walk(Verm,L,1.3)
+!Walk(Gwen,L,1.3)
+!HoldOn(1.3)
+!Walk(Verm,UL,0.5)
+!Walk(Gwen,DL,0.5)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.2)
+!SetAnim(Verm,L)
+!SetAnim(Gwen,L)
+-Siobhan: Oh, hey. There you are.|Where did you go?
+!SetAnim(Verm,DL)
+-Verm: Woods are cursed.
+!SetAnim(Bruce,UR)
+-Bruce: Aye, that's what I said!|Woods are cursed.
+-Gwen: Hey, listen.
+-Gwen: These woods are crawling with knights, crawlies, and who-knows-what-else.
+-Gwen: Let's follow Verm closely.
+!HoldOn(0.6)
+!PlaySound(NewMove)
+!LearnMove(3,4)
+-InfoBig: Gwen learned Rally.
+-Bruce: Right you are, Gwen.|We're following.
+!AutoPinFollowers()
+
+/JabariTime
+!SetGlobal(18,19)
+!SetGlobal(31,0)
+!HoldOn(1)
+-Pocket: @ Which rodent stole|the precious thing? @
+-Pocket: @ Ja-ba-ri! Ja-ba-ri! @
+-Pocket: @ And who shall be|the Trickster King? @
+-Pocket: @ Ja-ba-ri! Ja-ba-ri! @
+!HoldOn(0.6)
+!SetAnim(Pocket,DR)
+!HoldOn(0.8)
+!SetAnim(Pocket,DL)
+!HoldOn(0.2)
+!SetAnim(Pocket,DR)
+!HoldOn(0.2)
+!SetAnim(Pocket,DL)
+!HoldOn(0.2)
+!SetAnim(Pocket,DR)
+!HoldOn(0.5)
+-Pocket: Wait... I took a left...|then a right...
+!HoldOn(0.3)
+-Pocket: Dang, am I lost?
+!Walk(Bruce,R,1.5)
+!Walk(Verm,R,1.3)
+!Walk(Siobhan,R,1.3)
+!Walk(Gwen,R,1.3)
+!HoldOn(1.5)
+!SetAnim(Bruce,DR)
+!NormalJump(Pocket,3,30,320,200,JumpDR,DL)
+!ShoutMode()
+-Bruce:  You! 
+!HoldOn(1)
+!SetAnim(Pocket,UL)
+-Pocket: Oh. Uh.
+!HoldOn(0.2)
+-Pocket:  Hey. 
+!HoldOn(0.4)
+-Pocket:  'Sup? 
+-Bruce: I ought to bury ye where ye stand, ye two-faced, rock-swiping eejit!
+-Verm: Friend of yours?
+-Bruce: Hardly! This back-stabber is the one that got me and my boyfriend locked up!
+-Pocket: Hehe! Well, if you don't wanna do the time...
+-Bruce: Is nae a joke!
+-Pocket: Are you kidding?|Everything's a joke.
+-Pocket: You need to learn to lighten up and laugh at life.
+-Bruce: Ah, yer really ticking me off, ye smug runt!
+!HoldOn(0.8)
+-Gwen: So, what now? You going to serenade him into an apology?
+-Bruce: Naw, I think you made a|good point earlier, Gwen.
+-Bruce: There's a time for tootin'|and a time for bootin'.
+-Bruce: I'm gonna kick his arse all by myself!
+!HoldOn(0.2)
+!PlaySound(NewMove)
+-InfoBig: Bruce learned Whack.
+!HoldOn(0.4)
+~Stop
+-Pocket: Bring it on,|you spoony bard!
+!GoToBattle(Jabari)
+
+/PostJabari
+!HoldOn(1)
+!CheckGlobal(31,1,JabariLoss)
+-Pocket: Okay, okay, I yield!
+-Verm: Damn, who taught Bruce|to fight like that?
+-Gwen: Only the best.
+>JabariOnward
+
+/JabariLoss
+-Bruce: Ugh. Guess I've still|got a lot to learn.
+-Verm: Not bad for someone who claims to be a pacifist, though.
+-Pocket: Ha ha! Nobody can best Pocket Jabari!
+-Pocket: But you're looking pretty raggedy. I almost feel bad...
+>JabariOnward
+
+/JabariOnward
+!SetGlobal(18,20)
+!HoldOn(0.3)
+!NormalJump(Pocket,3,30,350,196,DLJump,DLLand)
+!HoldOn(0.8)
+!ShowItem(Pocket,66)
+!HoldOn(1)
+-Pocket: Here. Take the rock.
+-Pocket: It isn't shiny. So it's worth nothing to me anyway.
+-Bruce: The Pebble o' Scuin...
+!HoldOn(0.3)
+!ReceiveItem(66)
+!LoseItem(55)
+!PlaySound(ItemFound)
+-Info: You received the Pebble of Scuin! You add it to your trinkets.
+!HoldOn(0.5)
+!NormalJump(Pocket,3,30,385,180,DLJump,DLLand)
+!HoldOn(1)
+-Pocket: Hey, Bruce.
+-Pocket: I'm sorry. I never intended for you and Anton to get locked up.
+-Pocket: I'll make this right.
+-Bruce: And how are ye going to do that?
+-Bruce: Sky Garden's on full alert, and Anton's execution is in the morn'.
+-Pocket: I'll... think of something.
+!HoldOn(0.3)
+!SetAnim(Pocket,DR)
+!HoldOn(0.3)
+!NormalJump(Pocket,3,30,485,185,DRJump,DRLand)
+!HoldOn(0.5)
+!NormalJump(Pocket,3,30,585,185,DRJump,DRLand)
+!HoldOn(0.5)
+!NormalJump(Pocket,3,30,685,185,DRJump,DRLand)
+!HoldOn(0.6)
+!Walk(Verm,R,0.5)
+!HoldOn(0.6)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.8)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+-Verm: Let's carry on. I think we're getting close.
+!Walk(Verm,DL,0.5)
+!HoldOn(0.5)
+!AutoPinFollowers(1)
+
+/SethFirst
+!AutoPinFollowers()
+!CheckGlobal(99,2,SFS)
+!Walk(Verm,L,0.4)
+!SetGlobal(29,1)
+!HoldOn(0.4)
+!Nani(Verm,!)
+!HoldOn(0.4)
+-Verm: Stay back. There's a wyrm ahead.
+-Siobhan: Sir Verm, I think that's a slow-wyrm.
+-Verm: A slow-wyrm?
+-Siobhan: They're harmless. I think?
+-Verm: Well. Only one way to find out...
+
+/SFS
+!Walk(Siobhan,L,0.4)
+!SetGlobal(29,1)
+!HoldOn(0.4)
+!Nani(Siobhan,!)
+!HoldOn(0.4)
+-Siobhan: Oh! There's a wyrm ahead.
+-Siobhan: Although... it looks like a harmless slow-wyrm...
+
+/Seth
+!CheckGlobal(29,1,SethFirstFirst)
+-Seth: Thank you for your wisdom, travellers. I will treasure it.
+
+/SethFirstFirst
+!SetGlobal(29,2)
+-Seth: Well met, travellers!
+-Seth: You must be particularly inquisitive rodents.
+-Seth: For few are able to find me, and fewer still dare approach.
+!CheckGlobal(99,2,SS1)
+-Verm: Probably because you're a venomous wyrm.
+>SSC
+
+/SS1
+-Siobhan: I'm sorry to say it, but it might be because you look like a venomous wyrm.
+>SSC
+
+/SSC
+!HoldOn(0.2)
+!SetAnim(Seth,Shock)
+!Nani(Seth,!)
+!ShoutMode()
+!HoldOn(0.7)
+-Seth: ACK! Venomous?!
+!HoldOn(0.2)
+!SetAnim(Seth,Loop)
+!HoldOn(0.2)
+-Seth: I am Seth, the friendly travelling wizard lizard!
+-Seth: I merely seek knowledge to expand the academic frontier.
+!CheckGlobal(99,2,SS2)
+-Verm: Oh, a boffin.
+>SSC2
+
+/SS2
+-Siobhan: That's grand! I'm a bit of a boffin too.
+>SSC2
+
+/SSC2
+!HoldOn(0.2)
+!SetAnim(Seth,Shock)
+!Nani(Seth,!)
+!ShoutMode()
+!HoldOn(0.7)
+-Seth: ACK! Boffin?!
+!HoldOn(0.2)
+!SetAnim(Seth,Loop)
+!HoldOn(0.2)
+-Seth: Well, in a manner of speaking, I suppose that descriptor isn't inaccurate.
+-Seth: In any case, perhaps we can make an exchange?
+-Seth: Teach me something I do not know, and I will pay you in return.
+!CheckGlobal(99,2,SSQs)
+-Verm: Something you don't know? Alright.
+*SethFelidae: Felidae...
+*SethKrakens: Krakens...
+
+/SSQs
+-Siobhan: Something you don't know? Hmm...
+*SSethFelidae: Felidae...
+*SSethKrakens: Krakens...
+
+/SSethFelidae
+-Siobhan: The species we call felidae.|Did you know that they're...
+*SSethVile: Horrid
+*SSethFlammable: Flammable
+
+/SSethVile
+-Siobhan: They're horrid creatures.|They attack without hesitation.
+-Seth: I'm afraid that's not new knowledge to me, mole.
+-Seth: My kind are well aware of the devastation a single felidae can bring.
+>SethNonetheless
+
+/SSethFlammable
+-Siobhan: They're weak to being set on fire.
+-Seth: Isn't... isn't everyone weak to that?
+-Siobhan: You would think so, but in my experience some creatures are more susceptible than others.
+-Seth: I see. I don't know why you would know this, but I dare not ask.
+>SethThank
+
+/SSethKrakens
+-Siobhan: Krakens - you know, the mythical deep-sea denizens - they're...
+*SSethPoets: Poetic
+*SSethReal: Real
+
+/SSethPoets
+-Siobhan: Poetic. Krakens speak exclusively in rhyming verse.
+-Seth: Oh? Anything else? Was it in iambic pentameter too? Little rhyming couplets, perhaps?
+-Siobhan: I think it was octameter.
+-Seth: Well now you're just being silly.
+-Seth: You would have me believe that this fabled cryptid not only exists, but that it is a poet?
+-Seth: I'm afraid I can't entertain the idea.
+>SethNonetheless
+
+/SSethReal
+-Siobhan: Real. I witnessed one myself in the Muridan labyrinth.
+-Siobhan: It had eight tentacles, and it could dispense an inky substance as a form of defence.
+-Seth: Oh? Interesting.
+-Seth: I've heard rumour of tentacled cryptids, so it's good to have confirmation of their existence.
+>SethThank
+
+/SethFelidae
+-Verm: Felidae - you know, big fluffy titans - they're...
+*SethVile: Vile
+*SethFlammable: Flammable
+
+/SethVile
+-Verm: They're vile creatures. They attack without hesitation.
+-Seth: I'm afraid that's not new knowledge to me, mouse.
+-Seth: My kind are well aware of the devastation a single felidae can bring.
+>SethNonetheless
+
+/SethFlammable
+-Verm: They're weak to being set on fire.
+-Seth: Isn't... isn't everyone weak to that?
+-Verm: Oh, sure, but felidae are especially weak. I guess because they're so fluffy.
+-Seth: I see. I don't know why you would know this, but I dare not ask.
+>SethThank
+
+/SethKrakens
+-Verm: Krakens - you know, the mythical deep-sea denizens - they're...
+*SethPoets: Poetic
+*SethReal: Real
+
+/SethPoets
+-Verm: Poetic. Krakens speak exclusively in rhyming verse.
+-Seth: Oh? Anything else? Was it in iambic octameter too? Little rhyming couplets, perhaps?
+-Verm: I don't know what all that means.
+-Seth: It means I find your claim outlandish, mouse.
+-Seth: You would have me believe that this fabled cryptid not only exists, but that it is a poet?
+-Verm: It's the truth. Take it or leave it.
+-Seth: I'm afraid I can't entertain the idea.
+>SethNonetheless
+
+/SethReal
+-Verm: Real. I fought one myself in the Muridan labyrinth.
+-Verm: It had a dozen or so tentacles and spat an inky substance.
+-Seth: Oh? Interesting.
+-Seth: I've heard rumour of tentacled cryptids, so it's good to have confirmation of their existence.
+>SethThank
+
+/SethThank
+-Seth: I've learned something new today, and I appreciate that.
+!HoldOn(0.2)
+!ShowItem(Seth,65)
+!HoldOn(0.9)
+-Seth: Take this, for your troubles.
+!ReceiveItem(65)
+!PlaySound(ItemFound)
+-Info: You received a Zip-Zap! Potion.
+>Seth
+
+/SethNonetheless
+-Seth: Nonetheless, I appreciate your attempt to share knowledge.
+!HoldOn(0.2)
+!ShowItem(Seth,64)
+!HoldOn(0.9)
+-Seth: Take this, for your troubles.
+!ReceiveItem(64)
+!PlaySound(ItemFound)
+-Info: You received a Grrr! Potion.
+>Seth
+
+/Cauldron
+-Info: Something unfamiliar is brewing.|It smells like rose and honey tea, with hints of lilac and pine resin.
+
+/Statue
+!CheckGlobal(84,1,SaveTime)
+-InfoBig: It's a wooden statue of an outlaw, half eaten by moss and lichens. 
+-InfoBig: The plaque reads:||"For Gilded Roy|so feared were he,|That Christoph sought his head.|But sly Roy took|his chance to flee,|Afore the charge was read."
+!SetGlobal(84,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Gilded Roy flees.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Gloaming Woods,The Forest Entrance)
+-Info: Your game has been saved.
+/SaveNo
+
+/FoundSeeds
+-Info: You found a Pen Lance!|You add it to your items.
+
+/FoundMimic
+!HoldOn(1)
+!SetGlobal(58,7)
+-Info: You found an avarice spider.
+!GoToBattle(TrapSpider)
+
+/PostMimic
+!HoldOn(1)
+!ShowItem(Prota,45)
+!SetGlobal(58,0)
+!PlaySound(ItemFound)
+-Info: You picked up an insect part.
+-Info: Gross. Why did you do that?
+-Info: You add it to your trinkets nonetheless.

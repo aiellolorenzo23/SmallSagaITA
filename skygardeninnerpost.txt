@@ -1,0 +1,79 @@
+/Intro
+~SkyGarden3Loop
+!AutoPinFollowers()
+
+/Hazel
+-Hazel: Welcome back to Sky Garden.|Stay a while.
+
+/Junius
+-Junius: Sky Garden was never like this before. It's like a breath of fresh air.
+
+/Felix
+!CheckGlobal(77,0,FelixCont)
+-Felix: Wounds heal, but the scars remain.
+
+/FelixCont
+!CheckGlobal(99,0,FelixCont2)
+-Felix: There's only one prisoner in the dungeon now. But sorry, he asked for no visitors.
+-Siobhan: I see.
+
+/Nevermind
+
+/FelixCont2
+-Felix: There's only one prisoner in the dungeon now. But sorry, he asked for no visitors.
+*Who: Who is it?
+*Nevermind: Never mind.
+
+/Who
+!SetGlobal(77,1)
+-Verm: Who's the prisoner?
+-Felix: Captain Aiden.
+-Verm: I don't know who that is.
+-Bruce: Aye, ye do. Ye fought him.|The top prison guard, remember?
+-Verm: Oh right, the lanky dweeb with the sentinel.
+!HoldOn(0.6)
+-Verm: Hold on. This doesn't add up.
+-Verm: I heard you kicked all the soldiers out of Sky Garden.
+-Gwen: We gave them each a choice. Reform or exile.
+-Gwen: Aiden refused both options.
+-Bruce: Aye, so that put us in a bit of a quandary.
+-Bruce: Gwen suggested attaching him to a magic missile and firing him at the sun, like ol' Murray Cloudrunner.
+-Bruce: But I said naw, if he wants to stay in Sky Garden so badly, then let him.
+-Bruce: So now he's the sole dungeon resident.
+-Bruce: It's nae bother. We feed him properly an' all.
+!HoldOn(0.6)
+-Gwen: I hate it.
+-Gwen: Dungeons are grotesque. We shouldn't use them, even for the scummiest of cachgwn.
+-Bruce: Imprisoning Aiden is bad, but launching him into the sun is okay?!
+-Gwen: I contain multitudes.
+!ShowItem(Felix,55)
+!HoldOn(0.5)
+-Felix: Welp, in any case, here's the key.
+!PlaySound(ItemFound)
+!ReceiveItem(55)
+-Info: You received the Jailer's Keyring! You add it to your trinkets.
+-Felix: If you really want to have a word with the prisoner, he's on the lowest level.
+-Verm: Why would I want to do that?
+-Felix: Beats me. It wouldn't be a good use of your time.
+-Felix: There's no, like, secret items or anything down there.
+-Felix: But hey, the option's there.
+!StairShift()
+
+/Statue
+!CheckGlobal(48,1,SaveTime)
+-InfoBig: It's the vandalised base of a statue.
+-InfoBig: Despite the damage, the gold sheen shines on.
+!SetGlobal(48,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: The podium glimmers.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Sky Garden,Ground floor)
+-Info: Your game has been saved.
+/SaveNo
+
+End scene

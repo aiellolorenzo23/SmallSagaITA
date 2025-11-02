@@ -1,0 +1,193 @@
+/Intro
+!AutoPinFollowers()
+
+/BruceIntro
+!HoldOn(2)
+!CameraFollow(1)
+!HoldOn(0.4)
+!SetAnim(Bruce,DR)
+!Enter(Bruce)
+!HoldOn(1)
+!Walk(Bruce,DR,0.5)
+!HoldOn(0.5)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(1)
+-Bruce: The Good ol' Twisted Tails.
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+-Bruce: I cannae leave Anton waiting.
+
+/NotYet
+-Bruce: I cannae leave just yet.
+!Walk(Bruce,DR,0.5)
+!HoldOn(0.5)
+
+/FoundSeeds
+-Info: You found 3 seeds.
+
+/fafa
+What is this?
+
+/Alex
+!CheckGlobal(75,1,Alex2)
+!CheckGlobal(75,0,AlexStart)
+!CheckGlobal(75,40,AlexBounty)
+!CheckGlobal(75,50,BountyLast)
+-Alex: What are you dawdling for?|Solhill. Go fetch your bounty.
+
+/AlexStart
+!SetGlobal(75,1)
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Alex: DAMN IT ALL!
+!HoldOn(0.3)
+-Alex: My life is a damn WRECK.
+-Alex: First... that blonde twink humILIATED me and took my title...
+-Alex: THEN those sCisSSsSsor sisssters gave me lip... and then... and then...
+*AlexAlright: You alright?
+*AlexBye: Bye.
+
+/Alex2
+-Alex: And then... and then...
+*AlexAlright: You alright?
+*AlexBye: Bye.
+
+/AlexBye
+-Verm: I've heard enough.
+
+/AlexAlright
+!SetGlobal(75,2)
+-Verm: Are you alright, sir?
+-Bruce: He's beyond alright. He's steaming.
+-Siobhan: I'll go get a glass of water.
+-Gwen: A glass? Bring a whole barrel and drown him.
+-Alex: Ugh... I'm fine.|Just, just...
+-Alex: Just give me a sec.
+!HoldOn(0.4)
+!NextRoom(ToBlack)
+!HoldOn(1.4)
+!UnpinFollowers()
+!TeleportCharacter(Alex,488,371)
+!SetAnim(Alex,DL)
+!NextRoom(FromBlack)
+!HoldOn(0.4)
+-Alex: Okay, I'm sober now.
+-Bruce: Hardly.
+-Alex: Sober enough, you judgy prick.
+!HoldOn(0.6)
+-Alex: Hey, you're bounty hunters, right?
+*AlexBountyYes: Right.
+*AlexBountyNo: Wrong.
+
+/AlexBountyYes
+-Verm: Sure. We're bounty hunters.
+-Alex: Perfect. That's perfect.
+>BountyContinue
+
+/AlexBountyNo
+-Verm: Not really, no.
+-Alex: Oh, whatever. "Bounty hunters", "heroes", "soldiers", "assassins", it's all semantics.
+>BountyContinue
+
+/BountyContinue
+-Alex: I've got a job. There's a thousand seeds in it. Interested?
+-Verm: You're drinking something that smells like vinegar.
+-Verm: I don't think you have a thousand seeds to give.
+-Alex: Tsk. Shows what you know about wealth. Or fine alcohol for that matter.
+-Alex: They call me "the Sterling Knight" for a reason, y'know.
+-Verm: Fine, I get it, you're loaded.|Who's the target?
+!HoldOn(0.5)
+-Alex: Do you know Rosaline and Maisie of the Thimble Guard? Two mice with scissor blades?
+-Verm: We've met.
+-Alex: Good. That makes things easy.
+!HoldOn(0.3)
+-Alex: I'll spare you the details, but we were out on a reconnaissance mission.
+-Alex: Then the younger one spotted something and got spooked.
+-Alex: She went crazy, and took a swing at me, unprovoked.
+-Alex: I fought back. Blood was drawn.
+-Alex: Then the older one stepped in and took a swipe at me too.
+-Alex: I was lucky to make it out alive.
+-Verm: So you want me to track down these two deserter knights.
+-Verm: And then what?
+!HoldOn(0.3)
+-Alex: Bring them to justice.
+-Verm: You mean, kill them?
+-Alex: Attacking a superior officer is a capital offence.
+-Alex: Sheesh, I didn't think four hardened warriors would be such prissy pansies.
+-Bruce: This guy's the worst.
+-Gwen: Even by tin-head standards.
+-Gwen: He's trying to rope us into a murder scheme just to keep his own paws clean. Disgusting.
+-Siobhan: I think we should take the job.
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!Nani(Bruce,!)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!Nani(Gwen,!)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!Nani(Verm,!)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.3)
+-Gwen: Really, Siobhan?
+-Siobhan: I think there might be more to this story.
+-Siobhan: I don't know where the thread will lead, but it can't hurt to follow it just a little, right?
+!HoldOn(0.3)
+-Verm: I mean, maybe...
+!HoldOn(0.3)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+-Verm: Where did this all happen?
+-Alex: Solhill Village. You know it?
+-Verm: Of course. It's in the songs.
+-Alex: Those stupid songs! Ugh...
+-Alex: But yeah, that's the place.
+-Verm: I bet Dizi knows where it is.
+-Verm: Maybe we'll head over there and see what this is all about.
+-Alex: Great. Just remember: a thousand seeds for their heads.
+!AutoPinFollowers(1)
+
+/AlexBounty
+-Alex: Youuuu.
+-Alex: You're the, the...|The booty hunters...
+-Bruce: Tsk. Drunk again.
+-Alex: Ssssso? Did you do it?
+*DoYep: Yep.
+*DoNope: Nope.
+
+/DoYep
+-Verm: Yep. Maisie and Rosaline. Killed 'em both.
+-Alex: Nicccce.
+-Alex: Shame I don't have a seed to pay you.
+>Figures
+
+/DoNope
+-Verm: Nope. I talked to Maisie and Rosaline. I heard their side of things.
+-Verm: As I see it, they're the real victims here.
+-Alex: Oh gods, you're preeeeaching.
+-Alex: Stop. Please. I'm not drunk enough to survive a sermon.
+-Alex: Still, it's just as wellll.
+-Alex: I don't have any seedsss to pay you.
+>Figures
+
+/Figures
+!SetGlobal(75,50)
+!HoldOn(0.5)
+-Alex: Hehehehhh...
+-Alex: The Sterling Knight, penniless.
+-Verm: I figured as much from the start.
+-Verm: Enjoy your grog.
+
+/BountyLast
+-Alex: It all goes back to that stupid blonde twink...

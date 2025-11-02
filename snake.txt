@@ -1,0 +1,22 @@
+/BattleVeryStart
+~SnakeLoop
+!HoldOn(0.4)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+/VermRage
+-Verm: I don't fear the dark!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/End

@@ -1,0 +1,88 @@
+/Intro
+!AutoPinFollowers()
+
+/Poster
+-InfoBig:   COMMIT|    -NO-| NUISANCE
+
+/Susan
+!CheckGlobal(50,0,SusanCont)
+!CheckGlobal(50,1,SusanCont)
+-Susan: The Guards are prowling.
+-Susan: If any ask, I'll tell them you four ran the other way.
+
+/SusanCont
+!CheckGlobal(99,2,SusanSio)
+!CheckGlobal(55,1,SusanReturn)
+!CheckGlobal(55,2,SusanFinal)
+-Susan: Psst. Hey, kid. Wanna buy something...
+!HoldOn(0.2)
+!PlaySound(LamiaTurn)
+!SetAnim(Susan,Open)
+!HoldOn(1)
+-Susan: ...Special?
+*Maybe: Whatcha got?
+*No: No thanks.
+/Maybe
+!SetGlobal(55,1)
+-Verm: Whatcha got?
+-Susan: Hmm. You're a fighter, right? So how about a berserker mushroom.
+-Susan: The water voles of Skanvik eat 'em before battle. True facts.
+>MushroomPrice
+
+/MushroomPrice
+!ShowMoney(1)
+-Susan: One mushroom is eight seeds. Interested?
+*Yes: Alright.
+*No: No thanks.
+
+/SusanReturn
+-Susan: Ah, you're back.
+!HoldOn(0.2)
+!SetAnim(Susan,Open)
+!HoldOn(1)
+>MushroomPrice
+
+/Yes
+!ShowMoney(0)
+!MoneyCheck(8,NotEnough)
+-Verm: Alright. Let's do this.
+!SetGlobal(55,2)
+!MoneyLoss(8)
+!ReceiveItem(21)
+!HoldOn(0.1)
+!SetAnim(Susan,Close)
+!HoldOn(0.6)
+!PlaySound(ItemFound)
+-Info: You received an Odd Mushroom.|Was... was this transaction legal?
+-Susan: Pleasure doing business.
+!SetAnim(Susan,Loop)
+
+/No
+!ShowMoney(0)
+-Verm: No thanks. That's not for me.
+!HoldOn(0.1)
+!SetAnim(Susan,Close)
+!HoldOn(0.6)
+-Susan: Smart lad. Your mum|taught you well.
+!SetAnim(Susan,Loop)
+
+/NotEnough
+-Verm: I can't afford that.
+!HoldOn(0.1)
+!SetAnim(Susan,Close)
+!HoldOn(0.6)
+-Susan: That sucks. Sorry, I don't do freebies.
+
+/SusanFinal
+!CheckGlobal(10,2,Susan2)
+-Susan: I've been peddling bric-a-brac to save up for uni. I want to be a Loremaster some day.
+
+/Susan2
+-Susan: Thanks to your patronage, I've saved up enough for uni. Time to become a Loremaster.
+
+/SusanSio
+-Susan: You've got that palace whiff about you.
+-Susan: You an undercover Guard or something?
+
+/FoundSeeds
+-Info: You found 3 seeds.

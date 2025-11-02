@@ -1,0 +1,151 @@
+/Intro
+!CheckGlobal(0,0,FergusIntro)
+
+/FergusIntro
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+!Nani(Fergus,!)
+!HoldOn(1)
+-Fergus: You look like a sturdy lad. You're a warrior, are you not?
+*WarriorYes: I am.
+*WarriorNo: What's it to you?
+
+/Fergus
+!CheckGlobal(0,1,Fergus1)
+!CheckGlobal(0,2,Fergus2)
+!CheckGlobal(0,3,Fergus3)
+!CheckGlobal(0,4,Fergus4)
+
+/WarriorYes
+-Verm: I am.
+-Fergus: I knew it. You have those warrior eyes.
+>WarriorToo
+
+/Fergus4
+!CheckGlobal(10,2,FergusLate)
+-Fergus: Safe travels, lad.
+
+/FergusLate
+-Fergus: HAAAA! Look at those battle scars. Are you blocking sword swings with your face or something?
+-Fergus: Make sure to dodge big attacks, lad, or your next cut will run too deep.
+
+/Fergus3
+!CheckGlobal(5,7,Thumping)
+!CheckGlobal(5,8,Thumping)
+!CheckGlobal(5,9,Thumping)
+-Fergus: Like I said, to defeat a felidae, a warrior would need something truly special...
+
+/Thumping
+-Verm: I beat the felidae.
+-Verm: Well, Siobhan and I did.
+-Verm: Turns out, his weakness was being set on fire.
+!SetGlobal(0,4)
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Fergus: HAAAA!
+-Fergus: Fire? That right, is it?
+-Fergus: Maybe you'll be a fine warrior yet.
+-Fergus: But the warrior's path is a perilous one. So be on your guard, lad.
+
+/Fergus1
+-Fergus: The arrogant warrior returns.
+-Fergus: Came back to hear the key to beating any opponent?
+
+*TeachMe: Do tell.
+*NotNow: Not right now.
+
+/WarriorNo
+-Verm: What's it to you, old man?
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Fergus: HAAAA!
+-Fergus: That's a young warrior's arrogance, alright.
+>WarriorToo
+
+/WarriorToo
+-Fergus: I was a fighter in my youth too, I'll have you know.
+-Fergus: A member of Murida's Thimble Guard an' all.
+-Verm: I'm sure you were.
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Fergus: HAAAA!
+-Fergus: Don't give me lip, lad.
+-Fergus: I may be past my prime, but I've had more fights than you've had dinners.
+-Fergus: I've got years of battle-tested wisdom to offer...
+
+*TeachMe: Do tell.
+*NotNow: Not right now.
+
+/NotNow
+-Verm: Not right now. I've got better things to do.
+!SetGlobal(0,1)
+-Fergus: That right, is it? Oh well, suit yourself.
+
+/TeachMe
+-Verm: Go on, then. What's the key?
+-Fergus: Weaknesses.
+-Fergus: Everyone has a weakness.
+-Fergus: If you use the right type of attack, you can exploit it.
+-Verm: The right type of attack?
+-Fergus: Ah, you really are young. Let's see, how can I put this...
+!HoldOn(0.3)
+-Fergus: There are four kinds.
+-Fergus: You've got your slashing attacks. That's swords an' such.
+-Fergus: Then there's your bashing attacks. Hammers and blunt instruments.
+-Fergus: Spears and pikes give you piercing attacks.
+-Fergus: And the fourth kind is...
+!HoldOn(0.9)
+!Nani(Fergus,?)
+!HoldOn(1)
+-Fergus: Is... uh...
+!HoldOn(1.5)
+!Nani(Fergus,!)
+!HoldOn(0.6)
+-Fergus: Special attacks! Like fire or water or whatever.
+-Verm: You're making this up as you go, aren't you?
+-Fergus: Oh, shut your bake!|This system is famous.
+-Fergus: Everyone has a weakness.|Find and exploit it.
+
+*Cats: What about cats?
+*HeardEnough: I've heard enough.
+/HeardEnough
+-Verm: That's enough of your ramblings, thanks.
+!SetGlobal(0,2)
+-Fergus: Hmph! Suit yourself, lad.
+
+/Fergus2
+-Fergus: The arrogant warrior returns.
+-Fergus: Come to pick my brains for something?
+
+*Cats: What about cats?
+*HeardEnough: I've heard enough.
+
+/Cats
+-Verm: So what's the weakness of a felidae?
+-Fergus: Heh, you're talking about Tiger?
+-Fergus: Wish I knew.
+-Fergus: I've seen mole warriors slash, bash, and stab that kitty, but his fur is just too damned thick.
+!SetGlobal(0,3)
+-Fergus: No, if someone wanted to take that monster down, they would have to do something truly special...
+
+/Cauldron
+-InfoBig: Smells like worm and nettle stew. Hearty mole cuisine.
+
+/Sword
+-InfoBig: It's a mouse sword.
+-InfoBig: The blade is dull, but the Fleur a Cinq Pointes on the pommel shines bright.
+
+/Book
+-InfoBig: You see a book titled, "Miss Mollie's Book of Many Maladies".
+*ReadIt: Read it.
+*PutBack: Put it back.
+/ReadIt
+-Book1:     - Bleeding -||When cut, a rodent bleeds. Small cuts will heal on their own, but large cuts may cause severe blood loss over time.||Cure: Treat heavy bleeding with bandages as soon as possible.
+-Book2:     - Stunned -||A rodent who has been afflicted by the toxic venom of some foul creature may find themselves unable to move at all.||Cure: Stunning tends to cure itself over time, once the venom has left the body.
+-Book1:    - Berserk -||A rodent who is enraged will lash out with doubled fervour.||Cure: A berserked individual will eventually calm down. Sessions with a therapist may alleviate future outbursts.
+-Book2:    - Tipsiness -||A Rodent who drinks alcohol may become tipsy. I mean, that's often why we do it. But a tipsy rodent will become most unreliable.||Cure: If needs must, drink an espresso.
+/PutBack
+End scene

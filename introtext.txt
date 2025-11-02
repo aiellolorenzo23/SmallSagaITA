@@ -1,0 +1,13 @@
+/Intro
+-Info: Before we begin...||Would you like to see content warnings?
+*YesContent: Yes.
+*Continue: No.
+
+/YesContent
+-Info: This game contains moments of abrupt violence and bloodshed.
+-Info: This game contains a depiction of self-harm in the prologue.
+-Info: This game contains spiders. You can avoid encountering any spiders throughout the whole game by leaving rooms that contain spiderwebs, and by paying attention to warnings from game characters.
+>Continue
+
+/Continue
+-Info: Well then. Let us begin.

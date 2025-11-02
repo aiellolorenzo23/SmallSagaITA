@@ -1,0 +1,136 @@
+/Intro
+!HoldOn(3)
+~Statue
+!HoldOn(2)
+-Verm:  Huh. 
+!HoldOn(1)
+-Gwen: Right? What a view.
+!HoldOn(0.2)
+-Verm: Yeah.
+!HoldOn(2)
+-Gwen: A million rats and mice all living in one place. I've never seen anything like it.
+!HoldOn(1)
+-Gwen: If we don't stop the Yellow God, they'll all die.
+!HoldOn(0.6)
+-Verm: I guess so.
+!HoldOn(1)
+-Gwen: It kind of feels like we're having to hold up the world like ol' Ratlas here.
+!HoldOn(0.3)
+!StatueDo(VR)
+!HoldOn(1.3)
+!StatueDo(VL)
+!HoldOn(0.3)
+-Verm: You seem pretty calm about it.
+-Gwen: Staying cool under pressure is my nature, like.
+-Verm: Your nature?
+-Gwen: Right. Like how thinking problems through is Siobhan's nature.
+-Gwen: And focusing on the positive|is Bruce's nature.
+!HoldOn(1)
+-Verm: So what's my nature?
+!HoldOn(0.2)
+!StatueDo(GL)
+!HoldOn(1)
+-Gwen: Well. You tell me.
+-Verm: My nature...
+*N1: A warrior.
+*N2: A ghost.
+*N4: A mouse.
+*N5: No idea.
+
+/N1
+-Verm: I'm a warrior.
+!HoldOn(0.4)
+!StatueDo(GR)
+!HoldOn(0.6)
+-Gwen: Is that so?
+!StatueDo(VR)
+!HoldOn(0.4)
+-Verm: What? Was that the wrong answer or something?
+-Gwen: No wrong answers here.
+-Gwen: It's just... there's something sad about it.
+-Gwen: A warrior lives to fight.|It's a tiring existence.
+-Gwen: I hope you figure out how to put the sword down one day, Verm.
+!StatueDo(VL)
+>Continue
+/N2
+-Verm: I'm a ghost.|I've been a ghost for most my life.|I might always be a ghost.
+!HoldOn(0.4)
+!StatueDo(GR)
+!HoldOn(0.6)
+-Gwen: Is that so?
+!StatueDo(VR)
+!HoldOn(0.4)
+-Verm: What? Was that the wrong answer or something?
+-Gwen: No wrong answers here.
+-Gwen: It's just that... it's a sad existence, to live as a ghost.
+-Gwen: One day, I hope you figure out how to live as a mouse, full of life.
+!StatueDo(VL)
+>Continue
+/N4
+-Verm: I'm a mouse. Just a mouse.
+-Verm: I'm always scared.|I always want to run away.|Even now.
+!HoldOn(0.4)
+!StatueDo(GR)
+!HoldOn(0.6)
+-Gwen: Is that so?
+!StatueDo(VR)
+!HoldOn(0.4)
+-Verm: What? Was that the wrong answer or something?
+-Gwen: No wrong answers here.
+-Gwen: It's just that, you used to be so ashamed of your mouse nature.
+-Gwen: It's cool to see you finally embrace it.
+!StatueDo(VL)
+>Continue
+/N5
+-Verm: I haven't a clue.
+!HoldOn(0.6)
+-Gwen: No shame in that.
+-Gwen: I hope you figure out your nature some day, Verm.
+!HoldOn(0.4)
+!StatueDo(GR)
+>Continue
+/Continue
+!SetGlobal(32,30)
+!AddToParty(Siobhan)
+!RemoveFromParty(Gwen)
+!RemoveFromParty(Verm)
+!SetLeader(Siobhan)
+!HoldOn(1.5)
+-Gwen: When this is all over, maybe they'll build statues of us four.
+-Verm: Ugh. Don't say that.
+-Gwen: Solid gold. Just|like the dead Duke's.
+-Verm: DEFINITELY don't say that.
+-Gwen: Ha, I'm just messing, like.
+!HoldOn(0.7)
+!StatueDo(GL)
+!HoldOn(0.7)
+-Gwen: Let's just focus on the path in front of us.
+!HoldOn(0.3)
+!CheckGlobal(30,25,EarlyWG)
+-Gwen: It'll be quite a challenge to fight a god. But maybe Excalibur will give us the upper paw.
+>ExCont
+
+/EarlyWG
+-Gwen: We fought off one god already. What's one more?
+!HoldOn(0.6)
+-Verm: The Yellow God's merciless. I don't know if our blades will be enough.
+-Gwen: So we'll need Excalibur, huh.
+>ExCont
+
+/ExCont
+~Stop
+!StatueDo(GR)
+!HoldOn(1)
+-Verm: Yeah. A weapon that |can kill a god...
+!HoldOn(1)
+!StatueDo(Zoom)
+!HoldOn(3.5)
+!NextRoom(PalaceMain,1)
+
+/FirstVisit
+!HoldOn(1)
+~MuridaLoop
+!HoldOn(2)
+!BigTitle(Murida,A metropolis beneath the floorboards)
+!HoldOn(1)
+!NextRoom(MuriStreet5,14)

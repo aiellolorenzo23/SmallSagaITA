@@ -1,0 +1,550 @@
+/Intro
+!AutoPinFollowers()
+~SolhillLoop
+
+/NoPin
+
+/Chair
+-Info: It's a mud throne, empty and cracked.
+
+/Chest1
+-Info: You found a Vulpes Claw.
+
+/Chest2
+-Info: You found a Vulpes Cloak.
+
+/FirstIntro
+~Stop
+!SetGlobal(75,5)
+!HoldOn(1.5)
+!Walk(Rosaline,DR,1)
+!HoldOn(3)
+!SetAnim(Rosaline,DL)
+!HoldOn(0.1)
+!Walk(Rosaline,UL,1)
+!HoldOn(0.7)
+~SolhillLoop
+!OverworldCameraPan(320,270,0.2,1)
+!Exit(Rosaline)
+!HoldOn(1)
+!BigTitle(Solhill,Curses beget curses)
+!AutoPinFollowers()
+!Walk(Verm,UL,2)
+!HoldOn(2.5)
+-Siobhan: As I understand it, this was a shrew settlement once.
+-Bruce: Aye, once.
+-Bruce: Maybe not as grand as Vinium, but someone's home all the same.
+!HoldOn(1)
+-Gwen: Verm, do you smell that?
+-Verm: Yeah. There are still rodents here.
+!HoldOn(1)
+-Verm: But I'm getting a whiff of something else too. Something unfamiliar.
+-Gwen: Let's tread softly.
+!CameraFollow(1)
+
+/SecondIntro
+!SetGlobal(75,6)
+!HoldOn(1)
+!Walk(Rosaline,UR,1.3)
+!HoldOn(0.5)
+!Exit(Rosaline)
+!HoldOn(0.5)
+!AutoPinFollowers()
+!Walk(Verm,UL,1)
+!HoldOn(1.2)
+
+/ThirdIntro
+~Stop
+!AutoPinFollowers()
+!Walk(Verm,UR,1)
+!HoldOn(1.5)
+!SetGlobal(75,7)
+~SistersLoop
+-Rosaline: Damn it all.
+-Rosaline: Did Alex send you?
+*AlexYes: Yep.
+*AlexNo: Nope.
+
+/AlexYes
+-Verm: He did.
+-Rosaline: Of course. That scumbag is too cowardly to finish matters with his own paws.
+>CutDown
+
+/AlexNo
+-Verm: No. We came here for our own reasons.
+-Rosaline: And what reasons are those?|To see some cursed ruins?|To pillage some treasure?
+-Rosaline: Actually, it doesn't matter.
+>CutDown
+
+/CutDown
+!HoldOn(0.2)
+!Walk(Rosaline,DL,0.3)
+!HoldOn(0.4)
+-Rosaline: Take your leave or|I will cut you all down.
+-Verm: We're not here to fight.
+-Verm: I just want to get some facts straight.
+-Maisie: Urgh...|What's the racket?
+!HoldOn(0.4)
+!NormalJump(Maisie,2,30,260,167,JDR,DR)
+!HoldOn(0.9)
+!SetAnim(Maisie,DL)
+!HoldOn(0.4)
+!Nani(Maisie,!)
+!HoldOn(0.4)
+-Maisie: H-hey! It's you!
+-Maisie: Don't you recognise them, Rosy?
+-Maisie: They're the bastards who caused all this!
+-Verm: Caused what?
+!HoldOn(0.1)
+!SetAnim(Maisie,ToStupid)
+!ShoutMode()
+!HoldOn(0.1)
+!SetAnim(Maisie,Stupid)
+-Maisie: Caused EVERYTHING!
+!HoldOn(0.3)
+-Maisie: You humiliated us in the Gloaming Wood!
+-Maisie: And then we got demoted and put on Alex's stupid squad!
+!SetAnim(Rosaline,UL)
+-Maisie: So you're the reason why... why...
+-Bruce: Is she alright?
+-Rosaline: Maisie, go lie down. Rest.
+!HoldOn(0.1)
+!SetAnim(Rosaline,DL)
+!HoldOn(0.1)
+-Rosaline: Was I unclear?
+-Rosaline: Leave us alone.|Get out of here.
+!HoldOn(0.8)
+-Bruce: Maybe we should just leave.
+-Gwen: I agree. We shouldn't have gotten involved with dirty tin-head problems in the first place.
+!HoldOn(0.1)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,DL)
+!NormalJump(Maisie,3,20,288,212,JDL,DL)
+!HoldOn(0.6)
+-Maisie: Hey! What did you call us, you, you... tatted-up loser?!
+!UnpinFollowers()
+!Walk(Gwen,R,0.8)
+!HoldOn(0.9)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+-Gwen: Tin-head.
+!SpecialWalk(Rosaline,UR,0.5,DLWalk,1)
+!NormalJump(Maisie,3,20,340,280,JDL,DL)
+!HoldOn(0.6)
+!SetAnim(Rosaline,DL)
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,R)
+!SetAnim(Verm,R)
+-Maisie: Say it again,|I'll gut you!
+!HoldOn(1.4)
+-Gwen: Tin-head.
+-Siobhan: Gwen, stop it!
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+-Verm: Everyone shut up.
+!HoldOn(0.5)
+!SetAnim(Verm,R)
+!HoldOn(0.5)
+-Verm: Look. How about this.
+-Verm: We settle things with a duel.
+!SetAnim(Verm,UR)
+-Verm: Two-on-two.|That's fair, right?
+-Verm: If we lose, we'll tell Alex that you're dead. You'll be off the hook.
+-Verm: If we win, you tell us everything that went down here.
+-Verm: But either way, you get to have a chance at kicking our arses.
+-Maisie: I like the sound of that!
+-Rosaline: Maisie. You shouldn't be fighting in your current state.
+-Rosaline: And in any case, this is a foolish thing to duel over.
+
+!NormalJump(Maisie,3,20,320,194,JDL,DR)
+!HoldOn(0.6)
+!SetAnim(Rosaline,UL)
+-Maisie: Nooo! Let's do this!
+-Maisie: Don't you wanna punch|their smug faces in too?
+!HoldOn(0.6)
+!SetAnim(Rosaline,DL)
+!HoldOn(0.6)
+-Rosaline: Well...
+-Maisie: See!
+!HoldOn(0.4)
+!SetAnim(Maisie,DL)
+-Rosaline: Fine. A formal duel it is.|Who is your duelling partner?
+-Verm: Oh right. I better pick someone. Let's see...
+
+/Siobhan
+-Info: Pick Siobhan as a duelling partner?
+*YesSio: Yes.
+*NoPick: No.
+
+/YesSio
+-Verm: Let's go, Siobhan
+-Siobhan: O-okay!
+!SetGlobal(75,10)
+>LetsFight
+
+/Bruce
+-Info: Pick Bruce as a duelling partner?
+*YesBruce: Yes.
+*NoPick: No.
+
+/YesBruce
+-Verm: Let's go, Bruce.
+-Bruce: Me?! I'm not exactly a top-tier duellist.
+-Verm: You were capable enough in Vinium. Come on, let's go.
+!SetGlobal(75,8)
+>LetsFight
+
+/Gwen
+-Info: Pick Gwen as a duelling partner?
+*YesGwen: Yes.
+*NoPick: No.
+
+/YesGwen
+-Verm: Let's go, Gwen.
+-Gwen: I'm keen. Let's rock.
+!SetGlobal(75,9)
+>LetsFight
+
+/Rosaline
+-Rosaline: I don't know what you expect|to get out of this duel,|to be honest.
+
+/Maisie
+-Maisie: Quit stalling and pick a partner already!
+
+/Rose2
+-Rosaline: I'll go fetch the monkshood and dandelion leaves. Good luck with your task.
+
+/Maisie2
+-Maisie: I hate all this trouble I've caused. I'm so stupid.
+
+/Rose3
+-Rosaline: Maybe we'll meet again.
+
+/Maisie3
+-Maisie: You're actually gonna fight a god?
+-Maisie: Man... that's so cool!|Super illegal. But cool!
+
+/LetsFight
+!HoldOn(0.6)
+-Rosaline: All set? Good.
+~Stop
+-Rosaline: Standard duelling rules.|First pair to fall lose.
+-Maisie: Draw your weapons, bastards!
+!GoToBattle(Scissor)
+
+/PostFightLoss
+!SetGlobal(75,7)
+!HoldOn(0.6)
+-Verm: Ugh... damn it.
+!HoldOn(0.6)
+-Rosaline: Your technique is amateurish.
+-Rosaline: Your footwork is sloppy.
+-Rosaline: It's a wonder you managed to make it this far alive.
+-Maisie: Yeah! You guys suck!
+-Verm: I want a rematch.
+-Rosaline: That's not dignified.|Take your loss with grace.
+-Maisie: Nooo, let's do it! I want to kick their arses again!
+-Rosaline: Fine. Choose your partner.
+
+/NoPick
+
+/PostFight
+!HoldOn(0.5)
+~Sisters3Loop
+!SetGlobal(75,12)
+!HoldOn(1.5)
+-Maisie: Ugh...
+-Maisie: If I wasn't injured...
+-Maisie: If... if that damn creature hadn't...
+!HoldOn(0.2)
+!SetAnim(Rosaline,DL)
+!HoldOn(0.3)
+-Rosaline: No, Maisie. Let's not make excuses.
+-Rosaline: They fought well.|They fought honourably.|And they won.
+-Rosaline: We must be gracious in our defeat.
+~Stop
+!HoldOn(0.5)
+-Maisie: I... I don't feel...
+!HoldOn(0.2)
+!SetAnim(Rosaline,UL)
+!HoldOn(0.2)
+-Rosaline: I knew it. You've reached your limit.
+-Rosaline: Go to bed. Now.
+!HoldOn(0.2)
+!NormalJump(Maisie,3,20,261,190,JDL,Bed)
+!HoldOn(1)
+
+-Bruce: She alright?
+-Verm: We might have gone too far.
+!HoldOn(0.3)
+!SetAnim(Rosaline,DL)
+!HoldOn(0.5)
+-Rosaline: No. It's not you.
+!HoldOn(1)
+~SolhillLoop
+-Rosaline: Solhill is cursed.
+-Rosaline: It's the kind of village that attracts endless trouble.
+-Rosaline: But recently, news from the village went completely silent.
+-Rosaline: The crown sent Alex, Maisie, and myself to investigate what had happened.
+-Rosaline: We suspected vulpes activity.|But then...
+-Maisie: A wyrm...
+-Rosaline: Right. We were ambushed|by a venemous wyrm.
+-Rosaline: A particularly terrifying one, too. A titan amongst titans.
+-Maisie: That bastard Alex tried to use me as a shield!
+-Maisie: I got bit. And then... I don't know, I just saw red.
+-Rosaline: I did my best to fend off the wyrm.
+-Rosaline: I managed to drive it into the cellar. Locked the door for good measure.
+-Rosaline: Meanwhile, Maisie and Alex brawled.
+-Rosaline: I was too slow. By the time I returned, Alex had beaten Maisie bloody and fled.
+-Verm: What happened next?
+!HoldOn(0.2)
+!SetAnim(Rosaline,UL)
+!HoldOn(0.5)
+-Rosaline: Maisie was too injured to move, so we stayed put.
+-Rosaline: I treated her injuries from the fight. But the venom remains...
+~Stop
+!HoldOn(0.5)
+-Maisie: I'll... I'll be fine, sis.
+!HoldOn(0.5)
+-Rosaline: I'm not a fool. I can see you're getting weaker by the hour.
+!HoldOn(0.5)
+-Gwen: It's not going to get easier from here.
+-Gwen: Wyrm venom is a nasty way to go.
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+-Gwen: Blood coagulation.|Paralysis. And then...
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+-Bruce: Wait, hold on.|She's... she's dying?
+-Bruce: That's awful.|I'm so sorry. 
+!HoldOn(0.7)
+!SetAnim(Rosaline,Down)
+!HoldOn(0.8)
+-Rosaline: I'm the one who's sorry.
+-Rosaline: Maisie. I failed to protect you.
+-Rosaline: It was my one job as your older sister. I can never forgive myself for it.
+-Maisie: You did your best, sis.
+-Maisie: That's all I can ask for.
+!HoldOn(0.9)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.9)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.7)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.5)
+-Siobhan: Um...
+!Walk(Siobhan,U,0.5)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!SetAnim(Gwen,R)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!SetAnim(Bruce,UL)
+!SetAnim(Gwen,UR)
+!HoldOn(0.4)
+!SetAnim(Siobhan,UR)
+-Siobhan: There is an antidote.
+-Siobhan: I read the recipe once.
+!HoldOn(0.6)
+-Siobhan: I could probably make it.
+-Bruce: What?!
+-Bruce: Are ye kidding me, Siobhan?|Ye have tae be more vocal!
+!Walk(Rosaline,DL,0.3)
+!HoldOn(0.4)
+~Sisters2Loop
+-Rosaline: What do you need?
+-Siobhan: Let me think. Um...
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.4)
+-Siobhan: Monkshood petals...|Dandelion leaves...
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.3)
+-Siobhan: And venom from the wyrm.
+!HoldOn(0.4)
+-Rosaline: There's monkshood and dandelion all around. I can gather those in no time at all.
+-Rosaline: But venom... acquiring that will be a little harder.
+!SetAnim(Verm,R)
+-Verm: You said the wyrm's in the cellar, right?
+-Verm: Leave that to us.|We'll have it in no time.
+-Rosaline: You intend to fight it?
+-Verm: We've fought worse.
+-Rosaline: I appreciate your help.|Truly. But listen.
+-Rosaline: This is no common grassland adder.
+-Rosaline: It's... something else.|Something horrific and primal.
+-Rosaline: Maybe it was a titan born of spilled blood and guilt. A curse created by a broken promise...
+!Walk(Verm,R,0.2)
+!HoldOn(0.4)
+-Verm: Or maybe it's some escaped god's pet. Stop being dramatic and hand over the cellar key.
+!ReceiveItem(68)
+!ShowItem(Rosaline,68)
+!HoldOn(0.6)
+!PlaySound(ItemFound)
+-Info: You received the Cellar Key.
+~Stop
+-Rosaline: Good luck.
+!Walk(Bruce,UL,0.5)
+!Walk(Gwen,UR,0.5)
+!HoldOn(0.5)
+!AutoPinFollowers()
+/WithMedicine
+!SetGlobal(75,40)
+!LoseItem(72)
+~Stop
+!AutoPinFollowers()
+!Walk(Verm,UR,1)
+!HoldOn(1.5)
+!NextRoom(ToBlack)
+!HoldOn(1)
+!UnpinFollowers()
+!PlaySound(Cooking)
+!UnpinFollowers()
+-Info: It didn't take long for Siobhan to prepare the antidote.
+-Info: With an acorn shell mortar and a twig pestle, they ground the ingredients into a thick, green paste.
+!TeleportCharacter(Siobhan,290,211)
+!SetAnim(Siobhan,UL)
+!NextRoom(FromBlack)
+!HoldOn(1.5)
+-Maisie: Th... thanks.
+!HoldOn(0.4)
+!SpecialWalk(Siobhan,DR,0.4,ULWalk,1)
+!HoldOn(0.5)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.3)
+!NormalJump(Maisie,2,30,260,167,JDR,DR)
+!HoldOn(1.4)
+
+-Maisie: I feel...
+-Maisie: Bad. I still feel bad.
+-Siobhan: Oh! No medicine works that fast!|You should rest up.
+!NormalJump(Maisie,2,30,261,190,JDR,Bed)
+!HoldOn(0.3)
+-Rosaline: We don't have any|way to repay you.
+-Verm: Consider it charity.
+-Rosaline: No. That won't do.
+!HoldOn(0.6)
+-Rosaline: I know. Verm, wasn't it?|Let me show you something.
+-Rosaline: Your swordplay is excellent,|but it lacks finesse.
+-Rosaline: Let me teach you a technique that'll really showcase your full potential.
+!NextRoom(ToBlack)
+!HoldOn(1)
+!PlaySound(VermSpecialAttack)
+
+!TeleportCharacter(Verm,259,270)
+!TeleportCharacter(Siobhan,260,299)
+!TeleportCharacter(Gwen,200,270)
+!TeleportCharacter(Bruce,200,320)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,UR)
+!SetAnim(Gwen,UR)
+!SetAnim(Bruce,UR)
+!HoldOn(1)
+!NextRoom(FromBlack)
+!HoldOn(1)
+!PlaySound(NewMove)
+-Info: Verm learned Blade Storm.
+-Verm: Cool.
+-Rosaline: There's one last thing.|Something that's been bugging me since your arrival.
+-Rosaline: Aren't you supposed to be dead?
+-Verm: Oh, right. That.|It's a long story.
+-Verm: But the short version is that there's a Yellow God of Death coming to Murida, and I'm not dying until I kill Him.
+!NormalJump(Maisie,2,30,260,167,JDR,DL)
+!HoldOn(1)
+-Maisie: Wait, for real?|You're gonna kill a god?|That's crazy!
+-Rosaline: It is certainly ambitious.|A bolder act than most rodents would dare to even dream of.
+!HoldOn(0.6)
+-Rosaline: I can see your resolution.|There's no dissuading you.|But don't die trying, Verm.
+-Rosaline: You know what the shrews say:|curses beget curses.
+-Maisie: Well, you know what I say?|Go kick that god's arse!
+!NormalJump(Maisie,2,30,261,190,JDR,Bed)
+!HoldOn(0.6)
+-Verm: Heh. I will.
+
+/Door
+-Info: A cold wind blows from behind the heavy door. It's locked.
+!CheckItem(68,DoorReady)
+
+/DoorReady
+-Info: Unlock the door?
+*YesDoor: Yes.
+*NoDoor: No.
+
+/YesDoor
+~Stop
+!ShowItem(Prota,68)
+!HoldOn(0.5)
+!PlaySound(PrisonDoorOpen)
+!HoldOn(0.4)
+!NextRoom(ToBlack)
+!HoldOn(1.3)
+!NextRoom(SolhillInnerPassage,7)
+/NoDoor
+
+
+/Leo
+!CheckGlobal(57,1,SaveTime)
+-InfoBig: It's a copper statue of a field mouse wielding a needle-like rapier.
+-InfoBig: The plaque reads:||In honour of Blademaster Leo.|Slayer of Ironfang the Vulpes, saviour of Solhill Village...|
+-InfoBig: ...and hero to all.
+!SetGlobal(57,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Blademaster Leo stands proud.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Solhill Village,Leo statue)
+-Info: Your game has been saved.
+/SaveNo
+
+/Book1
+-InfoBig: You see a book bound in red cloth and titled, "The Legend of Oisin the Oathbreaker".
+*ReadIt1: Read it.
+*PutBack: Put it back.
+/PutBack
+
+/ReadIt1
+-Info: Larvae have eaten half the pages.||The remainder have been smudged by damp and mould.||This is unreadable.
+
+/Book2
+-InfoBig: You see a crudely bound stack of dated pages. A diary?|No, a village record book.
+*ReadIt2: Read it.
+*PutBack: Put it back.
+
+/ReadIt2
+-Book1: Autumn III||It has been ten days since the Guard left, and three days since the Loremaster made for Murida. I don't anticipate that either shall return. Still, our cellar is full, and that deserves celebrating.
+-Book2: ||Supper:|Tenderloin, seared medium-rare.
+-Book1: Autumn IV||Two thieving curs made off with our new statue of the heroic mouse!||Publia suggests commissioning another. I believe, thanks to our recent windfall, we can spare the expense.
+-Book2: ||Supper:|Top sirloin, gently grilled.
+-Book1: Autumn V||Publia has taken ill with a fever.||Poor girl.
+-Book2: ||Supper:|Flank, marinated and stir-fried.
+-Book1: Autumn VI||The remains of the vulpes corpse are still outside, an ugly mess of fur and bone. The blood seeps into the soil. It's attracting undesirables.
+-Book2: ||Supper:|Brisket, roasted.
+-Book1: Autumn VII||Publia's fever has worsened. "Curses beget curses", she mutters.||The girl needs some good, nutritious soup!
+-Book2: ||Supper:|Bone broth.

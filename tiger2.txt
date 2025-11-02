@@ -1,0 +1,30 @@
+/BattleVeryStart
+~TigerLoop
+Blank
+/BattleStart
+!SetGlobal(4,0)
+-Verm: Hold your nerve, mole.
+!DrawWeapon(Verm)
+!CameraPan(-0.4,1,1,1)
+!HoldOn(0.4)
+-Siobhan: Hold my nerve...
+!DrawWeapon(Siobhan)
+!HoldOn(1.2)
+-Siobhan: I'm done holding my nerve. I'm going to unleash fire and fury.
+!CameraPan(0,1,1,1)
+!LetsFight()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+/VermRage
+!CheckGlobal(4,1,SioDown)
+-Verm: Light 'em up, Siobhan!
+!SetAnim(Verm,Idle)
+-Siobhan: I'm on it!
+!NewTurn()
+/SioDown
+-Verm: Guess it's just you and me now, kitty! Let's rock!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/End

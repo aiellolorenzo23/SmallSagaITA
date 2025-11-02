@@ -1,0 +1,22 @@
+/Intro
+!AutoPinFollowers()
+~Stop
+
+/Statue
+!CheckGlobal(80,1,SaveTime)
+-Info: It's a pewter statue of a rat striding with confidence and grace.
+-Info: The plaque reads:||Rhiannon the prisoner, the wanderer, the mother.
+!SetGlobal(80,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Rhiannon walks free.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(White Hall,A dark tunnel)
+-Info: Your game has been saved.
+/SaveNo
+
+End

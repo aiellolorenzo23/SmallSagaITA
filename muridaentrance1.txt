@@ -1,0 +1,287 @@
+/JustPin
+~DryCaveLoop
+!AutoPinFollowers()
+
+/Intro
+~DryCaveLoop
+!PinFollowerToVerm(Siobhan)
+!Walk(Verm,UL,1.4)
+!HoldOn(1.4)
+!UnpinFollowers()
+!Walk(Siobhan,DL,0.2)
+!HoldOn(0.2)
+!Walk(Siobhan,L,0.3)
+!HoldOn(0.3)
+!SetAnim(Verm,U)
+!Walk(Siobhan,UL,0.1)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+-Siobhan: The copper doors of Murida's East Gate...
+-Siobhan: The famous City beneath the City is just beyond here.
+!HoldOn(0.3)
+!PlaySound(Window)
+!SetAnim(Thomas,Open)
+!HoldOn(0.5)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.5)
+!ShoutMode()
+!HoldOn(0.1)
+-Thomas: STATE YOUR BUSINESS!
+!SetAnim(Bruce,DL)
+!SetGlobal(14,2)
+-Verm: Our business is our own, nosey.
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+
+-Siobhan: Sir Verm, be nice!
+-Siobhan: The verification of all migrants and visitors is standard Murida procedure.
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+-Siobhan: I apologise for my companion. He's just a little cranky from the long journey.
+-Verm: I am not cranky.
+-Thomas: Ahem.
+!MoveTrigger(WithBruceTooEarly,559,695)
+!HoldOn(0.2)
+!ShoutMode()
+-Thomas: STATE YOUR BUSINESS!
+-Verm: Right. Our business. We are...
+*Warriors: Warriors.
+*Merchants: Merchants.
+*Vagabonds: Vagabonds.
+
+/Warriors
+-Verm: Warriors. Swords for hire.
+!ShoutMode()
+!HoldOn(0.1)
+-Thomas: PAH!
+-Thomas: Every vagabond who picks up a weapon thinks themself a valiant sell-sword.
+>GetOut
+
+/Merchants
+-Verm: Merchants. We sell...
+-Siobhan: Fruit! And nuts.|From the distant Westlands.
+-Thomas: Oh yeah? Where are your wares?
+-Siobhan: Uh...
+!ShoutMode()
+!HoldOn(0.1)
+-Thomas: PAH!
+-Thomas: Some merchants you are. Clearly just a pair of fibbing vagabonds.
+>GetOut
+
+/Vagabonds
+-Verm: Vagabonds. We're passing through and mean no trouble.
+!ShoutMode()
+!HoldOn(0.1)
+-Thomas: PAH!
+-Thomas: At least you're honest.
+>GetOut
+
+/GetOut
+-Thomas: On the King's orders, Murida's border is closed.
+-Thomas: There's no admittance, especially for vagabonds like yourself.
+!ShoutMode()
+!HoldOn(0.1)
+-Thomas: GOOD DAY!
+!SetAnim(Thomas,Close)
+!HoldOn(0.2)
+!PlaySound(Window)
+-Verm: Can you maybe make an exception-
+-Verm: Oh. He's gone.
+!HoldOn(0.5)
+-Bruce: Psst!
+
+!HoldOn(0.2)
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!SetAnim(Verm,D)
+!HoldOn(0.4)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+
+-Bruce: Ye two, over here!
+
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!Walk(Siobhan,UR,0.1)
+!HoldOn(0.1)
+!PinFollowerToVerm(Siobhan)
+
+/BruceTime
+~BruceLoop
+!Walk(Verm,UR,1.2)
+!SetGlobal(14,3)
+!HoldOn(1.2)
+!UnpinFollowers()
+!Walk(Siobhan,DR,0.1)
+!HoldOn(0.1)
+!Walk(Siobhan,R,0.3)
+!HoldOn(0.3)
+!Walk(Siobhan,UR,0.1)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+
+-Bruce: The wee bookkeeper dinnae|let ye pass, aye?
+*Right: That's right.
+*Pardon: Pardon?
+
+/Pardon
+-Verm: Beg your pardon?
+-Bruce: Are ye hard of hearing, lad?
+-Bruce: I said, the wee bookkeeper dinnae let ye pass, aye?
+*Right: That's right.
+*Pardon: Pardon?
+
+/Right
+-Verm: Erm. Right.
+-Bruce: Nae matter. There's another route.
+-Bruce: See this door? It's a service tunnel that goes tae Murida.
+-Bruce: But it's a labyrinth. 
+-Bruce: And I know the way.
+-Siobhan: So you'll be our guide?|That's great!
+-Verm: What's your price, harlequin?
+-Bruce: Price?
+-Verm: I'm no fool. You want seeds, right?
+-Bruce: Naw. I dinnae want yer seeds.|Just yer skills.
+-Siobhan: Our skills?
+-Bruce: Yer warriors, aye?
+-Bruce: Sometimes there's a few wee bugs on the path. I reckon ye could bash them silly.
+-Verm: If it's just a "few wee bugs", why don't you fight them yourself?
+-Bruce: I'm a bard.|Not a fighter.
+-Verm: Psh. A lousy pacifist...
+-Siobhan: I think that's a very fair offer, Mister Squirrel.
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+-Siobhan: What do you say, Sir Verm?
+*Deal: Deal.
+*Catch: The catch?
+
+/Catch
+-Verm: What's the catch?
+-Bruce: No catch, lad.
+-Bruce: Just makes sense tae stick in groups when braving a labyrinth.
+-Verm: Something smells fishy...
+-Siobhan: Don't be a cynic, Sir Verm.
+-Siobhan: Does this kind stranger really look suspicious to you?
+!HoldOn(1)
+-Verm: Extremely.
+-Siobhan: Stop being silly.
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+-Siobhan: We would be happy for you to join us, Mr Squirrel.
+>Joined
+
+/Deal
+-Verm: Bugs are push-overs. I say we have a deal, squirrel.
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+>Joined
+
+/Joined
+-Bruce: Magic. Name's Bruce, by the way.
+-Verm: Verm.
+-Siobhan: And I'm Lady Siobhan.
+-Siobhan: No, wait, just Siobhan. Nice to meet you, Bruce.
+-Bruce: Pleasure tae meet ye both. But let's not waste any more time.
+~Stop
+!Walk(Bruce,D,0.4)
+!HoldOn(0.5)
+!AddToParty(Bruce)
+!SetGlobal(22,1)
+!PlaySound(NewPartyMember)
+-Info: Bruce has joined the party.
+!MoveTrigger(WithBruceTooEarly,559,695)
+!HoldOn(0.5)
+
+!AutoPinFollowers(1)
+
+/FirstExit
+!Walk(Verm,UR,0.7)
+!HoldOn(0.4)
+!OverworldCameraPan(320,460,1,1)
+!HoldOn(1)
+!SetAnim(Thomas,Open)
+!PlaySound(Window)
+-Thomas: Oh, I almost forgot.
+!SetGlobal(14,4)
+-Thomas: Don't even think of using the service tunnel, because one of our engineers was eaten by a-
+-Thomas: Oh, they're gone.
+!HoldOn(0.5)
+-Thomas: Welp.
+-Thomas: Not my fleas. Not my circus.
+!SetAnim(Thomas,Close)
+!HoldOn(0.2)
+!PlaySound(Window)
+!HoldOn(0.5)
+
+
+/Warning
+-InfoBig:      - WARNING! -|The service tunnel is for|authorised personnel only.
+
+/WithBruceTooEarly
+!CheckGlobal(14,2,SioEarly)
+-Bruce: Hey, lad. The service tunnel is the other way.
+-Verm: Oh yeah. Right.
+!Walk(Verm,UL,0.4)
+!HoldOn(0.5)
+
+/SioEarly
+-Siobhan: Sir Verm, the voice came from the other direction.
+-Verm: Oh yeah. Right.
+!Walk(Verm,UL,0.4)
+!HoldOn(0.5)
+
+/BigDoor
+!CheckGlobal(14,18,BDOpen)
+-InfoBig: The door doesn't budge.
+
+/BDOpen
+!SetAnim(Thomas,Open)
+!PlaySound(Window)
+!HoldOn(1.1)
+!PlaySound(MainGateOpen)
+!NextRoom(ToBlack)
+!HoldOn(1.2)
+!NextRoom(MuriEntranceInner,7)
+
+/FoundSeeds
+-Info: You found 3 seeds.
+
+/LSioEarly
+-Siobhan: The service tunnel... that brings back memories.
+!Walk(Siobhan,DL,1)
+!HoldOn(1.1)
+-Siobhan: But that's not where I need to go.
+
+/LGroupEarly
+-Siobhan: Sir Verm, where are you going?
+-Verm: The service tunnel.
+-Bruce: We're not doing that again.
+-Bruce: Let's just go through the front door like normal people.
+!Walk(Verm,DL,1)
+!HoldOn(1.1)
+
+End scene

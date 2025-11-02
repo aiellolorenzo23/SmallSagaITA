@@ -1,0 +1,390 @@
+/Aiden
+!CheckGlobal(77,1,Aiden1)
+!CheckGlobal(77,2,Aiden2)
+!CheckGlobal(77,3,Aiden3)
+-Aiden: Our talk is done.|Let me be.
+
+/Aiden1
+!HoldOn(0.4)
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.3)
+!SetAnim(Aiden,DRUp)
+!HoldOn(0.6)
+!SetGlobal(77,2)
+-Aiden: My oh my. That's a familiar face.|Albeit with a few more scars.
+-Aiden: Yes, I remember our fight.|I remember you.
+-Aiden: You were the de facto leader of the group that sparked the coup.
+-Aiden: You are, in effect, the root cause of why I'm rotting down here.
+!HoldOn(0.4)
+-Aiden: So. Why are you here?
+*ToTalk: To talk.
+*ToMock: To mock you.
+*Dunno: No reason.
+
+/ToTalk
+-Verm: I heard you were offered exile or reform, but you refused both options.
+-Verm: I wanted to know why.
+>TalkCont
+
+/ToMock
+-Verm: I came down here just to watch you squirm in your own filth.
+-Aiden: Oh, I thought your kind was too high-and-mighty for sadism.
+-Aiden: Why stop at mockery? I can give you some tips on torture methods, if you like.
+-Verm: No thanks. Unlike you, I know where to draw the line.
+>TalkCont
+
+/Dunno
+-Verm: Honestly, I'm not really sure.
+-Aiden: Ah. So you came all this way|just out of idle curiosity.
+-Aiden: Well. Here I am. I hope your curiosity has been satisfied.
+>TalkCont
+
+/TalkCont
+!HoldOn(0.5)
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.2)
+!SetAnim(Aiden,DRDown)
+!HoldOn(0.8)
+-Aiden: You know. I'm not like the other members of Clan Grey.
+-Aiden: Many of the rubber boots saluted the Wayward Star out of a sense of communal duty.
+-Aiden: Others became soldiers for the seed. They had rent and bills to pay.
+-Aiden: In any case, their loyalties were fickle. They were quick to abandon their cause upon defeat.
+!HoldOn(0.1)
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.1)
+!SetAnim(Aiden,DRUp)
+!HoldOn(0.2)
+-Aiden: But I'm a true patriot.
+-Aiden: I refused the new management's options because I actually believe in my values.
+*WhatValues: Which values?
+*ShitValues: Your values suck.
+*Enough: I've heard enough.
+
+/Enough
+-Verm: I've heard enough. I didn't come to listen to you rant about some twisted ideals.
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.2)
+!SetAnim(Aiden,DRDown)
+-Aiden: Hmph. Suit yourself.
+
+/Aiden2
+!HoldOn(0.2)
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.2)
+!SetAnim(Aiden,DRUp)
+!HoldOn(0.5)
+-Aiden: What? Did you have|something else to say?
+*WhatValues: Your values?
+*ShitValues: Your values suck.
+*Enough2: Nope.
+
+/Aiden3
+-Aiden: Heed my words. A leaderless society is the most dangerous possible outcome.
+*HowSo: How So?
+*Enough3: I've heard enough.
+
+/Enough2
+-Verm: Nope.
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.2)
+!SetAnim(Aiden,DRDown)
+-Aiden: Hmph.
+
+/Enough3
+-Verm: Shut up already.|This talk is going nowhere.
+-Aiden: Hmph. Fine.
+
+/WhatValues
+-Verm: And what values are those?
+-Aiden: Strength. Iron will. The seizing of destiny made manifest.
+-Verm: So, tyranny.
+>ValueCont
+
+/ShitValues
+-Verm: I've seen Duke Josh's Sky Garden. Your values suck.
+-Verm: It was nothing but tyranny with fancy flags and trumpets.
+>ValueCont
+
+/ValueCont
+!SetGlobal(77,3)
+-Aiden: And, what, you've done away with tyranny now?
+-Aiden: You and your comrades ousted the corrupt Duke, and now Sky Garden is a wholesome, egalitarian paradise?
+!HoldOn(0.8)
+-Verm: I mean... kind of, yeah.
+-Aiden: Idiot. You just replaced one brand of tyranny with another.
+-Aiden: A Grey Duke for a Red Lord.|Old laws for new laws.|Violence for violence.
+-Aiden: I'd wager you even replaced the Wayward Star banners with garish rainbow ones.
+-Aiden: Your troupe lacks any self-awareness.
+!HoldOn(0.3)
+-Verm: You've got it wrong.
+-Verm: From what I've seen, things are actually different.
+-Verm: Rodents are actually free to walk around and be themselves without worrying about getting arrested.
+-Aiden: Empty words to a squirrel in chains.
+-Verm: Don't pretend that's the same thing.|You're not in prison for "being yourself".
+-Verm: And besides, Bruce isn't a lord. He's an ambassador.
+-Aiden: "Ambassador". Historically, a fine starting point for becoming a dictator.
+-Verm: It's really not like that.
+!HoldOn(0.4)
+-Aiden: Well, if not Bruce, then who is set to become Sky Garden's ruling lord? Do you know?
+-Verm: Nobody, as I understand it.
+-Verm: The rodents of Sky Garden to rule themselves.
+
+!HoldOn(0.2)
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.2)
+!SetAnim(Aiden,DRDown)
+!HoldOn(0.7)
+-Aiden: Gods. That's the most dangerous possible outcome.
+*HowSo: How so?
+*Enough3: I've heard enough.
+
+/HowSo
+
+!SetGlobal(77,4)
+!HoldOn(0.2)
+!Nani(Verm,?)
+!HoldOn(0.7)
+-Verm: How so?
+!HoldOn(0.3)
+-Aiden: A society without a leader isn't free from tyranny.
+-Aiden: It's just vulnerable to a different sort of tyranny. Leaderless tyranny, the worst kind.
+-Verm: I don't get it.
+-Aiden: Okay. I'll break it down.
+!HoldOn(0.1)
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.2)
+!SetAnim(Aiden,DRUp)
+!HoldOn(0.1)
+-Aiden: So, all societies have|a natural hierarchy.
+-Aiden: You see it in any group. Individuals who naturally shine over others.
+-Aiden: But who shines the brightest?|The strong, the smart, the privileged.
+-Aiden: Those are the rodents|who wield power.
+-Aiden: They get to write rules. They make important decisions, like choosing who's "in" or "out".
+-Aiden: But if there's no formally recognised leader, then the lack of leadership becomes a mask.
+-Aiden: The ones who shine brightest still get to write the rules, but the writing goes unseen.
+-Aiden: How do you hold them to account? You can behead a mad King, but you can't behead a mad, shapeless mob.
+!HoldOn(0.5)
+-Aiden: Like I said.|The worst kind of tyranny.
+-Verm: So the only alternative|is an iron paw?
+-Aiden: It's an iron paw either way.|Such is our nature.
+-Aiden: It's just a question of whether you want the paw to be visible and knowable or unseen and unaccountable.
+-Verm: And a question of whether the|iron paw is on your side.
+-Aiden: Well, of course. I never denied looking out for my own interests.
+!HoldOn(0.8)
+-Verm: I don't think an iron paw is inevitable.
+-Aiden: Read a history book.
+-Aiden: When rodents are weak, they are dominated by the strong. Always.
+!HoldOn(0.8)
+-Aiden: Can you not see the bigger picture?
+-Aiden: Rigid structure is necessary to keep the lack of structure from becoming a cage.
+!HoldOn(0.8)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.5)
+!Walk(Verm,DR,0.3)
+!HoldOn(0.5)
+-Verm: I wish Siobhan had come|down here with me.
+-Verm: They'd have something|intelligent to say.
+-Verm: And Gwen's got a great mind|for politics too.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+-Verm: But I'm bad with wordy stuff.|I just focus on swinging my sword.
+-Aiden: Well, maybe you should think a little harder.
+-Aiden: If you always sharpen your sword and never your wit, then you'll always get taken advantage of.
+-Verm: Alright, hold on.
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(2)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: Okay.
+-Verm: Here's what I think.
+*Right: You're right.
+*Wrong: You're wrong.
+*Prat: You're a twat.
+
+/Prat
+-Verm: You're a twat.
+-Aiden: Charming.
+!HoldOn(2)
+-Aiden: Is that it? That's your whole response?
+*PratYeah: That's it.
+*PratNo: There's more.
+
+/PratYeah
+-Verm: Yeah.
+-Verm: I could spend the rest of the day explaining why you're a twat, but it would be a waste of both of our times.
+-Verm: You don't see compassion for others as a good thing. There's no helping a person like that.
+-Aiden: Hmph. Well. You're right about the waste of time.
+-Aiden: My devotion to the Wayward Star is ironclad.
+-Aiden: And you look as stubborn as they come.
+-Aiden: So this conversation was a pointless endeavour from the start.
+-Aiden: Fine. Go. Get out.
+
+/PratNo
+-Verm: What, you want me to explain to you why you're a twat?
+-Verm: You want me to break down why supporting a tyrant is bad, and why caring about others is good, actually?
+!HoldOn(0.5)
+-Aiden: So patronising.
+-Aiden: It sounds like you have no idea what a better form of governance would look like, so you're just spitting vitriol at me.
+-Verm: Well, no, I don't know what a better form of governance would look like. I'm not a thinker!
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Aiden: Well think, you idiot!
+!HoldOn(0.1)
+-Aiden: Put away your "hurr durr, fascism bad" attitude for one moment and use your head!
+-Aiden: Historically, has there ever been a society that doesn't lead to one group oppressing another?
+-Aiden: No! Such a society does not and cannot exist!
+-Verm: Alright, shut up.|Let me think.
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(2)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: Mushroom society.
+>Mushroom
+
+/Right
+-Verm: Maybe you're right. About structure and stuff, I mean.
+-Verm: If there's no structure at all, then yeah, that just leads to some people taking advantage.
+-Verm: As a kid, I saw that myself in the lawless tunnels of the Underriver.
+-Verm: But when I see someone sitting smugly on a throne while others suffer, I feel angry. That's not fair at all.
+-Verm: So maybe the problem isn't structure itself. It's...
+*Institution: The institutions.
+*Inequality: The inequality.
+
+/Wrong
+-Verm: You're completely wrong. You've been spouting mindless filth for the last five minutes.
+-Aiden: Charming.
+-Verm: "Angry mobs are bad, so I have to support tyrants"? That's absolute worms-for-brains logic.
+-Aiden: That's not quite-
+-Verm: It's what you meant.|I'm not stupid.
+-Verm: You've misunderstood|the whole problem.
+-Verm: It was never about structure versus no structure. The problem is...
+*Institution: The institutions.
+*Inequality: The inequality.
+
+/Institution
+-Verm: The problem is the institutions that bring tyrants to power and continue to uphold them.
+-Verm: No institution is above accountability. If they cannot serve society ethically, they should be reformed or dismantled.
+!HoldOn(0.8)
+-Aiden: Wow.
+-Aiden: Honestly, I thought you a brute.
+-Aiden: I didn't know you had|that kind of vocabulary.
+-Verm: Yeah, I dunno where that came from. Maybe I channelled Siobhan for a moment.
+-Aiden: Your world view is overly simplistic, though.
+-Aiden: Who dismantles the institutions?|Who replaces them?
+-Aiden: You still need the hierarchy. That's an intrinsic part of all societies.
+-Verm: Well, what about mushroom societies?
+>Mushroom
+
+/Inequality
+-Verm: The problem is that inequality creates a power difference.
+-Verm: You said yourself that the "privileged" are the ones who "shine bright".
+-Verm: Well, why can't the unprivileged be helped to shine brighter?
+-Verm: If the playing field is level, then the power is spread.
+-Verm: Then it would be harder for any bad guy to take advantage.
+!HoldOn(0.5)
+-Aiden: That's overly simplistic.
+-Aiden: Who defines the "unprivileged"?|Who spreads the power?
+-Aiden: You still need the hierarchy. That's an intrinsic part of all societies.
+-Verm: Well, what about mushroom societies?
+>Mushroom
+
+/Mushroom
+!HoldOn(1)
+-Aiden: Okay. I thought we were getting somewhere, but you've lost me.
+-Aiden: What, exactly, is a "mushroom society"?
+-Verm: Ah, sorry. I've been farming mushrooms for the last few months, so it's hard to get them out of my head.
+-Verm: Some mushrooms have roots. Well, Jeb called them something else, but they're basically roots.
+-Verm: I've noticed that some of these mushrooms have organised roots, where they spread and split, like an upside-down tree.
+-Verm: But some mushrooms have roots that are more like a tangled web. You can't tell where one starts and another ends.
+-Verm: These roots sprout new mushrooms, so you can't even tell what the original mushroom is.
+-Verm: There's no mushroom leader. But they thrive all the same.
+!HoldOn(0.9)
+-Aiden: Okay. So.
+-Aiden: If I'm following this incredibly strained analogy.
+-Aiden: You're proposing a society|with a non-hierarchical structure.
+-Aiden: Entangled and equal.|Rhizomatic, not arborescent.
+!HoldOn(2.3)
+-Verm: Yeah.
+-Aiden: That's not a thing.
+-Verm: Could it be a thing?
+-Aiden: I don't know.|What that look like?
+!HoldOn(0.5)
+-Verm: Like a mushroom.
+
+!HoldOn(0.2)
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.2)
+!SetAnim(Aiden,DRDown)
+!HoldOn(0.4)
+-Aiden: You're a fool.
+-Aiden: You obviously haven't read a book on political theory in your life.
+-Aiden: Who even thinks of basing a society around mushrooms, of all things?
+-Aiden: They're disgusting creatures of rotten decay. They fester, strangle, and spread.
+-Verm: It's the other way around.|Mushrooms turn dead things into new life.
+!HoldOn(0.2)
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.2)
+!SetAnim(Aiden,DRUp)
+!HoldOn(1)
+!SetAnim(Aiden,DRMid)
+!HoldOn(0.2)
+!SetAnim(Aiden,DRDown)
+-Aiden: Hmph. Well, there's no faulting your optimism.
+!HoldOn(1)
+-Aiden: I think we're done here.
+-Aiden: You haven't convinced me at all, but there was nothing you could have said to falter my devotion to the Wayward Star.
+-Aiden: Go. Let me be.
+
+/Bucket
+-Info: An en-suite bathroom.|Very fancy.
+
+/Lock
+-Info: A god-made shackle.|It looks nigh-unbreakable.
+
+/Statue
+!CheckGlobal(45,1,SaveTime)
+-InfoBig: It's a tiny wooden statue of a hare with butterfly wings, a "pwca".
+-InfoBig: Did Gwen carve this from a wooden stool when she was here?
+!SetGlobal(45,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: The pwca flies freely.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Sky Garden,Aiden's prison cell)
+-Info: Your game has been saved.
+/SaveNo
+
+/Plate
+-Info: Remnants of lentil and thyme pie.|It smells surprisingly good.
+
+/LateGameIntro
+~DryCaveLoop
+
+/Nothing
+~DryCaveLoop
+
+EndScene

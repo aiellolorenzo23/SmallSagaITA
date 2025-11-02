@@ -1,0 +1,108 @@
+/Intro
+~PalaceLoop
+!OverworldCameraSnap(1150,365)
+!SetAnim(Ophiuchus,LookLeft)
+!HoldOn(1.5)
+-James: Tonight is the night.
+-James: Soon, the Yellow God will knock upon our door.
+!SetAnim(Ophiuchus,LetterOpen)
+-James: A terrifying prospect.|But I'm not afraid.
+-Ophiuchus: We could still initiate Proposal 99, the city evacuation plan.
+!SetAnim(Ophiuchus,LetterClose)
+!HoldOn(0.4)
+!SetAnim(Ophiuchus,LookRight)
+-Ophiuchus: Your Majesty, this may be our last opportunity...
+-James: For the last time, there is no need.
+-James: I have faith in Aquila and Excalibur.
+-Leo: We do not need that accursed weapon.
+!HoldOn(0.1)
+!SetAnim(James,LookRight)
+!HoldOn(0.8)
+!SetAnim(James,LookLeft)
+!HoldOn(0.5)
+-James: Where is the Plaguemaster, anyway?
+!SetAnim(Ophiuchus,LookLeft)
+-Leo: In their lab. Desecrating some corpse, I expect.
+!PlaySound(PalaceBigDoorOpen)
+!HoldOn(0.1)
+!SetAnim(Alex,UR)
+!CameraFollow(1)
+!HoldOn(1)
+!SetAnim(Ophiuchus,Loop)
+!TeleportCharacter(Leo,1201,479)
+!SetAnim(Leo,DL)
+!SetAnim(James,Loop)
+!Walk(Alex,UR,5.8)
+!HoldOn(6)
+!OverworldCameraPan(1150,365,1,1)
+!HoldOn(1)
+-Alex: Your Royal Majesty.
+!HoldOn(0.2)
+-Alex: Loremaster Orphiuchus.
+!HoldOn(1.2)
+-Alex:  Leo. 
+-Leo: You reek of alcohol, Sir Alex. Did you abandon your post just to go wallow in a tavern gutter?
+-Alex: There's good intel to be gained from tavern gutters, Needle Knight. 
+-Alex: Heh. Why, the things you overhear...
+-Leo: Out with it.
+!HoldOn(0.3)
+-Alex: There's an unsavoury gathering happening tonight in the slums.
+-Alex: Hundreds of rodents, all threatening to march on the palace.
+-James: A protest? Without a licence?!
+-Leo: Who are the organisers?
+-Alex: I don't know their names.
+-Alex: But some devil-tailed vagabond mouse with a god-sword was chief among them. He looked familiar.
+!HoldOn(0.1)
+!Nani(Leo,!)
+!HoldOn(0.4)
+-Leo: Vagabond?! No, that's impossible.
+!HoldOn(0.4)
+!SetAnim(Ophiuchus,LookRight)
+-James: For the peasants to revolt on tonight of all nights...
+-Ophiuchus: It is no coincidence.
+-Ophiuchus: They must have caught wind of the imminent danger above us.
+-James: So it's an opportunistic rebellion then.
+-James: They wish to leverage the chaos to overthrow me, just like they did with the squirrel duke.
+-Ophiuchus: Well, I don't know about that... but, yes, this is a security concern.
+!HoldOn(0.5)
+!SetAnim(Ophiuchus,LookLeft)
+-James: Blademaster, why are you just standing around?
+-James: Get out there and quash this petty uprising.
+!HoldOn(0.1)
+!SetAnim(Leo,UL)
+!HoldOn(0.1)
+!SetAnim(Leo,UR)
+!HoldOn(0.1)
+-Leo: My duty is to protect you, Your Majesty, and to that end it is vital I remain at your side.
+!HoldOn(0.4)
+-Alex: If the Blademaster has come down with a case of the lily-livers, I would be more than willing to lead the troops.
+
+!HoldOn(0.1)
+!SetAnim(Leo,UL)
+!HoldOn(0.1)
+!SetAnim(Leo,DL)
+!HoldOn(0.1)
+-Leo: Not an option, Alex.
+!SetAnim(James,LookRight)
+-Leo: You cannot be trusted with authority. That much you've demonstrated time and time again.
+-James: What are you talking about?
+-James: The Sterling Knight has an excellent track record. It's right there in his title.
+!HoldOn(0.1)
+!SetAnim(James,LookLeft)
+!HoldOn(0.3)
+-James: Get out there and bash some skulls, Sir Alex!
+-Alex: With grace and might, Your Majesty.
+!HoldOn(0.2)
+!SetAnim(Alex,DR)
+!HoldOn(0.1)
+!Walk(Alex,DL,5.8)
+!HoldOn(1)
+~Stop
+-James: Now there's a soldier who remembers what he's fighting for.
+!SetAnim(James,LookRight)
+-James: Who knows? Maybe he's due|for a promotion.
+!HoldOn(1)
+!NextRoom(ToBlack)
+!HoldOn(1)
+!NextRoom(MuriStreet2,3)
+/EndTimes

@@ -1,0 +1,189 @@
+/Intro
+
+/Bernardo
+-Bernardo:  @ I'm on the watch~ @|@ Doo doooo do-dooo~ @
+
+/Marcellus
+-Marcellus: Don't dawdle up here,|or we'll all get in trouble.
+
+/Rocket
+!SetAnim(Marcellus,UL)
+!HoldOn(0.1)
+!SetAnim(Marcellus,DL)
+!HoldOn(0.1)
+-Marcellus: Sir, don't touch the magic missiles. They're extremely volatile.
+!SetAnim(Marcellus,UL)
+!HoldOn(0.1)
+!SetAnim(Marcellus,UR)
+
+/EndSpeech
+!TeleportCharacter(Verm,-300,0)
+!TeleportCharacter(Gwen,-300,0)
+!TeleportCharacter(Siobhan,-300,0)
+!TeleportCharacter(Bruce,-300,0)
+!OverworldCameraSnap(320,390)
+!HoldOn(0.1)
+!TeleportCharacter(Bruce,438,540)
+!Enter(Bruce)
+!Walk(Bruce,L,1.1)
+!HoldOn(0.3)
+!TeleportCharacter(Gwen,438,540)
+!Enter(Gwen)
+!Walk(Gwen,L,0.8)
+!HoldOn(0.3)
+!TeleportCharacter(Siobhan,438,540)
+!Enter(Siobhan)
+!Walk(Siobhan,L,0.5)
+!HoldOn(0.3)
+!TeleportCharacter(Verm,438,540)
+!Enter(Verm)
+!OverworldCameraPan(320,220,0.3,1)
+!Walk(Verm,L,0.2)
+!HoldOn(0.2)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(1.4)
+!SetAnim(Josh,Turn)
+!HoldOn(0.7)
+!SetAnim(Josh,Loop)
+~solojosh
+!SetGlobal(18,39)
+!HoldOn(0.7)
+-Josh: So Lamia failed...
+!HoldOn(0.7)
+-Josh: I never thought I would lose the throne to a bunch of misfits and freaks.
+!OverworldCameraPan(320,300,0.3,1)
+!TeleportCharacter(Verm,411,481)
+!TeleportCharacter(Gwen,260,500)
+!TeleportCharacter(Siobhan,350,500)
+!TeleportCharacter(Bruce,200,480)
+!Walk(Verm,U,0.8)
+!Walk(Siobhan,U,0.8)
+!Walk(Gwen,U,0.8)
+!Walk(Bruce,U,0.8)
+!HoldOn(1)
+!SetAnim(Bruce,UR)
+!SetAnim(Verm,UL)
+!SetAnim(Josh,DL)
+-Bruce: The throne was never|yers tae lose, Duke.
+-Bruce: Yer ancestors took|what wasn't theirs.
+-Josh: And how's that my fault, huh?
+-Josh: Why should I be punished for something my great-great-grandpappy did?
+-Bruce: This isnae about punishment!
+-Bruce: It's about me being able tae walk freely on my own land.
+-Bruce: If you had shown an ounce of compassion, it would never have come tae this.
+!HoldOn(0.6)
+!SetAnim(Josh,Loop)
+!HoldOn(0.6)
+-Josh: Compassion... what a|grotesque word.
+-Josh: You didn't invade Sky Garden with lOvE and fRiEnDsHiP.
+-Josh: You won through sheer violence.
+-Josh: Domination! That's the only meaningful thing in this world.
+-Bruce: Ye dinnae see a difference in what we fight for?
+-Gwen: Bruce, save your breath.
+-Gwen: To filth like this, nothing matters outside of what he can grasp in a clenched paw.
+!HoldOn(0.6)
+-Josh: Everyone loves to preach their own ideology.
+-Josh: But when the doom comes, morals and virtues don't matter.
+-Josh: You can be the squirrel sitting on high, or you can be the rat languishing in the dirt.
+-Josh: And the doom is coming, y'know.|The Cailleach told me herself.
+!Nani(Verm,!)
+!HoldOn(0.5)
+!Walk(Verm,U,0.4)
+!HoldOn(0.5)
+!SetAnim(Verm,UL)
+!SetAnim(Josh,DR)
+-Verm: The Cailleach?
+-Josh: Ooooh yeah. She warned me all about your little reaping party.
+-Josh: "Four riders wielding blades divine|Seat Raibeart Red upon his throne."
+-Josh: "The regal city's thirteenth chime|Convokes the God of Ash and Bone."
+!HoldOn(1)
+!SetAnim(Josh,Loop)
+!HoldOn(1)
+-Verm: The hell does all that mean?
+-Josh: Beats me. But it's your problem now, losers.
+-Josh: Later!
+
+!SpecialWalk(Josh,D,1.8,RunD,1.5)
+!OverworldCameraPan(320,500,1,1)
+!HoldOn(0.8)
+!SetAnim(Bruce,R)
+!SetAnim(Verm,L)
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!SetAnim(Verm,DL)
+!SetAnim(Gwen,R)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!SetAnim(Verm,D)
+!SetAnim(Gwen,DR)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!Walk(Verm,D,1.4)
+!Walk(Siobhan,D,1.7)
+!Walk(Gwen,D,1.7)
+!Walk(Bruce,D,1.65)
+!HoldOn(0.7)
+!TurnOffBlocks(0)
+!PlaySound(GwenWhoosh2)
+!NormalJump(Josh,1,120,309,1000,Jump,Silent)
+!HoldOn(0.5)
+!TurnOnBlocks(0)
+!HoldOn(0.5)
+-Bruce: Woah! What a jump!
+!Walk(Gwen,R,0.2)
+!HoldOn(0.25)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!PlaySound(VermDraw)
+!SetAnim(Gwen,Landing)
+!HoldOn(0.5)
+-Gwen: I'll catch the bastard.
+-Bruce: Nae bother.
+-Bruce: If he wants tae run scared for the rest of his days, let him.
+!TeleportCharacter(Anton,438,540)
+!Walk(Anton,L,1)
+!Enter(Anton)
+!HoldOn(0.5)
+!SetAnim(Gwen,DL)
+!SetAnim(Verm,DL)
+!HoldOn(0.5)
+-Anton: Lapa!
+!SetAnim(Bruce,DR)
+!SetAnim(Gwen,DL)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!SetAnim(Gwen,L)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!SetAnim(Siobhan,UL)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.1)
+-Bruce: Anton! Yer okay!
+
+!Walk(Bruce,UR,0.1)
+!Walk(Anton,DL,0.1)
+!HoldOn(0.1)
+!SetAnim(Bruce,Hug)
+!SetAnim(Anton,Blank)
+!HoldOn(2)
+!PlaySound(NewMove)
+!LearnMove(3,3)
+-InfoBig: Bruce learned Sweet Aria.
+!HoldOn(1)
+!NextRoom(SkyGardenOuter,2)
+
+
+/Old

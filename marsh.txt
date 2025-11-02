@@ -1,0 +1,45 @@
+
+/PigeonEntrance
+!NormalJump(Dizi,2,-100,314,263,Flight,Land)
+!HoldOn(2)
+!HoldOn(0.5)
+!NormalJump(Verm,2,50,300,263,Jump,DL)
+!HoldOn(0.5)
+!NormalJump(Siobhan,2,50,300,263,Jump,DL)
+!HoldOn(0.5)
+-Dizi: Hey, mouse. You went the wrong way.
+-Dizi: This is Kenney's Marsh. Nothing interesting out here.
+-Verm: I know. I've got some old business to attend to.
+-Siobhan: Alright. I guess we'll wait here until you're done then.
+!SetNPCFlag(Siobhan,SiobhanWait)
+!SetGlobal(18,7)
+
+/SiobhanWait
+-Siobhan: What kind of business is it?
+-Verm: Buried pirate treasure.
+-Siobhan: Very funny, Sir Verm.
+
+/Dizi
+-Dizi: Ready for take-off?
+*Go: Let's go.
+*NotYet: Not yet.
+
+/Go
+!PigeonFlight(OverMap)
+
+/Treasure
+-InfoBig: There's something buried here...
+*Dig: Get digging.
+*NotYet: Not yet.
+
+/Dig
+!NextRoom(ToBlack)
+!HoldOn(2)
+!NextRoom(FromBlack)
+!HoldOn(0.5)
+-Verm: Nice.
+
+/ItemFound
+-InfoBig: You found 20 seeds. You add them to your wallet.
+
+/NotYet

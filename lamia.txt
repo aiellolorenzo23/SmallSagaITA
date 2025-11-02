@@ -1,0 +1,103 @@
+/BattleVeryStart
+~LamiaBattle1Loop
+!HoldOn(0.4)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+/BattleStart
+!HoldOn(0.5)
+!CameraPan(0,1,1,1)
+-Lamia: You want to know how I earned the title of "Peerless"?
+-Lamia: It's not because of my battle record, flawless as it is.
+!SetGlobal(4,1)
+!HoldOn(0.4)
+!LetsFight()
+
+/TalkTime
+!CheckGlobal(4,1,TT1)
+!CheckGlobal(4,2,TT2)
+!CheckGlobal(4,3,TT3)
+!CheckGlobal(4,4,TT4)
+
+!HoldOn(0.1)
+!ChatOver()
+
+/NoTalkTime
+!HoldOn(0.1)
+!ChatOver()
+
+/TT1
+-Lamia: It's because as the gods' territory grew, food ran scarce.
+-Lamia: My friends and family all fled to the Outlands.
+-Lamia: I was the only stoat stubborn enough to stick around.
+!SetGlobal(4,2)
+!HoldOn(0.1)
+!ChatOver()
+
+/TT2
+-Lamia: So here I stand.|The last stoat of Rodentia.
+-Lamia: Lamia the loner.|Lamia without peers.
+!SetGlobal(4,3)
+!HoldOn(0.1)
+!ChatOver()
+
+/TT3
+!CameraPan(0,1,1,1)
+!HoldOn(0.5)
+!CreateEnemy(Hudson)
+!HoldOn(1)
+!SetGlobal(4,4)
+-Hudson: Blademaster! I'm|here to assist you.
+-Lamia: Well timed, soldier.
+!HoldOn(1)
+~Stop
+!ConsumeEnemy()
+!HoldOn(1)
+!CameraPan(-0.8,1,1,1)
+!HoldOn(1)
+-Gwen: Disgusting.
+-Siobhan: What kind of creature|eats their own?!
+!CameraPan(-0,1,1,1)
+!HoldOn(1)
+-Lamia: My own?
+!HoldOn(0.4)
+-Lamia: No. The squirrels|were never my peers.
+-Lamia: They viewed me with contempt, only tolerating my presence because I served their ends.
+-Lamia: As payment, they let me eat my fill of the condemned.
+-Lamia: And yet...
+~Stop
+!HoldOn(0.2)
+!PlaySound(LamiaTurn)
+!SetAnim(Lamia,RegretGo)
+!HoldOn(0.2)
+!PlaySound(LamiaWalk)
+!HoldOn(0.1)
+!SetAnim(Lamia,Default)
+!HoldOn(0.3)
+!TitanModeToggle()
+-Lamia: I ALWAYS|HUNGERED FOR MORE.
+!TitanModeToggle()
+~LamiaBattle2Loop
+!ChatOver()
+
+/TT4
+!ChatOver()
+
+/EnemyDead
+~Stop
+!EndBattle()
+
+/VermRage
+!CheckGlobal(4,4,R2)
+-Verm: Fancy armour won't save you!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/R2
+-Verm: Blademaster or titan?|I'll take you down either way!
+!SetAnim(Verm,Idle)
+!NewTurn()
+End scene

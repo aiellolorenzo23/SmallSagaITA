@@ -1,0 +1,115 @@
+/Intro
+
+/Penelope
+!CheckGlobal(99,3,BruceTime)
+!CheckGlobal(36,7,AbbozzatoTime)
+!CheckGlobal(36,9,AbbozzatoEnd)
+-Verm: I don't suppose you sell any armour here?
+-Penelope: All fashion is armour. We wear clothes to survive the harshness of our everyday lives.
+-Verm: But what about surviving, like, stab wounds?
+-Penelope: That is outside my speciality.
+
+/AbbozzatoEnd
+-Penelope: The cloak should fit anyone. But who can pull it off? That is a tougher question.
+
+/AbbozzatoTime
+!SetGlobal(36,8)
+!LoseItem(52)
+!PermItemFlag(98)
+-Verm: Hey, are you Penelope, the clothes lady?
+!HoldOn(0.6)
+-Penelope: "Clothes lady"?
+!HoldOn(0.3)
+-Verm: Sorry, what's the right word?|Seamsmith? Clothmonger?
+!HoldOn(0.4)
+-Penelope: Those are not words.
+-Penelope: I am a creator of bespoke, high-end, haute couture fashion.
+!HoldOn(0.8)
+-Verm: Okay, look. This is outside my area. I'm just going by what Abbozzato said.
+-Penelope: Ahh, Abbozzato found a new apprentice. Now the full garment comes together.
+-Penelope: Run and tell that unprofessional slug-brain that he must make his orders in person.
+-Verm: He told me you owed him a favour.
+!HoldOn(0.9)
+-Penelope: Well... there is some truth to that.
+-Penelope: For all his brashness, the foolish merchant does reach out to those in need.
+-Penelope: What did he want?
+!ShowItem(Prota,52)
+!HoldOn(1)
+-Penelope: This fabric... it is exquisite. There's no denying that.
+-Penelope: What does he want doing with it?
+-Verm: He said to turn it into clothes.
+-Penelope: What kind of clothes?|What style?
+-Verm: He didn't say.
+-Penelope: Well that's no good.
+-Penelope: As his apprentice, you can be his mouthpiece. Give me some direction.
+-Verm: I don't think that's a good idea.
+-Penelope: Trust me, it's fine. I can make even the ugliest idea into a beautiful reality.
+-Penelope: Now. What feeling are we trying to convey with this garment?
+*Strength: Strength
+*Elegance: Elegance
+*Coolness: Coolness
+
+/Strength
+-Verm: Strength is good, right?
+-Penelope: Good for a warrior, perhaps.|Less so for a poet.
+>Next
+
+/Elegance
+-Verm: How about elegance?
+-Penelope: Interesting. I didn't expect you to value that sort of thing.
+-Verm: Hey, I can be plenty elegant.
+-Penelope: Pardon my presumptions.
+>Next
+
+/Coolness
+-Verm: Coolness. Let's make it cool.
+-Penelope: That's a valuable trait.
+-Penelope: If an outfit makes you feel cool, you'll have the bravery to weather any situation.
+>Next
+
+/Next
+-Penelope: I think I know what you're after. But it'll take some time.
+-Penelope: Come back in... oh, thirty minutes or so.
+-Verm: What, like in real time, or...
+-Penelope: All time is real time, darling. Go take a walk.
+!SetNPCFlag(Penelope,VermEarly)
+
+/VermEarly
+-Penelope: I'm busy working on your garment, darling. Come back later.
+
+/VermReady
+-Penelope: You are right on time. Take a look.
+!ShowItem(Penelope,60)
+!HoldOn(1)
+-Penelope: This is not a simple overcloak one would wear to run errands at the market.
+-Penelope: This is a statement piece. An unapologetic artistic display.
+-Penelope: This is what one would wear to dazzle with the power of a titan and the majesty of a queen.
+!PlaySound(ItemFound)
+!ReceiveItem(60)
+-Info: You received a magnificent cape. It shines and shimmers with glorious splendour.
+!SetGlobal(36,9)
+!HoldOn(0.6)
+-Verm: Rad.
+!HoldOn(0.9)
+-Penelope: Yes. Yes, it is "rad".
+-Penelope: Send Abbozzato my regards.
+!SetNPCFlag(Penelope,AbbozzatoEnd)
+
+/BruceTime
+-Bruce: I'm looking for a mouse. Have any shopped here recently?
+-Penelope: One or two. What were they wearing?
+-Bruce: Rags and bandages, most likely.
+!HoldOn(1)
+-Penelope: Darling, this is a bespoke, high-end, haute couture fashion boutique.
+-Penelope: If my customers walked out the door wearing rags, then I will have failed in my duties.
+-Bruce: Ah, fair point.
+-Penelope: Nice kilt, by the way.
+-Bruce: Thanks! It has a sporran.
+!SetNPCFlag(Penelope,BruceBrief)
+
+/BruceBrief
+-Penelope: I do fit the costumes for Isengrim, of course. Is that who you are after?
+
+/FoundSeeds
+-Info: You found 2 seeds.
+-Penelope: Don't pilfer, darling.|It's ill-fitting.

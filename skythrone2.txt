@@ -1,0 +1,225 @@
+/Intro
+!AutoPinFollowers()
+
+/Ready
+!CheckGlobal(18,13,Ready2)
+-Josh: Why are you still here?|Go follow the wind already.
+!Walk(Verm,D,0.4)
+!HoldOn(0.4)
+
+/Ready2
+!OverworldCameraPan(320,220,2,1)
+!HoldOn(0.5)
+-Josh: Y'see, Evan, what it all comes down to...
+
+!HoldOn(0.4)
+!SetAnim(Josh,Puff)
+!HoldOn(3)
+!UnpinFollowers()
+!TeleportCharacter(Siobhan,308,520)
+!TeleportCharacter(Verm,348,520)
+-Josh: ...Is domination.
+-Josh: That's the best feeling.|the ultimate pleasure.
+-John: When you're in control,|everything runs smoothly.
+-Josh: Comfort, freedom, security.|Sky Garden's got it all.
+-Josh: And the best part is,|the people want to be dominated.
+-Josh: Sure, they whine. They complain.|They make up words for you like "coloniser" and "fascist".
+-Josh: But deep down? The people don't want to think about their problems. They want to be controlled.
+-Josh: So I'm just doing everyone a favour.|That's my burden as the dominator.
+!HoldOn(0.3)
+-Evan: Uh... right, lol.
+!HoldOn(1)
+-Evan: ...What did I ask?
+!SetGlobal(18,14)
+!HoldOn(0.3)
+!OverworldCameraPan(320,263,0.5,1)
+!Walk(Siobhan,U,1.3)
+!Walk(Verm,U,1.3)
+!HoldOn(1.3)
+!Walk(Siobhan,UL,0.2)
+!Walk(Verm,UR,0.2)
+!HoldOn(0.5)
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,U)
+-Josh: What's this? More entertainment?
+-Evan: They aren't on the schedule...
+-Josh: Alright. What do we have here?
+-Josh: A fancy mole and a raggedy mouse.
+-Siobhan: It is a pleasure to meet your acquaintance, my Duke.
+-Siobhan: My name is Lady Siobhan of-
+-Josh: Sherrr-vawwwn?|Weird name.
+-Josh: Spare the intros and cut to the chase.
+-Verm: I'm looking for the Yellow God of Death.
+-Verm: And I heard some "Cailleach" of an "Ashen Tower" could help me find Him.
+-Verm: I want directions.
+-Josh: Death Gods and Cailleaches. Ring any bells, Loremaster?
+-Evan: Lol, yes, of course.|As a matter of fact-
+-Josh: Nope, no bells rung.|Our memories sure are foggy.
+-Josh: But maybe the fog could be cleared with a small tribute to the throne, if ya catch my drift.
+-Verm: A bribe?
+
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!SetAnim(Siobhan,R)
+!HoldOn(0.9)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+-Verm: Do we look rich to you?
+-Josh: I dunno, bro. Bet that thingamajig on your back is worth a pretty seed.
+-Verm: My sword?
+-Josh: Yeah. So you gonna pay tribute?
+
+*Tribute: I'll pay tribute.
+*NoTribute: Nope.
+
+/Tribute
+-Verm: Sure, I'll pay tribute alright.
+
+!SetGlobal(4,1)
+!Walk(Verm,U,0.2)
+!HoldOn(0.3)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,UL)
+-Verm: I'll a-tribute a sword swing to your face!
+-Siobhan: Verm, no!
+-Lamia: Stand down, little mouse.
+>Onward
+
+/NoTribute
+
+!Walk(Verm,U,0.2)
+!HoldOn(0.3)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,UL)
+-Verm: The sword is mine and mine alone.|Keep your grubby paws off it.
+-Lamia: Show some respect, little mouse.
+>Onward
+
+/Onward
+-Lamia: Or someone might get eaten.
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: You're Sky Garden's blademaster, right?
+-Verm: Can't say I've met a stoat before. Much less fought one.
+-Lamia: Funny. Because I've killed|thousands of your kind.
+-Josh: Chill out, you two. Chill out.
+!SetAnim(Siobhan,U)
+-Josh: Don't wanna get blood on the throneroom floor.
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Josh: Tell ya what, mouse. You've got spunk, and I like that.
+-Verm: Got what?
+-Josh: So Evan here'll tell ya where to find the Cailleach. Free of charge.
+!HoldOn(0.5)
+!SetAnim(Verm,L)
+-Evan: Uh...
+!SetAnim(Siobhan,UL)
+!HoldOn(0.5)
+-Josh: Won't ya, Evan?
+!HoldOn(0.8)
+-Evan: Uuuuuuhhhhh....
+!HoldOn(0.8)
+!Nani(Evan,!)
+!HoldOn(0.5)
+-Evan: Oh!
+-Evan: Ooooh~|Yeah, I got ya, Duke.|Lololol.
+-Evan: Right, so, head south-east of here, and you'll enter the Gloaming Woods. It's a maze.
+-Evan: To find the exit, you gotta follow the winds.
+!CheckGlobal(28,1,MazeEarly)
+-Verm: I don't do riddles.
+-Evan: It's not a riddle, lol.
+-Evan: You literally watch the wind, and follow where it goes.
+-Evan: It'll lead you to a giant, dead oak tree.
+-Evan: That's the Ashen Tower.
+-Josh: Climb to the top, and you'll find your Cailleach.
+-Josh: Send her my regards. Then you'll get your wishes or magic gold or whatever it was.
+
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.4)
+-Verm: It's that simple?
+-Josh: Yep. That simple.
+*Thank: Thank you.
+*Lying: You're lying.
+/Thank
+-Verm: Thanks for the help, I guess.
+-Josh: No probs.
+>Time
+/Lying
+-Verm: You're clearly pulling my whiskers.
+-Josh: Wouldn't dream of it.
+!SetAnim(Siobhan,UR)
+-Siobhan: Sir Verm, I'm sceptical too.
+-Siobhan: But it's worth a try, right?
+>Time
+
+/MazeEarly
+-Verm: I know. I already figured that much out.
+-Josh: Huh? You did?
+-Verm: Yeah. But when I got to the dead tree, there was a big boulder in the way.
+-Verm: So I couldn't get in.
+!SetAnim(Siobhan,U)
+-Josh: Oh. Well, that sounds like a "you" problem.
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.4)
+-Verm: Alright. Well, cheers for that.
+-Verm: Barrel of help you've all been.
+-Verm: This trip was a fantastic use of my time.
+!SetAnim(Siobhan,UR)
+-Siobhan: Sir Verm, please stop!
+>Time
+
+/Time
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+-Siobhan: Thank you for your time, Duke Josh.
+-Josh: It's nothing. Go.
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!Walk(Verm,DL,0.3)
+!Walk(Siobhan,D,2)
+!HoldOn(0.3)
+!Walk(Verm,D,1.7)
+!HoldOn(0.9)
+-Evan: What a pair of dummies, lol.
+-Josh: Now where were we?
+-Josh: Oh yeah. The best pleasure. Domination.
+!HoldOn(0.6)
+-Lamia: Is that truly the best pleasure, Duke?
+-Lamia: For some, nothing is more|pleasurable than a full belly|and the company of friends.
+!HoldOn(1)
+!TeleportCharacter(Siobhan,322,553)
+!TeleportCharacter(Verm,342,553)
+-Josh: Is that so?
+!HoldOn(0.5)
+
+!AutoPinFollowers()
+!CameraFollow(1)
+

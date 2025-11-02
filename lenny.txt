@@ -1,0 +1,73 @@
+/BattleVeryStart
+!SetGlobal(4,0)
+Blank
+/BattleStart
+-Gwen: Where's Owen?
+!DrawWeapon(Gwen)
+!HoldOn(0.4)
+-Gwen: Where's Reese?
+~GwenBattleLoop
+!CameraPan(0,1,1,1)
+!LetsFight()
+/EnemyDead
+!SetGlobal(4,0)
+~Stop
+!HoldOn(0.5)
+!EndBattle()
+/End
+
+/Chat
+!CheckGlobal(4,0,Chat1)
+!CheckGlobal(4,1,Chat2)
+!CheckGlobal(4,2,Chat3)
+!CheckGlobal(4,3,Chat4)
+!CheckGlobal(4,4,Chat5)
+!CheckGlobal(4,5,Chat6)
+!HoldOn(0.1)
+!NewTurn()
+
+/Chat1
+!SetGlobal(4,1)
+-Gwen: Where's Ava?|Where's Ceredigion?
+!HoldOn(0.1)
+!NewTurn()
+
+/Chat2
+!SetGlobal(4,2)
+-Gwen: Where's Jac?|Where's Efa?|Answer me!
+!HoldOn(0.1)
+!NewTurn()
+
+/Chat3
+!SetGlobal(4,3)
+-Gwen: Where's Auntie Alys?|Where's little Harri?
+-Gwen: If you don't start talking, I'll cut the answers from your throat.
+!HoldOn(0.1)
+!NewTurn()
+
+/Chat4
+!SetGlobal(4,4)
+-Gwen: Owen. Reese. Ava.
+!HoldOn(0.1)
+!ShoutMode()
+-Gwen: Answer me, George!
+!HoldOn(0.1)
+!StoryBerserk()
+
+/Chat5
+!SetGlobal(4,5)
+-Gwen: Caredigion. Jac. Efa.
+!HoldOn(0.1)
+!ShoutMode()
+-Gwen: Where are they?!
+!HoldOn(0.1)
+!NewTurn()
+
+/Chat6
+!SetGlobal(4,4)
+-Gwen: Owen. Reese. Ava.
+!HoldOn(0.1)
+!ShoutMode()
+-Gwen: Answer me, George!
+!HoldOn(0.1)
+!NewTurn()

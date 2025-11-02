@@ -1,0 +1,378 @@
+/Intro
+
+/HighUp
+!TurnOffBlocks(1)
+!SetGlobal(39,0)
+!SetVisible(MuriZ2,0)
+!SetVisible(MuriZ,0)
+!TurnOnBlocks(2)
+!MoveNPCToLayer(Mushroom Meg,ZSorted)
+!MoveNPCToLayer(Lucius,ZSorted)
+!TeleportCharacter(Siobhan,669,791)
+!TeleportCharacter(Bruce,649,781)
+!TeleportCharacter(Gwen,629,771)
+
+/Jump1
+!HoldOn(0.1)
+!UnpinFollowers()
+!MoveNPCToLayer(Mushroom Meg,ZSorted)
+!MoveNPCToLayer(Lucius,ZSorted)
+!SetNPCFlag(Fisher,Fisher)
+!SetNPCFlag(Mushroom Meg,Mushroom Meg)
+!SetNPCFlag(Jump2,Jump2)
+!OverworldCameraPan(678,528,0.4,1)
+!TurnOffBlocks(1)
+!SetVisible(MuriZ2,0)
+!SetVisible(MuriZ,0)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,703,741,JUR,UR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,672,705,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,635,659,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,678,608,JUR,UR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!HoldOn(0.35)
+!TurnOnBlocks(2)
+!CameraInstFollow(1)
+
+/Jump2
+!MoveNPCToLayer(Mushroom Meg,Effects)
+!MoveNPCToLayer(Lucius,Effects)
+!SetNPCFlag(Mushroom Meg,)
+!SetNPCFlag(Fisher,)
+!SetNPCFlag(Jump2,)
+!OverworldCameraPan(668,724,0.4,1)
+!TurnOffBlocks(2)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,635,659,JDL,DL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,672,705,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,703,741,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,668,804,JDL,DL)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!HoldOn(0.35)
+!TurnOnBlocks(1)
+!SetVisible(MuriZ2,1)
+!SetVisible(MuriZ,1)
+!AutoPinFollowers(1)
+!CameraInstFollow(1)
+
+/JustPin
+!CheckGlobal(39,1,HighUp)
+!SetNPCFlag(Fisher,)
+!SetNPCFlag(Jump2,)
+!SetNPCFlag(Mushroom Meg,)
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!AutoPinFollowers()
+
+/Intro
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!SetGlobal(8,0)
+!SetGlobal(50,3)
+!HoldOn(2)
+!Walk(Verm,D,2)
+!HoldOn(1)
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(1)
+!SetAnim(Verm,DR)
+!HoldOn(1)
+-Siobhan: That's all four of us then.
+-Gwen: Right on time.
+-Gwen: And we still have three hours until the "thirteenth chime", the witching hour.
+!HoldOn(0.6)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.3)
+-Siobhan: I was hoping for a|bigger crowd, though.
+-Bruce: Aye, this is a bit pitiful...
+!HoldOn(0.4)
+!OverworldCameraPan(320,280,1,1)
+!HoldOn(2)
+-Bree: Oi. Stilton.
+!HoldOn(0.4)
+!SetAnim(Bree,DL)
+!HoldOn(0.1)
+!SetAnim(Bree,HeadLeft)
+!HoldOn(0.7)
+-Bree: Where is everyone?
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Stilton: I dunno!
+!HoldOn(0.3)
+-Stilton: We knocked on doors,|we handed out leaflets...
+-Stilton: I swear we got hundreds of RSVPs!
+-Bree: Psh.
+!HoldOn(0.2)
+!SetAnim(Bree,DL)
+!HoldOn(0.1)
+!SetAnim(Bree,DR)
+!HoldOn(0.1)
+-Bree: The people want change, but they don't want to put their necks on the line.
+-Stilton: Well. Can't say I blame 'em.
+-Stilton: It's all a bit intimidating,|ain't it?
+!HoldOn(0.9)
+-Stilton: We can still do this, right?
+!HoldOn(0.7)
+!ShoutMode()
+!HoldOn(0.1)
+-Bree: Everyone! Gather 'round|and listen up!
+!OverworldCameraPan(420,420,1,1)
+!TeleportCharacter(Frank,866,393)
+!TeleportCharacter(Ian,802,361)
+!TeleportCharacter(Verm,518,557)
+!TeleportCharacter(Siobhan,444,566)
+!TeleportCharacter(Gwen,404,590)
+!TeleportCharacter(Bruce,354,620)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UL)
+!SetAnim(Gwen,UL)
+!SetAnim(Bruce,UL)
+!HoldOn(1.5)
+-Bree: This is it.|This is the night.
+-Bree: We're gonna march up Artura Street, march past Ratlas, and march right into the Royal Palace!
+-Bree: Then we're gonna find the King and demand that he listens to our voices!
+!HoldOn(0.5)
+-Bree: Anything to add, Verm?
+*VSS: Let's stay safe.
+*VKA: Let's kick arse.
+*VR: It's regicide time.
+*VNo: No.
+
+/VSS
+-Verm: Let's stay safe out there.
+-Bree: Well said.
+-Bree: The Guard might give us some grief, especially as we get into the palace.
+-Bree: So for our own safety, let's watch each other's backs.
+>Interruption
+
+/VKA
+-Verm: Let's kick some arse.
+-Bree: Yes!
+-Bree: Well, metaphorically speaking.|Physically only as a last resort.
+-Bree: The Guard will give us some grief, especially as we get into the palace.
+-Bree: But that don't mean we have to start throwing fists at the drop of a hat.
+>Interruption
+
+/VR
+-Verm: It's regicide time.
+-Gwen: Hell yeah.
+!ShoutMode()
+-Bree: WOAH!
+-Bree: Woahwoahwoah.
+-Bree: That is NOT the plan!
+-Bree: We want to shed as little blood as possible, whether that blood is red or blue.
+-Gwen: Boooo! Coward.
+-Stilton: Hey! Listen, you two.
+-Stilton: I get that dragging the King into the streets and lopping his head right off would be satisfying.
+-Stilton: I get that it would probably be good for the city in the short run.
+-Stilton: Heck, it may even have long term political and economic benefits.
+!HoldOn(0.5)
+-Stilton: However.
+!HoldOn(1)
+-Stilton: I've forgotten where I'm going with this. Bree?
+-Bree: Killing the King is not the plan. Let's follow the plan.
+-Verm: Fine.
+>Interruption
+
+/VNo
+-Verm: No.
+!HoldOn(0.5)
+-Bree: Fair enough.
+-Stilton: A mouse of few words.
+>Interruption
+
+/Interruption
+-Frank: Excuse me!
+!OverworldCameraPan(704,380,2,1)
+!SetAnim(Gwen,U)
+!SetAnim(Siobhan,U)
+!SetAnim(Bruce,U)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,UR)
+!SetAnim(Bruce,UR)
+!SetAnim(Verm,UR)
+!HoldOn(1)
+-Frank: This protest is being held without a proper license.
+-Ian: On His Majesty's orders, please disperse immediately and return to your homes.
+!OverworldCameraPan(320,300,2,1)
+!HoldOn(0.5)
+-Bree: The Guard are here already?!
+-Bree: Did someone rat us out?
+!OverworldCameraPan(420,520,2,1)
+!HoldOn(0.3)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+-Siobhan: Sir Verm, what should we do?
+*Talk1: We talk.
+*Fight1: We fight.
+
+/Talk1
+-Verm: We may as well try to stick to Bree's peaceful plan.
+!OverworldCameraPan(700,430,1,1)
+!Walk(Bruce,R,1)
+!HoldOn(0.3)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.5)
+!SetAnim(Bruce,UR)
+-Verm: This is all a misunderstanding.
+-Bruce: Aye! We're just a|late-night book club.
+-Frank: Yeah? Where are your books?
+!HoldOn(0.8)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.9)
+-Verm: So much for that.
+~BattleMuridaLoop
+-Gwen: Onto the direct approach then.|Let's rock!
+!GoToBattle(Thimble1)
+
+/Fight1
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+~BattleMuridaLoop
+-Verm: There's no time to waste. Let's knock them out and push on through.
+-Gwen: Now we're talking!|Let's rock!
+!GoToBattle(Thimble1)
+
+/PostFirstBattle
+!SetNPCFlag(Fisher,)
+!SetNPCFlag(Jump2,)
+!SetNPCFlag(Mushroom Meg,)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!HoldOn(1)
+-Bree: Oi, oi! What's all this violence?!|What happened to the plan?
+!HoldOn(0.4)
+-Bree: Sheesh. Well. In for a seed, in for a sapling, I suppose.
+-Bree: Let's move. Quickly.
+!SetGlobal(50,4)
+!SetAnim(Bree,DR)
+!SetAnim(Stilton,UL)
+!HoldOn(0.1)
+!SetAnim(Bree,UR)
+!Walk(Stilton,UR,1.3)
+!HoldOn(0.3)
+!Walk(Bree,UR,1.3)
+!Exit(Stilton)
+!HoldOn(0.3)
+!Exit(Bree)
+!HoldOn(0.5)
+!AutoPinFollowers(1)
+!CameraFollow(1)
+
+/LeaveEarly2
+-Siobhan: Wrong way, Sir Verm!
+!Walk(Verm,UL,0.5)
+!HoldOn(0.5)
+
+/WrongWay3
+-Siobhan: Sir Verm, let's follow Stilton! He went to the wharf.
+
+/Mushroom Meg
+-Mushroom Meg: The court says one more arrest and I'll be serving life.
+-Mushroom Meg: I wanna join the protest,|but I'm not risking that.
+
+/Lucius
+-Lucius: Woah, you really gave them|a beating. Respect!
+/Fisher
+-Fisher: Same as it ever was.
+/Lawrence
+-Lawrence: Quiet times are over.
+
+/Al
+!SetAnim(Al,ToFight)
+!HoldOn(0.4)
+!SetAnim(Al,Fight)
+-Al: You really put the boots to those pesky Guards, didn't ya?
+!SetAnim(Al,EndFight)
+!HoldOn(0.3)
+!SetAnim(Al,Loop)
+-Al: Sorry I can't join you.|I've got my kids to take care of.
+
+/Susan
+-Susan: Don't worry.
+-Susan: If any Guard come through, I'll tell 'em you went the other way.
+
+/ThisWay
+!AutoPinFollowers()
+!SetGlobal(50,27)
+!HoldOn(1)
+-Stilton: Up here!
+!SetAnim(Stilton,DR)
+!HoldOn(0.1)
+!SetAnim(Stilton,UR)
+!HoldOn(0.1)
+!Walk(Stilton,UR,0.3)
+!HoldOn(0.5)
+!PlaySound(MuriDoor)
+!OpenDoor(11,Default)
+!HoldOn(0.3)
+!Exit(Stilton)
+!OpenDoor(11,Close)
+!CameraFollow(1)
+!HoldOn(0.5)
+!DoorFix()
+
+/JumpChimney
+!NormalJump(Verm,2,40,817,617,JDR,DR)
+!HoldOn(0.3)
+!NextRoom(MuriMetaHouse,1)
+
+/Schobert
+!HoldOn(0.2)
+!SetAnim(Schobert,Out)
+!HoldOn(1)
+-Schobert: Could you keep it DOWN out there?|Some of us are trying to sleep!
+!SetAnim(Schobert,In)
+!HoldOn(0.4)
+
+/FoundSeeds
+-Info: You found 3 seeds.|Better late than never?
+/FoundSeeds2
+-Info: You found 2 seeds.|Must have missed them the first time around.

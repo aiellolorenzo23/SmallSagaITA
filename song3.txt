@@ -1,0 +1,40 @@
+000 
+002 Friends, Rodents, Countrymice
+004 Prick up your ears
+007 And attend to this ditty of mine
+012 And if it should please you
+015 To buy me a beer
+017 Then I'll sing you a song sweet as wine
+023 I've roamed this world over
+026 A rat-tailed rover
+029 A scholar of poem and song
+034 So buy me an ale
+036 And I'll spin you a tale
+039 For tomorrow I'm roving along
+045 I've crossed the great waters
+047 I've wooed sons and daughters
+050 Of Rat-kings and Vole-counts galore
+055 But leave 'em I must
+058 For I'm slave to my wanderlust
+061 Shipping my songs shore to shore
+066 I've roamed this world over
+069 A rat-tailed rover
+072 A scholar of poem and song
+076 So buy me an ale
+079 And I'll spin you a tale
+082 For tomorrow I'm roving along
+087 And I'll share for a florin
+090 The Horned Rats of Corinth's Dance,
+093 learned from an aged Rhatsode
+099 As they danced bacchanals
+101 By the Isthmus canal
+104 To the strain of the Dorian mode
+109 I've roamed this world over
+112 A rat-tailed rover
+114 A scholar of poem and song
+120 So buy me an ale
+122 And I'll spin you a tale
+125 For tomorrow I'm roving along.
+130  
+136 END
+140 END

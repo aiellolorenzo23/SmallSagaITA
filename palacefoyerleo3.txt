@@ -1,0 +1,85 @@
+/Intro
+!SetAnim(Leo,DL)
+!PlaySound(PalaceBigDoorClose)
+!OpenDoor(1,Close)
+!HoldOn(1)
+!Walk(Leo,DL,1.4)
+!HoldOn(2)
+~LionWaltzLoop
+-Leo: Sir Diego.
+!SetAnim(Diego,Turn)
+!TitanModeToggle()
+!HoldOn(0.5)
+-Diego: BLADEMASTER.
+!TitanModeToggle()
+!HoldOn(0.2)
+!Walk(Leo,DL,0.7)
+!HoldOn(0.7)
+!Walk(Leo,UL,0.8)
+!SetAnim(Diego,TurnLeft)
+!HoldOn(1.7)
+-Leo: Do you remember the battle at Solhill, all those seasons ago?
+!TitanModeToggle()
+!HoldOn(0.3)
+-Diego: ONE CANNOT FORGET.
+-Diego: I WITNESSED THEE APPROACH|THE VULPES WITH|NOUGHT BUT A NEEDLE.
+-Diego: A DIRE SITUATION.
+-Diego: AND YET, THOU|EMERGED A VICTOR.
+-Diego: NAY, THOU|EMERGED A HERO.
+!TitanModeToggle()
+!HoldOn(0.8)
+-Leo: So the bards sing.
+!HoldOn(0.1)
+!SetAnim(Leo,UR)
+!HoldOn(0.5)
+!Walk(Leo,UR,1)
+!HoldOn(1)
+-Leo: But was I a hero for protecting the people of Solhill?
+-Leo: Or was I a hero for serving the crown?
+!HoldOn(1)
+!TitanModeToggle()
+-Diego: ONE AND THE SAME.
+!TitanModeToggle()
+!HoldOn(0.7)
+-Leo: Is that truly so?
+!HoldOn(0.3)
+!Walk(Leo,DR,0.8)
+!HoldOn(0.3)
+!SetAnim(Diego,Turn)
+!HoldOn(1)
+-Diego: Recall thy oath, Leo.
+-Diego: As Thimble Guard, we shield the crown first and last.
+-Diego: And in turn, the crown|serves the people.
+-Diego: Wear thy blue uniform proudly.|Steel thy heart from doubt.
+-Diego: What could the mighty|Vulpes Slayer possibly fear?
+!HoldOn(0.7)
+-Leo: I fear for my daughter.
+-Leo: She's growing up in a Kingdom of recessions and plagues... Of revolts and death gods...
+!HoldOn(0.2)
+!SetAnim(Leo,DL)
+!HoldOn(0.1)
+!Walk(Leo,DL,0.8)
+!HoldOn(0.9)
+!SetAnim(Leo,UL)
+!HoldOn(0.8)
+-Leo: A storm is gathering, Diego.
+!HoldOn(0.2)
+!SetAnim(Diego,Hammer)
+!PlaySound(Eyecatch)
+!HoldOn(1.2)
+!ScreenShake(5,1)
+!PlaySound(HeavyFall)
+!HoldOn(1)
+!TitanModeToggle()
+!HoldOn(0.2)
+-Diego: THEN OUR WEAPONS SHALL|RING OUT LIKE THUNDER.
+!TitanModeToggle()
+!HoldOn(0.4)
+-Leo: I pray it doesn't come to that.
+!HoldOn(0.4)
+-Diego: Gods willing.
+-Leo: Gods willing.
+!HoldOn(1)
+!Walk(Leo,DL,1)
+!HoldOn(0.5)
+!NextRoom(WhiteOuter,99)

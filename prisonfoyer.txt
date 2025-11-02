@@ -1,0 +1,373 @@
+/Intro
+~DryCaveLoop
+
+/IntroABCs
+~DryCaveLoop
+!SetAnim(Larry,UL)
+!HoldOn(2)
+-Anton: I don't want to be eaten...
+-Bruce: It's okay. We can get out of this.
+-Anton: Will we, though?
+!HoldOn(0.1)
+!SetAnim(Larry,DL)
+!HoldOn(0.1)
+-Larry: Shut it and move it, you two.
+!Walk(Larry,DL,1.8)
+!HoldOn(0.2)
+!SetAnim(Guard1,DL)
+!SpecialWalk(Bruce,DL,1.8,DLWalkMaskless,1)
+!Walk(Anton,DL,1.8)
+!HoldOn(1.8)
+!SetAnim(Bruce,DLMaskless)
+!HoldOn(0.2)
+-Aiden: What's this? New prisoners, Larry?
+!SetAnim(Larry,UL)
+!SetAnim(Anton,DL)
+-Larry: Yes, Captain Aiden, sir!
+-Larry: Convicted by the Duke on grand larceny, degeneracy, and treason charges.
+!HoldOn(0.2)
+!SetAnim(Aiden,DRLook)
+-Aiden: Such a list! My oh my...
+!HoldOn(0.2)
+!SetAnim(Aiden,DR)
+-Aiden: And where are you taking them?
+-Larry: I'm escorting both of them to, uh... cell 1-D?
+-Aiden: Putting two friends together in the same cell?
+-Aiden: Larry. That's a basic mistake.
+-Larry: S-sorry Captain.
+!HoldOn(1)
+-Larry: So... what do I do?
+-Aiden: Just remember your ABCs.|From your training!
+-Larry: Oh yeah! Uh...
+-Larry: C is for... uh...
+!HoldOn(1)
+-Aiden: Cage...
+!Nani(Larry,!)
+!HoldOn(0.2)
+-Larry: Oh yeah! Cage and separate!|Keep friends apart!
+-Aiden: You got it, man. Great jawb!
+-Larry: Thank you, Captain!
+!HoldOn(1)
+!SetAnim(Bruce,LMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,ULMaskless)
+!SetAnim(Aiden,DRLook)
+!HoldOn(0.4)
+-Bruce: I must hand it tae ye fellas.
+-Bruce: Yer ethics are lackin', but yer workplace professionalism is top-notch.
+-Aiden: This one is lippy.
+!SetAnim(Aiden,DR)
+-Aiden: Put him in 2-E.
+-Larry: With the dragon?|She's kinda psycho, Captain...
+-Aiden: Exactly. She'll teach this one a lesson.
+-Anton: I'm scared, lapa.
+
+!SetAnim(Bruce,LMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,DLMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,DMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,DRMaskless)
+!HoldOn(0.1)
+!SpecialWalk(Bruce,DR,0.2,DRWalkMaskless,1)
+!HoldOn(0.2)
+!SetAnim(Bruce,DRMaskless)
+-Bruce: Hang in there, babe. We can find a way out of this...
+-Aiden: Hey, hey! No touching.
+-Aiden: Get them out of here, Larry.
+-Aiden: And remember to confiscate their instruments.
+-Larry: Yes, Captain Aiden, sir!
+!SetAnim(Aiden,DRLook)
+!SetGlobal(22,0)
+!SetGlobal(21,0)
+!Walk(Larry,DL,2)
+!HoldOn(0.2)
+!SpecialWalk(Bruce,DL,1.8,DLWalkMaskless,1)
+!Walk(Anton,DL,2)
+!HoldOn(0.4)
+!NextRoom(PrisonElevator,1)
+
+/IntroBreakout
+!OverworldCameraSnap(320,300)
+!HoldOn(1)
+!PlayMuffled(Slash)
+!HoldOn(1.3)
+-Aiden: Tsk tsk.|It certainly is noisy today.
+-Aiden: And a noisy environment is|a bad work environment.
+!HoldOn(0.3)
+!PlayMuffled(BruceSong2)
+!HoldOn(0.8)
+-Aiden: Where is that aggressive flute music coming from, anyway?
+!Enter(Gwen)
+!Walk(Gwen,UR,0.3)
+!HoldOn(0.3)
+!SetAnim(Aiden,DRLook)
+!SetAnim(Larry,DL)
+!Enter(Bruce)
+!Walk(Bruce,UR,0.3)
+!Walk(Gwen,U,0.4)
+!HoldOn(0.3)
+!Walk(Bruce,R,0.4)
+!SetAnim(Aiden,DL)
+!Nani(Aiden,!)
+!PlaySound(alert)
+!HoldOn(0.2)
+!SetAnim(Gwen,UR)
+!HoldOn(0.3)
+!SetAnim(Aiden,DLLook)
+!SetAnim(Bruce,UR)
+!HoldOn(0.4)
+!SetAnim(Aiden,DL)
+-Aiden: A break-out?!
+!HoldOn(0.2)
+!Enter(Verm)
+!Walk(Verm,DR,0.9)
+!HoldOn(0.4)
+!Enter(Siobhan)
+!Walk(Siobhan,DR,0.6)
+!HoldOn(0.5)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!Walk(Verm,DL,0.9)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Larry,DR)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!Walk(Siobhan,DL,0.9)
+!SetAnim(Larry,UR)
+!SetAnim(Aiden,DR)
+
+!Nani(Aiden,!)
+!PlaySound(alert)
+!HoldOn(1)
+!SetGlobal(18,16)
+-Aiden: A break-in?!
+-Siobhan: Bruce!
+
+!SetAnim(Aiden,DL)
+-Bruce: Hey! Siobhan! And Verm!
+-Bruce: To think I'd see ye|here of all places!
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!SetAnim(Aiden,DRLook)
+-Gwen: Friends of yours?
+-Bruce: Something like that.
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+-Bruce: This is Gwen. She's good at stabbing.
+!SetAnim(Aiden,DR)
+-Verm: Say no more.
+
+!HoldOn(0.1)
+!SetAnim(Larry,DR)
+!HoldOn(0.1)
+!SetAnim(Larry,DL)
+!HoldOn(0.1)
+-Larry: W-what are your orders, Captain?
+-Aiden: Larry. Go inform the Blademaster of the situation.
+-Aiden: I'll start up...|THAT.
+-Larry: TH-THAT?|Surely not THAT!
+-Larry: Captain, it's too dangerous!|The programming is unpredictable!
+-Aiden: Just go. Quickly now. 
+
+!SetAnim(Larry,DR)
+!HoldOn(0.1)
+!SetAnim(Larry,UR)
+!HoldOn(0.4)
+!FastWalk(Larry,UR,1)
+!HoldOn(0.2)
+!NormalJump(Siobhan,2,30,321,284,Jump,R)
+!NormalJump(Verm,2,30,387,326,Jump,U)
+!HoldOn(0.6)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!FastWalk(Larry,UL,1.5)
+!Exit(Larry)
+-Gwen: Don't let him-
+-Gwen: Ah, shit.
+!HoldOn(1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+-Aiden: Look at you all. A bunch of freaks and degenerates, playing with little god toys.
+-Aiden: You know nothing about the capabilities of real god weapons.
+-Verm: And you do?
+-Aiden: Clan Grey has been utilizing god tools for aeons.
+-Aiden: We know the devastating power that a real divine weapon can unleash.
+-Aiden: You see, the gods, in their wisdom, crafted automated sentinels.
+-Aiden: Mechanised titans with armoured shells, outfitted for warfare.
+-Aiden: The shrews of Vinium captured one. And now we use it as the ultimate prison guard.
+-Gwen: You're bluffing.
+-Siobhan: Yeah! "Automated sentinels"?|"Mechanised titans"?
+-Siobhan: That kind of technology doesn't exist, godly or not!
+-Aiden: Oh ho!|You want a demonstration?
+-Aiden: I would be more than happy to oblige.
+!PlaySound(RobotHowl)
+!HoldOn(1)
+!SetAnim(Verm,UL)
+!Nani(Verm,!)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!SetAnim(Siobhan,D)
+!Nani(Siobhan,!)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,DR)
+!Nani(Gwen,!)
+!HoldOn(0.1)
+!Nani(Bruce,!)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(1.6)
+!GoToBattle(Dragon)
+
+
+Galvanised Electronic Armoured Robots
+
+
+/Post
+!OverworldCameraSnap(320,340)
+!HoldOn(1)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(0.2)
+!LevelUp(Bruce)
+!HoldOn(0.2)
+!LevelUp(Gwen)
+!HoldOn(1.3)
+-Siobhan: I knew it! That thing was nothing but a toy.
+!HoldOn(0.5)
+-Gwen: The Blademaster and her cachgwn will be here any second.
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,R)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Bruce,UL)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!SetAnim(Bruce,L)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!SetAnim(Siobhan,DL)
+!SetAnim(Bruce,DL)
+-Gwen: We need to get out of here. Now.
+-Bruce: Wait a sec!
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!Walk(Bruce,UL,0.25)
+!HoldOn(0.5)
+!ShowItem(Bruce,55)
+!HoldOn(0.5)
+!PlaySound(ItemFound)
+!ReceiveItem(55)
+-Info: Bruce found the Jailer's Keyring! You add it to your trinkets.
+!SpecialWalk(Bruce,DR,0.25,ULWalk,1)
+!HoldOn(0.4)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+-Bruce: Look, Gwen! One of these is the key we need, aye? Let's go get Anton!
+-Gwen: Bruce. There's no time.
+-Bruce: Ye serious? I'm not|gonna just leave him!
+!HoldOn(0.3)
+-Verm: I don't know what's going on, but the stab-rat's right.
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+-Verm: This prison is a dead-end. Once we get cornered, we'll be slaughtered.
+!HoldOn(0.5)
+-Bruce: Then...
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.5)
+-Bruce: Then I'll die by Anton's side!
+!HoldOn(1)
+-Gwen: I didn't know you had that sort of bravery in you, Bruce.
+-Gwen: But sorry. I promised I'd get you to the surface in one piece. And I'm keeping that promise.
+!SpecialWalk(Gwen,UR,0.4,URWalk,1.5)
+!HoldOn(0.4)
+!ShoutMode()
+!SetAnim(Gwen,UR)
+-Bruce: H-hey!
+!SpecialWalk(Gwen,UR,0.8,URWalk,1.5)
+!SpecialWalk(Bruce,UR,0.8,DLWalk,1.5)
+!HoldOn(0.4)
+!SetAnim(Verm,L)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!SetAnim(Bruce,DL)
+!ShoutMode()
+-Bruce: Stop pushing me!
+!SpecialWalk(Gwen,UR,0.4,URWalk,1.5)
+!SpecialWalk(Bruce,UR,0.3,DLWalk,1.5)
+!HoldOn(0.3)
+!SpecialWalk(Bruce,UL,2,DRWalk,1.5)
+!HoldOn(0.11)
+!SpecialWalk(Gwen,UL,2,ULWalk,1.5)
+!Exit(Bruce)
+!HoldOn(0.1)
+!Exit(Gwen)
+!HoldOn(1)
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,DR)
+-Siobhan: We should go too.
+-Verm: Right.
+!Walk(Siobhan,DR,0.3)
+!HoldOn(0.3)
+!PinFollowerToVerm(Siobhan)
+!CameraFollow(1)
+
+/DeadAiden
+-InfoBig: Captain Aiden is down for the count.
+
+/EarlyExit
+-Siobhan: Sir Verm, this is no time for exploring.
+!Walk(Verm,UR,0.3)
+!HoldOn(0.3)
+

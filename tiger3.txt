@@ -1,0 +1,31 @@
+/BattleVeryStart
+Blank
+/BattleStart
+!DrawWeapon(Verm)
+~HuntersLoop
+!HoldOn(1)
+!LetsFight()
+/VermRage
+-Verm: If nature stands in my way,|then I will slay nature itself!
+!SetAnim(Verm,Idle)
+!TitanModeToggle()
+!ForceDownBub()
+-Tiger: ABSURD.
+!ForceDownBub()
+!TitanModeToggle()
+!NewTurn()
+/EnemyDead
+!TitanModeToggle()
+!ForceDownBub()
+-Tiger: WHAT WILL YOU DO|ONCE YOU HAVE|CONQUERED NATURE?
+-Tiger: REIGN AS THE|GOD-MOUSE-KING OF|NOTHINGNESS?
+-Tiger: WRETCHED THING.|YOU DISGUST ME.
+!ForceDownBub()
+!TitanModeToggle()
+!FadeEnemy()
+!HoldOn(1)
+~Stop
+!Victory()
+!EndBattle()
+/End
+

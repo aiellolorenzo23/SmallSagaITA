@@ -1,0 +1,19 @@
+/BattleVeryStart
+~RandomBattleLoop
+Blank
+/BattleStart
+!CameraPan(-0.4,1,1,1)
+!DrawWeapon(Lance)
+!HoldOn(0.9)
+-Lance: Just remember your training, Verm.
+!DrawWeapon(YoungVerm)
+!HoldOn(0.9)
+-Verm: Attack them until they fall down?
+-Lance: Exactly.
+!CameraPan(0,1,1,1)
+!LetsFight()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

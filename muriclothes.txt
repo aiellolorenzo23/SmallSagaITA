@@ -1,0 +1,226 @@
+/Intro
+!CheckGlobal(50,0,IntroCont)
+!CheckGlobal(50,1,IntroCont)
+
+/IntroCont
+~Murida2Loop
+!CheckGlobal(52,0,DripIntro)
+
+/DripIntro
+!CheckGlobal(99,2,SioBlank)
+!SetGlobal(52,1)
+!SetAnim(Verm,UL)
+!HoldOn(1)
+!ShoutMode()
+-Drip King: Hey, you!
+!HoldOn(0.1)
+!Nani(Verm,?)
+!HoldOn(0.7)
+!OverworldCameraSnap(320,180)
+-Drip King: See this fit?
+!OverCamZoom(2)
+!HoldOn(2.3)
+!OverCamZoom(1)
+!HoldOn(0.7)
+-Drip King: How do you rate it?
+*One: 1 out of 10
+*Ten: 10 out of 10
+*El: 100 out of 10
+
+/One
+-Verm: One out of ten.|I'm just not feeling it.
+!HoldOn(0.7)
+-Drip King: Bruh.
+!HoldOn(0.7)
+-Drip King: I would be offended.
+-Drip King: But you are literally wearing rags.
+-Drip King: So I think there's, like, a little bit of projection going on.
+-Drip King: But I can help.
+-Drip King: Come talk to me when you're ready.
+
+/Ten
+-Verm: Ten out of ten.|You're rocking it.
+!HoldOn(0.7)
+-Drip King: Clearly, you are a man of good taste.
+-Drip King: You came to the right shop.
+-Drip King: Come talk to me if you need a new get-up. 
+
+/El
+-Verm: One hundred out of ten.|It cannot be improved.
+-Verm: You are the epitome of fashion.
+-Drip King: Ah. You flatter me.
+-Drip King: But that won't get you a discount.
+-Drip King: Still, you are clearly a man of good taste.
+-Drip King: Come talk to me when you're ready to shop.
+
+/Drip King
+!CheckGlobal(50,0,DripCont)
+!CheckGlobal(50,1,DripCont)
+-Drip King: You gotta put on your|best clothes for a protest.
+-Drip King: You want to look good|for your mugshot, right?
+
+/DripCont
+!CheckGlobal(99,2,SioDrip)
+!CheckGlobal(52,1,WhatBuying)
+!CheckGlobal(52,2,WelcomeBack)
+-Drip King: Stay stylish.
+
+/SioBlank
+
+/SioDrip
+-Drip King: Yo, that hat is amazing.|Killer brim.
+-Siobhan: Thanks.
+
+
+/WhatBuying
+-Drip King: Alright. So I can help you look a fraction as cool as me.
+-Drip King: But it'll cost you.
+-Verm: How much?
+-Drip King: Twelve seeds.
+-Verm: Okay, but what exactly am I buying?
+!SetGlobal(52,2)
+-Drip King: You're buying my eye for fashion.
+-Drip King: I'll ask you some questions, take some measurements, and make an outfit for you.
+>WelcomeBack
+
+/WelcomeBack
+!ShowMoney(1)
+-Drip King: What do you say? Twelve seeds.
+*Yes10: Let's do this.
+*No10: Not right now.
+
+/No10
+!ShowMoney(0)
+-Verm: Not right now.
+-Drip King: Suit yourself.|Pun intended.
+
+/NotEnough
+-Verm: I can't quite afford that.
+-Drip King: Dude. I feel you. But I can't do discounts.
+-Drip King: Maybe come back when you've got some seeds to burn.
+
+/Yes10
+!ShowMoney(0)
+!MoneyCheck(12,NotEnough)
+!MoneyLoss(12)
+-Verm: Fine. Let's do this.
+-Drip King: Awww yeah.
+-Drip King: So. Just a few short questions. You ready?
+-Verm: Hit me.
+-Drip King: Great. Question ichi.
+-Drip King: Should fashion always be practical?
+*1A: Always.
+*1B: Depends.
+*1C: Never.
+
+/1A
+!SetGlobal(60,0)
+>Question2
+
+/1B
+!SetGlobal(60,1)
+>Question2
+
+/1C
+!SetGlobal(60,2)
+>Question2
+
+/Question2
+-Drip King: Interesting take.
+-Drip King: Okay, next. How many pairs of shoes do you own?
+*2A: None.
+*2B: A few.
+*2C: Hundreds.
+
+/2A
+!SetGlobal(61,0)
+>Question3
+
+/2B
+!SetGlobal(61,1)
+>Question3
+
+/2C
+!SetGlobal(61,2)
+>Question3
+
+/Question3
+-Drip King: Fair enough.
+-Drip King: Okay. Last one. This one's a toughie.
+-Drip King: Skinny or baggy jeans?
+*3A: The skinniest.
+*3B: Normal?
+*3C: The baggiest.
+
+/3A
+!SetGlobal(62,2)
+>AllDoneQuestions
+
+/3B
+!SetGlobal(62,1)
+>AllDoneQuestions
+
+/3C
+!SetGlobal(62,0)
+>AllDoneQuestions
+
+/AllDoneQuestions
+-Drip King: Alright, question time is over.
+-Drip King: I think I've got a good feel for the kind of fashion you're into.
+-Drip King: Let me just grab something special from 'round back.
+!NextRoom(ToBlack)
+!HoldOn(2)
+!NextRoom(FromBlack)
+!HoldOn(1)
+
+!CheckGlobal(60,2,N2)
+!CheckGlobal(61,2,H2)
+!CheckGlobal(62,2,Jacket)
+
+!CheckGlobal(61,1,H1)
+!CheckGlobal(62,1,S1)
+!CheckGlobal(60,1,Hat)
+>Shoes
+
+/N2
+!CheckGlobal(61,2,Shoes)
+>Hat
+
+/H2
+!CheckGlobal(62,2,Jacket)
+>Shoes
+
+/S1
+!CheckGlobal(60,1,Hat)
+>Jacket
+
+/H1
+!CheckGlobal(62,1,Jacket)
+>Shoes
+
+/Jacket
+-Drip King: Here, try this on!
+!PlaySound(ItemFound)
+-Info: You received a chic jacket. Snazzy!
+!ReceiveItem(25)
+>Safe
+/Shoes
+-Drip King: Here, try these on!
+!PlaySound(ItemFound)
+-Info: You received a pair of Stylish Sneakers. Snazzy!
+!ReceiveItem(26)
+>Safe
+/Hat
+-Drip King: Here, try this on!
+!PlaySound(ItemFound)
+-Info: You received a Suave Hat.
+!ReceiveItem(24)
+>Safe
+
+/Safe
+!SetGlobal(62,0)
+!SetGlobal(61,0)
+!SetGlobal(60,0)
+!SetGlobal(52,3)
+-Drip King: You're going to look hella dapper in your new threads, I swear.
+-Drip King: Safe travels.|And stay stylish.

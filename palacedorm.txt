@@ -1,0 +1,59 @@
+/Intro
+
+/Bob
+!CheckGlobal(10,2,SioBob)
+!CheckGlobal(10,3,BobLate)
+-Bob: We open our gates for one day, and suddenly every eejit wants to rifle through our stuff.
+
+/SioBob
+-Bob: Nice hat. It looks proper mage-y.
+
+/BobLate
+-Bob: What happens now?
+
+/Alice
+-Alice: Morale dropped pretty quick once we learned what happened to the King.
+-Alice: No point defending a dead rat.|He can't pay our wages from the next world.
+
+/Jen
+-Jen: Half the Thimble Guard's quit.|The other half's in a daze.
+-Jen: I doubt the order|will last the Winter.
+-Jen: Maybe we need a new organisation,|one that serves the people.|You think that's possible? 
+
+/Chest
+-Info: You found a slice of Lemon Cake.|Mmm! Freshly baked.
+!CheckGlobal(10,3,ChestLate)
+
+/ChestLate
+!Nani(Bob,!)
+!HoldOn(0.3)
+!ShoutMode()
+-Bob: Hey!
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+-Bob: Bon appetit.
+
+/ChestIdiot
+!Nani(Bob,!)
+!HoldOn(0.3)
+!ShoutMode()
+-Bob: Hey!
+!HoldOn(0.1)
+!CheckGlobal(10,2,SioChest)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Bob: Keep your grubby paws to yourself.
+
+/SioChest
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Bob: Really, Siobhan? You should know better than that by now!
+-Siobhan: S-sorry. I got curious.
+-Bob: Curiosity killed the coypu, don't you know.

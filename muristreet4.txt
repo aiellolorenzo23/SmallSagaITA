@@ -1,0 +1,354 @@
+/Intro
+~MuridaLoop
+!AutoPinFollowers()
+
+/CutsceneExit
+!Walk(Verm,UR,1)
+!AddToParty(Bruce)
+!RemoveFromParty(Verm)
+!SetLeader(Bruce)
+!SetGlobal(26,3)
+!NextRoom(MuriAlley2,1)
+
+/BreeTriggerL
+~Stop
+!OverworldCameraPan(656,701,1,1)
+!Walk(Verm,DL,0.2)
+!HoldOn(0.2)
+!Walk(Verm,D,0.3)
+!HoldOn(0.3)
+!Walk(Verm,DR,1.3)
+!HoldOn(1.3)
+!SetAnim(Verm,D)
+>BreeTrigger
+/BreeTriggerR
+~Stop
+!OverworldCameraPan(656,701,1,1)
+!Walk(Verm,DL,0.2)
+!HoldOn(0.2)
+!Walk(Verm,L,0.3)
+!HoldOn(0.3)
+!Walk(Verm,UL,1.7)
+!HoldOn(1.7)
+!SetAnim(Verm,L)
+>BreeTrigger
+/BreeTrigger
+~BreeLoop
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!SetGlobal(26,5)
+-Bree: This is our opportunity, Stilton.
+-Bree: Our day to let the King know everything wrong with our Kingdom.
+-Verm: Don't bother. He doesn't see plebs.
+!Nani(Bree,!)
+!HoldOn(0.2)
+!Nani(Stilton,!)
+!SetAnim(Bree,UL)
+!HoldOn(0.1)
+!SetAnim(Bree,UR)
+!HoldOn(0.2)
+!SetAnim(Stilton,DR)
+!HoldOn(0.1)
+!SetAnim(Stilton,UR)
+-Bree: H-hey! I know you!
+-Stilton: Yeah! You're that brat who cut down Chief Sava.
+-Bree: You an' that fleabag brother o' yours.
+-Verm: My brother was no fleabag.
+-Bree: But where is your bro? I don't see him around to save your hide.
+-Verm: I save my own hide now.
+!OverworldCameraPan(1231,434,1,1)
+!HoldOn(2)
+-Alice: Looks like a fight's brewing.
+-Jen: Should we stop them?
+-Alice: Nah. The mouse looks scrappy. I wanna see where this goes.
+!OverworldCameraPan(656,701,1.4,1)
+!HoldOn(1)
+-Verm: I bet you two have a lead on the Yellow God.
+-Verm: Tell me everything you know!
+-Bree: You'll have to make us, pipsqueak!
+!GoToBattle(Bree2)
+
+/PostBree
+!SetGlobal(26,6)
+!OverworldCameraSnap(656,701)
+!AddToParty(Siobhan)
+!SetGlobal(27,1)
+!HoldOn(1)
+-Bree: A-alright mate,|you've made your point!
+-Verm: The Yellow God. Get talking.
+!HoldOn(0.4)
+!SetAnim(Bree,UL)
+!HoldOn(0.1)
+!SetAnim(Stilton,DR)
+!HoldOn(0.8)
+!SetAnim(Bree,UR)
+!HoldOn(0.1)
+!SetAnim(Stilton,UR)
+!HoldOn(0.5)
+-Stilton: Haven't heard that name for a while.
+-Stilton: Not since... y'know...
+-Bree: Yeah. And to be honest, there ain't much to tell.
+-Stilton: Just that He's a harbinger of death and doom an' all.
+-Verm: I know all that.|Tell me something new.
+-Bree: Sorry, mate. S'all we got.
+!HoldOn(1.5)
+-Stilton: You should talk to the Cailleach if you wanna know somethin'.
+-Verm: Kalik?
+!Nani(Bree,!)
+!HoldOn(0.5)
+-Bree: Yeah, yeah! The Cailleach of the woods.
+-Stilton: Word in the tunnels is she's lived for four hundred seasons.
+-Stilton: She's seen everythin' and knows everythin'.
+-Verm: You're obviously pulling my whiskers.
+-Bree: I swear it on Sava's soul.
+-Verm: You two are useless...
+!Walk(Verm,DL,2.7)
+!HoldOn(1)
+!SetAnim(Stilton,DR)
+!SetAnim(Bree,UL)
+!HoldOn(0.2)
+!SetAnim(Stilton,DL)
+!SetAnim(Bree,DL)
+!HoldOn(1)
+!Exit(Verm)
+-Stilton: Is he... hunting the Yellow God?
+-Stilton: That's not going to end well.
+!HoldOn(0.2)
+!SetAnimEnd(Bree,HeadDown)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,DL)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,HeadLeft)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,DL)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,HeadDown)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,DL)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,HeadLeft)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,DL)
+!HoldOn(0.4)
+-Bree: A little loose in the head, he is, but can't fault his determination.
+!HoldOn(0.6)
+!SetAnimEnd(Stilton,HeadDown)
+!HoldOn(0.4)
+-Stilton: Should we still go see the King?
+-Bree: Nah. The wild one's got a point.
+-Bree: The King's far too pompous to see us plebs.
+!HoldOn(0.5)
+!SetGlobal(26,11)
+!NextRoom(PalaceThroneroom,7)
+
+/Jen
+!CheckGlobal(99,2,JenSio)
+!CheckGlobal(10,2,Jen2)
+-Jen: Feel free to look around. But make no trouble, y'hear me?
+
+/JenSio
+-Jen: We open the portcullis when we see you coming, Siobhan.
+
+/Alice
+!CheckGlobal(99,2,AliceSio)
+!CheckGlobal(10,2,Alice2)
+-Alice: The palace is open to celebrate the young King's coronation. It's not an everyday thing.
+
+/AliceSio
+-Alice: You're working for Aquila, right? Whew, wouldn't want that job.
+
+/JenLate
+-Jen: You know... I think Lady Rosaline was looking for you earlier. She was asking a bunch of questions.
+-Jen: You're not a wanted mouse or something, are you?
+
+/AliceLate
+-Alice: Sorry, bud. The young King's coronation festival is over. Go some place else.
+
+/Jen2
+-Jen: You look familiar... nah, I'm probably just imagining it.
+
+/Alice2
+-Alice: The palace is closed, except for official business.
+
+/Fountain
+!CheckGlobal(99,2,FountainSio)
+!SetAnim(Verm,UR)
+!CheckGlobal(25,8,FountainDone)
+!ShowMoney(1)
+-InfoBig: The fountain waters are clear.|Throw in a seed?
+*Yes: Alright.
+*No: Nope.
+
+/FountainSio
+-Siobhan: This cat looks a bit like Tiger.|A Tiger who's chucking up water.
+
+/FountainDone
+-InfoBig: The fountain waters are clear.|You keep hold of your seeds.
+
+/NotEnough
+-InfoBig: You have no seeds to throw.
+
+/Yes
+!ShowMoney(0)
+!MoneyCheck(1,NotEnough)
+!HoldOn(0.2)
+!SeedSnap()
+!NormalJump(FountainSeed,1.01,120,935,641,Default,Default)
+!HoldOn(2.5)
+
+!MoneyLoss(1)
+-InfoBig: Nothing happened.
+
+!CheckGlobal(25,1,Fountain1)
+!CheckGlobal(25,2,Fountain2)
+!CheckGlobal(25,3,Fountain3)
+!CheckGlobal(25,4,Fountain4)
+!CheckGlobal(25,5,Fountain5)
+!CheckGlobal(25,6,Fountain6)
+!CheckGlobal(25,7,Fountain7)
+!HoldOn(0.4)
+!Nani(Verm,?)
+!HoldOn(0.7)
+!Splash(937,654)
+!TeleportCharacter(Gurren,937,654)
+!PlaySound(SavaSplash)
+!NormalJump(Gurren,2,80,808,732,Jump,Loop)
+!HoldOn(0.1)
+!UnpinFollowers()
+!Nani(Verm,!)
+!HoldOn(0.1)
+!NormalJump(Verm,3,30,731,772,Jump,Land)
+!HoldOn(1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!ShoutMode()
+-Gurren: WHAT-HO, FRIENDO!
+-Verm: Damn it, you almost gave me a heart attack!
+!ShoutMode()
+-Gurren: TEN THOUSAND APOLOGIES!
+!HoldOn(0.1)
+!ShoutMode()
+-Gurren: BUT I APPRECIATE YOUR|CONTINUED PATRONAGE!
+!HoldOn(0.1)
+!ShowItem(Gurren,28)
+!ShoutMode()
+-Gurren: TAKE THIS! A TOKEN|OF MY EVERLASTING GRATITUDE!
+!PlaySound(ItemFound)
+!ReceiveItem(28)
+-Info: You received a Frog Gem.|It feels pleasant to hold.
+!HoldOn(0.1)
+!ShoutMode()
+-Gurren: FARE THEE WELL, FRIENDO!
+
+!NormalJump(Gurren,2,80,944,648,Jump,Jump)
+!HoldOn(0.5)
+!PlaySound(SavaSplash)
+!Splash(944,648)
+!HoldOn(0.05)
+!TeleportCharacter(Gurren,-483,1039)
+!HoldOn(0.2)
+!AutoPinFollowers()
+
+/Fountain1
+-Verm: I don't know what I expected.
+
+/Fountain2
+-Verm: I'm just wasting my seeds here.
+
+/Fountain3
+-Verm: I'm starting to feel like a fool.
+
+/Fountain4
+-Verm: I could be buying armour with this.
+
+/Fountain5
+-Verm:  . . . 
+
+/Fountain6
+-Verm:  . . . . . . 
+
+/Fountain7
+-Verm:  . . . . . . . . . 
+
+/No
+!ShowMoney(0)
+
+/Date
+!AutoPinFollowers()
+!Walk(Verm,UR,1.3)
+!HoldOn(1.5)
+-Verm: See that?
+!OverworldCameraPan(1231,364,2,1)
+!HoldOn(2)
+!UnpinFollowers()
+-Verm: That's the palace.
+-Gwen: No shit.
+!TeleportCharacter(Gwen,765,780)
+!TeleportCharacter(Verm,704,739)
+!SetAnim(Verm,UR)
+!SetAnim(Gwen,UR)
+!OverworldCameraPan(756,701,2,1)
+!HoldOn(1)
+-Gwen: I can practically smell the ambergris perfume from here.
+-Gwen: I bet the inside is nothing but gold and marble wall-to-wall.
+-Verm: Pretty much.
+!HoldOn(1)
+-Verm: Siobhan's somewhere in there right now with the Plaguemaster.
+-Verm: And somewhere else in there is the King... and Blademaster Leo.
+!HoldOn(0.5)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.8)
+-Gwen: Siobhan told me that you used to look up to Leo.
+-Verm: Yeah. When I was a kid, I asked my brother to sing me the Needle Knight song, over and over.
+-Verm: I thought Leo was the perfect hero.|I wanted to be just like him.
+-Gwen: But then you met him in person and the image of the shining knight came crashing down.
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.4)
+-Verm: No, that's not quite right.
+-Verm: Leo was everything I expected.|More than I expected, really.
+-Verm: He's a mouse who absolutely believes in his cause, and will fight tooth and claw for it.
+-Gwen: But what's his cause?|Being a sword of the state?
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.3)
+-Gwen: For all his pomp and virtue, there's no difference between Leo and the cachgwn of Sky Garden.
+!HoldOn(0.2)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.6)
+-Verm: You might be right.
+!HoldOn(1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+-Gwen: This place sucks.
+!CheckGlobal(70,0,DateNext)
+!CheckGlobal(72,0,DateNext)
+!CheckGlobal(34,0,DateNext)
+-Gwen: Let's go back to Ratlas.|I want to see something.
+!CameraFollow(1)
+!Walk(Gwen,UL,0.2)
+!HoldOn(0.2)
+!AutoPinFollowers()
+/DateNext
+-Gwen: Let's go somewhere else.|Somewhere less snobby.
+!CameraFollow(1)
+!Walk(Gwen,UL,0.2)
+!HoldOn(0.2)
+!AutoPinFollowers()
+

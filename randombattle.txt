@@ -1,0 +1,26 @@
+/BattleVeryStart
+~RandomBattleLoop
+!HoldOn(0.8)
+!DrawWeapon(Bruce)
+!HoldOn(0.1)
+!DrawWeapon(Gwen)
+!HoldOn(0.1)
+!DrawWeapon(Siobhan)
+!HoldOn(0.1)
+!DrawWeapon(Verm)
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+/VermRage
+-Verm: Out of my way!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/GhostRage
+-Ghost: I'll squash you like|the bug you are!
+!SetAnim(Ghost,Idle)
+!NewTurn()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

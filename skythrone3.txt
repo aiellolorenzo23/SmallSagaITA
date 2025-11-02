@@ -1,0 +1,210 @@
+/Intro
+
+/Breakout
+!SetGlobal(18,32)
+!PlayMuffled(Firework)
+!HoldOn(1)
+!SpecialWalk(Josh,D,1,WalkD,0.5)
+!HoldOn(1)
+!SetAnim(Josh,Loop)
+-Josh: The hell's with all this racket?
+-Josh: It's barely daybreak.|Can't I get a wink of sleep?
+!OverworldCameraPan(320,410,2,1)
+!TeleportCharacter(Reynaldo,447,543)
+!Enter(Reynaldo)
+!NormalJump(Reynaldo,2,30,327,517,JumpDL,DL)
+!HoldOn(0.3)
+!TeleportCharacter(Osric,447,543)
+!Enter(Osric)
+!NormalJump(Osric,2,30,327,517,JumpDL,DL)
+!HoldOn(0.2)
+!NormalJump(Reynaldo,2,30,265,458,JumpUL,UR)
+!HoldOn(0.3)
+!NormalJump(Osric,2,30,358,469,JumpUR,UL)
+!HoldOn(0.5)
+-Reynaldo: Uh, Duke Josh, sir.
+-Reynaldo: There's been another break-out in the prison.
+-Josh: Another one?!
+-Osric: It's really bad!
+-Osric: Every cell door has been opened.|The prisoners are rioting!
+!OverworldCameraPan(320,260,2,1)
+!HoldOn(0.4)
+!SetAnim(Josh,DR)
+!HoldOn(0.2)
+-Josh: Lamia, are you hearing this?!
+-Josh: Get down there and|sort this chaos out!
+-Lamia: A breakout...|A prison riot...|Magic missiles at dawn...
+-Lamia: This is no ordinary chaos.
+!HoldOn(0.2)
+!PlaySound(LamiaTurn)
+!SetAnim(Lamia,Turn)
+!HoldOn(1.3)
+!HardCut(DynamicEntry)
+
+/GetDown
+!SetGlobal(18,33)
+!HoldOn(1)
+!Nani(Lamia,!)
+!HoldOn(0.4)
+!PlaySound(LamiaTurn)
+!SetAnim(Lamia,Panic)
+!HoldOn(0.3)
+!ShoutMode()
+-Lamia: AERIAL ASSAULT!| HIT THE DECK!
+!TurnOffBlocks(0)
+!PlaySound(BigCrash)
+!HoldOn(0.4)
+!Widescreen(0)
+!NextRoom(InstantBlack)
+!HoldOn(2)
+!TeleportCharacter(Josh,1380,200)
+!TeleportCharacter(Evan,1580,200)
+!TeleportCharacter(Verm,451,369)
+!TeleportCharacter(Siobhan,398,358)
+!TeleportCharacter(Bruce,202,375)
+!TeleportCharacter(Gwen,274,351)
+!TeleportCharacter(Lamia,310,550)
+!TeleportCharacter(Tim,106,363)
+!SetAnim(Verm,Land)
+!SetAnim(Bruce,LandR)
+!SetAnim(Gwen,LandingR)
+!SetAnim(Siobhan,Dead)
+!SetAnim(Francisco,DrawL)
+!SetAnim(Throne,Fallen)
+!SetAnim(Osric,DrawL)
+!SetAnim(Reynaldo,DrawR)
+!SetAnim(Lamia,LamiaJosh)
+!HoldOn(2)
+!FeatherFall()
+!HoldOn(0.5)
+!NextRoom(FromBlack)
+!HoldOn(1.5)
+!OverworldCameraPan(320,420,0.3,1)
+!HoldOn(2.7)
+!SetAnim(Tim,LittleToot)
+!HoldOn(0.3)
+~OakenBattleLoop
+!HoldOn(2)
+-Lamia: I'll get the Duke to safety.
+-Lamia: You four, kill the intruders.
+!PlaySound(GwenWhoosh2)
+!NormalJump(Lamia,2,30,-240,374,LamiaJoshJump,UR)
+!HoldOn(0.5)
+!GoToBattle(FourGuards)
+
+/PostBattle
+!SetAnim(Voltemand,FightL)
+!HoldOn(0.1)
+!SetAnim(Cornelius,FightR)
+!HoldOn(0.1)
+!SetAnim(Bernardo,FightR)
+!HoldOn(0.1)
+!SetAnim(Marcellus,FightL)
+!HoldOn(1)
+!SetGlobal(18,34)
+!ShoutMode()
+!HoldOn(0.1)
+-Cornelius: Give it up, scum!
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Voltemand: Pray loud, and maybe the gods will hear your cries for mercy!
+!HoldOn(0.2)
+-Gwen: Tsk. There's no end to this|cachu parade...
+!OverworldCameraPan(320,380,3,1)
+!HoldOn(0.4)
+!TeleportCharacter(Luna,505,529)
+!Enter(Luna)
+!NormalJump(Luna,2,50,568,438,Jump,DL)
+!HoldOn(1)
+!NormalJump(Luna,2.5,30,402,428,Jump,Punch)
+!HoldOn(0.35)
+!PlaySound(Smack)
+!HoldOn(0.05)
+!NormalJump(Voltemand,2,50,240,448,HitR,DeadR)
+!HoldOn(0.8)
+!SetAnim(Bernardo,DR)
+!HoldOn(0.2)
+!Nani(Bernardo,!)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!SetAnim(Cornelius,DR)
+!HoldOn(0.2)
+!Nani(Cornelius,!)
+!SetAnim(Marcellus,DL)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!Nani(Marcellus,!)
+!HoldOn(0.7)
+!NormalJump(Marcellus,2,50,260,428,JumpDL,DL)
+!HoldOn(1)
+!NormalJump(Voltemand,2,30,220,468,JumpDR,FightR)
+!HoldOn(0.4)
+!NormalJump(Cornelius,2,30,200,370,JumpDR,FightR)
+!HoldOn(0.1)
+!NormalJump(Bernardo,2,30,260,400,JumpDR,FightR)
+!HoldOn(0.2)
+!NormalJump(Marcellus,2,30,250,428,JumpDR,FightR)
+!HoldOn(1)
+-Voltemand: The hell are you playing at, civvy?!
+!HoldOn(0.4)
+!SetAnim(Luna,DL)
+!HoldOn(0.5)
+-Luna: Today's the day!
+!TeleportCharacter(Hazel,496,537)
+!Enter(Hazel)
+!NormalJump(Hazel,2,50,334,528,Jump,DL)
+!HoldOn(0.8)
+!NormalJump(Hazel,2,30,429,456,Jump,DL)
+!HoldOn(0.5)
+-Hazel: I'm done getting|pushed around!
+!NormalJump(Matilda,0.7,40,460,360,Jump,Loop)
+!HoldOn(1.7)
+-Matilda: I'm tired of being treated like I don't belong!
+
+!TeleportCharacter(Violet,505,529)
+!Enter(Violet)
+!NormalJump(Violet,2,50,568,438,Jump,DL)
+!HoldOn(0.5)
+!NormalJump(Violet,2,30,424,387,Jump,DL)
+!HoldOn(1)
+-Violet: We're gonna kick some ass and reclaim Sky Garden!
+!HoldOn(0.3)
+-Luna: You four chase the Duke. We'll keep these bastards at bay!
+!CameraFollow(1)
+!HoldOn(1)
+-Verm: Well alright. Let's move.
+!AutoPinFollowers(1)
+
+/Cornelius
+-Cornelius: Have at you!
+
+/Voltemand
+-Voltemand: I'm so not in the mood for this. I haven't even had breakfast yet.
+
+/Bernardo
+-Bernardo: Fine! Go! Colonel Hank's just gonna blast you to kingdom come!
+
+/Marcellus
+-Marcellus: Invaders, uprisers, whatever! You're all going down just the same!
+
+
+/Hazel
+-Hazel: You four look strong. Go.
+
+/Luna
+-Luna: This next punch is for|a free Sky Garden!
+
+/Violet
+-Violet: I'm gonna play a requiem|for these losers!
+
+/Matilda
+-Matilda: Fighting's not my forte, but these creeps have pushed me to my limit!
+
+/Ready
+-Siobhan: Wrong way, Sir Verm!
+!Walk(Verm,L,0.5)
+!HoldOn(0.7)

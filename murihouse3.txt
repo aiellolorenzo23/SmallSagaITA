@@ -1,0 +1,123 @@
+/Intro
+!CheckGlobal(50,0,IntroCont)
+!CheckGlobal(50,1,IntroCont)
+
+/IntroCont
+~Murida2Loop
+
+/Connor
+!CheckGlobal(50,0,ConnorCont)
+!CheckGlobal(50,1,ConnorCont)
+-Connor: A protest? Sorry,|I have rugs to weave.
+
+/ConnorCont
+!CheckGlobal(99,2,ConnorSio)
+!CheckGlobal(54,1,ConnorNext)
+!HoldOn(0.1)
+-Connor: ~ Sigh ~
+!SetGlobal(54,1)
+!HoldOn(0.3)
+!SetAnim(Connor,Turn)
+!HoldOn(0.5)
+-Connor: I wanna join the Thimble Guard some day.
+-Connor: I could be a real hero!|Like Mathwell or Diego or Leo.
+-Connor: But I can't afford the fees.|So I'll stick with the family business.
+*Fee: Fees?
+*Business: Business?
+
+/ConnorSio
+-Connor: How's the hat holding up?
+-Siobhan: It's wonderful. Thank you, Connor.
+
+/Fee
+-Verm: Wait, you have to pay a fee to join the Guard?
+-Connor: Sort of. You have to pay to get the proper certifications and equipment and stuff.
+-Connor: It's not much for nobles.|But it's quite a bit for us Gutter folk.
+-Verm: I see.
+>WantSomething
+
+/Business
+-Verm: Family business?
+-Connor: Weaving, of course.|Quilting, sewing, knitting, embroidery, I can do it all.
+-Connor: Needlework runs in field mouse blood. So they say at least.
+-Verm: I see.
+>WantSomething
+
+/WantSomething
+-Connor: Oh, I'm waffling.|Did you want something?
+!CheckGlobal(36,3,Worm)
+-Verm: Nah. I'm just looking around.
+-Connor: Alright.
+!SetAnim(Connor,TurnBack)
+!HoldOn(0.3)
+!SetAnim(Connor,Loop)
+
+/ConnorNext
+!HoldOn(0.1)
+!SetAnim(Connor,Turn)
+!HoldOn(0.3)
+!CheckGlobal(36,3,Worm)
+-Connor: For me, a needle mends and creates.|For Sir Leo, it's a deadly sword.
+-Connor: Needlework is all down to the one who holds the tool.
+!SetAnim(Connor,TurnBack)
+!HoldOn(0.3)
+!SetAnim(Connor,Loop)
+
+/Worm
+
+!ShowItem(Prota,50)
+!HoldOn(0.5)
+-Verm: I think I'm supposed to give you this.
+-Connor: Oh! Yeah, I ordered this straight from Abbozzato.
+-Connor: That mad merchant can get his paws on anything, red tape be damned.
+-Verm: What exactly is in the box?
+!LoseItem(50)
+-Connor: You're better off not knowing.
+-Connor: Anyway. Thanks a lot for the delivery.
+*Payment: The payment?
+*NoPayment: Bye.
+
+/Payment
+-Verm: There's the small matter of the payment.
+-Connor: Oh. Ha ha, yeah.
+-Connor: Uh... I owe Abbozzato quite a few seeds for this. But I haven't got much on hand.
+!ShowItem(Connor,51)
+!HoldOn(0.6)
+-Connor: I could offer him some of my best silk instead. Do you think that'll cover the cost?
+*Probably: No idea.
+*ProbablyNot: I doubt it.
+
+/Probably
+-Verm: How should I know? Linen, rags, silk, it's all just cloth to me.
+>Whatever
+
+/ProbablyNot
+-Verm: Doubt it. Abbozzato wanted seeds, not... cloth.
+-Connor: Oh. Well... it's all I got.
+>Whatever
+
+/Whatever
+-Verm: Whatever. I'll pass it on and see what he says.
+>ItemReceived
+
+/NoPayment
+-Verm: My job's done then. Bye.
+-Connor: W-wait. I can't let you go back empty-pawed.
+-Connor: You could get fired!
+-Verm: Yeah. That would be awful.
+!ShowItem(Connor,51)
+!HoldOn(0.6)
+-Connor: Take this. It should cover what I owe.
+>ItemReceived
+
+/ItemReceived
+!SetGlobal(36,4)
+!LoseItem(50)
+!ReceiveItem(51)
+!PlaySound(ItemFound)
+-Info: You received a silk square!|You added it to your trinkets.
+-Connor: Thanks for the delivery. Safe travels, friend.
+!SetAnim(Connor,TurnBack)
+!HoldOn(0.3)
+!SetAnim(Connor,Loop)
+

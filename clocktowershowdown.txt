@@ -1,0 +1,259 @@
+/Intro
+!AutoPinFollowers()
+~JustClockLoop
+
+/EggExamine
+-InfoBig: Excalibur is primed.
+
+/Showdown
+!SetGlobal(50,34)
+!Walk(Siobhan,U,0.1)
+!HoldOn(0.2)
+-Siobhan: Aquila!
+!HoldOn(0.3)
+!OverworldCameraPan(320,280,0.5,1)
+!HoldOn(1.3)
+!SetAnim(Aquila,Look1)
+!HoldOn(1.3)
+!UnpinFollowers()
+!TeleportCharacter(Siobhan,439,530)
+!TeleportCharacter(Gwen,301,551)
+!TeleportCharacter(Bruce,115,535)
+!SetAnim(Bruce,UR)
+!SetAnim(Gwen,U)
+!SetAnim(Siobhan,UL)
+-Aquila: Odd. I was expecting a message from the King.
+-Aquila: Instead I'm greeted by my apprentice, a lab rat, and... a squirrel with a recorder.
+!OverworldCameraPan(320,440,1,1)
+!HoldOn(1.6)
+-Aquila: Whatever. It doesn't matter.
+!SetAnim(Aquila,Look2)
+-Aquila: The King's permission was nothing but a formality anyway.
+-Aquila: Soon, the Yellow God will make his entrance.
+-Aquila: And the power of Excalibur|shall be revealed.
+!HoldOn(0.2)
+!Walk(Siobhan,UL,0.2)
+!HoldOn(0.3)
+-Siobhan: We won't let you do that.
+!HoldOn(0.6)
+!SetAnim(Aquila,Look1)
+!HoldOn(0.4)
+-Aquila: There's nothing left for me to do. The system is fully automated.
+!HoldOn(0.4)
+-Aquila: Soon, the bell will ring|its thirteenth chime.
+-Aquila: At that moment, the ballista will release, slinging the sky egg through this clockface to the halls below.
+!SetAnim(Aquila,Look2)
+-Aquila: The egg will explode.|And the Yellow God will perish.
+-Bruce: Along with half of Murida!
+-Aquila: Regrettably.
+!HoldOn(0.4)
+!SetAnim(Gwen,UR)
+!HoldOn(0.2)
+-Gwen: Just over four minutes to go.|Siobhan, can you dismantle Excalibur?
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Aquila,Look1)
+-Siobhan: I can try.
+-Aquila: Ah now, tampering with the egg I cannot permit.
+!Walk(Bruce,UR,0.3)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.2)
+-Bruce: Oh aye? Ye think ye can take us?
+!HoldOn(0.2)
+-Aquila: "Take" you?
+-Aquila: I'm an ageing academic with no battle experience. Of course I can't "take" you.
+!HoldOn(0.1)
+!SetAnim(Aquila,Look2)
+!HoldOn(0.4)
+-Aquila: But I don't need to win.
+-Aquila: I just need to delay.
+~Stop
+!GoToBattle(Clock)
+
+/PostShowdown
+~JustClockLoop
+!HoldOn(2.6)
+-Aquila: To think... you could wield such strength with godly trinkets...
+-Aquila: A rodent's life really is short and... pathetic...
+!HoldOn(1)
+!SetAnim(Aquila,Dead)
+!HoldOn(1)
+!Walk(Siobhan,UL,0.5)
+!HoldOn(1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.7)
+-Gwen: Siobhan. There's no time to lose.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+-Siobhan: Right.
+!OverworldCameraPan(320,833,1,1)
+
+!SetGlobal(50,35)
+
+!HoldOn(1)
+!TeleportCharacter(Bruce,20,500)
+!TeleportCharacter(Siobhan,20,530)
+!TeleportCharacter(Gwen,620,520)
+!FastWalk(Siobhan,D,2)
+!FastWalk(Bruce,D,2)
+!FastWalk(Gwen,D,2.2)
+!HoldOn(2.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!SetAnim(Bruce,DR)
+!NormalJump(Siobhan,2,30,185,905,JDR,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!HoldOn(1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!FastWalk(Siobhan,U,0.3)
+!HoldOn(1)
+-Siobhan: Oh no.
+!HoldOn(0.4)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.5)
+-Siobhan: This is more complex than any godly tech I'm familiar with.
+-Bruce: Just smash it up!
+-Siobhan: No! That's far too risky.
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.4)
+!Nani(Siobhan,!)
+!HoldOn(0.3)
+-Siobhan: Wait... I may not know the construction of the fire egg...
+-Siobhan: But I know this ballista.
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+-Siobhan: Ropes and pulleys?|Cogs and gears?
+-Siobhan: This is mole engineering!
+!OverworldCameraPan(100,923,3,1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!NormalJump(Siobhan,2,30,174,958,JDL,D)
+!HoldOn(0.7)
+-Siobhan: Help me turn this lever!
+!FastWalk(Gwen,D,1.3)
+!FastWalk(Bruce,D,1.5)
+!HoldOn(1.4)
+!FastWalk(Gwen,L,0.5)
+!HoldOn(0.2)
+!NormalJump(Bruce,2,30,152,1012,JUR,U)
+!HoldOn(0.4)
+!NormalJump(Gwen,2,30,195,1012,JUL,U)
+!HoldOn(0.3)
+-Bruce: I hope ye know what yer doing, Siobhan!
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Siobhan: Shut up and pull!
+!SetGlobal(4,0)
+!HoldOn(1)
+!PullReady(Siobhan)
+
+/PullContinue
+!CheckGlobal(4,1,PullCont1)
+!CheckGlobal(4,2,PullCont2)
+!SetScriptAnim(MuriZ,Default)
+!PlaySound(LoomDown)
+!PlaySound(PipeKnob)
+!HoldOn(1.5)
+!SetGlobal(4,1)
+!PullReady(Siobhan)
+
+/PullCont1
+!SetScriptAnim(MuriZ,Default)
+!PlaySound(LoomDown)
+!PlaySound(PipeKnob)
+!HoldOn(1.5)
+!SetGlobal(4,2)
+!PullReady(Siobhan)
+
+
+/PullCont2
+~Stop
+!SetScriptAnim(MuriZ,Default)
+!PlaySound(LoomDown)
+!PlaySound(PipeKnob)
+!HoldOn(2)
+!SetGlobal(4,0)
+!PlaySound(OneBellLoud)
+!HoldOn(0.2)
+!SetAnim(Gwen,D)
+!Nani(Gwen,!)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!Nani(Bruce,!)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!AddToParty(Verm)
+!RemoveFromParty(Gwen)
+!RemoveFromParty(Bruce)
+!RemoveFromParty(Siobhan)
+!SetLeader(Verm)
+!HoldOn(1)
+-Bruce: The bell!
+!HoldOn(0.7)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.6)
+-Bruce: But... nothing happened?
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+-Siobhan: Right! We disarmed the ballista.
+!HoldOn(0.4)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.3)
+-Gwen: So... Excalibur itself is still active?
+-Siobhan: Yes. But it's not going anywhere.
+-Siobhan: It poses no more threat to Murida.
+!HoldOn(0.9)
+-Bruce: Well. Good enough, I suppose!
+!HoldOn(0.6)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+-Gwen: No point hanging around this|death-egg. Let's mosey.
+!NextRoom(ToBlack)
+!HoldOn(2)
+!NextRoom(PalaceMain,8)

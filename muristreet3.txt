@@ -1,0 +1,300 @@
+/Intro
+~MuridaLoop
+!CheckGlobal(39,1,HighUp)
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!AutoPinFollowers()
+
+/HighUp
+!TurnOffBlocks(1)
+!SetGlobal(39,0)
+!SetVisible(Bridge,0)
+!SetVisible(MuriZ,0)
+!SetVisible(Door,1)
+!TurnOnBlocks(2)
+!TeleportCharacter(Siobhan,213,808)
+!TeleportCharacter(Bruce,233,818)
+!TeleportCharacter(Gwen,253,828)
+
+/Jump1
+!CheckGlobal(99,2,SioJump)
+!HoldOn(0.1)
+!UnpinFollowers()
+!OverworldCameraPan(77,537,0.4,1)
+!TurnOffBlocks(1)
+!SetVisible(Bridge,0)
+!SetVisible(MuriZ,0)
+!SetVisible(Door,1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,175,750,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,144,715,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,105,672,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,77,617,JUL,UL)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(2)
+!HoldOn(0.35)
+!CameraInstFollow(1)
+
+/SioJump
+-Siobhan: All the shops are downstairs. It's only storage and houses up there.
+
+/Jump2
+!OverworldCameraPan(221,734,0.4,1)
+!TurnOffBlocks(2)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,105,672,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,144,715,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,175,750,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,221,814,JDR,DR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+!HoldOn(0.35)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!AutoPinFollowers(1)
+!CameraInstFollow(1)
+
+/Matty
+!CheckGlobal(9,1,MattyDone)
+-Matty: Shhh. Don't tell anyone I'm here.
+!MoneyLoss(-3)
+!SetGlobal(9,1)
+!PlaySound(ItemFound)
+-Info: You received 3 seeds.
+
+/MattyDone
+-Matty: Tell nobody.
+
+/FoundSeeds2
+-Info: You found 2 seeds.
+
+/Poster1
+-InfoBig: "The Taming of the Shrew"|Delayed due to plague.
+
+/Poster2
+-InfoBig: Lost: pet cockroach.|Answers to "Ms. Wiggles".
+
+/Poster3
+-InfoBig: Buy SHRU-BRU|The softdrink of CHAMPIONS. 
+
+/Barry
+!CheckGlobal(10,2,Barry2)
+!ShoutMode()
+-Barry: Fresh veg! Get yer fresh veg here!
+
+/Barry2
+-Barry: Pea prices are up.|Corn and beans too.
+-Barry: It's rough, but I've got|bills of my own to pay.
+
+/Z
+!CheckGlobal(10,2,Z2)
+-Z: Murida's crumbling.|Enjoy it while it lasts.
+
+/Z2
+-Z: Whispers are spreading about some God of Death coming to Murida. That figures.
+-Z: Not much to do. Sit tight and enjoy your front-row seat of the apocalypse.
+
+/Claire
+!CheckGlobal(10,2,Claire2)
+-Claire: I'm so boooooooored.
+-Claire: The merchant quarter used to be bursting with life. But then we were hit with that plague...
+
+/Claire2
+-Claire: Everyone's saying we're in the end-times? I'm too tired for this. I just wanna sleep through it.
+
+/ClaireWarning
+-Claire: Oi, sword boy.
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+-Claire: You scared of spiders?
+*ClaireYes: Terrified.
+*ClaireNo: Nope.
+/ClaireYes
+-Verm: A little. Why?
+-Claire: There's a giant one up ahead. A real big ol' legs-and-fangs monstrosity.
+-Claire: Just giving you a heads-up.
+-Verm: Thanks for the warning.
+
+/ClaireNo
+-Verm: Nothing I can't handle. Why?
+-Claire: Oh, no reason.
+
+/Aubrey
+!CheckGlobal(10,2,Aubrey2)
+-Aubrey: I once saw a god pick his nose and eat it. It was gross, but kinda humbling, y'know.
+
+/Aubrey2
+-Aubrey: King James is single, right?|He's kinda gross, but like,|for a billion seeds...
+
+/Jerboh
+!CheckGlobal(99,2,JerbohSio)
+!CheckGlobal(40,1,JerbohSecond)
+!CheckGlobal(40,2,JerbohThird)
+!CheckGlobal(40,3,JerbohFourth)
+-Jerboh: Excuse me! You there! Are you looking to buy some delicious fustuq halabi?
+*Fustuq: Fustuq?
+*NoFustuq0: No thanks.
+
+/NoFustuq0
+-Verm: No thanks.
+-Jerboh: Then have a good day!
+
+/JerbohSecond
+-Jerboh: The mouse is back! Here to buy some delicious fustuq halabi?
+!ShowMoney(1)
+-Jerboh: Only four seeds each! I can't go lower.
+*AlrightFustuq3: Alright.
+*NoFustuq3: No thanks.
+
+/Fustuq
+-Verm: Fustuq?
+-Jerboh: The most delicious nut! Very nutritious and filling.
+-Verm: Oh, pistachios. I've eaten|one of these before...
+-Jerboh: Ambeh! Not like this!
+-Jerboh: I personally shipped them from my home overseas.
+-Jerboh: Their flavour far surpasses the kind native to Murida.
+-Jerboh: Rich and creamy! Delicious by themselves or ground into a ghoriba biscuit!
+-Verm: You make a good pitch. How much?
+!SetGlobal(40,1)
+!ShowMoney(1)
+-Jerboh: For you? Seven seeds each. A bargain!
+*AlrightFustuq: Deal.
+*NoFustuq: No thanks.
+
+/AlrightFustuq
+!ShowMoney(0)
+!MoneyCheck(7,NotEnough)
+!MoneyLoss(7)
+>DealMade
+
+/DealMade
+-Verm: Sounds good. I'll take one.
+!SetGlobal(40,2)
+!ReceiveItem(17)
+!PlaySound(ItemFound)
+-Info: You received a Pistachio.
+-Jerboh: Many thanks! It has been a pleasure doing business with you!
+
+/NotEnough
+-Verm: I can't afford that.
+>Bargain1
+
+/NoFustuq
+!ShowMoney(0)
+-Verm: No thanks.
+>Bargain1
+
+/Bargain1
+!Nani(Jerboh,!)
+!HoldOn(0.6)
+-Jerboh: Oh ho! You drive a hard bargain.
+-Jerboh: Okay. Just this once. For you. I will cut the price.
+!ShowMoney(1)
+-Jerboh: Five seeds. What do you say?
+*AlrightFustuq2: Deal.
+*NoFustuq2: No thanks.
+
+/AlrightFustuq2
+!ShowMoney(0)
+!MoneyCheck(5,NotEnough2)
+!MoneyLoss(5)
+>DealMade
+
+/NotEnough2
+-Verm: No, you don't understand. I literally can't afford that.
+>Bargain2
+
+/NoFustuq2
+!ShowMoney(0)
+-Verm: No, I'm honestly okay, thank you.
+>Bargain2
+
+/Bargain2
+!Nani(Jerboh,!)
+!HoldOn(0.5)
+-Jerboh: Ambeh! This is the highest quality fustuq! I cannot keep dropping the price!
+-Jerboh: But you are an excellent negotiator.
+!ShowMoney(1)
+-Jerboh: So my final offer. Four seeds. What do you say?
+*AlrightFustuq3: Deal.
+*NoFustuq3: No thanks.
+
+/AlrightFustuq3
+!ShowMoney(0)
+!MoneyCheck(4,NotEnough3)
+!MoneyLoss(4)
+>DealMade
+
+/NotEnough3
+-Verm: I literally do not have four seeds to my name.
+>Bargain3
+
+/NoFustuq3
+!ShowMoney(0)
+-Verm: I really don't want any pistachios.
+>Bargain3
+
+/Bargain3
+-Jerboh: I see.
+-Jerboh: Well, sir, if you change your mind, I'll be here!
+
+/JerbohThird
+-Verm: Did you say you came from overseas?
+-Jerboh: That's right. The place called Mamlakat Al-Far, by the Mangrove Sea.
+-Jerboh: Murida is a good city. A great city, perhaps. But it is not my home.
+-Jerboh: Here, I always stand out in my dishdasha and ghutrah.
+-Jerboh: The Guard have questions for me.|Little mice cross the street to avoid me. 
+-Jerboh: But not you!
+-Verm: I didn't do anything.
+-Jerboh: In both cooking and in our actions, it's the small choices that make a difference.
+-Jerboh: If you ever come by Al-Far, I will show you around personally.
+-Verm: Well... I appreciate that. Thanks.
+!SetGlobal(40,3)
+
+/JerbohFourth
+-Jerboh: Enjoy the fustuq and travel safely!
+
+/JerbohSio
+-Jerboh: Excuse me! You there! Are you looking to buy some delicious fustuq halabi?
+-Siobhan: Oh, um, not today, thank you.
+
+/Ratavia
+-Ratavia: I don't know how you got up here.
+-Ratavia: Maybe you glitched through a wall. Maybe you edited a game file.
+-Ratavia: In any case, I hope you're satisfied.
+
+/Date
+!AutoPinFollowers()
+!Walk(Verm,UL,1.7)
+!HoldOn(2)
+>DateCont
+/Dateb
+!AutoPinFollowers()
+!Walk(Verm,UR,1)
+!HoldOn(1.6)
+>DateCont
+
+/DateCont
+-Verm: This is the merchant quarter.
+-Verm: You can buy stuff there.
+-Gwen: Like, food and clothes?
+!Nani(Gwen,!)
+-Gwen: Oh shit, is that one of those proper fancy Muridan cafes?
+!NextRoom(MuriShop2,3)
+
+EndScene

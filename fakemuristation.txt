@@ -1,0 +1,15 @@
+/Intro
+!CheckGlobal(18,41,SioTime)
+~SewerPrelude
+!HoldOn(8)
+!PlaySound(WhooshDescend)
+!HoldOn(5)
+!HardCut(PalaceMain)
+
+/SioTime
+~kitchenPrelude
+!HoldOn(8)
+!PlaySound(WhooshDescend)
+!HoldOn(5)
+!SetGlobal(18,42)
+!HardCut(PalaceLab)

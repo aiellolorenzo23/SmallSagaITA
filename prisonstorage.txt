@@ -1,0 +1,234 @@
+/Intro
+~DryCaveLoop
+!CheckGlobal(10,1,IntroGwen)
+
+/IntroGwen
+!CheckGlobal(18,8,IntroContinue)
+!AutoPinFollowers()
+
+/IntroContinue
+!SetGlobal(18,9)
+
+!SetAnim(Bruce,UR)
+!HoldOn(0.2)
+!Walk(Gwen,UR,0.2)
+!HoldOn(0.9)
+
+-Gwen: This is it.|The storage and contraband room.
+
+!HoldOn(0.2)
+!Walk(Gwen,R,0.8)
+!HoldOn(0.8)
+!Walk(Gwen,UR,0.3)
+!HoldOn(0.8)
+-Gwen: And this...
+!HoldOn(0.4)
+~GwenLoop
+!WeaponGet(1)
+!PlaySound(VermDraw)
+!SetAnim(Gwen,U)
+!HoldOn(0.05)
+!SetAnim(Gwen,UL)
+!HoldOn(0.05)
+!SetAnim(Gwen,L)
+!HoldOn(0.05)
+!SetAnim(Gwen,DL)
+!HoldOn(0.05)
+!SetAnim(Gwen,D)
+!HoldOn(0.05)
+!SetAnim(Gwen,DR)
+!HoldOn(0.05)
+!SetAnim(Gwen,R)
+!HoldOn(0.05)
+!SetAnim(Gwen,UR)
+!HoldOn(0.05)
+!SetAnim(Gwen,U)
+!HoldOn(0.05)
+!SetAnim(Gwen,UL)
+!HoldOn(0.05)
+!SetAnim(Gwen,L)
+!HoldOn(0.05)
+!SetAnim(Gwen,Landing)
+!HoldOn(0.9)
+!SetAnim(Gwen,DL)
+!HoldOn(0.4)
+-Gwen: ...Is my glaive.
+-Gwen: A fierce weapon.|Speciality of White Hall.
+-Gwen: It features a fifteen centimetre, grooved grip for maximum reach.
+-Gwen: The stainless steel material provides unparalleled hardness and durability.
+-Gwen: And of course, the crescent-curved blade is more than sharp enough to cut anything that moves.
+!HoldOn(1.5)
+-Bruce: Y'sure like weapons, huh.
+-Gwen: We all have hobbies.
+-Gwen: So where's yours?
+!Walk(Bruce,UR,0.2)
+!HoldOn(0.2)
+!Walk(Bruce,R,0.6)
+!HoldOn(0.6)
+!Walk(Bruce,UR,0.1)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!Walk(Bruce,U,0.6)
+!HoldOn(0.7)
+-Bruce: Here we are.
+!HoldOn(0.5)
+!WeaponGet(0)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,Toot)
+-Bruce: It's a flute.
+!HoldOn(0.8)
+!WeaponGet(2)
+!PlaySound(BNote7)
+!HoldOn(1.5)
+-Bruce: Made o' wood.
+!HoldOn(1)
+-Bruce: I think.
+!HoldOn(0.4)
+!SetAnim(Bruce,R)
+!HoldOn(0.05)
+!SetAnim(Bruce,UR)
+!HoldOn(0.05)
+!SetAnim(Bruce,U)
+!HoldOn(0.05)
+!SetAnim(Bruce,UL)
+!HoldOn(0.05)
+!SetAnim(Bruce,L)
+!HoldOn(0.05)
+!SetAnim(Bruce,DL)
+!HoldOn(0.05)
+!SetAnim(Bruce,D)
+!HoldOn(0.05)
+!SetAnim(Bruce,DR)
+!HoldOn(0.8)
+-Gwen: I see.
+!HoldOn(1.3)
+-Gwen: Is it a gun-flute?
+-Bruce: Hey, don't underestimate the power of music, lass.
+-Bruce: The right melody can thaw a frozen heart or tame a fierce titan.
+-Bruce: So. What's step three of yer master plan?
+-Gwen: We bash in some guard skulls and walk out the front door.
+!Nani(Bruce,!)
+!HoldOn(0.3)
+-Bruce: Woah now!|I'm not bashing any skulls.
+-Bruce: I'm a bard,|not a fighter.
+-Gwen: Is that a principle thing|or an "uwu softboi" thing?
+!HoldOn(0.5)
+-Bruce: I just believe that all this violence gets us nowhere.
+-Bruce: If we treat each other with kindness and respect, the world would be a nicer place, no?
+!HoldOn(0.8)
+-Gwen: Hmm. Okay.
+-Gwen: I think I understand.
+-Gwen: I'm gonna kindly and respectfully show the cachgi guarding the lift the edge of my blade.
+-Bruce: Sheesh, no dissuading you, is there?
+-Bruce: I'll just lend support|in my own way.
+-Gwen: By tooting your flute.
+-Bruce: Aye.
+-Gwen: I hope that'll be enough for whatever we'll face. Let's move.
+~Stop
+!Walk(Bruce,DR,0.3)
+!HoldOn(0.4)
+!PinFollowerToGwen(Bruce)
+~DryCaveLoop
+
+/StatueDoll
+!CheckGlobal(19,1,SaveTime)
+-InfoBig: It's an effigy, seemingly god-made.
+-InfoBig: The features are exaggerated to the point of caricature.
+-InfoBig: Why would a rodent have this?
+!SetGlobal(19,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: The effigy stares blankly.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/Toy
+-InfoBig: Is this a weapon or a god-toy? You cannot tell.
+
+/Books2
+-InfoBig: You see a book titled, "The Rat of War" by Son Shru.
+*ReadIt3: Read it.
+*PutBack: Put it back.
+/ReadIt3
+
+-Book1: A strike to an enemy's shield afflicts a "Defence Break", wherein the enemy will take increased damage from successive strikes for a small window of time.||An opportunity to go on the offence!
+-Book2: Conversely, a strike to an enemy's sword afflicts an "Attack Break", wherein the enemy will find their own strikes to be weaker for a small window of time.||An opportunity to recuperate!
+-Book1: When a warrior learns to balance their offensive and defensive measures, then they will have learned the key to victory.
+-Book2: 
+
+/Books
+-InfoBig: You see an incredibly lewd magazine titled "Squeak!".
+*ReadIt2: Read it.
+*PutBack: Put it back.
+
+/ReadIt2
+!CheckGlobal(99,4,GwenRead)
+-Book1:  
+-Book2: Image1
+!HoldOn(0.5)
+-Verm:  Huh. 
+
+/GwenRead
+-Book1:  
+-Book2: Image1
+!HoldOn(0.5)
+-Gwen: Eheheheheh~
+!HoldOn(0.2)
+!Nani(Bruce,?)
+!HoldOn(0.5)
+-Bruce: What ye got there?
+!HoldOn(0.1)
+!Nani(Bruce,!)
+!HoldOn(0.3)
+-Bruce: Oh! Smut.
+!HoldOn(0.3)
+-Gwen: What do you think, Bruce?|Left or right?
+-Bruce: Uh... it's gonna have tae be left for me. How about you?
+-Gwen: Oh, I'd never choose.
+-Gwen: It'd be like only ordering one pastry from the menu of one of them fancy Muridan cafes.
+-Gwen: Not that I've ever been.|But once we break out, like.
+-Bruce: Right. I understand entirely.
+-Gwen: Enough perving.|Let's mosey.
+!SetNPCFlag(Books,Books4)
+/PutBack
+
+/Books4
+-InfoBig: You see an incredibly lewd magazine-
+!HoldOn(0.1)
+!ShoutMode()
+-Bruce: GWEN!
+!HoldOn(0.1)
+-Gwen: Sheesh, alright, alright.
+
+/Food
+-InfoBig: You see contraband food and alcohol. Someone's already raided the good stuff, though.
+
+/Dice
+-InfoBig: Dice and playing cards.|No fun allowed, it seems.
+
+/Fire
+-InfoBig: These are fire-starters.|Definitely forbidden in a prison.
+
+/Note1
+-InfoBig: Remember your ABCs!||Aim high!|Be proactive!|Cage and separate friends.||- Captain Aiden )
+
+/Note2
+-InfoBig: Stay positive!|Work hard!|And get it done!||- Captain Aiden )
+
+
+/SaveYes
+!SaveGame(Sky Garden,Dungeon Storage Room)
+-Info: Your game has been saved.
+/SaveNo
+
+End scene
+

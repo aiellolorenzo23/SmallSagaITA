@@ -1,0 +1,109 @@
+/Intro
+~PrisonLoop
+!AutoPinFollowers()
+
+/IntroLate
+~DryCaveLoop
+!TurnOffBlocks(2)
+
+/LiftLate
+~Stop
+!TurnOffBlocks(2)
+
+/LiftDone
+!CheckGlobal(10,2,LiftLate)
+~PrisonLoop
+!AutoPinFollowers(1)
+
+/Treasure1
+-InfoBig: You found some Holy Chocolate.|Did a guard stash this for later?
+
+/PrisonKey
+!PlaySound(ItemFound)
+!TeleportCharacter(PrisonKey,3060,400)
+!ReceiveItem(54)
+!CheckGlobal(99,4,PrisonKeyLate)
+!CheckGlobal(99,0,PrisonKeyLate)
+!HoldOn(0.5)
+-Bruce: Ah hah! Got the key.
+-Bruce: Now to get it back to Gwen...
+
+/PrisonKeyLate
+-Info: You picked up the prison key again.
+
+/Errrurer
+-Bruce: Oop, wrong way.
+!Walk(Bruce,DL,0.5)
+!HoldOn(0.5)
+
+/Johnny
+~Stop
+!PlaySound(alert)
+!Nani(Johnny,!)
+!HoldOn(1)
+-Johnny: You! Get back in your cell!
+!CheckGlobal(18,8,BackInside)
+!NormalBattle(PrisonGuard,60)
+
+/Mason
+~Stop
+!PlaySound(alert)
+!Nani(Mason,!)
+!HoldOn(1)
+-Mason: You can't be out here!|I'm dragging you back to your cell.
+!CheckGlobal(18,8,BackInside)
+!NormalBattle(PrisonGuard2,61)
+
+/Jacob
+~Stop
+!PlaySound(alert)
+!Nani(Jacob,!)
+!HoldOn(1)
+-Jacob: Back inside, inmate!
+!CheckGlobal(18,8,BackInside)
+!NormalBattle(PrisonGuard2,61)
+
+
+/Noah
+~Stop
+!PlaySound(alert)
+!Nani(Noah,!)
+!HoldOn(1)
+-Noah: A jailbreak?! Not on my watch!
+!CheckGlobal(18,8,BackInside)
+!NormalBattle(PrisonGuard,62)
+
+/Carter
+~Stop
+!PlaySound(alert)
+!Nani(Carter,!)
+!HoldOn(1)
+-Carter: How did you escape?|Whatever, I'm taking you in.
+!CheckGlobal(18,8,BackInside)
+!NormalBattle(PrisonGuard,63)
+
+/BackInside
+!HoldOn(0.3)
+!SetGlobal(4,1)
+!CheckItem(54,PutKeyBack)
+>ThrowInside
+
+/PutKeyBack
+!LoseItem(54)
+!SetGlobal(4,2)
+>ThrowInside
+
+/ThrowInside
+!NextRoom(ToBlack)
+!HoldOn(0.2)
+!PlaySound(PrisonDoorClose)
+!HoldOn(0.7)
+!NextRoom(Cell1,1)
+
+/LiftTouch
+-Info: Head upwards?
+*LiftUp: Let's go.
+*NoLiftUp: Not yet...
+/LiftUp
+!LiftGoUp()
+/NoLiftUp

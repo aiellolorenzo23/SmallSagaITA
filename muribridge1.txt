@@ -1,0 +1,302 @@
+
+/Intro
+~WaterCaveLoop
+!AutoPinFollowers()
+
+/Discussion
+!SetGlobal(12,4)
+!UnpinFollowers()
+!Walk(Verm,UL,1.5)
+!Walk(Siobhan,UL,1.2)
+!HoldOn(1.6)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.3)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.2)
+-Verm: The Underriver...
+!HoldOn(0.6)
+-Siobhan: This must be Bloody Bridge. It connects to the city's East Gate.
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.3)
+-Siobhan: And the rapid water below is the Moat of Murida.
+-Siobhan: The current in the moat is so intense that anyone who falls in is swept straight out to sea.
+
+!HoldOn(0.3)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.3)
+-Verm: You sure know a lot about a random bridge.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+-Siobhan: It's a famous bridge, Sir Verm!
+-Siobhan: Wars have been decided on this very choke-point!
+-Verm: Fascinating.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.3)
+-Verm: I think I see the gate ahead...
+!Walk(Siobhan,UL,0.32)
+!HoldOn(0.4)
+!PinFollowerToVerm(Siobhan)
+
+/LeoTime
+~Stop
+!SetShadowless(Leo,1)
+!HoldOn(1)
+!UnpinFollowers()
+!SetGlobal(35,0)
+!SetGlobal(91,0)
+!OverworldCameraPan(320,180,0.5,1)
+!HoldOn(3)
+-Leo: A vagabond mouse and a noble mole...
+!TeleportCharacter(Verm,600,575)
+!TeleportCharacter(Siobhan,645,545)
+!HoldOn(0.2)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UL)
+!NormalJump(Leo,1,130,413,462,DRJump,DR)
+!PlaySound(LamiaTurn)
+!OverworldCameraPan(530,460,0.5,1)
+!HoldOn(1)
+!SetShadowless(Leo,0)
+~LionWaltzLoop
+!HoldOn(1)
+!Walk(Leo,DR,0.7)
+
+!HoldOn(2)
+-Leo: You are Verm and Lady Siobhan, correct?
+-Verm: A field mouse with a Thimble Guard get-up? You must be...
+*Real: Leo.
+*Cosplayer: A cosplayer.
+
+/Real
+-Verm: Blademaster Leo, the Needle Knight.
+!HoldOn(0.2)
+!Nani(Siobhan,!)
+!HoldOn(0.4)
+-Siobhan: THE Blademaster Leo? 
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: I've got no doubt.|He's exactly how I imagined.
+>Pity
+
+/Cosplayer
+-Verm: A Blademaster Leo cosplayer.
+-Verm: Nice attempt, but I've seen better.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+-Siobhan: Sir Verm, I think he's the real deal.
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: Huh. He looks way scrawnier than I imagined.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+>Pity
+
+/Pity
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.3)
+-Verm: You know, you were my idol|when I was a kid.
+-Leo: Then it's a pity this meeting couldn't be under more favourable circumstances.
+-Leo: I am here to arrest you.
+-Verm: For what?
+-Leo: Initially the charge was the|kidnapping of a noble Lady.
+!HoldOn(0.1)
+!Nani(Siobhan,!)
+!HoldOn(0.3)
+-Siobhan: What? I'm not kidnapped!
+-Verm: And Siobhan's no lady.
+-Leo: But now I understand that you were both integral agents to the recent coup at Sky Garden.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.7)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+-Verm: I wouldn't say "integral"...
+-Leo: That's treason all the same.
+-Leo: Also, word in the tunnels is that you are plotting to assault a god?
+-Verm: Word in the tunnels travels fast.
+-Leo: That's high blasphemy.
+!HoldOn(0.7)
+-Leo: An impressive list of crimes for a common vagabond.
+!HoldOn(0.4)
+-Leo: I fear I already know the answer, but duty compels me to ask...
+-Leo: Will you come quietly?
+*Maybe: Depends.
+*Nope: Nope.
+
+/Maybe
+-Verm: Depends. Will I get a fair trial?
+!HoldOn(0.5)
+-Leo: All trials in Rodentia are fair, are they not?
+!HoldOn(1)
+-Verm: Yeah, okay, I'm going to decline.
+>ContinueLeo
+
+/Nope
+-Verm: Nope.
+>ContinueLeo
+
+/ContinueLeo
+!HoldOn(0.5)
+!SetGlobal(18,41)
+-Leo: Unfortunate.
+!HoldOn(0.3)
+-Leo: Although, in truth, I was hoping you would say that.
+-Leo: See, I am curious.
+-Leo: I've never seen a mouse wield a weapon like yours.
+-Leo: It must be quite a weight. I wonder how you even manage to swing it.
+-Leo: So let's make this a formal duel. A Trial by Blades.
+-Leo: If you win, I'll let you|and Lady Siobhan go.
+!HoldOn(0.6)
+-Verm: It's that simple?|And I have your word?
+-Leo: Of course. On my honour as a knight.
+!HoldOn(0.5)
+-Leo: But if you lose...
+-Verm: Not a chance.
+-Leo: Very well.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+~Stop
+-Siobhan: Sir Verm. We should run.
+-Leo: No interfering! It's just me|and the vagabond!
+!GoToBattle(Leo1)
+
+/PostLeo
+~WaterCaveLoop
+!HoldOn(0.3)
+!Walk(Siobhan,DL,0.4)
+!HoldOn(0.4)
+!ShoutMode()
+!HoldOn(0.1)
+-Siobhan: Sir Verm!
+!HoldOn(1)
+!PlaySound(StabOut)
+!NormalJump(Leo,3,10,470,530,JumpBroken,DRBroken)
+!SetAnim(Verm,Stabbed2)
+!HoldOn(2.3)
+!SetAnim(Verm,Stabbed3)
+!HoldOn(1.25)
+!NormalFall(Verm,0.9,20,510,634,Stabbed4,Splash)
+!SetShadowless(Verm,1)
+!HoldOn(0.2)
+!FastWalk(Siobhan,DL,0.4)
+!HoldOn(1)
+
+!SetAnim(Leo,DLBroken)
+!HoldOn(1.8)
+-Siobhan: Sir Verm...
+!HoldOn(1.9)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.9)
+-Siobhan: He didn't deserve that.
+!HoldOn(0.9)
+-Leo: No, you're probably right.
+!HoldOn(0.6)
+-Siobhan: Then... why...
+!HoldOn(0.6)
+!SetAnimEnd(Leo,DLBroken)
+!HoldOn(0.7)
+-Leo: I wasn't too different from that mouse when I was first knighted.
+-Leo: I blazed with righteous anger. I drew my sword at any injustice, big or small.
+-Leo: But I quickly learned that|unchecked rebellion only|burns those around us.
+!HoldOn(0.8)
+!SetAnim(Leo,DLBroken)
+!HoldOn(0.3)
+!SetAnim(Leo,DRBroken)
+!HoldOn(0.2)
+-Leo: Better to stamp out the spark while it's young, before it can engulf a whole Kingdom in flames.
+!HoldOn(1)
+!RemoveFromParty(Verm)
+!SetLeader(Siobhan)
+!SetGlobal(10,2)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.9)
+-Siobhan: What happens now?
+-Leo: Now? You come with me.
+-Leo: Any common mole would see|the guillotine for the|crimes you've assisted in.
+!HoldOn(0.5)
+-Leo: But you have a friend|in a high place.
+-Leo: They negotiated a plea bargain with the King.
+-Siobhan: A friend in a high place...
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: Mammy?
+-Leo: Plaguemaster Aquila.
+-Leo: I have no idea what that conniving cur wants with you.
+-Leo: Just pray that you don't end up on their operating table.
+!HoldOn(0.3)
+!SetAnim(Leo,DLBroken)
+!HoldOn(0.1)
+!SetAnim(Leo,ULBroken)
+!HoldOn(0.6)
+-Leo: Let's go.
+!HoldOn(0.3)
+!SpecialWalk(Leo,UL,6,ULWalkBroken,0.5)
+!HoldOn(1.2)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(3)
+!ResetWalkSpeed(Siobhan)
+!HoldOn(1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(1)
+!SlowWalk(Siobhan,UL,4)
+!HoldOn(2)
+~Stop
+!NextRoom(ToBlack)
+!HoldOn(2)
+!NextRoom(VoidSpace,2)
+
+
+End scene

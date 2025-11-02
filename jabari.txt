@@ -1,0 +1,16 @@
+/BattleVeryStart
+
+/BattleStart
+~ReelLoop
+!DrawWeapon(Bruce)
+!HoldOn(0.5)
+!CameraPan(0,1,1,1)
+!HoldOn(0.4)
+!LetsFight()
+
+
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

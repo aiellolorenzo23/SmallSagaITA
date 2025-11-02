@@ -1,0 +1,78 @@
+/Intro
+!CheckGlobal(50,0,IntroCont)
+!CheckGlobal(50,1,IntroCont)
+
+/IntroCont
+~Murida2Loop
+
+/Virgo
+!CheckGlobal(99,2,VirgoSio)
+!CheckGlobal(50,0,VirgoCont)
+!CheckGlobal(50,1,VirgoCont)
+-Virgo: W-what's going on outside?
+
+/VirgoSio
+-Virgo: Woah, cool! A wizard.
+
+/VirgoCont
+-Virgo: Dad's working late again.
+!CheckGlobal(90,0,VirgoCont2)
+
+/VirgoCont2
+!CheckGlobal(90,0,VirgoCheck)
+
+/VirgoCheck
+!CheckItem(44,Virgo2)
+
+/Virgo2
+!SetGlobal(90,1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!Nani(Virgo,?)
+!SetAnim(Verm,DL)
+!HoldOn(0.2)
+!Walk(Verm,DL,0.3)
+!HoldOn(0.2)
+-Virgo: Wait. What you got there?
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: My sword?
+-Virgo: No, not that stupid thing.
+-Virgo: That piece of paper.|Is it a drawing?
+!ShowItem(Prota,44)
+!HoldOn(0.8)
+-Verm: This?
+-Verm: It's a map. Can't make whisker nor tail of it though.
+-Virgo: Woah, cool! It's got an "X", just like it's marking some pirate's treasure.
+!HoldOn(0.4)
+-Verm: Sure. It's just like that.
+!HoldOn(0.4)
+-Virgo: It looks like the maps of the Kingdom I've seen in school.
+-Virgo: That big blue squiggle is the King's River. And Murida's over here, just next to it.
+-Virgo: But the X is waaaaaay over there, in the north-east.
+-Verm: Oh, right.|So "north" is "up".
+!HoldOn(1)
+-Virgo: Did you miss a class in school or something?
+-Verm: I never went.
+-Virgo: Woah! Lucky.
+!HoldOn(0.5)
+!PlaySound(NewLocation)
+-Info: A new location has been added to your map!
+
+/FoundSeeds
+-Info: You found 2 seeds.
+
+/Painting
+-InfoBig: It's a kid's drawing.
+-InfoBig: You have no idea who these people are.

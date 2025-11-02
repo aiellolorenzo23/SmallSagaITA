@@ -1,0 +1,19 @@
+/Intro
+
+/TigerFall
+~TigerFallLoop
+!SetGlobal(5,0)
+!TigerFall()
+!TitanModeToggle()
+-Tiger: YOU SHOULD NOT HAVE|COME HERE, MOUSE.
+!TitanModeToggle()
+-Verm: I'm passing through to Cranbaile. Let me be, and I will make no trouble.
+!TitanModeToggle()
+-Tiger: OH, YOU'VE FOUND TROUBLE, FRIEND.
+-Tiger: I AM THE PREDATOR,|AND YOU ARE THE PREY.
+-Tiger: YOU RUN,|AND I CHASE.
+-Tiger: THAT IS THE|WAY OF NATURE.
+!TitanModeToggle()
+~Stop
+!GoToBattle(Tiger1)
+End scene

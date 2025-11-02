@@ -1,0 +1,31 @@
+/BattleVeryStart
+!HoldOn(0.4)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+/BattleStart
+!CameraPan(0,1,1,1)
+!SetAnim(Hank,Reload)
+!HoldOn(0.3)
+!PlaySound(GunReload)
+!HoldOn(1)
+!SetAnim(Hank,Default)
+!HoldOn(0.3)
+!LetsFight()
+
+/VermRage
+-Verm: That cannon's nothing but a toy!
+-Hank: Non sequitur!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+
+End scene

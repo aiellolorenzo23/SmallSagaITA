@@ -1,0 +1,28 @@
+000 
+009 It's of a mouse named Leo
+012 And his chivalrous acts so brave
+015 A titan-slayer bold and valiant
+018 Equal to any foe who'd challenge
+020 His god-forged needle blade.
+024 
+034 The Thimble Guard at Solhill
+037 In a desperate fight were locked
+040 The shrew's defences overrun
+042 And the captain's strategies all undone
+045 By Ironfang the fox.
+049 
+060 Death stalked the town
+063 Solhill braced for the end
+065 As the fox closed for the kill
+068 And Leo took the field
+071 He'd not back down
+073 For a Thimble Knight's
+075 Sworn every life to defend.
+080 Here's health to brave Sir Leo
+083 And his miracle blade so bright
+086 Where evil prowled and danger beckoned
+088 He sent that monster back to heav'n
+091 With a needle through the eye.
+096 
+113 END
+119 END

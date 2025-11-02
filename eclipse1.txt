@@ -1,0 +1,52 @@
+/BattleVeryStart
+Blank
+/BattleStart
+!CameraPan(0,1,1,1)
+!SetGlobal(4,0)
+!GodTurn()
+-Lance: Damn it all...
+!DrawWeapon(Lance)
+!HoldOn(0.9)
+!LetsFight()
+
+
+/TalkTime
+!CheckGlobal(4,1,TT1)
+!CheckGlobal(4,2,TT2)
+!CheckGlobal(4,3,TT3)
+!SetGlobal(4,1)
+-Lance: Hey, you! Over here! Look at me!
+!HoldOn(1)
+
+!GodTurn()
+!HoldOn(0.1)
+!NewTurn()
+
+/NoTalkTime
+!HoldOn(1)
+!NewTurn()
+
+/TT1
+-Lance: I said, look at me! Come on!
+!GodTurn()
+!SetGlobal(4,2)
+!HoldOn(0.1)
+!NewTurn()
+
+/TT2
+!GodTurn()
+-Lance: I... I got its attention...
+!SetGlobal(4,3)
+!HoldOn(0.1)
+!NewTurn()
+
+/TT3
+!GodTurn()
+!HoldOn(2)
+~Stop
+!EndBattle()
+
+/EnemyDead
+~Stop
+!EndBattle()
+End scene

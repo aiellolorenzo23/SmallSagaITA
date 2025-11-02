@@ -1,0 +1,18 @@
+/BattleVeryStart
+~RandomBattleLoop
+!HoldOn(0.5)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+/VermRage
+-Verm: It's tribute time!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

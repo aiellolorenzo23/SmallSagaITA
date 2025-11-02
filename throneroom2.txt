@@ -1,0 +1,191 @@
+/Intro
+~PalaceLoop
+!OverworldCameraSnap(1150,365)
+!HoldOn(2.6)
+
+-Rosaline: ...So we pursued a lead to the Gloaming Woods outside Sky Garden.
+!CheckGlobal(79,1,RosBested)
+
+-Rosaline: However, despite our best efforts, Maisie and I were unable to find any trace of the vagabond or the noble mole.
+>RosContinue
+
+/RosBested
+!CheckGlobal(80,1,RosBested2)
+-Rosaline: However, despite my best efforts, I was bested in combat by the vagabond.
+>RosContinue
+
+/RosBested2
+-Rosaline: However, despite our best efforts, we were bested in combat by the vagabond and his party.
+>RosContinue
+
+/RosContinue
+!HoldOn(0.6)
+!SetGlobal(79,0)
+!SetGlobal(80,0)
+-Leo: Then the mission was a failure?
+-Rosaline: I'm afraid so.
+!HoldOn(0.6)
+-Rosaline: I deeply apologise, Your Majesty.|I will not falter again.
+!HoldOn(0.8)
+-James: So much for the|Thimble Guard's finest.
+!HoldOn(0.5)
+-Leo: Thank you for the report, Rosaline. I'll debrief you and Maisie later.
+-Leo: Dismissed.
+-Rosaline: Blademaster. Your Majesty.
+!HoldOn(0.2)
+!SetAnim(Rosaline,DR)
+!HoldOn(0.1)
+!SetAnim(Rosaline,DL)
+!PlaySound(PalaceBigDoorOpen)
+!HoldOn(0.4)
+!SetAnim(Ophiuchus,LookLeft)
+!ShoutMode()
+-Evan: WHEEZE~
+!HoldOn(0.2)
+!CameraFollow(1)
+
+!HoldOn(1)
+!ShoutMode()
+-Evan: WHEEEEZE~
+!HoldOn(0.3)
+!Walk(Rosaline,DL,10)
+!Walk(Evan,UR,3)
+!HoldOn(3.2)
+-Evan: WHEEEEEEZE~
+!Walk(Evan,UR,2.8)
+!HoldOn(2)
+!OverworldCameraPan(1150,365,1,1)
+!HoldOn(1)
+!SetAnim(Ophiuchus,LookRight)
+-Evan: Boy am I unfit, lolol.
+-Evan: Why's the pigeon taxi rank so far from the palace?
+-Evan: Y'all need one of 'em shuttle-bug services or something.
+-Ophiuchus: Well, well, well.
+-Ophiuchus: If it isn't Loremaster Evan of Sky Garden.
+-Ophiuchus: The lowest scoring pupil at the university, as I recall.
+-Evan: Don't hate, old man.|A pass is a pass, lol.
+!SetAnim(Ophiuchus,LookLeft)
+-James: Why are you here, Loremaster?
+!HoldOn(0.3)
+!Nani(Evan,?)
+!HoldOn(0.4)
+-Evan: Uhhhh...
+!HoldOn(1.3)
+-Evan: Oh yeah, lol.|Sky Garden's been invaded.
+!HoldOn(0.1)
+!SetAnim(Ophiuchus,LookRight)
+!Nani(Leo,!)
+!HoldOn(0.1)
+!Nani(James,!)
+!SetAnim(James,Getup)
+!HoldOn(0.1)
+!Nani(Ophiuchus,!)
+!HoldOn(0.3)
+-Leo: Invaded?!
+-Evan: Lol. Yeah. Crazy times.
+!SetAnim(James,Loop)
+-Evan: I managed to slip away, but it looks like Duke Josh was dethroned and eaten. Lol.
+!HoldOn(0.1)
+!Nani(Leo,!)
+!HoldOn(0.1)
+!Nani(James,!)
+!SetAnim(James,Getup)
+!HoldOn(0.1)
+!Nani(Ophiuchus,!)
+!HoldOn(0.3)
+!ShoutMode()
+-James: Eaten?!
+!SetAnim(James,Loop)
+-Leo: This is no time for "lols". Who was the invading army?
+-Evan: Army? I dunno, it was more like a bunch of randos.
+-Evan: Like... there was a|red squirrel harlequin... 
+-Evan: An albino dragon-rat criminal...
+-Evan: Uh, who else...|Some noble mole with fire magic...
+-Evan: Oh yeah, and an edgy vagabond mouse with a big-ass sword and no tail.
+-Evan: See what I mean? A total rag-tag party, am I right? Lol.
+!HoldOn(1)
+-Leo: We'll need a full report.
+-Leo: Return to us with a detailed account of events, and we'll be able to properly assess the situation.
+-Evan: Got it. See ya, ya majesty.|Peace out, old man Orphy.
+!SetAnim(Evan,Loop)
+!HoldOn(0.1)
+!SetAnim(Evan,DL)
+!HoldOn(0.1)
+!SetAnim(James,Loop)
+!Walk(Evan,DL,3)
+!HoldOn(1.5)
+!HoldOn(1)
+-James: Shit.
+!HoldOn(0.5)
+-James: What a foul mess.
+!HoldOn(0.5)
+-James: I never cared|for that oafish Duke...
+-James: But I'm going to look incompetent if I let my Kingdom's cities be ransacked so easily.
+-James: And by whom?|A gang of marauders?
+!SetAnim(Ophiuchus,LetterOpen)
+!HoldOn(0.2)
+-Ophiuchus: The mouse and mole descriptions match those from the Cranbaile letter and Rosaline's investigation.
+-Ophiuchus: One may deduce that this is the same pair.
+!SetAnim(Ophiuchus,LetterClose)
+!HoldOn(0.4)
+-Leo: This vagabond is fast building a dangerous reputation.
+-Leo: We underestimated him.
+!HoldOn(0.2)
+!SetAnim(James,LookRight)
+!HoldOn(0.2)
+-James: "We"? Excuse me?|"We" underestimated him?
+-James: Was it not you who suggested that I ignore the vagabond, Leo?
+!HoldOn(0.1)
+!SetAnim(Leo,UL)
+!HoldOn(0.1)
+!SetAnim(Leo,UR)
+!HoldOn(0.1)
+-Leo: Well, yes. But I acted on-
+-James: Spare me your excuses.|You offered bad counsel.
+!HoldOn(0.1)
+!SetAnim(Ophiuchus,LookRight)
+!HoldOn(0.3)
+-James: Come to think of it, Aquila was the only one to warn me of the true danger this mouse posed.
+!HoldOn(0.6)
+-Leo: That... is true. However-
+!SetAnim(James,LookLeft)
+-James: Why did we even remove Aquila from the council in the first place?
+-Leo: Because they experimented on-
+-James: By the gods, shut up already.
+!HoldOn(1)
+!SetAnim(Ophiuchus,LookLeft)
+!SetAnim(Leo,UL)
+!HoldOn(0.1)
+!SetAnim(Leo,DL)
+!HoldOn(0.4)
+!SetAnim(James,Loop)
+~Stop
+-Leo: I will make this right, Your Majesty.
+-James: Indeed you will. Go.
+!HoldOn(0.4)
+!Walk(Leo,UL,0.7)
+!HoldOn(0.7)
+!Walk(Leo,DL,5)
+!HoldOn(3)
+!SetAnim(Ophiuchus,LookRight)
+-James: Loremaster, can Leo's judgment be trusted?
+~LionWaltzLoop
+!HoldOn(0.3)
+-Ophiuchus: I witnessed his valiance at Solhill. I saw his fine needlework at the 300th Royal Tourney in Vinium.
+-Ophiuchus: There is no doubt.|Leo is the epitome of chivalry.|A knight among knights.
+-Ophiuchus: Your mother thought so too. She called Leo "the greatest Blademaster since Artura".
+!HoldOn(0.2)
+!SetAnim(Ophiuchus,LookLeft)
+!HoldOn(0.3)
+-James: Even the finest blade|eventually dulls.
+!HoldOn(1.4)
+-James: Summon Plaguemaster Aquila.
+!SetAnim(Ophiuchus,LookRight)
+!HoldOn(0.3)
+-Ophiuchus: Your Majesty?
+-James: Evidently, the rat's insight holds value.
+-James: A pardon is in order.
+!HoldOn(0.4)
+!SetAnim(Ophiuchus,LookLeft)
+!NextRoom(PalaceFoyer,1)
+End scene

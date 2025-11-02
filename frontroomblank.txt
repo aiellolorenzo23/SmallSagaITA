@@ -1,0 +1,36 @@
+/JustPin
+!AutoPinFollowers()
+
+/FirstIntro
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!SetGlobal(5,1)
+!HoldOn(4)
+!SetGlobal(38,1)
+!OverworldCameraPan(275,512,0.5,1)
+!HoldOn(0.5)
+!NormalJump(Verm,0.4,400,305,542,JumpR,LandR)
+!HoldOn(2)
+!Enter(Verm)
+!SetShadowless(Verm,0)
+!HoldOn(2)
+!TurnOnBlocks(1)
+!LevelUp(Verm)
+!HoldOn(1.5)
+!PlaySound(NewMove)
+-InfoBig: Verm learned Rage.
+!HoldOn(1)
+!SetAnim(Verm,DR)
+!HoldOn(1)
+!CameraFollow(1)
+
+
+/Collar
+!SetGlobal(51,3)
+!PlaySound(ItemFound)
+!ReceiveItem(71)
+!TeleportCharacter(Collar,-300,-300)
+-InfoBig: You found a felidae collar.|You add it to your trinkets.
+-Verm: Huh. I wonder who|this belongs to.
+
+End scene

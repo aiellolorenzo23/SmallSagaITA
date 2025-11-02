@@ -1,0 +1,490 @@
+/IntroNoMusic
+~Stop
+!AutoPinFollowers()
+
+/Intro
+~LabyrinthLoop
+!CheckGlobal(14,3,JustTeleport)
+!Walk(Bruce,UR,1)
+!HoldOn(1)
+!SetGlobal(14,3)
+!TeleportCharacter(Bruce,-1000,0)
+
+/Valve
+!WaterSwitchOff(1)
+
+/SwitchCorrect1
+!SetGlobal(14,6)
+!PlaySound(PipeFlush)
+-InfoBig: You hear the distant sound|of running water.
+!HoldOn(0.5)
+!MysteryText(1)
+-Kraken: The ocean floor was my domain,
+-Kraken: I dined on fish to keep me sane. 
+!MysteryText(0)
+!HoldOn(0.3)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+-Verm: What was that?
+-Siobhan: What was what?
+!HoldOn(0.3)
+-Verm: ...Nothing. I must be hearing things.
+
+/SwitchAlready
+-Info: Nothing happened.
+
+/SwitchCorrect2
+!SetGlobal(14,9)
+!PlaySound(PipePressure)
+-Info: You hear the hiss of building pressure.
+
+/SwitchCorrect3
+!SetGlobal(14,10)
+!PlaySound(PipeFlush)
+-InfoBig: You hear the distant sound|of running water.
+!HoldOn(0.5)
+!MysteryText(1)
+-Kraken: The sea went dry as fish ran few,
+-Kraken: I ventured far for something new.
+!MysteryText(0)
+!HoldOn(0.3)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+-Verm: Did you hear that?
+-Bruce: Just the gurgle of the pipes, lad.
+-Siobhan: I think I heard it too.
+-Siobhan: It's a voice... but not one from any rodent I know.
+
+/SwitchCorrect4
+!SetGlobal(14,13)
+!PlaySound(PipePressure)
+-Info: You hear the hiss of building pressure.
+
+/SwitchCorrect5
+!SetGlobal(14,14)
+!PlaySound(PipePressure)
+-Info: You hear the hiss of building pressure.
+
+/SwitchCorrect6
+!SetGlobal(14,15)
+!PlaySound(PipeFlush)
+-InfoBig: You hear the distant sound|of running water.
+!HoldOn(0.5)
+!MysteryText(1)
+-Kraken: Pursuing tastes of sweeter meats,
+-Kraken: I braved foul streams|for gourmet treats.
+!MysteryText(0)
+!HoldOn(0.5)
+-Siobhan: That... that sounded pretty close.
+-Bruce: Aye... Cannae deny|I heard that one.
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+-Verm: What did you get us into, clown?
+
+/JustPin
+~LabyrinthLoop
+!AutoPinFollowers()
+!CheckGlobal(58,1,PostMimic)
+
+/StatueVi
+!CheckGlobal(16,1,SaveTimeVi)
+-InfoBig: It's a copper statue of a shrew holding a scroll.
+-InfoBig: The plaque reads:||"Beauty can be found in all things."||- Buildmaster Vishruvius, first architect of Murida.
+!SetGlobal(16,1)
+>SaveTimeVi
+
+/SaveTimeVi
+-InfoBig: Vishruvius plans ahead.|Save your game?
+*SaveYesVi: Save.
+*SaveNoVi: Not now.
+
+/SaveYesVi
+!SaveGame(The Labyrinth,Entrance)
+-Info: Your game has been saved.
+/SaveNoVi
+
+/Statue
+!CheckGlobal(17,1,SaveTime)
+-InfoBig: It's a copper statue of some kind of warrior.
+-InfoBig: It seems to have been damaged by the elements.
+-InfoBig: The head is missing, and the plaque has eroded beyond comprehension.
+!SetGlobal(17,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: The nameless warrior still stands.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(The Labyrinth,Inner depths)
+-Info: Your game has been saved.
+/SaveNo
+
+
+/GotAProblem
+~LabyrinthLoop
+!AutoPinFollowers()
+!HoldOn(0.5)
+!BigTitle(The Labyrinth,What denizens lurk within?)
+!Walk(Verm,UR,0.5)
+!HoldOn(0.5)
+!UnpinFollowers()
+!Walk(Verm,R,0.3))
+!Walk(Siobhan,U,0.6)
+!Walk(Bruce,UR,1.3)
+!HoldOn(0.3)
+!SetAnim(Verm,UR)
+!HoldOn(0.3)
+!SetAnim(Siobhan,UR)
+!HoldOn(1.3)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+-Bruce: We've got a problem.
+-Bruce: Our route goes via this tunnel.
+-Bruce: But it's all clogged with fat and gunk and gods-know-what.
+
+*Wedig: So we dig?
+*Weeat: So we eat?
+*Weback: So we go back?
+
+/Wedig
+-Verm: So we dig?
+-Bruce: Yer welcome to get yer hands dirty, lad.
+-Bruce: But I ain't touching that foul blob.
+>BetterIdea
+
+/Weeat
+-Verm: So we eat?
+-Bruce: Eat?
+-Verm: You said it's fat, right? So we can just feast our way through.
+-Bruce: The hell's the matter with ye?
+-Bruce: Does this blob look appetising?
+-Verm: I mean, food is food.
+>BetterIdea
+
+/Weback
+-Verm: So we go back and find another way through.
+-Bruce: There's no other way, lad.
+-Bruce: Except the merchant tunnel, I suppose, but that's heavily guarded...
+>BetterIdea
+
+/BetterIdea
+-Siobhan: I've got a better idea.
+!SetGlobal(14,5)
+-Siobhan: This is an Underriver pipe, right? So there must be a way to control the water flow.
+-Siobhan: If we can increase the pressure, the blockage will pop right out.
+-Bruce: Hey, yer a smart one, ain't ye?
+-Bruce: I reckon that just might work.
+-Bruce: Let's go find a tap or lever or some'in.
+
+!Walk(Siobhan,DR,0.6)
+!Walk(Bruce,D,0.7)
+!HoldOn(0.7)
+!AutoPinFollowers(1)
+
+/ItWorked
+!AutoPinFollowers()
+!Walk(Verm,DR,0.5)
+!HoldOn(0.7)
+!SetGlobal(14,7)
+-Siobhan: Woah, that actually worked...
+-Bruce: Nice job, both of ye. Let's press on.
+
+/AnotherOne
+!AutoPinFollowers()
+!Walk(Verm,UL,1.5)
+!HoldOn(1.6)
+!SetAnim(Bruce,U)
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,UR)
+!SetGlobal(14,8)
+-Bruce: Looks like another blocked pipe, fellas.
+-Verm: What a pain...
+-Bruce: No point dawdlin'.|Let's solve this.
+
+/AnotherDown
+!AutoPinFollowers()
+!Walk(Verm,DR,0.3)
+!HoldOn(0.3)
+!Walk(Verm,D,0.6)
+!HoldOn(0.6)
+!Walk(Verm,DR,0.3)
+!HoldOn(0.3)
+!SetGlobal(14,11)
+-Verm: Another pipe unclogged of god filth.
+!SetAnim(Bruce,DR)
+-Bruce: Hey, mouse. I can't help but notice...
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Bruce: You dinnae have a tail.
+-Verm: So what?
+-Bruce: Just curious where it went, s'all.
+-Verm: The Yellow God took it.
+!HoldOn(0.1)
+!Nani(Bruce,?)
+!HoldOn(0.4)
+-Bruce: Yellow God?
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: Sir Verm is looking for him. He's headed to Murida to find leads.
+-Verm: Then I'm going to kill him.
+!Nani(Siobhan,!)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+-Siobhan: Wait, what?!
+-Siobhan: You didn't mention that before!
+-Bruce: A mouse who wants to kill a god? Yer one mad lad...
+
+/Buggy
+~Stop
+!PlaySound(EnemyInbound)
+!Nani(Buggy,!)
+!HoldOn(1)
+-Verm: A foul roach...
+-Bruce: Just a wee bug.|Ye've got this.
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+-Verm: Oh, so you're literally not going to help?
+-Bruce: Nae bother. Ye've got this.
+-Verm: Ugh. Fine. Help me out, Siobhan.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!NormalBattle(Buggy,70)
+
+/Buggy2
+~Stop
+!Nani(Buggy2,!)
+!PlaySound(EnemyInbound)
+!HoldOn(1)
+!NormalBattle(Buggy2,71)
+
+/Buggy3
+~Stop
+!PlaySound(EnemyInbound)
+!Nani(Buggy3,!)
+!HoldOn(1)
+!NormalBattle(Buggy3,72)
+
+/LastOne
+!AutoPinFollowers()
+!Walk(Verm,DR,0.3)
+!HoldOn(0.3)
+!Walk(Verm,D,0.7)
+!HoldOn(0.7)
+!Walk(Verm,DR,0.5)
+!HoldOn(0.5)
+!SetAnim(Bruce,R)
+!SetAnim(Verm,R)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,UR)
+!SetGlobal(14,12)
+-Verm: Another blockage?|This is getting tedious.
+-Bruce: This is the last one, I swear.
+-Bruce: Murida is right on the other side of this pipe.
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: Hey Bruce, why are you headed to Murida anyway? Going to busk for seeds?
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+-Bruce: Not quite. I'm meeting up with my b-|My bandmate.
+-Bruce: Then we're gonna head to Sky Garden to play music for the Squirrel Duke.
+-Siobhan: Woah... I've always wanted to see Sky Garden.
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: Don't bother. I hear the squirrels there are a violent bunch.
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+-Siobhan: Verm! That's so rude.
+-Bruce: Ha ha. Nae, it's true.
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Bruce: Sky Garden's ruled|o'er by Clan Grey.
+-Bruce: They've long earned their reputation as a bunch o' nasty bampots.
+-Bruce: Anyways. Let's get this over with.
+
+/FoundSeeds
+-Info: You found a Button Shield. Did a previous adventurer drop this?
+
+/FoundMimic
+!HoldOn(1)
+!SetGlobal(58,1)
+-Info: You found an avarice spider.
+!GoToBattle(TrapSpider)
+
+/PostMimic
+!HoldOn(1)
+!SetGlobal(58,2)
+!PlaySound(ItemFound)
+-Info: You picked up an insect part.
+-Info: Gross. Why did you do that?
+-Info: You add it to your trinkets nonetheless.
+
+/KrakenTime
+!AutoPinFollowers()
+!OverworldCameraPan(320,320,1,1)
+!Walk(Verm,UR,0.3)
+!HoldOn(0.3)
+!UnpinFollowers()
+!Walk(Verm,R,0.4)
+!Walk(Siobhan,UR,0.2)
+!Walk(Bruce,UR,0.2)
+!HoldOn(0.3)
+!SetAnim(Siobhan,UR)
+!SetGlobal(14,16)
+!Walk(Bruce,U,0.6)
+!HoldOn(0.2)
+!SetAnim(Verm,U)
+!HoldOn(0.5)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.5)
+-Verm: What is that?!
+-Bruce: Just a wee bug.|Ye've got this.
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: That's not a bug, you flea-bitten fool!
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Siobhan: It looks like the deep sea denizens I've read about.
+-Siobhan: Did it come all this way for a meal?
+!MysteryText(1)
+-Kraken: Now here I stand. Thy lives forsaken.
+!HoldOn(0.1)
+!MysteryText(0)
+-Kraken: Commit my name for I am Kraken!
+!GoToBattle(Kraken)
+
+/PostKraken
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UR)
+!SetAnim(Bruce,DR)
+!HoldOn(1)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(0.2)
+!LevelUp(Bruce)
+!HoldOn(1)
+
+!PlaySound(NewMove)
+-InfoBig: Siobhan learned Overclock.
+
+!HoldOn(1)
+-Verm:  . . . 
+!HoldOn(1)
+-Siobhan:  . . . 
+!HoldOn(1)
+!SetGlobal(14,17)
+-Bruce: What did I tell ye?
+-Bruce: Just a wee bug.
+!Walk(Verm,UL,0.4)
+!HoldOn(0.5)
+-Verm: An ocean monster doesn't count as a "wee bug"!
+-Bruce: Nae bother. Ye had it in the bag.
+!Walk(Verm,UL,0.3)
+!HoldOn(0.4)
+-Verm: I don't appreciate being deceived.
+!Walk(Bruce,DR,0.5)
+!HoldOn(0.7)
+-Bruce: I got hee-haw tae hide.
+-Verm: Oh yeah? Then why wear a mask?
+!HoldOn(0.4)
+!SetAnim(Siobhan,U)
+!HoldOn(0.4)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.5)
+-Siobhan: Why are you two fighting?|We're nearly at Murida.
+-Bruce: Yer mole friend is right.
+-Bruce: What's done is done.|Nae point squabblin'.
+-Verm: I guess.
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: Alright. To Murida...
+!Walk(Siobhan,U,0.3)
+!HoldOn(0.4)
+!AutoPinFollowers(1)
+
+
+End scene

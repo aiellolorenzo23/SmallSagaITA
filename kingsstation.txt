@@ -1,0 +1,155 @@
+/JustPin
+~LondonLoop
+!AutoPinFollowers()
+
+/Intro
+~LondonLoop
+!AutoPinFollowers()
+
+/PigeonEntrance
+~LondonLoop
+!TurnOffBlocks(0)
+!PigeonArrival()
+-Dizi: This station is Murida. Hope you had a pleasant flight.
+!TurnOnBlocks(0)
+!AutoPinFollowers(1)
+!CameraFollow(1)
+
+/PigeonEntranceFirst
+~LondonLoop
+!TurnOffBlocks(0)
+!PigeonArrival()
+!HoldOn(2)
+-Dizi: This station is Murida.|Had a good flight?
+!TurnOnBlocks(0)
+-Verm: Yeah, pretty smooth.|What did you think, Siobhan?
+!HoldOn(1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.9)
+-Verm: Ah. She's gone.
+-Dizi: Yeah. Moles ain't built for flying.
+-Dizi: Anyways. Murida's through a gutter over there.
+-Dizi: It'll take you to a pipe that goes down, way down, to the Underriver level. 
+-Verm: So Murida lies below us...
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.5)
+-Verm: Just what kind of fancy god-building is this place, anyway?
+-Dizi: Beats me, mousegang. Us pigeons just call it the belfry.
+!NormalJump(Siobhan,2,50,1065,342,JDL,DL)
+!HoldOn(0.6)
+-Siobhan: The gods call it the Western Palace. It's just some old building they use for bureaucratic work.
+-Siobhan: But we won't see any godly business because Murida lies below the floorboards.
+-Siobhan: The rodent city and the godly city... Two societies that are so close but never overlap...
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+-Verm: Guess you're feeling better.
+-Siobhan: Oh, uh, I suppose I am.
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+-Siobhan: Thank you for the trip,|Mister Dizi.
+-Dizi: No probs.
+-Dizi: You two got me out of a real pickle.
+-Dizi: So feel free to stop by if you need to go somewhere else.
+!AutoPinFollowers(1)
+!CameraFollow(1)
+!SetGlobal(12,3)
+!TurnOnPar()
+
+/Basket
+-Dizi: All aboard!
+!CameraUnfollow()
+!UnpinFollowers()
+!CheckGlobal(32,9,SioFlight)
+!PigeonFlight(OverMap)
+
+/SioFlight
+!PigeonFlight(TreePath0)
+
+/Dizi
+!CheckGlobal(32,4,DiziSecond)
+-Dizi: I'll just be chilling around here. Got some seeds to munch on.
+
+/DiziTrigger
+!UnpinFollowers()
+!Walk(Verm,R,0.4)
+!Walk(Siobhan,R,0.4)
+!SetGlobal(26,12)
+~DiziLoop
+!OverworldCameraPan(1080,180,2,1)
+!HoldOn(0.5)
+!TeleportCharacter(Verm,730,330)
+!TeleportCharacter(Siobhan,690,350)
+!Walk(Verm,R,2.4)
+!Walk(Siobhan,R,2)
+!HoldOn(2.4)
+!SetAnim(Verm,DR)
+-Dizi: Eyy, you two again. The bin busters.
+-Dizi: Off on another adventure?
+-Verm: Do you know the squirrel city of Sky Garden?
+-Dizi: Yeah, yeah, course.
+-Dizi: Actually, I just came back from delivering some oddballs that way.
+-Dizi: Is there a festival going on or some'in?
+-Siobhan: A band of oddballs?
+-Siobhan: Do you think it was Bruce?
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+-Verm: Well, he fits the profile.
+-Siobhan: I hope he's fairing well.
+-Verm: He's a squirrel amongst squirrels. I'm sure he's right at home.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+-Dizi: Bird got things to do. So hop in the basket when you're ready.
+!SetNPCFlag(Dizi,DiziNorth)
+!AutoPinFollowers()
+!CameraFollow(1)
+
+/DiziNorth
+-Dizi: Sky Garden is due north of here. Skies are clear. Should be a smooth flight.
+
+/SioTime
+!SetGlobal(32,9)
+!Walk(Siobhan,R,0.4)
+~DiziLoop
+!OverworldCameraPan(1080,180,2,1)
+!HoldOn(0.5)
+!TeleportCharacter(Siobhan,690,350)
+!Walk(Siobhan,R,2.4)
+!HoldOn(2.4)
+!SetAnim(Siobhan,DR)
+-Dizi: Eyyyy, it's you!|One half of the Bin Busters!
+-Dizi: Ain't seen you in ages.
+-Dizi: Where's the other one?|The little mad lad?
+-Siobhan: Um... Well...
+!HoldOn(0.7)
+-Dizi: Ah, no worries.|Bird knows where not to pry.
+-Dizi: Where you travelling to?
+-Siobhan: Sky Garden would be grand.
+-Dizi: No trouble at all. The basket's all set, so hop in when you're ready.
+!SetNPCFlag(Dizi,DiziNorth2)
+!CameraFollow(1)
+
+/DiziNorth2
+-Dizi: Got some Autumnal winds in the air. Sky Garden ain't far though.
+
+/Gutter
+!NextRoom(MuriTunnel,2)
+
+
+
+
+End scene

@@ -1,0 +1,166 @@
+/Intro
+
+!CheckGlobal(5,7,IntroContinue)
+!TeleportCharacter(Siobhan,3060,400)
+/Nemain
+-Nemain: What do you want, vagabond?
+*Fight: A fight.
+*Answers: Answers.
+*Nothing: Nothing.
+
+/Fight
+-Verm: Want a fight?
+-Nemain: As tempting as it would be to knock your whiskers off, only a fool fights over nothing.
+-Nemain: Off with you already.
+
+/Nothing
+-Verm: Nothing.
+-Nemain: Then stop gawking and be on your way.
+
+/Answers
+-Verm: I'm just curious...
+-Verm: What's a hedge knight doing playing blademaster for a puny mole village?
+-Verm: Shrews would pay you triple.
+-Nemain: Not everything is about seeds.
+-Nemain: Cranbaile needed help, so here I stand.
+-Verm: Some help you've been.
+-Nemain: I've tussled with plenty of titans in my time.
+-Nemain: Victories are short-lived. The consequences are often grim.
+-Nemain: Maybe you can't see beyond your own nose, but Lady Gilda is thinking of the village's future.
+-Verm: And what about Siobhan's future?
+-Nemain: What of it? Watch over her, or you'll answer to my mace.
+
+/Gilda
+-Gilda: Was I not clear? Get out.
+
+/Morvyn
+-Morvyn: Corrupting young Siobhan... Detestable.
+
+/IntroContinue
+!UnpinFollowers()
+!HoldOn(0.3)
+!TeleportCharacter(Verm,217,444)
+!TeleportCharacter(Siobhan,168,417)
+!Walk(Verm,UR,0.9)
+!Walk(Siobhan,UR,0.9)
+!HoldOn(1)
+!SetGlobal(5,8)
+
+-Gilda: Why are you still here, vagabond? I thought I made myself clear-
+-Siobhan: Mammy, you'll never guess what!
+-Siobhan: Sir Verm and I fought off Tiger! We actually did it!
+!Nani(Nemain,!)
+!HoldOn(0.6)
+-Nemain: You?! You slayed the felidae?
+-Siobhan: Well, we didn't quite slay it...
+-Siobhan: But we certainly sent him running!
+-Siobhan: That mangy monster will be licking his wounds for seasons!
+-Morvyn: My word, Siobhan.
+-Morvyn: I knew you were no dainty Lady, but this... this is something else.
+!HoldOn(0.5)
+-Gilda:  . . .
+!HoldOn(0.5)
+-Siobhan: Don't you have anything to say, Mammy?
+!SetAnim(Morvyn,Look)
+-Gilda: I do. You disappoint me, Siobhan.
+-Siobhan: I disappoint you? I've freed us from Tiger's tyranny!
+-Gilda: You short-sighted fool of a daughter! What will happen if the gods see us as a threat?
+-Gilda: Blades and Poison! Fire and water! They would rain hell on us, and it would be the end of Cranbaile.
+!SetAnim(Morvyn,LookBack)
+-Siobhan: Mammy...
+-Gilda: Get out.
+-Siobhan: Fine.
+!SetAnimEnd(Morvyn,Loop)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+-Siobhan: Come on, Verm. I'll see you to the entrance.
+
+-Gilda: No, Siobhan. Leave.
+!SetAnimEnd(Siobhan,R)
+!HoldOn(0.1)
+!SetAnimEnd(Siobhan,UR)
+-Siobhan: Leave?
+-Gilda: You want to be a warrior so much, like your father was?
+-Gilda: You want to tinker with god tools and fight titans?
+-Gilda: Well fine. You've got your wish. I'm exiling you from Cranbaile Village.
+-Siobhan: ...Mammy?
+-Gilda: Go on. Leave. Don't come back.
+
+!HoldOn(1.2)
+!SetAnim(Siobhan,R)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!SetAnim(Verm,UL)
+!HoldOn(0.6)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(1.2)
+!Walk(Siobhan,DL,1.1)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.9)
+!Exit(Siobhan)
+!HoldOn(0.5)
+-Gilda: Verm, wasn't it? You've caused enough damage here, I think.
+-Verm: Whatever.
+
+!HoldOn(0.5)
+!Walk(Verm,DL,0.5)
+!HoldOn(1.2)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!Walk(Verm,UR,0.2)
+!HoldOn(0.5)
+
+-Verm: Y'know...
+-Verm: I came here because I heard Cranbaile was the gathering place of the smartest minds in Rodentia.
+-Verm: But all I found are stubborn idiots.
+-Verm: Do you want to follow the Old Way or do you want to survive?
+-Gilda: The Old Way is survival.
+-Verm: The Old Way is dead.
+-Verm: Siobhan gets that. Why can't you?
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Gilda: Get out!
+
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!Walk(Verm,DL,0.7)
+!HoldOn(0.7)
+!Exit(Verm)
+!HoldOn(0.5)
+!OverworldCameraPan(320,300,1,1)
+!HoldOn(1.7)
+
+!SetAnim(Gilda,LookLeft)
+!HoldOn(0.2)
+-Gilda: Was I too harsh on Siobhan, Loremaster?
+!SetAnimEnd(Morvyn,Look)
+-Morvyn: A harsh lesson is sometimes needed, my Lady.
+-Morvyn: But perhaps, if it would ease my Lady's worries, I could send a butterfly?
+-Gilda: A butterfly?
+-Morvyn: To the King. A formal request to overwatch the girl, should she enter Murida.
+!HoldOn(1)
+!SetAnim(Gilda,Loop)
+!HoldOn(0.5)
+-Gilda: Very well.
+!HoldOn(0.3)
+!NextRoom(Molebury,4)
+
+End scene

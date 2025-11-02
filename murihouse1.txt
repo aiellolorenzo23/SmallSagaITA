@@ -1,0 +1,28 @@
+/Intro
+!CheckGlobal(50,0,IntroCont)
+!CheckGlobal(50,1,IntroCont)
+
+/IntroCont
+~Murida2Loop
+
+/Cassandra
+!CheckGlobal(10,2,Cassandra2)
+-Cassandra: This cube costs me 2000 seeds a month, and it doesn't even come with a loo.
+
+/FoundSeeds
+-Info: You found 4 seeds.
+!Nani(Cassandra,!)
+!HoldOn(0.4)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Cassandra: Hey, you're good at robbing people. Ever thought about being a landlord?
+
+/Cassandra2
+!CheckGlobal(50,0,Cassandra3)
+!CheckGlobal(50,1,Cassandra3)
+-Cassandra: What's all that racket outside? I don't pay 4000 seeds a month to put up with this.
+
+/Cassandra3
+-Cassandra: My rent's gone up to 3000 seeds a month, and I still don't have a loo.

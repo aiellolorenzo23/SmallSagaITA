@@ -1,0 +1,395 @@
+/Intro
+~ViniumLoop
+
+/RoomReunion
+!SetGlobal(32,15)
+!SetGlobal(38,3)
+!HoldOn(1.8)
+-Siobhan: This is your house?
+-Verm: It's a long story.
+!CheckGlobal(89,11111,VermAdjust)
+-Gwen: It's nicely decorated.|You've added a personal touch.
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: Thanks for noticing.
+>VermCont
+/VermAdjust
+-Gwen: The decor doesn't exactly scream "warrior mouse".
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: Yeah, I know, I know.|It could use some redecorating.
+>VermCont
+/VermCont
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+-Verm: So. What's this thing you|wanted to show me?
+!Walk(Siobhan,UR,0.3)
+!HoldOn(0.9)
+!PlaySound(R7)
+!TeleportCharacter(Sword,371,230)
+!SpecialWalk(Siobhan,DL,0.4,URWalk,1)
+!HoldOn(0.4)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.4)
+-Siobhan: Ta da!
+!HoldOn(0.5)
+~Verm
+!HoldOn(0.5)
+-Verm: This is... my sword?
+!HoldOn(0.3)
+!SetAnim(Verm,Reach)
+!HoldOn(0.5)
+-Verm: I didn't think I'd|ever see it again.
+-Gwen: It was in a right state|when we found it.
+-Gwen: All credit goes to Siobhan for their top-notch restoration work.
+-Siobhan: The blade should be as hard and sharp as it ever was.
+-Siobhan: I oiled it and adjusted|the screws too!
+!HoldOn(0.4)
+-Siobhan: But... sorry about the colour.
+-Siobhan: We didn't have any red paint, so we had to make do with a lime wash.
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+-Verm: No, no, I like the new colour.
+-Verm: It reminds me of someone.
+!HoldOn(0.6)
+!SetAnim(Siobhan,U)
+!HoldOn(0.9)
+-Siobhan: Gwen! Give Verm that other thing...
+-Gwen: Right. Could you two give us some privacy for a sec?
+!HoldOn(0.2)
+!Nani(Bruce,?)
+!HoldOn(0.5)
+-Siobhan: Come on, Bruce.
+!Walk(Bruce,DR,0.6)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!Walk(Siobhan,DL,0.2)
+!HoldOn(0.1)
+!PlaySound(ViniumDoor)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!TeleportCharacter(Siobhan,-308,520)
+!HoldOn(0.1)
+!Walk(Bruce,DL,0.2)
+!HoldOn(0.2)
+!TeleportCharacter(Bruce,-308,520)
+
+!HoldOn(1)
+-Gwen: I made you something.
+-Gwen: Well, with Siobhan's help. They're the techie, after all.
+!HoldOn(0.5)
+-Verm: A tail?
+-Gwen: Right. Made of steel.
+!HoldOn(1.2)
+-Gwen: I won't push you to|try it on, Verm.
+-Gwen: Many disabled rodents feel more comfortable not wearing a prosthesis.
+!HoldOn(0.4)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.4)
+-Verm: It's not about comfort. I just never gave the idea of wearing a false tail much thought.
+!HoldOn(0.6)
+-Verm: All my life I've been struggling.
+-Verm: I'm used to it. I feel like I deserve to struggle or something.|That I'm better for it.
+!HoldOn(0.4)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.4)
+-Verm: But it's stupid.|And exhausting.
+-Verm: I'm tired of struggling.
+!HoldOn(0.4)
+-Verm: So, yeah. I'll give it|a try, at least.
+!HoldOn(1.2)
+-Gwen: You've grown a lot|since I last saw you.
+!HoldOn(0.4)
+-Gwen: You're still a little dwt, though.
+-Verm: "Doot". What does that|word even mean?
+-Gwen: Heh, don't worry about it.
+-Gwen: Turn around.|I'll put this on.
+!NextRoom(ToBlack)
+!HoldOn(1.2)
+!TeleportCharacter(Sword,-608,520)
+
+!SetAnim(Gwen,D)
+!VermSwitch()
+!NextRoom(FromBlack)
+!HoldOn(1.2)
+-Gwen: How's the fit?
+
+!HoldOn(0.5)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.8)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.7)
+-Verm: Pretty snug.
+!HoldOn(0.2)
+!NormalJump(Verm,2.7,20,346,244,JDL,DL)
+!HoldOn(1)
+-Verm: Something feels different.
+-Gwen: I'll bet it does. Your balance is completely different now.
+-Gwen: Be patient. It'll take some time to get used to it. Weeks, at least.
+!HoldOn(0.3)
+!NormalJump(Verm,3,30,300,270,JDL,DL)
+!HoldOn(0.4)
+!NormalJump(Verm,3,20,386,224,JDL,DL)
+!HoldOn(0.2)
+!SetAnim(Gwen,DR)
+!HoldOn(0.8)
+!PlaySound(NewMove)
+-InfoBig: Verm learned Nimblefoot.
+!HoldOn(0.6)
+-Gwen: ...Or maybe you'll adapt quickly.
+!HoldOn(0.3)
+!PlaySound(ViniumDoor)
+!TeleportCharacter(Bruce,316,297)
+!Enter(Bruce)
+!SetAnim(Bruce,UR)
+!HoldOn(1)
+-Bruce: Oh hey.|Nice tail.
+!Walk(Bruce,UR,0.2)
+!HoldOn(0.2)
+!Walk(Bruce,UL,0.6)
+!HoldOn(0.2)
+!TeleportCharacter(Siobhan,316,297)
+!Enter(Siobhan)
+!Walk(Siobhan,UR,0.2)
+!HoldOn(0.4)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.3)
+-Bruce: The gang's all back together then.
+-Bruce: What now?
+!HoldOn(0.6)
+-Verm: The seasons are changing fast.
+-Verm: The Yellow God is coming to Murida.
+-Verm: Let's go and greet him.
+!HoldOn(0.2)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(0.2)
+!LevelUp(Bruce)
+!HoldOn(0.2)
+!LevelUp(Gwen)
+!HoldOn(0.4)
+!SetAnim(Gwen,D)
+!Nani(Siobhan,!)
+!HoldOn(0.5)
+-Siobhan:  Oh! 
+-Siobhan: You just reminded me. I need to go speak with Plaguemaster Aquila.
+-Siobhan: They said they'll teach me about Excalibur.
+-Gwen: Excalibur, as in the legendary Sword of Rodentia?
+-Bruce: I've heard stories, but|that's just a myth, no?
+-Siobhan: Well, I suppose I'll find out.
+-Siobhan: If it is real, then we're going to need it to have any chance of surviving the Yellow God.
+!HoldOn(0.5)
+-Bruce: Murida it is then.
+-Verm: Right. Let's go.
+!Walk(Bruce,DR,0.6)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!Walk(Siobhan,DL,0.2)
+!Exit(Siobhan)
+!Walk(Gwen,D,0.7)
+!HoldOn(0.3)
+!Walk(Bruce,DL,0.2)
+!Exit(Bruce)
+!HoldOn(0.4)
+!Walk(Gwen,DL,0.2)
+!Exit(Gwen)
+!HoldOn(0.5)
+
+/Bed
+-Info: Change the bed?
+*YesBed: Yep.
+*Cancel: Nope.
+
+/YesBed
+-Info: What style?
+*Bed0: Bare boxes
+*Bed1: Wooden
+*Bed2: Steel
+*Bed3: Hammock
+
+/Bed0
+!ChangeFurniture(Bed,0)
+/Bed1
+!ChangeFurniture(Bed,1)
+/Bed2
+!ChangeFurniture(Bed,2)
+/Bed3
+!ChangeFurniture(Bed,3)
+
+/Cancel
+
+/Carpet
+-Info: Change the carpet?
+*YesCarpet: Yep.
+*Cancel: Nope.
+
+/YesCarpet
+-Info: What style?
+*Carpet0: Bare floor
+*Carpet1: Geometric
+*Carpet2: Triskelion
+*Carpet3: Thimble Guard
+*Carpet4: Sky Garden
+*Carpet5: Twilight
+*Carpet6: Elegant
+
+/Carpet0
+!ChangeFurniture(Carpet,0)
+/Carpet1
+!ChangeFurniture(Carpet,1)
+/Carpet2
+!ChangeFurniture(Carpet,2)
+/Carpet3
+!ChangeFurniture(Carpet,3)
+/Carpet4
+!ChangeFurniture(Carpet,4)
+/Carpet5
+!ChangeFurniture(Carpet,5)
+/Carpet6
+!ChangeFurniture(Carpet,6)
+/Carpet7
+!ChangeFurniture(Carpet,7)
+
+/Furniture
+-Info: Change the furniture?
+*YesFurniture: Yep.
+*Cancel: Nope.
+
+/YesFurniture
+-Info: What should we put here?
+*Furniture0: Barrel
+*Furniture1: Corn
+*Furniture2: Cauldron
+*Furniture3: Fancy chair
+*Furniture4: Candle
+
+/Furniture0
+!ChangeFurniture(Furniture,0)
+/Furniture1
+!ChangeFurniture(Furniture,1)
+/Furniture2
+!ChangeFurniture(Furniture,2)
+/Furniture3
+!ChangeFurniture(Furniture,3)
+/Furniture4
+!ChangeFurniture(Furniture,4)
+
+/Table
+-Info: Put something on the side table?
+*YesTable: Yep.
+*Cancel: Nope.
+
+/YesTable
+!CheckGlobal(32,13,TableEarly)
+!CheckItem(43,TableSqueaky)
+-Info: What should we put here?
+*Table0: Nothing
+*Table1: Flower vase
+*Table2: Fancy statue
+*Table3: Siobhan
+
+/TableEarly
+!CheckItem(43,TableEarlySqueaky)
+-Info: What should we put here?
+*Table0: Nothing
+*Table1: Flower vase
+*Table2: Fancy statue
+
+/TableEarlySqueaky
+-Info: What should we put here?
+*Table0: Nothing
+*Table1: Flower vase
+*Table2: Fancy statue
+*Table4: Squeaky
+
+/TableSqueaky
+-Info: What should we put here?
+*Table0: Nothing
+*Table1: Flower vase
+*Table2: Fancy statue
+*Table3: Siobhan
+*Table4: Squeaky
+
+/Table4
+!ChangeFurniture(Table,4)
+/Table0
+!ChangeFurniture(Table,0)
+/Table1
+!ChangeFurniture(Table,1)
+/Table2
+!ChangeFurniture(Table,2)
+/Table3
+!ChangeFurniture(Table,3)
+!SetVisibleNPC(Siobhan,0)
+!HoldOn(0.6)
+!TeleportCharacter(Siobhan,224,200)
+-Siobhan: Um...
+!TeleportCharacter(Siobhan,2014,219)
+
+/Wall
+-Info: Mount something on the wall?
+*YesWall: Yep.
+*Cancel: Nope.
+
+/YesWall
+-Info: What should we put here?
+!CheckItem(80,WallPainting)
+*Wall0: Nothing
+*Wall1: Champion poster
+*Wall2: Replica painting
+
+/WallPainting
+*Wall0: Nothing
+*Wall1: Champion poster
+*Wall2: Replica painting
+*Wall3: Soothing painting
+
+/Wall0
+!ChangeFurniture(Wall,0)
+/Wall1
+!ChangeFurniture(Wall,1)
+/Wall2
+!ChangeFurniture(Wall,2)
+/Wall3
+!ChangeFurniture(Wall,3)

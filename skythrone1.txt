@@ -1,0 +1,378 @@
+/Intro
+!AutoPinFollowers()
+
+/ChatAnton
+>Ready
+
+/Anton
+>Ready
+
+/Ready
+-Anton: Ready for big performance?
+*Performance: I'm ready.
+*NotYet: Not yet.
+
+/NotYet
+!SpecialWalk(Bruce,D,0.5,DWalkTucked,1)
+!HoldOn(0.6)
+
+/Performance
+-Bruce: Aye. Let's do this.
+!SetGlobal(18,7)
+!OverworldCameraPan(320,220,1,1)
+!HoldOn(1)
+
+-Evan: My Duke, it looks like your entertainment has arrived, lol.
+!SetAnim(Lamia,LookLeft)
+-Josh: Better late than never.
+!TeleportCharacter(Bruce,308,520)
+!TeleportCharacter(Anton,348,520)
+!OverworldCameraPan(320,303,0.5,1)
+!SpecialWalk(Bruce,U,1.3,UWalkTucked,1)
+!Walk(Anton,U,1.3)
+!HoldOn(1.3)
+!SpecialWalk(Bruce,UL,0.2,ULWalkTucked,1)
+!Walk(Anton,UR,0.2)
+!HoldOn(0.2)
+!SetAnim(Bruce,ULTucked)
+!HoldOn(0.3)
+!SetAnim(Anton,U)
+!SetAnim(Bruce,UTucked)
+-Josh: What am I looking at here?
+-Bruce: Pleasure to meet yer acquaintance, m'duke.
+!SetAnim(Lamia,LookRight)
+-Bruce: We are Bruce...
+-Anton: And Anton the Great!
+!SetAnim(Lamia,Loop)
+-Bruce: And we are honoured to serve.
+-Josh: Wow. Your accents are pretty good. Is this a comedy set?
+!HoldOn(0.2)
+!SetAnim(Bruce,URTucked)
+!HoldOn(0.1)
+!SetAnim(Bruce,RTucked)
+!SetAnim(Anton,LookLeft)
+!HoldOn(0.5)
+!SetAnim(Anton,LookUp)
+!SetAnim(Bruce,URTucked)
+!HoldOn(0.1)
+!SetAnim(Bruce,UTucked)
+-Anton: Um... No. That's just our voices.
+
+!HoldOn(0.2)
+-Josh: Shame.
+!HoldOn(0.4)
+!SetAnim(Josh,Puff)
+!HoldOn(3)
+-Bruce: M'duke, I  just have one question before we start.
+-Bruce: Where are all the flowers?
+!HoldOn(0.2)
+!Nani(Josh,?)
+!HoldOn(0.6)
+-Josh: Flowers?
+!HoldOn(0.2)
+-Bruce: A rainbow of flowers is the signature of Sky Garden, naw?
+!SetAnim(Anton,LookLeft)
+!HoldOn(0.2)
+-Anton: [Is this really the time, lapa?]
+!SetAnim(Anton,LookUp)
+-Josh: A rainbow of flowers? What century are you fellas from?
+-Josh: That nonsense was removed when my great great great grandpappy took the throne way back when.
+-Bruce: That's not right.
+-Bruce: The rainbow is the eternal symbol of Sky Garden.
+!SetAnim(Anton,LookLeft)
+!HoldOn(0.1)
+-Anton: [Psst! Bruce!|Keep calm!]
+~Stop
+-Josh: Wrong. The rainbow field was the symbol of Clan Red. Weakness and degeneracy.
+!SetAnim(Anton,LookUp)
+!HoldOn(0.1)
+!SetAnim(Lamia,LookLeft)
+!SetAnim(Josh,Snap)
+
+!HoldOn(2)
+~SkyAnthem
+!SetAnim(Tim,Toot)
+!HoldOn(2)
+!SetAnim(Josh,Loop)
+!HoldOn(1)
+-Josh: The symbol of Clan Grey is the Wayward Star above a Striped Sea.
+-Josh: It is a flawless emblem.
+!HoldOn(0.5)
+-Josh: The star stands for STRENGTH!
+!HoldOn(0.4)
+-Josh: Iron WILL!
+!HoldOn(0.3)
+-Josh: The seizing of|DESTINY MADE MANIFEST!
+!HoldOn(0.2)
+!ShoutMode()
+!HoldOn(0.1)
+-Josh: For we are ONE HOUSE!|UNDER THE GODS!
+!HoldOn(0.1)
+!ShoutMode()
+-Josh: INDOMITABLE!
+!HoldOn(0.1)
+!ShoutMode()
+-Josh: With FREEDOM!
+!ShoutMode()
+!HoldOn(0.1)
+-Josh: And RIGHTEOUSNESS!
+!ShoutMode()
+!HoldOn(0.1)
+-Josh: FOR ALL!
+!SetAnim(Lamia,LookRight)
+
+!HoldOn(0.8)
+!SetAnim(Lamia,Loop)
+!HoldOn(3)
+-Bruce: Ah. Yeah. Right ye are, m'duke.
+!HoldOn(0.5)
+-Josh: But enough patriotism.|Entertain me.
+
+!HoldOn(0.2)
+!SetAnim(Anton,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,uRTucked)
+!SetAnim(Anton,LookLeft)
+!HoldOn(0.1)
+!SetAnim(Bruce,RTucked)
+!HoldOn(0.2)
+-Anton: You ready, lapa?
+*WePerform: Heck yeah!
+*WeRun: Heck no!
+
+/WePerform
+-Bruce: Ready as ever.
+-Bruce: Let's play "Rat-Tailed Rover".|That always goes down well.
+>Instructions
+
+/WeRun
+-Bruce: Like hell I'm not!
+-Anton: Well, tough.|No running away now.
+-Bruce: Let's play "Rat-Tailed Rover".|That's a short'un.
+>Instructions
+
+/Instructions
+!SetAnim(Bruce,PlayPrepare)
+!SetAnim(Anton,PlayPrepare)
+-Anton: Sounds good to me.
+-Anton: Follow my lead. When I say left, you press left. When I say right...
+*InsRight: I press right.
+*InsReally: Really now?
+
+/InsRight
+-Bruce: I press right. And so on for up and down. I know my notes.
+-Anton: Okay! On my mark...
+>LetsPlay
+
+/InsReally
+-Bruce: Give me credit!|I know how to play my own flute!
+-Anton: Okay, okay! On my mark...
+>LetsPlay
+
+/LetsPlay
+
+!DanceTime()
+
+!CheckGlobal(20,4,Perfect)
+!CheckGlobal(20,3,Good)
+!CheckGlobal(20,2,Meh)
+
+-InfoBig: The members of the court|all look very bored.
+-InfoBig: Duke Josh is half asleep.
+>MaybeEncore
+
+/Meh
+-InfoBig: A few members of the court|are impressed.
+-InfoBig: But Duke Josh is yawning.
+>MaybeEncore
+
+/Good
+-InfoBig: The members of the court|are quite impressed.
+-InfoBig: But Duke Josh is stifling a yawn.
+>MaybeEncore
+
+/Perfect
+-Info: The members of the|court are amazed!
+-Info: Even Duke Josh can't help but smile.
+>PostPerformance
+
+/MaybeEncore
+-Info: Try again?
+*LetsPlay: Encore!
+*PostPerformance: That's enough.
+
+/PostPerformance
+-Evan: Lol, that was great! Good jawb!
+
+!CheckGlobal(20,4,PerfectPost)
+!CheckGlobal(20,3,GoodPost)
+!CheckGlobal(20,2,MehPost)
+
+-Info: You received a single, lonely seed as a tip.
+!MoneyLoss(-1)
+>AndWeContinue
+
+/MehPost
+-Info: You received 5 seeds as a tip.||Better than nothing.
+!MoneyLoss(-5)
+>AndWeContinue
+
+/GoodPost
+-Info: You received 10 seeds as a tip.||Not bad.
+!MoneyLoss(-10)
+>AndWeContinue
+
+/PerfectPost
+-Info: You received 15 seeds as a tip.||Aww yes!
+!MoneyLoss(-15)
+>AndWeContinue
+
+
+/AndWeContinue
+-Bruce: Psst. Anton.|How do ye think Pocket's doing?
+!NextRoom(SkyGardenUpper,3)
+
+/ArrestTime
+!SetAnim(Lamia,LookLeft)
+!HoldOn(1)
+!SetAnim(Josh,Puff)
+!HoldOn(4)
+!SetAnim(Josh,Loop)
+-Josh: Alright, alright.|That's quite enough.
+!SetAnim(Anton,LookUp)
+!SetAnim(Bruce,RTucked)
+!HoldOn(0.1)
+!SetAnim(Bruce,URTucked)
+!HoldOn(0.1)
+!SetAnim(Bruce,UTucked)
+-Josh: Not my usual jam, but I gotta say,|you two put on quite a show.
+!SetAnim(Lamia,LookRight)
+!OverworldCameraPan(320,480,1,1)
+!TurnOffBlocks(1)
+!HoldOn(1)
+!NormalJump(Marcellus,2,30,119,494,JumpDR,DR)
+!HoldOn(0.5)
+!NormalJump(Marcellus,2,30,318,539,JumpDR,DR)
+!HoldOn(0.2)
+!NormalJump(Bernardo,2,30,129,499,JumpDR,DR)
+!HoldOn(0.3)
+!NormalJump(Marcellus,2,30,228,427,JumpUL,UR)
+!HoldOn(0.2)
+!NormalJump(Bernardo,2,30,322,541,JumpDR,DR)
+!HoldOn(0.5)
+!NormalJump(Bernardo,2,30,424,436,JumpUR,UL)
+!OverworldCameraPan(320,310,0.5,1)
+!HoldOn(1)
+!SetAnim(Lamia,Loop)
+-Marcellus: Umm... Mister Duke Josh Sir...
+-Marcellus: Sorry to interrupt, and please don't be mad, but uh...
+-Bernardo: There's been a robbery.|The treasury's been ransacked.
+-Josh: What?!
+-Marcellus: Colonel Hank said the culprit was a lone jumping mouse, or somethin' like that.
+!SetAnim(Anton,LookLeft)
+-Anton: [Oh no. We're going to get found out, lapa!]
+!SetAnim(Bruce,URTucked)
+!HoldOn(0.1)
+!SetAnim(Bruce,RTucked)
+-Bruce: [Keep yer cool, babe.|We can wiggle out of this.]
+!SetAnim(Bruce,URTucked)
+!SetAnim(Anton,LookUp)
+!HoldOn(0.1)
+!SetAnim(Bruce,UTucked)
+-Evan: Lol. Robbed by one mouse.|Classic Hank.
+-Lamia: It's true that Hank's buffoonary knows no bounds.
+-Lamia: But still, even the boldest thief wouldn't dare to rob Sky Garden alone.
+-Lamia: If you want my counsel, Duke, there's something more going on here.
+-Josh: A conspiracy, huh...
+!HoldOn(1)
+-Josh: You. Harlequin.|Show me your tail.
+-Bruce: Very flattered, m'lord, but yer not my type.
+-Josh: Don't be weird.|I mean your actual tail.
+-Bruce: There ain't much to see, m'duke. S'just a tail.
+-Josh: Do not disrespect me.
+-Josh: Guards.
+!SetAnim(Josh,Snap)
+!HoldOn(1.4)
+!NormalJump(Bernardo,3,10,365,428,JumpUL,UL)
+!HoldOn(0.1)
+!NormalJump(Marcellus,3,10,292,431,JumpUR,UR)
+!HoldOn(0.2)
+!NormalJump(Bruce,3,10,307,404,JumpUR,DLTucked)
+!NormalJump(Francisco,2,16,363,394,JumpDL,DL)
+!HoldOn(0.1)
+!SpecialWalk(Anton,UL,0.2,DR,1.5)
+!HoldOn(0.5)
+!SetAnim(Josh,Loop)
+!SetProtaMode(0)
+-Bruce: H-hey! Get yer hands off me, ye flea-bitten, flag-worshippers!
+-Anton: Don't touch us!
+-Josh: Take the mask off too.
+!NextRoom(InstantBlack)
+
+!HoldOn(1.4)
+~PreHungerLoop
+!PlaySound(R8)
+!HoldOn(0.6)
+!PlaySound(Cloth)
+!TeleportCharacter(Bernardo,251,453)
+!TeleportCharacter(Marcellus,405,450)
+!TeleportCharacter(Francisco,433,396)
+!TeleportCharacter(Anton,370,399)
+!TeleportCharacter(Bruce,316,427)
+!SetAnim(Bruce,DRMaskless)
+!SetAnim(Bernardo,DrawR)
+!SetAnim(Marcellus,DrawL)
+!SetAnim(Anton,DL)
+!NextRoom(FromBlack)
+!HoldOn(1)
+!SetAnim(Bruce,DMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,DLMaskless)
+!HoldOn(0.4)
+!SetAnim(Bruce,DMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,DRMaskless)
+!HoldOn(0.3)
+-Lamia: That's interesting...
+-Evan: Lololololol!|Look at his flaming tail!
+-Josh: Yeah.
+!HoldOn(0.3)
+-Josh: Take it in, ladies and gents.
+!HoldOn(0.3)
+-Josh: We are in the company of a very special guest.
+-Josh: A squirrel of Clan Red.
+-Josh: Haven't had one of you fellas this far south in, what, a hundred years?
+!HoldOn(0.4)
+-Evan: Lol, hey Duke, remember what the Cailleach told you?
+-Evan: That thing about Raibeart returning to take back his throne? Lolol.
+-Josh: Shut up, Loremaster.|This ain't Red Raibeart.
+-Josh: It's just a pair of prancing fairies.
+!HoldOn(0.2)
+!SetAnim(Bruce,RMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,URMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,UMaskless)
+!HoldOn(0.3)
+!ResetWalkSpeed(Anton)
+-Bruce: M'Duke, we're not here tae take anyone's throne.
+-Bruce: Please understand. I...|I just wanted tae see my home...|Tae see my heritage...
+-Josh: "Muh heritage!"|Gods, this is beyond cringe.
+-Josh: Guards, take 'em to the dungeon.|Lamia, execute 'em at dawn.
+-Bernardo: You heard the Duke!|Move it, you two.
+!Walk(Anton,DL,0.2)
+!SetAnim(Bruce,URMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,RMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,DRMaskless)
+!HoldOn(0.1)
+!SetAnim(Bruce,DMaskless)
+-Lamia: I'll see you two in the morning.
+-Lamia: Right around breakfast time.
+!NextRoom(ToBlack)
+~Stop
+!HoldOn(1)
+!NextRoom(PrisonExit,3)
+
+End scene

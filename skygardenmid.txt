@@ -1,0 +1,141 @@
+/Intro
+!AutoPinFollowers()
+!CheckGlobal(10,2,PostMusic)
+!CheckGlobal(18,40,PostMusic)
+~SkyGarden1Loop
+
+/PostMusic
+~SkyGarden3Loop
+
+Clan Grey's ruled Sky Garden since Red Raibeart was ousted some hundred years ago.
+But that's all ancient history now.
+
+/Reynaldo
+-Reynaldo: Colonel Hank wields an actual god cannon, just like the ones in the Westlands.
+-Reynaldo: He let me hold it once.|I've never felt more powerful.
+
+/Bea
+!CheckGlobal(10,2,PostBea2)
+!CheckGlobal(18,40,PostBea)
+-Bea: Every morning, we line up pledge allegiance to the Wayward Star.
+-Bea: Do y'all have that in Murida?
+
+/PostBea
+-Bea: No Duke...|Does that mean no more pledges?
+/PostBea2
+-Bea: Guess what? No morning pledges!
+-Bea: I still have to go to school, though.
+
+/Luna
+!CheckGlobal(10,2,PostLuna2)
+!CheckGlobal(18,40,PostLuna)
+-Luna: Those two creeps always give us weird comments.
+-Luna: But it's not like we can say anything, y'know.
+
+/PostLuna
+-Luna: This? It's nothing. You should see the other guy.
+
+/Aarti
+-Aarti: I was rotting away in the dungeons, when suddenly a dapper hamster and a roguey jerboa busted my cell door open.
+-Aarti: Next thing I knew, it was an all-out brawl. Guards versus inmates!|Wild times.
+
+/Samira
+!CheckGlobal(10,2,PostSamira)
+-Samira: It's so weird seeing the sky again.
+-Samira: Why was I in jail in the first place? Buddy, I haven't the foggiest.
+
+/PostSamira
+-Samira: I'm starting a pawball team.|Wanna sign up?
+!CheckGlobal(99,2,PostSamira2)
+-Verm: I've got a bit too much on my plate for that right now. Sorry.
+-Samira: Dang.
+
+/PostSamira2
+-Siobhan: I don't think I've got the agility for that. Sorry.
+-Samira: Dang.
+
+/PostLuna2
+-Luna: You like the new decor?|Matilda, Samira, and me put it together.
+
+/Osric
+-Osric: I mean, sure, the Colonel is tough, but the Blademaster is on another level.
+-Osric: A stoat in heavy armour?|That combo just has no weakness.
+
+/Matilda
+!CheckGlobal(99,3,MatildaBruce)
+!CheckGlobal(99,2,MatildaLate)
+!CheckGlobal(36,5,MatildaAb)
+!CheckGlobal(10,2,MatildaLate)
+!CheckGlobal(18,40,MatildaLate2)
+-Matilda: I thought I would feel at home in a squirrel city, but the air is so heavy here.
+
+/MatildaBruce
+-Matilda: Are you friends with the little guy with a big guitar? He went upstairs.
+-Matilda: Y'all be careful now.|The Duke doesn't mess around.
+
+/MatildaAb
+!SetGlobal(36,6)
+-Verm: I don't suppose you're Matilda?
+-Matilda: Yes, I am.
+-Matilda: Wait. Let me guess. That pesky Abbozzato roped you into running his errands?
+-Matilda: Yeah, yeah. You're not the first.
+-Matilda: Well. Go on. What did he saddle you with?
+!ShowItem(Prota,51)
+!HoldOn(0.6)
+-Verm: He wanted you to dye some cloth.
+-Matilda: Gosh golly, is that all? He sent you all this way for a tiny square of fabric?
+-Matilda: That's good silk, though. A grade. A plus, even. No denying that.
+-Matilda: What colour did he ask for?
+-Verm: Red.
+-Matilda: Hmm. What shade, specifically?
+*Cinnabar: Cinnabar
+*Crimson: Crimson
+*Maroon: Maroon
+*Scarlet: Scarlet
+*Red: Red
+
+/Cinnabar
+-Verm: Cinnabar?
+-Matilda: You don't sound certain. But alright.
+>Dyeit
+/Crimson
+-Verm: Crimson.
+-Matilda: Sounds good.
+>Dyeit
+/Maroon
+-Verm: Maroon?
+-Matilda: You don't sound certain. But alright.
+>Dyeit
+/Scarlet
+-Verm: Scarlet?
+-Matilda: You don't sound certain. But alright.
+>Dyeit
+/Red
+-Verm: It's literally all red to me.
+-Matilda: Well... okay. I'll take my best guess.
+>Dyeit
+/Dyeit
+-Matilda: I'll dye it lickety-split. Sit tight for a moment.
+!NextRoom(ToBlack)
+!HoldOn(1.4)
+!NextRoom(FromBlack)
+!ShowItem(Matilda,52)
+!HoldOn(0.7)
+-Matilda: Ta-da!
+!PlaySound(ItemFound)
+!LoseItem(51)
+!ReceiveItem(52)
+-Info: You received a dyed silk square. Yep, that's some shade of red alright.
+-Matilda: You go and tell Mr Abbozzato that if he keeps this up his nonsense, the Guard's gonna come a-knocking, y'hear?
+!HoldOn(0.2)
+!Nani(Verm,?)
+!HoldOn(0.6)
+-Verm: Huh? Is he doing something illegal?
+-Matilda: Gosh golly, you've got no idea. Run along now.
+
+/MatildaLate2
+-Matilda: I gave those guards a piece of my mind! [And a furious beating.]
+-Matilda: Gosh golly, my mom would be furious if she found out!
+
+/MatildaLate
+-Matilda: Now that things have cooled down, I should start a vintage dress shop...

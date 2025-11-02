@@ -1,0 +1,129 @@
+/Intro
+!AutoPinFollowers()
+
+/Dizi
+!CheckGlobal(32,9,SioDizi)
+-Dizi: I'm all set whenever you are, mousegang.
+
+/PigeonEntrance
+~GardenLoop
+!PigeonArrival()
+!CheckGlobal(32,9,SioLand)
+-Dizi: This stop is Sky Garden. Mind the gap.
+!AutoPinFollowers(1)
+
+/SioLand
+!SetGlobal(32,9)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+-Dizi: A'ight, here we are, here we are.
+-Siobhan: Thank you, Dizi. How much do I owe you?
+-Dizi: Nothing. Don't worry about it.
+-Dizi: The new management over at Sky Garden has me on the payroll.
+-Dizi: It's pretty good, actually. I ain't never going back to freelancing.
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+-Siobhan: The new management...
+
+/SioDizi
+-Dizi: Don't mind me. I'm just gonna vibe for a bit.
+
+/PigeonEntranceFirst
+~GardenLoop
+!SetGlobal(18,13)
+!PigeonArrival()
+!SetAnim(Verm,L)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,U)
+-Dizi: A'ight, this stop is Sky Garden.
+-Dizi: Well, almost Sky Garden.|Put your walking boots on.
+-Verm: You can't get us any closer?
+-Dizi: Nah, no can do.|Them grey squirrels are vicious.
+-Dizi: I had a mate who violated their airspace, and the squirrels shot him down with a magic missile.
+-Dizi: No warning shots.|Just straight up-
+!HoldOn(0.1)
+!ShoutMode()
+-Dizi:  POW! 
+!HoldOn(0.3)
+-Dizi: Dead.
+!HoldOn(0.6)
+-Siobhan: That's horrible.
+-Dizi: Hah. Yeah.
+!HoldOn(0.6)
+-Dizi: Welp, I better split. I've got a couple of other jobs booked.
+-Verm: Makes sense.|Bird's got to eat.
+-Dizi: Exactly! Bird's gotta eat.
+-Dizi: I'll drop by tomorrow morning if you need a lift.
+-Dizi: Stay safe out there, mousegang.
+-Siobhan: Thank you, Dizi. You too.
+!PigeonBlankFlight()
+!AutoPinFollowers(1)
+
+/DiziSkyDown
+!AutoPinFollowers()
+!Walk(Verm,L,0.5)
+!HoldOn(2)
+!Nani(Verm,?)
+!HoldOn(1)
+!SetGlobal(35,1)
+!PigeonBlankLand()
+~DiziLoop
+-Dizi: Oop, I'm running late.|Traffic, you know how it is.
+-Dizi: The flocks are all flapping and gabbing about some loud noises over at Sky Garden.
+-Dizi: You guys have an all-night rave or something?
+-Verm: Something like that.
+-Dizi: Nice, nice.
+-Dizi: Anyways. Murida, is it?
+-Siobhan: It is! How did you know?
+-Dizi: Just figures. I've been taking rodents from Sky Garden to Murida all morning.
+-Dizi: First a pair of mouse knights.|Then some weirdo squirrel.
+-Dizi: But it don't bother me. Hop in the basket when you're ready.
+
+
+/Basket
+!CheckGlobal(32,9,SioEarlyExit)
+!CheckGlobal(32,12,WHExit)
+-Dizi: All aboard!
+!CameraUnfollow()
+!UnpinFollowers()
+!PigeonFlight(OverMap)
+
+/SioEarlyExit
+-Siobhan: I can't leave just yet.
+
+There was a "/BasketCont" here that I think was superficial, so removed.
+
+/WHExit
+-Dizi: All aboard!
+-Dizi: Let's do White Hall first.
+!SetLeader(Gwen)
+!CameraUnfollow()
+!UnpinFollowers()
+!PigeonFlight(WhiteOuter)
+
+/WhiteHallTime
+!SetGlobal(32,12)
+!AutoPinFollowers()
+!Walk(Siobhan,L,0.9)
+!HoldOn(2)
+-Dizi: You're back.|With the SG crew too.
+-Dizi: Where to this time?
+-Siobhan: We're doing two trips, if that's okay with you, Dizi.
+-Dizi: Oh my days, you're trying to kill me.
+-Dizi: Ha ha, I'm just messing.|Where to?
+-Gwen: Vinium and White Hall.|Do you know them?
+-Dizi: I know Vinium. Shrew settlement in a crumbling god building, yeah?
+-Dizi: But White Hall's new to me.
+-Gwen: That's alright.|I can point the way.
+-Dizi: A'ight. Then everybody hop in when you're ready.
+
+End scene

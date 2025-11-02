@@ -1,0 +1,324 @@
+/Intro
+~Stop
+
+/PigeonEntrance
+~Stop
+!PigeonArrival()
+!CheckGlobal(42,1,PigeonEntranceFirst)
+-Dizi: Back at this rando god's dwelling.
+!CameraFollow(1)
+
+/Basket
+-Dizi: All aboard!
+!CameraUnfollow()
+!UnpinFollowers()
+!CheckGlobal(32,9,SioFlight)
+!PigeonFlight(OverMap)
+
+/PigeonEntranceFirst
+!SetGlobal(42,2)
+-Dizi: Here we are at uh...|some god's dwelling.
+!HoldOn(0.6)
+-Dizi: What are we doing here?
+!Walk(Verm,D,0.2)
+!HoldOn(0.2)
+!Walk(Verm,DR,0.2)
+!HoldOn(0.2)
+!SetAnim(Siobhan,D)
+!Walk(Verm,R,0.4)
+!HoldOn(0.6)
+!SetAnim(Siobhan,DR)
+-Verm: I smelled paint.
+-Verm: I see no gods around, so I'm just going to go quickly nab some.
+!HoldOn(0.2)
+!Nani(Siobhan,?)
+!HoldOn(0.6)
+-Siobhan: Paint?
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: It's for a side quest.
+!CheckGlobal(10,1,SioDia)
+!SetAnim(Bruce,D)
+-Bruce: Oh, is that right? We have time to do a wee spot of painting before the Yellow God arrives?
+-Siobhan: I agree. Should we really be doing "side quests" at such a crucial juncture?
+!SetAnim(Gwen,D)
+-Gwen: It does feel unnecessary.
+-Verm: Look. This job is nothing.|It'll only take me a minute.
+-Siobhan: If you say so. But we won't help if you get into mischief!
+!CameraFollow(1)
+
+/SioDia
+!HoldOn(0.6)
+-Siobhan: Sir Verm.
+!CheckGlobal(18,40,SioLLate)
+-Siobhan: I thought we were on an important mission. We need to find the Cailleach!
+>SioLCont
+
+/SioLLate
+-Siobhan: I thought we were on an important mission. We need to go to Murida!
+>SioLCont
+
+/SioLCont
+-Siobhan: Should we really be|doing "side quests"?
+-Verm: Look. This job is nothing.|It'll only take me a minute.
+-Siobhan: If you say so. But I won't help|if you get into mischief!
+!CameraFollow(1)
+
+/J1
+!NormalJump(Verm,2,30,655,290,JDR,DR)
+!HoldOn(0.6)
+/J2
+!NormalJump(Verm,2,30,472,293,JDL,DL)
+!HoldOn(0.6)
+/J3
+!NormalJump(Verm,2,30,1468,300,JDR,DR)
+!HoldOn(0.6)
+/J4
+!NormalJump(Verm,2,30,1288,296,JDL,DL)
+!CheckGlobal(42,3,Paint2)
+!HoldOn(0.6)
+
+/J5
+!NormalJump(Verm,2,30,1805,194,JUR,UR)
+!HoldOn(0.3)
+!SetShadowless(Verm,1)
+!HoldOn(0.3)
+!NormalJump(Verm,2,30,1737,161,JUL,L)
+!HoldOn(0.6)
+!NormalJump(Verm,2,30,1673,118,JDL,DL)
+!HoldOn(0.6)
+/J6
+!NormalJump(Verm,2,30,1737,161,JDR,R)
+!HoldOn(0.6)
+!NormalJump(Verm,2,30,1805,194,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2,30,1780,275,JDL,DL)
+!HoldOn(0.3)
+!SetShadowless(Verm,0)
+!HoldOn(0.3)
+/J7
+!NormalJump(Verm,2,30,1343,106,JDL,L)
+!HoldOn(0.6)
+/J8
+!NormalJump(Verm,2,30,1480,118,JDR,R)
+!HoldOn(0.6)
+
+/Herba
+!CheckGlobal(42,2,T1)
+-Info: This big rock is sleeping.
+
+/T1
+-Info: It's a rock.
+
+/Herman
+!CheckGlobal(42,2,T2)
+-Info: This rock is snoring.
+
+/T2
+-Info: This is definitely a rock.
+
+/Maribelle
+!CheckGlobal(42,2,T3)
+-Maribelle: I'm trying to nap here!|Don't make me bite you again.
+
+/T3
+-Info: You are certain this is a rock.
+
+
+/Paint
+!CheckGlobal(42,2,Paint1)
+-Verm: I've taken enough paint.
+
+/Paint1
+!SetGlobal(42,3)
+-Verm: This is it. Godly paint.
+!ShowItem(Prota,79)
+!ReceiveItem(79)
+!HoldOn(0.6)
+-Verm: And a whole pot is small enough to carry. That's convenient.
+!PlaySound(ItemFound)
+-Info: You picked up a pot of Godly Paint. You add it to your trinkets.
+
+
+/Paint2
+!TeleportCharacter(Maribelle,1090,298)
+!SetAnim(Maribelle,R)
+!HoldOn(0.7)
+!ShoutMode()
+-Maribelle: STOP RIGHT THERE, THIEF!
+!SetAnim(Verm,L)
+!Walk(Maribelle,R,0.6)
+~Tortoise1
+!HoldOn(1)
+-Maribelle: You dare to steal from our god?!
+-Maribelle: Oooooh, the nerve!|Oooooooh, the utter cheek!
+-Verm: I'm only taking a little.|They've got loads.
+-Maribelle: But that's WRONG!|Stealing is WRONG!
+-Maribelle: My mummy and daddy told me so!
+-Verm: I'm not arguing morality with a talking rock. Get out my way.
+-Maribelle: No! Put the paint back,|or... or... I'll bite you!
+!HoldOn(0.4)
+!CheckGlobal(10,2,P2A)
+-Verm: Could you help me out, Siobhan?
+>P2B
+/P2A
+-Verm: Could one of you help me out?
+!TeleportCharacter(Gwen,420,264)
+!TeleportCharacter(Bruce,270,330)
+!SetAnim(Gwen,R)
+!SetAnim(Bruce,R)
+>P2B
+/P2B
+!TeleportCharacter(Siobhan,350,315)
+!SetAnim(Siobhan,R)
+!OverworldCameraPan(320,160,1,1)
+!HoldOn(1.5)
+-Siobhan: Oooooooh no, Sir Verm!
+-Siobhan: You dug yourself into this hole.|You can dig yourself out of it!
+!OverworldCameraPan(1308,160,1,1)
+!HoldOn(1.5)
+-Verm: Ugh. Fine.
+!GoToBattle(Tortoise)
+
+/Paint3
+!SetGlobal(42,4)
+!HoldOn(1)
+-Maribelle: D-d-d-d...
+!HoldOn(0.1)
+!ShoutMode()
+-Maribelle: DADDY!
+!Walk(Herman,R,1)
+!HoldOn(1)
+~Tortoise2
+!HoldOn(0.5)
+-Herman: What's all this fuss about?
+-Verm: You're her father? Look,|this is just a misunderstanding.
+-Maribelle: Daddy, he stole precious paint from the gods and then beat me up!
+-Herman: Oh, did he now?
+!Walk(Herman,R,0.6)
+!HoldOn(0.8)
+-Herman: Hmph! Another wannabe hero, is it?
+-Herman: You put on a cape and think that gives you the right to pilfer things from houses and beat up little kids!
+!HoldOn(0.1)
+!SetAnim(Verm,OwDL)
+!HoldOn(0.1)
+-Verm: No, that's not...|I mean, she started it, but...
+!HoldOn(0.3)
+!SetAnim(Verm,L)
+!HoldOn(0.4)
+-Verm: Siobhan, you're good with words! Help me out here!
+!OverworldCameraPan(320,160,2,1)
+!HoldOn(1)
+-Siobhan: I wouldn't dream of interfering, Sir Verm!
+-Siobhan: This is your side quest!|You've got this.|I believe in you.
+!OverworldCameraPan(1308,160,2,1)
+!HoldOn(1)
+-Verm:  . . . 
+!HoldOn(1)
+!GoToBattle(Tortoise)
+
+/Paint4
+!SetGlobal(42,5)
+!HoldOn(1)
+-Herman: Woah!
+-Herman: Careful where you swing that thing.|You could take someone's eye out!
+!HoldOn(0.3)
+-Herba: Do I really need to come over there?
+-Maribelle: Uh oh.
+-Herman: You've done it now, lad.
+-Maribelle: Yeah! Mummy's gonna kick your butt!
+~Tortoise3
+!Walk(Herba,R,2.9)
+!HoldOn(3.3)
+-Herba: I heard everything.
+-Herba: Stealing from our gods?|Brawling and yelling?|In this house?
+-Herba: You're being a bad influence on little Maribelle!
+-Maribelle: Yeah!|A bad influence!
+!HoldOn(1)
+!CheckGlobal(10,1,SioSass)
+-Verm: Guys, this one looks tough. I would really appreciate some help with this!
+!OverworldCameraPan(320,160,3,1)
+!HoldOn(1.5)
+-Gwen: That's a great question, Siobhan. Yes, the glaive is very similar to the naginata or the guandao.
+-Gwen: There are differences in the length and shape of the blade, but in my opinion, the main distinction is cultural.
+-Bruce: Ah, I see. So it comes down to where the weapon is made.
+-Gwen: Sure, but also who wields it, and more broadly, how the warrior is viewed by the surrounding society.
+-Siobhan: This is fascinating. We should co-author a paper about this!
+!HoldOn(0.1)
+!ShoutMode()
+-Verm: I know all of you can hear me!
+>Paint5
+/SioSass
+-Verm: Siobhan, this one looks tough. I would really appreciate some help with this!
+!OverworldCameraPan(320,160,3,1)
+!HoldOn(2)
+-Siobhan:  Huh. 
+!HoldOn(1)
+-Siobhan: It says here that mushrooms are more closely related to us animals than they are to plants.
+-Siobhan: Isn't that peculiar?
+-Dizi: Yeah, that's bonkers alright.|The things you learn from books!
+!HoldOn(0.1)
+!ShoutMode()
+-Verm: I know you can hear me, Siobhan!
+>Paint5
+
+/Paint5
+!SetAnim(Verm,OwDL)
+!OverworldCameraPan(1308,160,2,1)
+!HoldOn(2)
+-Verm: Okay. Fine.
+-Verm: Let's get this over with.
+
+!GoToBattle(Tortoise)
+
+/Paint6
+!SetGlobal(42,6)
+!HoldOn(1.5)
+-Herba: Wow! You are quite something.
+!HoldOn(0.5)
+-Herman: Maybe it's time for us to get serious...
+-Maribelle: Yeah!
+!HoldOn(0.5)
+-Herba: Maybe. But then again...
+~Tortoise4
+-Herba: This mouse has only taken a very small pot of paint.
+-Herba: Perhaps it was wrong of us to intervene.
+!HoldOn(0.5)
+-Herba: You may pass, mouse.
+!Nani(Maribelle,!)
+!HoldOn(0.5)
+-Maribelle: But stealing is WRONG, Mummy!
+-Herba: Maybe so, little Maribelle.|But sharing is right.
+-Herba: Our god has so much, and this mouse takes so little.
+-Herba: Who are we to deny him?
+!HoldOn(0.5)
+-Verm: So... I'm free to go?
+-Herba: Of course.
+
+!OverworldCameraPan(320,160,2,1)
+!HoldOn(3)
+!TeleportCharacter(Verm,694,304)
+
+!NormalJump(Verm,2,40,452,293,Jump,BadlandL)
+!HoldOn(2)
+-Siobhan: All done?
+!HoldOn(1)
+!TeleportCharacter(Herba,772,304)
+!TeleportCharacter(Herman,911,269)
+!TeleportCharacter(Maribelle,1088,307)
+!SetAnim(Herba,Loop)
+!SetAnim(Herman,Loop)
+!SetAnim(Maribelle,Loop)
+!LevelUp(Verm)
+!HoldOn(2)
+-Siobhan: Grand. Let's go.
+!HoldOn(1)
+!CameraFollow(1)
+!NormalJump(Verm,2,30,462,293,JDL,DL)
+!HoldOn(1)
+/FoundSeeds
+-Info: You found 3 seeds.

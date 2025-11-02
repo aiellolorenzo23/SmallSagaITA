@@ -1,0 +1,47 @@
+/BattleVeryStart
+~RacingLoop
+/BattleStart
+!SetGlobal(4,0)
+!HoldOn(2)
+-Ghost: She's gaining. Can you go any faster?
+-Bruce: No idea! I'm still figuring out these stupid pedals.
+-Ghost: Guess I'll help out|in the way I know.
+!DrawWeapon(Verm)
+!HoldOn(1)
+-Bruce: Hey, give us a signal if she tries tae pull anything tricky, alright?
+-Ghost: A signal...
+!LetsFight()
+
+/GhostRage
+!CheckGlobal(4,1,DoubleTime)
+-Ghost: Muswolf? Ha! More like a muspup!
+-Bruce: Yer stamping's pretty loud from down here!
+!SetAnim(Ghost,Idle)
+-Ghost: Ah. Sorry.
+!NewTurn()
+
+/DoubleTime
+-Ghost: Bruce, double time! Now!
+-Bruce: Aye, I'm on it!
+!SetGlobal(4,2)
+!SetAnim(Ghost,Idle)
+!NewTurn()
+
+/PostRam1
+-Isengrim: Where do you think you're going?!
+!NewTurn()
+
+/PostRam2
+-Isengrim: Y-you can't escape, annoying worms!
+!NewTurn()
+
+/PostRam3
+-Isengrim: H-hey! Get back here and fight!
+!NewTurn()
+
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene
+

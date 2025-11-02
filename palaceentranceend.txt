@@ -1,0 +1,510 @@
+/Intro
+
+/End
+!HoldOn(0.5)
+!SetGlobal(46,0)
+!SetGlobal(60,0)
+!SetGlobal(61,0)
+!SetGlobal(62,0)
+!SetGlobal(63,0)
+!SetGlobal(64,0)
+!SetGlobal(65,0)
+!SetGlobal(66,0)
+!SetGlobal(67,0)
+!SetGlobal(68,0)
+!SetGlobal(69,1)
+!OverworldMidCameraPan(664,1180,0.1,1)
+!HoldOn(6)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(0.2)
+!LevelUp(Bruce)
+!HoldOn(0.2)
+!LevelUp(Gwen)
+!HoldOn(1)
+-Verm: I hate it.
+-Siobhan: Why? It's a good statue, Sir Verm.
+-Bruce: Aye, very close likeness.
+-Verm: That's not the point!
+-Verm: It's just...|It's gross.
+!HoldOn(0.8)
+-Gwen: The people want to show their|appreciation. Let them.
+-Gwen: The buzz will die down|in a couple of days.
+-Gwen: Then you can topple it, use it for target practice, piss on it, or whatever.
+-Verm: Thank you, Gwen.|I would very much like that.
+!HoldOn(0.4)
+-Siobhan: Sir Verm, there's a couple of things I need to discuss with you in private.
+-Siobhan: Stay a while and have a chat with everyone.
+-Siobhan: When you're done, come meet|me in the throneroom.
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!Walk(Siobhan,UR,3)
+!HoldOn(0.1)
+-Verm: Alright.
+!HoldOn(0.5)
+!CameraFollow(1)
+!Exit(Siobhan)
+!HoldOn(0.5)
+
+/Tobin
+!CheckGlobal(46,1,SaveTime)
+-InfoBig: It's a statue of you.
+-InfoBig: Or at least, a mouse intended to resemble you.
+-InfoBig: He carries an expression of noble valour. A hero among heroes.
+!HoldOn(0.7)
+-InfoBig: You don't recognise him.
+!HoldOn(0.5)
+!SetGlobal(46,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Verm stands strong.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(The People's Palace,The foyer)
+-Info: Your game has been saved.
+/SaveNo
+
+/Bruce
+!CheckGlobal(60,1,Bruce2)
+!CheckGlobal(60,2,Bruce3)
+!SetGlobal(60,1)
+-Verm: Hey Bruce. I just wanted to say thanks again for fetching me from Vinium.
+-Bruce: Nae bother. It was the least I could do after what ye did for me.
+-Verm: Oh right, Sky Garden.|How's things over there?
+-Bruce: Good and tidy.
+-Bruce: Now that the dust has settled a bit, it's a genuine city of the people.
+-Bruce: No gods, no masters, ye know?
+-Verm: So you and Anton can just|mill about all day.
+-Bruce: Aye, pretty much.|Good times all round.
+-Verm: Nice.
+
+/Bruce2
+!SetGlobal(60,2)
+-Bruce: Hey, how are ye holding up?|Mentally, I mean.
+-Verm: That's quite a question.
+-Verm: I'm fine. Just a bit tired.
+-Bruce: No surprise there.
+!HoldOn(0.4)
+-Bruce: Come drop by Sky Garden if ye need a break.
+-Bruce: We can have a wee party. We'll keep it low-key, ye know? Maybe play some knife darts or something.
+-Verm: Sure. That sounds nice.
+
+/Bruce3
+-Bruce: Siobhan seemed pretty antsy. I have no idea what they want tae tell you.
+
+/Gwen
+!CheckGlobal(61,1,Gwen2)
+!CheckGlobal(61,2,Gwen3)
+!CheckGlobal(61,3,Gwen4)
+!SetGlobal(61,1)
+-Gwen: How's the tail?
+-Verm: It's holding up fine.
+-Verm: I don't think I could have bested Blademaster Leo without it.
+-Gwen: Glad to hear it.
+!HoldOn(0.5)
+!CheckGlobal(49,1,GwenLive)
+
+-Gwen: So... you killed him, right? Leo, I mean.
+-Verm: I did. Not that I had much choice.
+-Gwen: I can well imagine.
+!HoldOn(0.8)
+-Gwen: Something wrong?
+!HoldOn(0.5)
+-Verm: I feel a bit guilty about it.
+-Verm: Despite everything he supported,|I don't think Leo deserved to die.
+!HoldOn(0.5)
+-Gwen: Guilt is a pain in the arse.
+-Gwen: It fades over time like any wound, but the scars remain.
+-Gwen: Still... it helps us keep our noses pointed in the right direction.
+-Gwen: Better to feel guilt than nothing at all.
+!HoldOn(0.5)
+-Verm: I guess so.
+
+/GwenLive
+-Gwen: So... you let Leo live?
+-Verm: I did.
+!HoldOn(0.4)
+-Verm: Are you judging me for it?
+!HoldOn(0.6)
+-Gwen: If it were me in the throne room, I would have gutted the bastard. Or at least tried to.
+-Gwen: The Guard have had rodents under their thumb for centuries. Where's the justice for those victims?
+-Gwen: I don't think a privileged golden boy like Leo deserves a second chance.
+!HoldOn(0.6)
+-Gwen: But I don't judge you, no.
+-Gwen: You showed compassion.|You spared a life.
+-Gwen: I'm not so heartless as to call that weakness.
+-Gwen: You followed your own philosophy. A philosophy that's resolute but forgiving. I respect that.
+!HoldOn(0.6)
+-Verm: Huh.
+
+/Gwen2
+!SetGlobal(61,2)
+-Verm: What are you going to do now?
+-Gwen: Murida has some charm.
+-Gwen: I might settle here for a bit|and help out however I can.
+-Verm: Help out?
+-Gwen: Just like with Sky Garden,|there's work to do, right?
+-Gwen: What, a monarchy falls and suddenly everything's hunky-dory? I wish it were that easy.
+-Gwen: Mice are still hungry and homeless.|The plague's still running rampant.|The nobles still hoard their riches.
+-Gwen: Progress comes bit by bit.|Little by little.
+-Gwen: I don't think there'll ever be a point where we can dust our paws and call it a day.
+!HoldOn(0.9)
+-Verm: So it never ends?
+!HoldOn(0.5)
+-Gwen: All the more reason|to do the work, no?
+
+/Gwen3
+!SetGlobal(61,3)
+-Gwen: You given any more thought to your nature?
+-Verm: My nature?
+-Gwen: Yeah, like we chatted|about on the statue.
+-Verm: Oh, right.
+!HoldOn(0.5)
+-Verm: I don't know.|It's a big question.
+-Verm: Let me sleep on it,|and I'll get back to you.
+-Gwen: Good call. You look shattered.
+
+/Gwen4
+-Gwen: Get some rest, dwt.
+
+/ChatAnton
+-Anton: Wow! What a painting.
+
+/Savic
+!SetNPCFlag(Savic,Savic2)
+-Savic: I was THIS close to getting promoted to sergeant.
+-Savic: But then the Thimble Guard went and disbanded!
+>Savic2
+
+/Savic2
+-Savic: What do I do now? I've got some thinking to do.
+
+/Steve
+-Steve: I've written a record of that night.|Anyone you want to know about?
+*SteveKing: The King.
+*SteveOphiuchus: The Loremaster.
+*SteveAquila: The Plaguemaster.
+*SteveLeo: Leo.
+*SteveDiego: Diego.
+*SteveAlex: Alex.
+*SteveDone: I'm done.
+/SteveKing
+-Verm: The King...
+-Steve: Oh, yeah, he's dead as a doornail.
+-Steve: Leo shanked him good in front of|half-a-dozen witnesses.
+-Steve: No room for conspiracy theories, I'm afraid.
+>SteveNext
+/SteveAlex
+-Verm: That fancy hat squirrel...
+-Steve: Oh, Alex.
+-Steve: When the news broke that the King was dead, Alex was the first to break rank and flee.
+-Steve: A sailor at Canard's Wharf spotted a well-dressed squirrel jumping into the waters
+-Steve: He was probably hoping to make a quick escape from the city. Maybe swim into the depths of the Underriver.
+-Steve: But instead, he just straight-up sank.
+-Steve: I guess the Sterling Knight floats like silver. 
+>SteveNext
+/SteveOphiuchus
+-Verm: I never met him, but the King's Loremaster...
+-Steve: Ophiuchus?
+-Steve: He was last seen in the throneroom, right before everything got crazy.
+-Steve: Word is he supported Leo's coup?|That surprises me.
+-Steve: I had Ophiuchus down as one of 'em "don't rock the boat" brand of politicos.
+-Steve: So what was his endgame?|What was his deal?|I don't really get it.
+-Steve: But in any case, he found a way out the city before dawn.
+-Steve: My bet is he's gone to retire somewhere in the Outlands.
+>SteveNext
+/SteveLeo
+!CheckGlobal(49,1,SteveLeo2)
+-Verm: Leo...
+-Steve: Come on, man.
+-Steve: You know what happened to Leo.|You were the one who did it.
+>SteveNext
+/SteveLeo2
+-Verm: Leo...
+-Steve: He vanished. You were the last person to see him.
+-Verm: Makes sense.
+-Verm: Siobhan and the others didn't see him, so right after our duel he must have gone through a secret passage and left the city.
+-Steve: Did you know his daughter disappeared too?
+-Steve: Actually, did you even know he had a daughter? He sure liked to keep that private.
+-Verm: Where are they now?
+-Steve: Well, he hasn't been seen in Rodentia, so your guess is as good as mine.
+-Verm: And what's your guess?
+!HoldOn(0.5)
+-Steve: Hmm.
+!HoldOn(0.7)
+-Steve: One time, I heard him tell Diego that he dreamed of settling down in Aremorio some day.
+-Steve: So maybe that's where he went.|The land over the southern seas.
+>SteveNext
+/SteveAquila
+-Verm: Aquila...
+-Steve: Uh... didn't they|fucking explode?
+-Steve: That was your lot's account of events anyway.
+-Steve: Siobhan said something about a "back-up timer detonation", whatever that means.
+-Steve: That reminds me, have you heard the crazy god activity going on upstairs?
+-Steve: Gods coming and going,|stomping and hollering...
+-Steve: Do you think they're pissed off that you exploded their clocktower? 
+-Verm: It's just a clocktower.|What's the big deal?
+-Steve: Psh. Who knows.
+>SteveNext
+/SteveDiego
+-Verm:  Diego...
+-Steve: I didn't witness Sir Diego's duel with Leo myself, and I'm glad for that.
+-Steve: Despite his cold exterior, Diego was a good friend of mine. Leo was too.
+!HoldOn(0.5)
+-Steve: But then...
+!HoldOn(0.5)
+-Steve: Sorry. Ask me something else.
+>SteveNext
+/SteveNext
+-Steve: Anyone else?
+*SteveKing: The King.
+*SteveOphiuchus: The Loremaster.
+*SteveAquila: The Plaguemaster.
+*SteveLeo: Leo.
+*SteveDiego: Diego.
+*SteveAlex: Alex.
+*SteveDone: I'm done.
+/SteveDone
+-Verm: I'm done.|Thanks, Steve.
+
+/Rosaline
+!CheckGlobal(62,1,Rosaline2)
+!SetGlobal(62,1)
+!CheckGlobal(49,1,RoseLeo)
+-Rosaline: Did you seriously|kill Leo in a duel?
+-Rosaline: I find that difficult to believe.
+-Rosaline: His duelling skill was terrifying. Otherworldly.
+-Rosaline: But if anyone could do it, it would have been you, the mouse who cheated death.
+!HoldOn(0.5)
+-Verm: I wasn't trying to kill him.
+-Rosaline: Duels don't offer much room for a peaceful outcome.
+-Rosaline: With someone of Leo's skill,|it's either kill or be killed.
+>RoseCont
+/RoseLeo
+-Rosaline: Did you seriously|best Leo in a duel?
+-Rosaline: I find that difficult to believe.
+-Rosaline: His duelling skill was terrifying. Otherworldly.
+-Rosaline: But if anyone could do it, it would have been you, the mouse who cheated death.
+!HoldOn(0.5)
+-Rosaline: How did you make him yield?
+-Verm: I broke all his swords.
+!HoldOn(0.3)
+-Rosaline: Huh.
+>RoseCont
+/RoseCont
+!HoldOn(0.7)
+-Verm: What are you going to do now?
+-Rosaline: Maisie and I will leave the city for a bit. And the Kingdom too, most likely.
+-Rosaline: So I ought to say farewell.
+-Verm: Let's leave it at,|"until next time".
+-Rosaline: Right. Until next time, Verm.
+
+/Rosaline2
+-Rosaline: Take care.
+
+/Maisie
+!CheckGlobal(63,1,Maisie2)
+!SetGlobal(63,1)
+-Verm: How are you feeling?
+-Maisie: Much better.
+-Maisie: Rosey and me are|getting out of Murida.
+-Verm: Cool. Where are you going to go?
+-Maisie: I dunno. Somewhere lush|and green, I hope.
+-Verm: That sounds peaceful.
+-Maisie: I'm gonna keep swinging my sword, though.
+-Maisie: I wanna get stronger! Strong enough that Rosie doesn't feel like she has to protect me.
+-Maisie: Then maybe, one day, you and me can have a rematch!
+-Verm: A rematch? Well,|we'll see about that.
+
+/Maisie2
+-Maisie: Mark my words, I'm gonna be as strong as you!
+
+/George
+!CheckGlobal(64,1,George2)
+!SetGlobal(64,1)
+-George: White Hall has fallen.|But it is not the end.
+-George: In the dead of night, I rounded up the rats and rabbits who remained.
+-George: We left the institute.|We found some grasslands.|And we started anew.
+-George: It is a humble village. Just a burrow dug beneath a brambly hedge.
+-George: But it's our own.|And it's free of gods.
+!HoldOn(0.6)
+-George: Please pardon my blasphemy.
+-Verm: Nothing to pardon.
+/George2
+-George: You are welcome in|Neuadd-heb-dduwiau at any time.
+
+/Alfie
+!CheckItem(67,KeyEvent)
+-Alfie: This Yellow God... there's no chance that He'll come to Vinium, right?
+
+/Jeb
+!CheckItem(67,KeyEvent)
+-Jeb: Thanks again. We'll keep your house good and tidy.
+
+/KeyEvent
+-Jeb: Hey! We just dropped by to say thanks for the farm.
+-Verm: It's nothing.
+-Alfie: No need for the humility.|It's a big deal!
+-Verm: Well, if you both want to return the favour, I've got a job for you.
+!ShowItem(Prota,67)
+-Verm: Could you hold onto this for me?
+!HoldOn(0.2)
+!LoseItem(67)
+!Nani(Jeb,?)
+!HoldOn(0.8)
+-Jeb: A key?
+-Verm: Yeah, for my house.
+-Verm: I've got some things to do and don't know when I'll next be in Vinium.
+-Alfie: Easy enough.|Sure thing, Ghost.
+-Jeb: Don't be a stranger, alright?
+
+/Dizi
+-Dizi: Not gonna lie. Kinda a struggle to get down here.
+-Dizi: But I just wanted to say: don't be a stranger, alright?
+
+/Dominic
+>Magnus
+
+/Magnus
+-Dominic: Aren't you worried, Magnus?
+-Dominic: Don't you know the proles will be after our heads next?
+-Magnus: Well then, let's not give them a reason to act.
+
+/Nemain
+!CheckGlobal(65,1,Nemain2)
+!SetGlobal(65,1)
+-Nemain: I told Lady Gilda that Siobhan is thriving.
+-Nemain: She was glad to hear it. She's even thinking about apologising, if you can believe that.
+-Nemain: But whether Siobhan wants to hear it? Well, that's up to them.
+
+/Nemain2
+-Nemain: Cranbaile is safe from any threat, be it Tiger or something else. I'll see to that.
+
+/Bree
+!CheckGlobal(66,1,Bree2)
+!SetGlobal(66,1)
+-Verm: You sure took a beating.
+-Bree: This? It's nothing.
+-Bree: You should see the other guys, heh.
+!HoldOn(0.5)
+-Bree: But really, yeah...|It could have gone much worse.|It SHOULD have gone much worse.
+-Bree: It's only thanks to the paw of fate that we made it through with all our whiskers intact.
+-Verm: Don't sell yourself short.
+-Verm: Yeah, we got lucky, but it was all our blood and sweat that put everything into action.
+-Bree: Right you are.|We really did it.
+
+/Bree2
+-Bree: Don't tell Stilton, but I'm gonna propose to him when things have cooled down.
+
+/Stilton
+!CheckGlobal(67,1,Stilton2)
+!SetGlobal(67,1)
+!HoldOn(0.2)
+!SetAnim(Stilton,DrawLook)
+!HoldOn(0.4)
+!SetAnim(Stilton,DL)
+!HoldOn(0.1)
+!HoldOn(0.4)
+!SetAnim(Stilton,DR)
+-Stilton: Guess what? I'm going full time with my art!
+-Stilton: You know Mollie, the painter from the Merchant Quarter?
+-Stilton: We're gonna open an exhibition together, right here in the palace galleries.
+-Verm: That sounds cool.|Maybe I'll come and see it.
+-Stilton: Please do!
+!HoldOn(0.1)
+!SetAnim(Stilton,DL)
+!HoldOn(0.1)
+!SetAnim(Stilton,UL)
+!HoldOn(0.1)
+!SetAnim(Stilton,Drawing)
+
+/Stilton2
+-Stilton: Don't tell Bree, but, uh... I've picked out a ring for him.
+
+/Pocket
+!CheckGlobal(68,1,Pocket2)
+!CheckGlobal(68,2,Pocket3)
+!CheckGlobal(68,3,Pocket4)
+!SetGlobal(68,1)
+-Pocket: Yo! Bet you thought you saw the last of me!
+*ThiefPocket: You're the thief.
+*WhoPocket: Who are you?
+
+/ThiefPocket
+-Verm: You're the thief.
+-Pocket: Hey, there's more to me than thieving!
+>PocketCont
+
+/WhoPocket
+-Verm: I genuinely don't remember who you are.
+-Pocket: Hey, be nice!
+>PocketCont
+
+/PocketCont
+-Pocket: I'm the one and only Pocket Jabari, the Trickster King!
+-Verm: Careful. I hear it's a bad time for Kings.
+!HoldOn(0.2)
+!Nani(Pocket,!)
+!HoldOn(0.6)
+-Pocket: Woah! You're right.
+-Pocket: Maybe it's time for a new moniker.
+
+/Pocket2
+!SetGlobal(68,2)
+-Pocket: "Pocket Jabari, the Trickster Tycoon"!
+-Pocket: Hmm. Maybe not.
+
+/Pocket3
+!SetGlobal(68,3)
+-Pocket: "Pocket Jabari, the Jester of Wooster"!
+-Pocket: Pros: It rhymes.|Cons: I've never been to Wooster.
+
+/Pocket4
+!SetGlobal(68,1)
+-Pocket: "Pocket Jabari, the Rambunctious Rogue"!
+-Pocket: Is "rambunctious" too fancy?|It has a lot of syllables.
+
+/AqExit
+-Verm: I'm not leaving just yet.
+!Walk(Verm,UR,0.3)
+!HoldOn(0.3)
+
+/Painting3
+-InfoBig: You peak behind the painting.
+-InfoBig: The hole is still there.||But you're not leaving just yet.
+
+/Door
+-Info: Go see Siobhan?
+*YesDoor: Yes.
+*NoDoor: Not yet.
+
+/YesDoor
+
+!PlaySound(PalaceBigDoorOpen)
+!OpenDoor(1,Open)
+!HoldOn(1)
+!NextRoom(PalaceThroneroom,1)
+
+/NoDoor
+
+/Mushroom Meg
+-Mushroom Meg: Hooooo, boy!|This place is huge!
+
+/Lucius
+-Lucius: You could probably fit a couple of hundred houses in this palace.
+-Lucius: And with a bit of handiwork,|we just might do that.
+
+/Locked
+-Info: The door is locked.
+
+/Susan
+-Susan: I hear a Loremaster position just opened up.
+-Susan: Loremaster to whom though?|That's the million seed question.

@@ -1,0 +1,126 @@
+/Intro
+~RainLoop
+!AutoPinFollowers(1)
+
+/PigeonEntrance
+~RainLoop
+!PigeonArrival()
+!CheckGlobal(35,0,PigeonEntranceFirst)
+-Dizi: Vinium! Mind the gap.
+!AutoPinFollowers(1)
+
+/PigeonEntranceFirst
+-Dizi: Vinium! Mind the gap.
+!HoldOn(0.5)
+!SetGlobal(8,0)
+-Bruce: Cheers, Dizi.
+-Dizi: Good luck with your search.|I'll wait around.
+-Bruce: Maybe go find some shelter, aye?
+
+/Reunion
+!UnpinFollowers()
+!OverworldCameraPan(320,400,2,1)
+!HoldOn(1)
+!TeleportCharacter(Verm,596,659)
+!TeleportCharacter(Bruce,500,720)
+-Dizi: Oh. My. Days.
+-Dizi: It's the little mad lad!
+!Walk(Verm,UL,2.3)
+!Walk(Bruce,UL,2.3)
+!HoldOn(3)
+-Verm: Hey Dizi. You keeping well?
+-Dizi: Yeah, yeah, never mind me!
+-Dizi: You two were taking too long,|so I went to fetch the others.
+-Verm: The others?
+!OverworldCameraPan(320,450,1,1)
+!TurnOffBlocks(2)
+!SetGlobal(32,14)
+!AddToParty(Siobhan)
+!AddToParty(Gwen)
+!ShoutMode()
+!HoldOn(1)
+!Walk(Siobhan,R,1.45)
+!HoldOn(0.2)
+!SetAnim(Verm,L)
+!HoldOn(0.3)
+!SetAnim(Bruce,L)
+!HoldOn(0.5)
+!Walk(Gwen,R,1.1)
+!HoldOn(0.2)
+!SetAnim(Verm,UL)
+!HoldOn(0.2)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(1)
+-Siobhan: WHAT?!
+!Walk(Siobhan,DR,0.4)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.3)
+-Siobhan: WHAT?!
+!Walk(Siobhan,DR,0.4)
+!HoldOn(0.2)
+!SpecialWalk(Verm,DR,0.3,ULWalk,1)
+!ShoutMode()
+!HoldOn(0.3)
+!SetAnim(Verm,UL)
+-Siobhan: WHAT?!
+!HoldOn(1)
+-Verm: Are you okay?
+-Siobhan: I just...
+-Siobhan: I can't believe you're alive.
+-Siobhan: I saw you fall into the river, and... and...
+-Verm: I'm happy to see|you too, Siobhan.
+!HoldOn(0.2)
+!SetAnim(Verm,L)
+!HoldOn(0.4)
+-Verm: And you, Gwen.
+!HoldOn(0.6)
+-Gwen: This is pretty incredible.
+-Gwen: You were just hanging around|Vinium for a full season?
+-Bruce: Aye. He was farming mushrooms, if ye can believe that.
+!HoldOn(0.6)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+-Siobhan: Oh yeah. Gwen.|Let's show Verm THAT.|And the OTHER thing!
+!HoldOn(0.2)
+!Nani(Verm,?)
+!HoldOn(0.7)
+-Gwen: Already?
+-Siobhan: Yeah, right now!|I can't wait any more!
+-Gwen: Okay. But we're getting soaked to the bone out here.
+-Gwen: Is there somewhere|private we can go?
+!HoldOn(0.3)
+~Stop
+!NextRoom(ToBlack)
+!HoldOn(0.6)
+!NextRoom(VinHouse3,3)
+
+/Dizi
+!CheckGlobal(35,14,DiziReady)
+-Dizi: You're here to find the little angry guy with the big sword, yeah?
+-Dizi: Go ask around. Someone must know something.
+
+/DiziReady
+-Dizi: Where to today, mousegang?
+
+/Basket
+!CheckGlobal(35,14,BasketReady)
+-Dizi: You can't be leaving already.
+-Dizi: I don't see your mouse friend.
+
+/BasketReady
+-Dizi: All aboard!
+!CameraUnfollow()
+!UnpinFollowers()
+!PigeonFlight(OverMap)
+
+
+
+End scene

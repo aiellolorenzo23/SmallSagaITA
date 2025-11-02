@@ -1,0 +1,110 @@
+
+/JumpIntro
+!HoldOn(0.6)
+!SetGlobal(39,1)
+!NormalJump(Verm,1.5,10,263,262,JDR,LandR)
+!CheckGlobal(50,0,IntroCont)
+!CheckGlobal(50,1,IntroCont)
+!HoldOn(1)
+!SetAnim(Verm,DR)
+
+/IntroBlank
+
+/IntroCont
+~Murida2Loop
+!HoldOn(1)
+!SetAnim(Verm,DR)
+
+/Meta
+!CheckGlobal(50,0,MCont)
+!CheckGlobal(50,1,MCont)
+-Meta-Mouse: Are ya protesting?|Throw a brick at a Guard for me!|Heh heh heh...
+
+/MCont
+!SetNPCFlag(Meta-Mouse,WannaKnow)
+-Meta-Mouse: I'm da meta-mouse!|And you're in da meta-house!
+-Meta-Mouse: Got any questions about meta-gaming? I'm your mouse!
+>WannaKnow
+
+/WannaKnow
+-Meta-Mouse: Watcha wanna know?
+*Berserk: Berserk...
+*Stacking: Effect stacking...
+*Damage: Move damage...
+*Breaks: Breaks...
+*Missable: Missable items...
+*Nothing: I'm done.
+
+/Nothing
+-Verm: I'll leave you be.
+
+/Berserk
+-Meta-Mouse: For most characters, Berserk boosts attack damage by 50%.
+-Meta-Mouse: But for Berserkers, it works a bit differently: they hit twice with every strike, effectively dealing 100% more damage!
+-Meta-Mouse: So don't settle for good-natured swings. Get mad. Get real angry, baby!
+>WannaKnow
+
+/Stacking
+-Meta-Mouse: Most status effects don't get more effective the more they "stack".
+-Meta-Mouse: So a creature with 3 Berserk will do as much bonus damage as a creature with 1 Berserk.
+-Meta-Mouse: There are two exceptions to this.
+-Meta-Mouse: One. Bleeding. The higher the bleeding number, the more damage you'll take each turn.
+-Meta-Mouse: Two. Charge. Load up a fire wand with three or four charges, and baby, you've got massive damage potential on ya paws!
+>WannaKnow
+
+/Damage
+-Meta-Mouse: Some attacks hit harder than others.
+-Meta-Mouse: But it can be tricky to calculate just how much harder because ya gotta factor in enemy defence.
+-Meta-Mouse: For a high-defence enemy, is it better to go with lots of small attacks or one big attack?
+-Meta-Mouse: That's for you to work out!
+>WannaKnow
+
+/Breaks
+-Meta-Mouse: "Defence Break" makes the recipient take 50% more damage.
+-Meta-Mouse: "Attack Break" makes the recipient deal 33% less damage.
+-Meta-Mouse: Simple as.
+>WannaKnow
+
+/Missable
+-Meta-Mouse: Ooooh, heh heh. Yeah. There are missable items.
+-Meta-Mouse: There's even one right behind that door.
+!CheckItem(36,Missable2)
+-Meta-Mouse: But my advice? Don't sweat it. Just do your thing.
+-Meta-Mouse: A mouse could go crazy trying to play a game perfectly, ya know!
+>WannaKnow
+
+/Missable2
+-Meta-Mouse: Or at least... there WAS!
+-Meta-Mouse: Look at you, you little completionist! You don't leave any pebble left unturned, do ya?
+>WannaKnow
+
+/Ladder
+!NextRoom(MuriStreet2,56)
+
+/Door
+!CheckGlobal(50,0,DCont)
+!CheckGlobal(50,1,DCont)
+-Meta-Mouse: Hey, buddy! Aintcha got a protest to be protesting?
+
+/DCont
+!CheckItem(36,DCont3)
+!CheckItem(81,DCont2)
+-Info: The door is locked tight.
+-Meta-Mouse: What's behind that door? Heh heh. That's a secret!
+
+/DCont3
+!PlaySound(MuriDoor)
+!OpenDoor(0,Default)
+!HoldOn(0.7)
+!NextRoom(MetaDarkRoom,4)
+/DCont2
+!ShowItem(Prota,81)
+!HoldOn(0.7)
+-Info: The Mystery Key neatly fits in the lock.
+!PlaySound(MuriDoor)
+!OpenDoor(0,Default)
+!HoldOn(0.7)
+!Nani(Meta-Mouse,!)
+!HoldOn(0.7)
+-Meta-Mouse: H-hey! Where'd ya get that key?
+!NextRoom(MetaDarkRoom,4)

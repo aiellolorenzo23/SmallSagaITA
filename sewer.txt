@@ -1,0 +1,595 @@
+/JustPin1
+!TeleportCharacter(Bree,3060,400)
+!TeleportCharacter(Stilton,2920,320)
+!PinFollowers()
+~TheMissionLoop
+
+/JustPin2
+!PinFollowers()
+~WaterCaveLoop
+
+/Intro
+!HoldOn(0.1)
+!OverworldCameraSnap(360,1510)
+!HoldOn(0.4)
+!OverworldCameraPan(360,1960,0.35,1)
+!HoldOn(2.3)
+!BigTitle(The Underriver,What manner of vermin lurks beneath our feet?)
+!HoldOn(1)
+~TheMissionLoop
+!Walk(Lance,DL,0.8)
+!HoldOn(1.7)
+!SetAnimEnd(Lance,D)
+!HoldOn(0.1)
+!Walk(Lance,DR,1.4)
+!HoldOn(2.5)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+
+!Walk(Lance,UR,1.0)
+!HoldOn(1.5)
+!SetAnimEnd(Lance,U)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,UL)
+!HoldOn(1.2)
+!SetAnimEnd(Lance,U)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.9)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,D)
+!HoldOn(0.1)
+!Walk(Lance,DL,0.9)
+!HoldOn(0.9)
+!SetAnimEnd(Lance,L)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,UL)
+!HoldOn(1.2)
+-Lance:	Come on, Verm. Keep up.
+
+!Walk(Verm,DL,0.8)
+!HoldOn(0.8)
+
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+
+!Walk(Verm,DR,1)
+!HoldOn(1)
+-Verm: I'm doing my best, Lance! But your legs are twice the size of mine.
+-Lance: Ah, this won't do at all.
+-Lance: Here's an idea - why don't you take the lead for a bit?
+-Verm: You think I'm ready?
+-Lance: I have no doubt.
+
+!SetAnimEnd(Lance,U)
+!HoldOn(0.1)
+!Walk(Lance,UR,0.6)
+!HoldOn(1.5)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.8)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.6)
+-Lance: According to Dad's letter, we just follow the arrows.
+-Lance: They point the way to the god's food hoard.
+!SetAnimEnd(Lance,U)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,UL)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,L)
+!HoldOn(0.1)
+!Walk(Lance,DL,0.2)
+!HoldOn(0.4)
+-Lance: So just keep following the path. We should hit it in no time.
+-Verm: Alright. I can do this.
+!Walk(Verm,DR,0.6)
+!HoldOn(0.6)
+!Walk(Verm,R,0.1)
+!HoldOn(0.1)
+!Walk(Verm,UR,0.7)
+
+
+!HoldOn(0.1)
+!SetAnimEnd(Lance,D)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.6)
+
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+!Walk(Verm,L,0.1)
+!HoldOn(0.2)
+-Verm: Stay on my tail, bro!
+!PinFollowers()
+!CameraFollow(1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UR)
+!HoldOn(0.5)
+
+
+/ChatLance
+-Lance: You're doing great. Let's keep moving.
+
+/Shrine
+!Walk(Verm,UL,0.7)
+!HoldOn(0.7)
+!UnpinFollowers()
+!Walk(Verm,UL,0.2)
+!Walk(Lance,L,0.5)
+!HoldOn(0.5)
+!Walk(Lance,UL,0.2)
+!HoldOn(0.2)
+-Lance: Look, Verm. It's a shrine to your hero.
+-Verm: Woah! Blademaster Leo!
+!SetAnimEnd(Verm,L)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+-Verm: What's a statue doing down here?
+-Lance: Perhaps the Underriver scoundrels built it.
+-Lance: Even they know to respect the|powers of the crown.
+-Verm: No way. They must have looted it.
+!SetAnimEnd(Verm,L)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+-Lance: Heh. I guess that's more likely.
+!SetAnimEnd(Lance,U)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.1)
+-Lance: In any case, we should say a quick prayer. For protection.
+!Walk(Lance,UR,0.2)
+!HoldOn(0.2)
+!PinFollowers()
+!HoldOn(0.1)
+-InfoBig:   - Mouse Warrior Pro Tip -||To save your game, say a prayer at a statue.||Smart warriors pray regularly.
+
+/Leo
+!CheckGlobal(8,1,SaveTime)
+-InfoBig: It's a copper statue of a field mouse wielding a needle-like rapier.
+-InfoBig: The plaque reads:||In honour of Blademaster Leo.|Slayer of Ironfang the Vulpes, saviour of Solhill Village...|
+-InfoBig: ...and hero to all.
+!SetGlobal(8,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Blademaster Leo stands proud.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(The Underriver,Leo statue)
+-Info: Your game has been saved.
+/SaveNo
+
+/FoundSeeds
+-Info: You found Squeaky! You add him to your trinkets.
+!HoldOn(0.1)
+!Nani(Lance,?)
+!HoldOn(0.7)
+-Lance: What's that? A toy?
+-Verm: Yeah! Squeaky's my favourite. I can't believe I almost left him behind...
+-Lance: Ah, Squeaky. Of course.
+-Lance: Keep him close.|We've got some ways to go.
+
+/SavaChest
+-Info: You found a treasure map!|You add it to your trinkets.
+
+/FirstChest
+-Info: You found a peanut.|Nutritious!
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,R)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UR)
+!ShowItem(Prota,9)
+!HoldOn(0.5)
+-Verm: Hey Lance, check it out!|Someone stashed a peanut.
+-Lance: Nice find. Maybe you should hold on to it in case you feel weak later.
+-Lance: But don't get too full.
+-Lance: There'll be plenty more food where we're heading.
+-Verm: I can almost smell it...
+-InfoBig:    - Mouse Warrior Pro Tip -||Items can be equipped from the "Equip" menu.||Once a food item has been equipped, it can be used once per battle!
+
+/FirstBridge
+!Walk(Verm,UR,0.2)
+!SetAnim(Stilton,Drawing)
+!HoldOn(0.22)
+!SetAnimEnd(Verm,UR)
+!HoldOn(0.5)
+!Nani(Verm,?)
+!HoldOn(0.7)
+-Verm: What a weird bridge...
+!SetAnimEnd(Lance,UR)
+-Lance: Looks like Underriver rat handiwork. It's crude, but it should hold.
+-Verm: Underriver rats?
+!HoldOn(0.2)
+!SetAnimEnd(Verm,R)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DR)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.2)
+-Verm: Do you think there are any around right now?
+-Lance: It's possible. We didn't bring our weapons just for show.
+-Lance: Are you scared?
+*MaybeScared: A little...
+*NotScared: Nuh-uh!
+
+/MaybeScared
+-Verm: Maybe a little...
+-Lance: That's okay. There's no shame feeling fear. All mice feel it.
+-Verm: All mice? Even Blademaster Leo?
+-Lance: Even Leo.
+-Verm: Ha! No way.
+
+/NotScared
+-Verm: Nuh-uh! I'm not scared of anything! Just like Blademaster Leo!
+-Lance: Heh. Well then, "Blademaster", lead the way.
+
+Upon approaching a bridge, the pair see a pair of scraggly rats guarding the way: it's Bree and Stilton.
+
+/BridgeEncounter
+~Stop
+!Walk(Verm,UL,0.5)
+!HoldOn(0.5)
+~WaterCaveLoop
+!Walk(Verm,U,0.1)
+!HoldOn(0.1)
+!Walk(Verm,UR,0.6)
+!OverworldCameraPan(1178,840,1,1)
+!HoldOn(0.6)
+!UnpinFollowers()
+!Walk(Lance,UL,0.2)
+!HoldOn(0.2)
+!Walk(Lance,U,0.3)
+!HoldOn(0.3)
+!Walk(Lance,UR,0.1)
+!HoldOn(0.2)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.5)
+-Bree: Not another step, you two!
+-Bree: Or else you'll have to face the combined wrath of Bree and-
+!HoldOn(0.6)
+!SetAnimEnd(Bree,HeadLeft)
+!HoldOn(0.3)
+-Bree: Hey, art boy!
+-Bree: We've got company.|Get with the program.
+!HoldOn(0.7)
+!ShoutMode()
+-Bree: STILTON!
+!HoldOn(0.3)
+!SetAnimEnd(Stilton,DrawLook)
+!HoldOn(0.5)
+!CreateChalk()
+!SetAnim(Stilton,DL)
+!HoldOn(0.05)
+!SetAnim(Stilton,DR)
+!HoldOn(0.05)
+!SetAnim(Stilton,UR)
+!HoldOn(0.05)
+!SetAnim(Stilton,UL)
+!HoldOn(0.05)
+!SetAnim(Stilton,DL)
+!HoldOn(0.05)
+!SetAnim(Stilton,DR)
+~Stop
+!HoldOn(2)
+!Walk(Stilton,DR,0.2)
+!HoldOn(0.2)
+!SetAnim(Stilton,DL)
+!HoldOn(0.4)
+~BreeLoop
+-Stilton: Not another step, you two! Or else you'll have to-
+-Bree: We've done that part already...
+!HoldOn(0.2)
+!SetAnimEnd(Bree,DL)
+
+-Lance: Rest assured, sirs, we will make no trouble.
+-Lance: My brother and I are just passing through.
+!HoldOn(0.3)
+!SetAnimEnd(Bree,HeadDown)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,DL)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,HeadLeft)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,DL)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,HeadDown)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,DL)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,HeadLeft)
+!HoldOn(0.15)
+!SetAnimEnd(Bree,DL)
+!HoldOn(0.4)
+-Bree: Ain't that easy. This is a troll road, y'see.
+-Verm: Don't you mean a TOLL road?
+-Stilton: A little bit of both, to be|perfectly honest with ya.
+!ShowMoney(1)
+-Bree: It's ten seeds each to pass.|Pay up!
+*PayUp: Okay.
+*NoPayUp: No way!
+
+/PayUp
+!ShowMoney(0)
+!Walk(Verm,UR,0.3)
+!HoldOn(0.4)
+-Verm: Here's all the seeds we have, sirs.
+-Bree: What's this? Pocket crumbs? That's nowhere near ten plus ten seeds.
+-Lance:	Sirs, I'm afraid my brother and I have no more seeds on our persons.
+>LetUsThrough
+
+/NoPayUp
+!ShowMoney(0)
+-Verm: We're not paying you flea-bitten losers diddly-squat!
+-Lance:	Now, now, Verm. Let's show some decorum.
+-Lance:	Sirs, I'm afraid my brother and I have no seeds on our persons.
+>LetUsThrough
+
+/LetUsThrough
+-Lance: Perhaps you'll be so kind as to let us through anyway.
+-Bree: No seeds, huh.
+!HoldOn(0.2)
+!SetAnim(Bree,HeadLeft)
+!HoldOn(0.2)
+-Bree: Do ya smell that, Stilton?
+!HoldOn(0.2)
+!SetAnimEnd(Stilton,HeadDown)
+!HoldOn(0.2)
+-Stilton: I think I do, Bree. It's the smell of a liar.
+!SetAnimEnd(Bree,DL)
+!SetAnimEnd(Stilton,DL)
+-Bree: Let's gut these two and scrounge the seeds from their corpses!
+~Stop
+!GoToBattle(Bree1)
+
+/PostFight
+~WaterCaveLoop
+!HoldOn(0.5)
+-Bree: You little runts! Chief Sava will have your heads for this!
+-Stilton: Yeah! Sava the Slayer will chop ya into mousemeat!
+!Walk(Bree,UR,2)
+!Walk(Stilton,UR,2)
+!HoldOn(2)
+!Walk(Bree,DR,2)
+!Walk(Stilton,DR,2)
+!HoldOn(2.1)
+!TeleportCharacter(Bree,3060,400)
+!TeleportCharacter(Stilton,2920,320)
+!SetAnimEnd(Bree,DL)
+!SetAnimEnd(Stilton,DL)
+-Lance: Sava the Slayer?|Maybe the tale is true...
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+-Verm: What tale?
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+-Lance:	Word in the tunnels is that a water vole fell into the Underriver four seasons ago.
+-Lance: He grew fat on the water waste.
+-Lance: So fat, that the Underriver rats started worshipping him as a chieftain.
+-Lance:	Some say that he's as big as a horse, and that he swings around god weapons like they're nothing.
+-Verm: That can't be true. No rodent can grow that big, right?
+-Lance: Who can say?
+-Lance: I always thought he was a myth. Just like ghosts and muswolves.
+-Verm: Right. Just ghosts and muswolves.
+~Stop
+!Walk(Lance,DR,0.1)
+!HoldOn(0.1)
+-Lance: Let's go find out.
+!PinFollowers()
+~TheMissionLoop
+
+/MeetSava
+~Stop
+!Walk(Verm,UR,0.5)
+!HoldOn(0.5)
+!UnpinFollowers()
+!Walk(Verm,R,0.25)
+!Walk(Lance,U,0.5)
+!HoldOn(0.4)
+!SetAnimEnd(Verm,UR)
+!HoldOn(0.2)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.2)
+!SetAnimEnd(Bree,HeadLeft)
+!HoldOn(0.2)
+~SewerAmbLoop
+-Bree: Oi, Chief! They're here!
+!HoldOn(0.2)
+!SetAnimEnd(Bree,DL)
+!Walk(Sava,DL,4)
+!HoldOn(4.3)
+-Sava: Two mice?
+-Sava: Rats I could understand, but yer telling me ya had yer arses kicked by two widdle mice?
+-Stilton: Don't underestimate them, Chief!
+-Stilton: The bigger one's a scary good shot with the bow.
+-Bree: And that little one's got some fancy sword work going on.
+!HoldOn(0.1)
+!ShoutMode()
+-Sava: Pathetic! The both of ya!
+!HoldOn(0.1)
+-Sava: I'll deal with these runts myself.
+!Walk(Sava,DL,1)
+!HoldOn(1)
+-Lance: Chief Sava, I presume. It's a pleasure to meet you in person.
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+-Verm: What a let down. You said he was as big as a horse, Lance!
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+-Lance: Verm, mind your manners.
+!SetAnimEnd(Verm,U)
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UR)
+!SetAnimEnd(Lance,UR)
+!HoldOn(0.1)
+!ShoutMode()
+-Sava: HA!
+-Sava: Quite a smart tongue ya got there, little one.
+-Sava: I bet it won't be so smart when I cut it from yer mouth.
+~Stop
+
+!SetAnim(Sava,Draw)
+
+!HoldOn(3)
+~SavaLoop
+-Lance: So it's true. You do possess a god weapon.
+-Sava: Aye. Say hello to the Titan Reaper.
+-Sava: This beaut can cut through all creatures great and small.
+-Sava: Mice and rats, fish and felidaes. I even brought down a nightwing one time.
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+-Verm: Lance, what do we do?
+-Lance: Keep your nerve, Verm.
+-Lance: The vole talks big and carries an impressive weapon.
+-Lance: But I wonder: can he even swing something so unwieldy?
+
+!SetAnimEnd(Verm,U)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UR)
+!HoldOn(0.1)
+!SetGlobal(11,2)
+-Sava: Can I heck! I'm gonna carve ya up like butter!
+~Stop
+!GoToBattle(Sava)
+
+/SavaDown
+~WaterCaveLoop
+!HoldOn(0.5)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Lance)
+!HoldOn(0.5)
+-Sava: Ugh...
+!HoldOn(0.5)
+-Stilton: S-Sava's down?
+!HoldOn(0.3)
+!SetAnim(Bree,HeadLeft)
+!SetAnim(Stilton,HeadDown)
+!HoldOn(0.5)
+-Bree: Let's get out of here!
+!FastWalk(Stilton,DR,0.8)
+!FastWalk(Bree,DL,0.8)
+!HoldOn(0.4)
+!FastWalk(Stilton,DL,2)
+!FastWalk(Bree,DL,2)
+!HoldOn(2.1)
+!TeleportCharacter(Bree,0,0)
+!TeleportCharacter(Stilton,0,0)
+-Sava: Get back here... ya damned disloyal gutter rats...
+-Lance: You've lost a lot of blood, Chief. Make your peace with the world.
+-Sava: Oh, I've long made my peace.
+-Lance: Very well. Then this is where we part ways. Come along, Verm.
+!Walk(Lance,U,0.2)
+!HoldOn(0.2)
+!Walk(Lance,UR,0.5)
+!HoldOn(0.5)
+-Sava: Hey... Yer going up to Heaven, aren't you?
+
+!SetAnimEnd(Lance,R)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DR)
+!HoldOn(0.1)
+-Lance: Heaven?
+-Sava: The god's food hoard, just above here.
+-Lance: We are.
+-Sava: Then, from one foul vermin to|another: don't bother.
+-Sava: That place used to be paradise. But now the Yellow God roams the hall.
+-Sava: All that awaits you... is death.
+
+!HoldOn(0.2)
+!SavaDeath()
+!HoldOn(0.5)
+!Walk(Lance,DR,0.5)
+!HoldOn(0.3)
+!SetAnimEnd(Verm,R)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DR)
+!HoldOn(0.3)
+-Lance: Farewell, Chief. May your soul pass to the next world unhindered.
+!HoldOn(2)
+-Verm: Lance, what's a Yellow God?
+-Lance: That's a new one to me. But don't let it bug you, Verm.
+!SetAnimEnd(Lance,D)
+!HoldOn(0.1)
+!SetAnimEnd(Lance,DL)
+!HoldOn(0.1)
+-Lance: In all my travels, I've never seen or heard of any deadly "Yellow God".
+-Lance: It's the crazed mutterings of a dying rodent.
+-Lance: Just ghosts and muswolves.
+-Verm: Right. Just ghosts and muswolves.
+!Walk(Lance,DL,0.8)
+!HoldOn(0.8)
+-Lance: Let's keep moving. We're almost at the hoard.
+!PinFollowers()
+
+/ComeAlong
+-Lance:	Come along, Verm. We're very close.
+
+/WeaponCheck
+!SetNPCFlag(KnifeyMcKnifeson,ComeAlong)
+-Lance:	Verm, what are you doing?
+-Verm: Look at this thing! It's... it's...
+*AmazingSword: Amazing!
+*RidiculousSword: Ridiculous.
+
+/AmazingSword
+-Verm: Amazing! It's so big!
+-Lance:	It is quite a weapon.
+-Verm: ...I'm taking it with me.
+-Lance: Forget it, Verm. Getting food is a much higher priority than collecting some fancy god relic.
+-Verm: Yeah. I guess you're right.
+>CouldIUse
+
+/RidiculousSword
+-Verm: Ridiculous. It's way too big.
+-Lance: Indeed. It's clearly designed by gods, for gods. Not us rodents.
+>CouldIUse
+
+/CouldIUse
+-Verm: But do you think a mouse could ever use a weapon like this?
+-Lance: Heh. Maybe the strongest mouse in the world. Or the craziest.
+-Lance: Come on. We have a mission.
+
+/ExitSquare
+~Stop
+!Walk(Verm,UR,0.5)
+!NextRoom(Heaven,1)
+
+/FirstTip
+-InfoBig:  - Mouse Warrior Pro Tip -||Hold X to run.|Press C to open the menu.||Easy peasy.
+
+/LastTip
+-InfoBig:    - Mouse Warrior Pro Tip -||Feeling stronger? You might have just levelled-up!||When a rodent levels-up, they gain 1£ - a skill star. Skill stars can be spent in the Skills menu. Go take a look!
+
+/ToHeaven
+-Lance: This is it. Brace yourself, Verm.
+
+EndScene

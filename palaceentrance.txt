@@ -1,0 +1,392 @@
+/Intro
+!CheckGlobal(50,32,IntroSio)
+~PalaceLoop
+
+/IntroSio
+!AutoPinFollowers()
+
+/TooEarly
+-Verm: I can't leave yet.|I need to talk to the King.
+!Walk(Verm,UR,0.4)
+!HoldOn(0.4)
+
+/LateSioExit
+-Siobhan: I can't leave yet.|I have to speak to the Plaguemaster.
+!Walk(Siobhan,UR,0.4)
+!HoldOn(0.4)
+
+/SioRight
+-Verm: Siobhan was right. I'm not getting an audience with the King.
+-Verm: But maybe she managed to uncover something.
+!SetGlobal(26,10)
+
+/AqExit
+!Nani(Verm,!)
+!TurnOffBlocks(2)
+!Enter(Aquila)
+!HoldOn(0.4)
+!NormalJump(Verm,2,50,159,1444,JDL,D)
+!HoldOn(0.5)
+!TurnOnBlocks(2)
+!SetGlobal(26,4)
+!FastWalk(Aquila,UR,2.3)
+!HoldOn(0.3)
+!SetAnim(Verm,DR)
+!HoldOn(0.3)
+!SetAnim(Verm,R)
+!HoldOn(0.3)
+!SetAnim(Verm,UR)
+!HoldOn(1.2)
+!Exit(Aquila)
+!HoldOn(0.3)
+
+/Locked
+-Info: The door is locked.
+
+/VermLocked
+-Verm: I trust them.
+
+/NW
+-InfoBig: - The Night Guard -|King James the First addresses Blademaster Artura and the first Thimble Guard.
+
+/Painting1
+-InfoBig: - Lord Cheesecake -|The opener of doors and refuser of kisses.
+!CheckGlobal(99,2,P1b)
+
+/P1b
+!CheckItem(81,P1c)
+!HoldOn(0.2)
+!Nani(Siobhan,?)
+!HoldOn(0.8)
+-Info: Hmm? There's something odd about this painting...
+*Search: Search it.
+*P1c: Leave it.
+
+/Search
+!ReceiveItem(81)
+!ShowItem(Prota,81)
+!HoldOn(0.8)
+!PlaySound(ItemFound)
+-Info: You feel behind the frame and discover a Mystery Key. Ooooh, how curious!
+
+/P1c
+
+/Painting2
+-InfoBig: - Luiz, Duque do|Campo Muito Grande -|The unflusterable peacebringer.
+
+/Painting3
+-InfoBig: -Opossum with a Pearl Earring-|Who is she?
+
+/Big Dan
+!CheckGlobal(10,2,SioLDan)
+-Big Dan: This door leads to Plaguemaster Aquila's lab.
+-Big Dan: A right weirdo, that one.
+
+/SioLDan
+-Big Dan: 'Sup, Siobhan. Hope the Plaguemaster's not working you ragged.
+
+/Dominic
+!CheckGlobal(10,2,DominicTwo)
+>Magnus
+
+/Magnus
+-Magnus: The boy is spoiled and foolish.
+-Dominic: Yes, dear Magnus, but his counsel is wise and experienced.
+-Dominic: Let us lend the full support of our baronies. 
+-Magnus: Hmph. As if we have a choice.
+
+/DominicTwo
+!CheckGlobal(32,30,DominicThree)
+-Dominic: My dear Magnus returned to Vinium. Baron's duties and what-not.
+
+/DominicThree
+-Dominic: You've heard news from Vinium?|How was my dear Magnus?
+
+/Hargrave
+-Hargrave: Ah 
+
+/Ellen
+-Ellen: Will the young King be receptive to the people's needs? Time will tell.
+
+/Alex
+!CheckGlobal(10,2,AlexLate)
+-Alex: Don't dawdle here, peasant.|You're stinking up the place.
+
+/AlexLate
+-Alex: I'm taking the scissor girls out on a scouting mission today.
+-Alex: Rosaline I can handle, but the younger one's a right brat.|Gods give me strength.
+
+/Frank
+!CheckGlobal(10,2,FrankLate)
+-Frank: You look pretty strong. Ever thought of joining the Thimble Guard?
+
+/FrankLate
+-Frank: Leo's been training extra hard recently. Dunno why. It's not like he's lacking in skill.
+
+/Ian
+!CheckGlobal(10,2,IanLate)
+-Ian: Visitors always ask me about secret passages around the palace.
+-Ian: But there ain't any.|Trust me, I looked.
+
+/IanLate
+-Ian: I'm absolutely convinced there's a secret passage in this place. I can smell it.
+-Ian: But nope. Can't find squat.|I'm going crazy.
+
+/Little Dan
+!CheckGlobal(10,2,LittleDanLate)
+-Little Dan: Behind here's the barracks.
+-Little Dan: Touch my stuff, and I'll bury you.
+
+/LittleDanLate
+-Little Dan: So you know Blademaster Leo's|sword, right?
+-Little Dan: I thought it was a|one-of-a-kind, holy relic.
+-Little Dan: But then I found a closet|with, like, a dozen of 'em!|That was a surprise.
+
+/Ophilia
+!CheckGlobal(10,2,SioOphilia)
+-Ophilia: Oh, I do hope the young King lives up to his mother's fine reputation, gods rest her soul.
+
+/SioOphilia
+-Ophilia: Oh, little Siobhan, you must let me take you shopping some time. That outfit is unbecoming!
+-Siobhan: I'm good, thanks.
+
+/Rosaline
+!CheckGlobal(10,2,RoseLate)
+!CheckGlobal(73,0,Rose1)
+!CheckGlobal(73,2,Rose2)
+!CheckGlobal(73,1,Rose3)
+!CheckGlobal(73,3,Rose3)
+!CheckGlobal(73,4,Rose4)
+!CheckGlobal(73,5,Rose3)
+!CheckGlobal(73,6,RosePost)
+-Rosaline: I'll keep a close eye on Maisie.
+
+/Rose1
+!SetGlobal(73,1)
+>RoseFirst
+
+/Rose2
+!SetGlobal(73,3)
+>RoseFirst
+
+/Rose4
+!SetGlobal(73,5)
+>RoseFirst
+
+/RoseFirst
+-Rosaline: My sister's running late for roll call. On her first day as well.
+-Rosaline: She's going to get churned out at this rate.
+
+/Rose3
+-Rosaline: Where is she?|She's going to get churned out at this rate.
+
+/RosePost
+!SetGlobal(73,7)
+-Rosaline: So it was you who assisted Maisie?|I appreciate that.
+-Verm: I didn't do anything.
+-Rosaline: You did something.
+-Rosaline: The residents of Gutter End won't even give us the time of day.
+-Rosaline: And I can't say I blame them, given the Guard's... mixed reputation.
+-Rosaline: I don't know why you chose to help my sister out, but in any case, you have my thanks.
+
+/RoseLate
+!CheckGlobal(73,7,RoseLateGood)
+!CheckGlobal(73,6,RoseLateGood)
+-Rosaline: I know you were close with the vagabond. My condolences.
+-Rosaline: Leo's swordsmanship is flawless. Know that there was nothing you could have done.
+
+/RoseLateGood
+-Rosaline: Your vagabond friend was a good person. I'm truly sorry.
+-Rosaline: That Leo... I trust his judgment. But I cannot make excuses for his actions.
+
+/Maisie
+!CheckGlobal(10,2,MaisieLate)
+-Maisie: Thanks for passing on Rosy's message! You're the best!
+!CheckGlobal(73,6,RosePost)
+
+/MaisieLate
+-Maisie: You and your pals in the woods got me and Rosy in right trouble. Get out of my face.
+
+/Tobin
+!CheckGlobal(46,1,SaveTime)
+-InfoBig: It's a statue of Rodentia's reigning monarch, King James XLV.
+-InfoBig: In his right paw, he holds the sceptre of legal authority. In his left, the orb of divine rule.
+!SetGlobal(46,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: The King adjures.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(The Royal Palace,The foyer)
+-Info: Your game has been saved.
+/SaveNo
+
+/Victoria
+!CheckGlobal(10,2,PostVictoria)
+-Victoria: Don't mind Alex.
+-Victoria: He's just bitter that Sir Leo stole his Blademaster title.
+
+/PostVictoria
+!CheckGlobal(32,30,PostVictoria2)
+-Victoria: I dunno the hows or whys, but the scissor twins got a demotion.
+-Victoria: Now they're stuck on Alex's squad. Sucks for them.
+
+/PostVictoria2
+-Victoria: Alex and the scissor twins went on a scouting mission earlier, but didn't return.
+-Victoria: Should I be worried?
+
+/Savic
+!CheckGlobal(10,2,SavicLate)
+!CheckGlobal(78,1,SavicDone1)
+!CheckGlobal(78,2,SavicDone2)
+-Savic: Hey, uh... be honest with me. Does this hat make me look distinguished?
+*HatYes: It's cool.
+*HatNo: It's cringe.
+
+/HatYes
+!SetGlobal(78,1)
+-Verm: It's great. Rock that look.
+-Savic: Oh, really? Awesome!|I wasn't sure I could pull it off.
+>SavicDone1
+
+/HatNo
+!SetGlobal(78,2)
+-Verm: I don't know much about fashion,|but even I know those hats are out.
+-Savic: Ah, dang. Really?
+>SavicDone2
+
+/SavicDone1
+-Savic: I'm hoping to make sergeant one day. Maybe this hat will make me stand out...
+
+/SavicDone2
+-Savic: I'm hoping to make sergeant one day. But maybe this hat will hold me back...
+
+/SavicLate
+!CheckGlobal(32,30,SavicLate2)
+-Savic: I've been waiting on a promotion for ages.
+-Savic: Maybe a new hat would bring me luck? One with a cool rim like yours.
+
+/SavicLate2
+-Savic: Where's Alex? He's supposed to be doing roll call.
+-Savic: He's hard to miss, what with that amazing plumed hat of his.
+
+/LateGameExit
+-InfoBig: The portcullis is locked in place.|Nobody is getting in or out.
+!CheckGlobal(99,0,LGEV)
+!Walk(Siobhan,UR,0.3)
+!HoldOn(0.3)
+
+/Cuthbert
+-Cuthbert Esq.: These paintings are magnificent, are they not?
+-Cuthbert Esq.: They demonstrate so much more talent than what any "modern" artist could produce.
+
+-Cuthbert Esq.: Earlier, I witnessed a suspicious ferret interfering with the paintings.
+-Cuthbert Esq.: The sheer audacity! Art must be appreciated from a distance, not interacted with!
+
+/LGEV
+!Walk(Verm,UR,0.3)
+!HoldOn(0.3)
+
+/BreakIn
+!RemoveFromParty(Verm)
+!SetLeader(Siobhan)
+!ChangeOver()
+!HoldOn(0.3)
+!Walk(Siobhan,L,0.4)
+!Walk(Gwen,D,0.2)
+!Walk(Verm,DL,0.2)
+!Walk(Bruce,DR,0.3)
+!HoldOn(0.3)
+!SetAnim(Gwen,DR)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!SetAnim(Bruce,R)
+!SetGlobal(50,32)
+!HoldOn(1.3)
+-Verm: Yeah. Not a creature stirring.
+!HoldOn(0.3)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!SetAnim(Siobhan,UR)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!SetAnim(Siobhan,DR)
+-Gwen: Bree's diversion is working even better than hoped.
+-Bruce: So what's the plan now?
+-Gwen: Well, we have two threats|to deal with: Excalibur|and the Yellow God.
+-Gwen: But it's minutes to the witching hour. Which do we prioritise?
+-Verm: I figured this might happen.|And I've already made up my mind.
+-Verm: You three go and stop the Plaguemaster and their doomsday weapon.
+-Verm: I'll speak with the King.
+!HoldOn(1)
+-Bruce: What, alone?
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+-Verm: Yeah? I'll just tell him about the Yellow God and ask about a route to the surface.
+-Siobhan: Are you sure, Sir Verm?
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.3)
+-Siobhan: You're not exactly...|you know...|an eloquent orator.
+-Verm: Huh?
+-Bruce: Yer bad with words, lad. 'Specially around authority figures.
+-Verm: Ah.
+
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+-Verm: You're right.
+-Verm: But I don't think it'll matter.
+-Verm: I doubt a fancy speech would change anyone's heart at this point.
+!HoldOn(0.6)
+-Gwen: Are you sure you know|what you're doing?
+-Verm: You just focus on Excalibur.
+!HoldOn(0.6)
+-Siobhan: We trust you.|Good luck, Sir Verm.
+-Bruce: Aye. Ye can do it.
+-Gwen: Give 'em hell.
+
+!Walk(Siobhan,D,0.4)
+!Walk(Verm,U,0.4)
+!Walk(Bruce,L,0.4)
+!Walk(Gwen,UL,0.4)
+!HoldOn(0.4)
+!Walk(Verm,UL,0.2)
+!Walk(Siobhan,DR,0.4)
+!Walk(Bruce,UL,0.4)
+!HoldOn(0.3)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!AutoPinFollowers(1)
+!CameraFollow(1)
+
+/Hello
+-Verm: Go kick the Plaguemaster's arse.
+
+EndScene

@@ -1,0 +1,44 @@
+/BattleVeryStart
+Blank
+/BattleStart
+-Verm: Hang on, Lance. I'm coming.
+!SetGlobal(4,0)
+!HoldOn(0.9)
+!LetsFight()
+
+/TalkTime
+!CheckGlobal(4,1,TT1)
+!CheckGlobal(4,2,TT2)
+!CheckGlobal(4,3,TT3)
+!SetGlobal(4,1)
+-InfoBig: Verm tries to take a step, but his feet refuse to move.
+!HoldOn(0.1)
+!NewTurn()
+
+/NoTalkTime
+!HoldOn(1)
+!NewTurn()
+
+/TT1
+-Verm: ...
+!SetGlobal(4,2)
+!HoldOn(0.1)
+!NewTurn()
+
+/TT2
+-Verm: ...
+!SetGlobal(4,3)
+!HoldOn(0.1)
+!NewTurn()
+
+/TT3
+-Verm: ...
+!HoldOn(0.1)
+!HoldOn(0.5)
+~Stop
+!EndBattle()
+
+/EnemyDead
+~Stop
+!EndBattle()
+End scene

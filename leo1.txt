@@ -1,0 +1,118 @@
+/BattleVeryStart
+!HoldOn(0.8)
+/BattleStart
+!SetGlobal(4,0)
+!DrawWeapon(Verm)
+!HoldOn(0.8)
+~LeoBattle1Loop
+!LetsFight()
+
+/TalkTime
+!CheckGlobal(4,1,TT1)
+!CheckGlobal(4,2,TT2)
+!CheckGlobal(4,3,TT3)
+!CheckGlobal(4,4,TT4)
+!CheckGlobal(4,5,TT5)
+!CheckGlobal(4,6,TT6)
+!SetGlobal(4,1)
+-Leo: Is that all? Come on, swing harder.
+!HoldOn(0.1)
+!NewTurn()
+
+/NoTalkTime
+!CheckGlobal(4,6,TT6)
+!HoldOn(1)
+!NewTurn()
+
+/TT1
+-Leo: Surely you can do better than that, vagabond.
+!SetGlobal(4,2)
+!HoldOn(0.1)
+!NewTurn()
+
+/TT2
+!HoldOn(0.9)
+-Verm: Why are you just standing there?
+-Leo: Getting tired, are we?
+-Verm: Ha! I'm just getting started.
+!SetGlobal(4,3)
+!HoldOn(0.1)
+!NewTurn()
+
+/TT3
+-Leo: Something is off with your technique...
+-Verm: Shut up and fight back.
+!SetGlobal(4,4)
+!HoldOn(0.1)
+!NewTurn()
+
+/TT4
+-Leo: Ah, I see the problem.|You have no weight.
+-Verm: Nor do you, pipsqueak.
+-Leo: You misunderstand. If you fight for nothing, then your strikes will always lack weight.
+-Verm: Shows what you know!|I fight for plenty.
+-Leo: Show me.
+!SetGlobal(4,5)
+!HoldOn(0.1)
+!NewTurn()
+
+/TT5
+!HoldOn(1.4)
+~Stop
+!BreakLeoSword()
+!HoldOn(0.2)
+!Nani(Leo,!)
+!HoldOn(3)
+-Leo:  Huh. 
+!HoldOn(0.8)
+-Leo: Interesting.
+!HoldOn(0.3)
+-Verm: Do you concede?
+-Leo: Concede?
+-Leo: Vagabond, I've killed warriors and wyrms, blademasters and vulpes.
+-Leo: To put down a whelp like you...
+!SetToolTip(Lion Stance)
+!SetAnim(Leo,ToStance)
+!PlaySound(LamiaTurn)
+!HoldOn(1.4)
+~LionStanceLoop
+!SetToolTip()
+-Leo: ...Half a sword is all I need.
+!SetGlobal(4,6)
+!HoldOn(0.1)
+!NewTurn()
+
+/TT6
+!CheckGlobal(75,1,TT7)
+-Leo: That won't save you.
+!SetToolTip(Flèche Fatale)
+!HoldOn(0.1)
+!SpecialMove(Leo)
+
+/TT7
+!SetGlobal(75,0)
+-Leo: If you insist.
+!SetToolTip(Flèche Fatale)
+!HoldOn(0.1)
+!SpecialMove(Leo)
+
+/VermRage
+!CheckGlobal(4,0,VR1)
+-Verm: Quit standing around|and come at me already!
+!CheckGlobal(4,6,VR6)
+-Leo: In good time.
+!SetAnim(Verm,Idle)
+!NewTurn()
+/VR1
+-Verm: Get ready, Vulpes Slayer!
+-Leo: Please, go right ahead.
+!SetAnim(Verm,Idle)
+!NewTurn()
+/VR6
+!SetGlobal(75,1)
+!SetAnim(Verm,Idle)
+!NewTurn()
+/EnemyDead
+~Stop
+!EndBattle()
+End scene

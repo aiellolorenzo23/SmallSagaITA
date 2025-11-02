@@ -1,0 +1,60 @@
+/Intro
+~Stop
+!AutoPinFollowers()
+
+/FirstEntry
+~Stop
+!SetGlobal(30,8)
+!HoldOn(2)
+!SolidBlock(4)
+!PlaySound(ToiletEscape)
+!SetAnim(Toilet,Activate)
+!HoldOn(4)
+!OverworldCameraPan(480,535,0.5,1)
+!HoldOn(2.8)
+!NormalJump(Gwen,1.4,100,401,555,JDL,Landing)
+!HoldOn(0.8)
+!NormalJump(Siobhan,1.4,100,500,555,Jump,Dead)
+!HoldOn(2.5)
+-Gwen: You learned how to swim.|Good job.
+!HoldOn(0.3)
+!SetAnim(Gwen,DL)
+!HoldOn(0.7)
+-Siobhan: Gwen.
+!HoldOn(0.8)
+-Siobhan: I didn't enjoy that.
+!HoldOn(0.6)
+-Gwen: Can't say it brings back great memories for me either.
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!Walk(Gwen,R,0.3)
+!HoldOn(0.4)
+-Gwen: Come on. Get up. I'll introduce you to my family.
+
+!NormalJump(Siobhan,2,20,500,555,Jump,DL)
+!HoldOn(1)
+!SolidBlock(4)
+!AutoPinFollowers(1)
+!CameraFollow(1)
+
+/ToiletReady
+-InfoBig: Leave the area?
+*Yep: Leave
+*Nah: Not yet
+
+/Nah
+
+/Yep
+!PlaySound(Flush)
+!NextRoom(ToBlack)
+!HoldOn(1)
+!NextRoom(WhiteSewer,2)
+
+/Toilet
+!CheckGlobal(99,0,ToiletReady)
+-Gwen: Yes, we can leave the way we came in.
+-Gwen: But first, we have a mission to complete.
+
+EndScene

@@ -1,0 +1,74 @@
+0000 
+0050 s Pilgrim, the world stretches yonder
+0120 s 
+0130 s Full of romance and wonder
+0180 s 
+0190 s Full of heartbreak and splendour.
+0220 ! BardMove
+0250 s 
+0260 s Go, and may no foes surround you
+0260 c Created by||Darya Noghani
+0340 c Bard songs|written and performed by||Kofi Young
+0340 s Feral titans not hound you
+0400 s May no peril confound you.
+0420 c Cello performed by||Alice Young
+0480 s And though your pawprints lead far away from here
+0500 c "Manus Domini"|written and produced by||Evelyn Lark
+0580 c Additional art assets by||Ansimuz|Cazwolf|NeoCyania
+0590 s As lost in the wild realms you roam
+0660 c Beta Testing by||Catriona Macdonald|Zoe Landon|Otter Princess Vivian|Samizdat
+0700 s Still may you hear the call of the fireside
+0740 c Promotional art by||Ash Szymanik|Jerome Jacinto|Sneaky Gnida|Toby Trangmar
+0790 s 
+0800 s Still may your journey bring you home.
+0820 c 
+0890 s 
+0890 ! Bardstop
+0900 ! BardFadeOut
+0910 b
+0910 m M1
+1000 m M2
+1090 m M3
+1180 m M4
+1300 ! BardFadeIn
+1320 ! Bardstart
+1330 s Pilgrim, you forge ever onward
+1340 c With backer characters by||NightFaux and FrayFray||Pocket Jabari||Steven Keller
+1410 s Cut your path through the wild woods
+1420 c Frack||Halie Wright||James Fetterman||Joshua Benoit||Mahdi Almarzoog
+1470 s Pass unseen and unheard.
+1500 c jjfinn||Asher Wolfe||Joseph Tate||Mishal Almazidi||Nathan Mayoras
+1540 s Go, and may fair fortune guide you
+1580 c Nathan "smudge" Griffith||Otter Princess Vivian||Rob Epler||Rochelle F||Strawberrymog
+1620 s Lady Luck walk beside you
+1660 c velocirection||Victor M. Toledo||Vy||Zipi Ravira
+1680 s From gods' bright-burning eyes hide you.
+1740 c Jaarik Abels-Smit||James Alexander Jack||Jeremy Ryan||Joshua Casiano||knh190
+1760 s And though the winter storm blows you far off course
+1820 c Maisy Kay||Metric Foxton||Michael Menyaylov||Mommui||Relaxing Dragon
+1870 s Adrift on the everchanging song
+1900 c Saranja May||Sean Batter||Shea Butcher||Sir Pawsies||TracyHedgefox
+1980 c 
+1990 s Still may the summer breeze see you find your tune
+2100 s The cadence that falls where you belong.
+2170 ! Bardstop
+2170 s 
+2180 ! BardFadeOut
+2190 b
+2190 m M5
+2280 m M6
+2370 m M7
+2460 m M8
+2590 ! BardFadeIn
+2620 ! Bardstart
+2640 s And though your pawprints lead far away from here
+2720 s As lost in the wild realms you roam
+2830 s Still may your long road show you your own true heart
+2950 s Until at last you turn to home.
+2960 ! Bardstop
+2970 c The End
+3030 s 
+3040 c 
+3080 ! Barddone
+4080 ! Barddone
+

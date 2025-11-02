@@ -1,0 +1,12 @@
+/BattleVeryStart
+~RandomBattleLoop
+!HoldOn(1)
+!DrawWeapon(Siobhan)
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

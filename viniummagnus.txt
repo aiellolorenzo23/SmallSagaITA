@@ -1,0 +1,151 @@
+/Intro
+
+/Magnus
+!CheckGlobal(99,3,MagnusBruce)
+-Magnus: Quintus arrested, a farm that owns itself... Vinium is changing. Maybe for the better.
+
+/MagnusPost
+!HoldOn(2)
+-Magnus: Sir Bruce, Ambassador of Sky Garden.
+-Magnus: Sir Verm of... erm...
+-Verm: Just Verm is fine.
+!HoldOn(0.3)
+-Magnus: Verm.
+-Magnus: As the Baron of Vinium, you have my most sincere apology for this terrible blunder.
+-Magnus: I understand that no physical gift can ameliorate the suffering you have endured.
+-Magnus: However, as compensation I would like to offer you this.
+!HoldOn(0.1)
+!ShowItem(Magnus,67)
+!HoldOn(0.4)
+!PlaySound(ItemFound)
+!ReceiveItem(67)
+!SetGlobal(89,11111)
+-Info: You received a House Key.
+!HoldOn(0.3)
+!SetAnim(Bruce,U)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!Nani(Verm,?)
+!HoldOn(0.1)
+!Nani(Bruce,?)
+!HoldOn(0.5)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!SetAnim(Verm,UR)
+-Magnus: When Quintus was arrested, his ill-gotten property was seized under the laws of civil forfeiture.
+-Magnus: I'm entrusting you both with ownership of Quintus's abode.
+-Magnus: Well, one of his many abodes. I believe he used this building for surplus wine storage.
+!HoldOn(0.3)
+-Magnus: Does this gift suffice as|adequate compensation?
+-Bruce: Aye, yeah, that's pretty nice. Cannae complain about getting a free house in this economy.
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+-Bruce: Let's sign it under yer name.|What do ye say tae that, Verm?
+*Yep: It'll do.
+*Nope: It's not enough.
+
+/Nope
+-Verm: I think it takes more than a cheap, plastic, wine cellar to fix a cock-up of this size.
+-Verm: Imagine if word got out that you almost killed the Ambassador of Sky Garden...
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+-Magnus: Yes, yes, I get it.|So what do you want?
+*Quintus: Quintus.
+*Farm: The farm.
+
+/Quintus
+-Verm: I want Quintus's head on a plate.
+-Bruce: Always with the vengeance, this one.
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+-Magnus: I cannot guarantee his head, but I'll see to it that Quintus's punishment is sweet and fitting.
+-Magnus: Rest assured, he won't get off lightly.
+>FarmDecided
+
+/Farm
+-Verm: I want the mushroom farm.
+-Magnus: I can probably do that.
+-Magnus: Like his house, the farm became property of the barony when Quintus was arrested.
+-Magnus: It would be trivial to sign it over to you.
+-Verm: Nah, don't sign it over to me.|Give it to Jeb and Alfie.
+>Mushroom
+
+/Yep
+-Verm: Yeah, it's fine.|No hard feelings.
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+-Bruce: So, what's going tae happen to that slaver?
+-Magnus: I'll see to it that Quintus's punishment is sweet and fitting.
+-Magnus: Rest assured, he won't get off lightly.
+>FarmDecided
+
+/FarmDecided
+-Verm: Then who gets his mushroom farm?
+-Magnus: Like his house, it was confiscated when he was arrested.
+-Magnus: What happens to it now is a civic matter.
+-Verm: You're the Baron, aren't you?|You're the guy who makes these decisions.
+-Verm: I want you to give the farm to Jeb and Alfie.
+>Mushroom
+
+/Mushroom
+-Magnus: Who?
+-Verm: The farm workers.
+-Magnus: Oh, right. Quintus's boys.
+-Magnus: I'm not convinced that two farm hands are capable of managing a corporate enterprise.
+-Verm: Are you serious? They've been running the farm for seasons.
+-Verm: They're far better qualified than a clean-pawed dweeb like Quintus ever was.
+!HoldOn(1)
+-Magnus: Well, you may have a point there.
+-Magnus: But a business owned by its workers? It's an odd notion. Unprecedented, even.
+-Bruce: If Verm trusts these guys, them I trust them too. Get it done, ye bureaucrat.
+-Magnus: Compelling.|Fine. I'll see it done.
+-Bruce: Great. I think we're all settled then.
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+-Bruce: I'll see ye outside, Verm.
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!Walk(Bruce,DL,0.8)
+!HoldOn(0.4)
+!Exit(Bruce)
+
+/Isengrim
+-Isengrim: Good fight, man.
+-Isengrim: I appreciate you playing along with the kayfabe. Fans love the whole "muswolf" gimmick.
+
+/Book
+-InfoBig: Dear Ophiuchus,||Your last letter troubled me. Am I to believe that such a fearsome weapon truly exists?||Still, I ran the numbers. A full evacuation, although expensive, is feasible. Perhaps the King can be reasoned with...
+!HoldOn(0.1)
+!SetAnim(Magnus,LookRight1)
+!ShoutMode()
+!HoldOn(0.1)
+!SetAnim(Magnus,LookRight2)
+-Magnus: Hey!
+!HoldOn(0.1)
+-Magnus: That letter is not for you.
+!SetAnim(Magnus,LookRight1)
+!HoldOn(0.1)
+!SetAnim(Magnus,Loop)
+
+/MagnusBruce
+-Magnus: I have mountains of paper work to get through. Please leave.

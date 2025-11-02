@@ -1,0 +1,35 @@
+/Intro
+!SetGlobal(75,29)
+~Stop
+!AutoPinFollowers()
+!Walk(Verm,U,2)
+!HoldOn(1.5)
+!OverworldCameraPan(320,210,0.25,1)
+!HoldOn(5)
+!PlaySound(OwlOpen)
+!SetAnim(Snake,Open)
+!HoldOn(1.8)
+!GoToBattle(Snake)
+
+/PostBattle
+!SetGlobal(75,30)
+!HoldOn(1.4)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(0.2)
+!LevelUp(Bruce)
+!HoldOn(0.2)
+!LevelUp(Gwen)
+!HoldOn(1.7)
+!PlaySound(ItemFound)
+!ReceiveItem(72)
+-Info: You gather a vial of wyrm venom.
+!HoldOn(0.5)
+-Info: You know not to linger.|You hastily leave the darkness.
+!Walk(Verm,D,2)
+!Walk(Siobhan,D,2)
+!Walk(Gwen,D,2)
+!Walk(Bruce,D,2)
+!HoldOn(1)
+!NextRoom(SolhillInnerPassage,1)

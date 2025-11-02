@@ -1,0 +1,335 @@
+/Intro
+!CheckGlobal(5,4,IntroContinue)
+
+/IntroContinue
+~Stop
+!SetAnim(Siobhan,DL)
+!Walk(Verm,UR,0.2)
+!HoldOn(1)
+~SiobhanLoop
+-Verm: A treasure trove, huh?
+!SetGlobal(5,5)
+-Siobhan: Yep. God tools.
+-Siobhan: I've been secretly collecting and studying for a whole season now.
+
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!Walk(Siobhan,R,0.3)
+!HoldOn(0.4)
+-Siobhan: You see this? It's a god's time keeper. I can't read the runes yet, but I'm getting there.
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!Walk(Siobhan,L,0.6)
+!HoldOn(0.6)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,UL)
+-Siobhan: This machine's a fancy god's toy, I think.
+-Siobhan: I watched a young one play with it for hours.
+-Siobhan: It turns on, but the screen's all banjaxed. So I reckon it's missing a part...
+!SetAnim(Verm,U)
+-Verm: This is all fascinating. Truly.
+-Verm: But if you brought me down just to show me your trinket collection...
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+-Siobhan: Wait, wait, you'll really like this next one.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!Walk(Siobhan,UR,0.3)
+!HoldOn(0.4)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!Walk(Siobhan,L,0.2)
+!HoldOn(0.8)
+!SpecialWalk(Siobhan,DR,2.2,ULWalk,0.2)
+!SlowWalk(Lighter,DR,2.2)
+!HoldOn(2.5)
+!ResetWalkSpeed(Siobhan)
+!Walk(Siobhan,L,0.4)
+!HoldOn(0.4)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+-Siobhan: Do you know what this is?
+!Walk(Verm,UR,0.7)
+!HoldOn(0.3)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.2)
+!SetAnim(Siobhan,R)
+!HoldOn(0.3)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.4)
+-Verm: I've seen them around. I know they're a common god tool.
+-Siobhan: Even better. A god weapon, like yours.
+-Siobhan: I've got it working. Even spruced it up to pack a proper punch.
+-Siobhan: But it's in need of a field test.
+-Siobhan: I... thought I could use it. On Tiger. Give him what-for.
+-Siobhan: Maybe save the village.
+
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!Walk(Siobhan,DL,0.3)
+!HoldOn(0.5)
+-Siobhan: But... I don't think I can.
+-Siobhan: Not because I'm scared. I mean, I am scared, of course. But...
+!SetAnim(Verm,DL)
+-Verm: I get it.
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+-Siobhan: You do?
+-Verm: You want to take that felidae down.
+-Verm: But you know attacking Tiger yourself would be suicide.
+-Verm: The other moles in this village just sit on their tails and rant about the Old Way.
+-Verm: So you want me to lend my sword.
+-Siobhan: ...R-right. Pretty much.
+!Walk(Siobhan,UR,0.5)
+!HoldOn(0.6)
+!SetAnim(Siobhan,R)
+!SetAnim(Verm,L)
+!HoldOn(0.3)
+-Siobhan: Could you?
+-Verm: Sorry to disappoint. I don't do sell-sword work.
+-Siobhan: Sell-sword work?
+-Siobhan: I couldn't pay you if I wanted to. The village is flat-out broke.
+-Siobhan: I was hoping you would do it, you know, because you're a chivalrous knight.
+-Verm: Like I said, I'm not a knight. I didn't come here to do charity work.
+-Verm: So go rally the Thimble Guard or something. I'm out.
+!HoldOn(0.1)
+!Walk(Verm,DL,0.8)
+!HoldOn(0.2)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!Fuzz(1)
+!HoldOn(0.8)
+!PlaySound(Godstep)
+!SetAnim(Verm,OwDL)
+!Nani(Verm,!)
+!ShoutMode()
+!HoldOn(0.6)
+-Verm: Ah!
+!HoldOn(0.7)
+-Verm: I'm not running away...
+!HoldOn(0.7)
+-Siobhan: S-sir Verm? Are you okay?
+!Fuzz(0)
+!HoldOn(1)
+!SetAnim(Verm,DL)
+!HoldOn(1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!Walk(Verm,UR,0.8)
+!HoldOn(0.9)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!SetAnim(Verm,L)
+-Verm: You're really pitiful,|you know that?
+-Siobhan: Y-yeah. I know.
+!HoldOn(0.5)
+-Verm: I'll help you.
+-Siobhan: Really?
+-Verm: Yeah.
+-Verm: We'll go kill that felidae.
+-Verm: You can reap the glory or restore your village honour or whatever.
+-Verm: Just make sure to follow my orders.
+-Siobhan: Yes sir Verm! To the letter!
+
+!Walk(Siobhan,R,0.2)
+!HoldOn(0.2)
+!WeaponGet()
+!SetAnim(Siobhan,DR)
+!HoldOn(0.05)
+!SetAnim(Siobhan,D)
+!HoldOn(0.05)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.05)
+!SetAnim(Siobhan,L)
+!HoldOn(0.05)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.05)
+!SetAnim(Siobhan,U)
+!HoldOn(0.05)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.05)
+!SetAnim(Siobhan,R)
+!HoldOn(0.2)
+-Siobhan: I'll go wait by the lift.
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!Walk(Siobhan,D,0.2)
+!HoldOn(0.2)
+!SetAnim(Verm,DL)
+!Walk(Siobhan,DL,0.2)
+!HoldOn(0.3)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(1)
+-Siobhan: Thank you so much, Sir Verm.
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!Walk(Siobhan,DL,0.5)
+!HoldOn(0.5)
+~Stop
+!Exit(Siobhan)
+!HoldOn(0.5)
+!AddToParty(Siobhan)
+!PlaySound(NewPartyMember)
+-Info: Siobhan has joined the party.
+!HoldOn(0.5)
+-Verm: Well...
+-Verm: At least if it all goes wrong, she'll make for a good distraction.
+
+/GameDude
+!CheckGlobal(3,1,GameTime)
+!CheckItem(48,AddCartridge)
+-Verm: Siobhan said this thing is missing a part.
+
+/AddCartridge
+!Nani(Verm,?)
+!HoldOn(1)
+-Info: It looks like this Godly Junk you fished up could fit in the back of the machine...
+*AddCartridgeDone: Do it
+*NoGame: Not now
+
+/AddCartridgeDone
+!Nani(Verm,!)
+!HoldOn(1)
+-Info: The Godly Junk neatly slots into place.
+!LoseItem(48)
+!SetGlobal(3,1)
+>GameTime
+
+/GameTime
+-InfoBig: Play a quick game?
+*YesGame: Sure
+*NoGame: Not now
+
+/YesGame
+~Stop
+!HoldOn(1)
+!GameDudeTime()
+/NoGame
+
+/Watch
+-Info: The runes are strange.|You cannot read godly writing.
+
+/Phone
+-Info: This device looks complicated.|But none of these buttons do anything.
+
+/SiobhanLate
+~Stop
+!SetGlobal(76,6)
+!SetAnim(Siobhan,DL)
+!Walk(Verm,UR,0.2)
+!HoldOn(1)
+~SiobhanLoop
+-Siobhan: Back in my old den...
+!HoldOn(0.5)
+-Verm: Nostalgic, right?
+-Siobhan: You could say that.
+!HoldOn(0.5)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.6)
+-Siobhan: I used to come in here and tinker with something whenever Mammy and me would argue.
+-Siobhan: By the time you arrived, I knew the ins and outs of all kinds of godly things.
+!HoldOn(0.3)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.6)
+!Nani(Siobhan,!)
+!HoldOn(0.3)
+-Siobhan: Oh, right! Almost forgot why we came here.
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+-Siobhan: This won't take a second.
+!Walk(Siobhan,UR,0.6)
+!HoldOn(1)
+!ShowItem(Siobhan,78)
+!HoldOn(0.4)
+!PlaySound(ItemFound)
+!ReceiveItem(78)
+-Info: Siobhan found a Digitised Pet.|You add it to your trinkets.
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+-Siobhan: All done!
+-Verm: Huh? That's all?
+-Siobhan: Yep! Let's go.
+!Walk(Siobhan,D,0.2)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!Walk(Verm,UL,0.2)
+!Walk(Siobhan,DL,1)
+~Stop
+!HoldOn(0.3)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!Exit(Siobhan)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.4)
+End scene

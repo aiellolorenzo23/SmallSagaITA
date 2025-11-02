@@ -1,0 +1,173 @@
+/JustPin
+!AutoPinFollowers()
+
+/LateIntro
+!SetGlobal(50,33)
+!SetGlobal(92,1)
+!HoldOn(2)
+!NormalJump(Siobhan,1.2,100,409,301,JDL,Dead)
+!HoldOn(1.4)
+!HoldOn(0.7)
+!NormalJump(Siobhan,2.2,40,349,301,JDL,DL)
+!HoldOn(0.5)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!TeleportCharacter(Gwen,660,-30)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!NormalJump(Gwen,1.2,100,419,291,JDL,DL)
+!HoldOn(0.3)
+!TeleportCharacter(Bruce,660,-30)
+!NormalJump(Bruce,1.2,100,469,301,JDL,DL)
+!HoldOn(1)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.4)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+~BigElevatorLoop
+!HoldOn(1.4)
+!LiftGo(1)
+!HoldOn(0.4)
+!Nani(Gwen,!)
+!HoldOn(0.2)
+!Nani(Bruce,!)
+!HoldOn(0.3)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+-Bruce: We're moving!
+!HoldOn(1.3)
+-Gwen: A strange workshop,|a secret passageway,|and now a godly lift...
+-Gwen: Where exactly are we going, Siobhan?
+-Siobhan:  Up. 
+-Siobhan: Excalibur is at the|top of this tower.
+!HoldOn(1.3)
+-Bruce: Y'think the Plaguemaster knows we're coming?
+!HoldOn(1)
+~BigElevatorEnd
+!LiftGo(0)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!AutoPinFollowers(1)
+
+/Intro
+!HoldOn(2)
+!SetGlobal(92,1)
+!NormalJump(Siobhan,1.2,100,409,301,JDL,Dead)
+!HoldOn(1.4)
+!SetAnim(Aquila,Look1)
+!HoldOn(1.4)
+!SetAnim(Aquila,Look2)
+!HoldOn(0.7)
+!NormalJump(Siobhan,2.2,40,409,301,JDL,DL)
+!HoldOn(1)
+!Nani(Siobhan,?)
+!HoldOn(0.5)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.8)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.8)
+-Siobhan: Where are we now?|This isn't rodent architecture...
+!HoldOn(0.5)
+~BigElevatorLoop
+!HoldOn(1.4)
+!LiftGo(1)
+!HoldOn(1.4)
+!Nani(Siobhan,!)
+!HoldOn(1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+-Siobhan: And we're moving...
+!HoldOn(0.3)
+!Walk(Siobhan,D,0.7)
+!HoldOn(1)
+-Siobhan: Oh, I see. This is a|godly lift, isn't it?
+-Aquila: Correct. Recently constructed too.
+!HoldOn(2.4)
+-Siobhan: It keeps going up and up.|Where does it go?
+!HoldOn(0.4)
+!SetAnim(Aquila,Look1)
+!HoldOn(0.4)
+!SetAnim(Aquila,DR)
+!HoldOn(0.4)
+-Aquila: Tell me, Siobhan, what do you know of the Thunder Age?
+-Siobhan: Oh! Uh...
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+-Siobhan: It was a time of catastrophe|that Rodentia endured|nearly a century ago.
+-Siobhan: Fire eggs rained from the sky, destroying everything|where they landed.
+-Siobhan: The gods took shelter underground.
+-Siobhan: God and rodent huddled side by side as the sky fell.
+!HoldOn(0.6)
+-Aquila: You know your history.
+!HoldOn(0.6)
+-Aquila: But tell me, Siobhan,|what are fire eggs?
+-Siobhan: Hmm... I suspect they were weapons. Powerful ones.
+-Siobhan: Created by gods, for use against other gods.
+-Aquila: Indeed. Very astute.
+!HoldOn(0.2)
+!SetAnim(Aquila,Look2)
+!HoldOn(0.2)
+-Aquila: And if one were to come across an unhatched fire egg...
+!Walk(Siobhan,U,1)
+!HoldOn(1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+-Siobhan: Plaguemaster, you're not saying what I think you're saying, are you?
+!HoldOn(0.5)
+~BigElevatorEnd
+!LiftGo(0)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+-Aquila: Follow me.
+!SpecialWalk(Aquila,UR,1,URWalk,0.5)
+!HoldOn(0.4)
+!Exit(Aquila)
+!HoldOn(1)
+
+/Statue
+!CheckGlobal(91,1,SaveTime)
+-InfoBig: It's a statue of a mouse in a lab coat.
+-InfoBig: The plaque reads:||"The Universe is vast.|Our ignorance, vaster still."||- Dr. Ein, the first plaguemaster of Murida.
+!SetGlobal(91,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Dr. Ein studies and learns.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Excalibur's Tower,The godly lift)
+-Info: Your game has been saved.
+/SaveNo

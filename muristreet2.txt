@@ -1,0 +1,322 @@
+/Intro
+~MuridaLoop
+!CheckGlobal(39,1,HighUp)
+!SetNPCFlag(Fisher,)
+!SetNPCFlag(Jump2,)
+!SetNPCFlag(Mushroom Meg,)
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!AutoPinFollowers()
+
+/HighUp
+!TurnOffBlocks(1)
+!SetGlobal(39,0)
+!SetVisible(MuriZ2,0)
+!SetVisible(MuriZ,0)
+!TurnOnBlocks(2)
+!MoveNPCToLayer(Mushroom Meg,ZSorted)
+!MoveNPCToLayer(Lucius,ZSorted)
+!TeleportCharacter(Siobhan,669,791)
+!TeleportCharacter(Bruce,649,781)
+!TeleportCharacter(Gwen,629,771)
+
+/JumpChimney
+!NormalJump(Verm,2,40,817,617,JDR,DR)
+!HoldOn(0.3)
+!NextRoom(MuriMetaHouse,1)
+
+/Jump1
+!CheckGlobal(99,2,SioJump)
+!HoldOn(0.1)
+!UnpinFollowers()
+!MoveNPCToLayer(Mushroom Meg,ZSorted)
+!MoveNPCToLayer(Lucius,ZSorted)
+!SetNPCFlag(Fisher,Fisher)
+!SetNPCFlag(Mushroom Meg,Mushroom Meg)
+!SetNPCFlag(Jump2,Jump2)
+!OverworldCameraPan(678,528,0.4,1)
+!TurnOffBlocks(1)
+!SetVisible(MuriZ2,0)
+!SetVisible(MuriZ,0)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,703,741,JUR,UR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,672,705,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,635,659,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,678,608,JUR,UR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!HoldOn(0.35)
+!TurnOnBlocks(2)
+!CameraInstFollow(1)
+
+/SioJump
+-Siobhan: What's up there? Well,|that's no business of mine.
+
+/Jump2
+!MoveNPCToLayer(Mushroom Meg,Effects)
+!MoveNPCToLayer(Lucius,Effects)
+!SetNPCFlag(Mushroom Meg,)
+!SetNPCFlag(Fisher,)
+!SetNPCFlag(Jump2,)
+!OverworldCameraPan(668,724,0.4,1)
+!TurnOffBlocks(2)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,635,659,JDL,DL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,672,705,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,703,741,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,668,804,JDL,DL)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!HoldOn(0.35)
+!TurnOnBlocks(1)
+!SetVisible(MuriZ2,1)
+!SetVisible(MuriZ,1)
+!AutoPinFollowers(1)
+!CameraInstFollow(1)
+
+/LeaveEarly
+-Verm: Wait, this is leads to the gatehouse...
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,L)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+!Walk(Verm,UL,0.5)
+!HoldOn(0.5)
+-Verm: The palace must be in the other direction.
+
+/LeaveEarly2
+-Gwen: Where do you think you're running off to?
+!SetAnimEnd(Verm,D)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,DL)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,L)
+!HoldOn(0.1)
+!SetAnimEnd(Verm,UL)
+!HoldOn(0.1)
+!Walk(Verm,UL,0.5)
+!HoldOn(0.5)
+
+/BreeTime
+~Stop
+!Walk(Siobhan,DL,1)
+!OverworldCameraPan(320,240,1,1)
+!HoldOn(1)
+!SetGlobal(32,4)
+~BreeLoop
+-Bree: We have to work our paws bloody to make rent.
+-Bree: Meanwhile, the high an' mighty nobles get rich off our sweat!
+-Bree: Tell me, how is that fair?
+!TeleportCharacter(Siobhan,410,573)
+!SetAnim(Siobhan,UL)
+-Stilton: You tell 'em, Bree!
+-Bree: And is the King even doing anything about the upcoming Yellow God crisis?
+-Bree: Or is he busy buying shiny new weapons for the Thimble Guard?
+-Stilton: Hear, hear!
+-Siobhan:  Um. 
+!OverworldCameraPan(420,540,2,1)
+!HoldOn(0.5)
+-Siobhan: Did you say "Yellow God"?
+!OverworldCameraPan(320,240,2,1)
+!HoldOn(0.5)
+-Bree: Yeah! We've done our homework.
+-Bree: The Yellow God of Death has been seen across Rodentia!
+-Bree: An' he's gonna lay waste to our beautiful home city if we don't do something.
+!OverworldCameraPan(420,540,2,1)
+!HoldOn(0.5)
+~Stop
+-Siobhan: I fear you might be right...
+!CameraFollow(1)
+~MuridaLoop
+
+/Lawrence
+!CheckGlobal(10,2,Lawrence2)
+-Lawrence: It's all quiet in Gutter End today. Let's hope it stays that way.
+
+/Lawrence2
+-Lawrence: If I had a seed for every weirdo who preached about end-times...
+
+/Mushroom Meg
+!CheckGlobal(10,2,Mushroom2)
+-Mushroom Meg: The Guard are a real pain in the tail.
+-Mushroom Meg: I can barely leave my shack without being stopped an' searched.
+
+/Mushroom2
+-Mushroom Meg: Bree's been campaigning a lot lately. I support the cause, but he should be careful.
+-Mushroom Meg: The Guard only tolerate so much, y'know?
+
+/Lucius
+!CheckGlobal(10,2,Lucius2)
+-Lucius: Psh, the Guard ain't so tough.|Just a bunch of toffs playing soldier.
+
+/Lucius2
+-Lucius: Is this Yellow God thing for real?
+-Lucius: It sounds like ghost and muswolf territory. I have doubts, just sayin'.
+
+/Fisher
+-Fisher: The nobles feed on the food the gods drop. And we feed on the crumbs left behind. Same as it ever was.
+!FishingComplexCheck()
+
+/FisherLate
+-Fisher: Looks like the dump got a refill.|Want to do some fishing?
+*FishYes: Yeah!
+*FishNo: Not now.
+
+/FisherFirst
+-Fisher: Oh, did you want to do some fishing?
+*FishYes: Yeah!
+*FishNo: Not now.
+
+/FishYes
+~stop
+!HoldOn(0.5)
+!SetGlobal(39,1)
+!NextRoom(Fishing,3)
+
+/FishNo
+-Verm: Not right now, thanks.
+
+/Schobert
+!HoldOn(0.2)
+!SetAnim(Schobert,Out)
+!HoldOn(1)
+-Schobert: Yeah, I live in a shoe. It stinks, but the rent is an absolute BARGAIN.
+!SetAnim(Schobert,In)
+!HoldOn(0.4)
+
+/Schobert2
+-Schobert: I dunno about any Yellow God.
+-Schobert: But Bree's right about the rent problem. It's a DISGRACE.
+
+/Stilton
+-Stilton: Bree and me had a couple of run-ins with this li'l angry guy.
+-Stilton: He had a bit of a Yellow God obsession. We thought he was nuts.
+-Stilton: But after doing some research, turns out the Yellow God's a real threat.
+
+/Al
+-Al: Don't mind me, just taking a break from the young 'uns.|All fourteen of 'em.
+!SetAnim(Al,ToFight)
+!HoldOn(0.4)
+!SetAnim(Al,Fight)
+-Al: Now run along, scamp, before I put the boots to ya!
+!SetAnim(Al,EndFight)
+!HoldOn(0.3)
+-Al: Ha ha, just pulling ya whiskers.
+!SetAnim(Al,Loop)
+
+/Al2
+-Al: The royals and the nobles treat us like dirt.
+!SetAnim(Al,ToFight)
+!HoldOn(0.4)
+!SetAnim(Al,Fight)
+-Al: We should put the boots to all of 'em!
+!SetAnim(Al,EndFight)
+!HoldOn(0.3)
+-Al: Ha ha, just pulling ya whiskers.
+!SetAnim(Al,Loop)
+
+/Date
+!SetNPCFlag(Fisher,)
+!SetNPCFlag(Jump2,)
+!SetNPCFlag(Mushroom Meg,)
+!TurnOffBlocks(2)
+!SetVisible(Bridge,1)
+!SetVisible(MuriZ,1)
+!SetVisible(Door,0)
+!AutoPinFollowers()
+!Walk(Verm,DL,0.8)
+!HoldOn(1.5)
+!SetAnim(Gwen,DL)
+-Gwen: This is near where we came in.
+-Verm: Yeah. Gutter End, the|outskirts of Murida.
+-Verm: It's where the normal people live.
+!HoldOn(0.5)
+-Gwen: Normal people.
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: Yeah, you know. As opposed to the landlords and nobles and whatever.
+-Verm: Mice and rats just|trying to get by.
+-Gwen: I see. Normal people. Honest people.
+!OverworldCameraPan(560,493,1,1)
+!Walk(Bree,UR,0.6)
+!Walk(Stilton,UR,0.6)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(1.2)
+-Verm: Well. I wouldn't go that far.
+!HoldOn(0.5)
+-Verm: What are you two|dweebs looking at?
+!HoldOn(0.2)
+!SetAnim(Bree,DR)
+!HoldOn(0.2)
+!SetAnim(Stilton,UL)
+!HoldOn(0.6)
+!SetAnim(Bree,UR)
+!HoldOn(0.1)
+!SetAnim(Stilton,UR)
+-Stilton: Y-you're that Sava-busting kid, right?
+-Verm: Yeah?
+-Bree: Didn't you die? That's the word in the tunnels, at least.
+*YeahDied: Yeah, I died.
+*NahDied: No, obviously.
+
+/YeahDied
+-Verm: Yeah, I died. But then I clawed my way out of the underworld.
+>WoahDied
+/NahDied
+-Verm: Nah. I'm immortal.
+>WoahDied
+
+/WoahDied
+-Stilton: Woah...
+!HoldOn(0.5)
+-Verm: Keep walking, unless you're looking for another beating.
+!HoldOn(0.1)
+!SetAnim(Bree,DR)
+!HoldOn(0.1)
+!SetAnim(Stilton,UL)
+!HoldOn(0.5)
+!SetAnim(Stilton,DL)
+!SetAnim(Bree,DL)
+!HoldOn(0.1)
+!Walk(Bree,DL,1.3)
+!Walk(Stilton,DL,1.3)
+!CameraFollow(1)
+!HoldOn(0.6)
+!Exit(Bree)
+!Exit(Stilton)
+-Gwen: They seemed nice.
+-Verm: Yeah, they're alright.
+!HoldOn(0.3)
+!CheckGlobal(70,0,DateNext)
+!CheckGlobal(71,0,DateNext)
+!CheckGlobal(34,0,DateNext)
+-Gwen: Let's go back to Ratlas.|I want to see something.
+!AutoPinFollowers()
+/DateNext
+-Gwen: So. Where to next?
+!AutoPinFollowers()
+

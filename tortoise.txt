@@ -1,0 +1,32 @@
+/BattleVeryStart
+~RandomBattleLoop
+!HoldOn(1)
+!DrawWeapon(Verm)
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+/VermRage
+!CheckGlobal(42,3,VR1)
+!CheckGlobal(42,4,VR2)
+-Verm: How can rocks talk, anyway?!
+-Herba: How can such a small mouse carry so much angst? Life has many mysteries.
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/VR1
+-Verm: Out of my way, little rock!
+-Maribelle: I'm not a rock!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/VR2
+-Verm: Your daughter is a menace!|You know that, right?
+-Herman: Little Maribelle is an angel!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

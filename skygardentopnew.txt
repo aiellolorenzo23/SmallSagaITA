@@ -1,0 +1,144 @@
+/Intro
+~SkyGarden3Loop
+
+/Tim
+!CheckGlobal(74,1,TimTime)
+!CheckGlobal(74,10,TimTime2)
+-Tim: I've switched up my repertoire.|Fewer marches. More jazz ~@
+
+/TimTime2
+-Tim: Hey. Could you go fetch Bruce?
+!NextRoom(ToBlack)
+!HoldOn(1)
+~GardenLoop
+!TeleportCharacter(Verm,2008,320)
+!TeleportCharacter(Bruce,265,315)
+!HoldOn(1)
+!NextRoom(FromBlack)
+!HoldOn(1)
+-Tim: There you are. Ready for your lesson?
+*LetsPlay: Let's play.
+*NotNow: Not now.
+
+/TimTime
+-Verm: I recognise you.|You're the tromboney guy.
+-Verm: Bruce was looking for you. I'll go fetch him.
+!CameraUnfollow()
+!Walk(Verm,D,3)
+!HoldOn(0.5)
+-Tim: It's actually a baroque trumpet...
+!HoldOn(0.5)
+!SetGlobal(74,10)
+!NextRoom(ToBlack)
+!HoldOn(1)
+~GardenLoop
+!TeleportCharacter(Bruce,265,315)
+!SetAnim(Bruce,DR)
+!HoldOn(1)
+!TeleportCharacter(Verm,2008,320)
+!CameraFollow(1)
+!NextRoom(FromBlack)
+!HoldOn(1)
+-Tim: I see. So you need to freshen up your music skills.
+-Tim: And Anton thought I could give you some pointers.
+-Bruce: Aye, that's right.
+-Tim: Let's skip the music theory and go straight into practice.
+-Tim: No better way to learn to swim than by leaping in the deep end, right?
+-Bruce: Unless ye drown.
+-Tim: Ah. Well. Nonetheless.
+-Tim: How about we play Gilded Roy's Melody? You know that one?
+-Bruce: Yeah, of course. It's a classic.
+-Tim: Rad. I'll grade your performance. Just like a school exam, ha ha!
+-Bruce: No pressure, then.
+-Tim: Nah, it's not so serious. You can always try again.
+-Tim: Are you ready to play now?
+*LetsPlay: Let's play.
+*NotNow: Not now.
+
+/NotNow
+-Bruce: I've got some things to do first.
+-Tim: Alrighty. Well, you|know where I am.
+>FadeBack
+
+/LetsPlay
+~Stop
+-Bruce: Aye, let's go!
+-Tim: Alright, alright.
+!HoldOn(0.2)
+!SetAnim(Bruce,PlayPrepare)
+!SetAnim(Tim,To)
+!HoldOn(0.2)
+-Tim: And a one, and a two, and a-
+!DanceTime()
+
+~GardenLoop
+!SetAnim(Tim,To)
+!HoldOn(0.2)
+!SetAnim(Tim,Loop)
+!SetAnim(Bruce,DR)
+!CheckGlobal(20,4,Perfect)
+!CheckGlobal(20,3,Good)
+!CheckGlobal(20,2,Meh)
+
+-Tim: Ah. Well. We all have bad days.
+-Tim: You just have to pick yourself up and try again.
+>MaybeEncore
+
+/Meh
+-Tim: Hmm. Well, it was an A+ for effort, but you dropped quite a few notes.
+-Tim: I bet you can do better than that!
+>MaybeEncore
+
+/Good
+-Tim: Ooooh, very nice! A-! Solid performance.
+-Bruce: It was good?
+-Tim: Yeah, man. Have some confidence in yourself!
+>PostPerformance
+
+/Perfect
+-Tim: Bruce, my man, that was flawless! A+! No, A+++! S Rank!
+-Bruce: It was good?
+-Tim: You serious? You should be teaching me!
+-Tim: Have some confidence in yourself!
+>PostPerformance
+
+/MaybeEncore
+-Info: Try again?
+*LetsPlay: Let's go!
+*NotNow: That's enough.
+
+/PostPerformance
+!SetGlobal(74,15)
+-Bruce: I dunno. I just feel like there's more work to do.
+-Tim: Hmmmm.
+-Tim: How about you go rock out with Violet the Screeching Creature?
+-Bruce: The punky bat with the guitar?
+-Bruce: I dinnae think our styles of music are a match.
+-Tim: Ha ha, yeah. She's got an edge, no doubt about that.
+-Tim: Y'know, after Josh was ousted, she refused to talk to me. Or any of the Grey squirrels, actually.
+-Tim: And I don't blame her! Josh's regime was messed up.
+!HoldOn(0.1)
+!SetAnim(Tim,To)
+!HoldOn(0.2)
+!SetAnim(Tim,Playing)
+!HoldOn(0.2)
+-Tim: But once I broke out my trumpet, things chilled out a bit.
+!HoldOn(0.2)
+!SetAnim(Tim,To)
+!HoldOn(0.2)
+!SetAnim(Tim,Loop)
+-Tim: It's not like a few notes magically undid all the wrongs or anything.
+-Tim: But like... there's a common language in music. It transcends genre and style.
+-Tim: It speaks straight to the heart.|Is that too cliché?
+-Bruce: No, I get it.|A common language.
+-Bruce: Thanks, Tim. I'll go speak to Violet then.
+>FadeBack
+
+/FadeBack
+!NextRoom(ToBlack)
+!HoldOn(2)
+!TeleportCharacter(Bruce,2008,520)
+!TeleportCharacter(Verm,308,350)
+!NextRoom(FromBlack)
+!HoldOn(1)
+

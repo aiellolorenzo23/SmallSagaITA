@@ -1,0 +1,291 @@
+/Intro
+!AutoPinFollowers()
+
+/Check
+!CheckGlobal(18,2,BruceDown)
+-Hank: I'm too smart to be robbed twice in one day.
+-Hank: Get out of here, you two.
+!Walk(Verm,D,0.3)
+!HoldOn(0.4)
+
+/BruceDown
+-Hank: No access to the treasury... Unless you wanna take on my genius intellect.
+!SpecialWalk(Bruce,D,0.3,DWalkTucked,1)
+!HoldOn(0.4)
+
+/RobTime
+!OverworldCameraSnap(320,340)
+!HoldOn(1)
+!NormalJump(Pocket,2,40,577,345,DLJump,DLLand)
+!HoldOn(1.7)
+!NormalJump(Pocket,3,30,510,416,DLJump,DLLand)
+!HoldOn(1)
+!NormalJump(Pocket,3,30,443,385,ULJump,UL)
+!HoldOn(1)
+!NormalJump(Pocket,3,30,501,353,URJump,UR)
+!HoldOn(1.2)
+!PlaySound(ChestOpen)
+!SetScriptAnim(Chest1,Open)
+!HoldOn(0.7)
+!SetAnim(Pocket,RummageR)
+!HoldOn(0.7)
+!Nani(Pocket,!)
+!SetAnim(Pocket,UR)
+!ShoutMode()
+-Hank: HEY!
+!HoldOn(0.1)
+!SetAnim(Pocket,DR)
+!HoldOn(0.1)
+!SetAnim(Pocket,DL)
+!HoldOn(0.3)
+-Hank: ...That music's pretty good...
+!HoldOn(0.5)
+!SetAnim(Pocket,UL)
+!HoldOn(0.3)
+!NormalJump(Pocket,3,30,444,340,ULJump,UL)
+!HoldOn(0.6)
+!SetAnim(Pocket,UR)
+!HoldOn(0.2)
+!PlaySound(ChestOpen)
+!SetScriptAnim(Chest2,Open)
+!HoldOn(0.7)
+!SetAnim(Pocket,RummageR)
+!HoldOn(0.7)
+!Nani(Pocket,!)
+!SetAnim(Pocket,UR)
+!ShoutMode()
+-Hank: WAIT A DARN MINUTE!
+!HoldOn(0.1)
+!SetAnim(Pocket,DR)
+!HoldOn(0.1)
+!SetAnim(Pocket,DL)
+!HoldOn(0.3)
+-Hank: ...I think I know this song...
+!SetAnim(Pocket,UR)
+!HoldOn(0.3)
+!SetAnim(Pocket,DR)
+!HoldOn(0.1)
+!SetAnim(Pocket,DL)
+!HoldOn(0.5)
+!NormalJump(Pocket,3,30,328,350,DLJump,DLLand)
+!HoldOn(0.8)
+!NormalJump(Pocket,3,30,205,341,DLJump,DLLand)
+!HoldOn(0.7)
+!SetAnim(Pocket,UL)
+!HoldOn(0.2)
+!PlaySound(ChestOpen)
+!SetScriptAnim(Chest4,Open)
+!HoldOn(0.7)
+!SetAnim(Pocket,RummageL)
+!HoldOn(0.7)
+!SetAnim(Pocket,UL)
+!Nani(Pocket,!)
+!ShoutMode()
+-Hank: AHHH!
+-Hank: I CAN'T REMEMBER THE|FRICKIN' SONG NAME!
+!HoldOn(0.1)
+!SetAnim(Pocket,DL)
+!HoldOn(0.1)
+!SetAnim(Pocket,DR)
+!HoldOn(0.3)
+-Hank: What's it called?! "Roaming Rodent" or something?
+!HoldOn(0.3)
+!SetAnim(Pocket,DL)
+!HoldOn(0.3)
+!NormalJump(Pocket,3,30,161,360,DLJump,DLLand)
+!HoldOn(0.7)
+!SetAnim(Pocket,UL)
+!HoldOn(0.2)
+!PlaySound(ChestOpen)
+!SetScriptAnim(Chest3,Open)
+!HoldOn(0.7)
+!SetAnim(Pocket,RummageL)
+!HoldOn(0.7)
+!SetAnim(Pocket,RummageUL)
+!HoldOn(0.3)
+!SetAnim(Pocket,HappyDance)
+!HoldOn(2)
+!PlaySound(ItemFound)
+-InfoBig: Pocket found the Pebble of Scuin.|He adds it to his... pockets.
+!HoldOn(0.2)
+!SetAnim(Pocket,DL)
+!HoldOn(0.5)
+!NormalJump(Pocket,3,30,92,378,DLJump,DLLand)
+!HoldOn(1)
+!SetAnim(Pocket,DR)
+!HoldOn(0.5)
+-Pocket: It's called "Rat-Tailed Rover".
+!SetAnim(Pocket,DL)
+!HoldOn(0.2)
+!NormalJump(Pocket,2,50,-86,370,DLJump,DLLand)
+!SetAnim(Hank,LookLeft)
+!HoldOn(0.1)
+-Hank: Ah, that's it! Thanks, pal.
+!SetAnim(Hank,LookForward)
+!OverworldCameraPan(320,390,0.5,1)
+!HoldOn(1.8)
+!SetAnim(Hank,LookLeft)
+!HoldOn(0.4)
+!OverCamZoom(2)
+!SetAnim(Hank,LookForward)
+!HoldOn(0.3)
+!SetAnim(Hank,LookLeft)
+!HoldOn(0.2)
+!ScreenShake(3,1)
+!ShoutMode()
+!HoldOn(0.2)
+-Hank: WAIT, WHAT?!
+!HoldOn(0.2)
+~stop
+!NextRoom(SkyGardenThrone,2)
+
+/HankTime
+!SetGlobal(18,35)
+!TeleportCharacter(Verm,-300,0)
+!TeleportCharacter(Gwen,-300,0)
+!TeleportCharacter(Siobhan,-300,0)
+!TeleportCharacter(Bruce,-300,0)
+!OverworldCameraSnap(320,390)
+!HoldOn(1.2)
+-Josh: Put me DOWN Lamia!|I can walk!
+-Lamia: Hank. It's code scarlet.|Kill the intruders.
+-Hank: Don't worry, babe.|Nobody gets past me.
+!PlaySound(GwenWhoosh2)
+!TeleportCharacter(Josh,-300,0)
+!NormalJump(Lamia,2,30,-240,374,LamiaJoshJump,UR)
+!HoldOn(1)
+!TeleportCharacter(Bruce,438,540)
+!Enter(Bruce)
+!Walk(Bruce,L,1.1)
+!HoldOn(0.3)
+!TeleportCharacter(Gwen,438,540)
+!Enter(Gwen)
+!Walk(Gwen,L,0.8)
+!HoldOn(0.3)
+!TeleportCharacter(Siobhan,438,540)
+!Enter(Siobhan)
+!Walk(Siobhan,L,0.5)
+!HoldOn(0.3)
+!TeleportCharacter(Verm,438,540)
+!Enter(Verm)
+!Walk(Verm,L,0.2)
+!HoldOn(0.2)
+!ShoutMode()
+-Hank: Halt right there,|you terrorists!
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+-Hank: Y'all have no decorum.
+-Hank: Here we are, just living our peaceful lives, and you had to go and get violent.
+-Gwen: You chained me up|like a pet cockroach.
+-Bruce: You were gonna kill|me and my boyfriend! 
+-Hank: Those are tu quoque fallacies.
+-Hank: See, I'm still open to rational debate.
+-Verm: How about you rationally|debate my sword.
+-Hank: Argumentum ad baculum.|As I expected.
+!GoToBattle(Hank)
+
+/PostBattle
+!SetAnim(Hank,Down)
+!SetGlobal(18,36)
+!HoldOn(1.5)
+-Hank: Ugh...
+-Hank: Your fighting skills are as weak as your arguments... 
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+-Siobhan: Sir Verm, this fellow's|really ticking me off.
+-Siobhan: Can I finish him?
+*BlastYeah: Yeah.
+*BlastAbs: Please don't...
+
+/BlastYeah
+-Verm: Yeah, go for it.
+>BlastCon
+
+/BlastAbs
+-Verm: Please don't ask my permission.|If you want to finish him,|go and finish him.
+>BlastCon
+
+/BlastCon
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,U)
+-Hank: Y'all need to learn about a little thing called "civil debate".
+-Hank: See, maybe if you had engaged me calmly and rationally, you would've had a chance at winning the argument.
+-Hank: But I guess you degenerates don't know the meaning of "tolerance".
+!HoldOn(0.2)
+!Walk(Siobhan,U,0.6)
+!HoldOn(0.6)
+!Walk(Siobhan,UL,0.2)
+!HoldOn(0.4)
+!SetAnim(Siobhan,Blast1)
+!HoldOn(0.6)
+!Blast(2)
+!HoldOn(0.05)
+!NormalJump(Hank,2,40,-206,360,Flying,Silent)
+!HankPow()
+!SetAnim(Siobhan,Blast2)
+!HoldOn(0.3)
+!SetAnim(Gwen,UL)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!SetAnim(Verm,L)
+!SetAnim(Siobhan,Blast1)
+!HoldOn(1.7)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.4)
+!LevelUp(Siobhan)
+!HoldOn(1.3)
+-Gwen: Nice.
+!HoldOn(0.8)
+-Siobhan: I may have overdone it.
+-Bruce: Nah, it was perfect.
+-Verm: Yep. Let's go.
+!CameraFollow(1)
+!Walk(Siobhan,DR,0.5)
+!Walk(Gwen,R,0.5)
+!Walk(Bruce,R,0.5)
+!HoldOn(0.5)
+!AutoPinFollowers()
+
+/Wrong
+-Siobhan: Wrong way, Sir Verm!
+!Walk(Verm,L,0.5)
+!HoldOn(0.7)
+
+/FoundSeeds
+-Info: You found 8 seeds.
+
+/FoundSeeds2
+-Info: You found an Ancient Tricorne Hat.|Is this a costume piece?
+
+/FoundSeeds3
+-Info: You found 5 seeds.
+
+/Statue
+!CheckGlobal(81,1,SaveTime)
+-InfoBig: It's a crumbling, marble statue of a grey squirrel in naval attire.
+-InfoBig: The plaque reads:||"Drop the anchor! Hoist the sails!|We journey east, towards a land of universal liberty."||- Christoph the Wayward
+!SetGlobal(81,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Cristoph follows a star.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Sky Garden,The Treasury)
+-Info: Your game has been saved.
+/SaveNo

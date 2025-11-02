@@ -1,0 +1,388 @@
+/Intro
+~SkyGarden3Loop
+!AutoPinFollowers()
+
+/Business
+!SetGlobal(32,10)
+!HoldOn(2)
+-Aarti: Onto next order of business... the scouting missions.
+!HoldOn(0.2)
+!SetAnim(Bruce,L)
+!HoldOn(0.2)
+-Bruce: Give us the good news, Gwen.
+!HoldOn(0.3)
+-Gwen: I've been asking around at the water vole camps along the south bank of the King's River.
+-Gwen: Nothing to report.
+!HoldOn(0.8)
+-Bruce: No leads at all?
+!HoldOn(1)
+-Gwen: I did meet a rag-and-bone shrew who suggested I try the Vinium circus.
+-Gwen: There's whispers of a strange gladiator making waves there.
+-Gwen: A raging muswolf, if rumour is to be believed. A small and vicious fighter. A titan-killer. But...
+-Anton: Wait, a raging what?
+-Bruce: Aye, that sounds like our lad. Where's Vinium?
+!HoldOn(0.1)
+!TableJump(1)
+!NormalJump(Gwen,2,30,249,386,JDR,DR)
+!HoldOn(0.6)
+!Walk(Gwen,UR,0.3)
+!HoldOn(0.2)
+!HoldOn(0.5)
+-Gwen: Somewhere over here.|It's a mid-sized shrew settlement.
+!HoldOn(0.2)
+!SetAnim(Gwen,R)
+-Gwen: But really Bruce, this is a weak lead. Let's stop and think things through...
+!OverworldCameraPan(320,460,1,1)
+!TeleportCharacter(Siobhan,444,549)
+!Enter(Siobhan)
+!Walk(Siobhan,L,0.5)
+!HoldOn(0.6)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.4)
+!Walk(Siobhan,U,0.3)
+!HoldOn(0.2)
+!OverworldCameraPan(320,400,1,1)
+!HoldOn(1)
+-Siobhan: Um... hello.
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!Nani(Gwen,!)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+!Nani(Bruce,!)
+!HoldOn(0.5)
+-Gwen:  Oh! 
+-Bruce: Siobhan! It's Siobhan!
+!NormalJump(Gwen,2,30,260,479,JDL,DR)
+!HoldOn(0.1)
+!NormalJump(Bruce,2,20,451,468,JumpDL,DL)
+!HoldOn(0.3)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.3)
+!TableJump(2)
+!NormalJump(Bruce,2,20,380,479,JumpDL,DL)
+!HoldOn(0.5)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.5)
+-Siobhan: It's been so long.
+-Bruce: Aye. We've missed ye.
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+-Gwen: Word in the tunnels is you're working for Murida's Plaguemaster now?
+-Gwen: How's that working out?
+-Siobhan: Oh yeah. It's alright.
+-Siobhan: Aquila's a bit intense, but they're actually quite nice.
+-Siobhan: I'm learning a ton!
+-Gwen: I see. Well, I'm glad you're safe.
+-Bruce: There's a lot to catch up on.|Where do we start?
+-Anton: Show them that thing, lapa!
+-Bruce: Oh yeah!
+-Bruce: We found something amazing.|Come upstairs to the armoury.
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Aarti: Hey!
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+-Aarti: What about the roundtable?
+-Bruce: Aaaah, that can wait.
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+-Bruce: Come on, Siobhan!
+!Walk(Bruce,DL,0.3)
+!Walk(Gwen,DR,0.3)
+!HoldOn(0.3)
+!Walk(Bruce,D,0.3)
+!Walk(Gwen,D,0.3)
+!HoldOn(0.3)
+!Walk(Bruce,L,0.6)
+!Walk(Gwen,L,0.6)
+!Exit(Gwen)
+!HoldOn(0.3)
+!Exit(Bruce)
+!HoldOn(1)
+-Aarti: Unbelievable!
+-Aarti: Meeting adjourned, I guess.
+!CameraFollow(1)
+
+/Andrew
+-Andrew: The roundtable discussions are going well.
+-Andrew: We make sure nobody's voice rises any louder than the others.
+
+/ChatAnton
+!CheckGlobal(99,2,AntonSio)
+!CheckGlobal(74,20,AntonPerform)
+!CheckGlobal(74,21,AntonPerform2)
+!CheckGlobal(74,0,AntonMissionStart)
+-Anton: You keep lapa safe, okay?
+
+/AntonSio
+-Anton: You're Siobhan, yes?
+-Anton: We haven't had the chance to chat, but maybe later. Go see my lapa!
+
+/AntonMissionStart
+-Anton: Ah! You're alive!|My lapa always knew.
+-Anton: On that note, I need to have word with Bruce.
+*SureAnton: Go for it.
+*NoAnton: Not now.
+
+/NoAnton
+-Verm: Maybe later.
+
+/SureAnton
+!SetGlobal(74,1)
+-Bruce: What's up, babe?
+-Anton: It's your flute playing.|It's getting a bit...
+!HoldOn(0.6)
+-Anton: Ah, what is the word...|How to say it...
+!HoldOn(0.9)
+-Anton: Bad.
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Bruce: What?!
+!HoldOn(0.1)
+-Bruce: My playing is as tuneful as ever. I sound like a nightingale in the morning light.
+-Verm: Nah, more like sparrow choking on a cigarette butt.
+-Siobhan: That's a bit harsh, but, um... it's true that your high notes can be a bit shrill.
+-Gwen: Come to think of it, in my time here, I've literally never heard you practise.
+-Gwen: It's like you enjoy having the image of a musician, but you don't want to put in the work to be one.
+-Bruce: I feel a wee bit attacked here.
+-Anton: Hey, it's okay, lapa.
+-Anton: You just need to do a little practising. Get your groove back.
+-Anton: Why not go speak to Tim, the trumpeter?
+-Anton: He's friendly. He will be happy to give you lessons.
+-Bruce: Ugh. Fine.
+-Bruce: I hate to admit it, but yer all right.
+-Bruce: I'll go find Tim.
+
+
+/AntonPerform
+!SetGlobal(74,21)
+-Bruce: Hey. Guess what, babe?
+-Bruce: I've been practising.|I've got my groove back.
+-Anton: Oh ho. Show me.
+-Anton: On the stage. We'll make a proper concert of it.
+*LetsPlay: Let's play!
+*NotNow: Not now.
+
+/NotNow
+-Bruce: Give me a minute.|I need to tune.
+
+/AntonPerform2
+-Anton: Show me your moves, lapa!
+*LetsPlay: Let's play.
+*NotNow: Not now.
+
+/LetsPlay
+-Bruce: Aye, let's go!
+!NextRoom(ToBlack)
+!HoldOn(1)
+~stop
+!HoldOn(1)
+!UnpinFollowers()
+!TeleportCharacter(Verm,441,462)
+!TeleportCharacter(Siobhan,327,480)
+!TeleportCharacter(Gwen,233,475)
+!TeleportCharacter(Bruce,290,385)
+!TeleportCharacter(Anton,348,381)
+!TeleportCharacter(Aarti,87,370)
+!TableJump(3)
+!SetAnim(Gwen,UR)
+!SetAnim(Siobhan,U)
+!SetAnim(Anton,DR)
+!SetAnim(Verm,UL)
+!SetAnim(Bruce,D)
+!OverworldCameraSnap(320,346)
+!NextRoom(FromBlack)
+!HoldOn(1)
+-Bruce: Hi all.
+!HoldOn(0.4)
+-Bruce: Welcome to our concert.|Thanks for coming out.
+!HoldOn(0.6)
+-Gwen: Boo! You guys suck!|Bring out the main act already!
+!HoldOn(0.2)
+!SetAnim(Bruce,DL)
+!HoldOn(0.2)
+!SetAnim(Anton,DL)
+!HoldOn(0.5)
+-Bruce: Gwen. We are the only act.
+!HoldOn(0.5)
+-Gwen: Boooooooo!
+!HoldOn(0.2)
+!SetAnim(Anton,DR)
+!HoldOn(0.4)
+-Anton: We don't have set list.|Does anyone have requests?
+!SetAnim(Bruce,D)
+-Siobhan: Oh! Ooh! Mousart's|Blossom Minuet in C Major.
+-Gwen: "Raise Your Bloody Claws To the Dying Sky" by Pestilent Rage.
+!HoldOn(1)
+-Verm: Needle Knight.
+!ShoutMode()
+!HoldOn(0.6)
+-Anton: You all have terrible taste in music! I regret asking.
+!HoldOn(0.2)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Bruce,PlayPrepare)
+!HoldOn(0.1)
+-Bruce: How about we play the Rat-Tailed Rover? For old time's sake.
+!SetAnim(Anton,DL)
+!Nani(Anton,!)
+!HoldOn(0.4)
+-Anton: Oh! I haven't heard that|one since, well...
+!HoldOn(0.2)
+!SetAnim(Anton,PlayPrepare)
+!SetGlobal(20,0)
+!HoldOn(0.3)
+-Anton: It's perfect choice.|Let's go, lapa!
+!DanceTime()
+>WhatNext
+
+/WhatNext
+!HoldOn(0.1)
+!CheckGlobal(20,4,Perfect)
+!ShoutMode()
+-Gwen: WOOOO, YEAAAAH!|ENCOOOOOORE!
+!HoldOn(0.4)
+-Info: Play an encore?
+*EncoreYes: One more time!
+*EncoreNo: That's enough.
+
+/EncoreYes
+!DanceTime()
+>WhatNext
+
+/EncoreNo
+-Bruce: Nah, I think that's enough.
+!CheckGlobal(20,3,Good)
+!CheckGlobal(20,2,Meh)
+!HoldOn(0.1)
+-Bruce: So. Anton. How do ye like my flute playing?
+!HoldOn(0.7)
+-Anton: I... don't know what to say.
+-Bruce: Aye, it was flawless, right?
+!HoldOn(0.5)
+-Anton: Well, lapa. You're amazing at playing your own melody. I cannot deny that.
+>PostPerformance
+
+/Meh
+-Bruce: So. Anton. How do ye like my flute playing?
+!HoldOn(0.5)
+-Anton: Hmm.
+-Anton: I think I was too hard on you, lapa.
+-Anton: You have your own approach to music.|Your own style. Your own rhythm.
+-Anton: It was wrong for me to try to stifle that.
+-Anton: Play your heart's melody loudly and proudly, lapa!
+>PostPerformance
+
+/Good
+!HoldOn(0.2)
+-Anton: That was really good, lapa!
+-Anton: Look how far you've come.|You've improved so much!
+-Anton: With flute skills like that, I bet you could play anything you put your mind to.
+>PostPerformance
+
+/Perfect
+!HoldOn(0.9)
+-Gwen: Holy shit.
+!HoldOn(0.7)
+-Anton: Lapa...
+!HoldOn(0.8)
+-Bruce: Oh. Did I mess up?
+-Anton: No. It was perfect.|It was beautiful.
+-Anton: With flute skills like that, you could play anything you put your mind to.
+>PostPerformance
+
+/PostPerformance
+!SetGlobal(74,35)
+!HoldOn(0.4)
+!LevelUp(Bruce)
+!HoldOn(1.2)
+!PlaySound(NewMove)
+!LearnMove(4,3)
+-InfoBig: Bruce learned Cadenza.
+-InfoBig: Cadenza works a little differently to most battle skills. Its effect varies depending on which notes are played.||Experiment in battle!
+!CheckGlobal(20,4,PerfectItem)
+>DanceDone
+/PerfectItem
+!HoldOn(0.4)
+!Nani(Bruce,?)
+!SetAnim(Bruce,DR)
+!HoldOn(0.5)
+!ShowItem(Bruce,35)
+!HoldOn(0.8)
+-Bruce: Wait, what's this?
+-Bruce: Did someone leave|something on the stage?
+!HoldOn(0.4)
+!ReceiveItem(35)
+!PlaySound(ItemFound)
+-Info: Bruce found a Skye Piccolo.|Where did this come from?
+-Anton: What a wonderful instrument!
+-Anton: Someone must have been amazed by your music and left it as gift for you, lapa.
+-Bruce: Or maybe my heavenly playing|summoned it from the heavens.
+!HoldOn(0.9)
+-Anton:  Hmm. 
+!HoldOn(0.8)
+>DanceDone
+
+/DanceDone
+!NextRoom(ToBlack)
+!HoldOn(2)
+!CameraFollow(1)
+!TeleportCharacter(Bruce,308,520)
+!TeleportCharacter(Verm,308,520)
+!TeleportCharacter(Siobhan,308,520)
+!TeleportCharacter(Gwen,308,520)
+!TeleportCharacter(Anton,508,320)
+!SetAnim(Anton,DL)
+!AutoPinFollowers(1)
+!TableJump(4)
+~SkyGarden3Loop
+!NextRoom(FromBlack)
+!HoldOn(1)
+
+/Aarti
+-Aarti: You look like you've got something on your mind.
+*AartiWho: Who are you?
+*AartiTable: The table...
+*AartiCrown: The coup...
+*AartiNothing: Nothing.
+
+/AartiMind
+-Aarti: Anything else?
+*AartiWho: Who are you?
+*AartiTable: The table...
+*AartiCrown: The coup...
+*AartiNothing: Nothing.
+
+/AartiWho
+-Aarti: Huh? Oh, the name's Aarti. And that's Andrew. We're on the council.
+-Aarti: I was rotting away in the dungeons for degeneracy charges, when suddenly a dapper hamster and a roguey jerboa busted my cell door down.
+-Aarti: Next thing I knew, it was an all-out war. Guards versus inmates.
+-Aarti: Anyway. You know the rest.
+>AartiMind
+
+/AartiTable
+-Aarti: The fancy map table?|We found it in storage.
+-Aarti: We roll it out for|meetings and the like.
+-Aarti: It doubles up as a stage, which is pretty rad.
+>AartiMind
+
+/AartiCrown
+-Aarti: The coup caused a big stir across the Kingdom. No surprise there.
+-Aarti: But the crown didn't get involved, thank the gods. They wrote it off as an internal squirrel clan dispute.
+>AartiMind
+
+/AartiNothing

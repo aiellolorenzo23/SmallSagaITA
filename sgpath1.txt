@@ -1,0 +1,300 @@
+/Intro
+!AutoPinFollowers()
+
+/Sign
+-InfoBig: ← Taxi terminal|↑ Sky Garden|→ Gloaming Woods
+
+/Pocket
+-Pocket: @ Which rodent stole|the precious thing? @
+-Pocket: @ Ja-ba-ri! Ja-ba-ri! @
+-Pocket: @ And who shall be|the Trickster King? @
+-Pocket: @ Ja-ba-ri! Ja-ba-ri! @
+
+/BadTimes
+!AutoPinFollowers()
+!SetGlobal(18,18)
+!HoldOn(0.1)
+!Walk(Verm,D,3)
+!OverworldCameraPan(558,274,0.3,1)
+!HoldOn(3.1)
+!UnpinFollowers()
+!Walk(Verm,DR,0.5)
+!Walk(Siobhan,DL,0.7)
+!Walk(Gwen,DR,0.2)
+!Walk(Bruce,DL,0.3)
+!HoldOn(0.3)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+
+!SetAnim(Bruce,U)
+-Verm: Doesn't look like we're being followed.|We should be safe out here.
+!HoldOn(0.8)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.6)
+-Gwen: All this sun and warmth...
+-Gwen: I forgot how bright it is outside.
+!HoldOn(0.7)
+-Siobhan: Bruce, are you alright?
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.7)
+-Bruce:  No. 
+!HoldOn(0.6)
+-Bruce: This was supposed tae|be a great day.
+-Bruce: But everything's gone tae shit.
+-Bruce: And Anton's going tae die.
+!HoldOn(1)
+-Gwen: I'm sorry.
+!HoldOn(1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+-Bruce: It's fine, Gwen.|It's nae your fault.
+-Bruce: Maybe if I were a little braver...|If I were a real fighter...
+-Siobhan: Bruce...
+!HoldOn(0.6)
+!SetAnim(Bruce,D)
+!HoldOn(0.3)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.2)
+-Bruce: Hey. Verm. Siobhan. What are ye doing here anyway?
+-Siobhan: We're on our way to the Ashen Tower.
+-Siobhan: It's home to the Cailleach who can help Sir Verm on his quest.
+-Gwen: Quest?
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+-Bruce: Oh right. I better|fill ye in, Gwen.
+-Bruce: This mad lad wants to kill a god.
+-Gwen: That's pretty gutsy.
+-Bruce: Pretty stupid, more like.
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+-Verm: Whatever. It's all moot right now because I'm following a bad lead.
+!HoldOn(0.6)
+!SetAnim(Siobhan,UR)
+-Gwen: You said you're going to the Ashen Tower, right?
+-Siobhan: Do you know it?
+-Gwen: Not personally, but...
+!HoldOn(0.3)
+!SetAnim(Gwen,DL)
+!HoldOn(0.3)
+!SlowWalk(Gwen,DL,0.5)
+!HoldOn(0.5)
+!SetAnim(Verm,UL)
+-Gwen: From my cell, I often overheard the cachgwn gossiping.
+-Gwen: There was some whisper of the Duke once making a pilgrimage there.
+!HoldOn(0.5)
+!ResetWalkSpeed(Gwen)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+-Gwen: That's all I know.
+!HoldOn(0.6)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!SetAnim(Siobhan,R)
+-Verm: So the Duke himself visited the Cailleach...
+-Verm: Maybe the lead is legit after all.
+-Siobhan: I wonder why the Duke went.|What did he want to know?
+!Walk(Bruce,D,0.4)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+-Bruce: He probably wanted tae ask the secret tae being the worst bastard in the world.
+-Gwen: Most likely. The Duke's an absolute pussball of a rodent.
+!HoldOn(1.7)
+-Siobhan: I bet he smokes to cover|the smell of his own farts.
+!SetAnim(Verm,L)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!Nani(Bruce,!)
+!SetAnim(Bruce,DL)
+!HoldOn(0.5)
+-Bruce: Siobhan! Where did you learn tae speak like that?
+!HoldOn(0.4)
+!SetAnim(Siobhan,R)
+!HoldOn(0.2)
+!SetAnim(Gwen,D)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!SetAnim(Bruce,DR)
+!HoldOn(0.4)
+!SetAnim(Verm,UL)
+!HoldOn(0.6)
+!SetAnim(Verm,L)
+!HoldOn(0.4)
+!SetAnim(Verm,UL)
+-Verm: Why's everyone looking at me?|She came up with that filth all by herself.
+!HoldOn(1)
+-Bruce: Thanks, all. I needed some levity.
+!HoldOn(0.4)
+!SetAnim(Verm,UL)
+-Verm: Sorry to cut this short, but I need to reach the Ashen Tower before dusk.
+-Verm: So... Siobhan and I are going to get going.
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!SetAnim(Siobhan,UR)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!SetAnim(Gwen,DL)
+-Bruce: Verm, wait.
+-Bruce: I know it's a long shot, but the Cailleach might be able to help me.
+-Bruce: Like, she might know some way to rescue Anton or something.
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!SetAnim(Siobhan,R)
+-Bruce: So, can I join ye for yer trip?
+*Sure: Sure.
+*No: Nope.
+
+/Sure
+-Verm: Sure thing.
+-Bruce: Thanks.
+>Continue
+
+/No
+-Verm: Nope. I still haven't forgiven you for your antics in the Murida Labyrinth.
+-Siobhan: By the gods, Sir Verm, get over it! That was ages ago!
+!SetAnim(Verm,L)
+-Verm: It was literally this morning.
+-Siobhan: Wait, really? I'm losing track of time...
+-Bruce: Verm, I promise tae be serious.
+!SetAnim(Verm,UL)
+-Bruce: Now's not the time for buffoonery and half-truths.
+-Verm: Fine.
+>Continue
+
+/Continue
+!HoldOn(0.3)
+-Gwen: I would like to come too.|If it's okay with the rest of you.
+-Gwen: I'm curious about what lies at the heart of the Ashen Tower.
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+-Gwen: And besides, I want to learn more about this dwt's god killing business.
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+-Verm: "Doot"?
+-Verm: Well, whatever. The more the merrier.
+-Siobhan: To the Gloaming Woods!
+!Walk(Bruce,DR,0.6)
+!Walk(Gwen,DR,0.4)
+!Walk(Siobhan,R,0.5)
+!HoldOn(0.4)
+!Walk(Gwen,D,0.1)
+!HoldOn(0.2)
+!CameraFollow(1)
+!AutoPinFollowers()
+
+/Cutscene
+~Stop
+!Walk(Verm,DR,0.4)
+!HoldOn(0.4)
+!Walk(Verm,R,2.3)
+!TeleportCharacter(Maisie,0,885)
+!TeleportCharacter(Rosaline,198,804)
+!OverworldCameraPan(350,700,0.5,1)
+!HoldOn(0.6)
+~SistersLoop
+!HoldOn(0.1)
+!Walk(Rosaline,UR,1.9)
+!HoldOn(2.9)
+!SetAnim(Rosaline,DR)
+!HoldOn(0.1)
+!SetAnim(Rosaline,DL)
+!HoldOn(0.8)
+-Rosaline: Come on, Maisie. Keep up.
+!SetGlobal(31,1)
+!Walk(Maisie,UR,2)
+!HoldOn(2.8)
+!SetAnim(Maisie,DR)
+!HoldOn(0.1)
+!SetAnim(Maisie,DL)
+!HoldOn(0.6)
+-Maisie: We're so far from Murida...
+!HoldOn(0.3)
+!SetAnim(Maisie,DR)
+!HoldOn(0.1)
+!SetAnim(Maisie,UR)
+!HoldOn(0.4)
+-Maisie: Are you sure we're going the right way, Rosy?
+-Rosaline: You remember the intel we gathered from those cheese-breathed rats.
+-Rosaline: And the pawball lads.|Remember what they said?
+-Maisie: "Get lost, tin-heads."
+-Rosaline: After that.
+-Maisie: Yeah, yeah, I know. The vagabond and the noble mole went to the Gloaming Woods.
+-Rosaline: Right.
+!HoldOn(0.2)
+!SetAnim(Rosaline,DR)
+!HoldOn(0.1)
+!SetAnim(Rosaline,UR)
+!HoldOn(0.3)
+-Rosaline: We're losing the evening light. Let's go.
+!Walk(Rosaline,UR,0.3)
+!HoldOn(0.2)
+-Maisie: H-hey, wait up!
+!Walk(Maisie,UR,1.5)
+!HoldOn(0.6)
+!NextRoom(TreePath2,1)

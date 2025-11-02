@@ -1,0 +1,211 @@
+/Normal
+
+/Intro
+!SetAnim(Siobhan,UR)
+!HoldOn(0.5)
+-Innogen: Are you behaving yourself, Siobhan?
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+-Siobhan: I am, Auntie Innogen. Of course.
+!SetGlobal(5,4)
+-Innogen: Mm-hmm. Shouldn't you be studying?
+-Siobhan: Ah, I should, but I was just going to show this visitor the illuminated manuscripts in the back.
+-Innogen: Mm-hmm. Stay out of trouble, young lady. Your mother worries about you.
+-Siobhan: I know.
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+-Verm: ...Illuminated manuscripts?
+-Siobhan: Just follow me.
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!Walk(Siobhan,UR,2.4)
+!HoldOn(2.5)
+!TeleportCharacter(Siobhan,670,404)
+!SetAnim(Siobhan,DL)
+
+/LateIntro
+!SetGlobal(76,5)
+!SetAnim(Siobhan,U)
+!HoldOn(0.6)
+-Siobhan: H-hi, Auntie.
+-Innogen: Hello, Siobhan.
+!HoldOn(0.8)
+-Siobhan: Um.
+-Innogen: Mm-hmm. Say no more.
+-Innogen: You're as easy to read as a children's picture book.
+-Innogen: Don't worry. I won't tell your mother that you came through.
+-Siobhan: Thank you, Auntie.|You're the best.
+-Innogen: Mm-hmm.
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!Walk(Siobhan,UR,2.9)
+!HoldOn(2.4)
+!Exit(Siobhan)
+!HoldOn(0.2)
+
+/BookCaseTime
+!SetAnim(Verm,UR)
+-Verm: I'm not interested in some old books.
+-Siobhan: Never mind the books. I've got something better.
+
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.3)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.3)
+-Siobhan: ...But you can't tell anyone about this, alright? Especially not mammy.
+-Verm: Sure, whatever.
+-Siobhan: Hey, I'm serious! Promise me!
+-Verm: Alright, alright! I promise.
+
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.3)
+!SlowWalk(Siobhan,UL,1.7)
+!SlowWalk(SpecialBookCase,UL,1.7)
+!PlaySound(CeramicDrag)
+!HoldOn(2)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+-Verm: A tunnel?
+-Siobhan: I dug it myself. Come on.
+
+!MoveBookcaseLayer()
+
+!ResetWalkSpeed(Siobhan)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!Walk(Siobhan,UR,0.3)
+!HoldOn(0.4)
+!TeleportCharacter(Siobhan,-1000,0)
+
+/DontGo
+-Verm: I should probably see what that mole wants first...
+!Walk(Verm,UR,0.2)
+!HoldOn(0.3)
+
+/Innogen
+!CheckGlobal(10,2,InnoLate)
+-Innogen: Can I help you with something?
+
+*YGod: The Yellow God...
+*Lib: The library...
+*Nevermind: Never mind.
+
+/InnoLate
+-Innogen: Butterflies carry|all sorts of news.
+-Innogen: Some say that a mouse and mole were instrumental to the coup at Sky Garden.
+-Verm: Nothing to do with me.
+-Innogen: Mm-hmm.
+
+
+/YGod
+-Verm: Would you happen to have any books on the Yellow God?
+-Innogen: I can't say I've heard of such a thing.
+-Innogen: But in any case, we don't specialise in god studies here.
+-Innogen: Our collection is mostly historical and religious texts.
+-Innogen: Books on the Old Way. Documents on the legacy of the Shrew Empire. That sort of thing.
+-Verm: That's no good to me.
+-Innogen: Mm-hmm.
+
+/Lib
+-Verm: I've heard many great things about Cranbaile's library. It's actually why I came here.
+-Innogen: Mm-hmm. We do take pride in our literacy here.
+-Innogen: But you came at a bad time. The library is but a shadow of what it once was.
+-Innogen: First, our best scholars migrated to Murida for better opportunities.
+-Innogen: Then that accursed felidae arrived and gobbled up half the village.
+-Innogen: All I can do now is manage the knowledge that remains.
+-Verm: That's a shame.
+-Innogen: Mm-hmm.
+
+/Nevermind
+-Verm: Never mind.
+-Innogen: Mm-hmm.
+
+/Letter
+!CheckGlobal(10,2,LetterLate)
+-InfoBig: Dear Ruth,||I hope all's well at the Nook. I wanted to pay a visit for the young King's coronation, but alas, Cranbaile needs its librarian...
+
+/LetterLate
+-InfoBig: Dear Ruth,||The felidae hasn't given us cause for concern in a while, thank the heavens.||The bustle and tension of Murida sounds miserable! Maybe you should pack up shop for a while and come visit Cranbaile. I have a big bed...
+-Innogen: Oi! Nosey.
+-Verm: Sorry.
+-Innogen: Mm-hmm.
+
+/PutBack
+
+/Book1
+-InfoBig: You see a book titled, "The Rites of Masters" by Loremaster Silvia.
+*ReadIt1: Read it.
+*PutBack: Put it back.
+
+/ReadIt1
+-Book1: As personal bodyguards to lords, ladies, kings, and queens, blademasters are required to be loyal, chivalrous, and of course, exceptional in combat.
+-Book2: In contrast, a loremaster serves their liege by offering wisdom gained from two whole seasons of study at a licensed university.
+-Book1: Larger cities often employ a variety of other masters to serve as advisers.||Plaguemasters oversee the health of a colony. Seedmasters manage the city's treasury. Buildmasters specialise in urban planning.
+-Book2: Of course, all this fine counsel is irrelevant if a liege refuses to listen, as is often the case.
+
+/Book3
+-InfoBig: You see a book titled, "The Pact of Five" by Loremaster Tobin
+*ReadIt3: Read it.
+*PutBack: Put it back.
+
+/ReadIt3
+-Book1: Following the massacre on the Eastern Mire, Emperor Marcus wrote The Pact of Five. This legal document granted Rodentian citizenship to five key species: rats, moles, mice, shrews, and squirrels.
+-Book2: Carnivores were explicitly excluded.||Even now, long after the fall of the shrew empire and the rise of the rat monarchy, the pact is held as sacrosanct, forming the basis of modern Rodentian law.
+
+/Book2
+-InfoBig: You see a book titled, "The Old Way". It looks hefty.
+*ReadIt2: Read it.
+*PutBack: Put it back.
+
+/ReadIt2
+-Book1: To follow the path of the Old Way, thou must abide by three laws.||Thou shalt not harm a god.|Thou shalt avoid the gods' gaze.|Thou shalt not toy with a god's tools.
+-Book2: Obey these laws, and rodent and god may live peacefully, side by side, as they have done for thousands of years.||Disobey these laws, and the gods will punish us with fire and suffering.
+
+/Book5
+-InfoBig: You see a book titled, "Wholesome Mouse Recipes" by Jan Olive.
+*ReadIt4: Read it.
+*PutBack: Put it back.
+
+/ReadIt4
+-Book1: Sweet seed biscuit||Serves 4, or just 1 really hungry mouse.||Ingredients:||1 acorn cup o' flour|1 paw o' mashed|  banana|1 ground seed|A sprinkle o' cinnamon
+-Book2: Directions:||1. Mix the ingredients|2. Spread over a greased baking coin.|3. Cook over candle flame for three minutes, or until firm.|4. Eat warm or cool.
+
+/Book4
+-InfoBig: You see a gold-trimmed book titled, "The Fables of Husayn".
+*ReadIt5: Read it.
+*PutBack: Put it back.
+
+/ReadIt5
+-Book1: A young viper found herself stranded on the bank of a great river. After slithering for a while, she encountered a raven.||"I would be mosssst grateful," said the viper," if you would fly me acrossss the water."
+-Book2: The raven squinted at the fanged wyrm before him. "You're not going to bite me, are you?"||"I wouldn't dream of ssssuch a thing," the viper replied. Her forked tongue flicked back and forth.
+-Book1: Against his better judgment, the raven agreed. He picked up the viper in his talons, spread his wings, and flew skyward.||Soon enough, the two landed on the other side of the river, safe and unharmed. The viper bowed in thanks.
+-Book2: "Hold up," said the raven. "Why didn't you bite me? You had every opportunity. Isn't biting in your nature?"||The viper smiled. "In all thingsss of nature there is something of the marvellousssss."
+
+/Book7
+-InfoBig: The books in this case are old and tattered.
+-InfoBig: You try to read one, but the pages crumble between your fingers.
+
+/Book6
+-InfoBig: These books have been written in illuminated mole script.
+-InfoBig: They are beautiful, but you cannot understand the writing.
+
+End scene

@@ -1,0 +1,97 @@
+/Intro
+!CheckGlobal(1,1,IntroDone)
+!CheckGlobal(1,2,IntroDone)
+!CheckGlobal(1,3,IntroDone)
+!SetAnim(Verm,UR)
+!HoldOn(0.5)
+-Tullia: Welcome, welcome-|Ah, an outsider!
+!SetGlobal(1,1)
+-Tullia: Welcome to Tullia's. Take a gander at what's in stock.
+
+/IntroDone
+
+/Tullia
+!CheckGlobal(1,2,Returned)
+!CheckGlobal(1,3,TulDone)
+-Tullia: So what'll it be?
+*Weapons: Weapons...
+*Armour: Armour...
+
+/Weapons
+-Verm: I need a sword capable of killing titans and gods.
+-Tullia: I see. Double-edged, solid steel, is it?
+-Verm: Sure. But I'll settle for iron.
+>Lookaround
+
+/Armour
+-Verm: I need armour strong enough to withstand blows from titans and gods. 
+-Tullia: I see. A full suit of plate armour then, is it?
+-Verm: Sure. But I'll settle for chain mail.
+>Lookaround
+
+/Lookaround
+!HoldOn(0.8)
+!SetGlobal(1,2)
+-Tullia: Fella.
+!HoldOn(0.6)
+-Tullia: Look around yerself.
+-Tullia: This shop sells bits an' bobs for the humble people of Cranbaile.
+-Tullia: Cooking wear. Mining equipment. Linens and such.
+!HoldOn(0.1)
+!ShoutMode()
+-Tullia: This isn't a royal armoury, y'eejit!
+!HoldOn(0.6)
+-Verm: Well... do you have anything I can use?
+!HoldOn(0.2)
+-Tullia: I can do yer a pair of high-quality, mole-made boots.
+-Tullia: Good for hiking or mining. And only 5 seeds! That's a fair price now, isn't it?
+!ShowMoney(1)
+-Tullia: What do yer say? 5 seeds for these boots?
+*Deal: Deal.
+*NoDeal: No thanks.
+
+/Returned
+!ShowMoney(1)
+-Tullia: Back for the boots, eh? Only five seeds. What do yer say?
+*Deal: Deal.
+*NoDeal: No thanks.
+
+/Deal
+!ShowMoney(0)
+!MoneyCheck(5,NotEnough)
+!SetGlobal(1,3)
+-Verm: Sounds good. I'll take them.
+-Tullia: Grand.
+!MoneyLoss(5)
+!ReceiveItem(15)
+!PlaySound(ItemFound)
+-Info: You received a pair of Mole Boots.
+>TulDone
+
+/NoDeal
+!ShowMoney(0)
+-Verm: Not for me, thanks.
+-Tullia: Suit yerself. Come back later, then.
+
+/NotEnough
+-Verm: I can't afford those.
+-Tullia: That's a pity. Come back later, then.
+
+/TulDone
+-Tullia: Try to stay out of mischief.
+-Tullia: This village has seen enough adventure.
+
+
+/Boots
+-Info: Sturdy mushroom leather boots.|They do not look comfy.
+
+/Axes
+-Info: Pick axes. You have no need for them.
+
+/Cauldron
+-Info: It's a hefty cauldron. You have no need for this.
+
+/Bandages
+-Info: Rolls of linen and fabric.|Are these mole or god-made?
+
+End scene

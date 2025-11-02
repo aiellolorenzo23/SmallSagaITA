@@ -1,0 +1,23 @@
+000 
+005 Pilgrim, the world stretches yonder
+013 
+014 Full of romance and wonder
+018
+019 Full of heartbreak and splendour.
+024
+027 Go, and may no foes surround you
+034 
+035 Feral titans not hound you
+039 
+040 May no peril confound you.
+047 
+048 And though your pawprints lead far away from here
+057 
+059 As lost in the wild realms you roam
+067 
+069 Still may you hear the call of the fireside
+078 
+080 Still may your journey bring you home.
+090  
+100 END
+110 END

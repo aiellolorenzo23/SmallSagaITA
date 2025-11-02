@@ -1,0 +1,22 @@
+/BattleVeryStart
+~BattleOwlLoop
+!HoldOn(0.6)
+!DrawWeapon(Bruce)
+!HoldOn(0.4)
+!DrawWeapon(Gwen)
+!HoldOn(0.4)
+!DrawWeapon(Siobhan)
+!HoldOn(1)
+!DrawWeapon(Verm)
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+/VermRage
+-Verm: Four titans? Ha!|That means it's a fair fight!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene

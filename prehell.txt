@@ -1,0 +1,112 @@
+/Intro
+~Stop
+
+/JustPin
+~Stop
+!AutoPinFollowers()
+
+/TriggerOne
+
+!SetGlobal(50,46)
+!Walk(Verm,UL,0.3)
+!HoldOn(0.3)
+!TeleportCharacter(Bruce,973,789)
+!TeleportCharacter(Gwen,973,789)
+!TeleportCharacter(Siobhan,973,789)
+!HoldOn(0.1)
+-Bruce: Verm!
+!Walk(Siobhan,UL,1.3)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!Walk(Bruce,UL,1)
+!HoldOn(0.4)
+!Walk(Gwen,UL,0.7)
+!HoldOn(1)
+-Bruce: What in the hells happened|in the throneroom?!
+-Verm: Can't say for sure.|I wasn't there for most of it.
+!HoldOn(0.4)
+-Verm: What about Excalibur?
+-Siobhan: It's out of action.
+-Verm: Okay. Great.
+-Verm: Then we can focus on what lies above us.
+
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+-Verm: I don't know what we'll see.
+-Verm: The Yellow God might be waiting.
+-Gwen: We can handle it.
+-Siobhan: We're in this together, remember?
+-Bruce: One for all and all for one.
+!AddToParty(Siobhan)
+!AddToParty(Bruce)
+!AddToParty(Gwen)
+!HoldOn(0.4)
+
+!SetAnim(Verm,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.8)
+-Verm: Right. We can do this.
+!HoldOn(0.4)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(0.2)
+!LevelUp(Bruce)
+!HoldOn(0.2)
+!LevelUp(Gwen)
+!HoldOn(1)
+!Walk(Siobhan,UL,0.7)
+!Walk(Gwen,UL,0.7)
+!Walk(Bruce,UL,0.7)
+!HoldOn(0.7)
+!AutoPinFollowers()
+!HoldOn(0.1)
+
+/TriggerTwo
+-InfoBig: Are you ready?
+*GoYes: Yes
+*GoNo: No
+
+/GoYes
+!NextRoom(Hell,1)
+
+/GoNo
+!Walk(Verm,DR,0.3)
+!HoldOn(0.4)
+
+
+/Statue
+!CheckGlobal(8,1,SaveTime)
+-InfoBig: It's a statue of the legendary mouse hero, Artura.
+-InfoBig: Here she stands, guarding Murida.
+!SetGlobal(8,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Artura protects.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(The Royal Palace,A dark tunnel)
+-Info: Your game has been saved.
+/SaveNo

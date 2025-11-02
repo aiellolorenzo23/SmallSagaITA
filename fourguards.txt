@@ -1,0 +1,33 @@
+/BattleVeryStart
+!HoldOn(0.4)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+/BattleStart
+!CameraPan(0,1,1,1)
+!LetsFight()
+/VermRage
+-Verm: I'll slice your dinky swords apart!
+!SetAnim(Verm,Idle)
+!NewTurn()
+/EnemyDead
+!CheckGlobal(4,1,DeadDead)
+!SetGlobal(4,1)
+!HoldOn(2)
+!CreateEnemy(Guard)
+!CameraPan(-0.8,1,1,1)
+!HoldOn(0.4)
+-Gwen: Ugh. Reinforcements.
+!CameraPan(0,1,1,1)
+!HoldOn(0.4)
+-Verm: Get out of our way!
+!ChatOver()
+
+/DeadDead
+!HoldOn(1)
+!EndBattle()
+End scene

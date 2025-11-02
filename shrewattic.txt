@@ -1,0 +1,151 @@
+/Intro
+
+/PutBack
+
+/Window
+!CheckGlobal(99,3,BruceWindow)
+!PlaySound(Window)
+!SetGlobal(39,1)
+!NextRoom(ViniumMain,30)
+
+/FoundSeeds
+-Info: You found a set of Centurion Armour. It's covered in a thin layer of dust.
+
+/BruceWindow
+-Bruce: That goes to the roof.|Doesn't look like Verm's out there.
+
+/Door
+!PlaySound(PrisonDoorOpen)
+!SetGlobal(39,0)
+!NextRoom(VinHouse4,50)
+
+/Book1
+-InfoBig: It's a collection of shrew poetry, untranslated. The Soricidin language is incomprehensible to you.
+
+/Book2
+-InfoBig: It's a philosophy book titled "De Regnum", translated into Common Tongue.
+*ReadIt2: Read it.
+*PutBack: Put it back.
+
+/ReadIt2
+-Book1: Soricates: "Then I ask you this: from where does tyranny come from?"||Ratonius: "From an over-indulgence of good times."||Soricates: "How can that be so?"
+-Book2: Ratonius: "Have you not heard the creed, dear Soricates? Good times create weak mice. Weak mice create hard times. Hard times create strong mice. Strong mice create good times."||Volus: "Sounds fashy."
+-Book1: Soricates: "Now, now, Volus. Let us remain civil. Ratonius, what is a strong mouse?"||Ratonius: "One who possesses the courage and capability to do good. Like Sir Mathwell, when he valiantly slayed the Devil of Aremorio."
+-Book2: Soricates: "So a strong mouse has the strength to hold a sword, but also the moral fibre to point it in the appropriate direction?"||Ratonius: "Precisely."
+-Book1: Soricates: "From where does such a mouse learn swordsmanship and morals?"||Ratonius: "From an excellent teacher I suspect."||Soricates: "Like myself?"
+-Book2: Ratonius: "Well..."||Soracites: "I see. But a thought: would a strong mouse not require a good diet too? After all, a hungry mouse cannot fight well or think rationally."
+-Book1: Ratonius: "That is true. Sir Mathwell purportedly ate 7 cheese wheels a day."||Soracites: "I see, I see. Would cheese wheels and good teachers be available in good times or hard times?"
+-Book2: Ratonius: "Good times, obviously. You ask too many questions, Soricates. Get to your damned rebuttal already."||Soricates: "Oh, I have no rebuttal...
+-Book1: "...But I merely thought that, if it is as you say that a strong mouse requires a good teacher and fine food, and such things are abundant in good times, then it logically follows that strong mice are born from good times, not hard times as you originally claimed.
+-Book2: A cynic might even suspect that the creed is merely a rationalisation for tyrants to leverage hard times to justify the subjugation of the so-called weak by the so-called strong."||Volus: "Get his ass."
+
+/Book
+-InfoBig: You see a diary, bound in mushroom leather, weathered and dusty.
+*ReadIt1: Read it.
+*PutBack: Put it back.
+
+
+/ReadIt1
+-Book1: None of us bookies expected the blond mouse to make it through the qualifiers.||Escrime de Souris des Bois? It's a style for dandies and dancers, not warriors.
+-Book2: But I can't fault the results.||A basic Riposte.|A Moulinet combo.|An undodgeable Trompement.||That is all he needed to best his opponents.
+-Book1: Of course, the mouse's semi-final match versus the towering Sir Diego was the biggest upset.||Why did the Iron Justice yield before the bell had even rung?
+-Book2: The punters called it a fixed match, but Diego's honour cannot be bought [Gods knows I've tried]. No refunds were issued.||I have no idea what thoughts were stirring beneath that oaf's helm.
+-Book1: The final was straightforward by comparison. The mouse out-fought the more established Lady Rosaline in nine seconds flat, winning the tourney, and replacing Sir Alex as the Queen's personal guard.
+-Book2: Blademaster Leo, eh?||We'll see what becomes of him.
+
+/Old
+-Book1: I fell for him at the Royal Tourney. Golden fur and eyes aflame.||I'd never seen a mouse fight with such passion and skill, and I probably never will again.
+-Book2: He defeated the fools and pretenders with the effortless flick of a needle.||Even the mighty Diego yielded before the fight had even begun. The bookies were furious!
+-Book1: Before his final bout, we met and bonded over lemon cakes and shrew-brewed coffee.||We talked about poem and song, about buying a little house in Murida and having a family.
+-Book2: He won, of course.||Our love blossomed.
+-Book1: The seasons changed. Time revealed cracks in our sturdy foundations.||When I couldn't bear it any more, I told him that our relationship was over because he was married to his job.||A half-truth.
+-Book2: My honest thought is that, for all his talk of virtue and weight, he's a mouse who cannot dream beyond the walls of his palace.||He truly believes in the rot he serves, and that disgusts me.
+-Book1: I came back to Vinium for peace of mind, but there's nothing for me here.||Maybe I'll sail to Aremorio.
+-Book2: I hope they're okay.
+
+/Old
+101 Sword Styles
+-Book1: None of us expected the wood mouse to make it to the qualifiers, let alone win the whole tourney. The Wood Mouse Fencing Style (Escrime de Souris des Bois) had largely fallen out of fashion in the modern era, but has seen a recent uptick in popularity following a certain mouse's victory at the CCC Royal Tourney. Indeed, Sir Leo's victory caused a major upset, with bookies favouring more established knights  Sir Oscar the Mighty, Sir Diego, Lamia (disqualified). 
+
+Practitioners 
+
+/OldOLD
+-Book1: Royal Tourney CCC. Day 3. With the qualifiers complete, gone are the fools and pretenders. The competition has been whittled down to eight noble warriors.
+-Book1: The autumnal sun shines brightly. The floor of the Circus Minimus has been mopped clean of blood and sweat. With the blare of trumpets, we commence the final day of the tourney.
+
+-Book1: -- Round 1, Bracket A --|Leo the Needle Knight versus Ragna the Tail Collector.||Bookies favour Ragna on account of his brutal reputation upon the seas.
+-Book2: -- Result --||Upon the ringing of the bell, Sir Leo dashes forward, grasping victory with a single, lightning-fast thrust.||Hot damn, that was fast.
+-Book1: -- Bracket B --|Diego the Iron Justice versus Roger Tri-Blade.||Bookies favour Diego due to the notable size advantage.
+-Book2: -- Result --||Roger is taking on a swift offensive. He's landing several blows! But Diego appears unfazed. Sir Diego has ended the fight with one immense swing of his hammer.||Battle aftermath appears to be "messy".
+-Book1: -- Bracket C --|Lamia the Peerless versus Simon of the Shining Coast||A judge is questioning the legality of Lamia's entry, due to her stoat nature. But Simon insists the fight proceeds!
+-Book2: -- Result --||Simon taunted Lamia with foul words. Lamia laughs. Lamia
+-Book1: -- Bracket D --|Rosaline the Peerless versus Simon of the Shining Coast||The legalities of Lamia's entry were disputable.
+-Book2: -- Result --||Simon taunted Lamia with foul words.
+-Book1: -- Semi-final, Bracket A --|Leo the Needle Knight versus Diego the Iron Justice.||The crowd anticipate a fight for the ages. The energy is electric.
+-Book2: -- Result --||Diego immediately forfeits. The two duellists are... hugging?||This is a disgraceful outcome! Boos and jeers fill the arena. The bookies are in disarray.
+-Book1: -- Semi-final, Bracket B --|With Lamia disqualified, Rosaline has no opponent. She immediately enters the third round.
+-Book2: --
+
+
+/OLD
+
+-Dude: I've got a new hyper-fixation. Do you mind if I go on an unhinged rant about the 300th Royal Tourney?
+*Yes: Go for it.
+*No: No, don't.
+-Dude: Oh, man. I've been waiting for someone to say yes.
+-Dude: Okay. So. It was about this time last year.
+-Dude: Beginning of Autumn. Hot weekend. Absolute scorcher.
+-Dude: Warriors have come from all over Rodentia, and even further, to compete for the position of royal Blademaster.
+-Dude: The qualifiers take two days. But that weeds out all the dipshits and wannabes.
+-Dude: It's the usual. A lot of blood, sweat, and tears left on the colosseum floor.
+-Dude: But then we get to the Quarter finals. The final eight. Here's where things get interesting.
+-Dude: First bracket: Leo the Needle Knight versus Oscar the Mighty.
+-Dude: Leo's established himself as the Vulpes Slayer by then, but Oscar's killed a titan or two of his own, so the bookies give them equal odds.
+-Dude: So how does the match go?
+-Dude: Welp, the bell sounds, and instantly - INSTANTLY - Leo one-shots his opponent.
+-Dude: Fastest lunge I've ever seen. Like lightning.
+*Continue: Did he die?
+*Stop: I've heard enough.
+-Dude: Nah, Leo's too careful, too precise for that, but the guy sure would be hurting for the next month!
+-Dude: Next match. Second bracket: Diego the Iron Justice versus Roger Tri-blade.
+-Dude: Wierd match-up. Diego's this enormous, hammer-wielding fellow, but Roger's tri-wielding with his ratty tail.
+-Dude: Anyway. The bell sounds. Roger leaps forward and strikes Diego, like, a gajillion times.
+-Dude: Diego don't care. He's all...
+-Dude: "THE HAMMER OF JUSTICE FALLS HEAVY".
+-Dude: And BLAM! Roger's lying there in a crater with every bone broken.
+-Verm: How'd you do that voice?
+-Dude: Vocal training and 3 cigarettes a day.
+-Dude: Moving on. Third bracket: Lamia the Peerless versus Simon of the Shining Coast.
+-Dude: Now, should Lamia even have been allowed to enter the Tourney, on account of her being a stoat?
+-Dude: Contentious question. But the short answer is that nobody dared to kick her out.
+-Dude: But putting the legalities aside, Simon knew he was in a jam.
+-Dude: He was a shrew with a short sword. He couldn't just fight a stoat head on.
+-Dude: So the guy starts taunting Lamia.
+-Dude: I don't wanna get into what happened next, but uh... Simon, well, he wasn't so shining after that.
+-Dude: Lamia was disqualified and 
+-Dude: Eating your opponent is frowned upon in tourneys. It's a bit of a faux pas. A dick move.
+-Dude: Also, it's against the rules.
+-Dude: So, yeah, Lamia was disqualified. Fortunately, she walks out the door without protest.
+-Dude: That result sucked for the punters. Oh well.
+-Dude: Fourth bracket: Rosaline versus hedgehog
+-Dude: It was a good fight. 
+-Dude: Kinda uneventful after the previous three matches, but it featured the
+-Dude: Rosaline wins with .
+-Dude: We're up to the semi-finals now. Diego versus Leo.
+-Dude: What happens? Diego quits. Right before the bell is rung.
+-Dude: The crowd. Goes. Feral.
+-Dude: They call Diego a coward, a weakling, a disgrace to the Kingdom, and all other stuff.
+-Dude: But they're all wrong. I saw Diego's eyes through his helm.
+-Dude: He didn't quit out of fear. It was out of sheer, damn respect. Comradeship for his fellow battle brother, one who he would fight side by side for, but never against.
+-Dude: Or maybe them bitches gay. Who knows.
+-Dude: In any case, Leo goes through.
+-Dude: Rosaline automatically goes through because she has no opponent. Them's the rules.
+-Dude: So, the finals. Rosaline versus Leo.
+-Dude: I wish I could say it was a good fight, but honestly it was over from the start.
+-Dude: Rosaline swung hard and fast, but Leo parried like he was swatting fleas.
+-Dude: When Rosaline tried to evade, Leo used a feint, some
+-Dude: They shook hands. Rosaline knew she'd been bested by the best.
+-Dude: And Leo was made the 300th Blademaster of the royal court, replacing that old swashbuckler, Alex.
+-Dude: To this day, you'll have people arguing v
+
+

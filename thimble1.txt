@@ -1,0 +1,20 @@
+/BattleVeryStart
+!HoldOn(0.4)
+!DrawWeapon(Bruce)
+!HoldOn(0.3)
+!DrawWeapon(Gwen)
+!HoldOn(0.3)
+!DrawWeapon(Siobhan)
+!HoldOn(0.3)
+!DrawWeapon(Verm)
+/BattleStart
+!LetsFight()
+
+/VermRage
+-Verm: Out of our way, tin-heads!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/EnemyDead
+!EndBattle()
+End scene

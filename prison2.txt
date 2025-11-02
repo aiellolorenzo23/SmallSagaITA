@@ -1,0 +1,302 @@
+/Intro
+~PrisonLoop
+!SetAnim(Billy,UL)
+!SetAnim(Cody,UR)
+!PinFollowerToGwen(Bruce)
+!TurnOffBlocks(2)
+
+/IntroLate
+~DryCaveLoop
+!TurnOffBlocks(2)
+
+/LiftLate
+~Stop
+!TurnOffBlocks(2)
+
+/LiftDone
+!CheckGlobal(10,2,LiftLate)
+~PrisonLoop
+!SetAnim(Billy,UL)
+!SetAnim(Cody,UR)
+!PinFollowerToGwen(Bruce)
+!TurnOffBlocks(2)
+
+/Treasure1
+-Info: You found some Iron Knuckles.|They pack a punch.
+
+/FoundSeeds
+-InfoBig: You found 3 seeds.
+
+/Jump1
+!HoldOn(0.1)
+!UnpinFollowers()
+!OverworldCameraPan(77,618,1,1)
+!TurnOffBlocks(1)
+!SetVisible(PW,0)
+!SetVisible(PW2,0)
+!SetVisible(Door,0)
+!CheckGlobal(10,2,Jump1b)
+!NormalJump(Gwen,2.2,50,98,749,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Gwen,2.2,50,141,698,JUR,UR)
+!HoldOn(0.85)
+!TurnOnBlocks(2)
+!CameraInstFollow(1)
+
+/Jump1b
+!NormalJump(Verm,2.2,50,98,749,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,141,698,JUR,UR)
+!HoldOn(0.85)
+!TurnOnBlocks(2)
+!CameraInstFollow(1)
+
+/Jump2
+!OverworldCameraPan(221,752,1,1)
+!TurnOffBlocks(2)
+!CheckGlobal(10,2,Jump2b)
+!NormalJump(Gwen,2.2,50,98,749,JDL,DL)
+!HoldOn(0.6)
+!NormalJump(Gwen,2.2,50,147,832,JDR,DR)
+!HoldOn(0.85)
+!TurnOnBlocks(1)
+!SetVisible(PW,1)
+!SetVisible(PW2,1)
+!SetVisible(Door,1)
+!CameraInstFollow(1)
+!PinFollowerToGwen(Bruce)
+
+/Jump2b
+!NormalJump(Verm,2.2,50,98,749,JDL,DL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,147,832,JDR,DR)
+!HoldOn(0.85)
+!TurnOnBlocks(1)
+!SetVisible(PW,1)
+!SetVisible(PW2,1)
+!SetVisible(Door,1)
+!CameraInstFollow(1)
+
+/Note
+-InfoBig: Dear Captain Aiden,||As per your request, I have translated the operating instructions for the weapon codenamed "REX".||Here's hoping it isn't all bark and no bite.||Regards,|Plaguemaster Aquila
+
+/AntonEvent
+!UnpinFollowers()
+!Walk(Gwen,UR,1.1)
+!Walk(Bruce,UR,0.8)
+!HoldOn(0.8)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.3)
+-Bruce: 1-D... This is Anton's cell!
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+-Gwen: Your boyfriend?
+!SetGlobal(18,11)
+!SetAnim(Gwen,L)
+-Bruce: Anton! Can ye hear me!
+!HoldOn(1)
+-Anton: Bruce?
+-Anton: You're breaking out already?!
+-Bruce: Aye! Just a sec.
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!SetAnim(Gwen,DL)
+-Bruce: Gwen, can ye bust down this door?
+-Gwen: The noise would alert every|guard in the prison.
+-Bruce: Yer strong.|Ye can take 'em.
+-Gwen: You flatter me, but no.
+-Gwen: Here's a better idea: the guard captain will have a master key.
+-Gwen: If we beat him up, we can open every cage in this cachu-hole.
+-Bruce: The guard captain?
+-Gwen: Lanky twat in a big coat.
+-Bruce: Oh aye, that one.|I saw him on the way in.
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+-Bruce: Sit tight, Anton.|We'll be back soon.
+-Anton: Stay safe, lapa.
+!Walk(Gwen,DL,0.3)
+!HoldOn(0.3)
+!PinFollowerToGwen(Bruce)
+
+/Anton
+-Anton: Stay safe, lapa.
+
+/PhilTime
+!OverworldCameraPan(1071,240,1.5,1)
+!Walk(Gwen,UR,1.7)
+!HoldOn(0.8)
+-Billy: ...So then apparently the|little rogue threw his friends|under the carriage and|made off with the stone.
+-Cody: Psh. Never trust a rat.
+!HoldOn(0.1)
+!SetAnim(Billy,DL)
+!HoldOn(0.1)
+-Billy: I think he was a jerboa.
+-Cody: Same difference.
+!SetGlobal(18,12)
+!PlaySound(alert)
+!Nani(Phil,!)
+!SetAnim(Phil,DL)
+!HoldOn(0.3)
+!PlaySound(alert)
+!Nani(Billy,!)
+!SetAnim(Billy,DL)
+!HoldOn(0.3)
+!PlaySound(alert)
+!Nani(Cody,!)
+!SetAnim(Cody,UL)
+!HoldOn(0.3)
+-Phil: Ah! The dragon-freak's loose!
+-Cody: Damn it! I told you we should have taken her legs.
+!HoldOn(0.8)
+~Stop
+-Gwen: Bruce. Play some fight music.
+-Bruce: Aye, on it.
+!NormalBattle(PrisonGuard3,67)
+
+/William
+~Stop
+!PlaySound(alert)
+!Nani(William,!)
+!HoldOn(1)
+-William: I love my bludgeon.|I call him Mr Whacky.
+!NormalBattle(PrisonGuard,64)
+
+/Aaron
+~Stop
+!PlaySound(alert)
+!Nani(Aaron,!)
+!HoldOn(1)
+-Aaron: I really don't have the energy for this nonsense.
+!NormalBattle(PrisonGuard,65)
+
+/Liam
+~Stop
+!PlaySound(alert)
+!Nani(Liam,!)
+!HoldOn(1)
+-Liam: Oop. Tried to squeeze past us, did ya?
+!NormalBattle(PrisonGuard2,66)
+
+/Zack
+~Stop
+!PlaySound(alert)
+!Nani(Zack,!)
+!HoldOn(1)
+-Zack: Halt! Don't make us bop ya!
+!NormalBattle(PrisonGuard2,66)
+
+/Door
+!OpenDoor(2,Default)
+!PlaySound(PrisonDoorOpen)
+~Stop
+!HoldOn(0.5)
+!NextRoom(ToBlack)
+!HoldOn(0.5)
+!AddToParty(Verm)
+!AddToParty(Siobhan)
+!RemoveFromParty(Gwen)
+!RemoveFromParty(Bruce)
+!SetLeader(Verm)
+!NextRoom(TreePath0,99)
+
+/JabariTime
+!SetGlobal(18,31)
+!HoldOn(1.5)
+!NormalJump(Pocket,3,30,460,857,DRJump,DRLand)
+!HoldOn(0.7)
+!NormalJump(Pocket,3,30,550,896,DRJump,DRLand)
+!HoldOn(0.7)
+!NormalJump(Pocket,3,30,638,943,DRJump,DRLand)
+!HoldOn(0.7)
+!SetAnim(Pocket,DL)
+!OverworldCameraPan(458,1080,0.5,1)
+!HoldOn(0.4)
+!NormalJump(Pocket,2,50,537,1078,DLJump,DLLand)
+!HoldOn(1.1)
+!NormalJump(Pocket,3,30,457,1107,DLJump,DLLand)
+!HoldOn(0.7)
+!SetAnim(Pocket,UL)
+!HoldOn(0.3)
+!ShowItem(Pocket,55)
+!HoldOn(0.4)
+!PlaySound(PrisonDoorOpen)
+!OpenDoor(66,Default)
+!HoldOn(1)
+!SetAnim(Pocket,DL)
+!HoldOn(0.3)
+!NormalJump(Pocket,3,30,376,1167,DLJump,DLLand)
+!HoldOn(0.7)
+!SetAnim(Pocket,DR)
+!HoldOn(0.1)
+!SetAnim(Pocket,UR)
+!HoldOn(0.6)
+!TeleportCharacter(Anton,443,1099)
+!Enter(Anton)
+!SpecialWalk(Anton,DR,0.5,DRWalkGuitarless,0.5)
+!HoldOn(0.26)
+!SetAnim(Anton,DRGuitarless)
+!HoldOn(0.5)
+!SetAnim(Anton,DLGuitarless)
+!HoldOn(0.2)
+!Nani(Anton,!)
+!HoldOn(0.7)
+-Anton: You?!
+-Pocket: Yeah. Uh. Sorry.
+-Pocket: I messed up.
+-Pocket: But I'm trying to fix it.
+!HoldOn(0.3)
+-Anton: I see.
+-Anton: Is Bruce okay?
+-Pocket: He was when I last saw him.
+-Pocket: Pack your bags.|I'll sneak you outta this dump.
+!HoldOn(0.6)
+-Anton: Wait.
+-Anton: We should free other|prisoners too, no?
+!HoldOn(0.2)
+!Nani(Pocket,?)
+!HoldOn(0.6)
+-Pocket: What, all of them?
+-Anton: Nobody deserves to be down here.
+!HoldOn(0.3)
+!SetAnim(Pocket,DR)
+!HoldOn(0.1)
+!SetAnim(Pocket,DL)
+!HoldOn(0.5)
+-Pocket: Hmm...
+!HoldOn(0.2)
+!SetAnim(Pocket,DR)
+!HoldOn(0.05)
+!SetAnim(Pocket,UR)
+!HoldOn(0.05)
+!SetAnim(Pocket,UL)
+!HoldOn(0.05)
+!SetAnim(Pocket,DL)
+!HoldOn(0.05)
+!SetAnim(Pocket,DR)
+!HoldOn(0.05)
+!SetAnim(Pocket,UR)
+!HoldOn(0.05)
+!NormalJump(Pocket,3,40,376,1167,URJump,UR)
+!HoldOn(0.4)
+-Pocket: That sounds hilarious!|Let's do it!
+!HoldOn(0.3)
+!HardCut(SkyGardenTop)
+
+
+/LiftTouch
+-Info: Head Down?
+*LiftUp: Let's go.
+*NoLiftUp: Not yet...
+/LiftUp
+!LiftGoUp()
+/NoLiftUp

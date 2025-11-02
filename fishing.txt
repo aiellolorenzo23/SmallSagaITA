@@ -1,0 +1,85 @@
+/Intro
+~FishingLoop
+!HoldOn(1.5)
+-Info: Let's do some fishing!
+!HoldOn(0.3)
+!FishMode(1)
+
+/Found1
+!PlaySound(ChestOpen)
+!HoldOn(0.5)
+!PlaySound(ItemFound)
+!PermItemFlag(9)
+!MoneyLoss(-5)
+-Info: You found 5 seeds!
+!HoldOn(0.3)
+!FishMode(2)
+
+/Found2
+!PlaySound(ChestOpen)
+!HoldOn(0.5)
+!PlaySound(ItemFound)
+!PermItemFlag(35)
+!MoneyLoss(-10)
+-Info: You found 10 seeds!
+!HoldOn(0.3)
+!FishMode(2)
+
+/Found3
+!PlaySound(ChestOpen)
+!HoldOn(0.5)
+!PlaySound(ItemFound)
+!PermItemFlag(10)
+!ReceiveItem(48)
+-Info: You found... some Godly Junk?|It's a square chunk of plastic.
+-Info: You add it to your trinkets.
+!HoldOn(0.3)
+!FishMode(2)
+
+/Found4
+!PlaySound(ChestOpen)
+!HoldOn(0.5)
+!PlaySound(ItemFound)
+!PermItemFlag(35)
+!MoneyLoss(-2)
+-Info: You found 2 seeds!
+!HoldOn(0.3)
+!FishMode(2)
+
+/Found5
+!PlaySound(ChestOpen)
+!HoldOn(0.5)
+!PlaySound(ItemFound)
+!PermItemFlag(9)
+!MoneyLoss(-4)
+-Info: You found 4 seeds!
+!HoldOn(0.3)
+!FishMode(2)
+
+/Found6
+!PlaySound(ChestOpen)
+!HoldOn(0.5)
+!PlaySound(ItemFound)
+!PermItemFlag(9)
+!MoneyLoss(-8)
+-Info: You found 8 seeds!
+!HoldOn(0.3)
+!FishMode(2)
+
+
+/Nope
+!FishMode(3)
+
+/Yup
+~Stop
+!FishQuit(MuriStreet2,33)
+
+/Quit
+-Info: Finished fishing?
+*Yup: Yup.
+*Nope: Nope.
+
+/Dry
+!HoldOn(1)
+-Info: You fished the pile dry!
+>Yup

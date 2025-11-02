@@ -1,0 +1,156 @@
+/Intro
+~GardenLoop
+!PerspectivePinFollowers()
+
+/Visit
+!CheckGlobal(18,1,FirstVisit)
+!OverworldCameraPan(320,180,0.25,1)
+!HoldOn(2)
+!NextRoom(SkyGardenEntrance,1)
+
+/FirstVisit
+!OverworldCameraPan(320,240,0.1,1)
+!HoldOn(3)
+!SetGlobal(18,2)
+!BigTitle(Sky Garden,The City of Opportunity)
+!HoldOn(3)
+!NextRoom(SkyGardenEntrance,1)
+
+/NormalVisit
+Is this old?
+!OverworldCameraPan(320,180,0.2,1)
+!HoldOn(2)
+!NextRoom(SkyGardenEntrance,1)
+
+/BruceFirstEntrance
+~GardenLoop
+!SetAnim(Anton,U)
+!SetAnim(Pocket,UR)
+!SetAnim(Bruce,U)
+!HoldOn(2)
+!OverworldCameraPan(320,620,0.25,1)
+!HoldOn(5)
+-Bruce: This is Sky Garden.
+-Bruce: This is... my home?
+!SetAnim(Anton,LookLeft)
+-Anton: What's wrong?
+-Bruce: Sky Garden's supposed tae be a rainbow.
+-Bruce: A tree overflowing with flowers of every hue and shade, all year 'round.
+!SetAnim(Anton,LookUp)
+-Bruce: This dinnae look anything like the stories my da' told me.
+!Nani(Pocket,?)
+!HoldOn(0.5)
+!SetAnim(Pocket,DR)
+!HoldOn(0.3)
+-Pocket: Yeah...|Never heard that flower stuff before.
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+!HoldOn(0.1)
+-Pocket: Sky Garden's a fortress.|A military stronghold.
+-Pocket: No rainbows here.
+!SetAnim(Anton,LookLeft)
+!HoldOn(0.9)
+-Bruce: I see.
+!HoldOn(0.5)
+!SetAnim(Anton,DL)
+!HoldOn(0.5)
+-Anton: Hey, no need to get down.|Let's run over details of...
+-Anton: You know...|PLAN S!
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+!HoldOn(0.1)
+-Bruce: Right! The plan.
+-Anton: Okay. So. We're booked for performance with Squirrel Duke at noon.
+-Anton: Bruce, you and I will walk in...
+*Play: And play!
+*Dance: And dance!
+/Play
+-Bruce: And play their socks off!
+-Anton: Exactly.
+>Meanwhile
+
+/Dance
+-Bruce: And dance their socks off!
+-Anton: Huh? Uh, sure, why not.
+-Anton: But we've got our instruments. So let's use them too.
+-Bruce: Ah, yeah. That tracks.
+>Meanwhile
+
+/Meanwhile
+-Anton: Then, while Duke's court is distracted...
+
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!SetAnim(Bruce,DL)
+-Pocket: I'll scale the outer wall, climb through an upper-floor window...
+-Pocket: Find the treasure room,|break open some chests,|and steal the Pebble of Scuin.
+!HoldOn(0.5)
+-Pocket: You know... It seems like I've got the harder task here.
+-Bruce: Can ye manage it, Pocket?
+-Pocket: Are you kidding?|I could do it blindfolded.
+-Anton: Bruce and I will leave before Duke notices anything is missing.
+!HoldOn(0.1)
+!SetAnim(Bruce,D)
+!HoldOn(0.4)
+-Bruce: And we'll all be in the clear, pebble in paw.
+-Pocket: Heehee! This'll be a riot.
+-Anton: Oh. Uh. One more thing, Bruce.
+!SetAnim(Bruce,DR)
+!HoldOn(0.4)
+-Anton: Really sorry to say this, lapa, but... you should tuck.
+-Bruce: T-tuck?
+-Anton: Your tail.
+-Pocket: The hamster's got a point. It's a dead giveaway of your, uh... true colours.
+!SetAnim(Bruce,DR)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+-Bruce: Ah. I see.
+-Bruce: I suppose it is, ain't it?
+-Bruce: But my da' always told me tae be proud o' my tail...
+-Anton: You have beautiful tail, lapa.
+-Anton: But if Grey squirrels sniff you out as a Red...
+-Bruce: Aye, heads will roll.
+-Anton: Yeah. Sorry, lapa.
+-Bruce: Nae bother. I'll hide it. Just for today. To survive.
+-Pocket: We're all set, then.
+-Pocket: I'll see you both out here in a little while.
+-Anton: And I'll go tune my balalaika.
+-Anton: Meet you in the throneroom!
+!NextRoom(ToBlack)
+!HoldOn(0.5)
+!PlaySound(Cloth)
+!SetGlobal(18,1)
+!TeleportCharacter(Anton,-400,520)
+!TeleportCharacter(Pocket,-400,520)
+!SetAnim(Bruce,DRTucked)
+!SetProtaMode(Tucked)
+!HoldOn(0.5)
+!NextRoom(FromBlack)
+-Bruce: I can do this...
+
+/EarlyExit
+-Bruce: No going back now.
+!SpecialWalk(Bruce,U,0.4,UWalkTucked,1)
+!HoldOn(0.4)
+
+/RunOut
+~GardenLoop
+!PlaySound(PortClose)
+!PerspectivePinFollowers()
+!TeleportCharacter(Bruce,310,554)
+!TeleportCharacter(Gwen,320,556)
+!TeleportCharacter(Siobhan,330,564)
+!TeleportCharacter(Verm,320,573)
+!Walk(Verm,D,3.5)
+!Walk(Siobhan,D,3.5)
+!Walk(Bruce,D,3.5)
+!Walk(Gwen,D,3.5)
+!SetGlobal(18,17)
+!HoldOn(4)
+!TurnOnBlocks(2)
+
+End scene

@@ -1,0 +1,212 @@
+/Intro
+!AutoPinFollowers()
+!SetAnim(Cornelius,DR)
+
+/FirstIntro
+!SetGlobal(18,37)
+!HoldOn(1)
+-Lamia: Sounds like Hank's in trouble.
+!HoldOn(0.1)
+!PlaySound(LamiaTurn)
+!SetAnim(Lamia,Turn)
+!HoldOn(0.8)
+~NewLamia1Loop
+-Lamia: Duke. Head to the roof.|I'll deal with the intruders.
+!HoldOn(0.1)
+!SetAnim(Josh,DR)
+!HoldOn(0.3)
+-Josh: Rip 'em up, Blademaster.
+!Walk(Lamia,U,2.3)
+!OverworldCameraPan(320,220,0.5,1)
+!HoldOn(3)
+!TeleportCharacter(Josh,2048,520)
+!OverworldCameraPan(320,534,2,1)
+!TeleportCharacter(Bruce,438,540)
+!Enter(Bruce)
+!Walk(Bruce,L,1.1)
+!HoldOn(0.3)
+!TeleportCharacter(Gwen,438,540)
+!Enter(Gwen)
+!Walk(Gwen,L,0.8)
+!HoldOn(0.3)
+!TeleportCharacter(Siobhan,438,540)
+!Enter(Siobhan)
+!Walk(Siobhan,L,0.5)
+!SetVisible(Fork,0)
+!NormalJump(Lamia,2,60,320,416,LamiaArmed,LamiaArmed)
+!HoldOn(0.3)
+!TeleportCharacter(Verm,438,540)
+!Enter(Verm)
+!Walk(Verm,L,0.2)
+!HoldOn(0.2)
+!PlaySound(MetalImpact)
+!HoldOn(0.2)
+-Lamia: This is as far as you go.
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!OverworldCameraPan(320,364,1.2,1)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,U)
+!HoldOn(1.5)
+-Verm: Really?
+-Verm: You may be a stoat and a Blademaster, but you're outnumbered four-to-one.
+-Gwen: Don't let your guard down, dwt.|She's called "Peerless" for a reason.
+-Verm: That's just a title.
+-Lamia: A title well earned.
+~Stop
+!GoToBattle(Lamia)
+
+/PostBattle
+!SetGlobal(18,38)
+!HoldOn(2)
+-Verm: I think she's done.
+!HoldOn(1)
+-Siobhan: But... she's still standing?
+!HoldOn(0.4)
+-Bruce: Aye. Out, but not down.
+!HoldOn(0.9)
+!Walk(Gwen,R,0.85)
+!HoldOn(1)
+!SetAnim(Gwen,UR)
+!HoldOn(1)
+-Gwen: Can you hear me, Blademaster?
+!HoldOn(0.6)
+!SlowWalk(Gwen,UR,0.8)
+!HoldOn(0.3)
+!OverCamZoom(2)
+!HoldOn(2)
+!ResetWalkSpeed(Gwen)
+-Gwen: I get it.
+-Gwen: The hunger.
+-Gwen: The dark pit that grows inside|you when you're completely alone.
+!HoldOn(0.7)
+-Gwen: But if you fill that void with the company of fascists...
+!SpecialWalk(Gwen,DL,0.3,URWalk,0.5)
+!HoldOn(0.3)
+!SetAnim(Gwen,UR)
+!HoldOn(0.3)
+!NormalJump(Gwen,2.5,15,546,386,Kick,Kick)
+!PlaySound(QuickWhoosh)
+!HoldOn(0.2)
+!PlaySound(Smack)
+!HoldOn(0.1)
+!NormalJump(Lamia,2,50,800,400,DazedFall,Silent)
+!HoldOn(2)
+!ResetWalkSpeed(Gwen)
+-Gwen: Then you can perish with them.
+!HoldOn(1)
+!OverCamZoom(1)
+!HoldOn(0.8)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.4)
+!LevelUp(Verm)
+!HoldOn(0.2)
+!LevelUp(Siobhan)
+!HoldOn(0.2)
+!LevelUp(Bruce)
+!HoldOn(0.2)
+!LevelUp(Gwen)
+!HoldOn(0.6)
+-Gwen: Let's go. The Duke awaits.
+
+!SetAnim(Siobhan,DR)
+!SetAnim(Bruce,D)
+!HoldOn(0.1)
+!CameraFollow(1)
+!Walk(Gwen,DL,0.6)
+!Walk(Siobhan,D,0.5)
+!Walk(Bruce,D,0.7)
+!HoldOn(0.5)
+!Walk(Siobhan,DR,0.2)
+!HoldOn(0.2)
+!AutoPinFollowers(1)
+
+/Benjamin
+!CheckItem(31,BenjaminDone)
+-Benjamin: [Psst. Check out what I found in prison contraband.]
+!HoldOn(0.2)
+!ShowItem(Prota,31)
+!HoldOn(0.7)
+-Benjamin: [A godly fire-starter. Badass, right?]
+!ShowMoney(1)
+-Benjamin: [It's yours for 15 seeds.]
+*Deal: Deal.
+*NoDeal: No deal.
+*Owner: Who's is it?
+
+/Deal
+!MoneyCheck(15,NotEnough)
+-Benjamin: [Take it.]
+!ReceiveItem(31)
+!ShowMoney(0)
+!MoneyLoss(15)
+!SetNPCFlag(Benjamin,Benjamin)
+!HoldOn(0.6)
+!PlaySound(ItemFound)
+-Info: You received a Zap Wand.|"For my precious prince" is engraved on the side.
+-Benjamin: [Don't tell anyone, alright? If Captain Aiden found out, I'd get my tail grilled.]
+
+/BenjaminDone
+-Benjamin: The dungeon's a depressing work environment. Feels good to get some fresh air.
+
+/NotEnough
+!ShowMoney(0)
+-Benjamin: [Can't afford it? I'll just find someone richer.]
+!SetNPCFlag(Benjamin,Benjamin2)
+
+/NoDeal
+!ShowMoney(0)
+-Benjamin: Get lost, then.
+!SetNPCFlag(Benjamin,Benjamin2)
+
+/Benjamin2
+!ShowMoney(1)
+-Benjamin: [Changed your mind, huh? You want the fire-starter for 15 seeds?]
+*Deal: Deal.
+*NoDeal: No deal.
+*Owner: Whose is it?
+
+/Owner
+-Benjamin: [The owner? Man, who cares.|They don't need it any more.]
+-Benjamin: [15 seeds. You want it or not?]
+*Deal: I do.
+*NoDeal: I don't.
+
+/Hudson
+-Hudson: Not gonna lie: it's gross that the Duke keeps a stoat on the payroll.
+-Hudson: Just looking at that long-necked freak gives me the creeps.
+
+/Cornelius
+-Cornelius: Welcome to the armoury.|Don't. Touch. Anything.
+
+/Voltemand
+-Voltemand: I'm supposed to polish that lance daily, but I can't even lift the darn thing.
+
+/Weapon3
+!CheckGlobal(18,40,Weapon3B)
+!CheckGlobal(18,37,Weapon3B)
+!CheckGlobal(18,38,Weapon3B)
+!CheckGlobal(18,39,Weapon3B)
+-InfoBig: An enormous lance, sharpened to two points. It's a god weapon, and a fearsome one at that.
+
+/Weapon3B
+-InfoBig: There's an empty spot here.
+
+/Weapon2
+-InfoBig: A battle-worn claymore. "TEMPERANCE" is inscribed on base of the blade.
+
+/Weapon4
+-InfoBig: An elegant halberd.|The steelwork is flawless.
+
+/Weapon1
+-InfoBig: A coal-headed hammer.|Looks heavy.

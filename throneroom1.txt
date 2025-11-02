@@ -1,0 +1,131 @@
+/Intro
+~PalaceLoop
+!OverworldCameraSnap(1150,365)
+!OverworldCameraSnap(1150,365)
+!SetAnim(Leo,Sitting)
+!SetAnim(Ophiuchus,LetterOpen)
+!HoldOn(1.3)
+-James: Strength and stability.
+-James: That is what my mother promised this Kingdom.
+-James: And that is what I shall deliver.
+-Ophiuchus: Virtuous and ambitious, Your Majesty.
+-Ophiuchus: But your decision to close the East Gate has caused unforeseen issues.
+-Ophiuchus: Intercity commerce is down a quarter. Tourism is faring even worse.
+!HoldOn(0.2)
+!SetAnim(Ophiuchus,LetterClose)
+!HoldOn(0.6)
+!SetAnim(Ophiuchus,LookRight)
+-Ophiuchus: If we don't reopen, we may have a recession on our paws.
+!HoldOn(0.2)
+!SetAnim(James,LookRight)
+!HoldOn(0.2)
+-James: What are your thoughts, Blademaster?
+
+-Leo: Whether the gates are open or closed, Murida is safe.
+-Leo: The Thimble Guard are more than capable of facing any threat to the city.
+-Leo: So perhaps Your Majesty should consider the needs of the people.
+
+!HoldOn(0.2)
+!SetAnim(James,LookLeft)
+!Nani(James,?)
+!HoldOn(0.8)
+!SetAnim(James,Loop)
+-James: The needs of the people?
+!PlaySound(PalaceBigDoorOpen)
+!HoldOn(0.2)
+!SetAnim(Ophiuchus,LookLeft)
+!CameraFollow(1)
+!HoldOn(1)
+!SetAnim(Ophiuchus,Loop)
+!TeleportCharacter(Leo,1201,479)
+!SetAnim(Leo,DL)
+!SetShadowless(Leo,0)
+!Walk(Aquila,UR,5.8)
+!HoldOn(6)
+!OverworldCameraPan(1150,365,1,1)
+!HoldOn(1)
+-Aquila: Your Majesty.
+-Leo: Plaguemaster, you know you were dismissed from the King's council.
+-Leo: Take your leave.
+!SetAnim(Aquila,Look1)
+-Aquila: This is a matter of great importance, Needle Knight. National security!
+-Leo: National security my tail...
+-James: Please proceed, Plaguemaster.
+!SetAnim(Aquila,Look2)
+-Aquila: There are two subjects of interest in the city - a mole girl and a vagabond mouse.
+-Aquila: I believe they possess knowledge of a great, supernatural force.
+-Aquila: I request that you rally the Thimble Guard to find them and-
+-Leo: "A great, supernatural force"?|Ghosts and muswolves...
+!SetAnim(Aquila,Look1)
+-Leo: Your Majesty, pay this fearmongerer no heed.
+-Aquila: Hold your tongue, Needle Knight!
+-Aquila: You have no idea of the terrors that this kingdom faces!
+!SetAnim(Aquila,Look2)
+-James: Enough quibbling.
+!HoldOn(0.2)
+!SetAnim(James,LookRight)
+!HoldOn(0.2)
+-James: Both of you.
+!HoldOn(0.2)
+!SetAnim(James,LookLeft)
+!HoldOn(0.2)
+-James: Loremaster, what is your counsel?
+!HoldOn(0.2)
+!SetAnim(James,Loop)
+!SetAnim(Ophiuchus,LookRight)
+!HoldOn(0.2)
+-Ophiuchus: Hmm... well, I don't know about any supernatural force...
+-Ophiuchus: But we did receive a butterfly just this morning from the Lady of Cranbaile village.
+!HoldOn(0.2)
+!SetAnim(Ophiuchus,LookLeft)
+!HoldOn(0.4)
+!SetAnim(Ophiuchus,LetterOpen)
+!HoldOn(0.4)
+
+-Ophiuchus: She claims that her daughter, a noble mole named Siobhan, was abducted.
+-Ophiuchus: The culprit, a vagabond mouse wielding a god weapon, is en-route to the capital.
+!HoldOn(0.1)
+!SetAnim(Ophiuchus,LetterClose)
+!HoldOn(0.4)
+!SetAnim(Ophiuchus,LookRight)
+!HoldOn(0.1)
+-Ophiuchus: Such coincidental timing. One can't help but wonder: could this be the same pair?
+!SetAnim(Ophiuchus,LookLeft)
+-Aquila: It must be! The girl was dressed like nobility.
+!SetAnim(Ophiuchus,Loop)
+!SetAnim(Aquila,Look1)
+!HoldOn(0.5)
+-Aquila: Well? What are you waiting for, Needle Knight?
+-Aquila: Rally the Thimble Guard!|Search the city!
+!SetAnim(James,LookRight)
+!HoldOn(0.5)
+-Leo: I'll brief Dame Rosaline and|Dame Maisie on the matter.|That should suffice.
+-Aquila: That's all?|Two amateur knights?
+-Leo: The Scissor Maidens are more than capable of handling a trivial kidnapping case.
+!SetAnim(James,LookLeft)
+!SetAnim(Aquila,Look2)
+-Aquila: Your Majesty, this is a very serious matter-
+-James: I trust Leo's judgement.|We'll go with his recommendation.
+!HoldOn(0.7)
+-James: If that is all, then take your leave, Plaguemaster.
+!HoldOn(0.4)
+!SetAnim(Aquila,Look1)
+!HoldOn(1.2)
+!SetAnim(Aquila,Look2)
+!HoldOn(0.2)
+-Aquila: Yes, Your Majesty.|Thank you, Your Majesty.
+!SetAnim(Aquila,DR)
+!HoldOn(0.1)
+!Walk(Aquila,DL,2)
+!HoldOn(2)
+-Leo: I'll see the rat out.
+!Walk(Leo,UL,0.7)
+!HoldOn(0.7)
+!Walk(Leo,DL,5)
+!HoldOn(0.5)
+!SetAnim(Ophiuchus,LetterOpen)
+!HoldOn(1)
+-Ophiuchus: Where were we?|Oh yes, the East Gate...
+~Stop
+!HoldOn(0.5)
+!NextRoom(PalaceFoyer,1)

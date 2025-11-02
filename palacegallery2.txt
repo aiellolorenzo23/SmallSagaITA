@@ -1,0 +1,139 @@
+/Intro
+
+/Intro2
+!TurnOffBlocks(1)
+!SetAnim(Verm,D)
+!TeleportCharacter(Verm,704,190)
+!HoldOn(6)
+!SetGlobal(50,31)
+!NormalJump(Verm,2,30,621,285,JDL,DL)
+!HoldOn(0.7)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!TeleportCharacter(Siobhan,704,190)
+!SetAnim(Siobhan,D)
+!Enter(Siobhan)
+!Walk(Siobhan,D,0.4)
+!HoldOn(0.4)
+!NormalJump(Siobhan,2,30,670,315,JDL,DL)
+!HoldOn(0.1)
+!TeleportCharacter(Gwen,704,190)
+!SetAnim(Gwen,D)
+!Enter(Gwen)
+!Walk(Gwen,D,0.4)
+!HoldOn(0.4)
+!NormalJump(Gwen,2,30,715,314,JDR,DR)
+!HoldOn(0.3)
+!TeleportCharacter(Bruce,704,190)
+!SetAnim(Bruce,D)
+!Enter(Bruce)
+!Walk(Bruce,D,0.4)
+!HoldOn(0.4)
+!NormalJump(Bruce,2,30,735,294,JDR,DR)
+!HoldOn(0.3)
+-Siobhan: We're in!
+!HoldOn(0.2)
+!SetAnim(Bruce,D)
+!HoldOn(0.2)
+!SetAnim(Bruce,DL)
+-Bruce: Aye, but are we safe?
+!TurnOnBlocks(1)
+!CameraFollow(1)
+!AutoPinFollowers()
+/Painting1
+-InfoBig: - Saeth Halftail -|Frontier explorer of the Emerald Marshes
+
+/Painting2
+-InfoBig: - Sir Hamilton Flint -|Tamer of Titans, Champion of the Wayward Star
+
+/Painting3
+!CheckGlobal(50,0,PaintingCont)
+-InfoBig: There's a hole here.|But you're not leaving just yet.
+
+/PaintingCont
+-InfoBig: - Murray Cloudrunner -|Sky-bound inventor and maddest of lads
+
+/Painting4
+-InfoBig: - Sir Gael -|Sharp-shooter of the Thimble Guard, heroic defender of Twotail Pass
+
+/Maisie
+!CheckGlobal(73,3,Sister)
+!CheckGlobal(73,4,MaisieAng)
+!CheckGlobal(73,5,MaisieAng)
+!CheckGlobal(73,2,MaisieCheer)
+-Maisie: It's my first day on the job... but I'm kinda scared.
+!CheckGlobal(73,1,MaiCon)
+-Maisie: Leo and Rosy and everyone else is so cool. I'm worried I'm going to let them down.
+*Cheer: Do your best.
+*NoSis: Whatever.
+
+/Cheer
+-Verm: Just do your best, I guess.
+!SetGlobal(73,2)
+-Maisie: Y-yeah. Thanks.
+
+/MaisieCheer
+-Maisie: I... I've got to do my best.
+
+/MaiCon
+-Maisie: Leo and Rosy and everyone else is so cool. I'm worried I'm going to let them down.
+*Sister: Your sister...
+*NoSis: Whatever.
+
+/Sister
+-Verm: I think your sister is waiting for you up the stairs.
+!HoldOn(0.4)
+!Nani(Maisie,?)
+!HoldOn(0.9)
+-Maisie: Rosy's waiting?
+-Verm: Yeah. Said something about roll call.
+!HoldOn(0.2)
+!SetGlobal(73,6)
+!Nani(Maisie,!)
+!ShoutMode()
+!HoldOn(0.4)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,Stupid)
+!HoldOn(0.2)
+-Maisie: It's roll call already?!
+!HoldOn(0.1)
+!ShoutMode()
+-Maisie: How did I lose track of time?!|Ahhh, I'm so stupid!
+
+!HoldOn(0.2)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,DL)
+-Maisie: I've gotta go!
+!NormalJump(Verm,2.5,20,962,310,JUR,UL)
+!FastWalk(Maisie,L,2.2)
+!HoldOn(2.2)
+!TeleportCharacter(Maisie,1000,1000)
+
+/NoSis
+-Verm: Whatever. This really isn't my problem.
+!SetGlobal(73,4)
+!HoldOn(0.1)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,Stupid)
+!HoldOn(0.1)
+-Maisie: Ahhh, arseholes like you really piss me off!
+!HoldOn(0.1)
+!SetAnim(Maisie,ToStupid)
+!HoldOn(0.1)
+!SetAnim(Maisie,DL)
+-Maisie: Get out of here before I do something I regret.
+
+/MaisieAng
+-Maisie: Your face is pissing me off.|Get out of here already.

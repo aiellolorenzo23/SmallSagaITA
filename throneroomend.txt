@@ -1,0 +1,218 @@
+/Intro
+
+/Threshold
+
+-Info: Approach Siobhan?
+*Yes: Yes.
+*No: Not yet.
+
+/No
+!Walk(Verm,DL,0.5)
+!HoldOn(0.5)
+
+/Yes
+!SetAnim(Siobhan,UR)
+!OverworldCameraPan(1201,353,1,1)
+!HoldOn(3)
+!TeleportCharacter(Verm,704,666)
+!Walk(Verm,UR,1.8)
+!HoldOn(0.6)
+!OverworldCameraPan(1001,483,1,1)
+!HoldOn(2.4)
+-Verm: What's up?
+!HoldOn(0.9)
+-Siobhan: Sir Verm.
+!HoldOn(0.3)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.9)
+-Siobhan: There's something troubling I learned from Plaguemaster Aquila's notes.
+-Siobhan: I'm sorry to tell you this, but...
+
+!HoldOn(0.3)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!Walk(Siobhan,DR,0.7)
+!HoldOn(0.2)
+!SetAnim(Verm,R)
+!HoldOn(0.9)
+-Siobhan: There are many Yellow Gods.|Not just one.
+-Siobhan: In fact, it's very likely that the Yellow God we fought isn't the same one you saw as a child.
+!HoldOn(0.5)
+-Verm: Oh. Yeah, I know.
+!HoldOn(0.3)
+-Verm: I always knew.
+-Verm: Or at least, I figured that any god could wear the Yellow God's robes.
+!HoldOn(0.4)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.3)
+-Verm: I guess from the outside my quest looked a bit stupid.
+-Verm: But I never had any delusions about what I was doing.
+-Verm: I knew I was never going to get my brother or my tail back from the Yellow God.
+-Verm: So I chased the Yellow God's shadow.
+-Verm: The hunt brought me... well, not quite peace. But something. An outlet. A direction for my anger.
+!HoldOn(0.6)
+-Siobhan: I see.
+
+!Walk(Siobhan,L,0.5)
+!HoldOn(0.5)
+-Siobhan: Is that the reason why|you let Him go?
+!HoldOn(0.1)
+!Nani(Verm,?)
+!HoldOn(0.6)
+-Verm: What do you mean?
+-Siobhan: Well, there's a lot of gossip in the city about why you didn't kill the Yellow God.
+-Siobhan: Some think you let Him go|as an act of mercy.
+-Siobhan: Others think it was so he could relay a message to the other gods.|"Stay away from Murida!"
+-Siobhan: But to me, those reasons|didn't add up.
+-Siobhan: So is it that you held back because you knew he wasn't the right god? You knew that it wouldn't be real justice?
+-Verm: No, that's not it at all.
+-Verm: As far as I care, this Yellow God is as guilty as the last.
+-Verm: I let Him go because, well...
+!HoldOn(0.4)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DL)
+!HoldOn(0.3)
+!SetAnim(Verm,OwDL)
+!HoldOn(0.4)
+-Verm: I'm tired.
+-Verm: It's exhausting.|The struggle, I mean.
+-Verm: I've been angry for my whole life, and that fire is what kept me going.
+-Verm: But it burned me away, bit by bit.|Like a candle that's reached its end.
+!HoldOn(0.4)
+!SetAnim(Verm,DL)
+!HoldOn(0.3)
+-Verm: When I looked into the Yellow God's eyes, I didn't see the reflection of a mouse.
+-Verm: Just a ghost.
+!HoldOn(0.4)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!HoldOn(0.8)
+-Verm: Sorry. That's not a very|satisfying answer.
+-Siobhan: No, no. It's fine.|I appreciate your honesty.
+!HoldOn(0.8)
+-Siobhan: Are you okay, Sir Verm?
+!HoldOn(0.5)
+-Verm: Yeah. Never better.
+!HoldOn(0.6)
+!SetAnim(Verm,UR)
+!HoldOn(0.6)
+!Walk(Verm,UR,0.8)
+!OverworldCameraPan(1201,353,1,1)
+!HoldOn(0.4)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(1)
+-Verm: Hey, who runs the Kingdom now?
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!Walk(Siobhan,UR,0.5)
+!HoldOn(0.7)
+-Siobhan: Well, there's a royal line of succession.
+-Siobhan: The King never had any children.
+-Siobhan: There are others in his bloodline, cousins and the like, but nobody's come forward to assert their claim.
+-Verm: Probably scared off after hearing about the old king's death.
+-Verm: Not to mention the whole|God of Death apocalypse thing.
+-Siobhan: Most likely.
+-Siobhan: So, for now at least,|the golden throne is vacant.
+!HoldOn(0.8)
+-Verm: Huh.
+!HoldOn(1)
+!SpecialWalk(Verm,DL,0.2,URWalk,0.5)
+!HoldOn(0.2)
+!SetAnim(Verm,UR)
+!HoldOn(0.2)
+!PlaySound(VermJump)
+!NormalJump(Verm,1,180,1225,353,JUR,URSwordless)
+!HoldOn(0.9)
+!PlaySound(Slash)
+!SwordTeleport()
+!HoldOn(0.6)
+!Nani(Siobhan,!)
+!HoldOn(1.4)
+!NormalJump(Verm,1.5,70,1022,477,JDLSwordless,DLSwordless)
+!OverworldCameraPan(1101,403,1,1)
+!HoldOn(1)
+!SetAnim(Verm,DSwordless)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Verm,DRSwordless)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.6)
+-Verm: Nobody should sit on that thing.
+-Siobhan: Then who would rule Murida?|Or Rodentia, for that matter?
+-Verm: Does it need a ruler?
+-Siobhan: I suppose not.
+!HoldOn(0.6)
+!SetAnim(Verm,DSwordless)
+!HoldOn(0.1)
+!SetAnim(Verm,DLSwordless)
+!HoldOn(0.6)
+-Verm: I'm going to|go take a walk.
+!SpecialWalk(Verm,DL,1,DLWalkSwordless,0.5)
+!HoldOn(0.2)
+!SetAnim(Siobhan,L)
+!HoldOn(0.4)
+!SetAnim(Verm,DLSwordless)
+-Siobhan: Where to?
+!HoldOn(0.3)
+!SetAnim(Verm,DLSwordless)
+-Verm: I might leave the city.|Maybe head to the Outlands.|My home village is there.
+-Siobhan: Can I come?
+!HoldOn(0.3)
+-Verm: I'd rather walk alone today.
+!HoldOn(0.2)
+!ShoutMode()
+-Siobhan: Sir Verm!
+!HoldOn(0.4)
+!SetAnim(Verm,DSwordless)
+!HoldOn(0.1)
+!SetAnim(Verm,DRSwordless)
+!HoldOn(0.1)
+!SetAnim(Verm,RSwordless)
+!HoldOn(0.3)
+-Siobhan: Bruce, Gwen, and me... we're all here for you. You know that, right?
+-Verm: I know.
+-Verm: You're the best friends I could have ever hoped for.
+!HoldOn(0.1)
+!SetAnim(Verm,DRSwordless)
+!HoldOn(0.1)
+!SetAnim(Verm,DSwordless)
+!HoldOn(0.1)
+!SetAnim(Verm,DLSwordless)
+!HoldOn(0.6)
+!SpecialWalk(Verm,DL,6,DLWalkSwordless,0.5)
+!HoldOn(0.3)
+!SetAnim(Siobhan,DL)
+!HoldOn(5)
+!NextRoom(ToBlack)
+!HoldOn(1.3)
+!NextRoom(Credits,2)
+
+
+
+/Unusued
+!CheckItem(43,Squeaky)
+/Squeaky
+-Siobhan: Who's that?
+-Verm: Squeaky. He can rule for a bit.
+-Siobhan: He's as fit a ruler as any I've seen.

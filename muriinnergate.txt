@@ -1,0 +1,41 @@
+/Intro
+~Stop
+!AutoPinFollowers()
+
+/ThomasTime
+~Stop
+!AutoPinFollowers()
+!SetGlobal(26,8)
+!Walk(Verm,DR,1.5)
+!HoldOn(1)
+!Nani(Thomas,!)
+!HoldOn(0.6)
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+-Thomas: WHAT?! You two?!
+-Thomas: Did you SLUG-BRAINS actually take the service tunnel?
+-Thomas: Do you have any idea how dangerous that was?!
+-Thomas: Well, WHATEVER.
+-Thomas: I guess you can come and go through the East Gate from now on.
+-Thomas: Because my job is MEANINGLESS, apparently.
+-Thomas: Hmph. Just go.
+
+/Thomas
+!CheckGlobal(10,2,ThomasLate)
+-Thomas: Hmph!
+
+/ThomasLate
+!CheckGlobal(99,2,ThomasSio)
+-Thomas: I may as well let you|SLUG-BRAINS through. You'd|only sneak in some other way.
+
+/ThomasSio
+-Thomas: I received a note from the Plaguemaster ordering me to let you through.
+-Thomas: Not that it matters. DELINQUENTS like you would sneak past anyway.
+
+/FoundSeeds
+-Info: You found 5 seeds.|Thomas won't mind.
+-Thomas: Are you serious right now?!

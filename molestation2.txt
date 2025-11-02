@@ -1,0 +1,624 @@
+/Intro
+!AutoPinFollowers()
+!SetGlobal(4,0)
+
+/Jump1
+!CheckGlobal(4,1,SioEarlyJump)
+!UnpinFollowers()
+!SetAnim(Siobhan,U)
+!OverworldCameraPan(722,322,0.3,1)
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,688,624,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,653,565,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,605,526,JUL,UL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,651,469,JUR,UR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,722,402,JUR,UR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+!HoldOn(0.35)
+!CameraInstFollow(1)
+
+/Jump2
+!OverworldCameraPan(700,610,0.4,1)
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,651,469,JDL,DL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,605,526,JDL,DL)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,653,565,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,688,624,JDR,DR)
+!HoldOn(0.6)
+!NormalJump(Verm,2.2,50,700,690,JDR,DR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+!HoldOn(0.35)
+!AutoPinFollowers(1)
+!CameraInstFollow(1)
+
+/Jump3
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,563,224,JUL,UL)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+!CheckGlobal(12,1,Lid)
+
+/Jump4
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,640,362,JDR,DR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+
+/Jump5
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,1116,510,JDR,DR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+
+/Jump6
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,962,523,JUL,UL)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+
+/Jump7
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,1270,528,JUR,UR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+
+/Jump8
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,1535,313,JUR,UR)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+
+/Jump9
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,1431,448,JDL,DL)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+
+/Jump10
+!TurnOffBlocks(1)
+!SetShadowless(Verm,1)
+!NormalJump(Verm,2.2,50,1121,507,JDL,DL)
+!HoldOn(0.5)
+!SetShadowless(Verm,0)
+!TurnOnBlocks(1)
+
+/SioEarlyJump
+-Siobhan: This felidae looks a bit like Tiger...
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.3)
+-Siobhan: Sir Verm's busy up there.|So I should look around down here.
+
+/JumpEarly
+-Verm: Just garbage. Although, this could make for a good spot to climb the wall.
+
+/FoundSeeds
+-Info: You found 5 seeds.
+
+/EarlyLeave
+-Siobhan: Where am I going?|Sir Verm needs my help.
+!Walk(Siobhan,DR,0.3)
+!HoldOn(0.5)
+
+/Basket
+!CheckGlobal(4,1,SioBasket)
+!CheckGlobal(12,1,VermBasket)
+!CheckGlobal(12,2,BasketCont)
+!CheckGlobal(12,3,BasketCont)
+!CheckGlobal(12,4,BasketCont2)
+-Siobhan: What's this?
+-Verm: Just garbage.
+-Verm: Come on. We've got a lot of walking to do.
+!SetGlobal(12,1)
+!MysteryText(1)
+-Dizi: Uhhh...
+!OverworldCameraPan(409,534,1,1)
+!HoldOn(1)
+!TeleportCharacter(Verm,548,793)
+!Walk(Verm,UL,2.4)
+!HoldOn(2.5)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.7)
+-Dizi: Is there someone out there?
+*OutThereYeah: Yeah?
+*OutThereNo: No.
+
+/OutThereYeah
+!MysteryText(0)
+-Verm: Yeah?
+!MysteryText(1)
+-Dizi: Ah. cool.
+-Dizi: Mind helping me out? I'm a bit stuck.
+!MysteryText(0)
+
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: Sir Verm! We have to help them!
+>Stuck
+
+/OutThereNo
+!MysteryText(0)
+-Verm: No.
+!MysteryText(1)
+-Dizi: Ah. My bad.
+!MysteryText(0)
+
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: Sir Verm!
+-Siobhan: Someone's stuck in there. We have to help them!
+>Stuck
+
+/Stuck
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+-Verm: We're never going to make it to Murida if we get sidetracked by every idiot in distress...
+!MysteryText(1)
+!ShoutMode()
+-Dizi:   Oi!
+!SetAnim(Verm,R)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,UR)
+!HoldOn(0.6)
+-Dizi: ...You're headed to Murida?
+-Dizi: I could fly you there.
+!MysteryText(0)
+-Verm:  Fly?
+!Nani(Siobhan,!)
+!HoldOn(0.4)
+-Siobhan: Of course! That's a carrier basket over there.
+-Siobhan: So this person must be a majestic carrier raven!
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: Sir Verm, this is a golden opportunity. A free ticket to Murida!
+-Verm: A direct flight would save a lot of time. Weeks, even.
+-Verm: Alright. Sit tight, bird.
+!MysteryText(1)
+-Dizi: Cool beans. I'm not going nowhere.
+!MysteryText(0)
+!CameraFollow(1)
+
+/Lid
+!MoveTrigger(EarlyLeave,1825,464)
+!Walk(Verm,DL,0.3)
+!HoldOn(0.5)
+!SetGlobal(4,1)
+-Verm: This lid looks pretty heavy. Will I be able to lift it?
+-Verm: Guess I won't know until I try...
+!SetAnim(Siobhan,UL)
+!SetLeader(Siobhan)
+!HoldOn(1.5)
+-Siobhan: I need to show Sir Verm that I'm not a liability.
+-Siobhan: There must be some way I can help...
+
+/BagDone
+-Verm: This came in use after all.
+
+/Bag
+!CheckGlobal(12,2,BagDone)
+!CheckGlobal(12,3,BagDone)
+!CheckGlobal(12,4,BagDone)
+!CheckGlobal(12,0,NewBag)
+!CheckGlobal(4,0,VermBag)
+!Nani(Siobhan,!)
+!HoldOn(0.4)
+!TeleportCharacter(Verm,494,234)
+!SetAnim(Verm,DL)
+-Siobhan: I knew it. There's all kinds of grand things in here.
+-Siobhan: There's pointy sticks... a rubbery cube...
+!HoldOn(0.3)
+!OverworldCameraPan(565,180,1,1)
+!HoldOn(1)
+!SetLeader(Verm)
+!TurnOffBlocks(1)
+!TeleportCharacter(Siobhan,738,411)
+-Verm: Brute strength didn't work.|Maybe I can stab this damn lid open...
+-Siobhan: Sir Verm! I've found something!
+!Walk(Siobhan,UL,1)
+!SetGlobal(4,0)
+!HoldOn(0.2)
+!Nani(Verm,?)
+!HoldOn(0.3)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.5)
+!SetShadowless(Siobhan,1)
+!NormalJump(Siobhan,2.2,50,555,256,JUL,UL)
+!HoldOn(0.5)
+!SetShadowless(Siobhan,0)
+!TurnOnBlocks(1)
+!HoldOn(1)
+-Verm: Junk?
+-Siobhan: Not just any old junk. Give me a second.
+!NextRoom(ToBlack)
+!PlaySound(Crafting)
+!HoldOn(9)
+!SetVisible(Ruler,1)
+!NextRoom(FromBlack)
+!HoldOn(3)
+-Verm: You built a seesaw.
+-Siobhan: A lever! It's basic mechanics.
+
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+-Siobhan: If we both jump as hard as we can on that end, the lid will go flying.
+-Verm: Will it really?
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+-Siobhan: Trust me.
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+-Siobhan: Are you ready, bird?
+!MysteryText(1)
+-Dizi: Ready for what now?
+!MysteryText(0)
+-Verm: They're ready.
+-Verm: Fine. Let's give this a shot.|On three.
+
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,U)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!SetAnim(Verm,UR))
+!HoldOn(0.3)
+-Verm: One. Two...
+!HoldOn(0.1)
+!TurnOffBlocks(1)
+
+!NormalJump(Verm,1.5,100,716,163,JUR,Ur)
+!NormalJump(Siobhan,1.5,100,716,163,JUR,UR)
+!OverworldCameraPan(631,695,1,1)
+!HoldOn(0.6)
+!PlaySound(RulerJump)
+!HoldOn(0.5)
+!PlaySound(PigeonTakeoff)
+!TeleportCharacter(Dizi,1064,300)
+
+!NormalJump(Verm,1,50,404,764,JDL,Land)
+!HoldOn(1)
+!NormalJump(Siobhan,1,50,521,730,JDL,Dead)
+!HoldOn(1)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(1)
+!NormalJump(Siobhan,2.2,40,521,730,JDL,DR)
+!HoldOn(1)
+!NormalJump(Dizi,0.8,-80,768,793,FlyingEmpty,Loop)
+
+!HoldOn(2)
+~DiziLoop
+!HoldOn(1)
+
+!SetVisible(Ruler,0)
+!TurnOnBlocks(1)
+!SetGlobal(12,2)
+!MoveTrigger(EarlyLeave,2600,464)
+
+-Dizi: Oh. My. DAYS!
+-Dizi: I almost DIED in there.
+-Dizi: I have no idea how you two busted me out, but mad respect.
+-Verm: How'd you even get stuck in the first place?
+!HoldOn(0.4)
+-Dizi:  So.
+!HoldOn(0.6)
+-Dizi: Like.
+!HoldOn(1)
+-Dizi: You know that thing where you smell a bit of food, and you follow it, and the next thing you know you're stuck in a box, surrounded by garbage?
+!HoldOn(1.5)
+-Verm: Yeah.
+!HoldOn(0.6)
+-Dizi: Oh yeah, the name's Dizi,|by the way.
+-Siobhan: It's a pleasure to meet you, Dizi. I'm Lady Siobhan, and this is Sir Verm.
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!HoldOn(0.1)
+-Verm: Again, I'm not a knight.
+-Dizi: You says you two were headed to Murida, the rodent capital, right?
+!SetAnim(Verm,R)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+-Dizi: That journey's a breeze. Just a short flight south-west of here.
+-Dizi: I can take you right away.
+-Siobhan: Are you sure?|That's so kind of you.
+-Dizi: Hey, it's the least I can do for getting me out of that thing.
+-Dizi: Hop in the basket when you're ready.
+!AutoPinFollowers()
+!CameraFollow(1)
+
+
+/BasketCont
+-Dizi: We're off to the rodent capital.
+-Dizi: Hold on tight, 'cos I ain't stopping if you fall!
+!CameraUnfollow()
+!UnpinFollowers()
+!PigeonFlight(OverMap)
+
+/BasketCont2
+-Dizi: All aboard! Keep your paws inside the basket at all times.
+!CameraUnfollow()
+!UnpinFollowers()
+!PigeonFlight(OverMap)
+
+/SioBasket
+-Siobhan: Could this come in use?|Hmm... Probably not.
+
+/VermBasket
+-Verm: Nothing in here.
+
+/NewBag
+-Siobhan: Look, Sir Verm!
+-Verm: Godly junk. Let's move on.
+
+/VermBag
+-Siobhan: I really think this bag might come in use, Sir Verm!
+-Verm: I really doubt it.
+
+/PigeonEntrance
+~GardenLoop
+!PigeonArrival()
+-Dizi: We're back at Cranbaile. Hope you had a pleasant flight.
+!AutoPinFollowers(1)
+!CameraFollow(1)
+
+/Dizi
+!CheckGlobal(12,2,DiziFirst)
+-Dizi: I'm all set whenever you are, mousegang.
+
+/DiziFirst
+-Dizi: The basket's all prepped and waiting.
+
+/Frack
+!CheckGlobal(76,1,Frack1)
+!CheckGlobal(76,2,Frack2)
+!CheckGlobal(76,3,Frack2)
+!CheckGlobal(76,4,Frack2)
+!CheckGlobal(76,5,Frack2)
+!CheckGlobal(76,6,Frack2)
+!CheckGlobal(76,7,Frack2)
+!CheckGlobal(76,8,Frack3)
+!CheckGlobal(76,9,Frack4)
+!SetGlobal(76,1)
+-Frack: Oh, uh, s-sorry. I'm not looking for trouble.
+-Verm: Neither are we?
+-Frack: Oh! Great.
+-Frack: W-wait! Mole wizard, you're carrying a fire-starter, right?
+-Siobhan: A fire-starter?
+-Siobhan: Oh right, my wand.
+-Frack: Yes! Can I see it?|[Please?]
+*FrackYes: Alright.
+*FrackNo: Not now.
+
+/Frack1
+-Frack: I'd really like to see that|fire-starter. [Please?]
+*FrackYes: Alright.
+*FrackNo: Not now.
+
+/FrackNo
+-Siobhan: Um. I'm a bit busy right now. Maybe later.
+-Frack: O-oh. Okay.
+
+/FrackYes
+!SetGlobal(76,2)
+-Siobhan: Sure thing. Just a sec!
+!NextRoom(ToBlack)
+!UnpinFollowers()
+!HoldOn(1)
+!TeleportCharacter(Siobhan,1835,806)
+!SetAnim(Siobhan,Blast1)
+!TeleportCharacter(Verm,1716,800)
+!SetAnim(Verm,R)
+!TeleportCharacter(Bruce,1790,900)
+!SetAnim(Bruce,U)
+!TeleportCharacter(Gwen,1956,837)
+!SetAnim(Gwen,UL)
+!SetAnim(Siobhan,Blast1)
+!NextRoom(FromBlack)
+!HoldOn(2)
+!Blast(1)
+!HoldOn(0.05)
+!SetAnim(Siobhan,Blast2)
+!HoldOn(0.3)
+!Nani(Frack,!)
+!SetAnim(Siobhan,Blast1)
+!HoldOn(0.6)
+-Frack: Wow, that's cool!|you've done some modding work, right?
+-Frack: Loosened the spark wheel...|Maybe widened the wick?
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+-Siobhan: You got it! You've got a good eye for technology.
+-Frack: Oh, uh, thanks!|[Y-you too!]
+-Frack: But y'know, there's a way to push it further.
+-Frack: You ever heard of naphtha?
+-Siobhan: Naphtha... it's a fuel, right?
+-Gwen: Not just any fuel.
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+-Gwen: It's the mythical "shrew fire".
+-Gwen: Centuries ago, the Golden Laurel Empire's navy used it to decimate enemy ships.
+-Gwen: A terrifying and volatile material. It creates a fire that even the gods fear.
+-Frack: Yup, that's the stuff.
+-Frack: Super cool, right? A fire that can burn even water itself!
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+-Siobhan: I can hardly imagine!
+-Verm: Yeah, okay, I see where this is going.
+!HoldOn(0.1)
+!Nani(Frack,?)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.3)
+-Frack: Huh?
+-Verm: It's a sales pitch.
+-Verm: How much for one bucket of this magical fuel, Mr Lizard?
+-Frack: Oh, uh, it's Frack.
+-Frack: And it's not magic.|It's science.
+-Frack: And I wasn't looking to make some seeds. But we could talk about a trade instead?
+-Verm: A trade for what?
+-Frack: Technology for technology!
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+-Frack: Give me something rare. Something unique. Something I've never seen before.
+-Siobhan: I've got piles of unique tech in my den in Cranbaile.
+-Siobhan: It's just around the corner. It wouldn't take a minute to go grab something.
+-Verm: You remember that you're banished, right?
+-Verm: Mammy's not going to welcome you home with hugs and kisses.
+-Siobhan: I know, but…
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.3)
+-Siobhan: If Gwen has the courage to return to her home, then so do I.
+!HoldOn(0.5)
+-Verm: If you say so.
+-Verm: Okay, Frack. We'll go fetch some gadget, and you'll give us the magical juice?
+!HoldOn(0.1)
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+-Frack: I-it's not magic...|[Or juice...]
+-Verm: Spare me the techie talk.|We'll be back soon.
+!NextRoom(ToBlack)
+!HoldOn(1)
+!AutoPinFollowers()
+!NextRoom(FromBlack)
+!HoldOn(1)
+
+/Frack2
+-Frack: You said the tech is in Cranbaile, right? I'll just wait right here. [New places are scary...]
+
+/Frack3
+!SetGlobal(76,9)
+!ShowItem(Siobhan,78)
+!LoseItem(78)
+!HoldOn(0.1)
+-Siobhan: Take a look, Frack!
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Frack: WOOOOOOOOOOOOOOOOOAAAH!
+!HoldOn(0.1)
+!ShowItem(Frack,78)
+-Frack: This is the coolest thing I've ever seen!
+-Frack: There's a little guy in there!
+-Siobhan: Ha, yes, there is.
+-Frack: I'm true to my word. Pass me your wand, and I'll fill it up with naptha.
+!NextRoom(ToBlack)
+!UnpinFollowers()
+!HoldOn(1)
+!TeleportCharacter(Siobhan,1835,806)
+!SetAnim(Siobhan,Blast1)
+!TeleportCharacter(Verm,1716,800)
+!SetAnim(Verm,R)
+!TeleportCharacter(Bruce,1790,900)
+!SetAnim(Bruce,U)
+!TeleportCharacter(Gwen,1956,837)
+!SetAnim(Gwen,UL)
+!SetAnim(Siobhan,Blast1)
+!NextRoom(FromBlack)
+!HoldOn(2)
+-Siobhan: Hmm.
+!CameraUnfollow()
+!HoldOn(0.4)
+-Siobhan: It doesn't seem that different to me?
+-Frack: You've got to hold the trigger down. Really pump it full of that magic juice!
+!HoldOn(0.5)
+!Blast(3)
+!HoldOn(0.05)
+!NormalJump(Verm,2.5,30,1650,820,Jump,BadlandL)
+!SetAnim(Siobhan,Blast2)
+!HoldOn(0.3)
+!SetAnim(Siobhan,Blast1)
+!Nani(Gwen,!)
+!HoldOn(0.1)
+!Nani(Bruce,!)
+!HoldOn(1.5)
+-Gwen: Oh, shit.
+
+!PlaySound(NewMove)
+!LearnMove(4,2)
+-InfoBig: Siobhan learned Hellfire.
+!HoldOn(0.5)
+!NextRoom(ToBlack)
+!HoldOn(1)
+!CameraFollow(1)
+!SetAnim(Verm,R)
+!AutoPinFollowers()
+!NextRoom(FromBlack)
+!HoldOn(1)
+
+/Frack4
+!ShowItem(Frack,78)
+!HoldOn(0.5)
+-Frack: I'm loving this little guy!
+-Frack: Thanks, and good luck out there!
+End scene

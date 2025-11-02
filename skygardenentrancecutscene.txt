@@ -1,0 +1,62 @@
+/Intro
+~GardenLoop
+!HoldOn(1.6)
+!ShoutMode()
+-Josh: Argh!
+!HoldOn(0.5)
+-Josh: Damn it. My jump was perfect.
+-Josh: But that landing... that could have used some work.
+!HoldOn(0.3)
+!SetAnim(Josh,LookUp)
+!HoldOn(0.3)
+!ShoutMode()
+-Josh: Men! To me!
+!HoldOn(0.3)
+!SetAnim(Josh,Loop)
+!HoldOn(0.8)
+!SetAnim(Josh,LookUp)
+!HoldOn(0.5)
+!ShoutMode()
+-Josh: Soldiers! Fall in!
+!HoldOn(1)
+!SetAnim(Josh,Loop)
+!HoldOn(0.9)
+-Josh: Anyone?
+!HoldOn(1.7)
+!NormalJump(Lamia,2,80,148,769,MadJump,Mad)
+!HoldOn(0.7)
+!SetAnim(Josh,LookUp)
+!HoldOn(0.6)
+-Josh: Ah, Lamia! You're still alive.
+-Josh: That's good. Let's regroup and kick some tail.
+!HoldOn(0.6)
+-Lamia: It's time to pay tribute, Duke.
+-Josh: Tribute? You'll get paid when we defeat those degenerate terrorists. 
+-Lamia: No. I'm hungry now.
+!HoldOn(0.2)
+!SetAnim(Lamia,MadSmile)
+!HoldOn(0.5)
+!TitanModeToggle()
+-Lamia: AND TRIBUTE|MUST BE PAID.
+!TitanModeToggle()
+!HoldOn(0.5)
+-Josh: Lamia, please.|What's gotten into you?
+!OverworldCameraPan(320,260,0.5,1)
+!HoldOn(2)
+-Josh: Now, you listen to me!
+-Josh: I am the Duke, your|superior and your employer-
+!HoldOn(0.5)
+-Josh: Lamia, please!|Stop this at once!
+!HoldOn(0.2)
+-Josh: L-Lamia!
+!HoldOn(0.7)
+!ShoutMode()
+-Josh: LAMIAAAAA!
+!HoldOn(1)
+!NextRoom(ToBlack)
+!HoldOn(1.5)
+~Stop
+!HoldOn(1)
+!NextRoom(SkyGardenThrone,2)
+
+End scene

@@ -1,0 +1,166 @@
+/BattleVeryStart
+
+/BattleStart
+!SetGlobal(4,0)
+!DrawWeapon(Verm)
+!HoldOn(0.5)
+
+!CheckGlobal(88,1,OddSword)
+-Leo: I won't toy with you|like last time.
+!SetToolTip(Lion Stance)
+!SetAnim(Leo,ToStance2)
+!PlaySound(LamiaTurn)
+!HoldOn(1.4)
+~LionStanceLoop
+-Leo: One strike.|That is all I'll need.
+!HoldOn(0.1)
+!LetsFight()
+
+/OddSword
+-Leo: What is that?|A brick?
+-Leo: If you don't wish to take this duel seriously, then that's your prerogative.
+!SetToolTip(Lion Stance)
+!SetAnim(Leo,ToStance2)
+!PlaySound(LamiaTurn)
+!HoldOn(1.4)
+~LionStanceLoop
+-Leo: ...Not that a real sword|would have saved you.
+!HoldOn(0.1)
+!LetsFight()
+
+/Dodged
+-Leo: You dodged it...
+!HoldOn(0.5)
+-Leo: You're faster than before.
+-Verm: Stronger too.
+-Leo: That remains to be seen.
+~LeoBattle2Loop
+!HoldOn(0.1)
+!NewTurn()
+
+/VermRage
+!CheckGlobal(4,1,VR1)
+!CheckGlobal(4,2,VR2)
+!CheckGlobal(4,3,VR3)
+!CheckGlobal(4,4,VR4)
+!CheckGlobal(4,5,VR5)
+!CheckGlobal(4,6,VR6)
+!CheckGlobal(4,7,VR7)
+!CheckGlobal(4,8,VR8)
+-Verm: I'll show you strength!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/TalkTime
+>WontSaveYou
+
+/WontSaveYou
+-Leo: That won't save you.
+!SetToolTip(Flèche Fatale)
+!HoldOn(0.1)
+!SpecialMove(Leo)
+~Stop
+
+/NoTalkTime
+>WontSaveYou
+
+/SwordDown1
+-Verm: You can't parry without|a sword, Blademaster.
+-Leo: No matter.
+!HoldOn(0.1)
+!NewTurn()
+
+/SwordSummon1
+-Leo: ...I brought spares.
+!HoldOn(0.1)
+!NewTurn()
+
+/VR1
+-Verm: I'll just break that sword too!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/SwordSummon2
+-Leo: Yes, you are stronger.|But you still have no weight.
+!HoldOn(0.1)
+!NewTurn()
+
+/VR2
+-Verm: What the hell do you|know about strength?
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/SwordSummon3
+-Leo: You stand for nothing.|You believe in nothing.
+!NewTurn()
+
+/VR3
+-Verm: I stand against you,|and that's enough!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/SwordSummon4
+-Leo: But I believe in this Kingdom!|I believe in its future.
+-Leo: Even when a King loses his way,|the Kingdom itself must survive.
+!HoldOn(0.1)
+!ShoutMode()
+!HoldOn(0.1)
+-Leo: What alternative is there?|Answer me, vagabond!
+!StoryBerserk(Leo)
+
+/VR4
+-Verm: The Kingdom's|not my problem!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/SwordSummon5
+-Leo: You don't care at all.|Destructive thing.
+!NewTurn()
+
+/VR5
+-Verm: Some things are worth destroying,|like your pitiful needles!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/SwordSummon6
+-Leo: Are you... trying to break|every sword in this room?
+-Leo: No. You lack the conviction.
+!HoldOn(0.1)
+!NewTurn()
+
+/VR6
+-Verm: Bring out a hundred more!|I'll break them too!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/SwordSummon7
+-Leo: I've stabbed you a dozen times, but you still stand.
+-Leo: That's not conviction.|That's just spiteful tenacity.
+!NewTurn()
+
+/VR7
+-Verm: Damn right I'm tenacious!|I won't die, even if you kill me!
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/SwordSummon8
+-Verm: Running out of blades, Blademaster?
+-Leo:  . . . 
+!NewTurn()
+
+/VR8
+-Verm: This is it.
+!SetAnim(Verm,Idle)
+!NewTurn()
+
+/SwordsBroken
+!SetGlobal(49,1)
+~Stop
+!HoldOn(1)
+!EndBattle()
+
+/EnemyDead
+~Stop
+!HoldOn(0.5)
+!EndBattle()
+End scene

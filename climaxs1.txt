@@ -1,0 +1,200 @@
+
+/MS1A
+!SetGlobal(50,5)
+!HoldOn(2)
+-Bree: Look mate, just let us through.
+-Stilton: We have a right to protest,|you know!
+-Simon: Not tonight, you don't.
+-Eric: Pack it in right now, or spend the night behind bars.
+!SetAnim(Stilton,UL)
+-Stilton: This is mad! I've never seen|the Guard so proactive.
+!Walk(Verm,UR,0.9)
+!Walk(Gwen,UR,0.9)
+!HoldOn(0.7)
+!Walk(Bruce,UR,0.6)
+!Walk(Siobhan,UR,0.5)
+!SetAnim(Stilton,DL)
+!HoldOn(0.1)
+!SetAnim(Bree,DR)
+!HoldOn(0.1)
+!SetAnim(Bree,DL)
+!HoldOn(0.1)
+-Verm: There's no reasoning with them. Step aside.
+!GoToBattle(Thimble1)
+
+/MS1A2
+!HoldOn(1)
+!SetGlobal(50,6)
+!Walk(Liam,DR,1.3)
+!Walk(Big Dan,DR,1.3)
+!HoldOn(1)
+!SetAnim(Verm,DR)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Verm,R)
+!SetAnim(Siobhan,U)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Verm,UR)
+!SetAnim(Siobhan,UR)
+!SetAnim(Bruce,UR)
+!HoldOn(0.2)
+!SetAnim(Liam,DL)
+!SetAnim(Big Dan,DL)
+-Liam: Your protest ends here,|hooligan scum!
+-Big Dan: If it's violence you want,|it's violence you'll get!
+!CheckGlobal(75,40,MS1A2Cont)
+!CheckGlobal(75,50,MS1A2Cont)
+!GoToBattle(Thimble1)
+
+/MS1A2Cont
+!TeleportCharacter(Rosaline,779,850)
+!HoldOn(0.4)
+!MysteryText(1)
+-Rosaline: Tsk. How far has the|Thimble Guard fallen?
+!MysteryText(0)
+!OverworldCameraPan(380,680,2,1)
+!HoldOn(0.2)
+!Nani(Liam,?)
+!SetAnim(Liam,DR)
+!HoldOn(0.2)
+!Nani(Big Dan,?)
+!SetAnim(Big Dan,DR)
+!HoldOn(0.8)
+!NormalJump(Rosaline,2,20,462,666,ULJump,UL)
+!HoldOn(0.2)
+!Nani(Big Dan,!)
+!HoldOn(0.2)
+
+!PlaySound(Slash)
+!NormalJump(Big Dan,2,30,270,570,HurtL,DownL)
+!HoldOn(0.1)
+!NormalJump(Liam,2,30,270,570,HurtL,DownL)
+!HoldOn(1)
+-Verm: Rosaline?
+!HoldOn(0.2)
+-Rosaline: My sister's still recovering.|But I am here.
+!HoldOn(0.2)
+!SetAnim(Rosaline,DL)
+!HoldOn(0.6)
+-Rosaline: The Guard is a broken organisation in a broken Kingdom.
+-Rosaline: I was a fool for ever|supporting it. 
+-Rosaline: Let me lend my|sword to your cause.
+-Verm: Fine by us.
+-Bruce: Aye, the more the merrier!
+!OverworldCameraPan(790,430,1,1)
+!HoldOn(2)
+!Exit(Liam)
+!Exit(Big Dan)
+-Alex: Is that... Rosaline?
+-Alex: That tenacious minx!|She's come for my head!
+
+!TeleportCharacter(Rosaline,347,683)
+!SetAnim(Rosaline,DR)
+!HoldOn(0.3)
+>MS1B2
+
+/MS1B
+!HoldOn(2)
+>MS1B2
+
+/MS1B2
+!SetGlobal(50,7)
+!TeleportCharacter(Bree,448,709)
+!TeleportCharacter(Stilton,530,748)
+!TeleportCharacter(Verm,391,714)
+!TeleportCharacter(Siobhan,356,730)
+!TeleportCharacter(Gwen,325,760)
+!TeleportCharacter(Bruce,300,780)
+!SetAnim(Jen,DR)
+!SetAnim(Alice,UL)
+!SetAnim(Elle,UL)
+!HoldOn(0.1)
+!SetAnim(Jen,UR)
+!SetAnim(Alice,UR)
+!SetAnim(Elle,UR)
+!HoldOn(0.4)
+-Jen: The barricade is all set up,|Sir Alex, sir!
+-Alex: Good. Don't let a single one|of the bastards through!
+!Walk(Alex,UR,2)
+!HoldOn(1)
+!Exit(Alex)
+!OverworldCameraPan(500,600,1,1)
+!HoldOn(0.3)
+!Walk(Bree,UR,1)
+!Walk(Stilton,UR,1)
+!Walk(Verm,UR,1)
+!Walk(Siobhan,UR,1)
+!Walk(Gwen,UR,1)
+!Walk(Bruce,UR,1)
+!HoldOn(0.5)
+!SetAnim(Jen,DR)
+!SetAnim(Alice,UL)
+!SetAnim(Jen,DL)
+!SetAnim(Elle,DL)
+!HoldOn(0.1)
+!SetAnim(Alice,DL)
+!HoldOn(1)
+-Bree: What the-
+-Bree: How are we meant to|get through this?!
+
+-Gwen: Verm. Let's find a way round and flank them.
+-Verm: Right.
+!AutoPinFollowers(1)
+!CameraFollow(1)
+
+/Bree
+-Bree: We have a right to walk down the street, you know!
+
+/Stilton
+-Stilton: It's one pointy barricade!|There's no vaulting over this.
+
+/Rosaline
+-Rosaline: Go. Flank them from behind.|We'll form a distraction.
+
+/MS1C
+!SetGlobal(50,12)
+!AutoPinFollowers()
+!Walk(Verm,DL,1.1)
+!HoldOn(1)
+!SetAnim(Alice,UR)
+!Nani(Alice,!)
+!HoldOn(0.2)
+!SetAnim(Jen,UR)
+!Nani(Jen,!)
+!HoldOn(0.2)
+!SetAnim(Elle,UR)
+!Nani(Elle,!)
+!ShoutMode()
+!HoldOn(0.3)
+-Alice: WHAT?!
+!HoldOn(0.2)
+-Alice: How did you get|past the barricade?!
+!HoldOn(0.2)
+-Jen: Well, whatever. Let's|get this over with.
+!GoToBattle(Thimble1)
+
+/MS1C2
+!SetGlobal(50,14)
+!HoldOn(1)
+-Stilton: Barricade down!|Let's goooooo!
+!Walk(Stilton,UR,2)
+!Walk(Bree,UR,1.4)
+!HoldOn(1.4)
+!Exit(Stilton)
+!SetAnim(Bree,UL)
+!HoldOn(0.3)
+-Bree: Nicely done, you four.
+-Bree: No time to waste!|To the palace!
+!Walk(Bree,UR,1)
+!HoldOn(0.5)
+!Exit(Bree)
+!HoldOn(0.4)
+!AutoPinFollowers(1)
+!CameraFollow(1)
+
+/JustPin
+!AutoPinFollowers()
+
+/FoundSeeds
+-Info: You found 3 seeds.|Better late than never.

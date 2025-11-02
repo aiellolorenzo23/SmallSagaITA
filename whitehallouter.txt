@@ -1,0 +1,145 @@
+/Intro
+~RainLoop
+!AutoPinFollowers()
+
+/PigeonEntrance
+~RainLoop
+!CheckGlobal(30,0,PigeonEntranceFirst)
+!PigeonArrival()
+!TurnOffBlocks(1)
+-Dizi: White Hall.|This stop is White Hall.
+!AutoPinFollowers(1)
+!TurnOnBlocks(1)
+!CameraFollow(1)
+
+/PigeonEntranceFirst
+!HoldOn(2)
+!OverworldCameraPan(704,380,0.5,1)
+!PigeonArrival()
+!TurnOffBlocks(1)
+!SetGlobal(30,1)
+-Dizi: You sure this is the right place?
+-Dizi: It looks just like a billion other god dwellings.
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!Walk(Gwen,U,0.7)
+!HoldOn(0.3)
+!SetAnim(Siobhan,L)
+!SetAnim(Bruce,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!SetAnim(Bruce,U)
+!HoldOn(0.5)
+-Gwen: It hides its ugliness well,|but I'd know that stench anywhere.
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+-Gwen: This is White Hall.
+!SetAnim(Siobhan,UR)
+-Siobhan: Thanks a million, Dizi.
+-Bruce: Good luck to ye both.|I'm off to Vinium.
+-Dizi: I'll circle back to pick you both up in a little while, a'ight?
+!RemoveFromParty(Bruce)
+!Embark(Bruce,0.2,1)
+!HoldOn(2)
+!PigeonBlankFlight()
+!HoldOn(2)
+!Walk(Siobhan,U,0.5)
+!HoldOn(0.6)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.4)
+-Siobhan: So... how do we get in?
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,UR)
+!HoldOn(0.1)
+!SetAnim(Gwen,U)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+-Gwen: The building is secured tighter than any other I've seen.
+-Gwen: The doors are electronically locked.|The windows are bolted shut.|The air itself is filtered.
+
+!SetAnim(Siobahn,L)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!SetAnim(Siobhan,DL)
+-Jonny: Not to mention all the gods comin' and goin'!
+-Jonny: Can't even eat my strawberry without getting interrupted.
+!HoldOn(0.5)
+-Gwen: ...Right.
+!HoldOn(0.5)
+!SetAnim(Siobahn,D)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!SetAnim(Siobahn,DR)
+!HoldOn(0.4)
+!Walk(Gwen,DR,0.4)
+!HoldOn(0.6)
+-Gwen: Point is, White Hall is not a place that rodents are meant to just casually enter. Or leave.
+!HoldOn(1)
+-Siobhan: Well, how did you leave in the first place?
+-Siobhan: Couldn't we just backtrack along that path?
+!HoldOn(0.2)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.1)
+-Gwen: I was hoping not to, but there might be no alternative...
+
+!Walk(Siobhan,DR,0.2)
+!HoldOn(0.2)
+!AutoPinFollowers(1)
+!TurnOnBlocks(1)
+!CameraFollow(1)
+
+/Drain
+!CheckGlobal(30,1,DrainFirst)
+!NextRoom(WHTunnel,2)
+
+/Jonny
+-Jonny: Ey up!
+-Jonny: How about this weather? Forecast looks proper stormy and all.
+-Jonny: Nowt we can do about it, of course. So I'm just going to carry on eating my lunch.
+!SetNPCFlag(Jonny,Jonny2)
+
+/Jonny2
+-Jonny: Union job.|Strawberry for lunch.|Nowt beats that.
+
+/DrainFirst
+!SetGlobal(30,2)
+-Gwen: There's an Underriver passage beneath this grate.
+-Gwen: Hold your nose. There'll be quite a bit of god-filth.
+!HoldOn(0.6)
+-Siobhan: Hmm.
+!HoldOn(0.9)
+-Gwen: Yeah.
+!HoldOn(1)
+-Siobhan: Not my first time passing through an Underriver passage, though.
+-Gwen: Ah. Well. This'll be a breeze, then.
+!NextRoom(WHTunnel,2)
+
+/Dizi
+-Dizi: Why's it called White Hall?|Should be more like... like... Grey Hall.
+
+/Basket
+-Dizi: All aboard!
+!CameraUnfollow()
+!UnpinFollowers()
+!PigeonFlight(OverMap)
+
+End scene

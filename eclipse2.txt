@@ -1,0 +1,25 @@
+/BattleVeryStart
+Blank
+/BattleStart
+!HoldOn(0.4)
+-Verm: I've... I've got to escape.
+!SetGlobal(4,0)
+!SetAnim(Verm,DrawSword)
+!HoldOn(2.8)
+!SetAnim(Verm,Idle)
+!HoldOn(0.2)
+-Verm: Lance...
+!HoldOn(0.3)
+-Verm: Lance needs my help.
+!HoldOn(1)
+~YGod5Loop
+!LetsFight()
+
+/NoTalkTime
+!HoldOn(1)
+!NewTurn()
+
+/EnemyDead
+~Stop
+!EndBattle()
+End scene

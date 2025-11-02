@@ -1,0 +1,338 @@
+/Intro
+~MuridaLoop
+!AutoPinFollowers()
+
+/PartIntro
+!AutoPinFollowers()
+!Walk(Verm,UL,1.5)
+!HoldOn(1.5)
+!UnpinFollowers()
+!Walk(Verm,U,0.5)
+!Walk(Siobhan,UL,0.5)
+!Walk(Bruce,UL,1)
+!HoldOn(0.5)
+!OverworldCameraPan(517,224,0.5,1)
+!Walk(Siobhan,UL,0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.5)
+!Walk(Bruce,DL,0.5)
+!HoldOn(0.5)
+!SetAnim(Bruce,UL)
+!HoldOn(2)
+-Bruce: That's Ratlas. The statue o' the city centre.
+!CameraFollow(1)
+!HoldOn(0.5)
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UR)
+!HoldOn(0.4)
+
+-Bruce: Which means this is where we part ways.
+-Bruce: I'm meeting my b- my friend, then we're off tae Sky Garden.
+!SetAnim(Siobhan,L)
+!SetAnim(Verm,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!SetAnim(Verm,DL)
+!HoldOn(0.1)
+-Siobhan: Good luck, Bruce.|Play their stockings off.
+-Bruce: Will do.|And thanks for all the help.
+-Bruce: Hey, maybe we'll|meet again some time.
+*Hope: Maybe.
+*Doubt: Doubt it.
+
+/Hope
+-Verm: Maybe. It's up to the gods.
+>Anyway
+
+/Doubt
+-Verm: Doubt it.
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+-Siobhan: Sir Verm! Be nice!
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+-Bruce: Ha, classic Verm.
+>Anyway
+
+/Anyway
+!RemoveFromParty(Bruce)
+!RemoveFromParty(Siobhan)
+!SetGlobal(26,2)
+-Bruce: Take care!
+!SetAnim(Bruce,U)
+!HoldOn(0.1)
+!SetAnim(Bruce,UL)
+!HoldOn(0.1)
+!Walk(Bruce,UL,0.2)
+!HoldOn(0.2)
+!Walk(Bruce,L,1.3)
+!HoldOn(1.3)
+!Walk(Bruce,DL,1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UR)
+!HoldOn(0.1)
+!Exit(Bruce)
+-Verm: I've got things to do here too.
+-Siobhan: I know. You're looking for leads on the Yellow God.
+-Siobhan: Sir Verm, I want to help. And I'm not taking "no" for an answer.
+-Siobhan: So I'm going to do some research at Murida's library.
+-Verm: The library?
+-Siobhan: Well, that's the best place|to learn new things, right?
+-Siobhan: There might be a book|on the Yellow God.
+-Verm: Makes sense, I guess.
+-Verm: Books aren't my thing, so I'm heading to the Royal Palace.
+-Verm: I bet the King knows a thing or two.
+-Siobhan: Sir Verm, I don't think they let just anybody have an audience with the King...
+!HoldOn(0.2)
+!Nani(Verm,?)
+!HoldOn(0.5)
+-Verm: I didn't think of that. You reckon there's a booking system or something?
+!HoldOn(1)
+-Siobhan: Maybe?
+!HoldOn(0.5)
+-Verm: Whatever. I'll go find out.
+-Verm: Let's split up and meet back here in a little while.
+-Siobhan: Okay!
+!SetAnim(Siobhan,U)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!Walk(Siobhan,L,2)
+!HoldOn(2)
+!Exit(Siobhan)
+
+/Learn
+!SetGlobal(26,7)
+!Walk(Verm,DL,1.8)
+!HoldOn(1.9)
+!SetAnim(Verm,D)
+!HoldOn(0.1)
+!SetAnim(Verm,DR)
+!HoldOn(0.1)
+-Verm: You're here already.
+-Verm: Did you learn anything?
+-Siobhan: Yeah.
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+!Walk(Siobhan,UL,0.3)
+!HoldOn(0.3)
+-Siobhan: City folk are weird.
+-Verm: No argument there.
+!HoldOn(0.4)
+-Verm: I couldn't meet the King.
+-Verm: But I did learn about a so-called "Cailleach" of Ashen Tower.
+-Verm: Ghosts and muswolves, am I right?
+-Siobhan: The Cailleach...
+!HoldOn(0.3)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.8)
+-Siobhan: Mammy taught me the legend of the Cailleach.
+-Siobhan: She's as old as the mountains. As wise as the gods. But as cold as Winter.
+-Siobhan: She lives at the top of an Ashen Tower where she watches the world with unblinking eyes.
+!HoldOn(0.8)
+-Verm: Huh. So the rats weren't lying.
+-Verm: Where is this Ashen Tower?
+!HoldOn(0.1)
+!SetAnim(Siobhan,L)
+!HoldOn(0.1)
+!SetAnim(Siobhan,UL)
+!HoldOn(0.1)
+-Siobhan: In the heart of the Gloaming Woods, near Sky Garden.
+-Siobhan: So goes the legend, at least.
+-Verm: Sky Garden?|That sounds familiar...
+!HoldOn(0.5)
+!PlaySound(NewLocation)
+-Info: A new location has been added to your map!
+!HoldOn(0.5)
+-Siobhan: So... is that where you're headed next?
+-Verm: I suppose.
+-Verm: It's a bad lead, but it's the only one I've got.
+-Verm: Were you hoping to|tag along or something?
+-Siobhan: I'd love to!
+-Verm: That wasn't an invitation!
+-Verm: But it's not like I can stop you.
+-Verm: Dizi probably knows where Sky Garden is. We'll hitch another ride.
+-Siobhan: It seems a shame to leave Murida right after we got here.
+-Verm: Well, I'll make sure to do a round of shopping before we go.
+-Siobhan: Sounds grand to me.
+!Walk(Siobhan,UL,0.5)
+!HoldOn(0.5)
+~MuridaLoop
+-Siobhan: I'll follow your lead, Sir Verm!
+!AutoPinFollowers(1)
+
+/Sally
+!CheckGlobal(10,2,Sally2)
+-Sally: Just done me shoppin'.|The Merchant Quarter's so convenient.
+
+/Sally2
+-Sally: Things are so expensive these days!|Can't get nowt for half a seed.
+
+/Luca
+!CheckGlobal(10,2,Luca2)
+-Luca: I'm gonna be captain of|Murida PC. Just you watch.
+
+/Luca2
+-Luca: I didn't make the try-outs for Murida PC. Maybe next season.
+
+/Miles
+!CheckGlobal(10,2,Miles2)
+-Miles: Wish we had a field or something. There's no room here.
+
+/Miles2
+-Miles: Pawball is life.
+
+/FootLost1
+-Luca: Thanks a lot, clodpole.|That was my only ball.
+
+/FootLost2
+-Miles: What kind of moves were those? I've seen better dribbling from a toddler.
+
+/Brandon
+!CheckGlobal(10,2,Brandon2)
+-Brandon: This road leads to the Royal Palace.
+-Brandon: Be on your best behaviour, citizen.
+
+/Brandon2
+-Brandon: Loitering is a slippery slope to graffiti, theft, and murder.|Keep it moving, citizen.
+
+/Ratlas
+!CheckGlobal(47,1,SaveTime)
+-InfoBig: It's a marble statue of Ratlas.
+-InfoBig: The giant rat angered the gods when he stole the secret of electricity. As punishment, he must hold an enormous weight until the end of time.
+-InfoBig: So the shrew legend goes, at least.
+!SetGlobal(47,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Ratlas bears his burden.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Murida,City centre)
+-Info: Your game has been saved.
+/SaveNo
+
+/Bob
+!CheckGlobal(10,2,Bob2)
+-Bob: Ratlas is supposed to hold up the skies above, not the world!
+-Bob: Lousy statue makers and their artistic licenses...
+
+/Bob2
+-Bob: It's a heavy weight to bear.|Ratlas can't hold it forever.
+
+
+/Date1b
+!AutoPinFollowers()
+!Walk(Verm,DR,1.3)
+!HoldOn(2)
+>Date1Cont
+/Date1
+!AutoPinFollowers()
+!Walk(Verm,UR,1.3)
+!HoldOn(2)
+>Date1Cont
+/Date1Cont
+!SetGlobal(32,17)
+-Verm: Here. The city centre.
+-Gwen: Cool.
+!OverworldCameraPan(506,243,1,1)
+!HoldOn(1.6)
+-Gwen: So who's that?
+!CameraFollow(1)
+!HoldOn(1)
+-Verm: Well, it's...
+*DateRatlus: Ratlas.
+*DateChad: Sir Chad.
+
+/DateChad
+-Verm: That is Sir Chad, the muscular.
+-Gwen: Is that so?
+-Gwen: Because it looks like Ratlas, the rodent who stole electricity from the gods and had to bear the world's weight as punishment.
+-Verm: Why did you ask if you knew the answer?
+>Date2
+
+/DateRatlus
+-Verm: That is Ratlas, the rodent who stole electricity from the gods.
+-Gwen: Oh, you know your mythology.
+-Verm: Bits and pieces. Only|what my brother taught me.
+-Gwen: I see.
+>Date2
+
+/Date2
+-Gwen: Show me something else.
+-Verm: Like what?
+-Gwen: Use your imagination.|Surprise me.
+-Verm: Alright. Follow me.
+
+/EndDate
+~Stop
+!HoldOn(2)
+!SetGlobal(32,18)
+-Verm: Back at Ratlas again.
+!HoldOn(0.5)
+!NormalJump(Gwen,2,30,518,358,JUR,UR)
+!HoldOn(0.6)
+-Verm: Now what are you doing?
+!SetAnim(Gwen,R)
+!HoldOn(0.1)
+!SetAnim(Gwen,DR)
+!HoldOn(0.1)
+!SetAnim(Gwen,D)
+!HoldOn(0.1)
+!SetAnim(Gwen,DL)
+!HoldOn(0.1)
+-Gwen: Getting a better view. Come on.
+!HoldOn(0.1)
+!SetAnim(Gwen,L)
+!HoldOn(0.1)
+!SetAnim(Gwen,UL)
+!HoldOn(0.3)
+!NormalJump(Gwen,2,30,480,87,JUL,UL)
+!HoldOn(0.3)
+-Verm: We'll attract the Guard's attention.
+!HoldOn(0.3)
+-Gwen: Maybe YOU will if you|keep up that shouting.
+!HoldOn(0.3)
+
+!SetAnim(Gwen,DL)
+-Gwen: Come on. Stop being a degu-downer and jump up here.
+!OverworldCameraPan(507,180,0.5,1)
+!HoldOn(0.5)
+!NormalJump(Verm,2,30,520,353,JUR,UR)
+!HoldOn(0.6)
+!SetAnim(Verm,U)
+!HoldOn(0.1)
+!SetAnim(Verm,UL)
+!HoldOn(0.4)
+!NormalJump(Verm,2,30,520,93,JUL,DL)
+!HoldOn(3)
+!NextRoom(OnStatue,4)
+
+EndScene

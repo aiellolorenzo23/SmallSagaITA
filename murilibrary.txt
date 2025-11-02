@@ -1,0 +1,245 @@
+/Intro
+!CheckGlobal(50,0,IntroCont)
+!CheckGlobal(50,1,IntroCont)
+
+/IntroCont
+~Murida2Loop
+
+/InfoSheet
+-InfoBig: Ground floor: fiction|First floor: non-fiction
+-InfoBig: Reminder:|If you eat it, you buy it.
+
+/PutBack
+
+/Tadhg
+-Tadhg: I come here just to smell the books.|Mmm, love that new book scent.
+
+/Book1
+-InfoBig: You see a book titled, "The Moonlight Mystery". It looks dark.
+*ReadIt1: Read it.
+*PutBack: Put it back.
+
+/ReadIt1
+-Book1: The detective gazed at the scene. Blood splatters. Claw marks. Furniture torn in two. All the classic hallmarks of a titan attack, just like the old mole had said.
+-Book2: But something didn't add up. Why did the victim reach for his silver knife instead of his steel sword? Unless...||A shiver shot down the detective's spine, and a whisper passed through her teeth. "Muswolf."
+
+/Book2
+-InfoBig: You see a book titled, "The Destitute". It's heavy.
+*ReadIt2: Read it.
+*PutBack: Put it back.
+
+/ReadIt2
+-Book1: Sir Jacques threw a ragged vole at the Loremaster's feet. "I caught this scum making off into the night with a bag of your seeds."||The Loremaster shook his head. "Why, this rodent is no thief. I gave him those seeds as a parting gift."
+-Book2: Sir Jacques let out a huff. He turned to his prisoner. "It seems that the Loremaster has saved your tail today. But mark my words, I've got my eye on you, Volejean."
+
+/Book3
+-InfoBig: You see a book titled, "Star-crossed Squirrels". It looks well-read.
+*ReadIt3: Read it.
+*PutBack: Put it back.
+
+/ReadIt3
+-Book1:   Mariette:|"Oh dearest Sheena,|I long to once again feel thy embrace,|And yet I fret our love cannot be so,|For squirrels Grey and Red cannot be wed,|Lest our fathers clash in battle throe."
+-Book2:   Sheena:|"Clans Grey and Red are naught but shades,|Mere dye upon an artist's canvas.|If colour stands before our love,|Then I renounce my father's hue!|Come take my paw, dear Mariette,|And let us paint a colour new."
+
+/Book4
+-InfoBig: You see a book titled, "Nora's Fall" by Loremaster Tobin.
+*ReadIt4: Read it.
+*PutBack: Put it back.
+
+/ReadIt4
+-Book1: Shrew Empress Nora was born in the twilight years of the Golden Laurel Empire, an era marked by rampant inflation, unprecedented austerity, and endless plagues.
+-Book2: The citizens of Muridium called for respite from their squalor, but Nora had none to offer.||"If the mice are hungry, they can eat their thatched roofs," the Empress famously muttered.
+-Book1: On a late Summer's day, tensions came to a boil. Citizens pounded on the palace doors and demanded justice.||The senators, led by Senator Decimus, were happy to oblige.
+-Book2: Speaking to the crowd, Decimus denounced Nora as the sole source of the citizens' ills. He proposed that, to assess Nora's guilt, she be put through a Trial by Fire, an arcane test even for its time.
+-Book1: The imperial guards constructed a great pyre of timbre and straw in Muridium's city square. They tied Nora to its central mast.||With a single spark, the pyre ignited, and the crowd let loose a raucous cheer.
+-Book2: The fire ate its fair share, but it hungered for more.||Flames danced from pyre to haystack, from haystack to roof, and soon, the whole city was ablaze.
+-Book1: The damage caused by the Great Fire Trial was immense.||Muridium burned to the ground, thousands of rodents died, and millions were displaced. The godly city above too suffered greatly.
+-Book2: Thus, the great Golden Laurel Empire was reduced to ash.
+
+
+/Book5
+-InfoBig: You see a book titled, "James's Ascent" Loremaster Tobin.
+*ReadIt5: Read it.
+*PutBack: Put it back.
+
+/ReadIt5
+-Book1: When the flames of the Great Fire Trial grew beyond control, the imperial soldiers were the first to scatter and flee, leaving the Muridium citizens to a blazing demise.||But then, a mouse peasant called Artura stepped forward.
+-Book2: She rounded up a dozen of her peers - James, Vishruvius, and Grace the Red among them - and demonstrated how to fashion a smoke-proof mask from a thimble and a dampened cloth. The group set to work putting out fires and directing others to safety.
+-Book1: The fire consumed Muridium and much of Rodentia.||However, thanks to Artura's quick and selfless actions, thousands of lives were saved from a horrific demise.
+-Book2: In the following days, once the ash had settled and the tears had been shed, the people of Muridium nominated Artura to lead the city as the first in a new line of monarchs. But she declined the offer, nominating James the black rat in her stead.
+-Book1: Thus, James was crowned as the first King of Rodentia, with Artura serving as both Blademaster and founder of the|aptly-named|"Thimble Guard".||Out of the ashes of Muridium, the modern city of Murida was constructed.
+-Book2: Since James's crowning, the Blue Rat monarchy has reigned over Rodentia for over 300 years.||Why exactly Artura declined the throne will perhaps forever be a mystery.
+
+/Book6
+-InfoBig: You see a book titled, "Delicious Mouse Recipes" by Jan Olive.
+*ReadIt6: Read it.
+*PutBack: Put it back.
+
+/ReadIt6
+-Book1: Pasta alla Jan||Dinner for 1.||Ingredients:||1 piece o' penne|1 small tomato|1 acorn cup o' water|Salt, pepper, basil, and oregano to taste.
+-Book2: Directions:||1. Crush the tomato.|2. Mix the tomato, water, and spices.|3. Stuff the penne tube with the sauce, and place in a metal pan. Pour any remaining sauce on top.|4. Bake for 15 mins.|5. Bene sapiat!
+
+/Book7
+-InfoBig: You see a book titled, "Gods: Life and Death" by Loremaster Sandra
+*ReadIt7: Read it.
+*PutBack: Put it back.
+
+/ReadIt7
+-Book1: As a Loremaster who has dedicated her life to studying the behaviour of gods, the most common question I get asked is, "are the gods mortal?"
+-Book2: A controversial subject, to be sure, but there are verified witness accounts of gods succumbing to death by sickness, grievous carriage injury, and even old age.
+-Book1: The second most common question I get is, "how do the gods reproduce?", to which I answer, "noisily".
+-Book2:  
+
+/Book8
+-InfoBig: You see a book titled, "Mousewife Missives, A Tail of Lust and Longing".
+*ReadIt8: Read it.
+*PutBack: Put it back.
+
+/ReadIt8
+!CheckGlobal(99,2,MousewifeSiobhan)
+-InfoBig: The cover is enticing, but now is not the time to read this.
+
+/MousewifeSiobhan
+-Siobhan: H-hold one! This is a lewd story!|That is NOT what I'm looking for!
+
+/SiobhanIntro
+!Walk(Siobhan,UL,0.3)
+!HoldOn(1)
+-Siobhan: Ah! I've found it.
+-Siobhan: Murida's great library.
+-Ruth: Nope. That closed down.
+-Ruth: This is Murida's so-so bookshop.
+-Siobhan: Ah. Well.|That will have to do.
+
+/LeaveEarly
+-Siobhan: I can't leave yet! I don't want to let Sir Verm down.
+!Walk(Siobhan,UL,0.3)
+!HoldOn(0.3)
+/SiobhanLibrarian
+-Siobhan: Hello there.
+-Ruth: What is it?
+-Siobhan: Oh, um, I was wondering if you had any books on the Yellow God?
+-Ruth: God Studies is upper floor, second shelf, near the back.
+-Siobhan: Thanks.
+
+/Ruth
+!CheckGlobal(50,0,RuthCont)
+!CheckGlobal(50,1,RuthCont)
+-Ruth: The nerve of the Guard to set up a barricade outside my little shop!
+-Ruth: Go kick their arses.
+
+/RuthCont
+-Ruth: I keep telling people this isn't a library.
+-Ruth: And yet, people come in just to stand around, reading our books...
+
+/VermEarly
+!SetAnim(Aquila,Look1)
+!HoldOn(0.5)
+-Aquila: A sell-sword?
+!HoldOn(0.1)
+!SetAnim(Aquila,Look2)
+!HoldOn(0.2)
+-Aquila: Shoo. I have no time for you.
+
+/AqTrigger
+!Walk(Siobhan,UR,0.1)
+!HoldOn(0.1)
+!Nani(Siobhan,!)
+!HoldOn(0.3)
+!ShoutMode()
+-Siobhan:  Ah! 
+~AquilaLoop
+!HoldOn(0.3)
+!SetAnim(Aquila,Look1)
+!HoldOn(0.6)
+-Siobhan: Oh, I'm very sorry. Your outfit startled me.
+!HoldOn(0.6)
+!SetAnim(Aquila,Look2)
+-Aquila: That's quite alright.|Happens all the time.
+-Siobhan: Wait, that mask...|you're a Plaguemaster, right?
+!SetAnim(Aquila,Look1)
+-Aquila: Indeed I am. Plaguemaster Aquila of Murida, to be exact.
+-Siobhan: You must be very knowledgable then.|Maybe you can help!
+-Siobhan: See, I have this friend, and he's looking for a Yellow God...
+!HoldOn(0.1)
+!Nani(Aquila,?)
+!HoldOn(0.7)
+-Aquila: Oh? How curious.
+!HoldOn(0.3)
+!SetAnim(Aquila,DR)
+!HoldOn(0.1)
+!SetAnim(Aquila,DL)
+!HoldOn(0.1)
+-Aquila: What do you and your friend know about this "Yellow God"?
+-Siobhan: Well, I don't know much.|But my friend who saw it said-
+!Nani(Aquila,!)
+!HoldOn(0.4)
+-Aquila: Wait! Your friend SAW the Yellow God? With his own eyes?
+-Aquila: Your friend actually MET the Yellow God and LIVED?
+-Siobhan: Y-yeah...
+!Walk(Aquila,DL,0.4)
+!HoldOn(0.4)
+-Aquila: Who is your friend?
+!SpecialWalk(Siobhan,DL,0.2,URWalk,1)
+!HoldOn(0.21)
+!SetAnim(Siobhan,UR)
+-Siobhan: Just a wandering mouse-knight.|What's the big deal?
+
+!Walk(Aquila,DL,0.2)
+!HoldOn(0.2)
+!SpecialWalk(Siobhan,DL,0.2,URWalk,1)
+!HoldOn(0.21)
+!SetAnim(Siobhan,UR)
+-Aquila: What's his name?
+!Walk(Aquila,DL,0.2)
+!HoldOn(0.2)
+!SpecialWalk(Siobhan,DL,0.2,URWalk,1)
+!HoldOn(0.21)
+!SetAnim(Siobhan,UR)
+-Aquila: Where is he?
+!Walk(Aquila,DL,0.2)
+!HoldOn(0.2)
+-Aquila: You must take me to him.
+-Siobhan: I... have to go.
+!CameraUnfollow()
+!SetAnim(Siobhan,R)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DR)
+!HoldOn(0.1)
+!SetAnim(Siobhan,D)
+!HoldOn(0.1)
+!SetAnim(Siobhan,DL)
+!HoldOn(0.1)
+!NormalJump(Siobhan,2,100,468,488,Jumping,Landing)
+!HoldOn(0.5)
+!Walk(Siobhan,DL,0.3)
+!Walk(Aquila,DL,0.2)
+!HoldOn(0.3)
+!Walk(Siobhan,DR,0.3)
+!HoldOn(0.1)
+!Exit(Siobhan)
+-Aquila: Wait, mole, wait!
+!HoldOn(1.3)
+-Aquila: So the Yellow God is more than just a myth...
+!HoldOn(0.1)
+!SetAnim(Aquila,Hand1)
+!HoldOn(0.1)
+!SetAnimEnd(Aquila,Hand2)
+!HoldOn(0.1)
+-Aquila: What could this mean for Murida?
+!HoldOn(1)
+!Nani(Aquila,!)
+!HoldOn(0.5)
+!SetAnim(Aquila,Hand1))
+!HoldOn(0.1)
+!SetAnim(Aquila,DL))
+!HoldOn(0.1)
+-Aquila: The King!|I must alert the King!|Post-haste!
+!HoldOn(0.2)
+!AddToParty(Verm)
+!RemoveFromParty(Siobhan)
+!SetLeader(Verm)
+!Walk(Aquila,UL,1.3)
+!HoldOn(0.8)
+~Stop
+!NextRoom(PalaceMain,1)

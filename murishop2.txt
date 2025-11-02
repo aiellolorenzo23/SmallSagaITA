@@ -1,0 +1,359 @@
+/Intro
+!CheckGlobal(50,0,IntroCont)
+!CheckGlobal(50,1,IntroCont)
+
+/IntroCont
+~Murida2Loop
+
+/Nora
+>NoraClick
+/NoraClick
+!CheckGlobal(50,0,NoraCont)
+!CheckGlobal(50,1,NoraCont)
+-Nora: Hey, cafe's closed!|I'm busy cleaning up.
+-Nora: What kind of caffeine addict wants coffee right before bedtime anyway?
+
+/NoraCont
+!CheckGlobal(99,2,NoraSio)
+!CheckItem(23,NoraDone)
+!ShowMoney(1)
+-Nora: Fresh coffee.|Three seeds for a cup.
+*Yes: Alright.
+*No: No.
+
+/NoraSio
+-Nora: Fresh coffee.|Three seeds for a cup.
+-Siobhan: Oh, uh, no thanks. I'm just browsing.
+-Nora: Well. I won't charge for that.
+
+/NotEnough
+-Verm: I don't have three seeds.
+-Nora: Then you don't get a cup.
+
+/Yes
+!ShowMoney(0)
+!MoneyCheck(3,NotEnough)
+-Verm: I'll have one cup.
+!MoneyLoss(3)
+-Nora: Okay. What kind of milk?
+*Oat: Oat
+*Soy: Soy
+*Almond: Almond
+*Cow: Cow
+*None: None
+
+/Oat
+-Verm: Oat please.
+-Nora: The only correct choice.
+!HoldOn(1)
+-Nora: Here you go.
+>CoffeeGet
+
+/Soy
+-Verm: Soy please.
+-Nora: You can't go wrong with a classic.
+!HoldOn(1)
+-Nora: Here you go.
+>CoffeeGet
+
+/Almond
+-Verm: Almond please.
+-Nora: Bold choice.|High in protein.|You trying to bulk up?
+!HoldOn(1)
+-Nora: Here you go.
+>CoffeeGet
+
+/Cow
+-Verm: Normal milk.|You know...|Cow milk.
+!HoldOn(0.6)
+-Nora: Buddy, there ain't nothing normal about putting titty milk in your coffee, but far be it for me to kink shame.
+-Verm: It's not like that.
+!HoldOn(1)
+-Nora: Of course it isn't. Here.|One pervert special.
+>CoffeeGet
+
+/None
+-Verm: No milk. I like my coffee|dark and bitter.
+-Nora: Calm down, Edgy McGee.|You're not impressing anyone.
+!HoldOn(1)
+-Nora: Here. Take it.
+>CoffeeGet
+
+/CoffeeGet
+!ReceiveItem(23)
+!PlaySound(ItemFound)
+-Info: You received a Coffee.|Smells energizing!
+-Nora: Drink it while it's hot.
+-Nora: Joking. Who am I, the|royal Coffeemaster? Drink it|whenever you bloody well want.
+
+/NoraDone
+-Nora: That weird lady|comes in every day.
+-Nora: She buys one coffee, then spends the whole day writing. The bloody cheek.
+
+/Dee
+!CheckGlobal(99,2,DeeSio)
+!CheckGlobal(10,1,Dee1)
+!CheckGlobal(76,9,Deecheck1)
+>Dee2
+/Deecheck1
+!CheckGlobal(74,35,Deecheck2)
+>Dee2
+/Deecheck2
+!CheckGlobal(75,50,Deecheck3)
+!CheckGlobal(75,40,Deecheck3)
+>Dee2
+/Deecheck3
+!CheckGlobal(30,30,DeeQs)
+>Dee2
+/Dee1
+-Dee: I'm writing an RPG.
+-Dee: I'm nowhere near done though.|It'll take most of my life|to finish this damn thing.
+
+/Dee2
+-Dee: I'm writing an RPG.
+-Dee: I'm making good progress.|Just a few more tasks to do.|Come back later.
+
+/DeeSio
+-Dee: Hi Siobhan.
+-Siobhan: Uh... do we know each other?
+-Dee: That's not important right now.
+-Dee: Shouldn't you be meeting your friends in Sky Garden?
+-Siobhan: Oh! Right.
+
+/DeeQs
+-Dee: I just finished writing my RPG.
+-Dee: Do you have any questions about it?
+*Q1: Who are you?
+*Q2: What's it about?
+*Q3: Smooth development?
+*Q4: What's next?
+*Q5: Advice?
+*Q5: Bye.
+
+/Qs
+-Dee: Anything else you want to know?
+*Q1: Who are you?
+*Q2: What's it about?
+*Q3: Smooth development?
+*Q4: What's next?
+*Q5: Give me advice.
+*Q5: Bye.
+
+/Q1
+-Dee: I'm the mouse who|wrote an RPG.
+>Qs
+
+/Q2
+-Dee: Oh sheesh, it's about, uh...
+-Dee: Overcoming nature?|Order and rebellion?|Little guys with swords?
+-Dee: That's a question best left for the players, I think.
+>Qs
+
+/Q3
+-Dee: It was quite a journey. Took me over 6 years. Which is a VERY long time for a mouse.
+-Dee: But I'm not complaining. I knew what I was in for when I started writing.
+-Dee: People say that you leave a little bit of yourself in the things you create.
+-Dee: I think there's truth to that.|I'm not the same person I was when I started.
+-Dee: Heck, Rodentia's changed a lot too. A pandemic, a recession, new leader after new leader...
+-Dee: Oh, I'm rambling.
+>Qs
+
+/Q4
+-Dee: What's next?|WHAT'S NEXT?!
+-Dee: I'm taking a damn break.
+-Dee: Then it's bug fixes,|localisation and what-not.
+-Dee: But then... maybe I'll write a strategy game about axolotls.
+-Dee: Or a rhythm game about cicadas.
+-Dee: Or a MOBA about jellyfish! Who knows.
+-Verm: What's a MOBA?
+-Dee: Never mind that.
+>Qs
+
+/Q5
+-Dee: Advice? What, you think I've got some wisdom to dispense? Uhhh...
+-Dee: Developers who say "I'm gonna|make an RPG" are arrogant fools.|Do not trust them.
+-Dee: That's all I've got.|Good luck out there.
+>Qs
+
+/Q6
+-Dee: Thanks a lot for stopping by!
+
+/No
+!ShowMoney(0)
+-Verm: Not right now.
+-Nora: Well. Maybe later then.
+
+/Date
+~Murida2Loop
+!SetUIScale(0)
+!HoldOn(2)
+!OverCamZoom(1.5)
+!HoldOn(1)
+!SetAnim(Gwen,F2)
+!HoldOn(0.1)
+!SetAnim(Gwen,F3)
+!HoldOn(0.1)
+!SetAnim(Gwen,F4)
+!SetAnim(Verm,F2)
+!HoldOn(0.1)
+!SetAnim(Verm,F3)
+!HoldOn(0.1)
+!SetAnim(Verm,F4)
+!HoldOn(0.8)
+!SetAnim(Gwen,F3)
+!HoldOn(0.1)
+!SetAnim(Gwen,F2)
+!SetAnim(Verm,F3)
+!HoldOn(0.1)
+!SetAnim(Gwen,F1)
+!SetAnim(Verm,F2)
+!HoldOn(0.1)
+!SetAnim(Verm,F1)
+!HoldOn(0.6)
+-Gwen: Mmm.
+!HoldOn(0.7)
+-Gwen: So this is a cappuccino, huh?|It's pretty good.
+!HoldOn(0.2)
+!SetAnim(Gwen,F5)
+!HoldOn(0.5)
+-Gwen: What did you order, again?
+-Verm: A matcha latte.
+!HoldOn(0.1)
+!SetAnim(Verm,F2)
+!HoldOn(0.1)
+!SetAnim(Verm,F3)
+!HoldOn(0.1)
+!SetAnim(Verm,F4)
+!HoldOn(0.2)
+-Gwen: What is "matcha"?|It looks green.
+!HoldOn(0.4)
+-Verm: Tastes green too.
+!HoldOn(0.3)
+!SetAnim(Verm,F3)
+!SetUIScale(1)
+!Nani(Gwen,?)
+!HoldOn(0.1)
+!SetAnim(Verm,F2)
+!HoldOn(0.1)
+!SetAnim(Verm,F1)
+!HoldOn(0.8)
+!SetUIScale(0)
+-Gwen: It tastes green?
+!HoldOn(0.1)
+!SetAnim(Verm,F5)
+!HoldOn(0.4)
+-Verm: Yeah? You know how|sweet foods taste blue and|sour foods taste red...
+-Gwen: I have no idea what you're talking about, but I want to try it. Gimmie.
+!HoldOn(0.3)
+!SetAnim(Verm,F2)
+!HoldOn(0.1)
+!SetAnim(Verm,F6)
+!HoldOn(0.4)
+-Verm: Fine, take a sip.
+!HoldOn(0.2)
+!SetAnim(Gwen,F6)
+!SetAnim(Verm,F7)
+!HoldOn(0.1)
+!SetAnim(Verm,F8)
+!SetUIScale(1)
+!HoldOn(0.4)
+!Nani(Gwen,!)
+!HoldOn(1)
+!SetUIScale(0)
+-Gwen: Mm! This is great.|It's rich and creamy.
+!HoldOn(0.2)
+!SetAnim(Verm,F7)
+!HoldOn(0.3)
+-Verm: Oi! I said a sip!
+!HoldOn(0.6)
+!SetAnim(Verm,F6)
+!SetAnim(Gwen,F5)
+!HoldOn(0.1)
+!SetAnim(Verm,F1)
+!SetAnim(Gwen,F1)
+!HoldOn(0.4)
+-Gwen: I can't quite taste the colour though. Your tongue must be|more sensitive than mine.
+!HoldOn(1)
+!SetAnim(Verm,F2)
+!HoldOn(0.1)
+!SetAnim(Verm,F3)
+!HoldOn(0.1)
+!SetAnim(Verm,F4)
+!HoldOn(0.3)
+!SetAnim(Gwen,F5)
+!HoldOn(0.8)
+-Gwen: Ooh la la. An indirect kiss.
+!HoldOn(0.1)
+!SetAnim(Verm,F3)
+!HoldOn(0.1)
+!SetAnim(Verm,F2)
+!SetAnim(Gwen,F1)
+!HoldOn(0.1)
+!SetAnim(Verm,F1)
+!HoldOn(0.1)
+!SetAnim(Verm,F5)
+-Verm: Heh. You weirdo.
+!HoldOn(0.2)
+!SetAnim(Verm,F1)
+!HoldOn(0.4)
+!SetAnim(Gwen,F2)
+!HoldOn(0.1)
+!SetAnim(Gwen,F3)
+!HoldOn(0.1)
+!SetAnim(Gwen,F4)
+!HoldOn(0.6)
+!SetAnim(Gwen,F3)
+!HoldOn(0.1)
+!SetAnim(Gwen,F2)
+!HoldOn(0.1)
+!SetAnim(Gwen,F1)
+!HoldOn(0.4)
+-Gwen: Hey, Verm.
+-Gwen: Do you like boys or girls?
+-Verm: I don't know. I've never given it much thought.
+!HoldOn(0.1)
+!SetAnim(Gwen,F5)
+!HoldOn(0.3)
+-Gwen: Seriously?
+-Verm: Yeah.
+!HoldOn(0.6)
+-Verm: I spent half my life focused on killing the Yellow God. I didn't have room for lovey-dovey stuff.
+!SetAnim(Gwen,F1)
+-Verm: But even when I had time to think in Vinium, I just got fixated on farming mushrooms.
+!HoldOn(0.9)
+!SetAnim(Verm,F5)
+!HoldOn(0.6)
+-Verm: What? Is that odd?
+!HoldOn(0.4)
+-Gwen: I don't think so.|You've been through a lot.
+!SetAnim(Verm,F1)
+-Gwen: Maybe when this is all over you can make some time for yourself and discover who you like.
+!HoldOn(1.3)
+-Verm: I don't know if I'll ever like anyone in that way.
+!HoldOn(0.9)
+-Gwen: Follow your own path, dwt.|You're good at that.
+!SetGlobal(34,1)
+!HoldOn(0.5)
+!SetAnim(Gwen,F2)
+!HoldOn(0.1)
+!SetAnim(Gwen,F3)
+!HoldOn(0.1)
+!SetAnim(Gwen,F4)
+!HoldOn(0.5)
+!SetAnim(Gwen,F3)
+!HoldOn(0.1)
+!SetAnim(Gwen,F2)
+!HoldOn(0.1)
+!SetAnim(Gwen,F1)
+!HoldOn(0.3)
+!SetAnim(Gwen,F5)
+!CheckGlobal(70,0,DateNext)
+!CheckGlobal(72,0,DateNext)
+!CheckGlobal(71,0,DateNext)
+-Gwen: I'm all coffeed out.
+-Gwen: Let's go back to Ratlas.|I want to see something.
+!NextRoom(MuriStreet3,7)
+/DateNext
+-Gwen: I'm all coffeed out.|Where are we going next?
+!NextRoom(MuriStreet3,7)
+

@@ -1,0 +1,231 @@
+/Intro
+
+/FirstIntro
+~Stop
+!HoldOn(0.4)
+!Walk(Bruce,UR,0.4)
+!HoldOn(0.5)
+!SetGlobal(35,5)
+-Quintus: The one you want is tilling soil at the far end.
+-Quintus: His name's Ghost.
+-Bruce: Ghost?
+-Quintus: A fitting title. He was half-dead when I fished the poor boy from the river.
+-Quintus: Anyway. I'll be waiting.
+-Quintus: Let me know when you're ready to make the purchase.
+
+/Quintus
+-Quintus: Don't mind me.|Go check the goods.
+
+/EarlyLeave
+-Quintus: Wrong way, sir!
+!Walk(Bruce,UR,0.4)
+!HoldOn(0.5)
+
+/VermTime
+!Walk(Bruce,UL,0.4)
+!HoldOn(0.4)
+!Walk(Bruce,UR,0.4)
+!HoldOn(1)
+!TeleportCharacter(Quintus,1608,520)
+
+!SetGlobal(38,2)
+-Bruce: Verm?
+!HoldOn(0.5)
+!SetAnim(Ghost,Farming2)
+~Ghost
+!HoldOn(0.3)
+!SetGlobal(35,6)
+!MoveTrigger(EarlyLeave,3059,695)
+-Bruce: Is that you?
+!HoldOn(0.3)
+!SetAnim(Ghost,L)
+!HoldOn(0.2)
+!SetAnim(Ghost,DL)
+!HoldOn(1)
+-Ghost: Bruce?
+!Walk(Ghost,DL,0.4)
+!HoldOn(0.6)
+-Bruce: I cannae believe you're alive!
+-Bruce: Nay, I can easily believe it. You were always the toughest of cookies.
+-Bruce: But ye look different...
+*Grown: You've grown!
+*Eye: Your eye.
+
+/Grown
+-Bruce: Y've grown up! Ye look like a completely new mouse.
+>Doing
+
+/Eye
+-Bruce: Y've got a new battle scar! I must say, it suits ye.
+>Doing
+
+/Doing
+-Ghost: You've changed too. Strutting around without a mask...
+-Bruce: No more masks. I'm done hiding.
+!HoldOn(0.4)
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Ghost,DR)
+!HoldOn(0.3)
+-Ghost: What are you doing here, Bruce?
+-Bruce: I made a promise to you.|Back in the Ashen Tower.
+-Bruce: You helped me reclaim the Oaken Throne, and I'll help ye find the Yellow God.
+-Bruce: Remember?
+!HoldOn(0.4)
+-Ghost: The Yellow God...
+!HoldOn(1)
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Ghost,DL)
+!HoldOn(0.3)
+-Ghost: I'm over that.
+!HoldOn(0.2)
+-Bruce: Over it? Just like that?
+!HoldOn(0.6)
+-Ghost: When I duelled Blademaster Leo, he told me that I was fighting for nothing.
+-Ghost: I thought he was just spitting fight-talk at the time, but I've had plenty of time to mull it over since.
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Ghost,DR)
+-Ghost: He's right. I had no cause.
+!Walk(Ghost,DR,0.5)
+!HoldOn(0.2)
+!SetAnim(Bruce,R)
+!HoldOn(0.2)
+-Bruce: Of course ye had a cause. And ye still do.
+-Ghost: Trying to kill a god isn't a cause.
+-Ghost: It's just mindlessly lashing out, like a week-old pup throwing a tantrum.
+!SetAnim(Ghost,D)
+!HoldOn(0.1)
+!SetAnim(Ghost,DL)
+!HoldOn(0.1)
+!SetAnim(Ghost,L)
+-Ghost: At least here I'm contributing to society.
+-Bruce: By farming mushrooms|for a slave driver?
+-Ghost: It's something.
+!HoldOn(0.2)
+!SetAnim(Ghost,UL)
+!HoldOn(0.1)
+!Walk(Ghost,UL,0.6)
+!HoldOn(0.3)
+!SetAnim(Bruce,UR)
+!HoldOn(0.3)
+!Walk(Ghost,U,0.3)
+!SetAnim(Bruce,U)
+!HoldOn(0.4)
+!SetAnim(Ghost,Farming1)
+!HoldOn(1.3)
+-Bruce: Yer welcome back at any time, Verm. We've all missed ye.
+-Ghost: Thank you, Bruce.
+-Ghost: But I'm comfortable here.
+-Bruce: There's no convincing ye, huh.
+!HoldOn(0.4)
+-Ghost:  No. 
+!SetAnim(Bruce,UR)
+!HoldOn(0.1)
+!SetAnim(Bruce,R)
+!HoldOn(0.1)
+!SetAnim(Bruce,DR)
+
+/Ghost
+-Ghost: My mind is set, Bruce. Go.
+
+/StillWorking
+!SetAnim(Ghost,Farming1)
+!SetGlobal(35,8)
+!HoldOn(1)
+-Jeb: Hey Ghost. Still working?
+!HoldOn(0.7)
+-Ghost: Yep.
+!HoldOn(0.5)
+-Jeb: You can clock out, y'know. It's well past sun-down.
+!HoldOn(0.5)
+-Alfie: Quintus gave us free tickets for the circus.
+-Alfie: Might break open a cap of wine. Eat a popcorn. Watch some death-matches.
+-Alfie: Self-care, and all that.
+-Jeb: Wanna join us?
+-Ghost: There's still soil to be tilled.
+-Jeb: But it's Chariot Chuesday!
+-Jeb: And there's a guest gladiator!
+-Jeb: It'll be fun!
+-Ghost: Maybe next time.
+-Alfie: Suit yourself.|More wine for us.
+!HoldOn(0.1)
+!SetAnim(Alfie,DL)
+!HoldOn(0.1)
+-Alfie: Hey, Jeb, who's the guest gladiator?
+-Jeb: Some squirrel.
+!HoldOn(0.2)
+!SetAnim(Ghost,Farming2)
+!Nani(Ghost,?)
+!HoldOn(0.6)
+-Jeb: An exotic one, apparently. They're calling him the Red Barbarian.
+!HoldOn(0.2)
+!SetAnim(Ghost,UL)
+!Nani(Ghost,!)
+!HoldOn(0.4)
+-Alfie: Woah! Badass name.
+-Alfie: Think he's got a chance of beating the champion?
+-Jeb: Ha ha, no way!|Isengrim is unbreakable.
+-Jeb: Come on. Let's grab some|front-row spots.
+!HoldOn(0.1)
+!SetAnim(Alfie,DR)
+!HoldOn(0.1)
+!Walk(Jeb,DR,4)
+!HoldOn(0.4)
+!Walk(Alfie,DR,4)
+!HoldOn(2)
+!SetAnim(Ghost,L)
+!HoldOn(0.1)
+!SetAnim(Ghost,DL)
+!HoldOn(1.5)
+!Exit(Jeb)
+!Exit(Alfie)
+!NormalJump(Ghost,2,30,237,441,JDL,DL)
+!HoldOn(1)
+!CameraFollow(1)
+!LevelUp(Ghost)
+!HoldOn(0.5)
+
+/Jeb
+!CheckGlobal(99,0,JebVerm)
+-Jeb: Don't mind me, bud.|Just doing a little digging.
+
+/JebVerm
+-Jeb: You're leaving? We're gonna miss you, bud.
+-Jeb: Make sure to drop by sometime, alright?
+
+/Alfie
+!CheckGlobal(99,0,AlfieVerm)
+-Alfie: Whew, it's almost clock-out time.
+
+/AlfieVerm
+-Alfie: There's a crazy rumour going round that the farm's getting signed over to me and Jeb.
+-Alfie: Do you know anything about that, Ghost?
+-Verm: Not a thing.
+-Alfie: Huh.
+
+/Statue
+!CheckGlobal(59,1,SaveTime)
+-InfoBig: The statue depicts a member of the shrew pantheon.
+-InfoBig: With his mighty pitchfork, this must be Viridia, the deity of agriculture, hard work, and just rewards.
+
+!SetGlobal(59,1)
+>SaveTime
+
+/SaveTime
+-InfoBig: Viridia reaps a harvest.|Save your game?
+*SaveYes: Save.
+*SaveNo: Not now.
+
+/SaveYes
+!SaveGame(Vinium,Mushroom farm)
+-Info: Your game has been saved.
+/SaveNo
+
+/VermLeaveTime
+!Walk(Ghost,DL,0.3)
+!AddToParty(Bruce)
+!NextRoom(ToBlack)
+!HoldOn(1)
+!NextRoom(ViniumCol,3)

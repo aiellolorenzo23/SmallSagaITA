@@ -1,0 +1,48 @@
+/BattleVeryStart
+~MegaVoleLoop
+!HoldOn(0.2)
+!DrawWeapon(Lance)
+!HoldOn(0.2)
+!DrawWeapon(YoungVerm)
+/BattleStart
+!SetGlobal(4,0)
+!CameraPan(0,1,1,1)
+!LetsFight()
+/Goad
+!SetAnim(Sava,Goad)
+!CheckGlobal(4,1,Goad2)
+!CheckGlobal(4,2,Goad3)
+!CheckGlobal(4,3,Goad4)
+!SetGlobal(4,1)
+-Sava: Come at me, you flea-bitten,|yellow-bellied losers!
+-Lance: Don't take the bait, Verm.
+!HoldOn(0.1)
+!NewTurn()
+/Goad2
+!SetGlobal(4,2)
+-Sava: Go on! Hit me! See what happens.
+!HoldOn(0.1)
+!NewTurn()
+/Goad3
+!SetGlobal(4,3)
+-Sava: I've seen butterflies with more bite than you two amateurs!
+!HoldOn(0.1)
+!NewTurn()
+/Goad4
+-Sava: I could take hits all day! Come on!
+!HoldOn(0.1)
+!NewTurn()
+/NoFun
+!SetAnim(Sava,Default)
+-Sava: Pah! You're no fun.
+!HoldOn(0.1)
+!NewTurn()
+/Fool
+-Sava: Fools! You dropped your guard.
+!HoldOn(0.1)
+!SpecialMove(Sava)
+/EnemyDead
+~Stop
+!Victory()
+!EndBattle()
+End scene
