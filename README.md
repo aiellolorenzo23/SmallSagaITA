@@ -10,7 +10,7 @@
       :::    :::  :::  :::   ::   :::     :::   :::          :        :::    ::   :::     :::  ::::      :::  :::     :::     
       :::::::::  ::::       :::::::::    :::::: :::        ::::        :::: ::: ::::::   :::::  ::::    ::: ::::::   ::::::   
           :::                                   ::::::::::::::            :::                      ::::::                     
-                            amateur italian translation / traduzione amatoriale italiana
+                            EN: amateur italian translation / IT: traduzione amatoriale italiana
 
 
 ### Description / Descrizione
