@@ -18,7 +18,7 @@
 !LetsFight()
 
 /VermRage
--Verm: This one's for my brother!
+-Verm: Questo è per mio fratello!
 !SetAnim(Verm,Idle)
 !NewTurn()
 

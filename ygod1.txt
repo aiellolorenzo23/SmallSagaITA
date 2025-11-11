@@ -13,7 +13,7 @@
 !LetsFight()
 
 /VermRage
--Verm: This one's for my tail!
+-Verm: Questo è per la mia coda!
 !SetAnim(Verm,Idle)
 !NewTurn()
 
@@ -23,7 +23,7 @@
 /DamageTrigger
 !SetBattleID(YGod2)
 !HoldOn(1)
--Verm: This isn't working.|We need to get higher!
+-Verm: Non sta funzionando.|Dobbiamo salire più in alto!
 !HoldOn(0.5)
 !EndBattle()
 /End
