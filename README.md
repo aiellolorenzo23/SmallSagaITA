@@ -37,6 +37,8 @@ Sono aperto a suggerimenti per le traduzioni e usate pure questo progetto come b
 5) (Optional) I suggest initializing a git repository on the dedicated directory to track your changes.
 6) Alternatively, you can fork this project from its first commit and then package the modified files into your package.nw.
 
+Feel free to to contribute and/or to fork my project for your translations!
+
 **IT**: Per tradurre i file di gioco, è necessario il file package.nw.
 
 1) Andare sulla cartella di gioco (generalmente _<PATH-PER-LIBRERIA_STEAM>/steamapps/common/Small Saga_).
@@ -46,3 +48,4 @@ Sono aperto a suggerimenti per le traduzioni e usate pure questo progetto come b
 5) (Opzionale) Suggerisco di inizializzare sulla cartella dedicata un repository git per tracciare le tue modifiche.
 6) Alternativamente, potete fare un fork di questo progetto dal suo primo commit e impacchettare poi i file modificati sul vostro package.nw.
 
+Sentitevi liberi di contribuire e/o di fare un fork del mio progetto per le vostre traduzioni!
