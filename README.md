@@ -1,4 +1,6 @@
-<img src="./resources/SITFP.png" alt="Small Saga Italian Translation Fan Project" height="400">
+<div align="center">
+    <img src="./resources/SITFP.png" alt="Small Saga Italian Translation Fan Project" width="800">
+</div>
 
 ### Description / Descrizione
 
