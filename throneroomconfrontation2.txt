@@ -59,7 +59,7 @@
 !HoldOn(1.1)
 !SetAnim(Leo,UR)
 !HoldOn(0.2)
--Leo: Your Majesty, unleashing Excalibur may deter the Yellow God.
+-Leo: Your Majesty, unleashing Excalibur may deter il Divino Giallo.
 -Leo: But if my understanding of the weapon is correct, it would kill countless rodents, members of your own Kingdom whom you are sworn to serve.
 -James: They're riotous louts who wish to put my head on a pike.
 -James: Their lives are forfeit.

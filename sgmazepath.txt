@@ -244,7 +244,7 @@
 !HoldOn(0.1)
 -Siobhan: It's like, he throws himself into things.
 -Siobhan: Too much of himself.
--Siobhan: He wants to find and slay the Yellow God. But I think he'd be fine dying in the process.
+-Siobhan: He wants to find and slay il Divino Giallo. But I think he'd be fine dying in the process.
 !HoldOn(0.5)
 -Bruce: Ah, I get what ye mean.
 -Bruce: The lad does have a raw|recklessness about him.

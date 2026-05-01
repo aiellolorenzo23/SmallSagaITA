@@ -275,7 +275,7 @@
 !HoldOn(0.1)
 !SetAnim(Aquila,DL)
 !HoldOn(0.1)
--Aquila: About the Yellow God? I keep|telling you, Murida is prepared.
+-Aquila: About il Divino Giallo? I keep|telling you, Murida is prepared.
 -Siobhan: I mean no disrespect, but...|how, exactly?
 -Siobhan: If Duke Josh's prophecy is true, then a deathly God is coming to Murida.
 -Siobhan: Every rodent in the city will be in danger.

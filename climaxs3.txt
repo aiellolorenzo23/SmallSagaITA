@@ -91,7 +91,7 @@
 !HoldOn(0.7)
 !SetAnim(George,LookRight)
 -George: But you did open my eyes to the horrors of the gods.
--George: If the Yellow God is as accursed as the White, then that is not a deity worthy of worship.
+-George: If il Divino Giallo is as accursed as the White, then that is not a deity worthy of worship.
 -George: I'm here to fight by your side.
 !SetAnim(George,Default)
 -Gwen: Well. Your help is appreciated.|Thanks for coming.

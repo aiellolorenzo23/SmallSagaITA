@@ -14,7 +14,7 @@
 !HoldOn(0.4)
 !OverworldCameraPan(360,1960,0.35,1)
 !HoldOn(2.3)
-!BigTitle(The Underriver,What manner of vermin lurks beneath our feet?)
+!BigTitle(Sottofiume,Che sorta di creature brulicano sotto i nostri piedi?)
 !HoldOn(1)
 ~TheMissionLoop
 !Walk(Lance,DL,0.8)
@@ -48,7 +48,7 @@
 !HoldOn(0.1)
 !SetAnimEnd(Lance,UL)
 !HoldOn(1.2)
--Lance:	Come on, Verm. Keep up.
+-Lance:	Forza, Verm. Tieni il passo.
 
 !Walk(Verm,DL,0.8)
 !HoldOn(0.8)
@@ -58,11 +58,11 @@
 
 !Walk(Verm,DR,1)
 !HoldOn(1)
--Verm: I'm doing my best, Lance! But your legs are twice the size of mine.
--Lance: Ah, this won't do at all.
--Lance: Here's an idea - why don't you take the lead for a bit?
--Verm: You think I'm ready?
--Lance: I have no doubt.
+-Verm: Sto facendo del mio meglio, Lance! Ma le tue gambe sono grandi il doppio delle mie.
+-Lance: Ah, così non va bene per niente.
+-Lance: Ecco un'idea - perchè non prendi tu il comando per un po'?
+-Verm: Pensi che io sia pronto?
+-Lance: Non ho alcun dubbio.
 
 !SetAnimEnd(Lance,U)
 !HoldOn(0.1)
@@ -72,8 +72,8 @@
 !HoldOn(0.8)
 !SetAnimEnd(Lance,UR)
 !HoldOn(0.6)
--Lance: According to Dad's letter, we just follow the arrows.
--Lance: They point the way to the god's food hoard.
+-Lance: Secondo la lettera di papà, dobbiamo solo seguire le frecce.
+-Lance: Indicano la via per il deposito di cibo degli dei.
 !SetAnimEnd(Lance,U)
 !HoldOn(0.1)
 !SetAnimEnd(Lance,UL)
@@ -82,8 +82,8 @@
 !HoldOn(0.1)
 !Walk(Lance,DL,0.2)
 !HoldOn(0.4)
--Lance: So just keep following the path. We should hit it in no time.
--Verm: Alright. I can do this.
+-Lance: Quindi continua a seguire il sentiero. Dovremmo arrivarci in men che non si dica.
+-Verm: D'accordo. Ce la posso fare.
 !Walk(Verm,DR,0.6)
 !HoldOn(0.6)
 !Walk(Verm,R,0.1)
@@ -105,7 +105,7 @@
 !HoldOn(0.1)
 !Walk(Verm,L,0.1)
 !HoldOn(0.2)
--Verm: Stay on my tail, bro!
+-Verm: Resta affianco a me, fratellone!
 !PinFollowers()
 !CameraFollow(1)
 !SetAnimEnd(Verm,UL)
@@ -117,7 +117,7 @@
 
 
 /ChatLance
--Lance: You're doing great. Let's keep moving.
+-Lance: Stai andando alla grande. Proseguiamo così.
 
 /Shrine
 !Walk(Verm,UL,0.7)
@@ -128,65 +128,65 @@
 !HoldOn(0.5)
 !Walk(Lance,UL,0.2)
 !HoldOn(0.2)
--Lance: Look, Verm. It's a shrine to your hero.
--Verm: Woah! Blademaster Leo!
+-Lance: Guarda, Verm. È un santuario dedicato al tuo eroe.
+-Verm: Wow! Il Maestro di Spada Leo!
 !SetAnimEnd(Verm,L)
 !HoldOn(0.1)
 !SetAnimEnd(Verm,DL)
 !HoldOn(0.1)
--Verm: What's a statue doing down here?
--Lance: Perhaps the Underriver scoundrels built it.
--Lance: Even they know to respect the|powers of the crown.
--Verm: No way. They must have looted it.
+-Verm: Cosa ci fa una statua qui sotto?
+-Lance: Forse l'hanno costruita le canaglie di Sottofiume.
+-Lance: Anche loro sanno rispettare i|poteri della corona.
+-Verm: Macché. Devono averla saccheggiata.
 !SetAnimEnd(Verm,L)
 !HoldOn(0.1)
 !SetAnimEnd(Verm,UL)
 !HoldOn(0.1)
--Lance: Heh. I guess that's more likely.
+-Lance: Eh, in effetti. Immagino sia più probabile.
 !SetAnimEnd(Lance,U)
 !HoldOn(0.1)
 !SetAnimEnd(Lance,UR)
 !HoldOn(0.1)
--Lance: In any case, we should say a quick prayer. For protection.
+-Lance: In ogni caso, dovremmo dire una breve preghiera. Per protezione.
 !Walk(Lance,UR,0.2)
 !HoldOn(0.2)
 !PinFollowers()
 !HoldOn(0.1)
--InfoBig:   - Mouse Warrior Pro Tip -||To save your game, say a prayer at a statue.||Smart warriors pray regularly.
+-InfoBig:   - Nota per i Topi Guerrieri -||Per salvare la partita, recita una preghiera davanti ad una statua.||I guerrieri più furbi pregano regolarmente.
 
 /Leo
 !CheckGlobal(8,1,SaveTime)
--InfoBig: It's a copper statue of a field mouse wielding a needle-like rapier.
--InfoBig: The plaque reads:||In honour of Blademaster Leo.|Slayer of Ironfang the Vulpes, saviour of Solhill Village...|
--InfoBig: ...and hero to all.
+-InfoBig: È una statua in rame raffigurante un topo di campagna dallo stocco sottile come un ago.
+-InfoBig: La targa recita:||In onore del Maestro di Spada Leo.|Uccisore di Zanna di Ferro, la Vulpes, salvatore del villaggio di Colle del Sole...|
+-InfoBig: ...l'eroe di tutti.
 !SetGlobal(8,1)
 >SaveTime
 
 /SaveTime
--InfoBig: Blademaster Leo stands proud.|Save your game?
-*SaveYes: Save.
-*SaveNo: Not now.
+-InfoBig: Il Maestro di Spada Leo si erge fiero.|Vuoi salvare la partita?
+*SaveYes: Salva.
+*SaveNo: Non ora.
 
 /SaveYes
 !SaveGame(The Underriver,Leo statue)
--Info: Your game has been saved.
+-Info: La partita è stata salvata.
 /SaveNo
 
 /FoundSeeds
--Info: You found Squeaky! You add him to your trinkets.
+-Info: Hai trovato Squeaky! Lo aggiungi alla tua Collezione.
 !HoldOn(0.1)
 !Nani(Lance,?)
 !HoldOn(0.7)
--Lance: What's that? A toy?
--Verm: Yeah! Squeaky's my favourite. I can't believe I almost left him behind...
--Lance: Ah, Squeaky. Of course.
--Lance: Keep him close.|We've got some ways to go.
+-Lance: Che cos'è? Un pupazzo?
+-Verm: Si! Squeaky è il mio preferito. Non posso credere di averlo quasi dimenticato...
+-Lance: Ah, Squeaky. Ma certo.
+-Lance: Tienilo stretto.|Abbiamo ancora molta strada da fare.
 
 /SavaChest
--Info: You found a treasure map!|You add it to your trinkets.
+-Info: Hai trovato una mappa del tesoro!|La aggiungi alla tua Collezione.
 
 /FirstChest
--Info: You found a peanut.|Nutritious!
+-Info: Hai trovato una nocciolina.|Nutriente!
 !SetAnimEnd(Verm,D)
 !HoldOn(0.1)
 !SetAnimEnd(Verm,DR)
@@ -196,12 +196,12 @@
 !SetAnimEnd(Verm,UR)
 !ShowItem(Prota,9)
 !HoldOn(0.5)
--Verm: Hey Lance, check it out!|Someone stashed a peanut.
--Lance: Nice find. Maybe you should hold on to it in case you feel weak later.
--Lance: But don't get too full.
--Lance: There'll be plenty more food where we're heading.
--Verm: I can almost smell it...
--InfoBig:    - Mouse Warrior Pro Tip -||Items can be equipped from the "Equip" menu.||Once a food item has been equipped, it can be used once per battle!
+-Verm: Ehi Lance, guarda qui!|Qualcuno ha nascosto una nocciolina.
+-Lance: Ottima scoperta. Forse dovresti conservarlo nel caso in cui ti sentissi debole più tardi.
+-Lance: Ma non riempirti troppo.
+-Lance: Ci sarà molto altro cibo dove stiamo andando.
+-Verm: Riesco quasi a sentirne il profumo...
+-InfoBig:    - Nota per i Topi Guerrieri -||Gli oggetti possono essere equipaggiati dal menu "Equip".||Una volta equipaggiato un alimento, può essere utilizzato una volta per battaglia!
 
 /FirstBridge
 !Walk(Verm,UR,0.2)
@@ -211,10 +211,10 @@
 !HoldOn(0.5)
 !Nani(Verm,?)
 !HoldOn(0.7)
--Verm: What a weird bridge...
+-Verm: Che strano ponte...
 !SetAnimEnd(Lance,UR)
--Lance: Looks like Underriver rat handiwork. It's crude, but it should hold.
--Verm: Underriver rats?
+-Lance: Sembra opera dei ratti di Sottofiume. È grezzo, ma dovrebbe reggere.
+-Verm: Ratti di Sottofiume?
 !HoldOn(0.2)
 !SetAnimEnd(Verm,R)
 !HoldOn(0.1)
@@ -224,24 +224,24 @@
 !HoldOn(0.1)
 !SetAnimEnd(Verm,DL)
 !HoldOn(0.2)
--Verm: Do you think there are any around right now?
--Lance: It's possible. We didn't bring our weapons just for show.
--Lance: Are you scared?
-*MaybeScared: A little...
-*NotScared: Nuh-uh!
+-Verm: Pensi che ce ne sia qualcuno nei paraggi adesso?
+-Lance: È possibile. Non abbiamo portato le nostre armi solo per fare scena.
+-Lance: Hai paura?
+*MaybeScared: Un pochino...
+*NotScared: N-no!
 
 /MaybeScared
--Verm: Maybe a little...
--Lance: That's okay. There's no shame feeling fear. All mice feel it.
--Verm: All mice? Even Blademaster Leo?
--Lance: Even Leo.
--Verm: Ha! No way.
+-Verm: Forse un pochino...
+-Lance: È normale. Non c'è nessuna vergogna nell'avere paura. Tutti i topi la avvertono.
+-Verm: Tutti i topi? Persino il Maestro di Spada Leo?
+-Lance: Persino Leo.
+-Verm: Ah! Impossibile.
 
 /NotScared
--Verm: Nuh-uh! I'm not scared of anything! Just like Blademaster Leo!
--Lance: Heh. Well then, "Blademaster", lead the way.
+-Verm: N-no! Non ho paura di niente! Proprio come il Maestro di Spada Leo!
+-Lance: Eheh. Bene allora, "Maestro di Spada", fai strada.
 
-Upon approaching a bridge, the pair see a pair of scraggly rats guarding the way: it's Bree and Stilton.
+Avvicinandosi al ponte, i due scorgono due ratti spelacchiati di guardia al passaggio: sono Bree e Stilton.
 
 /BridgeEncounter
 ~Stop
@@ -262,13 +262,13 @@ Upon approaching a bridge, the pair see a pair of scraggly rats guarding the way
 !HoldOn(0.2)
 !SetAnimEnd(Lance,UR)
 !HoldOn(0.5)
--Bree: Not another step, you two!
--Bree: Or else you'll have to face the combined wrath of Bree and-
+-Bree: Non fate neanche un altro passo, voi due!
+-Bree: O dovrete affrontare l'ira congiunta di Bree e...
 !HoldOn(0.6)
 !SetAnimEnd(Bree,HeadLeft)
 !HoldOn(0.3)
--Bree: Hey, art boy!
--Bree: We've got company.|Get with the program.
+-Bree: Ehi, artista da strapazzo!
+-Bree: Abbiamo compagnia. | Datti una mossa.
 !HoldOn(0.7)
 !ShoutMode()
 -Bree: STILTON!
@@ -294,13 +294,13 @@ Upon approaching a bridge, the pair see a pair of scraggly rats guarding the way
 !SetAnim(Stilton,DL)
 !HoldOn(0.4)
 ~BreeLoop
--Stilton: Not another step, you two! Or else you'll have to-
--Bree: We've done that part already...
+-Stilton: Non fate neanche un altro passo, voi due! O dovrete affrontar-
+-Bree: Quella parte l'abbiamo già detta...
 !HoldOn(0.2)
 !SetAnimEnd(Bree,DL)
 
--Lance: Rest assured, sirs, we will make no trouble.
--Lance: My brother and I are just passing through.
+-Lance: Restate calmi, signori, non creeremo alcun problema.
+-Lance: Io e mio fratello siamo solo di passaggio.
 !HoldOn(0.3)
 !SetAnimEnd(Bree,HeadDown)
 !HoldOn(0.15)
@@ -318,28 +318,28 @@ Upon approaching a bridge, the pair see a pair of scraggly rats guarding the way
 !HoldOn(0.15)
 !SetAnimEnd(Bree,DL)
 !HoldOn(0.4)
--Bree: Ain't that easy. This is a troll road, y'see.
--Verm: Don't you mean a TOLL road?
--Stilton: A little bit of both, to be|perfectly honest with ya.
+-Bree: Mica è così semplice. Questa è una strada a trollaggio, capito?
+-Verm: Non vorrai dire… a pedaggio?
+-Stilton: Un po' e un po'|a dirla proprio tutta.
 !ShowMoney(1)
--Bree: It's ten seeds each to pass.|Pay up!
-*PayUp: Okay.
-*NoPayUp: No way!
+-Bree: Sono dieci Semi a testa per passare.|Sganciate!
+*PayUp: Ok.
+*NoPayUp: Neanche per sogno!
 
 /PayUp
 !ShowMoney(0)
 !Walk(Verm,UR,0.3)
 !HoldOn(0.4)
--Verm: Here's all the seeds we have, sirs.
--Bree: What's this? Pocket crumbs? That's nowhere near ten plus ten seeds.
--Lance:	Sirs, I'm afraid my brother and I have no more seeds on our persons.
+-Verm: Questi sono tutti i Semi che abbiamo, signori.
+-Bree: Che è 'sta roba? Briciole da fondo tasca? Non arrivate nemmeno a dieci a testa.
+-Lance:	Signori, temo che io e mio fratello non abbiamo altri Semi con noi.
 >LetUsThrough
 
 /NoPayUp
 !ShowMoney(0)
--Verm: We're not paying you flea-bitten losers diddly-squat!
--Lance:	Now, now, Verm. Let's show some decorum.
--Lance:	Sirs, I'm afraid my brother and I have no seeds on our persons.
+-Verm: Non vi daremo neanche mezzo Seme, pulciosi buoni a nulla!
+-Lance:	Su, su, Verm. Un po' di contegno.
+-Lance:	Signori, temo che io e mio fratello non abbiamo altri Semi con noi.
 >LetUsThrough
 
 /LetUsThrough
@@ -521,7 +521,7 @@ Upon approaching a bridge, the pair see a pair of scraggly rats guarding the way
 -Sava: The god's food hoard, just above here.
 -Lance: We are.
 -Sava: Then, from one foul vermin to|another: don't bother.
--Sava: That place used to be paradise. But now the Yellow God roams the hall.
+-Sava: That place used to be paradise. But now il Divino Giallo roams the hall.
 -Sava: All that awaits you... is death.
 
 !HoldOn(0.2)
@@ -584,12 +584,12 @@ Upon approaching a bridge, the pair see a pair of scraggly rats guarding the way
 !NextRoom(Heaven,1)
 
 /FirstTip
--InfoBig:  - Mouse Warrior Pro Tip -||Hold X to run.|Press C to open the menu.||Easy peasy.
+-InfoBig:  - Nota per i Topi Guerrieri -||Tieni premuto X per correre.|Premi C per aprire il menu.||Facile facile.
 
 /LastTip
--InfoBig:    - Mouse Warrior Pro Tip -||Feeling stronger? You might have just levelled-up!||When a rodent levels-up, they gain 1£ - a skill star. Skill stars can be spent in the Skills menu. Go take a look!
+-InfoBig:    - Nota per i Topi Guerrieri -||Ti senti più forte? Potresti esser appena salito di livello!||Quando un roditore sale di livello, guadagna 1£ - una stella abilità. Le stelle abilità possono essere spese nel menu "Skills". Dai un'occhiata!
 
 /ToHeaven
--Lance: This is it. Brace yourself, Verm.
+-Lance: Ci siamo. Preparati, Verm.
 
 EndScene

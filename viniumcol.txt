@@ -498,7 +498,7 @@
 !HoldOn(0.1)
 !SetAnim(Bruce,DR)
 !HoldOn(0.2)
--Verm: My name is Verm, and I am the mouse who will slay the Yellow God.
+-Verm: My name is Verm, and I am the mouse who will slay il Divino Giallo.
 !HoldOn(0.7)
 !SetAnim(Bruce,R)
 !HoldOn(0.1)
@@ -549,7 +549,7 @@
 -Verm: I mean, after that.
 -Bruce: I'm going tae go meet up with Siobhan and Gwen.
 -Bruce: Ye should come join us.
--Bruce: I don't know what we can do about the Yellow God, but... we can work something out.
+-Bruce: I don't know what we can do about il Divino Giallo, but... we can work something out.
 !HoldOn(0.4)
 !SetAnim(Verm,L)
 !HoldOn(0.1)

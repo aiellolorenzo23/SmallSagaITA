@@ -63,7 +63,7 @@
 -Alice: Nah. The mouse looks scrappy. I wanna see where this goes.
 !OverworldCameraPan(656,701,1.4,1)
 !HoldOn(1)
--Verm: I bet you two have a lead on the Yellow God.
+-Verm: I bet you two have a lead on il Divino Giallo.
 -Verm: Tell me everything you know!
 -Bree: You'll have to make us, pipsqueak!
 !GoToBattle(Bree2)
@@ -75,7 +75,7 @@
 !SetGlobal(27,1)
 !HoldOn(1)
 -Bree: A-alright mate,|you've made your point!
--Verm: The Yellow God. Get talking.
+-Verm: il Divino Giallo. Get talking.
 !HoldOn(0.4)
 !SetAnim(Bree,UL)
 !HoldOn(0.1)
@@ -111,7 +111,7 @@
 !SetAnim(Bree,DL)
 !HoldOn(1)
 !Exit(Verm)
--Stilton: Is he... hunting the Yellow God?
+-Stilton: Is he... hunting il Divino Giallo?
 -Stilton: That's not going to end well.
 !HoldOn(0.2)
 !SetAnimEnd(Bree,HeadDown)

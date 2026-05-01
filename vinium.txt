@@ -111,7 +111,7 @@
 -Bruce: Hold on, let me get in character.
 !HoldOn(1)
 -Bruce: "Ooh, I'm Verm. Ooh, I'm so angry! I'm hopping mad, I am!"
--Bruce: "Ooh, I'm gonna find the Yellow God and stab him with my sword that's too big 'cause I'm compensating fer my wee height."
+-Bruce: "Ooh, I'm gonna find il Divino Giallo and stab him with my sword that's too big 'cause I'm compensating fer my wee height."
 !HoldOn(1)
 -Decimus: Wow.
 -Decimus: That was good.

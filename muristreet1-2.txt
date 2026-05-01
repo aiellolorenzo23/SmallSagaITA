@@ -10,14 +10,14 @@ OLD
 -Stilton: You tell 'em, Bree!
 -Bree: And what little we have left is taxed to the heavens.
 -Bree: But where do our taxes go?
--Bree: Is the King even doing anything about the Yellow God crisis?
+-Bree: Is the King even doing anything about il Divino Giallo crisis?
 -Bree: Or is he busy buying shiny new uniforms for the Thimble Guard?
 -Stilton: Hear, hear!
 
 /Bree
 -Siobhan: Did you say Yellow God?
 -Bree: Yeah! We've done our research.
--Bree: The Yellow God of Death is coming to Murida.
+-Bree: il Divino Giallo of Death is coming to Murida.
 -Bree: An' he's gonna lay waste to the city if we don't do something.
 -Siobhan: You might be right...
 
@@ -35,14 +35,14 @@ OLD
 /Stilton
 -Stilton: Bree and me had a couple of run-ins with this li'l angry guy.
 -Stilton: He had a bit of a Yellow God obsession. We thought he was nuts.
--Stilton: But after doing some research, turns out the Yellow God's a real threat.
+-Stilton: But after doing some research, turns out il Divino Giallo's a real threat.
 
 /Rando4
--Rando4: I have a cousin whose home was destroyed by the Yellow God.
+-Rando4: I have a cousin whose home was destroyed by il Divino Giallo.
 
 /Rando5
--Rando5: The Yellow God's not real.
+-Rando5: il Divino Giallo's not real.
 -Rando5: Bree's obviously making stuff up so he can sell divine protection charms.
 
 /Benny
--Benny: People afraid of the Yellow God should just sell their homes and move.
+-Benny: People afraid of il Divino Giallo should just sell their homes and move.

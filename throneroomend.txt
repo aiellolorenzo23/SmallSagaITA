@@ -44,12 +44,12 @@
 !SetAnim(Verm,R)
 !HoldOn(0.9)
 -Siobhan: There are many Yellow Gods.|Not just one.
--Siobhan: In fact, it's very likely that the Yellow God we fought isn't the same one you saw as a child.
+-Siobhan: In fact, it's very likely that il Divino Giallo we fought isn't the same one you saw as a child.
 !HoldOn(0.5)
 -Verm: Oh. Yeah, I know.
 !HoldOn(0.3)
 -Verm: I always knew.
--Verm: Or at least, I figured that any god could wear the Yellow God's robes.
+-Verm: Or at least, I figured that any god could wear il Divino Giallo's robes.
 !HoldOn(0.4)
 !SetAnim(Siobhan,D)
 !HoldOn(0.1)
@@ -59,8 +59,8 @@
 !HoldOn(0.3)
 -Verm: I guess from the outside my quest looked a bit stupid.
 -Verm: But I never had any delusions about what I was doing.
--Verm: I knew I was never going to get my brother or my tail back from the Yellow God.
--Verm: So I chased the Yellow God's shadow.
+-Verm: I knew I was never going to get my brother or my tail back from il Divino Giallo.
+-Verm: So I chased il Divino Giallo's shadow.
 -Verm: The hunt brought me... well, not quite peace. But something. An outlet. A direction for my anger.
 !HoldOn(0.6)
 -Siobhan: I see.
@@ -72,7 +72,7 @@
 !Nani(Verm,?)
 !HoldOn(0.6)
 -Verm: What do you mean?
--Siobhan: Well, there's a lot of gossip in the city about why you didn't kill the Yellow God.
+-Siobhan: Well, there's a lot of gossip in the city about why you didn't kill il Divino Giallo.
 -Siobhan: Some think you let Him go|as an act of mercy.
 -Siobhan: Others think it was so he could relay a message to the other gods.|"Stay away from Murida!"
 -Siobhan: But to me, those reasons|didn't add up.
@@ -96,7 +96,7 @@
 !HoldOn(0.4)
 !SetAnim(Verm,DL)
 !HoldOn(0.3)
--Verm: When I looked into the Yellow God's eyes, I didn't see the reflection of a mouse.
+-Verm: When I looked into il Divino Giallo's eyes, I didn't see the reflection of a mouse.
 -Verm: Just a ghost.
 !HoldOn(0.4)
 !SetAnim(Verm,D)

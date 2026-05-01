@@ -187,11 +187,11 @@
 !HoldOn(0.3)
 -Bruce: Does it matter?|If it's like Siobhan says, it'll take out the city with it.
 -Gwen: Right. This just complicates things.
--Gwen: Now we have to worry about both the Yellow God and an absurd weapon of mass destruction.
+-Gwen: Now we have to worry about both il Divino Giallo and an absurd weapon of mass destruction.
 -Gwen: Shit. What a doomerist prick|this Aquila is.
 !HoldOn(0.5)
 -Bruce: Something doesn't add up.
--Bruce: If the King knows that the Yellow God is coming, and he has a banger of a solution ready tae go...
+-Bruce: If the King knows that il Divino Giallo is coming, and he has a banger of a solution ready tae go...
 -Bruce: Why doesn't he just evacuate the city? Tell everyone tae run and hide?
 -Bruce: That would cause the smallest|loss of life, no?
 !HoldOn(0.1)
@@ -209,7 +209,7 @@
 !HoldOn(0.3)
 -Bree: You're having a laugh.
 -Bree: The King don't give a flying fox about us common folk.
--Bree: If we all died to the Yellow God, you know what he'd say? "Good riddance!"
+-Bree: If we all died to il Divino Giallo, you know what he'd say? "Good riddance!"
 -Verm: Mate, do you mind?|This is a private conversation.
 !HoldOn(0.1)
 !SetAnim(Stilton,DL)
@@ -218,7 +218,7 @@
 -Bree: Oi, oi. Listen.
 -Bree: We're on the same side here.
 -Bree: We may not know much about|this Excalibur malarkey.
--Bree: But we do know that something must be done about the Yellow God.
+-Bree: But we do know that something must be done about il Divino Giallo.
 -Stilton: We've been doing our homework! We know the damage coming our way!
 -Bree: Yeah! So we're planning a protest.
 -Stilton: We got hundreds of|allies in Gutter End!
@@ -237,7 +237,7 @@
 -Siobhan: We can't just waltz in.|We'd be arrested for sure.
 -Siobhan: But if there's a protest, that would distract the guards.
 -Siobhan: It might give us a window|of opportunity to reach the weapon|and destroy it.
--Bruce: Aye, but how do we reach|the Yellow God from there?
+-Bruce: Aye, but how do we reach|il Divino Giallo from there?
 !HoldOn(0.4)
 -Stilton: Y'know... rumour is there are hidden tunnels all over the palace.
 -Stilton: I bet one of 'em takes you to where you need to be.
@@ -282,7 +282,7 @@
 -Siobhan: Should I visit?
 
 /ChatSioDone
--Siobhan: The King...|Excalibur...|The Yellow God...
+-Siobhan: The King...|Excalibur...|il Divino Giallo...
 -Siobhan: We have a challenging road ahead.|But I know we can do this.|We have to.
 
 /ChatGwen
@@ -348,6 +348,6 @@
 *PutBack: Put it back.
 
 /ReadIt1
--Book1: - We want measures to protect us from the Yellow God.
+-Book1: - We want measures to protect us from il Divino Giallo.
 -Book2: - We demand social programs 
 

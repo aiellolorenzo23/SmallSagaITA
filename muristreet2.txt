@@ -132,7 +132,7 @@
 !OverworldCameraPan(320,240,2,1)
 !HoldOn(0.5)
 -Bree: Yeah! We've done our homework.
--Bree: The Yellow God of Death has been seen across Rodentia!
+-Bree: il Divino Giallo of Death has been seen across Rodentia!
 -Bree: An' he's gonna lay waste to our beautiful home city if we don't do something.
 !OverworldCameraPan(420,540,2,1)
 !HoldOn(0.5)
@@ -203,7 +203,7 @@
 /Stilton
 -Stilton: Bree and me had a couple of run-ins with this li'l angry guy.
 -Stilton: He had a bit of a Yellow God obsession. We thought he was nuts.
--Stilton: But after doing some research, turns out the Yellow God's a real threat.
+-Stilton: But after doing some research, turns out il Divino Giallo's a real threat.
 
 /Al
 -Al: Don't mind me, just taking a break from the young 'uns.|All fourteen of 'em.

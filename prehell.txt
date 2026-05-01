@@ -45,7 +45,7 @@
 !SetAnim(Verm,UL)
 !HoldOn(0.1)
 -Verm: I don't know what we'll see.
--Verm: The Yellow God might be waiting.
+-Verm: il Divino Giallo might be waiting.
 -Gwen: We can handle it.
 -Siobhan: We're in this together, remember?
 -Bruce: One for all and all for one.

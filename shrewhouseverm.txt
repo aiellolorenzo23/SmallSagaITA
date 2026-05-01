@@ -194,7 +194,7 @@
 -Bruce: What now?
 !HoldOn(0.6)
 -Verm: The seasons are changing fast.
--Verm: The Yellow God is coming to Murida.
+-Verm: il Divino Giallo is coming to Murida.
 -Verm: Let's go and greet him.
 !HoldOn(0.2)
 !LevelUp(Verm)
@@ -214,7 +214,7 @@
 -Gwen: Excalibur, as in the legendary Sword of Rodentia?
 -Bruce: I've heard stories, but|that's just a myth, no?
 -Siobhan: Well, I suppose I'll find out.
--Siobhan: If it is real, then we're going to need it to have any chance of surviving the Yellow God.
+-Siobhan: If it is real, then we're going to need it to have any chance of surviving il Divino Giallo.
 !HoldOn(0.5)
 -Bruce: Murida it is then.
 -Verm: Right. Let's go.

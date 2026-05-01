@@ -47,7 +47,7 @@
 -James: I'm glad to hear it. And Excalibur...
 -Leo: We have no need for such a foul weapon.
 -Leo: The Thimble Guard are capable of facing any threat this city may face. 
--Aquila: Oh? Are they capable of facing the Yellow God of Death?
+-Aquila: Oh? Are they capable of facing il Divino Giallo of Death?
 -Leo: Spare me this ghostly nonsense.
 -James: Leo, if you are going to be petulant, then you should go take a stroll.
 -Leo: Your Majesty-
@@ -60,7 +60,7 @@
 -Aquila: And with nothing but poisonous smoke.
 -James: Such a terrifying deity.|What else can you tell me?
 -Aquila: He is coming.
--Aquila: The Yellow God will arrive at Murida on the night of thirteen chimes.
+-Aquila: il Divino Giallo will arrive at Murida on the night of thirteen chimes.
 -James: You are certain?
 -Aquila: I've deciphered the appropriate god scripts and triple-checked my translations.
 -Aquila: There is no doubt.

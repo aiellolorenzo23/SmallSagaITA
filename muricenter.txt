@@ -91,12 +91,12 @@
 !HoldOn(0.1)
 !Exit(Bruce)
 -Verm: I've got things to do here too.
--Siobhan: I know. You're looking for leads on the Yellow God.
+-Siobhan: I know. You're looking for leads on il Divino Giallo.
 -Siobhan: Sir Verm, I want to help. And I'm not taking "no" for an answer.
 -Siobhan: So I'm going to do some research at Murida's library.
 -Verm: The library?
 -Siobhan: Well, that's the best place|to learn new things, right?
--Siobhan: There might be a book|on the Yellow God.
+-Siobhan: There might be a book|on il Divino Giallo.
 -Verm: Makes sense, I guess.
 -Verm: Books aren't my thing, so I'm heading to the Royal Palace.
 -Verm: I bet the King knows a thing or two.

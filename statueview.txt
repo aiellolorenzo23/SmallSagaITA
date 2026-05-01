@@ -10,7 +10,7 @@
 !HoldOn(2)
 -Gwen: A million rats and mice all living in one place. I've never seen anything like it.
 !HoldOn(1)
--Gwen: If we don't stop the Yellow God, they'll all die.
+-Gwen: If we don't stop il Divino Giallo, they'll all die.
 !HoldOn(0.6)
 -Verm: I guess so.
 !HoldOn(1)
@@ -113,7 +113,7 @@
 /EarlyWG
 -Gwen: We fought off one god already. What's one more?
 !HoldOn(0.6)
--Verm: The Yellow God's merciless. I don't know if our blades will be enough.
+-Verm: il Divino Giallo's merciless. I don't know if our blades will be enough.
 -Gwen: So we'll need Excalibur, huh.
 >ExCont
 

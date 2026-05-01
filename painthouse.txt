@@ -43,7 +43,7 @@
 -Verm: It's for a side quest.
 !CheckGlobal(10,1,SioDia)
 !SetAnim(Bruce,D)
--Bruce: Oh, is that right? We have time to do a wee spot of painting before the Yellow God arrives?
+-Bruce: Oh, is that right? We have time to do a wee spot of painting before il Divino Giallo arrives?
 -Siobhan: I agree. Should we really be doing "side quests" at such a crucial juncture?
 !SetAnim(Gwen,D)
 -Gwen: It does feel unnecessary.

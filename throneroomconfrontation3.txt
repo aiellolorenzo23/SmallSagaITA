@@ -34,7 +34,7 @@
 !HoldOn(0.1)
 -Verm: But I don't particularly care.
 -Verm: There's a route to the surface from this room, right?
--Verm: The Yellow God of Death is coming. Let me use the passage,|and I'll stop Him.
+-Verm: il Divino Giallo of Death is coming. Let me use the passage,|and I'll stop Him.
 -Leo: A mouse like you cannot kill a god. You lack the weight.
 -Verm: But it's worth a shot, right?
 -Verm: I might actually|be able to do it.
@@ -120,7 +120,7 @@
 -Verm: This Kingdom is rotten.
 -Verm: The royals and barons and dukes and nobles are all scum.
 -Verm: The Knights are all scum. You included.
--Verm: The Yellow God is knocking, and you're all busy protecting your empty palace.
+-Verm: il Divino Giallo is knocking, and you're all busy protecting your empty palace.
 -Verm: But... the rot runs deeper than you, or the King, or any titan or God.
 -Verm: I know that killing you won't remove the rot.
 -Verm: So I thought I'd break|your tools instead.

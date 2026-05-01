@@ -144,11 +144,11 @@
 -Bane-Ghial: You may ask but one question.
 -Verm: Just one?
 -Verm: Then, I need to know...
-*YG: The Yellow God...
+*YG: il Divino Giallo...
 *Lance: Lance...
 
 /YG
--Verm: The Yellow God of Death.|How can I find Him?
+-Verm: il Divino Giallo of Death.|How can I find Him?
 -Bane-Ghial: Death... I am intimately familiar with Death.
 -Bane-Ghial: She is a cruel creature.
 -Bane-Ghial: Predator of predators! She arrives unannounced and takes what she pleases.
@@ -400,7 +400,7 @@
 !TurnOffBlocks(0)
 -Bruce: What about ye, Verm?
 -Bruce: I know we're not bestest pals.|And ye dinnae owe me any favours.
--Bruce: But if ye lend yer sword, I will dedicate every resource of the city tae helping you find and slay the Yellow God.
+-Bruce: But if ye lend yer sword, I will dedicate every resource of the city tae helping you find and slay il Divino Giallo.
 -Bruce: Will you help me take Sky Garden?
 *IWill: I will.
 *Nah: Nah.

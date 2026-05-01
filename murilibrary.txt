@@ -118,7 +118,7 @@
 /SiobhanLibrarian
 -Siobhan: Hello there.
 -Ruth: What is it?
--Siobhan: Oh, um, I was wondering if you had any books on the Yellow God?
+-Siobhan: Oh, um, I was wondering if you had any books on il Divino Giallo?
 -Ruth: God Studies is upper floor, second shelf, near the back.
 -Siobhan: Thanks.
 
@@ -174,8 +174,8 @@
 -Siobhan: Well, I don't know much.|But my friend who saw it said-
 !Nani(Aquila,!)
 !HoldOn(0.4)
--Aquila: Wait! Your friend SAW the Yellow God? With his own eyes?
--Aquila: Your friend actually MET the Yellow God and LIVED?
+-Aquila: Wait! Your friend SAW il Divino Giallo? With his own eyes?
+-Aquila: Your friend actually MET il Divino Giallo and LIVED?
 -Siobhan: Y-yeah...
 !Walk(Aquila,DL,0.4)
 !HoldOn(0.4)
@@ -220,7 +220,7 @@
 !Exit(Siobhan)
 -Aquila: Wait, mole, wait!
 !HoldOn(1.3)
--Aquila: So the Yellow God is more than just a myth...
+-Aquila: So il Divino Giallo is more than just a myth...
 !HoldOn(0.1)
 !SetAnim(Aquila,Hand1)
 !HoldOn(0.1)

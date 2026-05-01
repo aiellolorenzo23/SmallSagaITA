@@ -119,7 +119,7 @@
 -Siobhan: But what's down below?
 -Aquila: The godly halls of parliament.
 -Aquila: And below parliament's floorboards,|the streets of Murida.
--Aquila: When the Yellow God arrives, intent on destroying the city, we will greet Him with fire and thunder.
+-Aquila: When il Divino Giallo arrives, intent on destroying the city, we will greet Him with fire and thunder.
 !HoldOn(0.5)
 -Aquila: After all...|Only a god weapon|can kill a god.
 !HoldOn(0.5)
@@ -167,9 +167,9 @@
 -Aquila: There is not a single place on our planet that the gods haven't colonised and corrupted.
 -Aquila: So now carcinogens fill our lungs. Poisons infest our food. Plastics course through our blood.
 -Aquila: By their hand, soon the oceans themselves will boil.
--Aquila: The Yellow God is not the worst god. No, not by a long shot.
+-Aquila: il Divino Giallo is not the worst god. No, not by a long shot.
 -Aquila: But He epitomises their callous disregard for life, their need to dominate nature without second thought.
--Aquila: What is the death of one million mice to the Yellow God? An ordinary day of work. A job well done.
+-Aquila: What is the death of one million mice to il Divino Giallo? An ordinary day of work. A job well done.
 !HoldOn(0.9)
 -Siobhan: So you want to kill Him.|I can understand that.
 -Siobhan: But what about the rodents who live in Murida?
@@ -237,7 +237,7 @@
 !SetAnim(Aquila,Look1)
 !HoldOn(0.5)
 -Aquila: The dead vagabond?
--Aquila: I thought he was hell-bent on|killing the Yellow God?
+-Aquila: I thought he was hell-bent on|killing il Divino Giallo?
 -Siobhan: Yes, but he wouldn't have trampled on innocent people to do so.
 -Aquila: You cannot be that naive. From what you've told me, I can only conclude that your friend was a single-minded brute.
 -Aquila: Every action he made was in service to his egotistic vengeance quest.
@@ -247,14 +247,14 @@
 !SetAnim(Siobhan,DL)
 !HoldOn(0.5)
 -Siobhan: I... I don't think that's true.
--Siobhan: H-he wanted to kill the Yellow God, that is true, but he wouldn't do... I mean, he wouldn't have w-wanted...
+-Siobhan: H-he wanted to kill il Divino Giallo, that is true, but he wouldn't do... I mean, he wouldn't have w-wanted...
 !HoldOn(1)
 !SetAnim(Aquila,Look2)
 !OverCamZoom(1)
 !HoldOn(1.4)
 -Aquila: It doesn't matter.
 -Aquila: This ideological talk has gotten tiresome, so let us return to the material facts.
--Aquila: The Yellow God is coming.
+-Aquila: il Divino Giallo is coming.
 -Aquila: And only a god weapon can kill a god.
 -Aquila: So it's just like you say.|This cruel thing is an ugly necessity.
 !HoldOn(1)

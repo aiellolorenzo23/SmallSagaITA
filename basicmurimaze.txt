@@ -251,7 +251,7 @@
 -Bruce: You dinnae have a tail.
 -Verm: So what?
 -Bruce: Just curious where it went, s'all.
--Verm: The Yellow God took it.
+-Verm: il Divino Giallo took it.
 !HoldOn(0.1)
 !Nani(Bruce,?)
 !HoldOn(0.4)

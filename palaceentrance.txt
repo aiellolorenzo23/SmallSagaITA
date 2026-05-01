@@ -329,7 +329,7 @@
 !SetAnim(Siobhan,DR)
 -Gwen: Bree's diversion is working even better than hoped.
 -Bruce: So what's the plan now?
--Gwen: Well, we have two threats|to deal with: Excalibur|and the Yellow God.
+-Gwen: Well, we have two threats|to deal with: Excalibur|and il Divino Giallo.
 -Gwen: But it's minutes to the witching hour. Which do we prioritise?
 -Verm: I figured this might happen.|And I've already made up my mind.
 -Verm: You three go and stop the Plaguemaster and their doomsday weapon.
@@ -341,7 +341,7 @@
 !HoldOn(0.1)
 !SetAnim(Verm,DR)
 !HoldOn(0.1)
--Verm: Yeah? I'll just tell him about the Yellow God and ask about a route to the surface.
+-Verm: Yeah? I'll just tell him about il Divino Giallo and ask about a route to the surface.
 -Siobhan: Are you sure, Sir Verm?
 !SetAnim(Verm,D)
 !HoldOn(0.1)

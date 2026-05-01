@@ -69,10 +69,10 @@
 !HoldOn(0.3)
 -Ghost: What are you doing here, Bruce?
 -Bruce: I made a promise to you.|Back in the Ashen Tower.
--Bruce: You helped me reclaim the Oaken Throne, and I'll help ye find the Yellow God.
+-Bruce: You helped me reclaim the Oaken Throne, and I'll help ye find il Divino Giallo.
 -Bruce: Remember?
 !HoldOn(0.4)
--Ghost: The Yellow God...
+-Ghost: il Divino Giallo...
 !HoldOn(1)
 !SetAnim(Ghost,D)
 !HoldOn(0.1)

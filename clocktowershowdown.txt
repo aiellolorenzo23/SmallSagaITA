@@ -29,7 +29,7 @@
 -Aquila: Whatever. It doesn't matter.
 !SetAnim(Aquila,Look2)
 -Aquila: The King's permission was nothing but a formality anyway.
--Aquila: Soon, the Yellow God will make his entrance.
+-Aquila: Soon, il Divino Giallo will make his entrance.
 -Aquila: And the power of Excalibur|shall be revealed.
 !HoldOn(0.2)
 !Walk(Siobhan,UL,0.2)
@@ -43,7 +43,7 @@
 -Aquila: Soon, the bell will ring|its thirteenth chime.
 -Aquila: At that moment, the ballista will release, slinging the sky egg through this clockface to the halls below.
 !SetAnim(Aquila,Look2)
--Aquila: The egg will explode.|And the Yellow God will perish.
+-Aquila: The egg will explode.|And il Divino Giallo will perish.
 -Bruce: Along with half of Murida!
 -Aquila: Regrettably.
 !HoldOn(0.4)

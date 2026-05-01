@@ -317,7 +317,7 @@
 -Gwen: Seriously?
 -Verm: Yeah.
 !HoldOn(0.6)
--Verm: I spent half my life focused on killing the Yellow God. I didn't have room for lovey-dovey stuff.
+-Verm: I spent half my life focused on killing il Divino Giallo. I didn't have room for lovey-dovey stuff.
 !SetAnim(Gwen,F1)
 -Verm: But even when I had time to think in Vinium, I just got fixated on farming mushrooms.
 !HoldOn(0.9)

@@ -4,7 +4,7 @@
 !SetAnim(Ophiuchus,LookLeft)
 !HoldOn(1.5)
 -James: Tonight is the night.
--James: Soon, the Yellow God will knock upon our door.
+-James: Soon, il Divino Giallo will knock upon our door.
 !SetAnim(Ophiuchus,LetterOpen)
 -James: A terrifying prospect.|But I'm not afraid.
 -Ophiuchus: We could still initiate Proposal 99, the city evacuation plan.

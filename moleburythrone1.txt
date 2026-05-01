@@ -96,8 +96,8 @@
 -Gilda: Do whatever it is you came to do and then take your leave.
 -Verm: Fine. I didn't plan on sticking around anyway.
 -Verm: But before I go, I need some|information.
--Verm: I'm looking for the one known as the Yellow God.
--Gilda: The Yellow God?
+-Verm: I'm looking for the one known as il Divino Giallo.
+-Gilda: il Divino Giallo?
 -Gilda: I'm afraid we don't know any gods on a first-name basis around here. Except for Cormac, I suppose.
 -Gilda: Have you heard of this "Yellow God", Loremaster Morvyn?
 !SetAnim(Morvyn,Look)

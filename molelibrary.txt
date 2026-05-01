@@ -105,7 +105,7 @@
 !CheckGlobal(10,2,InnoLate)
 -Innogen: Can I help you with something?
 
-*YGod: The Yellow God...
+*YGod: il Divino Giallo...
 *Lib: The library...
 *Nevermind: Never mind.
 
@@ -117,7 +117,7 @@
 
 
 /YGod
--Verm: Would you happen to have any books on the Yellow God?
+-Verm: Would you happen to have any books on il Divino Giallo?
 -Innogen: I can't say I've heard of such a thing.
 -Innogen: But in any case, we don't specialise in god studies here.
 -Innogen: Our collection is mostly historical and religious texts.
