@@ -471,7 +471,7 @@
 -Rosaline: There's one last thing.|Something that's been bugging me since your arrival.
 -Rosaline: Aren't you supposed to be dead?
 -Verm: Oh, right. That.|It's a long story.
--Verm: But the short version is that there's a Yellow God of Death coming to Murida, and I'm not dying until I kill Him.
+-Verm: But the short version is that there's a Divino Giallo of Death coming to Murida, and I'm not dying until I kill Him.
 !NormalJump(Maisie,2,30,260,167,JDR,DL)
 !HoldOn(1)
 -Maisie: Wait, for real?|You're gonna kill a god?|That's crazy!

@@ -343,7 +343,7 @@
 
 /Alfie
 !CheckItem(67,KeyEvent)
--Alfie: This Yellow God... there's no chance that He'll come to Vinium, right?
+-Alfie: This Divino Giallo... there's no chance that He'll come to Vinium, right?
 
 /Jeb
 !CheckItem(67,KeyEvent)

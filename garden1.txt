@@ -88,7 +88,7 @@
 !SetAnim(Siobhan,R)
 -Siobhan: Sir Verm.
 -Siobhan: I know I'm not the greatest fighter.
--Siobhan: And I don't know what this Yellow God is you're after.
+-Siobhan: And I don't know what this Divino Giallo is you're after.
 -Siobhan: But I want to learn.|And I want to help.
 -Siobhan: What do you say?
 *CaYes: Fine.

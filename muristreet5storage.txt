@@ -34,7 +34,7 @@
 !HoldOn(0.5)
 -Verm: Well. No time to waste.
 -Stilton: Good luck, all.
--Stilton: Give that Yellow God hell!
+-Stilton: Give that Divino Giallo hell!
 -Bruce: Yer not coming with us?
 -Stilton: I've got my own fight to join.
 -Stilton: Gotta keep those guards occupied while you do your thing.

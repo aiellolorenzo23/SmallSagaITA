@@ -122,13 +122,13 @@
 !TeleportCharacter(Siobhan,410,573)
 !SetAnim(Siobhan,UL)
 -Stilton: You tell 'em, Bree!
--Bree: And is the King even doing anything about the upcoming Yellow God crisis?
+-Bree: And is the King even doing anything about the upcoming Divino Giallo crisis?
 -Bree: Or is he busy buying shiny new weapons for the Thimble Guard?
 -Stilton: Hear, hear!
 -Siobhan:  Um. 
 !OverworldCameraPan(420,540,2,1)
 !HoldOn(0.5)
--Siobhan: Did you say "Yellow God"?
+-Siobhan: Did you say "Divino Giallo"?
 !OverworldCameraPan(320,240,2,1)
 !HoldOn(0.5)
 -Bree: Yeah! We've done our homework.
@@ -162,7 +162,7 @@
 -Lucius: Psh, the Guard ain't so tough.|Just a bunch of toffs playing soldier.
 
 /Lucius2
--Lucius: Is this Yellow God thing for real?
+-Lucius: Is this Divino Giallo thing for real?
 -Lucius: It sounds like ghost and muswolf territory. I have doubts, just sayin'.
 
 /Fisher
@@ -197,12 +197,12 @@
 !HoldOn(0.4)
 
 /Schobert2
--Schobert: I dunno about any Yellow God.
+-Schobert: I dunno about any Divino Giallo.
 -Schobert: But Bree's right about the rent problem. It's a DISGRACE.
 
 /Stilton
 -Stilton: Bree and me had a couple of run-ins with this li'l angry guy.
--Stilton: He had a bit of a Yellow God obsession. We thought he was nuts.
+-Stilton: He had a bit of a Divino Giallo obsession. We thought he was nuts.
 -Stilton: But after doing some research, turns out il Divino Giallo's a real threat.
 
 /Al

@@ -535,13 +535,13 @@ Avvicinandosi al ponte, i due scorgono due ratti spelacchiati di guardia al pass
 !HoldOn(0.3)
 -Lance: Farewell, Chief. May your soul pass to the next world unhindered.
 !HoldOn(2)
--Verm: Lance, what's a Yellow God?
+-Verm: Lance, what's a Divino Giallo?
 -Lance: That's a new one to me. But don't let it bug you, Verm.
 !SetAnimEnd(Lance,D)
 !HoldOn(0.1)
 !SetAnimEnd(Lance,DL)
 !HoldOn(0.1)
--Lance: In all my travels, I've never seen or heard of any deadly "Yellow God".
+-Lance: In all my travels, I've never seen or heard of any deadly "Divino Giallo".
 -Lance: It's the crazed mutterings of a dying rodent.
 -Lance: Just ghosts and muswolves.
 -Verm: Right. Just ghosts and muswolves.

@@ -15,14 +15,14 @@ OLD
 -Stilton: Hear, hear!
 
 /Bree
--Siobhan: Did you say Yellow God?
+-Siobhan: Did you say Divino Giallo?
 -Bree: Yeah! We've done our research.
 -Bree: il Divino Giallo of Death is coming to Murida.
 -Bree: An' he's gonna lay waste to the city if we don't do something.
 -Siobhan: You might be right...
 
 /Rando
--Rando: This Yellow God business seems far-fetched...
+-Rando: This Divino Giallo business seems far-fetched...
 -Rando: But Bree's right about the rent problem. It's appalling.
 
 /Rando2
@@ -34,7 +34,7 @@ OLD
 
 /Stilton
 -Stilton: Bree and me had a couple of run-ins with this li'l angry guy.
--Stilton: He had a bit of a Yellow God obsession. We thought he was nuts.
+-Stilton: He had a bit of a Divino Giallo obsession. We thought he was nuts.
 -Stilton: But after doing some research, turns out il Divino Giallo's a real threat.
 
 /Rando4

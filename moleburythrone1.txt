@@ -99,7 +99,7 @@
 -Verm: I'm looking for the one known as il Divino Giallo.
 -Gilda: il Divino Giallo?
 -Gilda: I'm afraid we don't know any gods on a first-name basis around here. Except for Cormac, I suppose.
--Gilda: Have you heard of this "Yellow God", Loremaster Morvyn?
+-Gilda: Have you heard of this "Divino Giallo", Loremaster Morvyn?
 !SetAnim(Morvyn,Look)
 -Morvyn: I'm afraid not, my Lady. Perhaps this mouse should head to Murida.
 -Morvyn: One million mice and rats live there. Nobles, merchants, academics...

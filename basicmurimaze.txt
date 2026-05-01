@@ -255,7 +255,7 @@
 !HoldOn(0.1)
 !Nani(Bruce,?)
 !HoldOn(0.4)
--Bruce: Yellow God?
+-Bruce: Divino Giallo?
 !HoldOn(0.1)
 !SetAnim(Siobhan,R)
 !HoldOn(0.1)

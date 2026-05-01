@@ -160,7 +160,7 @@
 !SetAnim(Aquila,Look1)
 -Aquila: Indeed I am. Plaguemaster Aquila of Murida, to be exact.
 -Siobhan: You must be very knowledgable then.|Maybe you can help!
--Siobhan: See, I have this friend, and he's looking for a Yellow God...
+-Siobhan: See, I have this friend, and he's looking for a Divino Giallo...
 !HoldOn(0.1)
 !Nani(Aquila,?)
 !HoldOn(0.7)
@@ -170,7 +170,7 @@
 !HoldOn(0.1)
 !SetAnim(Aquila,DL)
 !HoldOn(0.1)
--Aquila: What do you and your friend know about this "Yellow God"?
+-Aquila: What do you and your friend know about this "Divino Giallo"?
 -Siobhan: Well, I don't know much.|But my friend who saw it said-
 !Nani(Aquila,!)
 !HoldOn(0.4)

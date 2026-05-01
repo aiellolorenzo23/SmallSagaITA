@@ -43,7 +43,7 @@
 !HoldOn(0.2)
 !SetAnim(Verm,R)
 !HoldOn(0.9)
--Siobhan: There are many Yellow Gods.|Not just one.
+-Siobhan: There are many Divino Giallos.|Not just one.
 -Siobhan: In fact, it's very likely that il Divino Giallo we fought isn't the same one you saw as a child.
 !HoldOn(0.5)
 -Verm: Oh. Yeah, I know.
@@ -78,7 +78,7 @@
 -Siobhan: But to me, those reasons|didn't add up.
 -Siobhan: So is it that you held back because you knew he wasn't the right god? You knew that it wouldn't be real justice?
 -Verm: No, that's not it at all.
--Verm: As far as I care, this Yellow God is as guilty as the last.
+-Verm: As far as I care, this Divino Giallo is as guilty as the last.
 -Verm: I let Him go because, well...
 !HoldOn(0.4)
 !SetAnim(Verm,DR)
