@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="assets/SITFP.png" alt="Small Saga Italian Translation Fan Project" width="800">
+    <img src="resources/SITFP.png" alt="Small Saga Italian Translation Fan Project" width="800">
 </div>
 
 ### Description / Descrizione
